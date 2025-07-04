@@ -1,0 +1,22 @@
+@PACKAGE_INIT@
+
+# LumexLib CMake Configuration (aggregates LumexCore + LumexApplied)
+
+include(CMakeFindDependencyMacro)
+
+if(EXISTS "${CMAKE_CURRENT_LIST_DIR}/LumexCoreTargets.cmake")
+    include("${CMAKE_CURRENT_LIST_DIR}/LumexCoreTargets.cmake")
+endif()
+if(EXISTS "${CMAKE_CURRENT_LIST_DIR}/LumexAppliedTargets.cmake")
+    include("${CMAKE_CURRENT_LIST_DIR}/LumexAppliedTargets.cmake")
+endif()
+
+# Provide umbrella INTERFACE target `Lumex::Lumex` if missing
+if(NOT TARGET Lumex::Lumex)
+    add_library(Lumex::Lumex INTERFACE IMPORTED)
+    set_target_properties(Lumex::Lumex PROPERTIES
+        INTERFACE_LINK_LIBRARIES "Lumex::utility;Lumex::string;Lumex::string_view;Lumex::optional;Lumex::time;Lumex::environment;Lumex::exceptions;Lumex::filesystem;Lumex::hardware;Lumex::logging;Lumex::temporary;Lumex::settings"
+    )
+endif()
+
+check_required_components(LumexLib)
