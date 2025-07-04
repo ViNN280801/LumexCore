@@ -148,6 +148,7 @@ if(LUMEX_BUILD_TESTS)
         LumexTimeTests
         LumexOptionalTests
         LumexNumberGeneratorTests
+        LumexStringifyTests
         COMMENT "Running all tests..."
     )
 endif()
