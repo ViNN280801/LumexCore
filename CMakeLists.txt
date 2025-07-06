@@ -145,10 +145,15 @@ if(LUMEX_BUILD_TESTS)
         COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
         DEPENDS
-        LumexTimeTests
-        LumexOptionalTests
+
+        # Lumex Applied tests
+
+        # Lumex Core tests
         LumexNumberGeneratorTests
+        LumexOptionalTests
         LumexStringifyTests
+        LumexStringViewTests
+        LumexTimeTests
         COMMENT "Running all tests..."
     )
 endif()
