@@ -57,63 +57,13 @@ class LumexCoreConan(ConanFile):
         # ================= Info =================
         # Consumers will use `find_package(lumex-core)`
         self.cpp_info.set_property("cmake_file_name", "LumexLib")
+        self.cpp_info.set_property("cmake_target_name", "Lumex::Lumex")
 
         # Don't need to set global cmake_target_name, because the library is fully modular.
         # Consumers will connect specific targets, for example Lumex::settings.
         # Or they can use Lumex::Lumex to connect all components.
 
         # ================= Core Components =================
-
-        # core_optional (header-only)
-        self.cpp_info.components["core_optional"].set_property(
-            "cmake_target_name", "Lumex::optional"
-        )
-
-        # core_utility (header-only)
-        self.cpp_info.components["core_utility"].set_property(
-            "cmake_target_name", "Lumex::utility"
-        )
-        self.cpp_info.components["core_utility"].requires = ["core_optional"]
-
-        # core_math (header-only)
-        self.cpp_info.components["core_math"].set_property(
-            "cmake_target_name", "Lumex::math"
-        )
-
-        # core_generators_number (header-only)
-        self.cpp_info.components["core_generators_number"].set_property(
-            "cmake_target_name", "Lumex::number_generator"
-        )
-
-        # core_string_view
-        self.cpp_info.components["core_string_view"].set_property(
-            "cmake_target_name", "Lumex::string_view"
-        )
-        self.cpp_info.components["core_string_view"].libs = ["LumexCore_string_view"]
-
-        # core_string
-        self.cpp_info.components["core_string"].set_property(
-            "cmake_target_name", "Lumex::string"
-        )
-        self.cpp_info.components["core_string"].libs = ["LumexCore_string"]
-        self.cpp_info.components["core_string"].requires = ["core_utility"]
-
-        # core_time
-        self.cpp_info.components["core_time"].set_property(
-            "cmake_target_name", "Lumex::time"
-        )
-        self.cpp_info.components["core_time"].libs = ["LumexCore_time"]
-        self.cpp_info.components["core_time"].requires = ["core_utility"]
-
-        # core_filesystem
-        self.cpp_info.components["core_filesystem"].set_property(
-            "cmake_target_name", "Lumex::filesystem"
-        )
-        self.cpp_info.components["core_filesystem"].libs = ["LumexCore_filesystem"]
-        self.cpp_info.components["core_filesystem"].requires = [
-            "core_string",
-            "core_utility",
-        ]
 
         # core_environment
         self.cpp_info.components["core_environment"].set_property(
@@ -122,7 +72,6 @@ class LumexCoreConan(ConanFile):
         self.cpp_info.components["core_environment"].libs = ["LumexCore_environment"]
         self.cpp_info.components["core_environment"].requires = [
             "core_utility",
-            "core_filesystem",
         ]
 
         # core_exceptions
@@ -142,18 +91,54 @@ class LumexCoreConan(ConanFile):
         elif self.settings.os in ["Linux", "FreeBSD"]:  # type: ignore
             self.cpp_info.components["core_exceptions"].system_libs.append("execinfo")
 
-        # ================= Applied Components =================
-
-        # applied_logging
-        self.cpp_info.components["applied_logging"].set_property(
-            "cmake_target_name", "Lumex::logging"
+        # core_filesystem
+        self.cpp_info.components["core_filesystem"].set_property(
+            "cmake_target_name", "Lumex::filesystem"
         )
-        self.cpp_info.components["applied_logging"].libs = ["LumexApplied_logging"]
-        self.cpp_info.components["applied_logging"].requires = [
-            "core_filesystem",
-            "core_time",
-            "core_string",
-        ]
+        self.cpp_info.components["core_filesystem"].libs = ["LumexCore_filesystem"]
+        self.cpp_info.components["core_filesystem"].requires = ["core_utility"]
+        if self.settings.os == "Windows":  # type: ignore
+            self.cpp_info.components["core_filesystem"].system_libs.append("shlwapi")
+
+        # core_generators_number (header-only)
+        self.cpp_info.components["core_generators_number"].set_property(
+            "cmake_target_name", "Lumex::number_generator"
+        )
+
+        # core_math (header-only)
+        self.cpp_info.components["core_math"].set_property(
+            "cmake_target_name", "Lumex::math"
+        )
+
+        # core_optional (header-only)
+        self.cpp_info.components["core_optional"].set_property(
+            "cmake_target_name", "Lumex::optional"
+        )
+
+        # core_string (header-only)
+        self.cpp_info.components["core_string"].set_property(
+            "cmake_target_name", "Lumex::string"
+        )
+
+        # core_string_view
+        self.cpp_info.components["core_string_view"].set_property(
+            "cmake_target_name", "Lumex::string_view"
+        )
+        self.cpp_info.components["core_string_view"].libs = ["LumexCore_string_view"]
+
+        # core_time
+        self.cpp_info.components["core_time"].set_property(
+            "cmake_target_name", "Lumex::time"
+        )
+        self.cpp_info.components["core_time"].libs = ["LumexCore_time"]
+        self.cpp_info.components["core_time"].requires = ["core_utility"]
+
+        # core_utility (header-only)
+        self.cpp_info.components["core_utility"].set_property(
+            "cmake_target_name", "Lumex::utility"
+        )
+
+        # ================= Applied Components =================
 
         # applied_hardware
         self.cpp_info.components["applied_hardware"].set_property(
@@ -161,8 +146,20 @@ class LumexCoreConan(ConanFile):
         )
         self.cpp_info.components["applied_hardware"].libs = ["LumexApplied_hardware"]
         self.cpp_info.components["applied_hardware"].requires = [
-            "core_filesystem",
+            "core_utility",
             "applied_logging",
+        ]
+
+        # applied_logging
+        self.cpp_info.components["applied_logging"].set_property(
+            "cmake_target_name", "Lumex::logging"
+        )
+        self.cpp_info.components["applied_logging"].libs = ["LumexApplied_logging"]
+        self.cpp_info.components["applied_logging"].requires = [
+            "core_environment",
+            "core_filesystem",
+            "core_string",
+            "core_time",
         ]
 
         # applied_settings
@@ -178,6 +175,6 @@ class LumexCoreConan(ConanFile):
         )
         self.cpp_info.components["applied_temporary"].libs = ["LumexApplied_temporary"]
         self.cpp_info.components["applied_temporary"].requires = [
-            "core_filesystem",
             "core_environment",
+            "core_filesystem",
         ]
