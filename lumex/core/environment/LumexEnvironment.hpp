@@ -74,8 +74,7 @@ namespace Lumex
         using string_type = std::string;
 
         // Maximum buffer size for environment variables (reasonable limit)
-        static size_type const MAX_ENV_BUFFER_SIZE
-          = 32767; // Windows MAX_PATH * 16
+        static size_type const MAX_ENV_BUFFER_SIZE = 32767; // Windows MAX_PATH * 16
 
         /**
          * @brief Represents the result of an environment variable operation.
@@ -95,12 +94,10 @@ namespace Lumex
          * }
          */
         struct EnvResult {
-          string_type
-            value; ///< The value of the environment variable. Empty if not
-                   ///< found or error.
-          bool
-            success; ///< True if the operation was successful, false otherwise.
-          int error_code; ///< System-specific error code if `success` is false.
+          string_type value; ///< The value of the environment variable. Empty if not
+                             ///< found or error.
+          bool success;      ///< True if the operation was successful, false otherwise.
+          int error_code;    ///< System-specific error code if `success` is false.
 
           /**
            * @brief Constructs an EnvResult in a default (unsuccessful) state.
@@ -111,9 +108,7 @@ namespace Lumex
            * @brief Constructs a successful EnvResult with a given value.
            * @param val The successful string value of the environment variable.
            */
-          explicit EnvResult(string_type val)
-              : value(std::move(val)), success(true), error_code(0)
-          {}
+          explicit EnvResult(string_type val) : value(std::move(val)), success(true), error_code(0) {}
 
           /**
            * @brief Constructs an unsuccessful EnvResult with an error code and an
@@ -123,9 +118,7 @@ namespace Lumex
            * operation failed.
            */
           EnvResult(int err_code, string_type fallback = string_type())
-              : value(std::move(fallback)),
-                success(false),
-                error_code(err_code)
+              : value(std::move(fallback)), success(false), error_code(err_code)
           {}
 
           /**
@@ -154,11 +147,10 @@ namespace Lumex
         class LUMEX_API EnvironmentStrategy
         {
         public:
-          virtual ~EnvironmentStrategy()                         = default;
-          virtual EnvResult get_variable(char const *name) const = 0;
-          virtual bool set_variable(char const *name, char const *value) const
-            = 0;
-          virtual bool unset_variable(char const *name) const = 0;
+          virtual ~EnvironmentStrategy()                                       = default;
+          virtual EnvResult get_variable(char const *name) const               = 0;
+          virtual bool set_variable(char const *name, char const *value) const = 0;
+          virtual bool unset_variable(char const *name) const                  = 0;
         };
 
 #if LUMEX_OS_WINDOWS
@@ -168,8 +160,7 @@ namespace Lumex
         public:
           EnvResult get_variable(char const *name) const override;
 
-          bool
-          set_variable(char const *name, char const *value) const override;
+          bool set_variable(char const *name, char const *value) const override;
 
           bool unset_variable(char const *name) const override;
         };
@@ -181,8 +172,7 @@ namespace Lumex
         public:
           EnvResult get_variable(char const *name) const override;
 
-          bool
-          set_variable(char const *name, char const *value) const override;
+          bool set_variable(char const *name, char const *value) const override;
 
           bool unset_variable(char const *name) const override;
         };
@@ -192,10 +182,8 @@ namespace Lumex
   #pragma warning(push)
   #pragma warning(disable : 4251)
 #endif
-        mutable std::mutex
-          m_mutex; ///< Thread-safety mutex (mutable to allow const methods to lock)
-        std::unique_ptr<EnvironmentStrategy>
-          m_strategy; ///< Strategy instance (created once, used throughout lifetime)
+        mutable std::mutex m_mutex; ///< Thread-safety mutex (mutable to allow const methods to lock)
+        std::unique_ptr<EnvironmentStrategy> m_strategy; ///< Strategy instance (created once, used throughout lifetime)
 #ifdef _WIN32
   #pragma warning(pop)
 #endif
@@ -208,11 +196,9 @@ namespace Lumex
         create_strategy()
         {
 #if LUMEX_OS_WINDOWS
-          return std::unique_ptr<EnvironmentStrategy>(
-            new WindowsEnvironmentStrategy());
+          return std::unique_ptr<EnvironmentStrategy>(new WindowsEnvironmentStrategy());
 #else
-          return std::unique_ptr<EnvironmentStrategy>(
-            new PosixEnvironmentStrategy());
+          return std::unique_ptr<EnvironmentStrategy>(new PosixEnvironmentStrategy());
 #endif
         }
 
@@ -247,6 +233,27 @@ namespace Lumex
          *          maintaining the integrity of the singleton pattern.
          */
         LumexEnvironment &operator=(LumexEnvironment const &) = delete;
+
+        /**
+         * @brief Default destructor.
+         * @details Explicitly defined to ensure proper resource management and
+         *          adherence to the Rule of Five.
+         */
+        ~LumexEnvironment() = default;
+
+        /**
+         * @brief Deleted move constructor.
+         * @details Ensures that LumexEnvironment objects cannot be moved,
+         *          maintaining the integrity of the singleton pattern.
+         */
+        LumexEnvironment(LumexEnvironment &&) = delete;
+
+        /**
+         * @brief Deleted move assignment operator.
+         * @details Ensures that LumexEnvironment objects cannot be move-assigned,
+         *          maintaining the integrity of the singleton pattern.
+         */
+        LumexEnvironment &operator=(LumexEnvironment &&) = delete;
 
         /**
          * @brief Retrieves the value of a specified environment variable in a
@@ -305,8 +312,7 @@ namespace Lumex
          * nullptr)) { std::cout << "OLD_VAR unset successfully." << std::endl;
          * }
          */
-        bool
-        set_environment_variable(char const *name, char const *value) const;
+        bool set_environment_variable(char const *name, char const *value) const;
 
         /**
          * @brief Convenience overload for `set_environment_variable` using
@@ -315,8 +321,7 @@ namespace Lumex
          * @param value The `std::string` value to assign to the variable.
          * @return True if the variable was successfully set, false otherwise.
          */
-        bool set_environment_variable(string_type const &name,
-                                      string_type const &value) const;
+        bool set_environment_variable(string_type const &name, string_type const &value) const;
 
         /**
          * @brief Unsets (removes) a specified environment variable in a thread-safe
@@ -355,9 +360,7 @@ namespace Lumex
          * LumexEnvironment::instance().get_environment_variable_or("EDITOR", "vim");
          * std::cout << "Preferred editor: " << editor << std::endl;
          */
-        string_type
-        get_environment_variable_or(char const *name,
-                                    string_type const &default_value) const;
+        string_type get_environment_variable_or(char const *name, string_type const &default_value) const;
 
         /**
          * @brief Checks if a specified environment variable exists.
@@ -408,8 +411,7 @@ namespace Lumex
          * std::string temp_path = LumexEnvironment::get_or("TMP", "/tmp");
          * std::cout << "Temporary path: " << temp_path << std::endl;
          */
-        static string_type
-        get_or(char const *name, string_type const &default_value);
+        static string_type get_or(char const *name, string_type const &default_value);
 
         /**
          * @brief Static convenience method to set an environment variable.
