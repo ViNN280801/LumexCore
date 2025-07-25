@@ -69,12 +69,12 @@ namespace Lumex
         constexpr const_iterator
         end() const noexcept
         {
-          return m_data + m_size;
+          return m_data + m_size; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
         }
         constexpr const_iterator
         cend() const noexcept
         {
-          return m_data + m_size;
+          return m_data + m_size; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
         }
         const_reverse_iterator rbegin() const noexcept;
         const_reverse_iterator crbegin() const noexcept;
@@ -107,18 +107,18 @@ namespace Lumex
         constexpr const_reference
         operator[](size_type idx) const noexcept
         {
-          return m_data[idx];
+          return m_data[idx]; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
         }
         const_reference at(size_type idx) const;
         constexpr const_reference
         front() const noexcept
         {
-          return m_data[0];
+          return m_data[0]; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
         }
         constexpr const_reference
         back() const noexcept
         {
-          return m_data[m_size - 1];
+          return m_data[m_size - 1]; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
         }
         constexpr const_pointer
         data() const noexcept
