@@ -19,8 +19,11 @@
   #include <fcntl.h>
   #include <linux/limits.h> // For PATH_MAX
   #include <sys/stat.h>
+  #include <sys/statvfs.h> // For statvfs
   #include <sys/types.h>
   #include <unistd.h>
+  #include <utime.h> // For utime and utimbuf
+
 #endif
 
 LUMEX_PUBLIC_API
@@ -51,8 +54,7 @@ LUMEX_PUBLIC_API
 void
 Lumex::Path::append_separator_if_needed()
 {
-  if(!m_path.empty() && !is_separator(m_path.back()))
-    m_path += preferred_separator;
+  if(!m_path.empty() && !is_separator(m_path.back())) m_path += preferred_separator;
 }
 
 LUMEX_PUBLIC_API
@@ -62,16 +64,16 @@ Lumex::Path::operator/=(Path const &path)
   if(path.empty()) return *this;
 
   if(path.is_absolute())
-    {
-      m_path = path.m_path;
-      return *this;
-    }
+  {
+    m_path = path.m_path;
+    return *this;
+  }
 
   if(m_path == ".")
-    {
-      m_path = path.m_path;
-      return *this;
-    }
+  {
+    m_path = path.m_path;
+    return *this;
+  }
 
   append_separator_if_needed();
   m_path += path.m_path;
@@ -143,8 +145,7 @@ Lumex::Path::find_filename_pos() const
   if(m_path.empty()) return string_type::npos;
 
   size_t pos = m_path.find_last_of("/\\");
-  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos)
-    return 0;
+  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos) return 0;
 
   return pos + 1;
 }
@@ -154,8 +155,7 @@ Lumex::Path
 Lumex::Path::filename() const
 {
   size_t pos = find_filename_pos();
-  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos)
-    return Path();
+  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos) return Path();
 
   return Path(m_path.substr(pos));
 }
@@ -165,11 +165,7 @@ Lumex::Path
 Lumex::Path::parent_path() const
 {
   size_t pos = find_filename_pos();
-  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos
-     || pos == 0)
-    {
-      return Path();
-    }
+  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos || pos == 0) return Path();
 
   // Remove trailing separator
   size_t end = pos - 1;
@@ -185,18 +181,11 @@ size_t
 Lumex::Path::find_extension_pos() const
 {
   size_t filename_pos = find_filename_pos();
-  if(static_cast<decltype(string_type::npos)>(filename_pos)
-     == string_type::npos)
-    {
-      return string_type::npos;
-    }
+  if(static_cast<decltype(string_type::npos)>(filename_pos) == string_type::npos) return string_type::npos;
 
   size_t dot_pos = m_path.find_last_of('.');
-  if(static_cast<decltype(string_type::npos)>(dot_pos) == string_type::npos
-     || dot_pos < filename_pos)
-    {
-      return string_type::npos;
-    }
+  if(static_cast<decltype(string_type::npos)>(dot_pos) == string_type::npos || dot_pos < filename_pos)
+    return string_type::npos;
 
   // Don't count dot at beginning of filename
   if(dot_pos == filename_pos) return string_type::npos;
@@ -209,8 +198,7 @@ Lumex::Path
 Lumex::Path::extension() const
 {
   size_t pos = find_extension_pos();
-  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos)
-    return Path();
+  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos) return Path();
 
   return Path(m_path.substr(pos));
 }
@@ -220,15 +208,10 @@ Lumex::Path
 Lumex::Path::stem() const
 {
   size_t filename_pos = find_filename_pos();
-  if(static_cast<decltype(string_type::npos)>(filename_pos)
-     == string_type::npos)
-    {
-      return Path();
-    }
+  if(static_cast<decltype(string_type::npos)>(filename_pos) == string_type::npos) return Path();
 
   size_t ext_pos = find_extension_pos();
-  if(static_cast<decltype(string_type::npos)>(ext_pos) == string_type::npos)
-    return Path(m_path.substr(filename_pos));
+  if(static_cast<decltype(string_type::npos)>(ext_pos) == string_type::npos) return Path(m_path.substr(filename_pos));
 
   return Path(m_path.substr(filename_pos, ext_pos - filename_pos));
 }
@@ -238,14 +221,13 @@ Lumex::Path &
 Lumex::Path::replace_extension(Path const &replacement)
 {
   size_t pos = find_extension_pos();
-  if(static_cast<decltype(string_type::npos)>(pos) != string_type::npos)
-    m_path.erase(pos);
+  if(static_cast<decltype(string_type::npos)>(pos) != string_type::npos) m_path.erase(pos);
 
   if(!replacement.empty())
-    {
-      if(replacement.m_path[0] != '.') m_path += '.';
-      m_path += replacement.m_path;
-    }
+  {
+    if(replacement.m_path[0] != '.') m_path += '.';
+    m_path += replacement.m_path;
+  }
 
   return *this;
 }
@@ -255,11 +237,7 @@ Lumex::Path &
 Lumex::Path::remove_filename()
 {
   size_t pos = find_filename_pos();
-  if(static_cast<decltype(string_type::npos)>(pos) != string_type::npos
-     && pos > 0)
-    {
-      m_path.erase(pos);
-    }
+  if(static_cast<decltype(string_type::npos)>(pos) != string_type::npos && pos > 0) m_path.erase(pos);
   return *this;
 }
 
@@ -278,12 +256,12 @@ Lumex::Path::is_absolute() const
 #if LUMEX_OS_WINDOWS
   // Check for drive letter (C:) or UNC path (\\server)
   if(m_path.length() >= 2)
-    {
-      // Non-zero value if the character is an alphabetic character, zero otherwise.
-      // @link https://en.cppreference.com/w/cpp/string/byte/isalpha
-      if(std::isalpha(m_path[0]) != 0 && m_path[1] == ':') return true;
-      if(m_path[0] == '\\' && m_path[1] == '\\') return true;
-    }
+  {
+    // Non-zero value if the character is an alphabetic character, zero otherwise.
+    // @link https://en.cppreference.com/w/cpp/string/byte/isalpha
+    if(std::isalpha(m_path[0]) != 0 && m_path[1] == ':') return true;
+    if(m_path[0] == '\\' && m_path[1] == '\\') return true;
+  }
   return false;
 #else
   return !m_path.empty() && m_path[0] == '/';
@@ -304,8 +282,7 @@ LUMEX_PUBLIC_API
 bool
 Lumex::Path::has_extension() const
 {
-  return static_cast<decltype(string_type::npos)>(find_extension_pos())
-         != string_type::npos;
+  return static_cast<decltype(string_type::npos)>(find_extension_pos()) != string_type::npos;
 }
 
 LUMEX_PUBLIC_API
@@ -320,13 +297,8 @@ bool
 Lumex::Path::has_root_directory() const
 {
 #if LUMEX_OS_WINDOWS
-  if(m_path.length() >= 3 && std::isalpha(m_path[0]) != 0 && m_path[1] == ':'
-     && is_separator(m_path[2]))
-    {
-      return true;
-    }
-  if(m_path.length() >= 2 && m_path[0] == '\\' && m_path[1] == '\\')
-    return true;
+  if(m_path.length() >= 3 && std::isalpha(m_path[0]) != 0 && m_path[1] == ':' && is_separator(m_path[2])) return true;
+  if(m_path.length() >= 2 && m_path[0] == '\\' && m_path[1] == '\\') return true;
   return false;
 #else
   return !m_path.empty() && m_path[0] == '/';
@@ -340,22 +312,17 @@ Lumex::Path::root_directory() const
   if(!has_root_directory()) return {};
 
 #if LUMEX_OS_WINDOWS
-  if(m_path.length() >= 3 && std::isalpha(m_path[0]) != 0 && m_path[1] == ':')
-    return Path("\\");
+  if(m_path.length() >= 3 && std::isalpha(m_path[0]) != 0 && m_path[1] == ':') return Path("\\");
   if(m_path.length() >= 2 && m_path[0] == '\\' && m_path[1] == '\\')
+  {
+    // Find next separator after \\server
+    size_t pos = m_path.find_first_of("/\\", 2);
+    if(static_cast<decltype(string_type::npos)>(pos) != string_type::npos)
     {
-      // Find next separator after \\server
-      size_t pos = m_path.find_first_of("/\\", 2);
-      if(static_cast<decltype(string_type::npos)>(pos) != string_type::npos)
-        {
-          pos = m_path.find_first_of("/\\", pos + 1);
-          if(static_cast<decltype(string_type::npos)>(pos)
-             != string_type::npos)
-            {
-              return Path("\\");
-            }
-        }
+      pos = m_path.find_first_of("/\\", pos + 1);
+      if(static_cast<decltype(string_type::npos)>(pos) != string_type::npos) return Path("\\");
     }
+  }
   return {};
 #else
   return Path("/");
@@ -375,20 +342,17 @@ Lumex::Path::root_name() const
 {
 #if LUMEX_OS_WINDOWS
   // Windows: root name is drive letter or UNC server/share
-  if(m_path.size() >= 2 && std::isalpha(m_path[0]) != 0 && m_path[1] == ':')
-    return Path(m_path.substr(0, 2));
+  if(m_path.size() >= 2 && std::isalpha(m_path[0]) != 0 && m_path[1] == ':') return Path(m_path.substr(0, 2));
   if(m_path.size() >= 2 && is_separator(m_path[0]) && is_separator(m_path[1]))
+  {
+    // UNC path: \\server\share\...
+    size_t pos = m_path.find_first_of("/\\", 2);
+    if(static_cast<decltype(string_type::npos)>(pos) != string_type::npos)
     {
-      // UNC path: \\server\share\...
-      size_t pos = m_path.find_first_of("/\\", 2);
-      if(static_cast<decltype(string_type::npos)>(pos) != string_type::npos)
-        {
-          pos = m_path.find_first_of("/\\", pos + 1);
-          if(static_cast<decltype(string_type::npos)>(pos)
-             != string_type::npos)
-            return Path(m_path.substr(0, pos));
-        }
+      pos = m_path.find_first_of("/\\", pos + 1);
+      if(static_cast<decltype(string_type::npos)>(pos) != string_type::npos) return Path(m_path.substr(0, pos));
     }
+  }
   return {};
 #else
   // POSIX: no root name
@@ -464,8 +428,7 @@ Lumex::Filesystem::is_directory(Path const &path)
 {
 #if LUMEX_OS_WINDOWS
   DWORD attrs = GetFileAttributesA(path.c_str());
-  return attrs != INVALID_FILE_ATTRIBUTES
-         && (attrs & FILE_ATTRIBUTE_DIRECTORY) != 0;
+  return attrs != INVALID_FILE_ATTRIBUTES && (attrs & FILE_ATTRIBUTE_DIRECTORY) != 0;
 #else
   struct stat st;
   if(stat(path.c_str(), &st) != 0) return false;
@@ -479,8 +442,7 @@ Lumex::Filesystem::is_regular_file(Path const &path)
 {
 #if LUMEX_OS_WINDOWS
   DWORD attrs = GetFileAttributesA(path.c_str());
-  return attrs != INVALID_FILE_ATTRIBUTES
-         && (attrs & FILE_ATTRIBUTE_DIRECTORY) == 0
+  return attrs != INVALID_FILE_ATTRIBUTES && (attrs & FILE_ATTRIBUTE_DIRECTORY) == 0
          && (attrs & FILE_ATTRIBUTE_DEVICE) == 0;
 #else
   struct stat stt;
@@ -494,16 +456,13 @@ Lumex::FilesystemResult<bool>
 Lumex::Filesystem::create_directory(Path const &path)
 {
 #if LUMEX_OS_WINDOWS
-  if(CreateDirectoryA(path.c_str(), nullptr) != 0)
-    return FilesystemResult<bool>(true);
+  if(CreateDirectoryA(path.c_str(), nullptr) != 0) return FilesystemResult<bool>(true);
   DWORD error = GetLastError();
-  if(error == ERROR_ALREADY_EXISTS && is_directory(path))
-    return FilesystemResult<bool>(false);
+  if(error == ERROR_ALREADY_EXISTS && is_directory(path)) return FilesystemResult<bool>(false);
   return FilesystemResult<bool>(error, false);
 #else
   if(mkdir(path.c_str(), 0755) == 0) return FilesystemResult<bool>(true);
-  if(errno == EEXIST && is_directory(path))
-    return FilesystemResult<bool>(false);
+  if(errno == EEXIST && is_directory(path)) return FilesystemResult<bool>(false);
   return FilesystemResult<bool>(errno, false);
 #endif
 }
@@ -515,13 +474,11 @@ Lumex::Filesystem::current_path()
 #if LUMEX_OS_WINDOWS
   std::array<char, MAX_PATH> buffer;
   DWORD result = GetCurrentDirectoryA(MAX_PATH, buffer.data());
-  if(result == 0 || result > MAX_PATH)
-    return FilesystemResult<Path>(GetLastError(), Path());
+  if(result == 0 || result > MAX_PATH) return FilesystemResult<Path>(GetLastError(), Path());
   return FilesystemResult<Path>(Path(buffer.data()));
 #else
   std::array<char, PATH_MAX> buffer;
-  if(getcwd(buffer, PATH_MAX) != nullptr)
-    return FilesystemResult<Path>(Path(buffer.data()));
+  if(getcwd(buffer.data(), PATH_MAX) != nullptr) return FilesystemResult<Path>(Path(buffer.data()));
   return FilesystemResult<Path>(errno, Path());
 #endif
 }
@@ -553,8 +510,7 @@ namespace Lumex
         perms_to_windows_attributes(Lumex::Perms prms) // NOLINT
         {
           DWORD attrs = 0;
-          if((prms & Lumex::Perms::owner_write) == Lumex::Perms::none)
-            attrs |= FILE_ATTRIBUTE_READONLY;
+          if((prms & Lumex::Perms::owner_write) == Lumex::Perms::none) attrs |= FILE_ATTRIBUTE_READONLY;
           return attrs;
         }
 #else
@@ -576,15 +532,10 @@ Lumex::FilesystemResult<Lumex::FileStatus>
 Lumex::Filesystem::get_file_status_windows(Path const &path, bool follow)
 {
   WIN32_FILE_ATTRIBUTE_DATA data;
-  BOOL ok_ = follow ? GetFileAttributesExA(path.c_str(), GetFileExInfoStandard,
-                                           std::addressof(data))
-                    : GetFileAttributesExA(path.c_str(), GetFileExInfoStandard,
-                                           std::addressof(data));
+  BOOL ok_ = follow ? GetFileAttributesExA(path.c_str(), GetFileExInfoStandard, std::addressof(data))
+                    : GetFileAttributesExA(path.c_str(), GetFileExInfoStandard, std::addressof(data));
   if(!static_cast<bool>(ok_))
-    {
-      return FilesystemResult<FileStatus>(static_cast<int>(GetLastError()),
-                                          FileStatus(FileType::not_found));
-    }
+    return FilesystemResult<FileStatus>(static_cast<int>(GetLastError()), FileStatus(FileType::not_found));
 
   DWORD tmp     = data.dwFileAttributes;
   FileType type = FileType::unknown;
@@ -595,10 +546,8 @@ Lumex::Filesystem::get_file_status_windows(Path const &path, bool follow)
   else
     type = FileType::regular;
 
-  Perms perms
-    = ((tmp & FILE_ATTRIBUTE_READONLY) != 0U)
-        ? (Perms::owner_read | Perms::group_read | Perms::others_read)
-        : Perms::all;
+  Perms perms = ((tmp & FILE_ATTRIBUTE_READONLY) != 0U) ? (Perms::owner_read | Perms::group_read | Perms::others_read)
+                                                        : Perms::all;
   return FilesystemResult<FileStatus>(FileStatus(type, perms));
 }
 #else
@@ -607,13 +556,8 @@ Lumex::FilesystemResult<Lumex::FileStatus>
 Lumex::Filesystem::get_file_status_posix(Path const &path, bool follow)
 {
   struct stat stt;
-  int res = follow ? stat(path.c_str(), std::addressof(stt))
-                   : lstat(path.c_str(), std::addressof(stt));
-  if(res != 0)
-    {
-      return FilesystemResult<FileStatus>(errno,
-                                          FileStatus(FileType::not_found));
-    }
+  int res = follow ? stat(path.c_str(), std::addressof(stt)) : lstat(path.c_str(), std::addressof(stt));
+  if(res != 0) return FilesystemResult<FileStatus>(errno, FileStatus(FileType::not_found));
   FileType type = FileType::unknown;
   if(S_ISREG(stt.st_mode))
     type = FileType::regular;
@@ -698,8 +642,8 @@ bool
 Lumex::Filesystem::is_other(Path const &path)
 {
   FileType fType = status(path).value().type();
-  return fType != FileType::none && fType != FileType::not_found
-         && fType != FileType::regular && fType != FileType::directory;
+  return fType != FileType::none && fType != FileType::not_found && fType != FileType::regular
+         && fType != FileType::directory;
 }
 
 LUMEX_PUBLIC_API
@@ -708,10 +652,10 @@ Lumex::Filesystem::is_empty(Path const &path)
 {
   if(!exists(path)) return false;
   if(is_directory(path))
-    {
-      DirectoryIterator iter(path);
-      return iter == DirectoryIterator();
-    }
+  {
+    DirectoryIterator iter(path);
+    return iter == DirectoryIterator();
+  }
   FilesystemResult<std::uintmax_t> fsRes = file_size(path);
   return fsRes.success() && fsRes.value() == 0;
 }
@@ -723,37 +667,36 @@ Lumex::Filesystem::copy(Path const &from, Path const &to_)
 {
   // Step 1: Check if the source 'from' is a directory.
   if(is_directory(from))
+  {
+    // Step 2 (Recursive case - if 'from' is a directory):
+    // Try to create the target directory 'to_'.
+    FilesystemResult<bool> created = create_directory(to_);
+
+    // If creation fails and the error is not 'already exists', return the
+    // error.
+    if(!created && created.error_code() != 0) return FilesystemResult<void>(created.error_code());
+
+    // Get all entries (files and subdirectories) within the source directory.
+    std::vector<DirectoryEntry> entries = directory_contents(from);
+
+    // Iterate over each entry in the source directory.
+    for(DirectoryEntry const &entry : entries)
     {
-      // Step 2 (Recursive case - if 'from' is a directory):
-      // Try to create the target directory 'to_'.
-      FilesystemResult<bool> created = create_directory(to_);
+      // Form the new source path for the current entry.
+      Path new_from = entry.path();
 
-      // If creation fails and the error is not 'already exists', return the
-      // error.
-      if(!created && created.error_code() != 0)
-        return FilesystemResult<void>(created.error_code());
+      // Form the new target path for the current entry within the destination.
+      Path new_to = to_ / entry.path().filename();
 
-      // Get all entries (files and subdirectories) within the source directory.
-      std::vector<DirectoryEntry> entries = directory_contents(from);
+      // Recursively call 'copy' for the current entry.
+      FilesystemResult<void> res = copy(new_from, new_to);
 
-      // Iterate over each entry in the source directory.
-      for(DirectoryEntry const &entry : entries)
-        {
-          // Form the new source path for the current entry.
-          Path new_from = entry.path();
-
-          // Form the new target path for the current entry within the destination.
-          Path new_to = to_ / entry.path().filename();
-
-          // Recursively call 'copy' for the current entry.
-          FilesystemResult<void> res = copy(new_from, new_to);
-
-          // If the recursive copy fails, propagate the error up.
-          if(!res) return res;
-        }
-      // If all entries were successfully copied, return success.
-      return {};
+      // If the recursive copy fails, propagate the error up.
+      if(!res) return res;
     }
+    // If all entries were successfully copied, return success.
+    return {};
+  }
   // Step 3 (Non-recursive case - if 'from' is a regular file):
   // Directly copy the file using 'copy_file' function.
   // The result (success or error) of 'copy_file' is returned.
@@ -774,21 +717,21 @@ Lumex::Filesystem::copy_file(Path const &from, Path const &to_)
   if(inFd < 0) return FilesystemResult<void>(errno);
   int outFd = open(to_.c_str(), O_WRONLY | O_CREAT | O_TRUNC, 0666);
   if(outFd < 0)
-    {
-      close(inFd);
-      return FilesystemResult<void>(errno);
-    }
+  {
+    close(inFd);
+    return FilesystemResult<void>(errno);
+  }
   ssize_t r;
   while((r = read(inFd, buffer, bufSize)) > 0)
+  {
+    ssize_t w = write(outFd, buffer, static_cast<size_t>(r));
+    if(w != r)
     {
-      ssize_t w = write(outFd, buffer, static_cast<size_t>(r));
-      if(w != r)
-        {
-          close(inFd);
-          close(outFd);
-          return FilesystemResult<void>(errno);
-        }
+      close(inFd);
+      close(outFd);
+      return FilesystemResult<void>(errno);
     }
+  }
   close(inFd);
   close(outFd);
   if(r < 0) return FilesystemResult<void>(errno);
@@ -803,15 +746,9 @@ Lumex::Filesystem::copy_symlink(Path const &from, Path const &to_)
 #if LUMEX_OS_WINDOWS
   // Windows requires knowing if link is file or dir
   DWORD attrs = GetFileAttributesA(from.c_str());
-  if(attrs == INVALID_FILE_ATTRIBUTES)
-    return FilesystemResult<void>(GetLastError());
+  if(attrs == INVALID_FILE_ATTRIBUTES) return FilesystemResult<void>(GetLastError());
   bool isDir = (attrs & FILE_ATTRIBUTE_DIRECTORY) != 0;
-  if(CreateSymbolicLinkA(to_.c_str(), from.c_str(),
-                         isDir ? SYMBOLIC_LINK_FLAG_DIRECTORY : 0)
-     != 0)
-    {
-      return {};
-    }
+  if(CreateSymbolicLinkA(to_.c_str(), from.c_str(), isDir ? SYMBOLIC_LINK_FLAG_DIRECTORY : 0) != 0) return {};
   return FilesystemResult<void>(GetLastError());
 #else
   if(symlink(from.c_str(), to_.c_str()) == 0) return {};
@@ -828,11 +765,10 @@ Lumex::Filesystem::create_directories(Path const &path)
   if(exists(path)) return FilesystemResult<bool>(false);
   Path parent = path.parent_path();
   if(!parent.empty())
-    {
-      FilesystemResult<bool> res = create_directories(parent);
-      if(!res && res.error_code() != 0)
-        return FilesystemResult<bool>(res.error_code(), false);
-    }
+  {
+    FilesystemResult<bool> res = create_directories(parent);
+    if(!res && res.error_code() != 0) return FilesystemResult<bool>(res.error_code(), false);
+  }
   return create_directory(path);
 }
 
@@ -842,25 +778,24 @@ Lumex::Filesystem::remove(Path const &path)
 {
 #if LUMEX_OS_WINDOWS
   if(is_directory(path))
-    {
-      if(RemoveDirectoryA(path.c_str()) != 0)
-        return FilesystemResult<bool>(true);
-    }
+  {
+    if(RemoveDirectoryA(path.c_str()) != 0) return FilesystemResult<bool>(true);
+  }
   else
-    {
-      if(DeleteFileA(path.c_str()) != 0) return FilesystemResult<bool>(true);
-    }
+  {
+    if(DeleteFileA(path.c_str()) != 0) return FilesystemResult<bool>(true);
+  }
   // Return false with the last Windows error if removal failed.
   return FilesystemResult<bool>(GetLastError(), false);
 #else
   if(is_directory(path))
-    {
-      if(rmdir(path.c_str()) == 0) return FilesystemResult<bool>(true);
-    }
+  {
+    if(rmdir(path.c_str()) == 0) return FilesystemResult<bool>(true);
+  }
   else
-    {
-      if(unlink(path.c_str()) == 0) return FilesystemResult<bool>(true);
-    }
+  {
+    if(unlink(path.c_str()) == 0) return FilesystemResult<bool>(true);
+  }
   // Return false with the errno if removal failed.
   return FilesystemResult<bool>(errno, false);
 #endif
@@ -870,18 +805,17 @@ LUMEX_PUBLIC_API
 Lumex::FilesystemResult<std::uintmax_t>
 Lumex::Filesystem::remove_all(Path const &path)
 {
-  if(!exists(path))
-    return FilesystemResult<std::uintmax_t>(static_cast<std::uintmax_t>(0));
+  if(!exists(path)) return FilesystemResult<std::uintmax_t>(static_cast<std::uintmax_t>(0));
   std::uintmax_t count = 0;
   if(is_directory(path))
+  {
+    for(DirectoryEntry const &dirEntry : directory_contents(path))
     {
-      for(DirectoryEntry const &dirEntry : directory_contents(path))
-        {
-          FilesystemResult<std::uintmax_t> sub = remove_all(dirEntry.path());
-          if(!sub) return sub;
-          count += sub.value();
-        }
+      FilesystemResult<std::uintmax_t> sub = remove_all(dirEntry.path());
+      if(!sub) return sub;
+      count += sub.value();
     }
+  }
   FilesystemResult<bool> self = remove(path);
   if(!self) return FilesystemResult<std::uintmax_t>(self.error_code(), count);
   return FilesystemResult<std::uintmax_t>(count + 1);
@@ -893,27 +827,22 @@ Lumex::Filesystem::file_size(Path const &path)
 {
 #if LUMEX_OS_WINDOWS
   HANDLE hFile
-    = CreateFileA(path.c_str(), GENERIC_READ, FILE_SHARE_READ, nullptr,
-                  OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
-  if(hFile == INVALID_HANDLE_VALUE)
-    return FilesystemResult<std::uintmax_t>(GetLastError(), 0);
+    = CreateFileA(path.c_str(), GENERIC_READ, FILE_SHARE_READ, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
+  if(hFile == INVALID_HANDLE_VALUE) return FilesystemResult<std::uintmax_t>(GetLastError(), 0);
   LARGE_INTEGER size;
   if(GetFileSizeEx(hFile, std::addressof(size)) == 0)
-    {
-      DWORD err = GetLastError();
-      CloseHandle(hFile);
-      return FilesystemResult<std::uintmax_t>(err, 0);
-    }
+  {
+    DWORD err = GetLastError();
+    CloseHandle(hFile);
+    return FilesystemResult<std::uintmax_t>(err, 0);
+  }
   CloseHandle(hFile);
-  return FilesystemResult<std::uintmax_t>(
-    static_cast<std::uintmax_t>(size.QuadPart));
+  return FilesystemResult<std::uintmax_t>(static_cast<std::uintmax_t>(size.QuadPart));
 #else
   struct stat stt;
-  if(stat(path.c_str(), std::addressof(stt)) != 0)
-    return FilesystemResult<std::uintmax_t>(errno, 0);
+  if(stat(path.c_str(), std::addressof(stt)) != 0) return FilesystemResult<std::uintmax_t>(errno, 0);
 
-  return FilesystemResult<std::uintmax_t>(
-    static_cast<std::uintmax_t>(stt.st_size));
+  return FilesystemResult<std::uintmax_t>(static_cast<std::uintmax_t>(stt.st_size));
 #endif
 }
 
@@ -923,29 +852,25 @@ Lumex::Filesystem::last_write_time(Path const &path)
 {
 #if LUMEX_OS_WINDOWS
   HANDLE hFile
-    = CreateFileA(path.c_str(), GENERIC_READ, FILE_SHARE_READ, nullptr,
-                  OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
-  if(hFile == INVALID_HANDLE_VALUE)
-    return FilesystemResult<std::time_t>(GetLastError(), 0);
+    = CreateFileA(path.c_str(), GENERIC_READ, FILE_SHARE_READ, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
+  if(hFile == INVALID_HANDLE_VALUE) return FilesystemResult<std::time_t>(GetLastError(), 0);
   FILETIME fTime;
   if(GetFileTime(hFile, nullptr, nullptr, std::addressof(fTime)) == 0)
-    {
-      DWORD err = GetLastError();
-      CloseHandle(hFile);
-      return FilesystemResult<std::time_t>(err, 0);
-    }
+  {
+    DWORD err = GetLastError();
+    CloseHandle(hFile);
+    return FilesystemResult<std::time_t>(err, 0);
+  }
   CloseHandle(hFile);
   ULARGE_INTEGER ulInt;
   ulInt.LowPart   = fTime.dwLowDateTime;
   ulInt.HighPart  = fTime.dwHighDateTime;
-  auto timeStruct = static_cast<std::time_t>(
-    (ulInt.QuadPart - KDEFAULT_WINDOWS_FILETIME_TO_UNIX_EPOCH_INTERVALS)
-    / KDEFAULT_HUNDRED_NANOSECONDS_PER_SECOND);
+  auto timeStruct = static_cast<std::time_t>((ulInt.QuadPart - KDEFAULT_WINDOWS_FILETIME_TO_UNIX_EPOCH_INTERVALS)
+                                             / KDEFAULT_HUNDRED_NANOSECONDS_PER_SECOND);
   return FilesystemResult<std::time_t>(timeStruct);
 #else
   struct stat stt;
-  if(stat(path.c_str(), std::addressof(stt)) != 0)
-    return FilesystemResult<std::time_t>(errno, 0);
+  if(stat(path.c_str(), std::addressof(stt)) != 0) return FilesystemResult<std::time_t>(errno, 0);
 
   return FilesystemResult<std::time_t>(stt.st_mtime);
 #endif
@@ -956,20 +881,17 @@ Lumex::FilesystemResult<void>
 Lumex::Filesystem::last_write_time(Path const &path, std::time_t new_time)
 {
 #if LUMEX_OS_WINDOWS
-  HANDLE hFile
-    = CreateFileA(path.c_str(), GENERIC_WRITE, FILE_SHARE_WRITE, nullptr,
-                  OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
-  if(hFile == INVALID_HANDLE_VALUE)
-    return FilesystemResult<void>(GetLastError());
+  HANDLE hFile = CreateFileA(path.c_str(), GENERIC_WRITE, FILE_SHARE_WRITE, nullptr, OPEN_EXISTING,
+                             FILE_ATTRIBUTE_NORMAL, nullptr);
+  if(hFile == INVALID_HANDLE_VALUE) return FilesystemResult<void>(GetLastError());
   ULARGE_INTEGER ulInt;
-  ulInt.QuadPart = (static_cast<unsigned long long>(new_time)
-                    * KDEFAULT_HUNDRED_NANOSECONDS_PER_SECOND)
+  ulInt.QuadPart = (static_cast<unsigned long long>(new_time) * KDEFAULT_HUNDRED_NANOSECONDS_PER_SECOND)
                    + KDEFAULT_WINDOWS_FILETIME_TO_UNIX_EPOCH_INTERVALS;
   FILETIME fTime;
   fTime.dwLowDateTime  = ulInt.LowPart;
   fTime.dwHighDateTime = ulInt.HighPart;
-  BOOL ok_  = SetFileTime(hFile, nullptr, nullptr, std::addressof(fTime));
-  DWORD err = (ok_ != 0) ? 0 : GetLastError();
+  BOOL ok_             = SetFileTime(hFile, nullptr, nullptr, std::addressof(fTime));
+  DWORD err            = (ok_ != 0) ? 0 : GetLastError();
   CloseHandle(hFile);
   return (ok_ != 0) ? FilesystemResult<void>() : FilesystemResult<void>(err);
 #else
@@ -987,8 +909,7 @@ Lumex::Filesystem::permissions(Path const &path, Perms prms)
 {
 #if LUMEX_OS_WINDOWS
   DWORD attrs = GetFileAttributesA(path.c_str());
-  if(attrs == INVALID_FILE_ATTRIBUTES)
-    return FilesystemResult<void>(GetLastError());
+  if(attrs == INVALID_FILE_ATTRIBUTES) return FilesystemResult<void>(GetLastError());
 
   if((prms & Perms::owner_write) == Perms::none)
     attrs |= FILE_ATTRIBUTE_READONLY;
@@ -998,7 +919,7 @@ Lumex::Filesystem::permissions(Path const &path, Perms prms)
   if(SetFileAttributesA(path.c_str(), attrs) != 0) return {};
   return FilesystemResult<void>(GetLastError());
 #else
-  mode_t mode = perms_to_posix_mode(prms);
+  mode_t mode = detail::perms_to_posix_mode(prms);
   if(chmod(path.c_str(), mode) == 0) return {};
   return FilesystemResult<void>(errno);
 #endif
@@ -1011,9 +932,8 @@ Lumex::Filesystem::read_symlink(Path const &path)
 #if LUMEX_OS_WINDOWS
   std::vector<char> buf(MAX_PATH);
   DWORD len = GetFinalPathNameByHandleA(
-    CreateFileA(path.c_str(), 0, 0, nullptr, OPEN_EXISTING,
-                FILE_FLAG_BACKUP_SEMANTICS, nullptr),
-    buf.data(), MAX_PATH, FILE_NAME_NORMALIZED);
+    CreateFileA(path.c_str(), 0, 0, nullptr, OPEN_EXISTING, FILE_FLAG_BACKUP_SEMANTICS, nullptr), buf.data(), MAX_PATH,
+    FILE_NAME_NORMALIZED);
   if(len == 0) return FilesystemResult<Path>(GetLastError(), Path());
   return FilesystemResult<Path>(Path(std::string(buf.data(), len)));
 #else
@@ -1035,21 +955,16 @@ Lumex::Filesystem::space(Path const &path)
   ULARGE_INTEGER totalNumberOfBytes;
   ULARGE_INTEGER totalNumberOfFreeBytes;
 
-  if(GetDiskFreeSpaceExA(path.c_str(), &freeBytesAvailable,
-                         &totalNumberOfBytes, &totalNumberOfFreeBytes)
-     == 0)
-    {
-      return FilesystemResult<SpaceInfo>(GetLastError(), SpaceInfo());
-    }
+  if(GetDiskFreeSpaceExA(path.c_str(), &freeBytesAvailable, &totalNumberOfBytes, &totalNumberOfFreeBytes) == 0)
+    return FilesystemResult<SpaceInfo>(GetLastError(), SpaceInfo());
   SpaceInfo info;
   info.available = static_cast<std::uintmax_t>(freeBytesAvailable.QuadPart);
-  info.free     = static_cast<std::uintmax_t>(totalNumberOfFreeBytes.QuadPart);
-  info.capacity = static_cast<std::uintmax_t>(totalNumberOfBytes.QuadPart);
+  info.free      = static_cast<std::uintmax_t>(totalNumberOfFreeBytes.QuadPart);
+  info.capacity  = static_cast<std::uintmax_t>(totalNumberOfBytes.QuadPart);
   return FilesystemResult<SpaceInfo>(info);
 #else
   struct statvfs vfs;
-  if(statvfs(path.c_str(), std::addressof(vfs)) != 0)
-    return FilesystemResult<SpaceInfo>(errno, SpaceInfo());
+  if(statvfs(path.c_str(), std::addressof(vfs)) != 0) return FilesystemResult<SpaceInfo>(errno, SpaceInfo());
   SpaceInfo info;
   info.available = static_cast<std::uintmax_t>(vfs.f_bavail) * vfs.f_frsize;
   info.free      = static_cast<std::uintmax_t>(vfs.f_bfree) * vfs.f_frsize;
@@ -1075,8 +990,7 @@ public:
 };
 
 LUMEX_PUBLIC_API
-Lumex::DirectoryIterator::DirectoryIterator(Path const &path)
-    : m_impl(new Impl)
+Lumex::DirectoryIterator::DirectoryIterator(Path const &path) : m_impl(new Impl)
 {
   m_impl->base = path;
 #if LUMEX_OS_WINDOWS
@@ -1097,9 +1011,7 @@ Lumex::DirectoryIterator::DirectoryIterator(Path const &path)
 }
 
 LUMEX_PUBLIC_API
-Lumex::DirectoryIterator::DirectoryIterator(DirectoryIterator const &other)
-    : m_impl(other.m_impl)
-{}
+Lumex::DirectoryIterator::DirectoryIterator(DirectoryIterator const &other) : m_impl(other.m_impl) {}
 
 LUMEX_PUBLIC_API
 Lumex::DirectoryIterator &
@@ -1131,33 +1043,33 @@ Lumex::DirectoryIterator::operator++()
 #if LUMEX_OS_WINDOWS
   BOOL ok_;
   if(m_impl->first)
-    {
-      ok_           = TRUE;
-      m_impl->first = false;
-    }
+  {
+    ok_           = TRUE;
+    m_impl->first = false;
+  }
   else { ok_ = FindNextFileA(m_impl->handle, &m_impl->data); }
   while(ok_ != 0)
+  {
+    std::string name(m_impl->data.cFileName);
+    if(name != "." && name != "..")
     {
-      std::string name(m_impl->data.cFileName);
-      if(name != "." && name != "..")
-        {
-          m_impl->current = DirectoryEntry(m_impl->base / Path(name));
-          return *this;
-        }
-      ok_ = FindNextFileA(m_impl->handle, &m_impl->data);
+      m_impl->current = DirectoryEntry(m_impl->base / Path(name));
+      return *this;
     }
+    ok_ = FindNextFileA(m_impl->handle, &m_impl->data);
+  }
   FindClose(m_impl->handle);
   m_impl.reset();
 #else
   while((m_impl->entry = readdir(m_impl->dirp)) != nullptr)
+  {
+    std::string name(m_impl->entry->d_name);
+    if(name != "." && name != "..")
     {
-      std::string name(m_impl->entry->d_name);
-      if(name != "." && name != "..")
-        {
-          m_impl->current = DirectoryEntry(m_impl->base / Path(name));
-          return *this;
-        }
+      m_impl->current = DirectoryEntry(m_impl->base / Path(name));
+      return *this;
     }
+  }
   closedir(m_impl->dirp);
   m_impl.reset();
 #endif
@@ -1189,9 +1101,7 @@ Lumex::DirectoryIterator::operator!=(DirectoryIterator const &rhs) const
 
 // DirectoryEntry simple wrappers
 LUMEX_PUBLIC_API
-Lumex::DirectoryEntry::DirectoryEntry(Path const &path)
-    : m_path(path), m_status_known(false)
-{}
+Lumex::DirectoryEntry::DirectoryEntry(Path const &path) : m_path(path), m_status_known(false) {}
 
 LUMEX_PUBLIC_API
 void
@@ -1332,8 +1242,7 @@ std::vector<Lumex::DirectoryEntry>
 Lumex::Filesystem::directory_contents(Path const &path)
 {
   std::vector<Lumex::DirectoryEntry> out;
-  for(DirectoryIterator it(path); it != DirectoryIterator(); ++it)
-    out.push_back(*it);
+  for(DirectoryIterator it(path); it != DirectoryIterator(); ++it) out.push_back(*it);
   return out;
 }
 
@@ -1362,15 +1271,9 @@ Lumex::Filesystem::create_symlink(Path const &target, Path const &link)
   // On Windows, CreateSymbolicLinkA requires admin rights for files, and needs
   // to know if target is a dir
   DWORD attrs = GetFileAttributesA(target.c_str());
-  if(attrs == INVALID_FILE_ATTRIBUTES)
-    return FilesystemResult<void>(GetLastError());
+  if(attrs == INVALID_FILE_ATTRIBUTES) return FilesystemResult<void>(GetLastError());
   bool isDir = (attrs & FILE_ATTRIBUTE_DIRECTORY) != 0;
-  if(CreateSymbolicLinkA(link.c_str(), target.c_str(),
-                         isDir ? SYMBOLIC_LINK_FLAG_DIRECTORY : 0)
-     != 0)
-    {
-      return {};
-    }
+  if(CreateSymbolicLinkA(link.c_str(), target.c_str(), isDir ? SYMBOLIC_LINK_FLAG_DIRECTORY : 0) != 0) return {};
   return FilesystemResult<void>(GetLastError());
 #else
   if(symlink(target.c_str(), link.c_str()) == 0) return {};
@@ -1380,17 +1283,11 @@ Lumex::Filesystem::create_symlink(Path const &target, Path const &link)
 
 LUMEX_PUBLIC_API
 Lumex::FilesystemResult<void>
-Lumex::Filesystem::create_directory_symlink(Path const &target,
-                                            Path const &link)
+Lumex::Filesystem::create_directory_symlink(Path const &target, Path const &link)
 {
 #if LUMEX_OS_WINDOWS
   // Always create as directory symlink
-  if(CreateSymbolicLinkA(link.c_str(), target.c_str(),
-                         SYMBOLIC_LINK_FLAG_DIRECTORY)
-     != 0)
-    {
-      return {};
-    }
+  if(CreateSymbolicLinkA(link.c_str(), target.c_str(), SYMBOLIC_LINK_FLAG_DIRECTORY) != 0) return {};
   return FilesystemResult<void>(GetLastError());
 #else
   if(symlink(target.c_str(), link.c_str()) == 0) return {};
@@ -1437,14 +1334,12 @@ Lumex::Filesystem::relative(Path const &path, Path const &base)
   std::transform(pstr.begin(), pstr.end(), pstr.begin(), ::tolower);
   std::transform(bstr.begin(), bstr.end(), bstr.begin(), ::tolower);
 #endif
-  if(pstr.find(bstr) == 0
-     && (pstr.size() == bstr.size() || pstr[bstr.size()] == '/'
-         || pstr[bstr.size()] == '\\'))
-    {
-      std::string rel = pstr.substr(bstr.size());
-      while(!rel.empty() && (rel[0] == '/' || rel[0] == '\\')) rel.erase(0, 1);
-      return Path(rel);
-    }
+  if(pstr.find(bstr) == 0 && (pstr.size() == bstr.size() || pstr[bstr.size()] == '/' || pstr[bstr.size()] == '\\'))
+  {
+    std::string rel = pstr.substr(bstr.size());
+    while(!rel.empty() && (rel[0] == '/' || rel[0] == '\\')) rel.erase(0, 1);
+    return Path(rel);
+  }
   // Fallback: just return p
   return path;
 }
@@ -1464,8 +1359,7 @@ Lumex::FilesystemResult<void>
 Lumex::Filesystem::rename(Path const &from, Path const &to_)
 {
 #if LUMEX_OS_WINDOWS
-  if(MoveFileExA(from.c_str(), to_.c_str(), MOVEFILE_REPLACE_EXISTING) != 0)
-    return {};
+  if(MoveFileExA(from.c_str(), to_.c_str(), MOVEFILE_REPLACE_EXISTING) != 0) return {};
   return FilesystemResult<void>(GetLastError());
 #else
   if(::rename(from.c_str(), to_.c_str()) == 0) return {};
@@ -1478,19 +1372,16 @@ Lumex::FilesystemResult<void>
 Lumex::Filesystem::resize_file(Path const &path, std::uintmax_t new_size)
 {
 #if LUMEX_OS_WINDOWS
-  HANDLE hFile = CreateFileA(path.c_str(), GENERIC_WRITE, 0, nullptr,
-                             OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
-  if(hFile == INVALID_HANDLE_VALUE)
-    return FilesystemResult<void>(GetLastError());
+  HANDLE hFile = CreateFileA(path.c_str(), GENERIC_WRITE, 0, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
+  if(hFile == INVALID_HANDLE_VALUE) return FilesystemResult<void>(GetLastError());
   LARGE_INTEGER lInt;
   lInt.QuadPart = static_cast<LONGLONG>(new_size);
-  if(SetFilePointerEx(hFile, lInt, nullptr, FILE_BEGIN) == 0
-     || SetEndOfFile(hFile) == 0)
-    {
-      DWORD err = GetLastError();
-      CloseHandle(hFile);
-      return FilesystemResult<void>(err);
-    }
+  if(SetFilePointerEx(hFile, lInt, nullptr, FILE_BEGIN) == 0 || SetEndOfFile(hFile) == 0)
+  {
+    DWORD err = GetLastError();
+    CloseHandle(hFile);
+    return FilesystemResult<void>(err);
+  }
   CloseHandle(hFile);
   return {};
 #else
@@ -1506,37 +1397,32 @@ Lumex::Filesystem::move_file(Path const &from, Path const &to_path)
 #if LUMEX_OS_WINDOWS
   // Try native MoveFileEx with overwrite
   if(MoveFileExA(from.c_str(), to_path.c_str(),
-                 MOVEFILE_REPLACE_EXISTING | MOVEFILE_COPY_ALLOWED
-                   | MOVEFILE_WRITE_THROUGH)
+                 MOVEFILE_REPLACE_EXISTING | MOVEFILE_COPY_ALLOWED | MOVEFILE_WRITE_THROUGH)
      != 0)
     return {};
   DWORD err = GetLastError();
   // ERROR_NOT_SAME_DEVICE -> fallback copy+remove
   if(err == ERROR_NOT_SAME_DEVICE)
-    {
-      FilesystemResult<void> copy_result = copy_file(from, to_path);
-      if(!copy_result) return copy_result;
+  {
+    FilesystemResult<void> copy_result = copy_file(from, to_path);
+    if(!copy_result) return copy_result;
 
-      FilesystemResult<bool> remove_result = remove(from);
-      return remove_result.success()
-               ? FilesystemResult<void>()
-               : FilesystemResult<void>(remove_result.error_code());
-    }
+    FilesystemResult<bool> remove_result = remove(from);
+    return remove_result.success() ? FilesystemResult<void>() : FilesystemResult<void>(remove_result.error_code());
+  }
   return FilesystemResult<void>(static_cast<int>(err));
 #else
   // POSIX rename first
   if(::rename(from.c_str(), to_path.c_str()) == 0) return {};
   int err = errno;
   if(err == EXDEV) // cross-device link
-    {
-      FilesystemResult<void> copy_result = copy_file(from, to_path);
-      if(!copy_result) return copy_result;
+  {
+    FilesystemResult<void> copy_result = copy_file(from, to_path);
+    if(!copy_result) return copy_result;
 
-      FilesystemResult<bool> remove_result = remove(from);
-      return remove_result.success()
-               ? FilesystemResult<void>()
-               : FilesystemResult<void>(remove_result.error_code());
-    }
+    FilesystemResult<bool> remove_result = remove(from);
+    return remove_result.success() ? FilesystemResult<void>() : FilesystemResult<void>(remove_result.error_code());
+  }
   return FilesystemResult<void>(err);
 #endif
 }
@@ -1551,20 +1437,16 @@ Lumex::Filesystem::move_directory(Path const &from, Path const &to_path)
 
   // If destination exists, ensure it is empty or remove it
   if(exists(to_path))
-    {
-      if(!is_directory(to_path)) return FilesystemResult<void>(EEXIST);
-      FilesystemResult<std::uintmax_t> rem = remove_all(to_path);
-      if(!rem) return FilesystemResult<void>(rem.error_code());
-    }
+  {
+    if(!is_directory(to_path)) return FilesystemResult<void>(EEXIST);
+    FilesystemResult<std::uintmax_t> rem = remove_all(to_path);
+    if(!rem) return FilesystemResult<void>(rem.error_code());
+  }
 
 #if LUMEX_OS_WINDOWS
-  if(MoveFileExA(from.c_str(), to_path.c_str(),
-                 MOVEFILE_COPY_ALLOWED | MOVEFILE_WRITE_THROUGH)
-     != 0)
-    return {};
+  if(MoveFileExA(from.c_str(), to_path.c_str(), MOVEFILE_COPY_ALLOWED | MOVEFILE_WRITE_THROUGH) != 0) return {};
   DWORD err = GetLastError();
-  if(err != ERROR_NOT_SAME_DEVICE)
-    return FilesystemResult<void>(static_cast<int>(err));
+  if(err != ERROR_NOT_SAME_DEVICE) return FilesystemResult<void>(static_cast<int>(err));
 #else
   if(::rename(from.c_str(), to_path.c_str()) == 0) return {};
   if(errno != EXDEV) return FilesystemResult<void>(errno);
@@ -1573,9 +1455,7 @@ Lumex::Filesystem::move_directory(Path const &from, Path const &to_path)
   FilesystemResult<void> copy_result = copy(from, to_path);
   if(!copy_result) return copy_result;
   FilesystemResult<std::uintmax_t> remove_result = remove_all(from);
-  return remove_result.success()
-           ? FilesystemResult<void>()
-           : FilesystemResult<void>(remove_result.error_code());
+  return remove_result.success() ? FilesystemResult<void>() : FilesystemResult<void>(remove_result.error_code());
 }
 
 LUMEX_PUBLIC_API
@@ -1585,8 +1465,7 @@ Lumex::Filesystem::temp_directory_path()
 #if LUMEX_OS_WINDOWS
   char buf[MAX_PATH];
   DWORD len = GetTempPathA(MAX_PATH, buf);
-  if(len == 0 || len > MAX_PATH)
-    return FilesystemResult<Path>(GetLastError(), Path());
+  if(len == 0 || len > MAX_PATH) return FilesystemResult<Path>(GetLastError(), Path());
   return FilesystemResult<Path>(Path(buf));
 #else
   const char *tmp = getenv("TMPDIR");
@@ -1601,11 +1480,9 @@ Lumex::Filesystem::to_wide_string(std::string const &str)
 {
 #if LUMEX_OS_WINDOWS
   if(str.empty()) return {};
-  int size_needed = MultiByteToWideChar(CP_UTF8, 0, str.c_str(),
-                                        (int)str.size(), nullptr, 0);
+  int size_needed = MultiByteToWideChar(CP_UTF8, 0, str.c_str(), (int)str.size(), nullptr, 0);
   std::wstring wstr(size_needed, 0);
-  MultiByteToWideChar(CP_UTF8, 0, str.c_str(), (int)str.size(), &wstr[0],
-                      size_needed);
+  MultiByteToWideChar(CP_UTF8, 0, str.c_str(), (int)str.size(), &wstr[0], size_needed);
   return wstr;
 #else
   if(str.empty()) return {};
@@ -1623,11 +1500,9 @@ Lumex::Filesystem::from_wide_string(std::wstring const &wstr)
 {
 #if LUMEX_OS_WINDOWS
   if(wstr.empty()) return {};
-  int size_needed = WideCharToMultiByte(
-    CP_UTF8, 0, wstr.c_str(), (int)wstr.size(), nullptr, 0, nullptr, nullptr);
+  int size_needed = WideCharToMultiByte(CP_UTF8, 0, wstr.c_str(), (int)wstr.size(), nullptr, 0, nullptr, nullptr);
   std::string str(size_needed, 0);
-  WideCharToMultiByte(CP_UTF8, 0, wstr.c_str(), (int)wstr.size(), &str[0],
-                      size_needed, nullptr, nullptr);
+  WideCharToMultiByte(CP_UTF8, 0, wstr.c_str(), (int)wstr.size(), &str[0], size_needed, nullptr, nullptr);
   return str;
 #else
   if(wstr.empty()) return {};
@@ -1644,30 +1519,31 @@ Lumex::Path
 Lumex::Filesystem::get_exe_path()
 {
   try
-    {
+  {
 #if LUMEX_OS_WINDOWS
-      std::array<wchar_t, MAX_PATH> buf{};
-      DWORD len = GetModuleFileNameW(nullptr, buf.data(), (DWORD)buf.size());
-      if(len == 0 || len > buf.size()) return {};
-      std::wstring wpath(buf.data(), len);
-      std::string spath = from_wide_string(wpath);
-      return Path(spath);
+    std::array<wchar_t, MAX_PATH> buf{};
+    DWORD len = GetModuleFileNameW(nullptr, buf.data(), (DWORD)buf.size());
+    if(len == 0 || len > buf.size()) return {};
+    std::wstring wpath(buf.data(), len);
+    std::string spath = from_wide_string(wpath);
+    return Path(spath);
 #else
-      std::array<char, PATH_MAX> buf{};
-      ssize_t len = ::readlink("/proc/self/exe", buf.data(), buf.size() - 1);
-      buf[len < 0 ? 0 : len] = '\0';
-      return Path(buf.data());
+    std::array<char, PATH_MAX> buf{};
+    ssize_t len            = ::readlink("/proc/self/exe", buf.data(), buf.size() - 1);
+    buf[len < 0 ? 0 : len] = '\0';
+    return Path(buf.data());
 #endif
-  } catch(std::exception const &exc)
-    {
-      std::cerr << "Can't get executable path, reason: " << exc.what()
-                << ", falling back on empty path\n";
-      return {};
-  } catch(...)
-    {
-      std::cerr << "Can't get executable path by unknown reason (non-standard "
-                   "exception raised)\n";
-      return {};
+  }
+  catch(std::exception const &exc)
+  {
+    std::cerr << "Can't get executable path, reason: " << exc.what() << ", falling back on empty path\n";
+    return {};
+  }
+  catch(...)
+  {
+    std::cerr << "Can't get executable path by unknown reason (non-standard "
+                 "exception raised)\n";
+    return {};
   }
 }
 
@@ -1676,44 +1552,38 @@ void
 Lumex::Filesystem::lock_directory(Lumex::Path const &path)
 {
   try
-    {
+  {
 #if LUMEX_OS_WINDOWS
-      static HANDLE s_dirHandle = INVALID_HANDLE_VALUE;
-      s_dirHandle               = CreateFileW(
-        path.wstring().c_str(), GENERIC_READ,
-        FILE_SHARE_READ | FILE_SHARE_WRITE, // without FILE_SHARE_DELETE
-        nullptr, OPEN_EXISTING, FILE_FLAG_BACKUP_SEMANTICS, nullptr);
-      if(s_dirHandle == INVALID_HANDLE_VALUE)
-        std::cerr << "Warning: cannot lock \"" << path << "\" directory\n";
+    static HANDLE s_dirHandle = INVALID_HANDLE_VALUE;
+    s_dirHandle               = CreateFileW(path.wstring().c_str(), GENERIC_READ,
+                                            FILE_SHARE_READ | FILE_SHARE_WRITE, // without FILE_SHARE_DELETE
+                                            nullptr, OPEN_EXISTING, FILE_FLAG_BACKUP_SEMANTICS, nullptr);
+    if(s_dirHandle == INVALID_HANDLE_VALUE) std::cerr << "Warning: cannot lock \"" << path << "\" directory\n";
 #else
-      static int s_lockFd = -1;
-      auto lockPath       = path / ".lock";
-      s_lockFd            = ::open(lockPath.string().c_str(), O_CREAT | O_RDWR,
-                                   S_IRUSR | S_IWUSR);
-      if(s_lockFd >= 0)
-        {
-          struct flock fl{};
-          fl.l_type   = F_WRLCK;
-          fl.l_whence = SEEK_SET;
-          fl.l_start  = 0;
-          fl.l_len    = 0; // the whole file
-          if(fcntl(s_lockFd, F_SETLK, &fl) == -1)
-            {
-              std::cerr << "Warning: cannot lock \"" << path
-                        << "\" directory\n";
-            }
-        }
+    static int s_lockFd = -1;
+    auto lockPath       = path / ".lock";
+    s_lockFd            = ::open(lockPath.string().c_str(), O_CREAT | O_RDWR, S_IRUSR | S_IWUSR);
+    if(s_lockFd >= 0)
+    {
+      struct flock fl{};
+      fl.l_type   = F_WRLCK;
+      fl.l_whence = SEEK_SET;
+      fl.l_start  = 0;
+      fl.l_len    = 0; // the whole file
+      if(fcntl(s_lockFd, F_SETLK, &fl) == -1) std::cerr << "Warning: cannot lock \"" << path << "\" directory\n";
+    }
 #endif
-  } catch(std::exception const &exc)
-    {
-      std::cerr << "Exception while using " << LUMEX_FUNC_NAME << "\n";
-      std::cerr << "Reason: " << exc.what()
-                << ". This function done nothing.\n";
-  } catch(...)
-    {
-      std::cerr << "Exception while using " << LUMEX_FUNC_NAME << "\n";
-      std::cerr << "Reason: unknown (non-standard exception raised). This "
-                   "function done nothing.\n";
+  }
+  catch(std::exception const &exc)
+  {
+    std::cerr << "Exception while using " << LUMEX_FUNC_NAME << "\n";
+    std::cerr << "Reason: " << exc.what() << ". This function done nothing.\n";
+  }
+  catch(...)
+  {
+    std::cerr << "Exception while using " << LUMEX_FUNC_NAME << "\n";
+    std::cerr << "Reason: unknown (non-standard exception raised). This "
+                 "function done nothing.\n";
   }
 }
 
@@ -1722,47 +1592,44 @@ bool
 Lumex::Filesystem::is_readable(Lumex::Path const &path)
 {
   try
+  {
+    if(!LumexFilesystem::exists(path))
     {
-      if(!LumexFilesystem::exists(path))
-        {
-          std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path
-                    << "\" does not exist, returning false\n";
-          return false;
-        }
-      FilesystemResult<FileStatus> statusRes = LumexFilesystem::status(path);
-      if(!statusRes)
-        {
-          std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path
-                    << "\" status() failed, returning false\n";
-          return false;
-        }
-      Perms perms  = statusRes.value().permissions();
-      bool hasRead = (perms & Perms::owner_read) != Perms::none
-                     || (perms & Perms::group_read) != Perms::none
-                     || (perms & Perms::others_read) != Perms::none;
-      if(!hasRead)
-        {
-          std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path
-                    << "\" does not have read permissions, returning false\n";
-          return false;
-        }
-      std::ifstream ifs(path.c_str());
-      if(!ifs.is_open() || ifs.fail())
-        {
-          std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path
-                    << "\" cannot be opened, returning false\n";
-          return false;
-        }
-      return true;
-  } catch(std::exception const &exc)
-    {
-      std::cerr << "Exception in is_readable: " << exc.what()
-                << ". Returning false.\n";
+      std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path << "\" does not exist, returning false\n";
       return false;
-  } catch(...)
+    }
+    FilesystemResult<FileStatus> statusRes = LumexFilesystem::status(path);
+    if(!statusRes)
     {
-      std::cerr << "Unknown exception in is_readable. Returning false.\n";
+      std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path << "\" status() failed, returning false\n";
       return false;
+    }
+    Perms perms  = statusRes.value().permissions();
+    bool hasRead = (perms & Perms::owner_read) != Perms::none || (perms & Perms::group_read) != Perms::none
+                   || (perms & Perms::others_read) != Perms::none;
+    if(!hasRead)
+    {
+      std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path
+                << "\" does not have read permissions, returning false\n";
+      return false;
+    }
+    std::ifstream ifs(path.c_str());
+    if(!ifs.is_open() || ifs.fail())
+    {
+      std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path << "\" cannot be opened, returning false\n";
+      return false;
+    }
+    return true;
+  }
+  catch(std::exception const &exc)
+  {
+    std::cerr << "Exception in is_readable: " << exc.what() << ". Returning false.\n";
+    return false;
+  }
+  catch(...)
+  {
+    std::cerr << "Unknown exception in is_readable. Returning false.\n";
+    return false;
   }
 }
 
@@ -1771,47 +1638,44 @@ bool
 Lumex::Filesystem::is_writable(Lumex::Path const &path)
 {
   try
+  {
+    if(!LumexFilesystem::exists(path))
     {
-      if(!LumexFilesystem::exists(path))
-        {
-          std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path
-                    << "\" does not exist, returning false\n";
-          return false;
-        }
-      FilesystemResult<FileStatus> statusRes = LumexFilesystem::status(path);
-      if(!statusRes)
-        {
-          std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path
-                    << "\" status() failed, returning false\n";
-          return false;
-        }
-      Perms perms   = statusRes.value().permissions();
-      bool hasWrite = (perms & Perms::owner_write) != Perms::none
-                      || (perms & Perms::group_write) != Perms::none
-                      || (perms & Perms::others_write) != Perms::none;
-      if(!hasWrite)
-        {
-          std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path
-                    << "\" does not have write permissions, returning false\n";
-          return false;
-        }
-      std::ofstream ofs(path.c_str(), std::ios::in | std::ios::out);
-      if(!ofs.is_open() || ofs.fail())
-        {
-          std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path
-                    << "\" cannot be opened, returning false\n";
-          return false;
-        }
-      return true;
-  } catch(std::exception const &exc)
-    {
-      std::cerr << "Exception in is_writable: " << exc.what()
-                << ". Returning false.\n";
+      std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path << "\" does not exist, returning false\n";
       return false;
-  } catch(...)
+    }
+    FilesystemResult<FileStatus> statusRes = LumexFilesystem::status(path);
+    if(!statusRes)
     {
-      std::cerr << "Unknown exception in is_writable. Returning false.\n";
+      std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path << "\" status() failed, returning false\n";
       return false;
+    }
+    Perms perms   = statusRes.value().permissions();
+    bool hasWrite = (perms & Perms::owner_write) != Perms::none || (perms & Perms::group_write) != Perms::none
+                    || (perms & Perms::others_write) != Perms::none;
+    if(!hasWrite)
+    {
+      std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path
+                << "\" does not have write permissions, returning false\n";
+      return false;
+    }
+    std::ofstream ofs(path.c_str(), std::ios::in | std::ios::out);
+    if(!ofs.is_open() || ofs.fail())
+    {
+      std::cerr << "Warning (" << LUMEX_FUNC_NAME << "): \"" << path << "\" cannot be opened, returning false\n";
+      return false;
+    }
+    return true;
+  }
+  catch(std::exception const &exc)
+  {
+    std::cerr << "Exception in is_writable: " << exc.what() << ". Returning false.\n";
+    return false;
+  }
+  catch(...)
+  {
+    std::cerr << "Unknown exception in is_writable. Returning false.\n";
+    return false;
   }
 }
 
