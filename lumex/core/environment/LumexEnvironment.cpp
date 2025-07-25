@@ -26,7 +26,11 @@ LumexEnvironment::WindowsEnvironmentStrategy::get_variable(char const *name) con
   if(size == 0)
   {
     DWORD error = GetLastError();
-    return {static_cast<int>(error)};
+    if(error == ERROR_SUCCESS)
+    {                                    // Variable exists but is empty
+      return EnvResult(string_type("")); // Return successful result with empty string
+    }
+    return {static_cast<int>(error)}; // True error (e.g., not found)
   }
 
   if(size > MAX_ENV_BUFFER_SIZE) return {ERROR_BUFFER_OVERFLOW};

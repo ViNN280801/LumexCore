@@ -121,16 +121,20 @@ TEST_F(Base64DecoderTest, GivenEmptyString_WhenDecode_ThenReturnsEmpty)
 TEST_F(Base64DecoderTest, GivenValidBase64_WhenDecode_ThenReturnsCorrectData)
 {
   // Test all RFC 4648 test vectors for comprehensive verification
-  for(auto const &[encoded, expected] : rfc_vectors)
+  for(std::vector<std::pair<std::string, std::string>>::const_iterator it = rfc_vectors.begin();
+      it != rfc_vectors.end(); ++it)
   {
+    std::string const &encoded  = it->first;
+    std::string const &expected = it->second;
+
     std::vector<byte_type> result;
     bool success = Decoder::decode(encoded, result);
 
-    EXPECT_TRUE(success) << "Failed to decode: " << encoded;
+    EXPECT_TRUE(success) << "Failed to decode: " << encoded.c_str();
 
     std::string result_str(result.begin(), result.end());
-    EXPECT_EQ(result_str, expected) << "Decode mismatch for '" << encoded << "' - expected: '" << expected
-                                    << "', got: '" << result_str << "'";
+    EXPECT_EQ(result_str, expected) << "Decode mismatch for '" << encoded.c_str() << "' - expected: '"
+                                    << expected.c_str() << "', got: '" << result_str.c_str() << "'";
 
     // Test return-by-value variant
     auto result2 = Decoder::decode(encoded);
@@ -158,7 +162,7 @@ TEST_F(Base64DecoderTest, GivenValidWithPadding_WhenDecode_ThenHandlesCorrectly)
     std::vector<byte_type> result;
     bool success = Decoder::decode(test.input, result);
 
-    EXPECT_TRUE(success) << "Failed to decode: " << test.input;
+    EXPECT_TRUE(success) << "Failed to decode: " << test.input.c_str();
     EXPECT_EQ(result, test.expected);
   }
 }

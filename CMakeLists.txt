@@ -156,6 +156,7 @@ if(LUMEX_BUILD_TESTS)
 
         # Lumex Core tests
         LumexBase64Tests
+        LumexEnvironmentTests
         LumexNumberGeneratorTests
         LumexOptionalTests
         LumexStringifyTests
