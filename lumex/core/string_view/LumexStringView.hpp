@@ -26,14 +26,14 @@ namespace Lumex
       {
       public:
         // -- Public type aliases --
-        using value_type       = char;
-        using pointer          = char const *;
-        using const_pointer    = char const *;
-        using reference        = char const &;
-        using const_reference  = char const &;
-        using iterator         = const_pointer; // iterator == const_iterator
-        using const_iterator   = const_pointer;
-        using reverse_iterator = std::reverse_iterator<const_pointer>;
+        using value_type             = char;
+        using pointer                = char const *;
+        using const_pointer          = char const *;
+        using reference              = char const &;
+        using const_reference        = char const &;
+        using iterator               = const_pointer; // iterator == const_iterator
+        using const_iterator         = const_pointer;
+        using reverse_iterator       = std::reverse_iterator<const_pointer>;
         using const_reverse_iterator = std::reverse_iterator<const_pointer>;
         using size_type              = std::size_t;
         using difference_type        = std::ptrdiff_t;
@@ -47,13 +47,13 @@ namespace Lumex
         explicit LumexStringView(char const *str) noexcept;
 
         // From pointer + size (does **not** check nullptr when len==0 on purpose)
-        constexpr LumexStringView(char const *str, size_type len) noexcept
-            : m_data(str), m_size(len)
-        {}
+        constexpr LumexStringView(char const *str, size_type len) noexcept : m_data(str), m_size(len) {}
 
-        // Copy / assign -- trivial
         constexpr LumexStringView(LumexStringView const &) noexcept  = default;
         LumexStringView &operator=(LumexStringView const &) noexcept = default;
+        constexpr LumexStringView(LumexStringView &&) noexcept       = default;
+        LumexStringView &operator=(LumexStringView &&) noexcept      = default;
+        ~LumexStringView()                                           = default;
 
         // -- Iterator support --
         constexpr const_iterator
@@ -152,78 +152,56 @@ namespace Lumex
         // -- Find (simple implementations) --
         size_type find(char chr, size_type pos = 0) const noexcept;
         size_type find(LumexStringView str, size_type pos = 0) const noexcept;
-        size_type
-        find(char const *cstr, size_type pos, size_type count) const noexcept;
+        size_type find(char const *cstr, size_type pos, size_type count) const noexcept;
         size_type find(char const *cstr, size_type pos = 0) const noexcept;
 
         // -- Reverse find --
-        size_type
-        rfind(LumexStringView str, size_type pos = npos) const noexcept;
+        size_type rfind(LumexStringView str, size_type pos = npos) const noexcept;
         size_type rfind(char chr, size_type pos = npos) const noexcept;
-        size_type
-        rfind(char const *cstr, size_type pos, size_type count) const noexcept;
+        size_type rfind(char const *cstr, size_type pos, size_type count) const noexcept;
         size_type rfind(char const *cstr, size_type pos = npos) const noexcept;
 
         // -- Find first of --
-        size_type
-        find_first_of(LumexStringView str, size_type pos = 0) const noexcept;
+        size_type find_first_of(LumexStringView str, size_type pos = 0) const noexcept;
         size_type find_first_of(char chr, size_type pos = 0) const noexcept;
-        size_type find_first_of(char const *cstr, size_type pos,
-                                size_type count) const noexcept;
-        size_type
-        find_first_of(char const *cstr, size_type pos = 0) const noexcept;
+        size_type find_first_of(char const *cstr, size_type pos, size_type count) const noexcept;
+        size_type find_first_of(char const *cstr, size_type pos = 0) const noexcept;
 
         // -- Find last of --
-        size_type
-        find_last_of(LumexStringView str, size_type pos = npos) const noexcept;
+        size_type find_last_of(LumexStringView str, size_type pos = npos) const noexcept;
         size_type find_last_of(char chr, size_type pos = npos) const noexcept;
-        size_type find_last_of(char const *cstr, size_type pos,
-                               size_type count) const noexcept;
-        size_type
-        find_last_of(char const *cstr, size_type pos = npos) const noexcept;
+        size_type find_last_of(char const *cstr, size_type pos, size_type count) const noexcept;
+        size_type find_last_of(char const *cstr, size_type pos = npos) const noexcept;
 
         // -- Find first not of --
-        size_type find_first_not_of(LumexStringView str,
-                                    size_type pos = 0) const noexcept;
-        size_type
-        find_first_not_of(char chr, size_type pos = 0) const noexcept;
-        size_type find_first_not_of(char const *cstr, size_type pos,
-                                    size_type count) const noexcept;
-        size_type
-        find_first_not_of(char const *cstr, size_type pos = 0) const noexcept;
+        size_type find_first_not_of(LumexStringView str, size_type pos = 0) const noexcept;
+        size_type find_first_not_of(char chr, size_type pos = 0) const noexcept;
+        size_type find_first_not_of(char const *cstr, size_type pos, size_type count) const noexcept;
+        size_type find_first_not_of(char const *cstr, size_type pos = 0) const noexcept;
 
         // -- Find last not of --
-        size_type find_last_not_of(LumexStringView str,
-                                   size_type pos = npos) const noexcept;
-        size_type
-        find_last_not_of(char chr, size_type pos = npos) const noexcept;
-        size_type find_last_not_of(char const *cstr, size_type pos,
-                                   size_type count) const noexcept;
-        size_type find_last_not_of(char const *cstr,
-                                   size_type pos = npos) const noexcept;
+        size_type find_last_not_of(LumexStringView str, size_type pos = npos) const noexcept;
+        size_type find_last_not_of(char chr, size_type pos = npos) const noexcept;
+        size_type find_last_not_of(char const *cstr, size_type pos, size_type count) const noexcept;
+        size_type find_last_not_of(char const *cstr, size_type pos = npos) const noexcept;
 
         // -- Conversion back to std::string --
         template <class Allocator = std::allocator<char>>
         explicit
-        operator std::basic_string<char, std::char_traits<char>, Allocator>()
-          const
+        operator std::basic_string<char, std::char_traits<char>, Allocator>() const
         {
-          return std::basic_string<char, std::char_traits<char>, Allocator>(
-            m_data, m_size);
+          return std::basic_string<char, std::char_traits<char>, Allocator>(m_data, m_size);
         }
 
         template <class Allocator = std::allocator<char>>
         std::basic_string<char, std::char_traits<char>, Allocator>
         to_string(Allocator const &alloc = Allocator()) const
         {
-          return std::basic_string<char, std::char_traits<char>, Allocator>(
-            m_data, m_size, alloc);
+          return std::basic_string<char, std::char_traits<char>, Allocator>(m_data, m_size, alloc);
         }
 
         template <class Allocator>
-        explicit LumexStringView(
-          std::basic_string<char, std::char_traits<char>, Allocator> const
-            &str) noexcept
+        explicit LumexStringView(std::basic_string<char, std::char_traits<char>, Allocator> const &str) noexcept
             : m_data(str.data()), m_size(str.size())
         {}
 
@@ -266,11 +244,8 @@ namespace Lumex
       {
         return lhs.compare(rhs) >= 0;
       }
-
       // -- Stream inserter --
-      LUMEX_API std::ostream &
-      operator<<(std::ostream &ostr, LumexStringView sview);
-
+      LUMEX_API std::ostream &operator<<(std::ostream &ostr, LumexStringView sview);
     } // namespace StringView
   } // namespace Core
 } // namespace Lumex
