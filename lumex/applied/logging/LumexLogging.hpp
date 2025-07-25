@@ -42,8 +42,7 @@ namespace Lumex
         static void
         debug(char const *moduleName, Args &&...args)
         {
-          _log(LumexLogLevel::Debug, moduleName,
-               stringify(std::forward<Args>(args)...));
+          _log(LumexLogLevel::Debug, moduleName, stringify(std::forward<Args>(args)...));
         }
 
         /// @brief Log an INFO-level message.
@@ -51,8 +50,7 @@ namespace Lumex
         static void
         info(char const *moduleName, Args &&...args)
         {
-          _log(LumexLogLevel::Info, moduleName,
-               stringify(std::forward<Args>(args)...));
+          _log(LumexLogLevel::Info, moduleName, stringify(std::forward<Args>(args)...));
         }
 
         /// @brief Log a SUCCESS-level message (custom level).
@@ -60,8 +58,7 @@ namespace Lumex
         static void
         success(char const *moduleName, Args &&...args)
         {
-          _log(LumexLogLevel::Success, moduleName,
-               stringify(std::forward<Args>(args)...));
+          _log(LumexLogLevel::Success, moduleName, stringify(std::forward<Args>(args)...));
         }
 
         /// @brief Log a WARNING-level message.
@@ -69,8 +66,7 @@ namespace Lumex
         static void
         warning(char const *moduleName, Args &&...args)
         {
-          _log(LumexLogLevel::Warning, moduleName,
-               stringify(std::forward<Args>(args)...));
+          _log(LumexLogLevel::Warning, moduleName, stringify(std::forward<Args>(args)...));
         }
 
         /// @brief Log an ERROR-level message.
@@ -78,8 +74,7 @@ namespace Lumex
         static void
         error(char const *moduleName, Args &&...args)
         {
-          _log(LumexLogLevel::Error, moduleName,
-               stringify(std::forward<Args>(args)...));
+          _log(LumexLogLevel::Error, moduleName, stringify(std::forward<Args>(args)...));
         }
 
         /// @brief Log a CRITICAL-level message.
@@ -87,8 +82,7 @@ namespace Lumex
         static void
         critical(char const *moduleName, Args &&...args)
         {
-          _log(LumexLogLevel::Critical, moduleName,
-               stringify(std::forward<Args>(args)...));
+          _log(LumexLogLevel::Critical, moduleName, stringify(std::forward<Args>(args)...));
         }
 
         /**
@@ -100,8 +94,7 @@ namespace Lumex
          * @param appendTimestamp Whether to add a timestamp to the file name
          * @return true in case of success, false otherwise
          */
-        static bool toFile(char const *filename, LumexLogLevel level,
-                           char const *moduleName, char const *msg,
+        static bool toFile(char const *filename, LumexLogLevel level, char const *moduleName, char const *msg,
                            bool appendTimestamp = true);
 
         /**
@@ -111,16 +104,14 @@ namespace Lumex
         static Lumex::Path getLogsDirectory();
 
       private:
-        static constexpr char const *KDEFAULT_LOG_FILE_NAME
-          = "log"; ///< Default log file name.
+        static constexpr char const *KDEFAULT_LOG_FILE_NAME = "log"; ///< Default log file name.
 
-        static constexpr short KLOG_WIDTH = 8; ///< The width of the log
-                                               ///< level.
+        static constexpr short KLOG_WIDTH                   = 8; ///< The width of the log
+                                                                 ///< level.
 
 #ifdef _WIN32
   #pragma warning(push)
-  #pragma warning(                                                            \
-    disable : 4251) // Suppress C4251 for STL members in DLL interface
+  #pragma warning(disable : 4251) // Suppress C4251 for STL members in DLL interface
 #endif
         static std::mutex s_mutex; ///< Mutex for thread-safe logging.
 #ifdef _WIN32
@@ -129,19 +120,16 @@ namespace Lumex
         static Lumex::Path s_logsDirectory; ///< The directory for storing logs.
 #ifdef _WIN32
   #pragma warning(push)
-  #pragma warning(                                                            \
-    disable : 4251) // Suppress C4251 for STL members in DLL interface
+  #pragma warning(disable : 4251) // Suppress C4251 for STL members in DLL interface
 #endif
-        static std::string
-          s_launchTimestamp; ///< The timestamp when the application was launched.
+        static std::string s_launchTimestamp; ///< The timestamp when the application was launched.
 #ifdef _WIN32
   #pragma warning(pop)
 #endif
 
         /// @brief Core logging routine: formats and outputs everything to the
         /// console.
-        static void _log(LumexLogLevel level, std::string const &moduleName,
-                         std::string const &msg);
+        static void _log(LumexLogLevel level, std::string const &moduleName, std::string const &msg);
 
         /// @brief Converts the level to a string ("DEBUG", "INFO", …).
         static char const *_levelToString(LumexLogLevel level) noexcept;

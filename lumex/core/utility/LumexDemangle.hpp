@@ -35,7 +35,7 @@
   #include <typeinfo>
 
   #define lumDemangle(type) \
-    ([]() -> std::string { \
+    ([&]() -> std::string { \
       std::string name = typeid(type).name(); \
       int status = 0; \
       char *demangled = abi::__cxa_demangle(name.c_str(), nullptr, nullptr, &status); \

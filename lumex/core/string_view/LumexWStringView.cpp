@@ -4,6 +4,9 @@
 #include <algorithm> // std::min, std::swap
 #include <stdexcept> // std::out_of_range
 
+// Static member definition
+LUMEX_PUBLIC_API LumexWStringView::size_type const LumexWStringView::npos;
+
 LUMEX_PUBLIC_API
 LumexWStringView::LumexWStringView(wchar_t const *str) noexcept
     : m_data(str), m_size(str != nullptr ? std::wcslen(str) : 0)

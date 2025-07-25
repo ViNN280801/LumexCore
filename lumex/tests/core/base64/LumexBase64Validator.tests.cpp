@@ -310,7 +310,7 @@ TEST_F(Base64ValidatorTest, WindowsSpecific_GivenWideStringConverted_WhenValidat
 TEST_F(Base64ValidatorTest, Perf_LargeStringValidation)
 {
   // Performance test with very large strings
-  size_t const large_size = 1'000'000; // 1M characters
+  size_t const large_size = 1000000; // 1M characters
   std::string large_valid(large_size, 'A');
 
   auto start  = std::chrono::high_resolution_clock::now();

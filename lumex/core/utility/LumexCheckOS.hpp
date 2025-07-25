@@ -74,6 +74,7 @@
 // Linux
 #elif defined(__linux__) || defined(linux) || defined(__linux)
   #define LUMEX_OS_LINUX 1
+  #define LUMEX_OS_UNIX 1
 
   // Check for specific Linux distributions if needed
   #if defined(__gnu_linux__)

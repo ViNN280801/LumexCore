@@ -286,7 +286,7 @@ TEST_F(Base64EncoderTest, ThreadSafety_SimultaneousEncoding)
 TEST_F(Base64EncoderTest, Perf_LargeDataEncoding)
 {
   // Performance test with very large data
-  size_t const large_size = 1'000'000; // 1MB
+  size_t const large_size = 1000000; // 1MB
   std::vector<byte_type> very_large_data(large_size);
 
   // Fill with pattern to avoid optimization

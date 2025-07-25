@@ -349,7 +349,7 @@ TEST_F(LumexStringifyTest, Pointers_Dirty)
 TEST_F(LumexStringifyTest, SmartPointers_Dirty)
 {
   // unique_ptr
-  auto uptr            = std::make_unique<int>(42);
+  auto uptr            = std::unique_ptr<int>(new int(42));
   std::string uptr_str = stringify(uptr);
   EXPECT_FALSE(uptr_str.empty());
 

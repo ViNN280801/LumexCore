@@ -1,6 +1,9 @@
 #define LUMEX_IMPLEMENTATION
 #include "LumexStringView.hpp"
 
+// Static member definition
+LUMEX_PUBLIC_API LumexStringView::size_type const LumexStringView::npos;
+
 LUMEX_PUBLIC_API
 LumexStringView::LumexStringView(char const *str) noexcept
     : m_data(str), m_size(str != nullptr ? std::strlen(str) : 0)

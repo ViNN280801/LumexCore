@@ -340,7 +340,7 @@ TEST_F(Base64DecoderTest, ThreadSafety_SimultaneousDecoding)
 TEST_F(Base64DecoderTest, Perf_LargeDataDecoding)
 {
   // Create large Base64 string for performance testing
-  size_t const large_size = 1'000'000; // ~1MB of original data
+  size_t const large_size = 1000000; // ~1MB of original data
   std::vector<byte_type> original_data(large_size);
   for(size_t i = 0; i < large_size; ++i) original_data[i] = static_cast<byte_type>(i % 256);
 

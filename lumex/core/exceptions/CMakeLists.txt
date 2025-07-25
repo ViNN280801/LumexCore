@@ -30,7 +30,14 @@ target_link_libraries(${LUMEX_EXCEPTIONS_NAME} PUBLIC
 if(WIN32)
     target_link_libraries(${LUMEX_EXCEPTIONS_NAME} PRIVATE dbghelp)
 elseif(UNIX AND NOT APPLE)
-    target_link_libraries(${LUMEX_EXCEPTIONS_NAME} PRIVATE execinfo)
+    find_library(EXECINFO_LIBRARY execinfo)
+
+    if(EXECINFO_LIBRARY)
+        target_link_libraries(${LUMEX_EXCEPTIONS_NAME} PRIVATE execinfo)
+        message(STATUS "Linking with execinfo library: ${EXECINFO_LIBRARY}")
+    else()
+        message(STATUS "execinfo library not found - using built-in glibc backtrace functions")
+    endif()
 endif()
 
 install(TARGETS ${LUMEX_EXCEPTIONS_NAME} EXPORT ${EXPORT_TO}

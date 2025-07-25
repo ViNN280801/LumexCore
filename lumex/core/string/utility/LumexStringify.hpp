@@ -1,6 +1,7 @@
 #ifndef LUMEX_UTILITIES_HPP
 #define LUMEX_UTILITIES_HPP
 
+#include <memory>
 #include <sstream>
 #include <string>
 #include <type_traits>
@@ -46,6 +47,46 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
       struct is_streamable<T, void_t<decltype(std::declval<std::ostream &>() << std::declval<T>())>> : std::true_type {
       };
 
+      // Explicit specializations for fundamental types to ensure C++11 compatibility
+      template <> struct is_streamable<bool> : std::true_type {};
+      template <> struct is_streamable<char> : std::true_type {};
+      template <> struct is_streamable<signed char> : std::true_type {};
+      template <> struct is_streamable<unsigned char> : std::true_type {};
+      template <> struct is_streamable<wchar_t> : std::true_type {};
+      template <> struct is_streamable<short> : std::true_type {};
+      template <> struct is_streamable<unsigned short> : std::true_type {};
+      template <> struct is_streamable<int> : std::true_type {};
+      template <> struct is_streamable<unsigned int> : std::true_type {};
+      template <> struct is_streamable<long> : std::true_type {};
+      template <> struct is_streamable<unsigned long> : std::true_type {};
+      template <> struct is_streamable<long long> : std::true_type {};
+      template <> struct is_streamable<unsigned long long> : std::true_type {};
+      template <> struct is_streamable<float> : std::true_type {};
+      template <> struct is_streamable<double> : std::true_type {};
+      template <> struct is_streamable<long double> : std::true_type {};
+      template <> struct is_streamable<char const *> : std::true_type {};
+      template <> struct is_streamable<char *> : std::true_type {};
+      template <> struct is_streamable<std::string> : std::true_type {};
+
+      // Explicit specializations for smart pointer types
+      template <typename T, typename D> struct is_streamable<std::unique_ptr<T, D>> : std::true_type {};
+      template <typename T> struct is_streamable<std::shared_ptr<T>> : std::true_type {};
+
+      // Smart pointer operator<< overloads - defined here so SFINAE can find them
+      template <typename T, typename D>
+      std::ostream &
+      operator<<(std::ostream &ostream, std::unique_ptr<T, D> const &ptr)
+      {
+        return ostream << ptr.get(); // Print raw pointer value
+      }
+
+      template <typename T>
+      std::ostream &
+      operator<<(std::ostream &ostream, std::shared_ptr<T> const &ptr)
+      {
+        return ostream << ptr.get(); // Print raw pointer value
+      }
+
   #if __cplusplus >= 201402L
       // C++14+ variable templates
       template <typename T> constexpr bool is_streamable_v = is_streamable<std::decay_t<T>>::value;
@@ -59,7 +100,8 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
       template <typename... Args> struct all_streamable;
 
       template <typename First, typename... Rest> struct all_streamable<First, Rest...> {
-        static constexpr bool value = is_streamable<std::decay_t<First>>::value && all_streamable<Rest...>::value;
+        static constexpr bool value
+          = is_streamable<typename std::decay<First>::type>::value && all_streamable<Rest...>::value;
       };
 
       template <> struct all_streamable<> {
@@ -123,7 +165,8 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
         if(sizeof...(args) == 0) return "";
 
         std::ostringstream oss;
-        (void)std::initializer_list<int>{(oss << std::forward<Args>(args), 0)...};
+        int dummy[] = {0, ((void)(oss << std::forward<Args>(args)), 0)...};
+        (void)dummy;
         return oss.str();
       }
 
@@ -139,7 +182,8 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
         if(sizeof...(args) == 0) return "";
 
         std::ostringstream oss;
-        (void)std::initializer_list<int>{(oss << std::forward<Args>(args), 0)...};
+        using expander = int[];
+        (void)expander{0, ((void)(oss << std::forward<Args>(args)), 0)...};
         return oss.str();
       }
 
