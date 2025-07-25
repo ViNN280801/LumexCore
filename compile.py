@@ -15,6 +15,9 @@ from os.path import exists as os_path_exists
 from os.path import abspath as os_path_abspath
 from os.path import dirname as os_path_dirname
 
+from re import search as re_search
+from re import DOTALL as re_DOTALL
+
 from sys import exit as sys_exit
 from shutil import rmtree as shutil_rmtree
 from psutil import cpu_count as psutil_cpu_count
@@ -73,6 +76,7 @@ class CMakeBuilder:
             project_root: Path to the project root directory containing CMakeLists.txt
         """
         self.project_root = os_path_abspath(project_root)
+        self.version = self._get_project_version()
         self.build_dir = os_path_join(self.project_root, "build")
         self.cmake_args = []
         self.architecture = ArchitectureDetector.detect()
@@ -95,6 +99,21 @@ class CMakeBuilder:
             )
         )
         self.logger.addHandler(handler)
+
+    def _get_project_version(self) -> str:
+        default_version = "0.0.0"  # Default version if not found
+
+        cmake_list_path = os_path_join(self.project_root, "CMakeLists.txt")
+        if not os_path_exists(cmake_list_path):
+            return default_version
+
+        with open(cmake_list_path, "r") as f:
+            content = f.read()
+
+        match = re_search(r"project\(.*?VERSION\s+([0-9.]+)", content, re_DOTALL)
+        if match:
+            return match.group(1)
+        return default_version
 
     def run_command(self, cmd_list: List[str], cwd: Optional[str] = None) -> bool:
         """
@@ -382,7 +401,13 @@ class CMakeBuilder:
         Returns:
             bool: True if installation succeeded, False otherwise
         """
-        install_cmd = ["cmake", "--install", self.build_dir, "--prefix", install_prefix]
+        install_cmd = [
+            "cmake",
+            "--install",
+            self.build_dir,
+            "--prefix",
+            install_prefix + "/" + self.version,
+        ]
         return self.run_command(install_cmd)
 
     def dump_cmake_variables(self) -> bool:
@@ -512,6 +537,11 @@ class CMakeBuilderCLI:
             description="Cross-platform CMake build system wrapper."
         )
         self.parser.add_argument(
+            "--show-constants",
+            action="store_true",
+            help="Show all CMake constants that can be passed to CMakeLists.txt.",
+        )
+        self.parser.add_argument(
             "build_type",
             choices=["Debug", "Release", "RelWithDebInfo"],
             help="Build type (Debug, Release, or RelWithDebInfo)",
@@ -550,14 +580,6 @@ class CMakeBuilderCLI:
             help="Build shared libraries. Adds -DBUILD_SHARED_LIBS=ON to CMake arguments.",
         )
         self.parser.add_argument(
-            "--qt-path",
-            help=(
-                "Specify path to Qt installation (e.g., /opt/Qt5.15.17, "
-                '"F:\\local\\Qt\\6.5.3\\msvc2019_64\\lib\\cmake\\Qt6") to avoid ABI conflicts.'
-                "Passes CMAKE_PREFIX_PATH to CMake configuration."
-            ),
-        )
-        self.parser.add_argument(
             "--tests",
             nargs="?",  # Allows 0 or 1 argument
             help="Enable building tests. Optionally provide a custom CMake variable name",
@@ -573,9 +595,8 @@ class CMakeBuilderCLI:
             help="Enable building documentation. Optionally provide a custom CMake variable name",
         )
         self.parser.add_argument(
-            "--show-constants",
-            action="store_true",
-            help="Show all CMake constants that can be passed to CMakeLists.txt.",
+            "--install-prefix",
+            help="Install prefix for the build. Default is /usr/local or C:/Program Files/Lumex.",
         )
 
         # MSVC toolset selection (Windows only)
@@ -640,10 +661,6 @@ class CMakeBuilderCLI:
             self.logger.info("🔍 Adding MSVC toolset: {}".format(self.args.toolset))
             self.builder.add_toolset(self.args.toolset)
 
-        if self.args.qt_path:
-            self.logger.info("🔍 Adding Qt prefix path: {}".format(self.args.qt_path))
-            self.builder.add_cmake_prefix_path([self.args.qt_path])
-
         if self.args.shared_libs:
             self.logger.info(
                 "🔍 Activating shared libraries by adding -DBUILD_SHARED_LIBS=ON."
@@ -672,6 +689,11 @@ class CMakeBuilderCLI:
         if self.args.setup_installer:
             if not self.builder.cpack(self.args.build_type):
                 self.logger.error("ERROR: Installer generation failed")
+                sys_exit(1)
+
+        if self.args.install_prefix:
+            if not self.builder.install(self.args.install_prefix):
+                self.logger.error("ERROR: Installation failed")
                 sys_exit(1)
 
 
