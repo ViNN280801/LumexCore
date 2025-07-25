@@ -290,10 +290,9 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
         ~Path()                            = default;
 
         // C++11 move semantics
-#if __cplusplus >= 201103L
         Path(Path &&other) noexcept : m_path(std::move(other.m_path))
         {
-          other.m_path.clear(); // Clear moved-from object
+          if(other.m_path.empty()) other.m_path = "."; // Ensure moved-from object is valid
         }
         Path &
         operator=(Path &&other) noexcept
@@ -301,11 +300,10 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
           if(this != std::addressof(other))
           {
             m_path = std::move(other.m_path);
-            other.m_path.clear(); // Clear moved-from object
+            if(other.m_path.empty()) other.m_path = "."; // Ensure moved-from object is valid
           }
           return *this;
         }
-#endif
 
         // Concatenation
         Path &operator/=(Path const &);

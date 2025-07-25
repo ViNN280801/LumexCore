@@ -54,14 +54,14 @@ LUMEX_PUBLIC_API
 void
 Lumex::Path::append_separator_if_needed()
 {
-  if(!m_path.empty() && !is_separator(m_path.back())) m_path += preferred_separator;
+  if(!m_path.empty() && !is_separator(m_path.back())) m_path += '/';
 }
 
 LUMEX_PUBLIC_API
 Lumex::Path &
 Lumex::Path::operator/=(Path const &path)
 {
-  if(path.empty()) return *this;
+  if(path.empty() || path.m_path == ".") return *this;
 
   if(path.is_absolute())
   {
@@ -131,11 +131,8 @@ LUMEX_PUBLIC_API
 Lumex::Path &
 Lumex::Path::make_preferred()
 {
-#if LUMEX_OS_WINDOWS
-  std::replace(m_path.begin(), m_path.end(), '/', '\\');
-#else
+  // Always use forward slashes for cross-platform compatibility
   std::replace(m_path.begin(), m_path.end(), '\\', '/');
-#endif
   return *this;
 }
 
@@ -183,20 +180,53 @@ LUMEX_PUBLIC_API
 Lumex::Path
 Lumex::Path::parent_path() const
 {
-  if(m_path.empty() || m_path == "." || m_path == "..") return Path();
+  if(m_path.empty() || m_path == "." || m_path == "..")
+  {
+    // Return a path with empty string so empty() returns true
+    Path result;
+    result.m_path.clear();
+    return result;
+  }
 
   // Handle root paths
-  if(m_path == "/" || m_path == "\\") return Path();
+  if(m_path == "/" || m_path == "\\")
+  {
+    // Return a path with empty string so empty() returns true
+    Path result;
+    result.m_path.clear();
+    return result;
+  }
 
   size_t pos = find_filename_pos();
-  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos || pos == 0) return Path();
+  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos)
+  {
+    // Return a path with empty string so empty() returns true
+    Path result;
+    result.m_path.clear();
+    return result;
+  }
+
+  // If filename starts at position 0, it's a single file with no directory
+  if(pos == 0)
+  {
+    // Return a path with empty string so empty() returns true
+    Path result;
+    result.m_path.clear();
+    return result;
+  }
 
   // Remove trailing separator
   size_t end = pos - 1;
   while(end > 0 && is_separator(m_path[end])) --end;
 
   // If we're at the root, return empty
-  if(end == 0 && is_separator(m_path[0])) return Path();
+  if(end == 0 && is_separator(m_path[0]))
+  {
+    // Return a path with empty string so empty() returns true
+    Path result;
+    result.m_path.clear();
+    return result;
+  }
 
   return Path(m_path.substr(0, end + 1));
 }
@@ -223,7 +253,13 @@ Lumex::Path
 Lumex::Path::extension() const
 {
   size_t pos = find_extension_pos();
-  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos) return Path();
+  if(static_cast<decltype(string_type::npos)>(pos) == string_type::npos)
+  {
+    // Return a path with empty string so empty() returns true
+    Path result;
+    result.m_path.clear();
+    return result;
+  }
 
   return Path(m_path.substr(pos));
 }
@@ -262,7 +298,7 @@ Lumex::Path::replace_extension(Path const &ext)
   size_t pos = find_extension_pos();
   if(static_cast<decltype(string_type::npos)>(pos) != string_type::npos) m_path.erase(pos);
 
-  if(!ext.empty())
+  if(!ext.empty() && ext.m_path != ".")
   {
     if(ext.m_path[0] != '.') m_path += '.';
     m_path += ext.m_path;
@@ -284,6 +320,11 @@ Lumex::Path::remove_filename()
     while(!m_path.empty() && is_separator(m_path.back()) && m_path != "/") m_path.pop_back();
     // If we end up empty, set to current directory
     if(m_path.empty()) m_path = ".";
+  }
+  else if(pos == 0)
+  {
+    // Single file with no directory - set to current directory
+    m_path = ".";
   }
   return *this;
 }
@@ -323,7 +364,8 @@ Lumex::Path::is_absolute() const
     if(std::isalpha(m_path[0]) != 0 && m_path[1] == ':') return true;
     if(m_path[0] == '\\' && m_path[1] == '\\') return true;
   }
-  return false;
+  // Also check for Unix-style absolute paths
+  return !m_path.empty() && m_path[0] == '/';
 #else
   return !m_path.empty() && m_path[0] == '/';
 #endif
@@ -838,6 +880,9 @@ LUMEX_PUBLIC_API
 Lumex::FilesystemResult<bool>
 Lumex::Filesystem::remove(Path const &path)
 {
+  // If file doesn't exist, return success with false
+  if(!exists(path)) return FilesystemResult<bool>::ok(false);
+
 #if LUMEX_OS_WINDOWS
   if(is_directory(path))
   {
@@ -1057,8 +1102,8 @@ Lumex::DirectoryIterator::DirectoryIterator(Path const &path) : m_impl(new Impl)
   m_impl->base = path;
 #if LUMEX_OS_WINDOWS
   std::string pattern = path.string();
-  if(!pattern.empty() && pattern.back() != '\\' && pattern.back() != '/')
-    pattern += "\\*";
+  if(!pattern.empty() && pattern.back() != '/')
+    pattern += "/*";
   else
     pattern += "*";
   m_impl->handle = FindFirstFileA(pattern.c_str(), &m_impl->data);
@@ -1412,6 +1457,8 @@ Lumex::Filesystem::relative(Path const &path, Path const &base)
   {
     std::string rel = pstr.substr(bstr.size());
     while(!rel.empty() && (rel[0] == '/' || rel[0] == '\\')) rel.erase(0, 1);
+    // Ensure forward slashes for cross-platform compatibility
+    std::replace(rel.begin(), rel.end(), '\\', '/');
     return Path(rel);
   }
   // Fallback: just return p
