@@ -23,6 +23,10 @@
 #include <string>
 #include <type_traits>
 
+#if __cplusplus >= 201703L
+  #include <string_view>
+#endif
+
 namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Core
@@ -32,6 +36,12 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
       namespace Types
       {
         using byte_type = unsigned char;
+
+#if __cplusplus >= 201703L
+        using string_type_t = std::string_view;
+#else
+        using string_type_t = std::string const &;
+#endif
       } // namespace Types
 
       namespace Constants

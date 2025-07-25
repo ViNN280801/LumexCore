@@ -1,13 +1,10 @@
 #ifndef LUMREPORTGEN_BASE64_VALIDATOR_HPP
 #define LUMREPORTGEN_BASE64_VALIDATOR_HPP
 
-#if __cplusplus >= 201703L
-  #include <string_view>
-#else
-  #include <string>
-#endif
-
 #include "lumex/LumexExport.hpp"
+#include "lumex/core/base64/Base64.hpp"
+
+using namespace Lumex::Core::Base64::Types;
 
 namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
@@ -29,11 +26,7 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
          * @param[in] str The string to be checked for Base64 validity.
          * @return `true` if the string adheres to Base64 formatting rules, `false` otherwise.
          */
-#if __cplusplus >= 201703L
-        static bool is_valid_base64(std::string_view str);
-#else
-        static bool is_valid_base64(std::string const &str);
-#endif
+        static bool is_valid_base64(string_type_t str);
       };
     } // namespace Base64
   } // namespace Utility

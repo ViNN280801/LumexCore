@@ -1,14 +1,12 @@
 #define LUMEX_IMPLEMENTATION
 #include "lumex/core/base64/Validator.hpp"
-#include "lumex/core/base64/Base64.hpp"
 
 using namespace Lumex::Core::Base64;
-using namespace Lumex::Core::Base64::Types;
 
 namespace
 {
   bool
-  validate_base64_characters(std::string_view str, size_t data_length)
+  validate_base64_characters(string_type_t str, size_t data_length)
   {
     for(size_t i = 0; i < data_length; ++i)
     {
@@ -19,7 +17,7 @@ namespace
   }
 
   bool
-  validate_padding_format(std::string_view str, size_t padding_start)
+  validate_padding_format(string_type_t str, size_t padding_start)
   {
     if(str.length() % 4 != 0) return false;
 
@@ -45,13 +43,8 @@ namespace
 } // namespace anonymous
 
 LUMEX_PUBLIC_API
-#if __cplusplus >= 201703L
 bool
-Validator::is_valid_base64(std::string_view str)
-#else
-bool
-Validator::is_valid_base64(std::string const &str)
-#endif
+Validator::is_valid_base64(string_type_t str)
 {
   if(str.empty()) return true;
 
