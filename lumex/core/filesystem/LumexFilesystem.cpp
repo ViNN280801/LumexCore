@@ -27,17 +27,10 @@
 #endif
 
 LUMEX_PUBLIC_API
-Lumex::Path::Path(string_type source) : m_path(std::move(source))
-{
-  // Normalize empty paths
-  if(m_path.empty()) m_path = ".";
-}
+Lumex::Path::Path(string_type source) : m_path(std::move(source)) {}
 
 LUMEX_PUBLIC_API
-Lumex::Path::Path(char const *source) : m_path(source != nullptr ? source : "")
-{
-  if(m_path.empty()) m_path = ".";
-}
+Lumex::Path::Path(char const *source) : m_path(source != nullptr ? source : "") {}
 
 LUMEX_PUBLIC_API
 bool

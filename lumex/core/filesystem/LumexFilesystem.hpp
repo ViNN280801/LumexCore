@@ -281,7 +281,7 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 #endif
 
         // Constructors
-        Path() : m_path(".") {} // Initialize to "." instead of empty
+        Path() = default;
         Path(string_type source);
         Path(char const *source);
         Path(Path const &other)            = default;

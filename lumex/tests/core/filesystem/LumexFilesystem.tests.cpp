@@ -85,9 +85,9 @@ protected:
 TEST_F(LumexFilesystemTest, Path_DefaultConstruction_ReturnsEmptyPath)
 {
   Lumex::Path path;
-  EXPECT_FALSE(path.empty()); // Should be "." not empty
+  EXPECT_TRUE(path.empty()); // Should be "." not empty
   EXPECT_FALSE(path.has_filename());
-  EXPECT_EQ(path.string(), ".");
+  EXPECT_EQ(path.string(), "");
 }
 
 TEST_F(LumexFilesystemTest, Path_StringConstruction_HandlesValidInput)
@@ -103,15 +103,15 @@ TEST_F(LumexFilesystemTest, Path_StringConstruction_HandlesValidInput)
 TEST_F(LumexFilesystemTest, Path_StringConstruction_HandlesEmptyInput)
 {
   Lumex::Path path("");
-  EXPECT_FALSE(path.empty()); // Should normalize to "."
-  EXPECT_EQ(path.string(), ".");
+  EXPECT_TRUE(path.empty()); // Should normalize to "."
+  EXPECT_EQ(path.string(), "");
 }
 
 TEST_F(LumexFilesystemTest, Path_StringConstruction_HandlesNullPointer)
 {
   Lumex::Path path(nullptr);
-  EXPECT_FALSE(path.empty()); // Should normalize to "."
-  EXPECT_EQ(path.string(), ".");
+  EXPECT_TRUE(path.empty()); // Should normalize to "."
+  EXPECT_EQ(path.string(), "");
 }
 
 TEST_F(LumexFilesystemTest, Path_CopyConstruction_PreservesState)
