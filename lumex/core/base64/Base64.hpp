@@ -94,6 +94,15 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
           return _decode_table.at(chr) != Constants::kBase64DecodeInvalidChar;
         }
 
+        // C++11 compatible void_t replacement
+        template <typename...> struct void_t_impl {
+          using type = void;
+        };
+        template <typename... Ts> using void_t = typename void_t_impl<Ts...>::type;
+
+        // C++11 compatible enable_if_t replacement
+        template <bool B, typename T = void> using enable_if_t = typename std::enable_if<B, T>::type;
+
         /**
          * @brief Primary template for `has_convertible_size` trait.
          *
@@ -109,7 +118,7 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
          *
          * @tparam T The type to be inspected for the presence and convertibility of its `.size()` method.
          * @tparam = void An unused parameter, typically used in SFINAE to enable or disable
-         *         template specializations based on the validity of expressions within `std::void_t`.
+         *         template specializations based on the validity of expressions within `void_t`.
          *         In this primary template, it simply completes the template signature.
          */
         template <typename T, typename = void> struct has_convertible_size : std::false_type {};
@@ -120,10 +129,10 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
          * This template specialization is enabled via SFINAE when `T` provides a `.size()`
          * member function whose return type is convertible to `size_t`.
          *
-         * - `std::void_t<decltype(std::declval<T>().size())>`: Checks if `T::size()` is a valid
+         * - `void_t<decltype(std::declval<T>().size())>`: Checks if `T::size()` is a valid
          *   expression. `std::declval<T>()` provides a `T` object without requiring a default
          *   constructor, enabling compile-time checks on its member functions.
-         * - `std::enable_if_t<std::is_convertible<decltype(std::declval<T>().size()), size_t>::value>>`:
+         * - `enable_if_t<std::is_convertible<decltype(std::declval<T>().size()), size_t>::value>>`:
          *   Further constrains the specialization, ensuring that the return type of `T::size()`
          *   can be implicitly converted to `size_t`. If either of these conditions fails,
          *   this specialization is discarded from the overload set, and the primary template
@@ -136,8 +145,8 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
          */
         template <typename T>
         struct has_convertible_size<
-          T, std::void_t<decltype(std::declval<T>().size()),
-                         std::enable_if_t<std::is_convertible<decltype(std::declval<T>().size()), size_t>::value>>>
+          T, void_t<decltype(std::declval<T>().size()),
+                    enable_if_t<std::is_convertible<decltype(std::declval<T>().size()), size_t>::value>>>
             : std::true_type {};
 
         /**
@@ -162,10 +171,10 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
          * This template specialization is actively selected by the compiler if the type `T`         * satisfies the
          * following conditions, verified through SFINAE:
          *
-         * - `std::void_t<decltype(std::declval<T>()[std::declval<size_t>()])>`: Checks if `T::operator[]`
+         * - `void_t<decltype(std::declval<T>()[std::declval<size_t>()])>`: Checks if `T::operator[]`
          *   is a valid expression when invoked with a `size_t` argument. `std::declval<size_t>()`
          *   provides a `size_t` value for compile-time expression evaluation.
-         * - `std::enable_if_t<std::is_convertible<decltype(std::declval<T>()[std::declval<size_t>()]),
+         * - `enable_if_t<std::is_convertible<decltype(std::declval<T>()[std::declval<size_t>()]),
          *   Types::byte_type>::value>>>`: Ensures that the return type of `T::operator[](size_t)`
          *   is implicitly convertible to `Lumex::Utility::Base64::Types::byte_type`. This is critical
          *   for ensuring that the indexed access yields a byte-compatible value.
@@ -178,9 +187,9 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
          */
         template <typename T>
         struct has_convertible_indexed_access<
-          T, std::void_t<decltype(std::declval<T>()[std::declval<size_t>()]), // Check with size_t as index
-                         std::enable_if_t<std::is_convertible<decltype(std::declval<T>()[std::declval<size_t>()]),
-                                                              Types::byte_type>::value>>> : std::true_type {};
+          T, void_t<decltype(std::declval<T>()[std::declval<size_t>()]), // Check with size_t as index
+                    enable_if_t<std::is_convertible<decltype(std::declval<T>()[std::declval<size_t>()]),
+                                                    Types::byte_type>::value>>> : std::true_type {};
 
         /**
          * @brief Internal helper to encode binary data into a Base64 string from a view-like type.
