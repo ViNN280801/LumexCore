@@ -5,6 +5,10 @@ project(LumexLib
     LANGUAGES CXX
 )
 
+if(ARCHITECTURE)
+    message(STATUS "Building for target architecture: ${ARCHITECTURE}")
+endif()
+
 # --- C++ Standard ---
 # Set C++11 as the default, but allow overriding it.
 if(NOT CMAKE_CXX_STANDARD)
@@ -134,7 +138,7 @@ install(
 # ==============================================================================
 # TESTING
 # ==============================================================================
-option(LUMEX_BUILD_TESTS "Build the tests for LumexCore" ON)
+option(LUMEX_BUILD_TESTS "Build the tests for LumexCore" OFF)
 
 if(LUMEX_BUILD_TESTS)
     message(STATUS "Building with tests enabled")
