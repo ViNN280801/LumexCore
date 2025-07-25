@@ -16,7 +16,7 @@
 
 #include "lumex/LumexExport.hpp"
 
-namespace Lumex
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Core
   {
@@ -94,10 +94,14 @@ namespace Lumex
          * }
          */
         struct EnvResult {
-          string_type value; ///< The value of the environment variable. Empty if not
-                             ///< found or error.
-          bool success;      ///< True if the operation was successful, false otherwise.
-          int error_code;    ///< System-specific error code if `success` is false.
+          /// @brief The value of the environment variable. Empty if not found or error.
+          string_type value; // NOLINT(misc-non-private-member-variables-in-classes)
+
+          /// @brief True if the operation was successful, false otherwise.
+          bool success; // NOLINT(misc-non-private-member-variables-in-classes)
+
+          /// @brief System-specific error code if `success` is false.
+          int error_code; // NOLINT(misc-non-private-member-variables-in-classes)
 
           /**
            * @brief Constructs an EnvResult in a default (unsuccessful) state.
@@ -128,7 +132,7 @@ namespace Lumex
            * @return The actual value if successful, otherwise the provided fallback
            * value.
            */
-          string_type const &
+          string_type
           get_value_or(string_type const &fallback) const
           {
             return success ? value : fallback;
@@ -144,7 +148,7 @@ namespace Lumex
 
       private:
         // Strategy pattern: OS-specific implementation interface
-        class LUMEX_API EnvironmentStrategy
+        class LUMEX_API EnvironmentStrategy // NOLINT(cppcoreguidelines-special-member-functions)
         {
         public:
           virtual ~EnvironmentStrategy()                                       = default;
