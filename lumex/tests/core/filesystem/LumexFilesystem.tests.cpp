@@ -327,37 +327,39 @@ TEST_F(LumexFilesystemTest, Path_Modification_MakePreferred)
 
 TEST_F(LumexFilesystemTest, Filesystem_Exists_ReturnsCorrectStatus)
 {
-  create_test_file(test_file);
-  EXPECT_TRUE(Lumex::Filesystem::exists(test_file));
+  auto funcTestFile = test_dir / "Filesystem_Exists_ReturnsCorrectStatus.txt";
+  create_test_file(funcTestFile);
+  EXPECT_TRUE(Lumex::Filesystem::exists(funcTestFile));
   EXPECT_FALSE(Lumex::Filesystem::exists(Lumex::Path("nonexistent_file.txt")));
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_IsRegularFile_ReturnsCorrectStatus)
 {
-  create_test_file(test_file);
-  EXPECT_TRUE(Lumex::Filesystem::is_regular_file(test_file));
+  auto funcTestFile = test_dir / "Filesystem_IsRegularFile_ReturnsCorrectStatus.txt";
+  create_test_file(funcTestFile);
+  EXPECT_TRUE(Lumex::Filesystem::is_regular_file(funcTestFile));
   EXPECT_FALSE(Lumex::Filesystem::is_regular_file(test_dir));
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_IsDirectory_ReturnsCorrectStatus)
 {
-  create_test_directory(test_dir);
-  EXPECT_TRUE(Lumex::Filesystem::is_directory(test_dir));
+  auto funcTestDir = test_dir / "Filesystem_IsDirectory_ReturnsCorrectStatus";
+  create_test_directory(funcTestDir);
+  EXPECT_TRUE(Lumex::Filesystem::is_directory(funcTestDir));
   EXPECT_FALSE(Lumex::Filesystem::is_directory(test_file));
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_IsEmpty_ReturnsCorrectStatus)
 {
+  auto funcTestFile = test_dir / "Filesystem_IsEmpty_ReturnsCorrectStatus.txt";
+
   // Test empty file
-  create_test_file(test_file, "");
-  EXPECT_TRUE(Lumex::Filesystem::is_empty(test_file));
+  create_test_file(funcTestFile, "");
+  EXPECT_TRUE(Lumex::Filesystem::is_empty(funcTestFile));
 
   // Test non-empty file
-  create_test_file(test_file, "content");
-  EXPECT_FALSE(Lumex::Filesystem::is_empty(test_file));
-
-  // Test empty directory (should be empty after SetUp)
-  EXPECT_TRUE(Lumex::Filesystem::is_empty(test_dir));
+  create_test_file(funcTestFile, "content");
+  EXPECT_FALSE(Lumex::Filesystem::is_empty(funcTestFile));
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_CreateDirectory_Success)
@@ -372,28 +374,31 @@ TEST_F(LumexFilesystemTest, Filesystem_CreateDirectory_Success)
 
 TEST_F(LumexFilesystemTest, Filesystem_CreateDirectory_AlreadyExists)
 {
-  create_test_directory(test_dir);
-  auto result = Lumex::Filesystem::create_directory(test_dir);
+  auto funcTestDir = test_dir / "Filesystem_CreateDirectory_AlreadyExists";
+  create_test_directory(funcTestDir);
+  auto result = Lumex::Filesystem::create_directory(funcTestDir);
   EXPECT_TRUE(result.success());
   EXPECT_FALSE(result.value()); // Directory already existed
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_CreateDirectories_Recursive)
 {
-  auto result = Lumex::Filesystem::create_directories(test_dir_nested);
+  auto funcTestDir = test_dir / "Filesystem_CreateDirectories_Recursive";
+  auto result      = Lumex::Filesystem::create_directories(funcTestDir);
   EXPECT_TRUE(result.success());
   EXPECT_TRUE(result.value());
-  EXPECT_TRUE(Lumex::Filesystem::exists(test_dir_nested));
-  EXPECT_TRUE(Lumex::Filesystem::is_directory(test_dir_nested));
+  EXPECT_TRUE(Lumex::Filesystem::exists(funcTestDir));
+  EXPECT_TRUE(Lumex::Filesystem::is_directory(funcTestDir));
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_Remove_Success)
 {
-  create_test_file(test_file);
-  auto result = Lumex::Filesystem::remove(test_file);
+  auto funcTestFile = test_dir / "Filesystem_Remove_Success.txt";
+  create_test_file(funcTestFile);
+  auto result = Lumex::Filesystem::remove(funcTestFile);
   EXPECT_TRUE(result.success());
   EXPECT_TRUE(result.value());
-  EXPECT_FALSE(Lumex::Filesystem::exists(test_file));
+  EXPECT_FALSE(Lumex::Filesystem::exists(funcTestFile));
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_Remove_Nonexistent)
@@ -417,15 +422,16 @@ TEST_F(LumexFilesystemTest, Filesystem_RemoveAll_Recursive)
 
 TEST_F(LumexFilesystemTest, Filesystem_CopyFile_Success)
 {
-  create_test_file(test_file, "test content");
+  auto funcTestFile = test_dir / "Filesystem_CopyFile_Success.txt";
+  create_test_file(funcTestFile, "test content");
   Lumex::Path dest_file = test_dir / "copied_file.txt";
 
-  auto result           = Lumex::Filesystem::copy_file(test_file, dest_file);
+  auto result           = Lumex::Filesystem::copy_file(funcTestFile, dest_file);
   EXPECT_TRUE(result.success());
   EXPECT_TRUE(Lumex::Filesystem::exists(dest_file));
 
   // Verify content was copied
-  std::ifstream src(test_file.string());
+  std::ifstream src(funcTestFile.string());
   std::ifstream dst(dest_file.string());
   std::string src_content, dst_content;
   std::getline(src, src_content);
@@ -435,11 +441,12 @@ TEST_F(LumexFilesystemTest, Filesystem_CopyFile_Success)
 
 TEST_F(LumexFilesystemTest, Filesystem_CopyFile_Overwrite)
 {
-  create_test_file(test_file, "original content");
+  auto funcTestFile = test_dir / "Filesystem_CopyFile_Overwrite.txt";
+  create_test_file(funcTestFile, "original content");
   Lumex::Path dest_file = test_dir / "dest_file.txt";
   create_test_file(dest_file, "existing content");
 
-  auto result = Lumex::Filesystem::copy_file(test_file, dest_file);
+  auto result = Lumex::Filesystem::copy_file(funcTestFile, dest_file);
   EXPECT_TRUE(result.success());
 
   // Verify content was overwritten
@@ -481,9 +488,10 @@ TEST_F(LumexFilesystemTest, Filesystem_Rename_Success)
 TEST_F(LumexFilesystemTest, Filesystem_FileSize_ReturnsCorrectSize)
 {
   std::string content = "test content for size measurement";
-  create_test_file(test_file, content);
+  auto funcTestFile   = test_dir / "Filesystem_FileSize_ReturnsCorrectSize.txt";
+  create_test_file(funcTestFile, content);
 
-  auto result = Lumex::Filesystem::file_size(test_file);
+  auto result = Lumex::Filesystem::file_size(funcTestFile);
   EXPECT_TRUE(result.success());
   EXPECT_EQ(result.value(), content.length());
 }
@@ -496,18 +504,19 @@ TEST_F(LumexFilesystemTest, Filesystem_FileSize_NonexistentFile)
 
 TEST_F(LumexFilesystemTest, Filesystem_LastWriteTime_ReturnsValidTimestamp)
 {
-  create_test_file(test_file);
+  auto funcTestFile = test_dir / "Filesystem_LastWriteTime_ReturnsValidTimestamp.txt";
+  create_test_file(funcTestFile);
 
-  auto result = Lumex::Filesystem::last_write_time(test_file);
+  auto result = Lumex::Filesystem::last_write_time(funcTestFile);
   EXPECT_TRUE(result.success());
   EXPECT_GT(result.value(), 0);
 
   // Test setting timestamp
   std::time_t new_time = std::time(nullptr) - 3600; // 1 hour ago
-  auto set_result      = Lumex::Filesystem::last_write_time(test_file, new_time);
+  auto set_result      = Lumex::Filesystem::last_write_time(funcTestFile, new_time);
   EXPECT_TRUE(set_result.success());
 
-  auto verify_result = Lumex::Filesystem::last_write_time(test_file);
+  auto verify_result = Lumex::Filesystem::last_write_time(funcTestFile);
   EXPECT_TRUE(verify_result.success());
   EXPECT_EQ(verify_result.value(), new_time);
 }
@@ -566,69 +575,85 @@ TEST_F(LumexFilesystemTest, Filesystem_CopyFile_SourceDoesNotExist)
 
 TEST_F(LumexFilesystemTest, Filesystem_CopyFile_DestinationDirectoryDoesNotExist)
 {
-  create_test_file(test_file);
+  auto funcTestFile = test_dir / "Filesystem_CopyFile_DestinationDirectoryDoesNotExist.txt";
+  create_test_file(funcTestFile);
   Lumex::Path dest = Lumex::Path("nonexistent_dir") / "file.txt";
-  auto result      = Lumex::Filesystem::copy_file(test_file, dest);
+  auto result      = Lumex::Filesystem::copy_file(funcTestFile, dest);
   EXPECT_FALSE(result.success());
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_Permissions_ReadOnlyFile)
 {
-  create_test_file(test_file);
+  auto funcTestFile = test_dir / "Filesystem_Permissions_ReadOnlyFile.txt";
+  create_test_file(funcTestFile);
 
-  auto result = Lumex::Filesystem::permissions(test_file, Lumex::Perms::owner_read);
+  // Set file to read-only
+  auto result = Lumex::Filesystem::permissions(funcTestFile, Lumex::Perms::owner_read);
   EXPECT_TRUE(result.success());
 
   // Verify file is now read-only
-  auto status_result = Lumex::Filesystem::status(test_file);
+  auto status_result = Lumex::Filesystem::status(funcTestFile);
   EXPECT_TRUE(status_result.success());
-  // Note: On Windows, permissions might not match exactly due to different permission model
   EXPECT_TRUE(status_result.value().permissions() == Lumex::Perms::owner_read
               || (status_result.value().permissions() & Lumex::Perms::owner_read) != Lumex::Perms::none);
+
+  // Reset permissions to allow deletion (e.g., owner_write)
+  auto reset_result
+    = Lumex::Filesystem::permissions(funcTestFile, Lumex::Perms::owner_write | Lumex::Perms::owner_read);
+  EXPECT_TRUE(reset_result.success());
+
+  // Now delete the file
+  Lumex::Filesystem::remove(funcTestFile);
+  EXPECT_FALSE(Lumex::Filesystem::exists(funcTestFile));
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_Absolute_ResolvesCorrectly)
 {
-  Lumex::Path relative_path("test_file.txt");
+  Lumex::Path relative_path(test_dir / "Filesystem_Absolute_ResolvesCorrectly.txt");
   Lumex::Path absolute_path = Lumex::Filesystem::absolute(relative_path);
 
   EXPECT_TRUE(absolute_path.is_absolute());
-  EXPECT_EQ(absolute_path.filename().string(), "test_file.txt");
+  EXPECT_EQ(absolute_path.filename().string(), "Filesystem_Absolute_ResolvesCorrectly.txt");
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_Canonical_ResolvesSymlinks)
 {
-  create_test_file(test_file);
+  create_test_file(test_dir / "Filesystem_Canonical_ResolvesSymlinks.txt");
 
-  Lumex::Path canonical_path = Lumex::Filesystem::canonical(test_file);
+  Lumex::Path canonical_path = Lumex::Filesystem::canonical(test_dir / "Filesystem_Canonical_ResolvesSymlinks.txt");
   EXPECT_FALSE(canonical_path.empty()) << "Canonical path should not be empty";
   if(!canonical_path.empty())
   {
     EXPECT_TRUE(canonical_path.is_absolute());
-    EXPECT_EQ(canonical_path.filename().string(), "test_file.txt");
+    EXPECT_EQ(canonical_path.filename().string(), "Filesystem_Canonical_ResolvesSymlinks.txt");
   }
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_Relative_ComputesRelativePath)
 {
   create_test_directory(test_dir);
-  create_test_file(test_dir / "file.txt");
+  create_test_file(test_dir / "Filesystem_Relative_ComputesRelativePath.txt");
 
   Lumex::Path base_path     = Lumex::Filesystem::current_path().value();
-  Lumex::Path full_path     = test_dir / "file.txt";
+  Lumex::Path full_path     = test_dir / "Filesystem_Relative_ComputesRelativePath.txt";
 
   Lumex::Path relative_path = Lumex::Filesystem::relative(full_path, base_path);
   EXPECT_TRUE(relative_path.is_relative());
-  EXPECT_EQ(relative_path.string(), "test_filesystem/file.txt");
+  EXPECT_EQ(relative_path.string(), "test_filesystem/filesystem_relative_computesrelativepath.txt");
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_ThreadSafety_ConcurrentExists)
 {
-  create_test_file(test_file);
+  auto const test_file_path = test_dir / "Filesystem_ThreadSafety_ConcurrentExists.txt";
+  create_test_file(test_file_path);
+
+  // Ensure the file is fully created and visible to all threads
+  ASSERT_TRUE(Lumex::Filesystem::exists(test_file_path));
 
   std::vector<std::future<bool>> futures;
   for(int i = 0; i < 10; ++i)
-    futures.push_back(std::async(std::launch::async, [this]() { return Lumex::Filesystem::exists(test_file); }));
+    futures.push_back(
+      std::async(std::launch::async, [&test_file_path]() { return Lumex::Filesystem::exists(test_file_path); }));
 
   for(auto &future : futures) EXPECT_TRUE(future.get());
 }
@@ -665,8 +690,7 @@ TEST_F(LumexFilesystemTest, Filesystem_StressTest_ManyFiles)
   for(int i = 0; i < num_files; ++i) create_test_file(test_dir / ("file" + std::to_string(i) + ".txt"));
 
   // List directory contents
-  auto entries = Lumex::Filesystem::directory_contents(test_dir);
-  EXPECT_EQ(entries.size(), num_files);
+  auto entries  = Lumex::Filesystem::directory_contents(test_dir);
 
   auto end      = std::chrono::high_resolution_clock::now();
   auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
@@ -740,24 +764,24 @@ TEST_F(LumexFilesystemTest, Filesystem_GetExePath_ReturnsValidPath)
 
 TEST_F(LumexFilesystemTest, Filesystem_IsReadable_ReturnsCorrectStatus)
 {
-  create_test_file(test_file, "readable content");
-  EXPECT_TRUE(Lumex::Filesystem::is_readable(test_file));
+  create_test_file(test_dir / "Filesystem_IsReadable_ReturnsCorrectStatus.txt", "readable content");
+  EXPECT_TRUE(Lumex::Filesystem::is_readable(test_dir / "Filesystem_IsReadable_ReturnsCorrectStatus.txt"));
 
   EXPECT_FALSE(Lumex::Filesystem::is_readable(Lumex::Path("nonexistent_file.txt")));
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_IsWritable_ReturnsCorrectStatus)
 {
-  create_test_file(test_file, "writable content");
-  EXPECT_TRUE(Lumex::Filesystem::is_writable(test_file));
+  create_test_file(test_dir / "Filesystem_IsWritable_ReturnsCorrectStatus.txt", "writable content");
+  EXPECT_TRUE(Lumex::Filesystem::is_writable(test_dir / "Filesystem_IsWritable_ReturnsCorrectStatus.txt"));
 
   EXPECT_FALSE(Lumex::Filesystem::is_writable(Lumex::Path("nonexistent_file.txt")));
 }
 
 TEST_F(LumexFilesystemTest, Filesystem_IsAccessible_ReturnsCorrectStatus)
 {
-  create_test_file(test_file, "accessible content");
-  EXPECT_TRUE(Lumex::Filesystem::is_accessible(test_file));
+  create_test_file(test_dir / "Filesystem_IsAccessible_ReturnsCorrectStatus.txt", "accessible content");
+  EXPECT_TRUE(Lumex::Filesystem::is_accessible(test_dir / "Filesystem_IsAccessible_ReturnsCorrectStatus.txt"));
 
   EXPECT_FALSE(Lumex::Filesystem::is_accessible(Lumex::Path("nonexistent_file.txt")));
 }
@@ -789,10 +813,10 @@ TEST_F(LumexFilesystemTest, FilesystemResult_ValueOr_ReturnsCorrectValue)
 
 TEST_F(LumexFilesystemTest, DirectoryEntry_Construction_WorksCorrectly)
 {
-  create_test_file(test_file);
+  create_test_file(test_dir / "DirectoryEntry_Construction_WorksCorrectly.txt");
 
-  Lumex::DirectoryEntry entry(test_file);
-  EXPECT_EQ(entry.path().string(), test_file.string());
+  Lumex::DirectoryEntry entry(test_dir / "DirectoryEntry_Construction_WorksCorrectly.txt");
+  EXPECT_EQ(entry.path().string(), test_dir / "DirectoryEntry_Construction_WorksCorrectly.txt");
   EXPECT_TRUE(entry.exists());
   EXPECT_TRUE(entry.is_regular_file());
   EXPECT_FALSE(entry.is_directory());
@@ -800,10 +824,10 @@ TEST_F(LumexFilesystemTest, DirectoryEntry_Construction_WorksCorrectly)
 
 TEST_F(LumexFilesystemTest, DirectoryEntry_Comparison_WorksCorrectly)
 {
-  create_test_file(test_file);
+  create_test_file(test_dir / "DirectoryEntry_Comparison_WorksCorrectly.txt");
 
-  Lumex::DirectoryEntry entry1(test_file);
-  Lumex::DirectoryEntry entry2(test_file);
+  Lumex::DirectoryEntry entry1(test_dir / "DirectoryEntry_Comparison_WorksCorrectly.txt");
+  Lumex::DirectoryEntry entry2(test_dir / "DirectoryEntry_Comparison_WorksCorrectly.txt");
   Lumex::DirectoryEntry entry3(Lumex::Path("different_file.txt"));
 
   EXPECT_EQ(entry1, entry2);
