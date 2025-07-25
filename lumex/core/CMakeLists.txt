@@ -1,3 +1,5 @@
+# lumex/core/CMakeLists.txt
+
 add_subdirectory(base64)
 add_subdirectory(environment)
 add_subdirectory(exceptions)

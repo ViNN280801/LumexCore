@@ -1,3 +1,5 @@
+# lumex/tests/core/generators/number_generator/CMakeLists.txt
+
 set(TEST_EXECUTABLE_NAME LumexNumberGeneratorTests)
 
 add_executable(

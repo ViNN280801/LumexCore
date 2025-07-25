@@ -1,3 +1,5 @@
+# lumex/tests/core/time/CMakeLists.txt
+
 set(TEST_EXECUTABLE_NAME LumexTimeTests)
 
 add_executable(

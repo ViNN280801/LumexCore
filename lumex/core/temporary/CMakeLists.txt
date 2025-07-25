@@ -1,3 +1,5 @@
+# lumex/core/temporary/CMakeLists.txt
+
 set(LUMEX_TEMPORARY_NAME LumexCore_temporary)
 set(EXPORT_TO LumexCoreTargets)
 
