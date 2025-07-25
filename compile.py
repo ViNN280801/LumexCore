@@ -75,11 +75,13 @@ class CMakeBuilder:
         Args:
             project_root: Path to the project root directory containing CMakeLists.txt
         """
+        self.os_prefix = "win" if platform_system() == "Windows" else "linux"
+        self.architecture = ArchitectureDetector.detect()
         self.project_root = os_path_abspath(project_root)
         self.version = self._get_project_version()
+        self.cpp_version = self.kdefault_min_cpp_standard
         self.build_dir = os_path_join(self.project_root, "build")
         self.cmake_args = []
-        self.architecture = ArchitectureDetector.detect()
 
         # Configure colorlog
         self.logger = colorlog_getLogger("CMakeBuilder")
@@ -212,6 +214,7 @@ class CMakeBuilder:
         if architecture not in ["x86", "x64"]:
             self.logger.warning("Unsupported architecture: {}".format(architecture))
             return
+        self.architecture = architecture
         self.cmake_args.append("-DARCHITECTURE={}".format(architecture))
         self.logger.info("🔍 Using architecture: {}".format(architecture))
 
@@ -239,20 +242,23 @@ class CMakeBuilder:
                 break
 
         if current_cpp_standard_arg is None:
+            self.logger.info("Setting C++ standard to C++{}".format(cpp_standard))
             self.cmake_args.append("-DCMAKE_CXX_STANDARD={}".format(cpp_standard))
+            self.cpp_version = int(cpp_standard)
         else:
             # Extract the current standard value from the argument string
             current_set_standard = current_cpp_standard_arg.split("=")[1]
             self.logger.warning(
                 "C++ standard already set to C++{}".format(current_set_standard)
             )
-
+            self.cpp_version = int(current_set_standard)
             if override:
                 self.logger.warning(
                     "Overriding C++ standard to C++{}".format(cpp_standard)
                 )
                 self.cmake_args.remove(current_cpp_standard_arg)
                 self.cmake_args.append("-DCMAKE_CXX_STANDARD={}".format(cpp_standard))
+                self.cpp_version = int(cpp_standard)
 
     def configure(self, build_type: str) -> bool:
         """
@@ -401,12 +407,21 @@ class CMakeBuilder:
         Returns:
             bool: True if installation succeeded, False otherwise
         """
+        lib_prefix = (
+            self.version
+            + "_"
+            + self.os_prefix
+            + "_"
+            + self.architecture
+            + "_cpp"
+            + str(self.cpp_version)
+        )
         install_cmd = [
             "cmake",
             "--install",
             self.build_dir,
             "--prefix",
-            install_prefix + "/" + self.version,
+            install_prefix + "/" + lib_prefix,
         ]
         return self.run_command(install_cmd)
 
@@ -644,12 +659,8 @@ class CMakeBuilderCLI:
 
         # Apply architecture
         if self.args.arch:
-            self.logger.info("🔍 Adding architecture: {}".format(self.args.arch))
             self.builder.add_architecture(self.args.arch)
         else:
-            self.logger.info(
-                "🔍 Adding architecture: {}".format(self.auto_detected_arch)
-            )
             self.builder.add_architecture(self.auto_detected_arch)
 
         # Apply MSVC toolset if requested
@@ -658,7 +669,6 @@ class CMakeBuilderCLI:
             and hasattr(self.args, "toolset")
             and self.args.toolset
         ):
-            self.logger.info("🔍 Adding MSVC toolset: {}".format(self.args.toolset))
             self.builder.add_toolset(self.args.toolset)
 
         if self.args.shared_libs:
