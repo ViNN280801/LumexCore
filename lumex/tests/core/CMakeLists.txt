@@ -2,6 +2,7 @@
 
 add_subdirectory(base64)
 add_subdirectory(environment)
+add_subdirectory(filesystem)
 add_subdirectory(generators)
 add_subdirectory(optional)
 add_subdirectory(string)
