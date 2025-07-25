@@ -14,6 +14,7 @@ from os.path import isdir as os_path_isdir
 from os.path import exists as os_path_exists
 from os.path import abspath as os_path_abspath
 from os.path import dirname as os_path_dirname
+from os.path import basename as os_path_basename
 
 from re import search as re_search
 from re import DOTALL as re_DOTALL
@@ -82,6 +83,8 @@ class CMakeBuilder:
         self.cpp_version = self.kdefault_min_cpp_standard
         self.build_dir = os_path_join(self.project_root, "build")
         self.cmake_args = []
+        self.compiler_id = "unknown"
+        self.compiler_version_tag = ""
 
         # Configure colorlog
         self.logger = colorlog_getLogger("CMakeBuilder")
@@ -260,6 +263,89 @@ class CMakeBuilder:
                 self.cmake_args.append("-DCMAKE_CXX_STANDARD={}".format(cpp_standard))
                 self.cpp_version = int(cpp_standard)
 
+    def _detect_compiler_id_from_cache(self, cache_content: str) -> str:
+        """
+        Attempts to detect the C++ compiler ID and version from CMakeCache.txt content.
+        Prioritizes CMAKE_CXX_COMPILER_ID, then CMAKE_GENERATOR, then CMAKE_CXX_COMPILER path.
+        """
+        detected_compiler = "unknown"
+        detected_version_tag = ""
+
+        # 1. Try to get CMAKE_CXX_COMPILER_ID directly
+        match_id = re_search(r"CMAKE_CXX_COMPILER_ID:STATIC=(.*?)\n", cache_content)
+        if match_id:
+            detected_compiler = match_id.group(1).lower()
+
+        # 2. Try to infer from CMAKE_GENERATOR (especially for MSVC)
+        match_generator = re_search(r"CMAKE_GENERATOR:INTERNAL=(.*?)\n", cache_content)
+        if match_generator:
+            generator_name = match_generator.group(1)  # Получаем полное имя генератора
+            if "Visual Studio" in generator_name:
+                detected_compiler = "msvc"
+                
+                # Try to extract year from generator name, e.g. "Visual Studio 17 2022"
+                version_match = re_search(r"Visual Studio \d+ (\d{4})", generator_name)
+                if version_match:
+                    detected_version_tag = version_match.group(1)
+                else:
+                    # If year not found in generator name, try from CMAKE_GENERATOR_INSTANCE
+                    match_instance = re_search(
+                        r"CMAKE_GENERATOR_INSTANCE:INTERNAL=.*?\\(\d{4})\\",
+                        cache_content,
+                    )
+                    if match_instance:
+                        detected_version_tag = match_instance.group(1)
+
+        # 3. If still 'unknown' or 'msvc' without a specific version, try to infer from CMAKE_CXX_COMPILER path
+        if detected_compiler == "unknown" or (
+            detected_compiler == "msvc" and not detected_version_tag
+        ):
+            match_path = re_search(
+                r"CMAKE_CXX_COMPILER:FILEPATH=(.*?)\n", cache_content
+            )
+            if match_path:
+                compiler_path = match_path.group(1)
+                compiler_exe = os_path_basename(compiler_path).lower()
+
+                if "cl.exe" in compiler_exe:
+                    detected_compiler = "msvc"
+                    # For MSVC, also try to extract version from compiler path,
+                    # e.g. C:/.../MSVC/14.29.30133/...
+                    msvc_version_path_match = re_search(
+                        r"MSVC\\(\d+\.\d+)\.\d+\\", compiler_path
+                    )
+                    if msvc_version_path_match:
+                        # Example: 14.29 -> v142
+                        major_minor = msvc_version_path_match.group(1).split(".")
+                        if major_minor[0] == "14":
+                            if (
+                                major_minor[1] == "29"
+                                or major_minor[1] == "30"
+                                or major_minor[1] == "31"
+                            ):  # VS 2019 / 2022 might both use v142/v143
+                                detected_version_tag = (
+                                    "2022"  # Assuming latest for v143-ish toolsets
+                                )
+                            elif major_minor[1] == "16":  # Older VS 2017
+                                detected_version_tag = "2017"
+                            elif major_minor[1] == "14":  # Older VS 2015
+                                detected_version_tag = "2015"
+                            # This part is a bit heuristic, a direct generator year is better.
+
+                elif "g++" in compiler_exe:
+                    detected_compiler = "gcc"
+                elif "gcc.exe" in compiler_exe:
+                    detected_compiler = "gcc"
+                elif "clang++" in compiler_exe:
+                    detected_compiler = "clang"
+                elif "clang.exe" in compiler_exe:
+                    detected_compiler = "clang"
+
+        # Save found version to self.compiler_version_tag
+        self.compiler_version_tag = detected_version_tag
+
+        return detected_compiler
+
     def configure(self, build_type: str) -> bool:
         """
         Configure CMake project.
@@ -288,7 +374,37 @@ class CMakeBuilder:
             ]
             cmake_configure_cmd.extend(filtered_cmake_args)
 
-        return self.run_command(cmake_configure_cmd)
+        if not self.run_command(cmake_configure_cmd):
+            return False
+
+        # After successful configuration, try to determine the compiler ID and version
+        try:
+            cache_file_path = os_path_join(self.build_dir, "CMakeCache.txt")
+            if os_path_exists(cache_file_path):
+                with open(cache_file_path, "r") as f:
+                    content = f.read()
+
+                # Call updated method to determine ID and version
+                self.compiler_id = self._detect_compiler_id_from_cache(content)
+
+                compiler_display_name = self.compiler_id.upper()
+                if self.compiler_version_tag:
+                    compiler_display_name += self.compiler_version_tag
+
+                if self.compiler_id != "unknown":
+                    self.logger.info(f"Detected compiler: {compiler_display_name}")
+                else:
+                    self.logger.warning(
+                        "Could not detect C++ compiler ID from CMakeCache.txt. Defaulting to 'unknown'."
+                    )
+            else:
+                self.logger.warning("CMakeCache.txt not found after configuration.")
+        except Exception as e:
+            self.logger.error("Error detecting compiler ID: {}".format(e))
+            self.compiler_id = "unknown"
+            self.compiler_version_tag = ""  # Reset version tag on error
+
+        return True
 
     def add_cmake_prefix_path(self, prefix_paths: List[str]) -> None:
         """
@@ -407,12 +523,20 @@ class CMakeBuilder:
         Returns:
             bool: True if installation succeeded, False otherwise
         """
+        compiler_tag_part = self.compiler_id
+        if self.compiler_version_tag:
+            compiler_tag_part += self.compiler_version_tag
+        elif self.compiler_id == "unknown":
+            compiler_tag_part = "unknown"
+
         lib_prefix = (
             self.version
             + "_"
             + self.os_prefix
             + "_"
             + self.architecture
+            + "_"
+            + compiler_tag_part
             + "_cpp"
             + str(self.cpp_version)
         )
