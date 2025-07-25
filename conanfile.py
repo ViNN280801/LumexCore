@@ -65,6 +65,15 @@ class LumexCoreConan(ConanFile):
 
         # ================= Core Components =================
 
+        # core_base64
+        self.cpp_info.components["core_base64"].set_property(
+            "cmake_target_name", "Lumex::base64"
+        )
+        self.cpp_info.components["core_base64"].libs = ["LumexCore_base64"]
+        self.cpp_info.components["core_base64"].requires = [
+            "core_utility",
+        ]
+
         # core_environment
         self.cpp_info.components["core_environment"].set_property(
             "cmake_target_name", "Lumex::environment"
@@ -126,6 +135,16 @@ class LumexCoreConan(ConanFile):
         )
         self.cpp_info.components["core_string_view"].libs = ["LumexCore_string_view"]
 
+        # core_temporary
+        self.cpp_info.components["core_temporary"].set_property(
+            "cmake_target_name", "Lumex::temporary"
+        )
+        self.cpp_info.components["core_temporary"].libs = ["LumexCore_temporary"]
+        self.cpp_info.components["core_temporary"].requires = [
+            "core_environment",
+            "core_filesystem",
+        ]
+
         # core_time
         self.cpp_info.components["core_time"].set_property(
             "cmake_target_name", "Lumex::time"
@@ -168,13 +187,3 @@ class LumexCoreConan(ConanFile):
         )
         self.cpp_info.components["applied_settings"].libs = ["LumexApplied_settings"]
         self.cpp_info.components["applied_settings"].requires = ["core_filesystem"]
-
-        # applied_temporary
-        self.cpp_info.components["applied_temporary"].set_property(
-            "cmake_target_name", "Lumex::temporary"
-        )
-        self.cpp_info.components["applied_temporary"].libs = ["LumexApplied_temporary"]
-        self.cpp_info.components["applied_temporary"].requires = [
-            "core_environment",
-            "core_filesystem",
-        ]

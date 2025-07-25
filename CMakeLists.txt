@@ -1,3 +1,5 @@
+# Root CMakeLists.txt
+
 cmake_minimum_required(VERSION 3.10)
 
 project(LumexLib
@@ -153,6 +155,7 @@ if(LUMEX_BUILD_TESTS)
         # Lumex Applied tests
 
         # Lumex Core tests
+        LumexBase64Tests
         LumexNumberGeneratorTests
         LumexOptionalTests
         LumexStringifyTests

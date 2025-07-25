@@ -1,10 +1,12 @@
-# lumex/tests/core/time/CMakeLists.txt
+# lumex/tests/core/base64/CMakeLists.txt
 
-set(TEST_EXECUTABLE_NAME LumexTimeTests)
+set(TEST_EXECUTABLE_NAME LumexBase64Tests)
 
 add_executable(
     ${TEST_EXECUTABLE_NAME}
-    LumexTime.tests.cpp
+    LumexBase64Decoder.tests.cpp
+    LumexBase64Encoder.tests.cpp
+    LumexBase64Validator.tests.cpp
 )
 
 set_target_properties(${TEST_EXECUTABLE_NAME} PROPERTIES
@@ -15,7 +17,7 @@ target_link_libraries(
     ${TEST_EXECUTABLE_NAME}
     PRIVATE
     GTest::gtest_main
-    Lumex::time
+    Lumex::base64
 )
 
 include(GoogleTest)
