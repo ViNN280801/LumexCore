@@ -205,11 +205,10 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
         operator bool() const { return m_success; }
 
         // Get value or default
-        T const &
-        value_or(T const &default_value) const
+        T
+        value_or(T default_value) const
         {
-          T default_value_copy = default_value; // avoiding (bugprone-return-const-ref-from-parameter)
-          return m_success ? m_value : default_value_copy;
+          return m_success ? m_value : default_value;
         }
 
       private:
