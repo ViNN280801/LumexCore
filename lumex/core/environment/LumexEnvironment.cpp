@@ -4,60 +4,59 @@
 #if LUMEX_OS_WINDOWS
 LUMEX_PUBLIC_API
 LumexEnvironment::EnvResult
-LumexEnvironment::WindowsEnvironmentStrategy::get_variable(
-  char const *name) const
+LumexEnvironment::WindowsEnvironmentStrategy::get_variable(char const *name) const
 {
-  if(name == nullptr || name[0] == '\0') return {ERROR_INVALID_PARAMETER};
+  if(name == nullptr || name[0] == '\0') // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
+    return {ERROR_INVALID_PARAMETER};
 
   // First try _dupenv_s for security (preferred on Windows)
   char *buffer       = nullptr;
   size_t buffer_size = 0;
-  errno_t result
-    = _dupenv_s(std::addressof(buffer), std::addressof(buffer_size), name);
+  errno_t result     = _dupenv_s(std::addressof(buffer), std::addressof(buffer_size), name);
 
   if(result == 0 && buffer != nullptr)
-    {
-      // RAII wrapper for automatic cleanup
-      std::unique_ptr<char, decltype(&free)> smart_buffer(
-        buffer, std::addressof(free));
-      return EnvResult(string_type(buffer));
-    }
+  {
+    // RAII wrapper for automatic cleanup
+    std::unique_ptr<char, decltype(&free)> smart_buffer(buffer, std::addressof(free));
+    return EnvResult(string_type(buffer));
+  }
 
   // Fallback to GetEnvironmentVariableA
   DWORD size = GetEnvironmentVariableA(name, nullptr, 0);
   if(size == 0)
-    {
-      DWORD error = GetLastError();
-      return {static_cast<int>(error)};
+  {
+    DWORD error = GetLastError();
+    if(error == ERROR_SUCCESS)
+    {                                    // Variable exists but is empty
+      return EnvResult(string_type("")); // Return successful result with empty string
     }
+    return {static_cast<int>(error)}; // True error (e.g., not found)
+  }
 
   if(size > MAX_ENV_BUFFER_SIZE) return {ERROR_BUFFER_OVERFLOW};
 
-  std::unique_ptr<char[]> win_buffer(new(std::nothrow) char[size]);
+  std::unique_ptr<char[]> win_buffer(new(std::nothrow) char[size]); // NOLINT(cppcoreguidelines-avoid-c-arrays)
   if(!win_buffer) return {ERROR_NOT_ENOUGH_MEMORY};
 
   DWORD actual_size = GetEnvironmentVariableA(name, win_buffer.get(), size);
-  if(actual_size == 0 || actual_size >= size)
-    return {static_cast<int>(GetLastError())};
+  if(actual_size == 0 || actual_size >= size) return {static_cast<int>(GetLastError())};
 
   return EnvResult(string_type(win_buffer.get(), actual_size));
 }
 
 LUMEX_PUBLIC_API
 bool
-LumexEnvironment::WindowsEnvironmentStrategy::set_variable(
-  char const *name, char const *value) const
+LumexEnvironment::WindowsEnvironmentStrategy::set_variable(char const *name, char const *value) const
 {
-  if(name == nullptr || name[0] == '\0') return false;
+  if(name == nullptr || name[0] == '\0') return false; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
   return SetEnvironmentVariableA(name, value) != 0;
 }
 
 LUMEX_PUBLIC_API
 bool
-LumexEnvironment::WindowsEnvironmentStrategy::unset_variable(
-  char const *name) const
+LumexEnvironment::WindowsEnvironmentStrategy::unset_variable(char const *name) const
 {
-  if(name == nullptr || name[0] == '\0') return false;
+  if(name == nullptr || name[0] == '\0') return false; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
   return SetEnvironmentVariableA(name, nullptr) != 0;
 }
 
@@ -67,7 +66,7 @@ LUMEX_PUBLIC_API
 LumexEnvironment::EnvResult
 LumexEnvironment::PosixEnvironmentStrategy::get_variable(char const *name) const
 {
-  if(name == nullptr || name[0] == '\0') return {-1}; // Invalid parameter
+  if(name == nullptr || name[0] == '\0') return {-1}; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
 
   // getenv is not thread-safe, but we can't do much about it in C++11
   // without external synchronization
@@ -76,22 +75,22 @@ LumexEnvironment::PosixEnvironmentStrategy::get_variable(char const *name) const
 
   // Validate result pointer and create safe copy
   try
-    {
-      size_type len = std::strlen(result);
-      if(len > MAX_ENV_BUFFER_SIZE) return {-3}; // Too large
-      return EnvResult(string_type(result, len));
-  } catch(...)
-    {
-      // Even though we're not supposed to throw, std::string constructor
-      // might
-      return {-4}; // Memory allocation failed
+  {
+    size_type len = std::strlen(result);
+    if(len > MAX_ENV_BUFFER_SIZE) return {-3}; // Too large
+    return EnvResult(string_type(result, len));
+  }
+  catch(...)
+  {
+    // Even though we're not supposed to throw, std::string constructor
+    // might
+    return {-4}; // Memory allocation failed
   }
 }
 
 LUMEX_PUBLIC_API
 bool
-LumexEnvironment::PosixEnvironmentStrategy::set_variable(
-  char const *name, char const *value) const
+LumexEnvironment::PosixEnvironmentStrategy::set_variable(char const *name, char const *value) const
 {
   if(name == nullptr || name[0] == '\0') return false;
 
@@ -122,8 +121,7 @@ LumexEnvironment::PosixEnvironmentStrategy::set_variable(
 
 LUMEX_PUBLIC_API
 bool
-LumexEnvironment::PosixEnvironmentStrategy::unset_variable(
-  char const *name) const
+LumexEnvironment::PosixEnvironmentStrategy::unset_variable(char const *name) const
 {
   if(name == nullptr || name[0] == '\0') return false;
 
@@ -163,8 +161,7 @@ LumexEnvironment::get_environment_variable(string_type const &name) const
 
 LUMEX_PUBLIC_API
 bool
-LumexEnvironment::set_environment_variable(char const *name,
-                                           char const *value) const
+LumexEnvironment::set_environment_variable(char const *name, char const *value) const
 {
   if(name == nullptr) return false;
 
@@ -175,8 +172,7 @@ LumexEnvironment::set_environment_variable(char const *name,
 
 LUMEX_PUBLIC_API
 bool
-LumexEnvironment::set_environment_variable(string_type const &name,
-                                           string_type const &value) const
+LumexEnvironment::set_environment_variable(string_type const &name, string_type const &value) const
 {
   return set_environment_variable(name.c_str(), value.c_str());
 }
@@ -193,8 +189,7 @@ LumexEnvironment::unset_environment_variable(char const *name) const
 
 LUMEX_PUBLIC_API
 LumexEnvironment::string_type
-LumexEnvironment::get_environment_variable_or(
-  char const *name, string_type const &default_value) const
+LumexEnvironment::get_environment_variable_or(char const *name, string_type const &default_value) const
 {
   EnvResult result = get_environment_variable(name);
   return result.get_value_or(default_value);
