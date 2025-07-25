@@ -15,8 +15,9 @@
 #include <string>   // std::string
 
 #include "lumex/LumexExport.hpp"
+#include "lumex/core/utility/LumexUtility"
 
-namespace Lumex
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Core
   {
@@ -49,6 +50,7 @@ namespace Lumex
         // From pointer + size (does **not** check nullptr when len==0 on purpose)
         constexpr LumexStringView(char const *str, size_type len) noexcept : m_data(str), m_size(len) {}
 
+        // Rule of five conformance
         constexpr LumexStringView(LumexStringView const &) noexcept  = default;
         LumexStringView &operator=(LumexStringView const &) noexcept = default;
         constexpr LumexStringView(LumexStringView &&) noexcept       = default;
@@ -56,47 +58,68 @@ namespace Lumex
         ~LumexStringView()                                           = default;
 
         // -- Iterator support --
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of begin()")
         constexpr const_iterator
         begin() const noexcept
         {
           return m_data;
         }
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of cbegin()")
         constexpr const_iterator
         cbegin() const noexcept
         {
           return m_data;
         }
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of end()")
         constexpr const_iterator
         end() const noexcept
         {
           return m_data + m_size; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
         }
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of cend()")
         constexpr const_iterator
         cend() const noexcept
         {
           return m_data + m_size; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
         }
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of rbegin()")
         const_reverse_iterator rbegin() const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of crbegin()")
         const_reverse_iterator crbegin() const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of rend()")
         const_reverse_iterator rend() const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of crend()")
         const_reverse_iterator crend() const noexcept;
 
         // -- Capacity --
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of size()")
         constexpr size_type
         size() const noexcept
         {
           return m_size;
         }
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of length()")
         constexpr size_type
         length() const noexcept
         {
           return m_size;
         }
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of empty()")
         constexpr bool
         empty() const noexcept
         {
           return m_size == 0;
         }
+
         static constexpr size_type
         max_size() noexcept
         {
@@ -109,17 +132,25 @@ namespace Lumex
         {
           return m_data[idx]; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
         }
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of at(size_type)")
         const_reference at(size_type idx) const;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of front()")
         constexpr const_reference
         front() const noexcept
         {
           return m_data[0]; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
         }
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of back()")
         constexpr const_reference
         back() const noexcept
         {
           return m_data[m_size - 1]; // NOLINT(cppcoreguidelines-pro-bounds-pointer-arithmetic)
         }
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of data()")
         constexpr const_pointer
         data() const noexcept
         {
@@ -136,53 +167,100 @@ namespace Lumex
         size_type copy(char *dest, size_type count, size_type pos = 0) const;
 
         // -- Substring --
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of substr(size_type, size_type)")
         LumexStringView substr(size_type pos = 0, size_type n = npos) const;
 
         // -- Comparison --
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of compare(LumexStringView)")
         int compare(LumexStringView other) const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD(
+          "It is not recommended to ignore return value of compare(size_type, size_type, LumexStringView)")
         int compare(size_type pos, size_type len, LumexStringView other) const;
+
         int compare(char const *cstr) const;
 
         // -- Starts / ends / contains helpers --
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of starts_with(char)")
         bool starts_with(char chr) const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of starts_with(LumexStringView)")
         bool starts_with(LumexStringView str) const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of ends_with(char)")
         bool ends_with(char chr) const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of ends_with(chaLumexStringViewr)")
         bool ends_with(LumexStringView str) const noexcept;
 
         // -- Find (simple implementations) --
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of find(char, size_type)")
         size_type find(char chr, size_type pos = 0) const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of find(LumexStringView, size_type)")
         size_type find(LumexStringView str, size_type pos = 0) const noexcept;
+
         size_type find(char const *cstr, size_type pos, size_type count) const noexcept;
+
         size_type find(char const *cstr, size_type pos = 0) const noexcept;
 
         // -- Reverse find --
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of rfind(LumexStringView, size_type)")
         size_type rfind(LumexStringView str, size_type pos = npos) const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of rfind(char, size_type)")
         size_type rfind(char chr, size_type pos = npos) const noexcept;
+
         size_type rfind(char const *cstr, size_type pos, size_type count) const noexcept;
+
         size_type rfind(char const *cstr, size_type pos = npos) const noexcept;
 
         // -- Find first of --
+        LUMEX_ATTRIBUTE_NODISCARD(
+          "It is not recommended to ignore return value of find_first_of(LumexStringView, size_type)")
         size_type find_first_of(LumexStringView str, size_type pos = 0) const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of find_first_of(char, size_type)")
         size_type find_first_of(char chr, size_type pos = 0) const noexcept;
+
         size_type find_first_of(char const *cstr, size_type pos, size_type count) const noexcept;
+
         size_type find_first_of(char const *cstr, size_type pos = 0) const noexcept;
 
         // -- Find last of --
+        LUMEX_ATTRIBUTE_NODISCARD(
+          "It is not recommended to ignore return value of find_last_of(LumexStringView, size_type)")
         size_type find_last_of(LumexStringView str, size_type pos = npos) const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of find_last_of(char, size_type)")
         size_type find_last_of(char chr, size_type pos = npos) const noexcept;
+
         size_type find_last_of(char const *cstr, size_type pos, size_type count) const noexcept;
+
         size_type find_last_of(char const *cstr, size_type pos = npos) const noexcept;
 
         // -- Find first not of --
+        LUMEX_ATTRIBUTE_NODISCARD(
+          "It is not recommended to ignore return value of find_first_not_of(LumexStringView, size_type)")
         size_type find_first_not_of(LumexStringView str, size_type pos = 0) const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of find_first_not_of(char, size_type)")
         size_type find_first_not_of(char chr, size_type pos = 0) const noexcept;
+
         size_type find_first_not_of(char const *cstr, size_type pos, size_type count) const noexcept;
+
         size_type find_first_not_of(char const *cstr, size_type pos = 0) const noexcept;
 
         // -- Find last not of --
+        LUMEX_ATTRIBUTE_NODISCARD(
+          "It is not recommended to ignore return value of find_last_not_of(LumexStringView, size_type)")
         size_type find_last_not_of(LumexStringView str, size_type pos = npos) const noexcept;
+
+        LUMEX_ATTRIBUTE_NODISCARD("It is not recommended to ignore return value of find_last_not_of(char, size_type)")
         size_type find_last_not_of(char chr, size_type pos = npos) const noexcept;
+
         size_type find_last_not_of(char const *cstr, size_type pos, size_type count) const noexcept;
+
         size_type find_last_not_of(char const *cstr, size_type pos = npos) const noexcept;
 
         // -- Conversion back to std::string --
@@ -219,31 +297,37 @@ namespace Lumex
       {
         return lhs.size() == rhs.size() && lhs.compare(rhs) == 0;
       }
+
       LUMEX_API inline bool
       operator!=(LumexStringView lhs, LumexStringView rhs) noexcept
       {
         return !(lhs == rhs);
       }
+
       LUMEX_API inline bool
       operator<(LumexStringView lhs, LumexStringView rhs) noexcept
       {
         return lhs.compare(rhs) < 0;
       }
+
       LUMEX_API inline bool
       operator>(LumexStringView lhs, LumexStringView rhs) noexcept
       {
         return lhs.compare(rhs) > 0;
       }
+
       LUMEX_API inline bool
       operator<=(LumexStringView lhs, LumexStringView rhs) noexcept
       {
         return lhs.compare(rhs) <= 0;
       }
+
       LUMEX_API inline bool
       operator>=(LumexStringView lhs, LumexStringView rhs) noexcept
       {
         return lhs.compare(rhs) >= 0;
       }
+
       // -- Stream inserter --
       LUMEX_API std::ostream &operator<<(std::ostream &ostr, LumexStringView sview);
     } // namespace StringView
