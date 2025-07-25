@@ -65,6 +65,15 @@ class LumexCoreConan(ConanFile):
 
         # ================= Core Components =================
 
+        # core_base64
+        self.cpp_info.components["core_base64"].set_property(
+            "cmake_target_name", "Lumex::base64"
+        )
+        self.cpp_info.components["core_base64"].libs = ["LumexCore_base64"]
+        self.cpp_info.components["core_base64"].requires = [
+            "core_utility",
+        ]
+
         # core_environment
         self.cpp_info.components["core_environment"].set_property(
             "cmake_target_name", "Lumex::environment"
