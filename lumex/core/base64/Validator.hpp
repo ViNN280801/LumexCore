@@ -7,14 +7,17 @@
   #include <string>
 #endif
 
+#include "lumex/LumexExport.hpp"
+
 namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Core
   {
     namespace Base64
     {
-      class Validator final
+      class LUMEX_API Validator final
       {
+      public:
         /**
          * @brief Checks if a given string is a valid Base64 encoded string.
          *

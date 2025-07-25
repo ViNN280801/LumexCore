@@ -1,8 +1,10 @@
+#define LUMEX_IMPLEMENTATION
 #include "lumex/core/base64/Encoder.hpp"
 
 using namespace Lumex::Core::Base64;
 using namespace Lumex::Core::Base64::Constants;
 
+LUMEX_PUBLIC_API
 std::string
 Encoder::encode(void const *data, size_t size)
 {
@@ -26,6 +28,7 @@ Encoder::encode(void const *data, size_t size)
 }
 
 #if __cplusplus >= 201703L
+LUMEX_PUBLIC_API
 std::string
 Encoder::encode(std::string_view data)
 {
@@ -36,13 +39,15 @@ Encoder::encode(std::string_view data)
 #endif
 
 #if __cplusplus >= 202002L
+LUMEX_PUBLIC_API
 std::string
-Encoder::encode(std::span<const byte_type> data)
+Encoder::encode(std::span<byte_type const> data)
 {
   return detail::_encode_impl(data);
 }
 #endif
 
+LUMEX_PUBLIC_API
 std::string
 Encoder::encode(std::vector<byte_type> const &data)
 {
