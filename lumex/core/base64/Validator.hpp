@@ -3,7 +3,7 @@
 
 #if __cplusplus >= 201703L
   #include <string_view>
-#elif __cplusplus >= 201103L
+#else
   #include <string>
 #endif
 
