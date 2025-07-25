@@ -1,5 +1,5 @@
-set(LUMEX_TEMPORARY_NAME LumexApplied_temporary)
-set(EXPORT_TO LumexAppliedTargets)
+set(LUMEX_TEMPORARY_NAME LumexCore_temporary)
+set(EXPORT_TO LumexCoreTargets)
 
 add_library(${LUMEX_TEMPORARY_NAME} LumexTemporary.cpp)
 add_library(Lumex::temporary ALIAS ${LUMEX_TEMPORARY_NAME})
@@ -14,8 +14,8 @@ target_include_directories(${LUMEX_TEMPORARY_NAME} PUBLIC
 )
 
 target_link_libraries(${LUMEX_TEMPORARY_NAME} PUBLIC
-    Lumex::filesystem
     Lumex::environment
+    Lumex::filesystem
 )
 
 install(TARGETS ${LUMEX_TEMPORARY_NAME} EXPORT ${EXPORT_TO}
@@ -26,6 +26,6 @@ install(TARGETS ${LUMEX_TEMPORARY_NAME} EXPORT ${EXPORT_TO}
 
 install(
     DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
-    DESTINATION include/lumex/applied/temporary
+    DESTINATION include/lumex/core/temporary
     FILES_MATCHING PATTERN "*.hpp"
 )
