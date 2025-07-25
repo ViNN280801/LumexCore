@@ -70,15 +70,18 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
              0xFF, 0xFF, 0xFF, 0xFF};
 
         /**
-         * @brief Internal helper to check if a character is a valid Base64 character.
+         * @brief Internal helper to check if a character is a valid Base64 *alphabet* character.
+         *        This excludes the padding '=' character.
          *
          * @param chr The character to check.
-         * @return true if the character is a valid Base64 character, false otherwise.
+         * @return true if the character is a valid Base64 alphabet character, false otherwise.
          */
         inline bool
         _is_base64_char_impl(Types::byte_type chr) noexcept
         {
-          return _decode_table.at(chr) != Constants::kBase64DecodeInvalidChar || chr == '=';
+          // A character is a valid Base64 alphabet character if its decoded value is not kBase64DecodeInvalidChar.
+          // This function specifically excludes '=' as a valid alphabet character, as '=' is padding.
+          return _decode_table.at(chr) != Constants::kBase64DecodeInvalidChar;
         }
 
         /**
@@ -146,8 +149,8 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
         /**
          * @brief Specialization of `has_convertible_indexed_access` for types with suitable `operator[]`.
          *
-         * This template specialization is actively selected by the compiler if the type `T`
-         * satisfies the following conditions, verified through SFINAE:
+         * This template specialization is actively selected by the compiler if the type `T`         * satisfies the
+         * following conditions, verified through SFINAE:
          *
          * - `std::void_t<decltype(std::declval<T>()[std::declval<size_t>()])>`: Checks if `T::operator[]`
          *   is a valid expression when invoked with a `size_t` argument. `std::declval<size_t>()`

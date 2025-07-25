@@ -3,6 +3,7 @@
 
 #include <vector>
 
+#include "lumex/LumexExport.hpp"
 #include "lumex/core/base64/Base64.hpp"
 
 using namespace Lumex::Core::Base64::Types;
@@ -26,8 +27,9 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
      */
     namespace Base64
     {
-      class Decoder final
+      class LUMEX_API Decoder final
       {
+      public:
         /**
          * @brief Decodes a Base64 string into binary data and stores it in an output vector.
          *

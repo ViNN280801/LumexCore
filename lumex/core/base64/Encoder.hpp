@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "Base64.hpp"
+#include "lumex/LumexExport.hpp"
 
 using namespace Lumex::Core::Base64::Types;
 
@@ -27,7 +28,7 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
      */
     namespace Base64
     {
-      class Encoder final
+      class LUMEX_API Encoder final
       {
       public:
         /**
