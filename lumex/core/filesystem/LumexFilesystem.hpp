@@ -42,7 +42,7 @@
  */
 
 // C++11 compatible nested namespaces
-namespace Lumex
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Core
   {
@@ -58,11 +58,8 @@ namespace Lumex
       // Since std::time_t is measured in seconds, and ulInt.QuadPart (after
       // subtraction) contains the number of 100-nanosecond intervals, dividing by
       // 10000000ULL converts these 100-nanosecond intervals into seconds.
-      constexpr unsigned long long
-        KDEFAULT_WINDOWS_FILETIME_TO_UNIX_EPOCH_INTERVALS
-        = 116444736000000000ULL;
-      constexpr unsigned long long KDEFAULT_HUNDRED_NANOSECONDS_PER_SECOND
-        = 10000000ULL;
+      constexpr unsigned long long KDEFAULT_WINDOWS_FILETIME_TO_UNIX_EPOCH_INTERVALS = 116444736000000000ULL;
+      constexpr unsigned long long KDEFAULT_HUNDRED_NANOSECONDS_PER_SECOND           = 10000000ULL;
 
       // Forward declarations
       class Path;
@@ -118,22 +115,19 @@ namespace Lumex
       inline Perms
       operator|(Perms lhs, Perms rhs)
       {
-        return static_cast<Perms>(static_cast<int>(lhs)
-                                  | static_cast<int>(rhs));
+        return static_cast<Perms>(static_cast<int>(lhs) | static_cast<int>(rhs));
       }
 
       inline Perms
       operator&(Perms lhs, Perms rhs)
       {
-        return static_cast<Perms>(static_cast<int>(lhs)
-                                  & static_cast<int>(rhs));
+        return static_cast<Perms>(static_cast<int>(lhs) & static_cast<int>(rhs));
       }
 
       inline Perms
       operator^(Perms lhs, Perms rhs)
       {
-        return static_cast<Perms>(static_cast<int>(lhs)
-                                  ^ static_cast<int>(rhs));
+        return static_cast<Perms>(static_cast<int>(lhs) ^ static_cast<int>(rhs));
       }
 
       inline Perms
@@ -167,32 +161,23 @@ namespace Lumex
       template <typename T> class FilesystemResult
       {
       public:
-        // Constructors
-        FilesystemResult() : m_success(false), m_error_code(0) {}
+        FilesystemResult() : m_value(), m_success(true), m_error_code(0) {}
 
-        explicit FilesystemResult(T const &value)
-            : m_value(value), m_success(true), m_error_code(0)
-        {}
+        // –– success factory
+        static FilesystemResult<T>
+        ok(T value)
+        {
+          return FilesystemResult<T>(std::move(value), /*success=*/true, /*err=*/0);
+        }
 
-        explicit FilesystemResult(T &&value)
-            : m_value(std::move(value)), m_success(true), m_error_code(0)
-        {}
-
-        FilesystemResult(int error_code)
-            : m_success(false), m_error_code(error_code)
-        {}
-
-        FilesystemResult(int error_code, T const &default_value)
-            : m_value(default_value),
-              m_success(false),
-              m_error_code(error_code)
-        {}
-
-        FilesystemResult(int error_code, T &&default_value)
-            : m_value(std::move(default_value)),
-              m_success(false),
-              m_error_code(error_code)
-        {}
+        // –– error factory (with optional default)
+        static FilesystemResult<T>
+        err(int error_code, T default_value = T{})
+        {
+          return FilesystemResult<T>(std::move(default_value),
+                                     /*success=*/false,
+                                     /*err=*/error_code);
+        }
 
         // Accessors
         T const &
@@ -223,10 +208,16 @@ namespace Lumex
         T const &
         value_or(T const &default_value) const
         {
-          return m_success ? m_value : default_value;
+          T default_value_copy = default_value; // avoiding (bugprone-return-const-ref-from-parameter)
+          return m_success ? m_value : default_value_copy;
         }
 
       private:
+        // hidden ctor used by our factories
+        FilesystemResult(T value, bool success, int error_code)
+            : m_value(std::move(value)), m_success(success), m_error_code(error_code)
+        {}
+
         T m_value;
         bool m_success;
         int m_error_code;
@@ -238,9 +229,19 @@ namespace Lumex
       public:
         FilesystemResult() : m_success(true), m_error_code(0) {}
 
-        explicit FilesystemResult(int error_code)
-            : m_success(false), m_error_code(error_code)
-        {}
+        // –– success factory
+        static FilesystemResult<void>
+        ok()
+        {
+          return FilesystemResult<void>(/*success=*/true, /*error_code=*/0);
+        }
+
+        // –– error factory
+        static FilesystemResult<void>
+        err(int error_code)
+        {
+          return FilesystemResult<void>(/*success=*/false, /*error_code=*/error_code);
+        }
 
         bool
         success() const
@@ -255,6 +256,9 @@ namespace Lumex
         operator bool() const { return m_success; }
 
       private:
+        // hidden ctor used by ok()/err()
+        FilesystemResult(bool success, int error_code) : m_success(success), m_error_code(error_code) {}
+
         bool m_success;
         int m_error_code;
       };
@@ -278,19 +282,27 @@ namespace Lumex
 #endif
 
         // Constructors
-        Path() = default;
-        explicit Path(string_type source);
-        explicit Path(char const *source);
+        Path() : m_path(".") {} // Initialize to "." instead of empty
+        Path(string_type source);
+        Path(char const *source);
         Path(Path const &other)            = default;
         Path &operator=(Path const &other) = default;
+        ~Path()                            = default;
 
         // C++11 move semantics
 #if __cplusplus >= 201103L
-        Path(Path &&other) noexcept : m_path(std::move(other.m_path)) {}
+        Path(Path &&other) noexcept : m_path(std::move(other.m_path))
+        {
+          other.m_path.clear(); // Clear moved-from object
+        }
         Path &
         operator=(Path &&other) noexcept
         {
-          if(this != std::addressof(other)) m_path = std::move(other.m_path);
+          if(this != std::addressof(other))
+          {
+            m_path = std::move(other.m_path);
+            other.m_path.clear(); // Clear moved-from object
+          }
           return *this;
         }
 #endif
@@ -313,8 +325,12 @@ namespace Lumex
         }
         Path &make_preferred();
         Path &remove_filename();
-        Path &replace_filename(Path const &);
-        Path &replace_extension(Path const & = Path());
+        Path &replace_filename(char const *filename);
+        Path &replace_filename(std::string const &filename);
+        Path &replace_filename(Path const &replacement);
+        Path &replace_extension(char const *ext);
+        Path &replace_extension(std::string const &ext);
+        Path &replace_extension(Path const &ext = Path());
         void
         swap(Path &other) noexcept
         {
@@ -395,8 +411,7 @@ namespace Lumex
       private:
 #ifdef _WIN32
   #pragma warning(push)
-  #pragma warning(                                                            \
-    disable : 4251) // Suppress C4251 for STL members in DLL interface
+  #pragma warning(disable : 4251) // Suppress C4251 for STL members in DLL interface
 #endif
         string_type m_path;
 #ifdef _WIN32
@@ -417,9 +432,7 @@ namespace Lumex
       {
       public:
         FileStatus() : m_type(FileType::none), m_perms(Perms::unknown) {}
-        explicit FileStatus(FileType type, Perms perms = Perms::unknown)
-            : m_type(type), m_perms(perms)
-        {}
+        explicit FileStatus(FileType type, Perms perms = Perms::unknown) : m_type(type), m_perms(perms) {}
 
         FileType
         type() const
@@ -497,7 +510,7 @@ namespace Lumex
       private:
         Path m_path;
         mutable FileStatus m_status;
-        mutable bool m_status_known;
+        mutable bool m_status_known{};
 
         void refresh_status() const;
       };
@@ -519,9 +532,11 @@ namespace Lumex
         DirectoryIterator() = default;
         explicit DirectoryIterator(Path const &);
         DirectoryIterator(DirectoryIterator const &);
+        DirectoryIterator(DirectoryIterator &&) noexcept;
         ~DirectoryIterator() = default;
 
         DirectoryIterator &operator=(DirectoryIterator const &);
+        DirectoryIterator &operator=(DirectoryIterator &&) noexcept;
 
         // Iterator operations
         reference operator*() const;
@@ -585,28 +600,22 @@ namespace Lumex
         static FilesystemResult<void> copy_symlink(Path const &, Path const &);
         static FilesystemResult<bool> create_directory(Path const &);
         static FilesystemResult<bool> create_directories(Path const &);
-        static FilesystemResult<void>
-        create_symlink(Path const &, Path const &);
-        static FilesystemResult<void>
-        create_directory_symlink(Path const &, Path const &);
+        static FilesystemResult<void> create_symlink(Path const &, Path const &);
+        static FilesystemResult<void> create_directory_symlink(Path const &, Path const &);
         static FilesystemResult<Path> current_path();
         static FilesystemResult<void> current_path(Path const &);
         static bool equivalent(Path const &, Path const &);
         static FilesystemResult<std::uintmax_t> file_size(Path const &);
         static FilesystemResult<std::time_t> last_write_time(Path const &);
-        static FilesystemResult<void>
-        last_write_time(Path const &, std::time_t);
+        static FilesystemResult<void> last_write_time(Path const &, std::time_t);
         static FilesystemResult<void> permissions(Path const &, Perms);
         static FilesystemResult<Path> read_symlink(Path const &);
         static FilesystemResult<bool> remove(Path const &);
         static FilesystemResult<std::uintmax_t> remove_all(Path const &);
         static FilesystemResult<void> rename(Path const &, Path const &);
-        static FilesystemResult<void>
-        resize_file(Path const &, std::uintmax_t);
-        static FilesystemResult<void>
-        move_file(Path const &from, Path const &to_path);
-        static FilesystemResult<void>
-        move_directory(Path const &from, Path const &to_path);
+        static FilesystemResult<void> resize_file(Path const &, std::uintmax_t);
+        static FilesystemResult<void> move_file(Path const &from, Path const &to_path);
+        static FilesystemResult<void> move_directory(Path const &from, Path const &to_path);
         static FilesystemResult<SpaceInfo> space(Path const &);
         static FilesystemResult<FileStatus> status(Path const &);
         static FilesystemResult<FileStatus> symlink_status(Path const &);
@@ -703,11 +712,9 @@ namespace Lumex
       private:
         // OS-specific implementations
 #if LUMEX_OS_WINDOWS
-        static FilesystemResult<FileStatus>
-        get_file_status_windows(Path const &, bool);
+        static FilesystemResult<FileStatus> get_file_status_windows(Path const &, bool);
 #else
-        static FilesystemResult<FileStatus>
-        get_file_status_posix(Path const &, bool);
+        static FilesystemResult<FileStatus> get_file_status_posix(Path const &, bool);
 #endif
       };
 
@@ -790,17 +797,16 @@ namespace Lumex
 // Convenience type aliases
 namespace Lumex
 {
-  using Path              = Core::Filesystem::Path;
-  using DirectoryEntry    = Core::Filesystem::DirectoryEntry;
-  using DirectoryIterator = Core::Filesystem::DirectoryIterator;
-  using FileType          = Core::Filesystem::FileType;
-  using FileStatus        = Core::Filesystem::FileStatus;
-  using Perms             = Core::Filesystem::Perms;
-  using SpaceInfo         = Core::Filesystem::SpaceInfo;
-  using Filesystem        = Core::Filesystem::LumexFilesystem;
+  using Path                                   = Core::Filesystem::Path;
+  using DirectoryEntry                         = Core::Filesystem::DirectoryEntry;
+  using DirectoryIterator                      = Core::Filesystem::DirectoryIterator;
+  using FileType                               = Core::Filesystem::FileType;
+  using FileStatus                             = Core::Filesystem::FileStatus;
+  using Perms                                  = Core::Filesystem::Perms;
+  using SpaceInfo                              = Core::Filesystem::SpaceInfo;
+  using Filesystem                             = Core::Filesystem::LumexFilesystem;
 
-  template <typename T>
-  using FilesystemResult = Core::Filesystem::FilesystemResult<T>;
+  template <typename T> using FilesystemResult = Core::Filesystem::FilesystemResult<T>;
 } // namespace Lumex
 
 inline std::ostream &
