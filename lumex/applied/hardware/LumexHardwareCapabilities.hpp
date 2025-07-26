@@ -6,7 +6,7 @@
 #include <cstdint>
 #include <string>
 
-namespace Lumex
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Applied
   {
@@ -26,8 +26,8 @@ namespace Lumex
         constexpr uint32_t KHIGH_CPU_CORES           = 4;    ///< High CPU core count threshold for GPU checks
 
         // Memory conversion factors
-        constexpr uint64_t KBYTES_TO_MB_FACTOR = 1024 * 1024; ///< Conversion factor from bytes to megabytes
-        constexpr uint64_t KKB_TO_MB_FACTOR    = 1024;        ///< Conversion factor from kilobytes to megabytes
+        constexpr uint64_t KBYTES_TO_MB_FACTOR = 1024ULL * 1024ULL; ///< Conversion factor from bytes to megabytes
+        constexpr uint64_t KKB_TO_MB_FACTOR    = 1024ULL;           ///< Conversion factor from kilobytes to megabytes
 
         // Frequency conversion
         constexpr uint32_t KGHZ_TO_MHZ_FACTOR = 1000; ///< Conversion factor from GHz to MHz
@@ -43,61 +43,98 @@ namespace Lumex
         constexpr int KCPU_BRAND_OFFSET_32 = 32; ///< Memory offset for third part of CPU brand string
 
         // CPU generation years
-        constexpr uint32_t KCPU_CORE2_GENERATION        = 2008; ///< Intel Core 2 Duo/Quad generation year
+        constexpr uint32_t KCPU_CORE2_GENERATION   = 2008; ///< Intel Core 2 Duo/Quad generation year
+        constexpr uint32_t KCPU_NEHALEM_GENERATION = 2008; ///< Intel Nehalem generation year (1st Gen Core i-series)
         constexpr uint32_t KCPU_SANDY_BRIDGE_GENERATION = 2011; ///< Intel Sandy Bridge generation year
         constexpr uint32_t KCPU_IVY_BRIDGE_GENERATION   = 2012; ///< Intel Ivy Bridge generation year
         constexpr uint32_t KCPU_HASWELL_GENERATION      = 2013; ///< Intel Haswell generation year
         constexpr uint32_t KCPU_SKYLAKE_GENERATION      = 2015; ///< Intel Skylake generation year
+        constexpr uint32_t KCPU_KABY_LAKE_GENERATION    = 2017; ///< Intel Kaby Lake generation year (7th Gen)
         constexpr uint32_t KCPU_COFFEE_LAKE_GENERATION  = 2017; ///< Intel Coffee Lake generation year
         constexpr uint32_t KCPU_COMET_LAKE_GENERATION   = 2020; ///< Intel Comet Lake generation year
+        constexpr uint32_t KCPU_ROCKET_LAKE_GENERATION  = 2021; ///< Intel Rocket Lake generation year (11th Gen)
+        constexpr uint32_t KCPU_ALDER_LAKE_GENERATION   = 2021; ///< Intel Alder Lake generation year (12th Gen)
+        constexpr uint32_t KCPU_RAPTOR_LAKE_GENERATION  = 2022; ///< Intel Raptor Lake generation year (13th Gen)
+        constexpr uint32_t KCPU_METEOR_LAKE_GENERATION  = 2023; ///< Intel Meteor Lake generation year (14th Gen)
         constexpr uint32_t KCPU_RYZEN_1000_GENERATION   = 2017; ///< AMD Ryzen 1000 series generation year
         constexpr uint32_t KCPU_RYZEN_2000_GENERATION   = 2018; ///< AMD Ryzen 2000 series generation year
         constexpr uint32_t KCPU_RYZEN_3000_GENERATION   = 2019; ///< AMD Ryzen 3000 series generation year
+        constexpr uint32_t KCPU_RYZEN_4000_GENERATION   = 2020; ///< AMD Ryzen 4000 (Renoir) series generation year
         constexpr uint32_t KCPU_RYZEN_5000_GENERATION   = 2020; ///< AMD Ryzen 5000 series generation year
+        constexpr uint32_t KCPU_RYZEN_6000_GENERATION   = 2022; ///< AMD Ryzen 6000 (Rembrandt) series generation year
         constexpr uint32_t KCPU_RYZEN_7000_GENERATION   = 2022; ///< AMD Ryzen 7000 series generation year
         constexpr uint32_t KCPU_DEFAULT_GENERATION      = 2015; ///< Default CPU generation year for unknown processors
 
         // Intel CPU model identifiers
-        constexpr char const *KINTEL_CORE2_IDENTIFIER = "Core 2"; ///< Intel Core 2 series identifier
-        constexpr char const *KINTEL_I3_2_IDENTIFIER  = "i3-2";   ///< Intel i3 2nd gen identifier
-        constexpr char const *KINTEL_I5_2_IDENTIFIER  = "i5-2";   ///< Intel i5 2nd gen identifier
-        constexpr char const *KINTEL_I7_2_IDENTIFIER  = "i7-2";   ///< Intel i7 2nd gen identifier
-        constexpr char const *KINTEL_I3_3_IDENTIFIER  = "i3-3";   ///< Intel i3 3rd gen identifier
-        constexpr char const *KINTEL_I5_3_IDENTIFIER  = "i5-3";   ///< Intel i5 3rd gen identifier
-        constexpr char const *KINTEL_I7_3_IDENTIFIER  = "i7-3";   ///< Intel i7 3rd gen identifier
-        constexpr char const *KINTEL_I3_4_IDENTIFIER  = "i3-4";   ///< Intel i3 4th gen identifier
-        constexpr char const *KINTEL_I5_4_IDENTIFIER  = "i5-4";   ///< Intel i5 4th gen identifier
-        constexpr char const *KINTEL_I7_4_IDENTIFIER  = "i7-4";   ///< Intel i7 4th gen identifier
-        constexpr char const *KINTEL_I3_6_IDENTIFIER  = "i3-6";   ///< Intel i3 6th gen identifier
-        constexpr char const *KINTEL_I5_6_IDENTIFIER  = "i5-6";   ///< Intel i5 6th gen identifier
-        constexpr char const *KINTEL_I7_6_IDENTIFIER  = "i7-6";   ///< Intel i7 6th gen identifier
-        constexpr char const *KINTEL_I3_8_IDENTIFIER  = "i3-8";   ///< Intel i3 8th gen identifier
-        constexpr char const *KINTEL_I5_8_IDENTIFIER  = "i5-8";   ///< Intel i5 8th gen identifier
-        constexpr char const *KINTEL_I7_8_IDENTIFIER  = "i7-8";   ///< Intel i7 8th gen identifier
-        constexpr char const *KINTEL_I3_10_IDENTIFIER = "i3-10";  ///< Intel i3 10th gen identifier
-        constexpr char const *KINTEL_I5_10_IDENTIFIER = "i5-10";  ///< Intel i5 10th gen identifier
-        constexpr char const *KINTEL_I7_10_IDENTIFIER = "i7-10";  ///< Intel i7 10th gen identifier
+        constexpr char const *KINTEL_CORE2_IDENTIFIER  = "Core 2"; ///< Intel Core 2 series identifier
+        constexpr char const *KINTEL_I3_2_IDENTIFIER   = "i3-2";   ///< Intel i3 2nd gen identifier
+        constexpr char const *KINTEL_I5_2_IDENTIFIER   = "i5-2";   ///< Intel i5 2nd gen identifier
+        constexpr char const *KINTEL_I7_2_IDENTIFIER   = "i7-2";   ///< Intel i7 2nd gen identifier
+        constexpr char const *KINTEL_I3_3_IDENTIFIER   = "i3-3";   ///< Intel i3 3rd gen identifier
+        constexpr char const *KINTEL_I5_3_IDENTIFIER   = "i5-3";   ///< Intel i5 3rd gen identifier
+        constexpr char const *KINTEL_I7_3_IDENTIFIER   = "i7-3";   ///< Intel i7 3rd gen identifier
+        constexpr char const *KINTEL_I3_4_IDENTIFIER   = "i3-4";   ///< Intel i3 4th gen identifier
+        constexpr char const *KINTEL_I5_4_IDENTIFIER   = "i5-4";   ///< Intel i5 4th gen identifier
+        constexpr char const *KINTEL_I7_4_IDENTIFIER   = "i7-4";   ///< Intel i7 4th gen identifier
+        constexpr char const *KINTEL_I3_6_IDENTIFIER   = "i3-6";   ///< Intel i3 6th gen identifier
+        constexpr char const *KINTEL_I5_6_IDENTIFIER   = "i5-6";   ///< Intel i5 6th gen identifier
+        constexpr char const *KINTEL_I7_6_IDENTIFIER   = "i7-6";   ///< Intel i7 6th gen identifier
+        constexpr char const *KINTEL_I3_8_IDENTIFIER   = "i3-8";   ///< Intel i3 8th gen identifier
+        constexpr char const *KINTEL_I5_8_IDENTIFIER   = "i5-8";   ///< Intel i5 8th gen identifier
+        constexpr char const *KINTEL_I7_8_IDENTIFIER   = "i7-8";   ///< Intel i7 8th gen identifier
+        constexpr char const *KINTEL_I3_10_IDENTIFIER  = "i3-10";  ///< Intel i3 10th gen identifier
+        constexpr char const *KINTEL_I5_10_IDENTIFIER  = "i5-10";  ///< Intel i5 10th gen identifier
+        constexpr char const *KINTEL_I7_10_IDENTIFIER  = "i7-10";  ///< Intel i7 10th gen identifier
+        constexpr char const *KINTEL_I3_11_IDENTIFIER  = "i3-11";  ///< Intel i3 11th gen identifier (Rocket Lake)
+        constexpr char const *KINTEL_I5_11_IDENTIFIER  = "i5-11";  ///< Intel i5 11th gen identifier (Rocket Lake)
+        constexpr char const *KINTEL_I7_11_IDENTIFIER  = "i7-11";  ///< Intel i7 11th gen identifier (Rocket Lake)
+        constexpr char const *KINTEL_I3_12_IDENTIFIER  = "i3-12";  ///< Intel i3 12th gen identifier (Alder Lake)
+        constexpr char const *KINTEL_I5_12_IDENTIFIER  = "i5-12";  ///< Intel i5 12th gen identifier (Alder Lake)
+        constexpr char const *KINTEL_I7_12_IDENTIFIER  = "i7-12";  ///< Intel i7 12th gen identifier (Alder Lake)
+        constexpr char const *KINTEL_I9_12_IDENTIFIER  = "i9-12";  ///< Intel i9 12th gen identifier (Alder Lake)
+        constexpr char const *KINTEL_I3_13_IDENTIFIER  = "i3-13";  ///< Intel i3 13th gen identifier (Raptor Lake)
+        constexpr char const *KINTEL_I5_13_IDENTIFIER  = "i5-13";  ///< Intel i5 13th gen identifier (Raptor Lake)
+        constexpr char const *KINTEL_I7_13_IDENTIFIER  = "i7-13";  ///< Intel i7 13th gen identifier (Raptor Lake)
+        constexpr char const *KINTEL_I9_13_IDENTIFIER  = "i9-13";  ///< Intel i9 13th gen identifier (Raptor Lake)
+        constexpr char const *KINTEL_I3_7_IDENTIFIER   = "i3-7";   ///< Intel i3 7th gen identifier (Kaby Lake)
+        constexpr char const *KINTEL_I5_7_IDENTIFIER   = "i5-7";   ///< Intel i5 7th gen identifier (Kaby Lake)
+        constexpr char const *KINTEL_I7_7_IDENTIFIER   = "i7-7";   ///< Intel i7 7th gen identifier (Kaby Lake)
+        constexpr char const *KINTEL_I3_14_IDENTIFIER  = "i3-14";  ///< Intel i3 14th gen identifier (Meteor Lake)
+        constexpr char const *KINTEL_I5_14_IDENTIFIER  = "i5-14";  ///< Intel i5 14th gen identifier (Meteor Lake)
+        constexpr char const *KINTEL_I7_14_IDENTIFIER  = "i7-14";  ///< Intel i7 14th gen identifier (Meteor Lake)
+        constexpr char const *KINTEL_I9_14_IDENTIFIER  = "i9-14";  ///< Intel i9 14th gen identifier (Meteor Lake)
+        constexpr char const *KINTEL_I5_750_IDENTIFIER = "i5-750"; ///< Intel Core i5-750 identifier (1st Gen)
+        constexpr char const *KINTEL_I7_9_IDENTIFIER   = "i7-9";   ///< Intel Core i7-9xx identifier (1st Gen)
+        constexpr char const *KINTEL_PENTIUM_G_IDENTIFIER
+          = "Pentium G"; ///< Intel Pentium G-series identifier (for Ivy Bridge based)
 
         // AMD CPU identifiers
         constexpr char const *KAMD_RYZEN_IDENTIFIER      = "Ryzen"; ///< AMD Ryzen series identifier
         constexpr char const *KAMD_RYZEN_1000_IDENTIFIER = "1000";  ///< AMD Ryzen 1000 series identifier
         constexpr char const *KAMD_RYZEN_2000_IDENTIFIER = "2000";  ///< AMD Ryzen 2000 series identifier
         constexpr char const *KAMD_RYZEN_3000_IDENTIFIER = "3000";  ///< AMD Ryzen 3000 series identifier
+        constexpr char const *KAMD_RYZEN_4000_IDENTIFIER = "4000";  ///< AMD Ryzen 4000 series identifier (Renoir)
         constexpr char const *KAMD_RYZEN_5000_IDENTIFIER = "5000";  ///< AMD Ryzen 5000 series identifier
+        constexpr char const *KAMD_RYZEN_6000_IDENTIFIER = "6000";  ///< AMD Ryzen 6000 series identifier (Rembrandt)
         constexpr char const *KAMD_RYZEN_7000_IDENTIFIER = "7000";  ///< AMD Ryzen 7000 series identifier
 
         // GPU detection strings
-        constexpr char const *KMICROSOFT_GPU_IDENTIFIER = "Microsoft"; ///< Microsoft GPU driver identifier
-        constexpr char const *KBASIC_GPU_IDENTIFIER     = "Basic";     ///< Basic render driver identifier
-        constexpr char const *KINTEL_GPU_IDENTIFIER     = "Intel";     ///< Intel integrated graphics identifier
+        constexpr char const *KMICROSOFT_GPU_IDENTIFIER  = "Microsoft"; ///< Microsoft GPU driver identifier
+        constexpr char const *KBASIC_GPU_IDENTIFIER      = "Basic";     ///< Basic render driver identifier
+        constexpr char const *KINTEL_GPU_IDENTIFIER      = "Intel";     ///< Intel integrated graphics identifier
+        constexpr char const *KNVIDIA_GPU_IDENTIFIER     = "NVIDIA";    ///< NVIDIA GPU identifier
+        constexpr char const *KAMD_GPU_IDENTIFIER        = "AMD";       ///< AMD GPU identifier (general)
+        constexpr char const *KAMD_RADEON_GPU_IDENTIFIER = "Radeon";    ///< AMD Radeon GPU identifier
 
         // Old CPU family identifiers
-        constexpr char const *KOLD_CPU_PENTIUM  = "Pentium";   ///< Intel Pentium series identifier
-        constexpr char const *KOLD_CPU_CELERON  = "Celeron";   ///< Intel Celeron series identifier
-        constexpr char const *KOLD_CPU_ATOM     = "Atom";      ///< Intel Atom series identifier
-        constexpr char const *KOLD_CPU_ATHLON64 = "Athlon 64"; ///< AMD Athlon 64 series identifier
-        constexpr char const *KOLD_CPU_PHENOM   = "Phenom";    ///< AMD Phenom series identifier
-        constexpr char const *KOLD_CPU_SEMPRON  = "Sempron";   ///< AMD Sempron series identifier
+        constexpr char const *KOLD_CPU_PENTIUM         = "Pentium";   ///< Intel Pentium series identifier
+        constexpr char const *KOLD_CPU_CELERON         = "Celeron";   ///< Intel Celeron series identifier
+        constexpr char const *KOLD_CPU_ATOM            = "Atom";      ///< Intel Atom series identifier
+        constexpr char const *KOLD_CPU_ATHLON64        = "Athlon 64"; ///< AMD Athlon 64 series identifier
+        constexpr char const *KOLD_CPU_PHENOM          = "Phenom";    ///< AMD Phenom series identifier
+        constexpr char const *KOLD_CPU_SEMPRON         = "Sempron";   ///< AMD Sempron series identifier
+        constexpr char const *KAMD_FX_IDENTIFIER       = "FX-";       ///< AMD FX series identifier
+        constexpr char const *KAMD_A_SERIES_IDENTIFIER = "A";         ///< AMD A-series APU identifier (e.g., A6, A10)
       }
 
       /**
@@ -220,6 +257,15 @@ namespace Lumex
          */
         uint32_t cpuGeneration;
       };
+
+      /**
+       * @brief Module identifier for logging and debugging purposes
+       *
+       * Static constant string used to identify this module in log outputs,
+       * error messages, and debugging information. Helps track the source
+       * of hardware detection operations in complex applications.
+       */
+      static constexpr char const *KMODULE_NAME = "HardwareCapabilities";
 
       /**
        * @brief Hardware detection and capability assessment utility class
@@ -373,16 +419,6 @@ namespace Lumex
          * @endcode
          */
         static void applyOptimalRenderingSettings();
-
-      private:
-        /**
-         * @brief Module identifier for logging and debugging purposes
-         *
-         * Static constant string used to identify this module in log outputs,
-         * error messages, and debugging information. Helps track the source
-         * of hardware detection operations in complex applications.
-         */
-        static constexpr char const *KMODULE_NAME = "HardwareCapabilities";
 
         /**
          * @brief Estimates CPU generation year based on processor model name analysis
