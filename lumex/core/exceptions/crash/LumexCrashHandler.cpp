@@ -1,16 +1,18 @@
 #define LUMEX_IMPLEMENTATION
 #include <cstring>
-#include <fstream>
 #include <iostream>
 
 #include "lumex/core/environment/LumexEnvironment"
 #include "lumex/core/filesystem/LumexFilesystem"
 #include "lumex/core/filesystem/LumexFilesystem.hpp"
 #include "lumex/core/time/LumexTime"
-#include "lumex/core/utility/LumexUtility"
 
 #include "DefaultPaths.hpp"
 #include "LumexCrashHandler.hpp"
+
+#if LUMEX_OS_UNIX
+  #include <fstream> // used in _generateCoreDump()
+#endif
 
 LUMEX_PUBLIC_API
 LumexCrashHandler &
@@ -22,37 +24,48 @@ LumexCrashHandler::instance()
 
 LUMEX_PUBLIC_API
 void
-LumexCrashHandler::initialize()
+LumexCrashHandler::initialize(LUMEX_ATTRIBUTE_MAYBE_UNUSED std::string const &appName)
 {
   try
   {
 #if LUMEX_OS_UNIX
-    // Check if we're running in AppImage mode
-    std::string appImageMode       = LumexEnvironment::get("LUMEX_APPIMAGE_MODE").value;
-    std::string externalCrashesDir = LumexEnvironment::get("LUMEX_EXTERNAL_CRASHES_DIR").value;
-
-    if(!appImageMode.empty() && appImageMode == "1" && !externalCrashesDir.empty())
+    std::string homeDir = LumexEnvironment::get("HOME").value;
+    if(homeDir.empty())
     {
-      // AppImage mode - use external crashes directory
-      Lumex::Path crashesDir(externalCrashesDir);
-      Lumex::Filesystem::create_directory(crashesDir);
+      std::cerr << "Error: HOME environment variable not set, cannot "
+                   "determine crashes directory.\n";
+      return; // Cannot initialize crash handler without HOME
+    }
+
+    Lumex::Path crashesDir;
+    // Check for the standard AppImage environment variable to detect if running as an AppImage.
+    std::string appImagePath = LumexEnvironment::get("APPIMAGE").value;
+
+    if(!appImagePath.empty())
+    {
+      // Running in AppImage mode - store crash dumps in a standard user data directory.
+      // Prioritize XDG_DATA_HOME as per XDG Base Directory Specification,
+      // otherwise fallback to ~/.local/share.
+      std::string xdgDataHome = LumexEnvironment::get("XDG_DATA_HOME").value;
+      if(!xdgDataHome.empty())
+      {
+        crashesDir = Lumex::Path(xdgDataHome) / Lumex::Path(appName) / Lumex::Path("crashes");
+      }
+      else
+      {
+        crashesDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share") / Lumex::Path(appName)
+                     / Lumex::Path("crashes");
+      }
       std::cout << "Creating crash dump directory (AppImage mode): " << crashesDir << "\n";
     }
     else
     {
-      // Default behavior for non-AppImage: use user's local data directory
-      std::string homeDir = LumexEnvironment::get("HOME").value;
-      if(homeDir.empty())
-      {
-        std::cerr << "Error: HOME environment variable not set, cannot "
-                     "determine crashes directory.\n";
-        return; // Cannot initialize crash handler without HOME
-      }
-      Lumex::Path crashesDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share")
-                               / Lumex::Path("LumReportViewer") / Lumex::Path("crashes");
-      Lumex::Filesystem::create_directory(crashesDir);
+      // Default behavior for non-AppImage: use user's local data directory.
+      crashesDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share") / Lumex::Path(appName)
+                   / Lumex::Path("crashes");
       std::cout << "Creating crash dump directory: " << crashesDir << "\n";
     }
+    Lumex::Filesystem::create_directory(crashesDir);
 #else
     // Create dump directory if it doesn't exist
     auto exePath = Lumex::Filesystem::LumexFilesystem::get_exe_path();
@@ -118,11 +131,11 @@ LumexCrashHandler::_generateDumpFilename(std::string const &prefix)
     if(homeDir.empty())
     {
       // Fallback for _generateDumpFilename, as initialize() should have already handled this
-      dir = Lumex::Filesystem::temp_directory_path().value() / Lumex::Path("LumReportViewer") / Lumex::Path("crashes");
+      dir = Lumex::Filesystem::temp_directory_path().value() / Lumex::Path(appName) / Lumex::Path("crashes");
     }
     else
     {
-      dir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share") / Lumex::Path("LumReportViewer")
+      dir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share") / Lumex::Path(appName)
             / Lumex::Path("crashes");
     }
   }
@@ -148,7 +161,7 @@ LumexCrashHandler::_generateDumpFilename(std::string const &prefix)
 #if LUMEX_OS_WINDOWS
 LUMEX_PUBLIC_API
 LONG WINAPI
-LumexCrashHandler::_WindowsCrashHandler(PEXCEPTION_POINTERS pExInfo)
+LumexCrashHandler::_onWindowsCrashHandler(PEXCEPTION_POINTERS pExInfo)
 {
   std::clog << "Windows crash handler called.\n";
   std::string filename(_generateDumpFilename(KDEFAULT_MINIDUMP_PREFIX));

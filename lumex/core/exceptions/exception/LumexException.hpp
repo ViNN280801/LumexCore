@@ -39,7 +39,8 @@ namespace Lumex
         /**
          * @brief Write an error to the standard error stream by the following format:
          *        [exception_name] -> custom message
-         *        Uses demangled exception name to avoid names like "NSt6vectorIiSaIiEEE" -> "std::vector<int, std::allocator<int>>"
+         *        Uses demangled exception name to avoid names like "NSt6vectorIiSaIiEEE" -> "std::vector<int,
+         * std::allocator<int>>"
          * @example
          * [LumexException] -> Failed to open file
          */
@@ -52,7 +53,7 @@ namespace Lumex
         void to_crash_report() const;
 
       private:
-        std::string m_message; ///< The custom error message to be displayed.
+        std::string m_message;        ///< The custom error message to be displayed.
         LumexStacktrace m_stacktrace; ///< The stack trace of the error.
       };
 #ifdef _WIN32
@@ -82,7 +83,7 @@ using LumexBaseException = Lumex::Core::Exceptions::LumexBaseException;
 // Example:
 // [LumexException] -> Failed to open file
 #include "lumex/core/string/LumexString"
-#define START_THROW_EXCEPTION(exception_name, msg) \
+#define LUMEX_THROW_EXCEPTION(exception_name, msg) \
     throw exception_name(stringify(lumDemangle(exception_name), ": ", msg));
 
 // 3. Handle the exception.

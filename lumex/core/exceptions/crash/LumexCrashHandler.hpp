@@ -53,7 +53,7 @@ namespace Lumex
            *
            * Creates the crash dump directory and sets up platform-specific crash handlers.
            */
-          void initialize();
+          void initialize(LUMEX_ATTRIBUTE_MAYBE_UNUSED std::string const &appName);
 
 #if LUMEX_OS_WINDOWS
           /**
@@ -61,7 +61,7 @@ namespace Lumex
            * @param pExInfo Pointer to exception information.
            * @return Execution disposition (always `EXCEPTION_EXECUTE_HANDLER`).
            */
-          static LONG WINAPI _WindowsCrashHandler(PEXCEPTION_POINTERS pExInfo);
+          static LONG WINAPI _onWindowsCrashHandler(PEXCEPTION_POINTERS pExInfo);
 
           /**
            * @brief Wrapper for the Windows crash handler.
@@ -70,7 +70,7 @@ namespace Lumex
           void
           _handleSEHException(PEXCEPTION_POINTERS pExInfo)
           {
-            _WindowsCrashHandler(pExInfo);
+            _onWindowsCrashHandler(pExInfo);
           }
 #endif
 
@@ -79,6 +79,8 @@ namespace Lumex
           ~LumexCrashHandler()                                    = default;
           LumexCrashHandler(LumexCrashHandler const &)            = delete;
           LumexCrashHandler &operator=(LumexCrashHandler const &) = delete;
+          LumexCrashHandler(LumexCrashHandler &&)                 = delete;
+          LumexCrashHandler &operator=(LumexCrashHandler &&)      = delete;
 
           /**
            * @brief Generates a filename for the crash dump.
