@@ -54,9 +54,7 @@ namespace Lumex
          * @return The value associated with the key, or an empty string if not found.
          * @note Keys and sections are case-sensitive.
          */
-        virtual std::string
-        get(std::string const &section, std::string const &key) const
-          = 0;
+        virtual std::string get(std::string const &section, std::string const &key) const = 0;
 
         /**
          * @brief Set or update a setting value.
@@ -65,9 +63,7 @@ namespace Lumex
          * @param value The new value to assign.
          * @note Do nothing if the section or key does not exist.
          */
-        virtual void add(std::string const &section, std::string const &key,
-                         std::string const &value)
-          = 0;
+        virtual void add(std::string const &section, std::string const &key, std::string const &value) = 0;
 
         /**
          * @brief Remove a setting by section and key.
@@ -75,8 +71,7 @@ namespace Lumex
          * @param key The key name within the section.
          * @note Do nothing if the section or key does not exist.
          */
-        virtual void remove(std::string const &section, std::string const &key)
-          = 0;
+        virtual void remove(std::string const &section, std::string const &key) = 0;
       };
     } // namespace Settings
   } // namespace Applied

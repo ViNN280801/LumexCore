@@ -33,8 +33,7 @@ namespace Lumex
          *          - The pointer must not be manually deleted! It is managed by `std::unique_ptr`.
          *          - Ownership is non-shared, see https://en.cppreference.com/w/cpp/memory/unique_ptr.
          */
-        static std::unique_ptr<ILumexSettings>
-        create(LumexSettingsExtensions ext);
+        static std::unique_ptr<ILumexSettings> create(LumexSettingsExtensions ext);
       };
     } // namespace Settings
   } // namespace Applied

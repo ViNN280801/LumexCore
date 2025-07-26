@@ -26,16 +26,16 @@ namespace
   {
     if(value.find_first_of(";#=\"") != std::string::npos
        || (!value.empty() && (value.front() == ' ' || value.back() == ' ')))
+    {
+      std::string quoted = "\"";
+      for(char chr : value)
       {
-        std::string quoted = "\"";
-        for(char chr : value)
-          {
-            if(chr == '"' || chr == '\\') quoted += '\\';
-            quoted += chr;
-          }
-        quoted += "\"";
-        return quoted;
+        if(chr == '"' || chr == '\\') quoted += '\\';
+        quoted += chr;
       }
+      quoted += "\"";
+      return quoted;
+    }
     return value;
   }
 } // anonymous namespace
@@ -52,38 +52,32 @@ LumexSettingsINI::is_ini_valid(std::string const &path)
   // Skip BOM if present
   std::array<char, Constants::UTF8_BOM_SIZE> bom{};
   file.read(bom.data(), Constants::UTF8_BOM_SIZE);
-  if(file.gcount() != Constants::UTF8_BOM_SIZE
-     || static_cast<unsigned char>(bom[0]) != Constants::UTF8_BOM_0
+  if(file.gcount() != Constants::UTF8_BOM_SIZE || static_cast<unsigned char>(bom[0]) != Constants::UTF8_BOM_0
      || static_cast<unsigned char>(bom[1]) != Constants::UTF8_BOM_1
      || static_cast<unsigned char>(bom[2]) != Constants::UTF8_BOM_2)
-    {
-      file.seekg(0);
-    }
+  {
+    file.seekg(0);
+  }
 
   std::string line;
   std::regex section_re(Constants::REGEX_SECTION);
   std::regex kv_re(Constants::REGEX_KEY_VALUE);
 
   while(std::getline(file, line))
-    {
-      std::string trimmed_line = _trim(line);
-      if(trimmed_line.empty() || trimmed_line[0] == ';'
-         || trimmed_line[0] == '#')
-        {
-          continue;
-        }
+  {
+    std::string trimmed_line = _trim(line);
+    if(trimmed_line.empty() || trimmed_line[0] == ';' || trimmed_line[0] == '#') continue;
 
-      if(std::regex_match(trimmed_line, section_re)) continue;
+    if(std::regex_match(trimmed_line, section_re)) continue;
 
-      // Check for key-value, allowing for inline comments
-      size_t comment_pos = trimmed_line.find_first_of(";#");
-      if(comment_pos != std::string::npos)
-        trimmed_line = _trim(trimmed_line.substr(0, comment_pos));
+    // Check for key-value, allowing for inline comments
+    size_t comment_pos = trimmed_line.find_first_of(";#");
+    if(comment_pos != std::string::npos) trimmed_line = _trim(trimmed_line.substr(0, comment_pos));
 
-      if(std::regex_match(trimmed_line, kv_re)) continue;
+    if(std::regex_match(trimmed_line, kv_re)) continue;
 
-      return false; // Line is not a valid comment, section, or key-value pair
-    }
+    return false; // Line is not a valid comment, section, or key-value pair
+  }
 
   return true;
 }
@@ -98,48 +92,46 @@ LumexSettingsINI::_load_with_parser(std::string const &path)
   // Skip BOM if present
   std::array<char, Constants::UTF8_BOM_SIZE> bom{};
   file.read(bom.data(), Constants::UTF8_BOM_SIZE);
-  if(file.gcount() != Constants::UTF8_BOM_SIZE
-     || static_cast<unsigned char>(bom[0]) != Constants::UTF8_BOM_0
+  if(file.gcount() != Constants::UTF8_BOM_SIZE || static_cast<unsigned char>(bom[0]) != Constants::UTF8_BOM_0
      || static_cast<unsigned char>(bom[1]) != Constants::UTF8_BOM_1
      || static_cast<unsigned char>(bom[2]) != Constants::UTF8_BOM_2)
-    {
-      file.seekg(0);
-    }
+  {
+    file.seekg(0);
+  }
 
   m_settings.clear();
   std::string currentSection;
   std::string line;
   while(std::getline(file, line))
+  {
+    // Handle inline comments first
+    size_t comment_pos = line.find_first_of(";#");
+    if(comment_pos != std::string::npos) line = line.substr(0, comment_pos);
+
+    std::string trimmed_line = _trim(line);
+    if(trimmed_line.empty()) continue;
+
+    if(trimmed_line.front() == '[' && trimmed_line.back() == ']')
     {
-      // Handle inline comments first
-      size_t comment_pos = line.find_first_of(";#");
-      if(comment_pos != std::string::npos) line = line.substr(0, comment_pos);
-
-      std::string trimmed_line = _trim(line);
-      if(trimmed_line.empty()) continue;
-
-      if(trimmed_line.front() == '[' && trimmed_line.back() == ']')
-        {
-          currentSection
-            = _trim(trimmed_line.substr(1, trimmed_line.size() - 2));
-          continue;
-        }
-
-      auto eqPos = trimmed_line.find('=');
-      if(eqPos == std::string::npos) continue;
-
-      std::string key   = _trim(trimmed_line.substr(0, eqPos));
-      std::string value = _trim(trimmed_line.substr(eqPos + 1));
-
-      // Handle quoted values
-      if(value.size() >= 2 && value.front() == '"' && value.back() == '"')
-        {
-          value = value.substr(1, value.size() - 2);
-          // A more advanced parser would un-escape characters like \\ and \" here
-        }
-
-      if(!key.empty()) m_settings[currentSection][key] = value;
+      currentSection = _trim(trimmed_line.substr(1, trimmed_line.size() - 2));
+      continue;
     }
+
+    auto eqPos = trimmed_line.find('=');
+    if(eqPos == std::string::npos) continue;
+
+    std::string key   = _trim(trimmed_line.substr(0, eqPos));
+    std::string value = _trim(trimmed_line.substr(eqPos + 1));
+
+    // Handle quoted values
+    if(value.size() >= 2 && value.front() == '"' && value.back() == '"')
+    {
+      value = value.substr(1, value.size() - 2);
+      // A more advanced parser would un-escape characters like \\ and \" here
+    }
+
+    if(!key.empty()) m_settings[currentSection][key] = value;
+  }
   return true; // Return true even if empty, load was successful
 }
 
@@ -148,27 +140,22 @@ bool
 LumexSettingsINI::_save_with_parser(std::string const &path) const
 {
   auto parent = Lumex::Path(path).parent_path();
-  if(!parent.empty() && !Lumex::Filesystem::exists(parent))
-    Lumex::Filesystem::create_directories(parent);
+  if(!parent.empty() && !Lumex::Filesystem::exists(parent)) Lumex::Filesystem::create_directories(parent);
 
   std::ofstream file(path.c_str());
   if(!file.is_open()) return false;
 
   bool firstSection = true;
   for(auto const &secPair : m_settings)
-    {
-      if(!firstSection && !secPair.second.empty()) file << "\n";
+  {
+    if(!firstSection && !secPair.second.empty()) file << "\n";
 
-      if(!secPair.first.empty()) file << "[" << secPair.first << "]\n";
+    if(!secPair.first.empty()) file << "[" << secPair.first << "]\n";
 
-      for(auto const &kvEntry : secPair.second)
-        {
-          file << kvEntry.first << "=" << _quote_if_needed(kvEntry.second)
-               << "\n";
-        }
+    for(auto const &kvEntry : secPair.second) file << kvEntry.first << "=" << _quote_if_needed(kvEntry.second) << "\n";
 
-      if(!secPair.second.empty()) firstSection = false;
-    }
+    if(!secPair.second.empty()) firstSection = false;
+  }
   file.close();
   return file.good();
 }
@@ -205,8 +192,7 @@ LumexSettingsINI::get(std::string const &section, std::string const &key) const
 
 LUMEX_PUBLIC_API
 void
-LumexSettingsINI::add(std::string const &section, std::string const &key,
-                      std::string const &value)
+LumexSettingsINI::add(std::string const &section, std::string const &key, std::string const &value)
 {
   if(section.empty() || key.empty() || value.empty()) return;
   m_settings[section][key] = value;

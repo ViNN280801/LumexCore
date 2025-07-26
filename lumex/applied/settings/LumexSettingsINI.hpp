@@ -15,12 +15,12 @@ namespace Lumex
     {
       namespace Constants
       {
-        static constexpr char const *INI_FILE_EXTENSION = ".ini";                     ///< INI file extension.
-        static constexpr char const *REGEX_SECTION = R"(^\s*\[([^\]]+)\]\s*$)";       ///< Regex for section headers.
-        static constexpr char const *REGEX_KEY_VALUE = R"(^\s*([^=\s]+)\s*=\s*(.*))"; ///< Regex for key-value pairs.
+        static constexpr char const *INI_FILE_EXTENSION = ".ini";                        ///< INI file extension.
+        static constexpr char const *REGEX_SECTION      = R"(^\s*\[([^\]]+)\]\s*$)";     ///< Regex for section headers.
+        static constexpr char const *REGEX_KEY_VALUE    = R"(^\s*([^=\s]+)\s*=\s*(.*))"; ///< Regex for key-value pairs.
 
         // UTF-8 Byte Order Mark (BOM) constants
-        static constexpr int UTF8_BOM_SIZE = 3;           ///< Size of the UTF-8 BOM in bytes.
+        static constexpr int UTF8_BOM_SIZE        = 3;    ///< Size of the UTF-8 BOM in bytes.
         static constexpr unsigned char UTF8_BOM_0 = 0xEF; ///< First byte of UTF-8 BOM.
         static constexpr unsigned char UTF8_BOM_1 = 0xBB; ///< Second byte of UTF-8 BOM.
         static constexpr unsigned char UTF8_BOM_2 = 0xBF; ///< Third byte of UTF-8 BOM.
@@ -77,8 +77,7 @@ namespace Lumex
          * @return The corresponding value as a std::string. If the section or key
          *         is not found, returns an empty string.
          */
-        std::string
-        get(std::string const &section, std::string const &key) const override;
+        std::string get(std::string const &section, std::string const &key) const override;
 
         /**
          * @brief Adds or updates a key-value pair in a specific section.
@@ -89,8 +88,7 @@ namespace Lumex
          * @param[in] key The name of the key.
          * @param[in] value The string value to associate with the key.
          */
-        void add(std::string const &section, std::string const &key,
-                 std::string const &value) override;
+        void add(std::string const &section, std::string const &key, std::string const &value) override;
 
         /**
          * @brief Removes a key-value pair from a section.
@@ -100,8 +98,7 @@ namespace Lumex
          * @param[in] section The name of the section.
          * @param[in] key The name of the key to remove.
          */
-        void
-        remove(std::string const &section, std::string const &key) override;
+        void remove(std::string const &section, std::string const &key) override;
 
         /**
          * @brief Performs a static check on an INI file for basic validity.
@@ -124,11 +121,9 @@ namespace Lumex
          */
 #ifdef _WIN32
   #pragma warning(push)
-  #pragma warning(disable: 4251)
+  #pragma warning(disable : 4251)
 #endif
-        std::unordered_map<std::string,
-                           std::unordered_map<std::string, std::string>>
-          m_settings;
+        std::unordered_map<std::string, std::unordered_map<std::string, std::string>> m_settings;
 #ifdef _WIN32
   #pragma warning(pop)
 #endif
