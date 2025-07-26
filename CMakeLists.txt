@@ -153,6 +153,7 @@ if(LUMEX_BUILD_TESTS)
         DEPENDS
 
         # Lumex Applied tests
+        LumexHardwareCapabilitiesTests
 
         # Lumex Core tests
         LumexBase64Tests
