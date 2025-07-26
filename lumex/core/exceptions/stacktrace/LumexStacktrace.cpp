@@ -38,7 +38,7 @@ namespace Lumex
 
         // Template specialization for capture_stacktrace
         template <>
-        LumexBasicStacktrace<std::allocator<LumexStacktraceEntry>>
+        LUMEX_PUBLIC_API LumexBasicStacktrace<std::allocator<LumexStacktraceEntry>>
         capture_stacktrace<std::allocator<LumexStacktraceEntry>>(
           size_t skip, size_t max_depth,
           std::allocator<LumexStacktraceEntry> const &alloc) noexcept
@@ -230,7 +230,7 @@ namespace Lumex
         }
 
         template <>
-        LumexBasicStacktrace<std::allocator<LumexStacktraceEntry>>
+        LUMEX_PUBLIC_API LumexBasicStacktrace<std::allocator<LumexStacktraceEntry>>
         capture_stacktrace<std::allocator<LumexStacktraceEntry>>(
           size_t skip, size_t max_depth,
           std::allocator<LumexStacktraceEntry> const &alloc) noexcept
