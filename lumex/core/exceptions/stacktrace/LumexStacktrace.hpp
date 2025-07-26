@@ -36,7 +36,7 @@
 
 // *********************************************************************** //
 
-namespace Lumex
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Core
   {
@@ -83,25 +83,20 @@ namespace Lumex
          */
         template <typename Allocator>
         Stacktrace::LumexBasicStacktrace<Allocator>
-        capture_stacktrace(size_t skip, size_t max_depth,
-                           Allocator const &alloc) noexcept;
+        capture_stacktrace(size_t skip, size_t max_depth, Allocator const &alloc) noexcept;
 
-        bool resolve_symbol_info(void *address, std::string &function_name,
-                                 std::string &source_file,
+        bool resolve_symbol_info(void *address, std::string &function_name, std::string &source_file,
                                  std::uint32_t &line_number) noexcept;
 #else
         std::string demangle_symbol(char const *mangled);
 
-        bool get_source_info_addr2line(void *address, std::string &file,
-                                       std::uint32_t &line);
+        bool get_source_info_addr2line(void *address, std::string &file, std::uint32_t &line);
 
         template <typename Allocator>
         Stacktrace::LumexBasicStacktrace<Allocator>
-        capture_stacktrace(size_t skip, size_t max_depth,
-                           Allocator const &alloc) noexcept;
+        capture_stacktrace(size_t skip, size_t max_depth, Allocator const &alloc) noexcept;
 
-        bool resolve_symbol_info(void *address, std::string &function_name,
-                                 std::string &source_file,
+        bool resolve_symbol_info(void *address, std::string &function_name, std::string &source_file,
                                  std::uint32_t &line_number) noexcept;
 #endif
       } // namespace detail
@@ -112,63 +107,49 @@ namespace Lumex
   #pragma warning(disable : 4251)
 #endif
 
-      template <typename Allocator = std::allocator<LumexStacktraceEntry>>
-      class LumexBasicStacktrace
+      template <typename Allocator = std::allocator<LumexStacktraceEntry>> class LumexBasicStacktrace
       {
         template <typename A>
-        friend LumexBasicStacktrace<A>
-        detail::capture_stacktrace(size_t, size_t, A const &) noexcept;
+        friend LumexBasicStacktrace<A> detail::capture_stacktrace(size_t, size_t, A const &) noexcept;
 
       public:
-        using value_type     = LumexStacktraceEntry;
-        using allocator_type = Allocator;
-        using size_type = typename std::allocator_traits<Allocator>::size_type;
-        using difference_type =
-          typename std::allocator_traits<Allocator>::difference_type;
-        using reference       = value_type &;
-        using const_reference = value_type const &;
-        using pointer = typename std::allocator_traits<Allocator>::pointer;
-        using const_pointer =
-          typename std::allocator_traits<Allocator>::const_pointer;
+        using value_type             = LumexStacktraceEntry;
+        using allocator_type         = Allocator;
+        using size_type              = typename std::allocator_traits<Allocator>::size_type;
+        using difference_type        = typename std::allocator_traits<Allocator>::difference_type;
+        using reference              = value_type &;
+        using const_reference        = value_type const &;
+        using pointer                = typename std::allocator_traits<Allocator>::pointer;
+        using const_pointer          = typename std::allocator_traits<Allocator>::const_pointer;
 
-        using container_type = std::vector<value_type, allocator_type>;
+        using container_type         = std::vector<value_type, allocator_type>;
 
-        using iterator       = typename container_type::const_iterator;
-        using const_iterator = typename container_type::const_iterator;
-        using reverse_iterator =
-          typename container_type::const_reverse_iterator;
-        using const_reverse_iterator =
-          typename container_type::const_reverse_iterator;
+        using iterator               = typename container_type::const_iterator;
+        using const_iterator         = typename container_type::const_iterator;
+        using reverse_iterator       = typename container_type::const_reverse_iterator;
+        using const_reverse_iterator = typename container_type::const_reverse_iterator;
 
       private:
         container_type m_entries;
 
-        explicit LumexBasicStacktrace(container_type &&entries)
-            : m_entries(std::move(entries))
-        {}
+        explicit LumexBasicStacktrace(container_type &&entries) : m_entries(std::move(entries)) {}
 
       public:
         LumexBasicStacktrace() noexcept(noexcept(container_type())) = default;
 
-        explicit LumexBasicStacktrace(allocator_type const &alloc) noexcept
-            : m_entries(alloc)
-        {}
+        explicit LumexBasicStacktrace(allocator_type const &alloc) noexcept : m_entries(alloc) {}
 
-        LumexBasicStacktrace(LumexBasicStacktrace const &)     = default;
-        LumexBasicStacktrace(LumexBasicStacktrace &&) noexcept = default;
-        LumexBasicStacktrace &operator=(LumexBasicStacktrace const &)
-          = default;
-        LumexBasicStacktrace &operator=(LumexBasicStacktrace &&) noexcept
-          = default;
-        ~LumexBasicStacktrace() = default;
+        LumexBasicStacktrace(LumexBasicStacktrace const &)                = default;
+        LumexBasicStacktrace(LumexBasicStacktrace &&) noexcept            = default;
+        LumexBasicStacktrace &operator=(LumexBasicStacktrace const &)     = default;
+        LumexBasicStacktrace &operator=(LumexBasicStacktrace &&) noexcept = default;
+        ~LumexBasicStacktrace()                                           = default;
 
         static LumexBasicStacktrace
-        current(size_type skip              = 1,
-                size_type max_depth         = static_cast<size_type>(-1),
+        current(size_type skip = 1, size_type max_depth = static_cast<size_type>(-1),
                 allocator_type const &alloc = allocator_type()) noexcept
         {
-          return detail::capture_stacktrace<Allocator>(skip + 1, max_depth,
-                                                       alloc);
+          return detail::capture_stacktrace<Allocator>(skip + 1, max_depth, alloc);
         }
 
         allocator_type
@@ -246,8 +227,7 @@ namespace Lumex
         }
 
         void
-        swap(LumexBasicStacktrace &other) noexcept(
-          noexcept(m_entries.swap(other.m_entries)))
+        swap(LumexBasicStacktrace &other) noexcept(noexcept(m_entries.swap(other.m_entries)))
         {
           m_entries.swap(other.m_entries);
         }
@@ -257,13 +237,11 @@ namespace Lumex
   #pragma warning(pop)
 #endif
 
-      using LumexStacktrace
-        = LumexBasicStacktrace<std::allocator<LumexStacktraceEntry>>;
+      using LumexStacktrace = LumexBasicStacktrace<std::allocator<LumexStacktraceEntry>>;
 
       template <typename Allocator1, typename Allocator2>
       bool
-      operator==(LumexBasicStacktrace<Allocator1> const &lhs,
-                 LumexBasicStacktrace<Allocator2> const &rhs) noexcept
+      operator==(LumexBasicStacktrace<Allocator1> const &lhs, LumexBasicStacktrace<Allocator2> const &rhs) noexcept
       {
         if(lhs.size() != rhs.size()) return false;
         return std::equal(lhs.begin(), lhs.end(), rhs.begin());
@@ -271,50 +249,42 @@ namespace Lumex
 
       template <typename Allocator1, typename Allocator2>
       bool
-      operator!=(LumexBasicStacktrace<Allocator1> const &lhs,
-                 LumexBasicStacktrace<Allocator2> const &rhs) noexcept
+      operator!=(LumexBasicStacktrace<Allocator1> const &lhs, LumexBasicStacktrace<Allocator2> const &rhs) noexcept
       {
         return !(lhs == rhs);
       }
 
       template <typename Allocator1, typename Allocator2>
       bool
-      operator<(LumexBasicStacktrace<Allocator1> const &lhs,
-                LumexBasicStacktrace<Allocator2> const &rhs) noexcept
+      operator<(LumexBasicStacktrace<Allocator1> const &lhs, LumexBasicStacktrace<Allocator2> const &rhs) noexcept
       {
-        return std::lexicographical_compare(lhs.begin(), lhs.end(),
-                                            rhs.begin(), rhs.end());
+        return std::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
       }
 
       template <typename Allocator1, typename Allocator2>
       bool
-      operator<=(LumexBasicStacktrace<Allocator1> const &lhs,
-                 LumexBasicStacktrace<Allocator2> const &rhs) noexcept
+      operator<=(LumexBasicStacktrace<Allocator1> const &lhs, LumexBasicStacktrace<Allocator2> const &rhs) noexcept
       {
         return !(rhs < lhs);
       }
 
       template <typename Allocator1, typename Allocator2>
       bool
-      operator>(LumexBasicStacktrace<Allocator1> const &lhs,
-                LumexBasicStacktrace<Allocator2> const &rhs) noexcept
+      operator>(LumexBasicStacktrace<Allocator1> const &lhs, LumexBasicStacktrace<Allocator2> const &rhs) noexcept
       {
         return rhs < lhs;
       }
 
       template <typename Allocator1, typename Allocator2>
       bool
-      operator>=(LumexBasicStacktrace<Allocator1> const &lhs,
-                 LumexBasicStacktrace<Allocator2> const &rhs) noexcept
+      operator>=(LumexBasicStacktrace<Allocator1> const &lhs, LumexBasicStacktrace<Allocator2> const &rhs) noexcept
       {
         return !(lhs < rhs);
       }
 
       template <typename Allocator>
       void
-      swap(
-        LumexBasicStacktrace<Allocator> &lhs,
-        LumexBasicStacktrace<Allocator> &rhs) noexcept(noexcept(lhs.swap(rhs)))
+      swap(LumexBasicStacktrace<Allocator> &lhs, LumexBasicStacktrace<Allocator> &rhs) noexcept(noexcept(lhs.swap(rhs)))
       {
         lhs.swap(rhs);
       }
@@ -327,40 +297,35 @@ namespace Lumex
         result.reserve(stacktrace.size() * detail::kDefaultMaxFrames);
 
         for(size_t i = 0; i < stacktrace.size(); ++i)
-          {
-            result += std::to_string(i);
-            result += "# ";
-            result += stacktrace[i].description();
-            result += '\n';
-          }
+        {
+          result += std::to_string(i);
+          result += "# ";
+          result += stacktrace[i].description();
+          result += '\n';
+        }
 
         return result;
       }
 
       template <typename CharT, typename Traits, typename Allocator>
       std::basic_ostream<CharT, Traits> &
-      operator<<(std::basic_ostream<CharT, Traits> &ostream,
-                 LumexBasicStacktrace<Allocator> const &stacktrace)
+      operator<<(std::basic_ostream<CharT, Traits> &ostream, LumexBasicStacktrace<Allocator> const &stacktrace)
       {
         return ostream << to_string(stacktrace);
       }
 
       template <typename Allocator> struct hash;
 
-      template <typename Allocator>
-      struct hash<LumexBasicStacktrace<Allocator>> {
+      template <typename Allocator> struct hash<LumexBasicStacktrace<Allocator>> {
         size_t
-        operator()(
-          LumexBasicStacktrace<Allocator> const &stacktrace) const noexcept
+        operator()(LumexBasicStacktrace<Allocator> const &stacktrace) const noexcept
         {
           size_t seed = 0;
           for(auto const &entry : stacktrace)
-            {
-              seed ^= std::hash<void *>()(entry.native_handle())
-                      + detail::kHashGoldenRatio
-                      + (seed << detail::kHashLeftShift)
-                      + (seed >> detail::kHashRightShift);
-            }
+          {
+            seed ^= std::hash<void *>()(entry.native_handle()) + detail::kHashGoldenRatio
+                    + (seed << detail::kHashLeftShift) + (seed >> detail::kHashRightShift);
+          }
           return seed;
         }
       };

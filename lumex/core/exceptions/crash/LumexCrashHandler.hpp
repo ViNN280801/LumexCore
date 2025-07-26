@@ -53,7 +53,7 @@ namespace Lumex
            *
            * Creates the crash dump directory and sets up platform-specific crash handlers.
            */
-          void initialize(LUMEX_ATTRIBUTE_MAYBE_UNUSED std::string const &appName);
+          void initialize(LUMEX_ATTRIBUTE_MAYBE_UNUSED std::string const &appName = s_defaultAppName);
 
 #if LUMEX_OS_WINDOWS
           /**
@@ -81,6 +81,9 @@ namespace Lumex
           LumexCrashHandler &operator=(LumexCrashHandler const &) = delete;
           LumexCrashHandler(LumexCrashHandler &&)                 = delete;
           LumexCrashHandler &operator=(LumexCrashHandler &&)      = delete;
+
+          static std::string s_appName; ///< The name of the application.
+          static char const *s_defaultAppName;
 
           /**
            * @brief Generates a filename for the crash dump.

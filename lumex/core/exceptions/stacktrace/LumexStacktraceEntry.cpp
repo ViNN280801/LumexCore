@@ -3,7 +3,7 @@
 #include "lumex/LumexExport.hpp"
 
 // Forward declaration for resolve_symbol_info from LumexStacktrace.hpp
-namespace Lumex
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Core
   {
@@ -11,15 +11,14 @@ namespace Lumex
     {
       namespace detail
       {
-        bool resolve_symbol_info(void *address, std::string &function_name,
-                                 std::string &source_file,
+        bool resolve_symbol_info(void *address, std::string &function_name, std::string &source_file,
                                  std::uint32_t &line_number) noexcept;
       }
     }
   }
 }
 
-namespace Lumex
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Core
   {
@@ -31,9 +30,7 @@ namespace Lumex
       {
         if(m_cache_valid || m_address == nullptr) return;
 
-        detail::resolve_symbol_info(m_address, m_cached_description,
-                                    m_cached_source_file,
-                                    m_cached_source_line);
+        detail::resolve_symbol_info(m_address, m_cached_description, m_cached_source_file, m_cached_source_line);
 
         m_cache_valid = true;
       }

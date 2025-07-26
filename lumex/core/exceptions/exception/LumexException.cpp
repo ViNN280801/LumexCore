@@ -13,9 +13,26 @@
 #include <sstream>
 
 LUMEX_PUBLIC_API
-LumexBaseException::LumexBaseException(std::string message)
+LumexBaseException::LumexBaseException(char const *message)
+    : m_message(message), m_stacktrace(LumexStacktrace::current(1))
+{}
+
+LUMEX_PUBLIC_API
+LumexBaseException::LumexBaseException(std::string const &message)
+    : m_message(message), m_stacktrace(LumexStacktrace::current(1))
+{}
+
+LUMEX_PUBLIC_API
+LumexBaseException::LumexBaseException(std::string &&message)
     : m_message(std::move(message)), m_stacktrace(LumexStacktrace::current(1))
 {}
+
+#if __cplusplus >= 201703L
+LUMEX_PUBLIC_API
+LumexBaseException::LumexBaseException(std::string_view message)
+    : m_message(message), m_stacktrace(LumexStacktrace::current(1))
+{}
+#endif
 
 LUMEX_PUBLIC_API
 void
@@ -67,4 +84,14 @@ LumexBaseException::to_crash_report() const
   std::lock_guard<std::mutex> lock(s_fileMutex);
   std::ofstream file(s_reportFile.c_str(), std::ios::app);
   file << oss.str();
+}
+
+LUMEX_PUBLIC_API
+LUMEX_ATTRIBUTE_NOINLINE
+LumexStacktrace
+LumexException_GetStackTraceTrampoline(int skip_frames)
+{
+  // This function acts as a trampoline to get a consistent stack trace.
+  // It skips its own frame (the trampoline) and then adjusts for the requested skip.
+  return LumexStacktrace::current(skip_frames + 1); // +1 to skip this trampoline function itself
 }

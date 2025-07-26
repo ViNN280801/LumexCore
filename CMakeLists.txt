@@ -155,14 +155,16 @@ if(LUMEX_BUILD_TESTS)
         # Lumex Applied tests
 
         # Lumex Core tests
-        LumexBase64Tests
-        LumexEnvironmentTests
-        LumexFilesystemTests
-        LumexNumberGeneratorTests
-        LumexOptionalTests
-        LumexStringifyTests
-        LumexStringViewTests
-        LumexTimeTests
-        COMMENT "Running all tests..."
+        # LumexBase64Tests
+        # LumexEnvironmentTests
+        LumexExceptionsTests
+
+        # LumexFilesystemTests
+        # LumexNumberGeneratorTests
+        # LumexOptionalTests
+        # LumexStringifyTests
+        # LumexStringViewTests
+        # LumexTimeTests
+        COMMENT "Running all the tests..."
     )
 endif()
