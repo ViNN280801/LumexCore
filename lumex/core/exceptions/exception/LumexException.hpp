@@ -9,7 +9,11 @@
 // ====================== Lumex Base Exception ====================== //
 // ================================================================== //
 
-namespace Lumex
+#if __cplusplus >= 201703L
+  #include <string_view>
+#endif
+
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Core
   {
@@ -23,7 +27,13 @@ namespace Lumex
       class LUMEX_API LumexBaseException : public std::exception
       {
       public:
-        LumexBaseException(std::string message);
+        LumexBaseException(char const *message);
+        LumexBaseException(std::string const &message);
+        LumexBaseException(std::string &&message);
+
+#if __cplusplus >= 201703L
+        LumexBaseException(std::string_view message);
+#endif
 
         char const *
         what() const noexcept override
@@ -63,6 +73,9 @@ namespace Lumex
   } // namespace Core
 } // namespace Lumex
 
+// Declare the trampoline function
+LUMEX_PUBLIC_API LUMEX_ATTRIBUTE_NOINLINE LumexStacktrace LumexException_GetStackTraceTrampoline(int skip_frames);
+
 using LumexBaseException = Lumex::Core::Exceptions::LumexBaseException;
 
 // ================================================================== //
@@ -70,11 +83,13 @@ using LumexBaseException = Lumex::Core::Exceptions::LumexBaseException;
 // ================================================================== //
 
 // 1 option. Define the exception class.
-#define LUMEX_DEFINE_EXCEPTION(exception_name, inherit_from)                       \
-    class exception_name : public inherit_from                                     \
-    {                                                                              \
-    public:                                                                        \
-        exception_name(std::string_view message) : inherit_from(message.data()) {} \
+#define LUMEX_DEFINE_EXCEPTION(exception_name, inherit_from)                        \
+    class exception_name : public inherit_from                                      \
+    {                                                                               \
+    public:                                                                         \
+        exception_name(char const *message) : inherit_from(message) {}              \
+        exception_name(std::string const &message) : inherit_from(message) {}       \
+        exception_name(std::string &&message) : inherit_from(std::move(message)) {} \
     };
 
 // 2 option. Throw the exception.
@@ -102,10 +117,12 @@ using LumexBaseException = Lumex::Core::Exceptions::LumexBaseException;
     catch (std::exception const &ex)                                              \
     {                                                                             \
         std::cerr << "[std::exception] " << ex.what() << '\n';                    \
+        LumexBaseException(ex.what()).to_stderr();                                \
+        LumexBaseException(ex.what()).to_crash_report();                          \
     }                                                                             \
     catch (...)                                                                   \
     {                                                                             \
-        std::cerr << "[Unknown exception]" << '\n';                               \
+        std::cerr << "[Unknown exception]\n";                                     \
     }
 
 // ================================================================== //

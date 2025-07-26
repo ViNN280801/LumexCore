@@ -14,6 +14,9 @@
   #include <fstream> // used in _generateCoreDump()
 #endif
 
+LUMEX_PUBLIC_API char const *LumexCrashHandler::s_defaultAppName = "UnknownApp";
+LUMEX_PUBLIC_API std::string LumexCrashHandler::s_appName        = LumexCrashHandler::s_defaultAppName;
+
 LUMEX_PUBLIC_API
 LumexCrashHandler &
 LumexCrashHandler::instance()
@@ -26,6 +29,8 @@ LUMEX_PUBLIC_API
 void
 LumexCrashHandler::initialize(LUMEX_ATTRIBUTE_MAYBE_UNUSED std::string const &appName)
 {
+  s_appName = appName.empty() ? s_defaultAppName : appName;
+
   try
   {
 #if LUMEX_OS_UNIX
@@ -49,11 +54,12 @@ LumexCrashHandler::initialize(LUMEX_ATTRIBUTE_MAYBE_UNUSED std::string const &ap
       std::string xdgDataHome = LumexEnvironment::get("XDG_DATA_HOME").value;
       if(!xdgDataHome.empty())
       {
-        crashesDir = Lumex::Path(xdgDataHome) / Lumex::Path(appName) / Lumex::Path("crashes");
+        crashesDir = Lumex::Path(xdgDataHome) / Lumex::Path(s_appName) / Lumex::Path("crashes"); // Use s_appName
       }
       else
       {
-        crashesDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share") / Lumex::Path(appName)
+        crashesDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share")
+                     / Lumex::Path(s_appName) // Use s_appName
                      / Lumex::Path("crashes");
       }
       std::cout << "Creating crash dump directory (AppImage mode): " << crashesDir << "\n";
@@ -61,7 +67,8 @@ LumexCrashHandler::initialize(LUMEX_ATTRIBUTE_MAYBE_UNUSED std::string const &ap
     else
     {
       // Default behavior for non-AppImage: use user's local data directory.
-      crashesDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share") / Lumex::Path(appName)
+      crashesDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share")
+                   / Lumex::Path(s_appName) // Use s_appName
                    / Lumex::Path("crashes");
       std::cout << "Creating crash dump directory: " << crashesDir << "\n";
     }
@@ -131,12 +138,21 @@ LumexCrashHandler::_generateDumpFilename(std::string const &prefix)
     if(homeDir.empty())
     {
       // Fallback for _generateDumpFilename, as initialize() should have already handled this
-      dir = Lumex::Filesystem::temp_directory_path().value() / Lumex::Path(appName) / Lumex::Path("crashes");
+      // If homeDir is empty, use temp_directory_path as a last resort,
+      // and include s_appName to avoid generic paths.
+      dir = Lumex::Filesystem::temp_directory_path().value() / Lumex::Path(s_appName) / Lumex::Path("crashes");
     }
     else
     {
-      dir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share") / Lumex::Path(appName)
-            / Lumex::Path("crashes");
+      // Prioritize XDG_DATA_HOME if set, otherwise fallback to ~/.local/share.
+      std::string xdgDataHome = LumexEnvironment::get("XDG_DATA_HOME").value;
+      if(!xdgDataHome.empty()) { dir = Lumex::Path(xdgDataHome) / Lumex::Path(s_appName) / Lumex::Path("crashes"); }
+      else
+      {
+        dir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share")
+              / Lumex::Path(s_appName) // Use s_appName
+              / Lumex::Path("crashes");
+      }
     }
   }
 #else

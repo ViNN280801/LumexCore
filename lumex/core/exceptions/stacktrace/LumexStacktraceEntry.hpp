@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <string>
 
-namespace Lumex
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Core
   {
@@ -57,9 +57,7 @@ namespace Lumex
         /**
          * @brief Default constructor - creates an empty/invalid entry
          */
-        LumexStacktraceEntry() noexcept
-            : m_address(nullptr), m_cached_source_line(0), m_cache_valid(false)
-        {}
+        LumexStacktraceEntry() noexcept : m_address(nullptr), m_cached_source_line(0), m_cache_valid(false) {}
 
         /**
          * @brief Constructs an entry from a native address
@@ -87,13 +85,13 @@ namespace Lumex
         operator=(LumexStacktraceEntry const &other) noexcept
         {
           if(this != &other)
-            {
-              m_address            = other.m_address;
-              m_cached_description = other.m_cached_description;
-              m_cached_source_file = other.m_cached_source_file;
-              m_cached_source_line = other.m_cached_source_line;
-              m_cache_valid        = other.m_cache_valid;
-            }
+          {
+            m_address            = other.m_address;
+            m_cached_description = other.m_cached_description;
+            m_cached_source_file = other.m_cached_source_file;
+            m_cached_source_line = other.m_cached_source_line;
+            m_cache_valid        = other.m_cache_valid;
+          }
           return *this;
         }
 
@@ -155,43 +153,37 @@ namespace Lumex
          * @brief Comparison operators
          */
         friend bool
-        operator==(LumexStacktraceEntry const &lhs,
-                   LumexStacktraceEntry const &rhs) noexcept
+        operator==(LumexStacktraceEntry const &lhs, LumexStacktraceEntry const &rhs) noexcept
         {
           return lhs.m_address == rhs.m_address;
         }
 
         friend bool
-        operator!=(LumexStacktraceEntry const &lhs,
-                   LumexStacktraceEntry const &rhs) noexcept
+        operator!=(LumexStacktraceEntry const &lhs, LumexStacktraceEntry const &rhs) noexcept
         {
           return !(lhs == rhs);
         }
 
         friend bool
-        operator<(LumexStacktraceEntry const &lhs,
-                  LumexStacktraceEntry const &rhs) noexcept
+        operator<(LumexStacktraceEntry const &lhs, LumexStacktraceEntry const &rhs) noexcept
         {
           return lhs.m_address < rhs.m_address;
         }
 
         friend bool
-        operator<=(LumexStacktraceEntry const &lhs,
-                   LumexStacktraceEntry const &rhs) noexcept
+        operator<=(LumexStacktraceEntry const &lhs, LumexStacktraceEntry const &rhs) noexcept
         {
           return !(rhs < lhs);
         }
 
         friend bool
-        operator>(LumexStacktraceEntry const &lhs,
-                  LumexStacktraceEntry const &rhs) noexcept
+        operator>(LumexStacktraceEntry const &lhs, LumexStacktraceEntry const &rhs) noexcept
         {
           return rhs < lhs;
         }
 
         friend bool
-        operator>=(LumexStacktraceEntry const &lhs,
-                   LumexStacktraceEntry const &rhs) noexcept
+        operator>=(LumexStacktraceEntry const &lhs, LumexStacktraceEntry const &rhs) noexcept
         {
           return !(lhs < rhs);
         }
@@ -213,8 +205,7 @@ namespace Lumex
        */
       template <typename CharT, typename Traits>
       std::basic_ostream<CharT, Traits> &
-      operator<<(std::basic_ostream<CharT, Traits> &oss,
-                 LumexStacktraceEntry const &entry)
+      operator<<(std::basic_ostream<CharT, Traits> &oss, LumexStacktraceEntry const &entry)
       {
         return oss << entry.description();
       }
@@ -228,8 +219,7 @@ namespace std
 {
   template <> struct hash<Lumex::Core::Stacktrace::LumexStacktraceEntry> {
     size_t
-    operator()(Lumex::Core::Stacktrace::LumexStacktraceEntry const &entry)
-      const noexcept
+    operator()(Lumex::Core::Stacktrace::LumexStacktraceEntry const &entry) const noexcept
     {
       return std::hash<void *>()(entry.native_handle());
     }
