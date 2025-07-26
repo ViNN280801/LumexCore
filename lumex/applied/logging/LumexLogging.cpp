@@ -19,6 +19,7 @@
 LUMEX_PUBLIC_API std::mutex LumexLogging::s_mutex;
 LUMEX_PUBLIC_API Lumex::Path LumexLogging::s_logsDirectory;
 LUMEX_PUBLIC_API std::string LumexLogging::s_launchTimestamp;
+LUMEX_PUBLIC_API std::string LumexLogging::s_appName;
 
 LUMEX_PUBLIC_API
 void
@@ -85,18 +86,6 @@ LumexLogging::getLogsDirectory()
   try
   {
 #if LUMEX_OS_UNIX
-    // Check if we're running in AppImage mode
-    std::string appImageMode    = LumexEnvironment::get("LUMEX_APPIMAGE_MODE").value;
-    std::string externalLogsDir = LumexEnvironment::get("LUMEX_EXTERNAL_LOGS_DIR").value;
-
-    if(!appImageMode.empty() && appImageMode == "1" && !externalLogsDir.empty())
-    {
-      Lumex::Path logsDir(externalLogsDir);
-      Lumex::Filesystem::create_directory(logsDir);
-      return logsDir;
-    }
-
-    // Default behavior for non-AppImage: use user's local data directory
     std::string homeDir = LumexEnvironment::get("HOME").value;
     if(homeDir.empty())
     {
@@ -107,10 +96,48 @@ LumexLogging::getLogsDirectory()
         Lumex::Filesystem::temp_directory_path().value()); // Fallback, but likely to fail permissions
     }
 
-    Lumex::Path userLogsDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share")
-                              / Lumex::Path("LumReportViewer") / Lumex::Path("logs");
-    Lumex::Filesystem::create_directory(userLogsDir);
-    return userLogsDir;
+    Lumex::Path logsDir;
+    // Check for the standard AppImage environment variable to detect if running as an AppImage.
+    std::string appImagePath = LumexEnvironment::get("APPIMAGE").value;
+
+    if(!appImagePath.empty())
+    {
+      // Running in AppImage mode - store logs in a standard user data directory.
+      // Prioritize XDG_DATA_HOME as per XDG Base Directory Specification,
+      // otherwise fallback to ~/.local/share.
+      std::string xdgDataHome = LumexEnvironment::get("XDG_DATA_HOME").value;
+      if(!xdgDataHome.empty())
+      {
+        if(s_appName.empty())
+          logsDir = Lumex::Path(xdgDataHome) / Lumex::Path("logs");
+        else
+          logsDir = Lumex::Path(xdgDataHome) / Lumex::Path(s_appName) / Lumex::Path("logs");
+      }
+      else if(s_appName.empty())
+      {
+        logsDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share") / Lumex::Path("logs");
+      }
+      else
+      {
+        logsDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share") / Lumex::Path(s_appName)
+                  / Lumex::Path("logs");
+      }
+    }
+    else
+    {
+      // Default behavior for non-AppImage: use user's local data directory.
+      if(s_appName.empty())
+      {
+        logsDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share") / Lumex::Path("logs");
+      }
+      else
+      {
+        logsDir = Lumex::Path(homeDir) / Lumex::Path(".local") / Lumex::Path("share") / Lumex::Path(s_appName)
+                  / Lumex::Path("logs");
+      }
+    }
+    Lumex::Filesystem::create_directory(logsDir);
+    return logsDir;
 #else
     auto exePath = Lumex::Filesystem::get_exe_path();
     auto logsDir = exePath.parent_path() / Lumex::Path("logs");
@@ -123,6 +150,13 @@ LumexLogging::getLogsDirectory()
     std::cerr << "Error initializing logs directory: " << e.what() << "\n";
     return Lumex::Filesystem::current_path().value_or(Lumex::Filesystem::temp_directory_path().value());
   }
+}
+
+LUMEX_PUBLIC_API
+void
+LumexLogging::setAppName(std::string const &appName)
+{
+  s_appName = appName;
 }
 
 LUMEX_PUBLIC_API
