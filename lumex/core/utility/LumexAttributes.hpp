@@ -31,6 +31,15 @@
   #define LUMEX_ATTRIBUTE_NORETURN
 #endif
 
+// [[noinline]]
+#if defined(__GNUC__) || defined(__clang__)
+  #define LUMEX_ATTRIBUTE_NOINLINE __attribute__((noinline))
+#elif defined(_MSC_VER)
+  #define LUMEX_ATTRIBUTE_NOINLINE __declspec(noinline)
+#else
+  #define LUMEX_ATTRIBUTE_NOINLINE
+#endif
+
 // [[carries_dependency]]
 #if __cplusplus >= 201103L
   #define LUMEX_ATTRIBUTE_CARRIES_DEPENDENCY [[carries_dependency]]
