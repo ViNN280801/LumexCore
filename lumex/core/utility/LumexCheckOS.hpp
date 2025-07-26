@@ -8,7 +8,8 @@
  *          Compatible with MSVC, GCC, and Clang compilers
  *
  * Info get from:
- * @link stackoverflow: https://stackoverflow.com/questions/5919996/how-to-detect-reliably-mac-os-x-ios-linux-windows-in-c-preprocessor
+ * @link stackoverflow:
+ * https://stackoverflow.com/questions/5919996/how-to-detect-reliably-mac-os-x-ios-linux-windows-in-c-preprocessor
  * @link Compiler macros: https://sourceforge.net/p/predef/wiki/Compilers/
  * @link Operating System macros: https://sourceforge.net/p/predef/wiki/OperatingSystems/
  */
@@ -135,8 +136,7 @@
 #endif
 
 // Architecture Helpers
-#if defined(_M_X64) || defined(__x86_64__) || defined(__x86_64)               \
-  || defined(__amd64__) || defined(__amd64)
+#if defined(_M_X64) || defined(__x86_64__) || defined(__x86_64) || defined(__amd64__) || defined(__amd64)
   #define LUMEX_ARCH_X64 1
   #define LUMEX_ARCH_64BIT 1
 #elif defined(_M_IX86) || defined(__i386__) || defined(__i386) || defined(i386)

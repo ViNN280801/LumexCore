@@ -34,14 +34,14 @@
   #include <string>
   #include <typeinfo>
 
-  #define lumDemangle(type) \
-    ([&]() -> std::string { \
-      std::string name = typeid(type).name(); \
-      int status = 0; \
+  #define lumDemangle(type)                                                           \
+    ([&]() -> std::string {                                                           \
+      std::string name = typeid(type).name();                                         \
+      int status = 0;                                                                 \
       char *demangled = abi::__cxa_demangle(name.c_str(), nullptr, nullptr, &status); \
-      std::string result = (status == 0 && demangled) ? demangled : name; \
-      free(demangled); \
-      return result; \
+      std::string result = (status == 0 && demangled) ? demangled : name;             \
+      free(demangled);                                                                \
+      return result;                                                                  \
     }())
 #else
   #include <string>
