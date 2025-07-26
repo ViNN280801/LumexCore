@@ -210,15 +210,27 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 
           int frame_count = backtrace(frames, static_cast<int>((std::min)(max_depth + skip + 1, max_frames)));
 
-          if(frame_count <= static_cast<int>(skip + 1))
+          // If we have no frames at all, return empty
+          if(frame_count <= 0)
             return LumexBasicStacktrace<std::allocator<LumexStacktraceEntry>>(alloc);
 
           using container_type = typename LumexBasicStacktrace<std::allocator<LumexStacktraceEntry>>::container_type;
           container_type entries(alloc);
-          entries.reserve(frame_count - skip - 1);
+          
+          // In Release builds, we might only get 1 frame due to optimizations
+          // In that case, include it even if skip would normally exclude it
+          int start_index = (frame_count <= 1) ? 0 : static_cast<int>(skip + 1);
+          int actual_count = std::max(0, frame_count - start_index);
+          
+          if(actual_count <= 0)
+            return LumexBasicStacktrace<std::allocator<LumexStacktraceEntry>>(alloc);
+            
+          entries.reserve(actual_count);
 
-          for(int i = skip + 1; i < frame_count; ++i)
+          for(int i = start_index; i < frame_count; ++i)
+          {
             if(frames[i]) entries.emplace_back(frames[i]);
+          }
 
           return LumexBasicStacktrace<std::allocator<LumexStacktraceEntry>>(std::move(entries));
         }
@@ -226,7 +238,7 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
         bool
         resolve_symbol_info(void *address, std::string &function_name, std::string &source_file,
                             std::uint32_t &line_number) noexcept
-        {
+        {          
           if(address == nullptr) return false;
 
           // Get symbol info using dladdr
