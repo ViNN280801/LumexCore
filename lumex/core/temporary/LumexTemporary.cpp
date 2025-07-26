@@ -2,6 +2,7 @@
 #include "LumexTemporary.hpp"
 
 #include <fstream>
+#include <random>
 #include <sstream>
 
 // Convenience using declarations
@@ -108,8 +109,8 @@ LumexTemporary::get_temp_directory_path()
   return tmp;
 #else
   // On Linux, check if running as AppImage
-  std::string appImageMode = LumexEnvironment::get("LUMEX_APPIMAGE_MODE").value;
-  if(!appImageMode.empty() && appImageMode == "1")
+  std::string appImagePath = LumexEnvironment::get("APPIMAGE").value;
+  if(!appImagePath.empty())
   {
     // If running as AppImage, use the system's default temporary directory
     auto tmp = Lumex::Filesystem::temp_directory_path().value() / "Lumex";
@@ -118,12 +119,11 @@ LumexTemporary::get_temp_directory_path()
   }
 
   // Otherwise, create a temporary directory in the user's home directory
-  // This avoids permission issues in /opt/LumReportViewer/bin
   std::string homeDir = LumexEnvironment::get("HOME").value;
 
   if(homeDir.empty()) throw std::runtime_error("User home directory environment variable not set.");
 
-  Lumex::Path userTempDir = Lumex::Path(homeDir) / ".lumreportviewer" / "Lumex";
+  Lumex::Path userTempDir = Lumex::Path(homeDir) / "Lumex";
   userTempDir += Lumex::Path::preferred_separator;
   return userTempDir;
 
@@ -134,13 +134,11 @@ LUMEX_PUBLIC_API
 std::string
 LumexTemporary::_generate_random_suffix()
 {
-  // C++11 compatible random suffix generation
-  static bool initialized = false;
-  if(!initialized)
-  {
-    std::srand(static_cast<unsigned int>(std::time(nullptr)));
-    initialized = true;
-  }
+  auto const nullHex = 0x00;
+  auto const maxHex  = 0x0F;
+
+  static thread_local std::mt19937 generator(std::random_device{}());
+  static thread_local std::uniform_int_distribution<> distribution(nullHex, maxHex); // For hex digits
 
   std::ostringstream oss;
 
@@ -155,13 +153,12 @@ LumexTemporary::_generate_random_suffix()
   oss << "_" << std::hex << getpid();
 #else
   // Fallback for other systems - use additional random component
-  oss << "_" << std::hex << (std::rand() % 65536);
+  oss << "_" << std::hex << distribution(generator); // Using new thread-safe random
 #endif
 
   // Add random component
   int const random_count = 6;
-  int const random_base  = 16;
-  for(int i = 0; i < random_count; ++i) oss << std::hex << (std::rand() % random_base);
+  for(int i = 0; i < random_count; ++i) oss << std::hex << distribution(generator);
 
   return oss.str();
 }
