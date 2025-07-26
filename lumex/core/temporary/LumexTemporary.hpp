@@ -45,7 +45,7 @@ namespace Lumex
 
       private:
         Lumex::Path m_path; ///< Path to the temporary directory.
-        bool m_valid; ///< Flag indicating if the temporary directory is valid.
+        bool m_valid;       ///< Flag indicating if the temporary directory is valid.
       };
 
       /**
@@ -104,32 +104,28 @@ namespace Lumex
          * @param path Path to directory to remove
          * @return FilesystemResult indicating success/failure
          */
-        static Lumex::FilesystemResult<void>
-        remove_temp_directory(Lumex::Path const &path);
+        static Lumex::FilesystemResult<void> remove_temp_directory(Lumex::Path const &path);
 
         /**
          * @brief Creates a temporary file with optional name prefix
          * @param name Prefix for file name (can be empty)
          * @return FilesystemResult containing TemporaryFile on success
          */
-        static Lumex::FilesystemResult<TemporaryFile>
-        create_temp_file(std::string const &name = std::string());
+        static Lumex::FilesystemResult<TemporaryFile> create_temp_file(std::string const &name = std::string());
 
         /**
          * @brief Removes a temporary file
          * @param path Path to file to remove
          * @return FilesystemResult indicating success/failure
          */
-        static Lumex::FilesystemResult<void>
-        remove_temp_file(Lumex::Path const &path);
+        static Lumex::FilesystemResult<void> remove_temp_file(Lumex::Path const &path);
 
         /**
          * @brief Generate unique temporary name with prefix
          * @param prefix Optional prefix for the name
          * @return Unique string suitable for temporary files/directories
          */
-        static std::string
-        generate_temp_name(std::string const &prefix = std::string());
+        static std::string generate_temp_name(std::string const &prefix = std::string());
 
       private:
         // Helper methods
