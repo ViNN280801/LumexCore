@@ -163,6 +163,7 @@ if(LUMEX_BUILD_TESTS)
         LumexOptionalTests
         LumexStringifyTests
         LumexStringViewTests
+        LumexTemporaryTests
         LumexTimeTests
         COMMENT "Running all the tests..."
     )
