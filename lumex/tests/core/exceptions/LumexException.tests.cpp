@@ -245,9 +245,16 @@ TEST_F(LumexExceptionTest, LumexBaseException_ToCrashReport_ThreadSafe)
   Lumex::Path report_file_path = entries[0].path();
   std::string file_content     = read_file_content(report_file_path);
 
+  std::cout << "Crash report file content:\n" << file_content << std::endl;
+  std::cout << "File size: " << file_content.size() << " bytes" << std::endl;
+
   for(int i = 0; i < num_threads; ++i)
   {
-    EXPECT_TRUE(file_content.find("Concurrent crash message " + std::to_string(i)) != std::string::npos)
+    std::string search_text = "Concurrent crash message " + std::to_string(i);
+    bool found = file_content.find(search_text) != std::string::npos;
+    std::cout << "Looking for: '" << search_text << "' - " << (found ? "FOUND" : "NOT FOUND") << std::endl;
+    
+    EXPECT_TRUE(found)
       << "Missing message from thread " << i << " in crash report.";
   }
 }

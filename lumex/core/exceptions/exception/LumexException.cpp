@@ -84,6 +84,7 @@ LumexBaseException::to_crash_report() const
   std::lock_guard<std::mutex> lock(s_fileMutex);
   std::ofstream file(s_reportFile.c_str(), std::ios::app);
   file << oss.str();
+  file.flush(); // Ensure data is written to disk immediately
 }
 
 LUMEX_PUBLIC_API
