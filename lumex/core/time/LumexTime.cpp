@@ -65,7 +65,7 @@ LumexTime::get_current_datetime(char const *format)
           std::cerr << "localtime_s failed, using 0 time\n";
           tmStruct = {};
         }
-#elif LUMEX_OS_IS_UNIX
+#elif LUMEX_OS_UNIX
       if(localtime_r(std::addressof(secs), std::addressof(tmStruct))
          == nullptr)
         {
