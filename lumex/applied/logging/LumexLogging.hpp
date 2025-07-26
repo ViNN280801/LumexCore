@@ -103,11 +103,19 @@ namespace Lumex
          */
         static Lumex::Path getLogsDirectory();
 
+        /**
+         * @brief Set the name of the application
+         * @param appName The name of the application
+         */
+        static void setAppName(std::string const &appName);
+
       private:
         static constexpr char const *KDEFAULT_LOG_FILE_NAME = "log"; ///< Default log file name.
 
         static constexpr short KLOG_WIDTH                   = 8; ///< The width of the log
                                                                  ///< level.
+
+        static std::string s_appName; ///< The name of the application, by default it would be empty.
 
 #ifdef _WIN32
   #pragma warning(push)
