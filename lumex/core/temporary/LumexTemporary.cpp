@@ -1,6 +1,7 @@
 #define LUMEX_IMPLEMENTATION
 #include "LumexTemporary.hpp"
 
+#include <atomic>
 #include <fstream>
 #include <random>
 #include <sstream>
@@ -43,9 +44,14 @@ TemporaryDirectory::operator=(TemporaryDirectory &&other) noexcept
 {
   if(this != &other)
   {
+    // Clean up current directory if valid
     if(m_valid) LumexTemporary::remove_temp_directory(m_path);
-    m_path        = std::move(other.m_path);
-    m_valid       = other.m_valid;
+
+    // Take ownership of other's path
+    m_path  = std::move(other.m_path);
+    m_valid = other.m_valid;
+
+    // Set other to invalid state
     other.m_valid = false;
   }
   return *this;
@@ -82,9 +88,14 @@ TemporaryFile::operator=(TemporaryFile &&other) noexcept
 {
   if(this != &other)
   {
+    // Clean up current file if valid
     if(m_valid) LumexTemporary::remove_temp_file(m_path);
-    m_path        = std::move(other.m_path);
-    m_valid       = other.m_valid;
+
+    // Take ownership of other's path
+    m_path  = std::move(other.m_path);
+    m_valid = other.m_valid;
+
+    // Set other to invalid state
     other.m_valid = false;
   }
   return *this;
@@ -140,6 +151,9 @@ LumexTemporary::_generate_random_suffix()
   static thread_local std::mt19937 generator(std::random_device{}());
   static thread_local std::uniform_int_distribution<> distribution(nullHex, maxHex); // For hex digits
 
+  static std::atomic<uint64_t> global_counter(0);
+  uint64_t counter_value = global_counter.fetch_add(1, std::memory_order_relaxed);
+
   std::ostringstream oss;
 
   // Add timestamp component
@@ -159,6 +173,9 @@ LumexTemporary::_generate_random_suffix()
   // Add random component
   int const random_count = 6;
   for(int i = 0; i < random_count; ++i) oss << std::hex << distribution(generator);
+
+  // Add counter value
+  oss << "_" << std::hex << counter_value;
 
   return oss.str();
 }

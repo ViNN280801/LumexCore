@@ -10,7 +10,7 @@
 
 namespace Lumex
 {
-  namespace Applied
+  namespace Core
   {
     namespace Temporary
     {
@@ -21,6 +21,7 @@ namespace Lumex
       class LUMEX_API TemporaryDirectory
       {
       public:
+        TemporaryDirectory() : m_valid(false) {}
         explicit TemporaryDirectory(Lumex::Path const &path);
         ~TemporaryDirectory();
 
@@ -55,6 +56,7 @@ namespace Lumex
       class LUMEX_API TemporaryFile
       {
       public:
+        TemporaryFile() : m_valid(false) {}
         explicit TemporaryFile(Lumex::Path const &path);
         ~TemporaryFile();
 
@@ -132,13 +134,13 @@ namespace Lumex
         static std::string _generate_random_suffix();
         static bool _ensure_temp_directory_exists(Lumex::Path const &temp_dir);
       };
-    } // namespace Applied
+    } // namespace Core
   } // namespace Temporary
 } // namespace Lumex
 
-using TemporaryFile      = Lumex::Applied::Temporary::TemporaryFile;
-using TemporaryDirectory = Lumex::Applied::Temporary::TemporaryDirectory;
+using TemporaryFile      = Lumex::Core::Temporary::TemporaryFile;
+using TemporaryDirectory = Lumex::Core::Temporary::TemporaryDirectory;
 
-using LumexTemporary     = Lumex::Applied::Temporary::LumexTemporary;
+using LumexTemporary     = Lumex::Core::Temporary::LumexTemporary;
 
 #endif // !LUMEX_TEMPORARY_HPP
