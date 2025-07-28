@@ -32,5 +32,7 @@ install(TARGETS ${LUMEX_BASE64_NAME} EXPORT ${EXPORT_TO}
 install(
     DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
     DESTINATION include/lumex/core/base64
-    FILES_MATCHING PATTERN "*.hpp"
+    FILES_MATCHING 
+        PATTERN "*.hpp"
+        PATTERN "LumexBase64"
 )

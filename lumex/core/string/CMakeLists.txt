@@ -16,5 +16,7 @@ install(TARGETS ${LUMEX_STRING_NAME} EXPORT ${EXPORT_TO})
 install(
     DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
     DESTINATION include/lumex/core/string
-    FILES_MATCHING PATTERN "*.hpp"
+    FILES_MATCHING 
+        PATTERN "*.hpp"
+        PATTERN "LumexString"
 )

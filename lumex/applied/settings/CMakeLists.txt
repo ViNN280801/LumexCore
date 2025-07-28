@@ -31,5 +31,7 @@ install(TARGETS ${LUMEX_SETTINGS_NAME} EXPORT ${EXPORT_TO}
 install(
     DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
     DESTINATION include/lumex/applied/settings
-    FILES_MATCHING PATTERN "*.hpp"
+    FILES_MATCHING 
+        PATTERN "*.hpp"
+        PATTERN "LumexSettings"
 )

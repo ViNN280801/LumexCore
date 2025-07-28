@@ -29,5 +29,7 @@ install(TARGETS ${LUMEX_TEMPORARY_NAME} EXPORT ${EXPORT_TO}
 install(
     DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
     DESTINATION include/lumex/core/temporary
-    FILES_MATCHING PATTERN "*.hpp"
+    FILES_MATCHING 
+        PATTERN "*.hpp"
+        PATTERN "LumexTemporary"
 )
