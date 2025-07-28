@@ -18,11 +18,13 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
         static constexpr char const *INI_FILE_EXTENSION = ".ini";                    ///< INI file extension.
         static constexpr char const *REGEX_SECTION      = R"(^\s*\[([^\]]+)\]\s*$)"; ///< Regex for section headers.
 
-        // FIX(Test: LumexSettingsINITest.GivenBadFormatArraysNotSupported_WhenIsIniValid_ThenReturnsFalse):
-        // The regex for key-value pairs. It supports quoted values (which can contain anything)
-        // or unquoted values (which cannot contain commas, quotes, or comment characters).
+        // FIX(Test: LumexSettingsINITest.GivenSpecialCharactersInValues_WhenSave_ThenQuotesIfNecessary):
+        // Fixed regex to properly handle quoted and unquoted values
+        // The pattern now correctly matches quoted strings (any content except quotes) or unquoted strings (no special
+        // chars)
         static constexpr char const *REGEX_KEY_VALUE
-          = R"(^\s*([^=\s]+)\s*=\s*(?:\"[^\"]*\"|[^,"#;]*)\s*(?:[#;].*)?$)"; ///< Regex for key-value pairs.
+          = R"(^\s*([^=\s]+)\s*=\s*(?:\"((?:[^\"\\]|\\.)*)\"|([^,"#;]*))\s*(?:[#;].*)?$)"; ///< Regex for key-value
+                                                                                           ///< pairs.
 
         // UTF-8 Byte Order Mark (BOM) constants
         static constexpr int UTF8_BOM_SIZE        = 3;    ///< Size of the UTF-8 BOM in bytes.

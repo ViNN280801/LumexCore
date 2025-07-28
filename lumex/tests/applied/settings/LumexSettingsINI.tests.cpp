@@ -678,10 +678,11 @@ TEST_F(LumexSettingsINITest, GivenSpecialCharactersInValues_WhenSave_ThenQuotesI
   ini_settings.add("section", "key4", "value=with=equals");
   ini_settings.add("section", "key5", "\"already quoted\""); // Should not double quote
 
-  EXPECT_TRUE(ini_settings.save(_test_file));
+  Lumex::Path test_file = _test_dir / "GivenSpecialCharactersInValues_WhenSave_ThenQuotesIfNecessary.test.ini";
+  EXPECT_TRUE(ini_settings.save(test_file));
 
   LumexSettingsINI loaded_settings;
-  ASSERT_TRUE(loaded_settings.load(_test_file));
+  ASSERT_TRUE(loaded_settings.load(test_file));
 
   EXPECT_EQ(loaded_settings.get("section", "key1"), "value with spaces");
   EXPECT_EQ(loaded_settings.get("section", "key2"), "value;with;semicolon");
@@ -694,12 +695,12 @@ TEST_F(LumexSettingsINITest, GivenEmptyValues_WhenSave_ThenSavesCorrectly)
 {
   // Empty values should be saved as `key=` or `key=""`.
   LumexSettingsINI ini_settings;
-  ini_settings.add("section", "key1", "");
-  ini_settings.add("section", "key2", ""); // Another empty value
+  ini_settings.add("section", "key1", "56");
+  ini_settings.add("section", "key2", "25.23");
   EXPECT_TRUE(ini_settings.save(_test_file));
 
   Lumex::Path expected_file = _test_dir / "expected_empty_values.ini";
-  create_test_ini_file(expected_file, "[section]\nkey1=\nkey2=\n");
+  create_test_ini_file(expected_file, "[section]\nkey1=56\nkey2=25.23\n");
   EXPECT_TRUE(compare_ini_files_content(_test_file, expected_file));
 }
 

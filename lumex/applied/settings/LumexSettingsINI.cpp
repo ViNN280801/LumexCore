@@ -24,22 +24,34 @@ namespace
   inline std::string
   _quote_if_needed(std::string const &value)
   {
-    if(value.find_first_of(";#=\"") != std::string::npos
-       || (!value.empty() && (value.front() == ' ' || value.back() == ' ')))
+    std::string result;
+    // Determine if quoting is necessary:
+    // 1. If it contains spaces or common INI delimiters (;, #, =, ,).
+    // 2. If it contains a literal double quote (needs escaping and quoting).
+    bool needs_quoting = (value.find_first_of(" ;#=,") != std::string::npos || value.find('"') != std::string::npos);
+
+    if(needs_quoting)
     {
-      std::string quoted = "\"";
-      for(char chr : value)
+      result += '"'; // Add opening quote
+      for(char c : value)
       {
-        if(chr == '"' || chr == '\\') quoted += '\\';
-        quoted += chr;
+        if(c == '"' || c == '\\')
+        { // Escape literal quotes and backslashes
+          result += '\\';
+        }
+        result += c;
       }
-      quoted += "\"";
-      return quoted;
+      result += '"'; // Add closing quote
     }
-    return value;
+    else
+    {
+      result = value; // No quoting needed, use value as-is
+    }
+    return result;
   }
 } // anonymous namespace
 
+#include <iostream>
 LUMEX_PUBLIC_API
 bool
 LumexSettingsINI::is_ini_valid(std::string const &path)
@@ -62,20 +74,26 @@ LumexSettingsINI::is_ini_valid(std::string const &path)
   std::string line;
   std::regex section_re(Constants::REGEX_SECTION);
   std::regex kv_re(Constants::REGEX_KEY_VALUE);
+  int line_number = 0;
 
   while(std::getline(file, line))
   {
+    line_number++;
     std::string trimmed_line = _trim(line);
     if(trimmed_line.empty() || trimmed_line[0] == ';' || trimmed_line[0] == '#') continue;
 
     if(std::regex_match(trimmed_line, section_re)) continue;
 
     // Check for key-value, allowing for inline comments
-    size_t comment_pos = trimmed_line.find_first_of(";#");
-    if(comment_pos != std::string::npos) trimmed_line = _trim(trimmed_line.substr(0, comment_pos));
+    // REMOVED FIX: This logic incorrectly truncated lines with ';' or '#' inside quoted values.
+    // The REGEX_KEY_VALUE already handles inline comments at the end of the line.
+    // size_t comment_pos = trimmed_line.find_first_of(";#");
+    // if(comment_pos != std::string::npos) trimmed_line = _trim(trimmed_line.substr(0, comment_pos));
 
     if(std::regex_match(trimmed_line, kv_re)) continue;
 
+    // DEBUG: Print the failing line
+    std::cout << "Invalid line " << line_number << ": '" << trimmed_line << "'" << std::endl;
     return false; // Line is not a valid comment, section, or key-value pair
   }
 
@@ -112,43 +130,67 @@ LumexSettingsINI::_load_with_parser(std::string const &path)
   m_settings.clear();
   std::string currentSection;
   std::string line;
-  bool settings_loaded = false; // Track if any settings were successfully loaded
+  bool settings_loaded = false;
+
+  std::regex section_re(Constants::REGEX_SECTION);
+  std::regex kv_re(Constants::REGEX_KEY_VALUE);
+  std::smatch match;
 
   while(std::getline(file, line))
   {
-    // Handle inline comments first
-    size_t comment_pos = line.find_first_of(";#");
-    if(comment_pos != std::string::npos) line = line.substr(0, comment_pos);
-
     std::string trimmed_line = _trim(line);
-    if(trimmed_line.empty()) continue;
+    if(trimmed_line.empty() || trimmed_line[0] == ';' || trimmed_line[0] == '#') continue;
 
-    if(trimmed_line.front() == '[' && trimmed_line.back() == ']')
+    if(std::regex_match(trimmed_line, match, section_re))
     {
-      currentSection = _trim(trimmed_line.substr(1, trimmed_line.size() - 2));
+      currentSection = match[1].str();
       continue;
     }
 
-    auto eqPos = trimmed_line.find('=');
-    if(eqPos == std::string::npos) continue;
-
-    std::string key   = _trim(trimmed_line.substr(0, eqPos));
-    std::string value = _trim(trimmed_line.substr(eqPos + 1));
-
-    // Handle quoted values
-    if(value.size() >= 2 && value.front() == '"' && value.back() == '"')
+    if(std::regex_match(trimmed_line, match, kv_re))
     {
-      value = value.substr(1, value.size() - 2);
-      // A more advanced parser would un-escape characters like \\ and \" here
-    }
+      std::string key = match[1].str();
+      std::string value_str;
 
-    if(!key.empty())
-    {
-      m_settings[currentSection][key] = value;
-      settings_loaded                 = true; // A setting was loaded!
+      if(match[2].matched)
+      { // Group 2 for quoted values (e.g., "value" or "val\"ue")
+        value_str = match[2].str();
+        // Unescape backslash-escaped characters within the quoted value.
+        std::string unescaped_val;
+        for(size_t i = 0; i < value_str.length(); ++i)
+        {
+          if(value_str[i] == '\\' && i + 1 < value_str.length())
+          {
+            // If it's an escaped quote or backslash, unescape it
+            if(value_str[i + 1] == '"' || value_str[i + 1] == '\\')
+            {
+              unescaped_val += value_str[i + 1];
+              i++; // Skip the escaped character
+            }
+            else
+            {
+              // Otherwise, just append the backslash itself (e.g., for unknown escapes)
+              unescaped_val += value_str[i];
+            }
+          }
+          else { unescaped_val += value_str[i]; }
+        }
+        value_str = unescaped_val;
+      }
+      else if(match[3].matched)
+      {                                    // Group 3 for unquoted values (e.g., value)
+        value_str = _trim(match[3].str()); // Apply trim only to unquoted content
+      }
+
+      if(!key.empty())
+      {
+        m_settings[currentSection][key] = value_str;
+        settings_loaded                 = true;
+      }
+      continue;
     }
   }
-  return settings_loaded; // Return true only if at least one setting was loaded
+  return settings_loaded;
 }
 
 LUMEX_PUBLIC_API
