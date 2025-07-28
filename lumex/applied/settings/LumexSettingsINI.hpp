@@ -97,6 +97,7 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
          * @param[in] value The string value to associate with the key.
          */
         void add(std::string const &section, std::string const &key, std::string const &value) override;
+        void add(char const *section, char const *key, char const *value);
 
         /**
          * @brief Removes a key-value pair from a section.

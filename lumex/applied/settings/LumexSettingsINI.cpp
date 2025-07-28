@@ -238,6 +238,16 @@ LumexSettingsINI::add(std::string const &section, std::string const &key, std::s
 
 LUMEX_PUBLIC_API
 void
+LumexSettingsINI::add(char const *section, char const *key, char const *value)
+{
+  if(section == nullptr || key == nullptr || value == nullptr)
+    return; // FIX(Test: LumexSettingsINITest.GivenNullArguments_WhenAdd_ThenDoesNothing): Handle nullptr
+            // input. This line avoids exception when section, key, or value is nullptr.
+  add(std::string(section), std::string(key), std::string(value));
+}
+
+LUMEX_PUBLIC_API
+void
 LumexSettingsINI::remove(std::string const &section, std::string const &key)
 {
   if(section.empty() || key.empty() || m_settings.empty()) return;
