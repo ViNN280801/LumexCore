@@ -111,25 +111,15 @@ namespace Lumex
 
       private:
         static constexpr char const *KDEFAULT_LOG_FILE_NAME = "log"; ///< Default log file name.
-
-        static constexpr short KLOG_WIDTH                   = 8; ///< The width of the log
-                                                                 ///< level.
-
-        static std::string s_appName; ///< The name of the application, by default it would be empty.
+        static constexpr short KLOG_WIDTH                   = 8;     ///< The width of the log level.
 
 #ifdef _WIN32
   #pragma warning(push)
   #pragma warning(disable : 4251) // Suppress C4251 for STL members in DLL interface
 #endif
-        static std::mutex s_mutex; ///< Mutex for thread-safe logging.
-#ifdef _WIN32
-  #pragma warning(pop)
-#endif
-        static Lumex::Path s_logsDirectory; ///< The directory for storing logs.
-#ifdef _WIN32
-  #pragma warning(push)
-  #pragma warning(disable : 4251) // Suppress C4251 for STL members in DLL interface
-#endif
+        static std::string s_appName;         ///< The name of the application, by default it would be empty.
+        static std::mutex s_mutex;            ///< Mutex for thread-safe logging.
+        static Lumex::Path s_logsDirectory;   ///< The directory for storing logs.
         static std::string s_launchTimestamp; ///< The timestamp when the application was launched.
 #ifdef _WIN32
   #pragma warning(pop)

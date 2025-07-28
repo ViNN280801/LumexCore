@@ -630,6 +630,7 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 
         // Convenience directory iteration
         static std::vector<DirectoryEntry> directory_contents(Path const &);
+        static FilesystemResult<std::vector<Path>> directory_paths(Path const &);
 
         // -- Custom own methods (not from standard) --
         /**

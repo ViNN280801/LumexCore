@@ -1357,6 +1357,36 @@ Lumex::Filesystem::directory_contents(Path const &path)
 }
 
 LUMEX_PUBLIC_API
+Lumex::FilesystemResult<std::vector<Lumex::Path>>
+Lumex::Filesystem::directory_paths(Path const &path)
+{
+  std::vector<Lumex::Path> paths;
+
+  // IMPORTANT FIX(Test: Filesystem_DirectoryPaths_PathIsFile):
+  // Ensure the path exists and is a directory BEFORE iterating.
+  // The original logic was flawed because directory_iterator might not immediately
+  // set errno or throw for non-directory paths, leading to an empty 'paths'
+  // vector that then incorrectly passes the `if(!paths.empty() || LumexFilesystem::exists(path))` check.
+  if(!LumexFilesystem::exists(path))
+    return FilesystemResult<std::vector<Path>>::err(ENOENT, {}); // No such file or directory
+
+  if(!LumexFilesystem::is_directory(path))
+  {
+    // If it exists but is not a directory, return an error like ENOTDIR (Not a directory).
+    // On Windows, the equivalent might be different, but a non-zero error is expected.
+    return FilesystemResult<std::vector<Path>>::err(ENOTDIR, {});
+  }
+
+  // Use directory_contents to get entries, then extract paths
+  // If the path is a valid directory, the iterator should work.
+  for(DirectoryIterator it(path); it != DirectoryIterator(); ++it) paths.push_back(it->path());
+
+  // If we reach here, the path exists and is a directory.
+  // The result should always be successful, even if the directory is empty.
+  return FilesystemResult<std::vector<Path>>::ok(paths);
+}
+
+LUMEX_PUBLIC_API
 bool
 Lumex::Filesystem::equivalent(Path const &path1, Path const &path2)
 {

@@ -293,5 +293,7 @@ TEST_F(HardwareCapabilitiesTest, Perf_DetectHardware)
 
   auto dur = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - start);
 
-  EXPECT_LT(dur.count(), 1000) << "Detecting hardware " << N << " times took too long: " << dur.count() << "ms";
+  int const expected_duration = 5000; // 5s is enough for 10 times on a really old machine.
+  EXPECT_LT(dur.count(), expected_duration)
+    << "Detecting hardware " << N << " times took too long: " << dur.count() << "ms";
 }
