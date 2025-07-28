@@ -282,7 +282,7 @@ class CMakeBuilder:
             generator_name = match_generator.group(1)  # Получаем полное имя генератора
             if "Visual Studio" in generator_name:
                 detected_compiler = "msvc"
-                
+
                 # Try to extract year from generator name, e.g. "Visual Studio 17 2022"
                 version_match = re_search(r"Visual Studio \d+ (\d{4})", generator_name)
                 if version_match:
@@ -719,6 +719,14 @@ class CMakeBuilderCLI:
             help="Build shared libraries. Adds -DBUILD_SHARED_LIBS=ON to CMake arguments.",
         )
         self.parser.add_argument(
+            "--cmake-prefix-path",
+            help=(
+                "Add prefix paths to the CMake arguments. Multiple paths should be "
+                "separated by the platform-specific path separator (e.g., ';' on Windows, ':' on Unix). "
+                'Example: --cmake-prefix-path "/path/to/qt;/path/to/another_lib"'
+            ),
+        )
+        self.parser.add_argument(
             "--tests",
             nargs="?",  # Allows 0 or 1 argument
             help="Enable building tests. Optionally provide a custom CMake variable name",
@@ -811,6 +819,11 @@ class CMakeBuilderCLI:
             self.builder.add_cmake_args(
                 ["-D{}={}".format(self.args.documentation, "ON")]
             )
+
+        if self.args.cmake_prefix_path:
+            # Split the string of paths by the platform-specific separator
+            prefix_paths = self.args.cmake_prefix_path.split(os_pathsep)
+            self.builder.add_cmake_prefix_path(prefix_paths)
 
         if not self.builder.configure(self.args.build_type):
             self.logger.error("ERROR: CMake configuration failed")
