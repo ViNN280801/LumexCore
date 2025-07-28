@@ -31,5 +31,7 @@ install(TARGETS ${LUMEX_STRING_VIEW_NAME} EXPORT ${EXPORT_TO}
 install(
     DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
     DESTINATION include/lumex/core/string_view
-    FILES_MATCHING PATTERN "*.hpp"
+    FILES_MATCHING 
+        PATTERN "*.hpp"
+        PATTERN "LumexStringView"
 )
