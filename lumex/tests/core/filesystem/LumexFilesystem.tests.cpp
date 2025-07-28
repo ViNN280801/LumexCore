@@ -558,6 +558,60 @@ TEST_F(LumexFilesystemTest, Filesystem_DirectoryIterator_WorksCorrectly)
   EXPECT_EQ(found_files[1], "file2.txt");
 }
 
+TEST_F(LumexFilesystemTest, Filesystem_DirectoryPaths_ReturnsAllEntries)
+{
+  create_test_directory(test_dir / "subdir1");
+  create_test_directory(test_dir / "subdir2");
+  create_test_file(test_dir / "file1.txt");
+  create_test_file(test_dir / "file2.txt");
+
+  auto result = Lumex::Filesystem::directory_paths(test_dir);
+  ASSERT_TRUE(result.success());
+  std::vector<Lumex::Path> paths = result.value();
+
+  // Sort paths to ensure consistent order for comparison
+  std::sort(paths.begin(), paths.end());
+
+  EXPECT_EQ(paths.size(), 4);
+  EXPECT_EQ(paths[0].filename().string(), "file1.txt");
+  EXPECT_EQ(paths[1].filename().string(), "file2.txt");
+  EXPECT_EQ(paths[2].filename().string(), "subdir1");
+  EXPECT_EQ(paths[3].filename().string(), "subdir2");
+}
+
+TEST_F(LumexFilesystemTest, Filesystem_DirectoryPaths_EmptyDirectory)
+{
+  Lumex::Path empty_dir = test_dir / "empty_dir";
+  create_test_directory(empty_dir);
+
+  auto result = Lumex::Filesystem::directory_paths(empty_dir);
+  EXPECT_TRUE(result.success());
+  EXPECT_TRUE(result.value().empty());
+}
+
+TEST_F(LumexFilesystemTest, Filesystem_DirectoryPaths_NonExistentDirectory)
+{
+  Lumex::Path non_existent_dir = test_dir / "non_existent_dir";
+  auto result                  = Lumex::Filesystem::directory_paths(non_existent_dir);
+  EXPECT_FALSE(result.success());
+  EXPECT_TRUE(result.value().empty());
+  // The error code might vary based on OS/implementation, but EINVAL is a common one for invalid paths.
+  // We expect a non-zero error code.
+  EXPECT_NE(result.error_code(), 0);
+}
+
+TEST_F(LumexFilesystemTest, Filesystem_DirectoryPaths_PathIsFile)
+{
+  Lumex::Path file_path = test_dir / "single_file.txt";
+  create_test_file(file_path);
+
+  auto result = Lumex::Filesystem::directory_paths(file_path);
+  EXPECT_FALSE(result.success());
+  EXPECT_TRUE(result.value().empty());
+  // Expected error code is ENOTDIR on POSIX, or equivalent on Windows for not a directory.
+  EXPECT_NE(result.error_code(), 0);
+}
+
 // --- Edge Cases and Error Handling Tests -----------------------------------
 
 TEST_F(LumexFilesystemTest, Filesystem_CreateDirectory_ParentDoesNotExist)
