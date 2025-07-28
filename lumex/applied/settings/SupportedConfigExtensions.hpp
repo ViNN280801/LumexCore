@@ -3,7 +3,7 @@
 
 #include <cstdint>
 
-namespace Lumex
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Applied
   {

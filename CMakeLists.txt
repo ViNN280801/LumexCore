@@ -155,6 +155,7 @@ if(LUMEX_BUILD_TESTS)
         # Lumex Applied tests
         LumexHardwareCapabilitiesTests
         LumexLoggingTests
+        LumexSettingsTests
 
         # Lumex Core tests
         LumexBase64Tests

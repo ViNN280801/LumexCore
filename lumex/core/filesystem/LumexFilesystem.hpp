@@ -283,7 +283,9 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
         // Constructors
         Path() = default;
         Path(string_type source);
-        Path(char const *source);
+        Path(char const *source)
+            : m_path(source != nullptr ? source : "")
+        {} // FIX(Test: LumexSettingsINITest.GivenNullFilePath_WhenIsIniValid_ThenReturnsFalse): Handle nullptr input
         Path(Path const &other)            = default;
         Path &operator=(Path const &other) = default;
         ~Path()                            = default;
