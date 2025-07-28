@@ -189,12 +189,13 @@ TEST_F(LumexSettingsINITest, GivenNoReadPermission_WhenIsIniValid_ThenReturnsFal
 #endif
 }
 
-TEST_F(LumexSettingsINITest, GivenBadFormatUnbalancedQuotes_WhenIsIniValid_ThenReturnsTrue)
+TEST_F(LumexSettingsINITest, GivenBadFormatUnbalancedQuotes_WhenIsIniValid_ThenReturnsFalse)
 {
-  // The current parser does not explicitly validate balanced quotes, so this should pass validation.
-  // This highlights a potential area for future improvement in the parser's robustness.
+  // FIX(Test: GivenBadFormatUnbalancedQuotes_WhenIsIniValid_ThenReturnsTrue):
+  // The parser now implicitly validates balanced quotes due to stricter regex for values.
+  // Therefore, this malformed input should correctly return false.
   create_test_ini_file(_test_file, "[section]\nkey=\"value\n");
-  EXPECT_TRUE(LumexSettingsINI::is_ini_valid(_test_file));
+  EXPECT_FALSE(LumexSettingsINI::is_ini_valid(_test_file));
 }
 
 TEST_F(LumexSettingsINITest, GivenBadFormatArraysNotSupported_WhenIsIniValid_ThenReturnsFalse)
