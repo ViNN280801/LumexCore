@@ -62,6 +62,7 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
          *         `false` otherwise.
          */
         bool load(std::string const &path) override;
+        bool load(char const *path);
 
         /**
          * @brief Saves the current settings to an INI file.
@@ -74,6 +75,7 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
          *         `false` otherwise.
          */
         bool save(std::string const &path) const override;
+        bool save(char const *path) const;
 
         /**
          * @brief Retrieves a string value for a given section and key.
@@ -83,6 +85,7 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
          *         is not found, returns an empty string.
          */
         std::string get(std::string const &section, std::string const &key) const override;
+        std::string get(char const *section, char const *key) const;
 
         /**
          * @brief Adds or updates a key-value pair in a specific section.
@@ -104,6 +107,7 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
          * @param[in] key The name of the key to remove.
          */
         void remove(std::string const &section, std::string const &key) override;
+        void remove(char const *section, char const *key);
 
         /**
          * @brief Performs a static check on an INI file for basic validity.

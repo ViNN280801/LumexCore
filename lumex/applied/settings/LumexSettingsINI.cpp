@@ -180,9 +180,27 @@ LumexSettingsINI::load(std::string const &path)
 
 LUMEX_PUBLIC_API
 bool
+LumexSettingsINI::load(char const *path)
+{
+  if(path == nullptr)
+    return false; // FIX(Test: LumexSettingsINITest.GivenNullFilePath_WhenLoad_ThenReturnsFalse): Handle nullptr
+  return load(std::string(path));
+}
+
+LUMEX_PUBLIC_API
+bool
 LumexSettingsINI::save(std::string const &path) const
 {
   return _save_with_parser(path);
+}
+
+LUMEX_PUBLIC_API
+bool
+LumexSettingsINI::save(char const *path) const
+{
+  if(path == nullptr)
+    return false; // FIX(Test: LumexSettingsINITest.GivenNullFilePath_WhenSave_ThenReturnsFalse): Handle nullptr
+  return save(std::string(path));
 }
 
 LUMEX_PUBLIC_API
@@ -198,6 +216,16 @@ LumexSettingsINI::get(std::string const &section, std::string const &key) const
   if(keyIt == sectionIt->second.end()) return "";
 
   return keyIt->second;
+}
+
+LUMEX_PUBLIC_API
+std::string
+LumexSettingsINI::get(char const *section, char const *key) const
+{
+  if(section == nullptr || key == nullptr)
+    return ""; // FIX(Test: LumexSettingsINITest.GivenNullArguments_WhenGet_ThenReturnsEmptyString): Handle nullptr
+               // input. This line avoids exception when section or key is nullptr.
+  return get(std::string(section), std::string(key));
 }
 
 LUMEX_PUBLIC_API
@@ -223,4 +251,14 @@ LumexSettingsINI::remove(std::string const &section, std::string const &key)
 
   size_t removedCount{keyMap.erase(key)};
   if(removedCount == 0) return;
+}
+
+LUMEX_PUBLIC_API
+void
+LumexSettingsINI::remove(char const *section, char const *key)
+{
+  if(section == nullptr || key == nullptr)
+    return; // FIX(Test: LumexSettingsINITest.GivenNullArguments_WhenRemove_ThenDoesNothing): Handle nullptr
+            // input. This line avoids exception when section or key is nullptr.
+  remove(std::string(section), std::string(key));
 }
