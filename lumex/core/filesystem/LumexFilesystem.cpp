@@ -30,9 +30,6 @@ LUMEX_PUBLIC_API
 Lumex::Path::Path(string_type source) : m_path(std::move(source)) {}
 
 LUMEX_PUBLIC_API
-Lumex::Path::Path(char const *source) : m_path(source != nullptr ? source : "") {}
-
-LUMEX_PUBLIC_API
 bool
 Lumex::Path::is_separator(value_type chr)
 {

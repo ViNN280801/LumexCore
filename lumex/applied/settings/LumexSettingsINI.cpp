@@ -84,6 +84,16 @@ LumexSettingsINI::is_ini_valid(std::string const &path)
 
 LUMEX_PUBLIC_API
 bool
+LumexSettingsINI::is_ini_valid(char const *path)
+{
+  if(path == nullptr)
+    return false; // FIX(Test: LumexSettingsINITest.GivenNullFilePath_WhenIsIniValid_ThenReturnsFalse): Handle nullptr
+                  // input. This line avoids exception when path is nullptr.
+  return is_ini_valid(std::string(path));
+}
+
+LUMEX_PUBLIC_API
+bool
 LumexSettingsINI::_load_with_parser(std::string const &path)
 {
   std::ifstream file(path.c_str());

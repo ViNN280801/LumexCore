@@ -7,7 +7,7 @@
 
 #include "ILumexSettings.hpp"
 
-namespace Lumex
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Applied
   {
@@ -15,9 +15,14 @@ namespace Lumex
     {
       namespace Constants
       {
-        static constexpr char const *INI_FILE_EXTENSION = ".ini";                        ///< INI file extension.
-        static constexpr char const *REGEX_SECTION      = R"(^\s*\[([^\]]+)\]\s*$)";     ///< Regex for section headers.
-        static constexpr char const *REGEX_KEY_VALUE    = R"(^\s*([^=\s]+)\s*=\s*(.*))"; ///< Regex for key-value pairs.
+        static constexpr char const *INI_FILE_EXTENSION = ".ini";                    ///< INI file extension.
+        static constexpr char const *REGEX_SECTION      = R"(^\s*\[([^\]]+)\]\s*$)"; ///< Regex for section headers.
+
+        // FIX(Test: LumexSettingsINITest.GivenBadFormatArraysNotSupported_WhenIsIniValid_ThenReturnsFalse):
+        // The regex for key-value pairs. It supports quoted values (which can contain anything)
+        // or unquoted values (which cannot contain commas, quotes, or comment characters).
+        static constexpr char const *REGEX_KEY_VALUE
+          = R"(^\s*([^=\s]+)\s*=\s*(?:\"[^\"]*\"|[^,"#;]*)\s*(?:[#;].*)?$)"; ///< Regex for key-value pairs.
 
         // UTF-8 Byte Order Mark (BOM) constants
         static constexpr int UTF8_BOM_SIZE        = 3;    ///< Size of the UTF-8 BOM in bytes.
@@ -110,6 +115,7 @@ namespace Lumex
          *         `false` otherwise.
          */
         static bool is_ini_valid(std::string const &path);
+        static bool is_ini_valid(char const *path);
 
       private:
         /**
