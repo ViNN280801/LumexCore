@@ -33,13 +33,13 @@ namespace
     if(needs_quoting)
     {
       result += '"'; // Add opening quote
-      for(char c : value)
+      for(char chr : value)
       {
-        if(c == '"' || c == '\\')
+        if(chr == '"' || chr == '\\')
         { // Escape literal quotes and backslashes
           result += '\\';
         }
-        result += c;
+        result += chr;
       }
       result += '"'; // Add closing quote
     }
@@ -56,6 +56,7 @@ LUMEX_PUBLIC_API
 bool
 LumexSettingsINI::is_ini_valid(std::string const &path)
 {
+  if(Lumex::Filesystem::is_directory(path)) return false;
   if(!Lumex::Filesystem::is_readable(path)) return false;
 
   std::ifstream file(path.c_str());
@@ -93,7 +94,7 @@ LumexSettingsINI::is_ini_valid(std::string const &path)
     if(std::regex_match(trimmed_line, kv_re)) continue;
 
     // DEBUG: Print the failing line
-    std::cout << "Invalid line " << line_number << ": '" << trimmed_line << "'" << std::endl;
+    std::cout << "Invalid line " << line_number << ": '" << trimmed_line << "'\n";
     return false; // Line is not a valid comment, section, or key-value pair
   }
 

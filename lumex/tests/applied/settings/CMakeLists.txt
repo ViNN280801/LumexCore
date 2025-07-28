@@ -15,7 +15,9 @@ target_link_libraries(
     ${TEST_EXECUTABLE_NAME}
     PRIVATE
     GTest::gtest_main
+    Lumex::filesystem
     Lumex::settings
+    Lumex::utility
 )
 
 include(GoogleTest)
