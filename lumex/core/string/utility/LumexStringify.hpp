@@ -162,8 +162,6 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
       {
         static_assert(all_streamable_v<Args...>, "All arguments must be streamable");
 
-        if(sizeof...(args) == 0) return "";
-
         std::ostringstream oss;
         int dummy[] = {0, ((void)(oss << std::forward<Args>(args)), 0)...};
         (void)dummy;
@@ -178,8 +176,6 @@ namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
       stringify(Args &&...args)
       {
         static_assert(all_streamable<Args...>::value, "All arguments must be streamable");
-
-        if(sizeof...(args) == 0) return "";
 
         std::ostringstream oss;
         using expander = int[];
