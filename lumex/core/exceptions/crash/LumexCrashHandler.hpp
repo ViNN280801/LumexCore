@@ -24,7 +24,7 @@
   #include <unistd.h>
 #endif
 
-namespace Lumex
+namespace Lumex // NOLINT(modernize-concat-nested-namespaces)
 {
   namespace Core
   {
@@ -42,6 +42,11 @@ namespace Lumex
         class LUMEX_API LumexCrashHandler
         {
         public:
+          LumexCrashHandler(LumexCrashHandler const &)            = delete;
+          LumexCrashHandler &operator=(LumexCrashHandler const &) = delete;
+          LumexCrashHandler(LumexCrashHandler &&)                 = delete;
+          LumexCrashHandler &operator=(LumexCrashHandler &&)      = delete;
+
           /**
            * @brief Returns the singleton instance of the crash handler.
            * @return Reference to the singleton instance.
@@ -75,14 +80,17 @@ namespace Lumex
 #endif
 
         private:
-          LumexCrashHandler()                                     = default;
-          ~LumexCrashHandler()                                    = default;
-          LumexCrashHandler(LumexCrashHandler const &)            = delete;
-          LumexCrashHandler &operator=(LumexCrashHandler const &) = delete;
-          LumexCrashHandler(LumexCrashHandler &&)                 = delete;
-          LumexCrashHandler &operator=(LumexCrashHandler &&)      = delete;
+          LumexCrashHandler()  = default;
+          ~LumexCrashHandler() = default;
 
+#ifdef _WIN32
+  #pragma warning(push)
+  #pragma warning(disable : 4251) // Suppress C4251 for STL members in DLL interface
+#endif
           static std::string s_appName; ///< The name of the application.
+#ifdef _WIN32
+  #pragma warning(pop)
+#endif
           static char const *s_defaultAppName;
 
           /**
