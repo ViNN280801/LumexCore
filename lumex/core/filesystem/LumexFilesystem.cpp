@@ -1357,6 +1357,35 @@ Lumex::Filesystem::directory_contents(Path const &path)
 }
 
 LUMEX_PUBLIC_API
+Lumex::FilesystemResult<std::vector<Lumex::Path>>
+Lumex::Filesystem::directory_paths(Path const &path)
+{
+  std::vector<Lumex::Path> paths;
+  // Use directory_contents to get entries, then extract paths
+  for(DirectoryIterator it(path); it != DirectoryIterator(); ++it) paths.push_back(it->path());
+
+  // If the directory iterator failed to initialize, it means the path might not exist or isn't a directory.
+  // Check if the directory exists and is actually a directory to determine if the result is an error.
+  if(!LumexFilesystem::exists(path) || !LumexFilesystem::is_directory(path))
+  {
+    // Return an error if the path does not exist or is not a directory.
+    // We can use a generic error code like EBADF (Bad file descriptor) or EINVAL (Invalid argument)
+    // since the underlying OS calls for directory iteration might not set errno directly for such cases.
+    // For simplicity and consistency with other FilesystemResult errors, let's use a non-zero error code.
+    // Note: A real C++17 std::filesystem::directory_iterator constructor can throw an exception
+    // if the path does not refer to a directory. Here, we're mimicking that behavior with FilesystemResult.
+    if(!paths.empty() || LumexFilesystem::exists(path))
+    {
+      // If paths are found, it means the iterator was successful, or if path exists but is empty, it's not an error.
+      // This ensures that an empty directory is still considered a successful result.
+      return FilesystemResult<std::vector<Path>>::ok(paths);
+    }
+    return FilesystemResult<std::vector<Path>>::err(EINVAL, {}); // Return an error with an empty vector
+  }
+  return FilesystemResult<std::vector<Path>>::ok(paths);
+}
+
+LUMEX_PUBLIC_API
 bool
 Lumex::Filesystem::equivalent(Path const &path1, Path const &path2)
 {
