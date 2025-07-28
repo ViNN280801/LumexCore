@@ -136,7 +136,7 @@ LumexLogging::getLogsDirectory()
                   / Lumex::Path("logs");
       }
     }
-    Lumex::Filesystem::create_directory(logsDir);
+    Lumex::Filesystem::create_directories(logsDir);
     return logsDir;
 #else
     auto exePath = Lumex::Filesystem::get_exe_path();
