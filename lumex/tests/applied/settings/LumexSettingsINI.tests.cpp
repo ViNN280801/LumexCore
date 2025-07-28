@@ -301,9 +301,10 @@ TEST_F(LumexSettingsINITest, GivenEmptyFile_WhenLoad_ThenReturnsFalse)
 {
   // An empty INI file means no settings are loaded, so load should return false.
   // CoVe: Verify the internal settings map is empty after attempted load.
-  create_test_ini_file(_test_file, "");
+  Lumex::Path test_file = _test_dir / "GivenEmptyFile_WhenLoad_ThenReturnsFalse.test.ini";
+  create_test_ini_file(test_file, "");
   LumexSettingsINI ini_settings;
-  EXPECT_FALSE(ini_settings.load(_test_file));
+  EXPECT_FALSE(ini_settings.load(test_file));
   EXPECT_EQ(ini_settings.get("any", "key"), "");
 }
 

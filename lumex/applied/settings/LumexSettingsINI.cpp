@@ -112,6 +112,8 @@ LumexSettingsINI::_load_with_parser(std::string const &path)
   m_settings.clear();
   std::string currentSection;
   std::string line;
+  bool settings_loaded = false; // Track if any settings were successfully loaded
+
   while(std::getline(file, line))
   {
     // Handle inline comments first
@@ -140,9 +142,13 @@ LumexSettingsINI::_load_with_parser(std::string const &path)
       // A more advanced parser would un-escape characters like \\ and \" here
     }
 
-    if(!key.empty()) m_settings[currentSection][key] = value;
+    if(!key.empty())
+    {
+      m_settings[currentSection][key] = value;
+      settings_loaded                 = true; // A setting was loaded!
+    }
   }
-  return true; // Return true even if empty, load was successful
+  return settings_loaded; // Return true only if at least one setting was loaded
 }
 
 LUMEX_PUBLIC_API
