@@ -6,16 +6,81 @@ include(CMakeFindDependencyMacro)
 
 if(EXISTS "${CMAKE_CURRENT_LIST_DIR}/LumexCoreTargets.cmake")
     include("${CMAKE_CURRENT_LIST_DIR}/LumexCoreTargets.cmake")
+    # Define aliases for LumexCore components after they are imported
+    if(TARGET Lumex::LumexCore_base64 AND NOT TARGET Lumex::base64)
+        add_library(Lumex::base64 ALIAS Lumex::LumexCore_base64)
+    endif()
+    if(TARGET Lumex::LumexCore_environment AND NOT TARGET Lumex::environment)
+        add_library(Lumex::environment ALIAS Lumex::LumexCore_environment)
+    endif()
+    if(TARGET Lumex::LumexCore_exceptions AND NOT TARGET Lumex::exceptions)
+        add_library(Lumex::exceptions ALIAS Lumex::LumexCore_exceptions)
+    endif()
+    if(TARGET Lumex::LumexCore_filesystem AND NOT TARGET Lumex::filesystem)
+        add_library(Lumex::filesystem ALIAS Lumex::LumexCore_filesystem)
+    endif()
+    if(TARGET Lumex::LumexCore_generators AND NOT TARGET Lumex::generators)
+        add_library(Lumex::generators ALIAS Lumex::LumexCore_generators)
+    endif()
+    if(TARGET Lumex::LumexCore_math AND NOT TARGET Lumex::math)
+        add_library(Lumex::math ALIAS Lumex::LumexCore_math)
+    endif()
+    if(TARGET Lumex::LumexCore_optional AND NOT TARGET Lumex::optional)
+        add_library(Lumex::optional ALIAS Lumex::LumexCore_optional)
+    endif()
+    if(TARGET Lumex::LumexCore_string AND NOT TARGET Lumex::string)
+        add_library(Lumex::string ALIAS Lumex::LumexCore_string)
+    endif()
+    if(TARGET Lumex::LumexCore_string_view AND NOT TARGET Lumex::string_view)
+        add_library(Lumex::string_view ALIAS Lumex::LumexCore_string_view)
+    endif()
+    if(TARGET Lumex::LumexCore_temporary AND NOT TARGET Lumex::temporary)
+        add_library(Lumex::temporary ALIAS Lumex::LumexCore_temporary)
+    endif()
+    if(TARGET Lumex::LumexCore_time AND NOT TARGET Lumex::time)
+        add_library(Lumex::time ALIAS Lumex::LumexCore_time)
+    endif()
+    if(TARGET Lumex::LumexCore_utility AND NOT TARGET Lumex::utility)
+        add_library(Lumex::utility ALIAS Lumex::LumexCore_utility)
+    endif()
 endif()
+
 if(EXISTS "${CMAKE_CURRENT_LIST_DIR}/LumexAppliedTargets.cmake")
     include("${CMAKE_CURRENT_LIST_DIR}/LumexAppliedTargets.cmake")
+    # Define aliases for LumexApplied components after they are imported
+    if(TARGET Lumex::LumexApplied_hardware AND NOT TARGET Lumex::hardware)
+        add_library(Lumex::hardware ALIAS Lumex::LumexApplied_hardware)
+    endif()
+    if(TARGET Lumex::LumexApplied_logging AND NOT TARGET Lumex::logging)
+        add_library(Lumex::logging ALIAS Lumex::LumexApplied_logging)
+    endif()
+    if(TARGET Lumex::LumexApplied_settings AND NOT TARGET Lumex::settings)
+        add_library(Lumex::settings ALIAS Lumex::LumexApplied_settings)
+    endif()
 endif()
 
 # Provide umbrella INTERFACE target `Lumex::Lumex` if missing
 if(NOT TARGET Lumex::Lumex)
     add_library(Lumex::Lumex INTERFACE IMPORTED)
     set_target_properties(Lumex::Lumex PROPERTIES
-        INTERFACE_LINK_LIBRARIES "Lumex::utility;Lumex::string;Lumex::string_view;Lumex::optional;Lumex::time;Lumex::environment;Lumex::exceptions;Lumex::filesystem;Lumex::hardware;Lumex::logging;Lumex::temporary;Lumex::settings"
+        INTERFACE_LINK_LIBRARIES "
+            Lumex::hardware;
+            Lumex::logging;
+            Lumex::settings
+            
+            Lumex::base64;
+            Lumex::environment;
+            Lumex::exceptions;
+            Lumex::filesystem;
+            Lumex::generators;
+            Lumex::math;
+            Lumex::optional;
+            Lumex::string;
+            Lumex::string_view;
+            Lumex::temporary;
+            Lumex::time;
+            Lumex::utility;
+            "
     )
 endif()
 
