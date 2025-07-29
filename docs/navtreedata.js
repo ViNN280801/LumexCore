@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "LumexLib Documentation", "index.html", [
+  [ "LumexLib", "index.html", [
     [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
