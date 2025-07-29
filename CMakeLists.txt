@@ -12,11 +12,6 @@ if(ARCHITECTURE)
 endif()
 
 # --- C++ Standard ---
-# Set C++11 as the default, but allow overriding it.
-if(NOT CMAKE_CXX_STANDARD)
-    set(CMAKE_CXX_STANDARD 11)
-endif()
-
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF) # Use -std=c++11 instead of -std=gnu++11
 
@@ -34,32 +29,6 @@ endif()
 if(BUILD_SHARED_LIBS OR (CMAKE_POSITION_INDEPENDENT_CODE AND NOT WIN32))
     set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 endif()
-
-# ---------------------------------------------------------------------------
-# Unified output directories – ensures *.dll sit next to the executables
-# ---------------------------------------------------------------------------
-set(LUMEX_BIN_DIR ${CMAKE_BINARY_DIR}/bin)
-set(LUMEX_LIB_DIR ${CMAKE_BINARY_DIR}/lib)
-
-# Multi-config generators (Visual Studio, Xcode)
-if(CMAKE_CONFIGURATION_TYPES)
-    foreach(CONF ${CMAKE_CONFIGURATION_TYPES})
-        string(TOUPPER ${CONF} CONF_UPPER)
-        set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_${CONF_UPPER} ${LUMEX_BIN_DIR}/${CONF})
-        set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_${CONF_UPPER} ${LUMEX_BIN_DIR}/${CONF})
-        set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_${CONF_UPPER} ${LUMEX_LIB_DIR}/${CONF})
-    endforeach()
-
-    # Single-config generators (Make, Ninja)
-else()
-    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${LUMEX_BIN_DIR})
-    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LUMEX_BIN_DIR})
-    set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${LUMEX_LIB_DIR})
-endif()
-
-# --- Includes & Subdirectories ---
-add_subdirectory(lumex)
-
 
 # ==============================================================================
 # COMPILER FLAGS & WARNINGS
@@ -422,6 +391,31 @@ elseif(WIN32)
         _SCL_SECURE_NO_WARNINGS
     )
 endif()
+
+# ---------------------------------------------------------------------------
+# Unified output directories – ensures *.dll sit next to the executables
+# ---------------------------------------------------------------------------
+set(LUMEX_BIN_DIR ${CMAKE_BINARY_DIR}/bin)
+set(LUMEX_LIB_DIR ${CMAKE_BINARY_DIR}/lib)
+
+# Multi-config generators (Visual Studio, Xcode)
+if(CMAKE_CONFIGURATION_TYPES)
+    foreach(CONF ${CMAKE_CONFIGURATION_TYPES})
+        string(TOUPPER ${CONF} CONF_UPPER)
+        set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_${CONF_UPPER} ${LUMEX_BIN_DIR}/${CONF})
+        set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_${CONF_UPPER} ${LUMEX_BIN_DIR}/${CONF})
+        set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_${CONF_UPPER} ${LUMEX_LIB_DIR}/${CONF})
+    endforeach()
+
+    # Single-config generators (Make, Ninja)
+else()
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${LUMEX_BIN_DIR})
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LUMEX_BIN_DIR})
+    set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${LUMEX_LIB_DIR})
+endif()
+
+# --- Includes & Subdirectories ---
+add_subdirectory(lumex)
 
 # ==============================================================================
 # INSTALLATION
