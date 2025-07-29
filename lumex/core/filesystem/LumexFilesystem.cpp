@@ -599,12 +599,16 @@ namespace Lumex
       {
 // ---------- Additional filesystem helpers (private) ------------
 #if LUMEX_OS_WINDOWS
+        // Renamed and updated to apply permissions rather than just convert
         static DWORD
-        perms_to_windows_attributes(Lumex::Perms prms) // NOLINT
+        apply_perms_to_windows_attributes(DWORD existing_attrs, Lumex::Perms prms)
         {
-          DWORD attrs = 0;
-          if((prms & Lumex::Perms::owner_write) == Lumex::Perms::none) attrs |= FILE_ATTRIBUTE_READONLY;
-          return attrs;
+          DWORD new_attrs = existing_attrs;
+          if((prms & Lumex::Perms::owner_write) == Lumex::Perms::none)
+            new_attrs |= FILE_ATTRIBUTE_READONLY; // If write not allowed, set readonly
+          else
+            new_attrs &= ~FILE_ATTRIBUTE_READONLY; // If write allowed, ensure not readonly
+          return new_attrs;
         }
 #else
         static mode_t
@@ -1008,12 +1012,9 @@ Lumex::Filesystem::permissions(Path const &path, Perms prms)
   DWORD attrs = GetFileAttributesA(path.c_str());
   if(attrs == INVALID_FILE_ATTRIBUTES) return FilesystemResult<void>::err(static_cast<int>(GetLastError()));
 
-  if((prms & Perms::owner_write) == Perms::none)
-    attrs |= FILE_ATTRIBUTE_READONLY;
-  else
-    attrs &= ~FILE_ATTRIBUTE_READONLY;
+  DWORD new_attrs = detail::apply_perms_to_windows_attributes(attrs, prms);
 
-  if(SetFileAttributesA(path.c_str(), attrs) != 0) return FilesystemResult<void>::ok();
+  if(SetFileAttributesA(path.c_str(), new_attrs) != 0) return FilesystemResult<void>::ok();
   return FilesystemResult<void>::err(static_cast<int>(GetLastError()));
 #else
   mode_t mode = detail::perms_to_posix_mode(prms);
