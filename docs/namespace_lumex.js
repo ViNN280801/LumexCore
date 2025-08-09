@@ -3,6 +3,7 @@ var namespace_lumex =
     [ "Applied", "namespace_lumex_1_1_applied.html", "namespace_lumex_1_1_applied" ],
     [ "Core", "namespace_lumex_1_1_core.html", "namespace_lumex_1_1_core" ],
     [ "String", "namespace_lumex_1_1_string.html", "namespace_lumex_1_1_string" ],
+    [ "Xml", "namespace_lumex_1_1_xml.html", "namespace_lumex_1_1_xml" ],
     [ "DirectoryEntry", "namespace_lumex.html#a33aef9d76bc1400ccd38db9113ea4190", null ],
     [ "DirectoryIterator", "namespace_lumex.html#a43f4a0345de2172c6491eb1b500b7470", null ],
     [ "FileStatus", "namespace_lumex.html#a48c16203e09293b7251c0663d7ed8cc9", null ],

@@ -30,7 +30,7 @@ var NAVTREE =
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", "namespacemembers_dup" ],
-        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Functions", "namespacemembers_func.html", "namespacemembers_func" ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ],
@@ -46,13 +46,15 @@ var NAVTREE =
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Enumerator", "functions_eval.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
+        [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
@@ -67,13 +69,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_m_d_01_radeon_01_r_x_016800_01_x_t-example.html",
-"class_lumex_1_1_applied_1_1_hardware_1_1_hardware_capabilities.html#aba2d59b9be73b3b45255c71d32876828",
-"class_lumex_1_1_core_1_1_filesystem_1_1_file_status.html#ae126d32b3960c85dbb2dc564c4b9f448",
-"class_lumex_1_1_core_1_1_filesystem_1_1_path.html#a97c6dc35b285ec260643969c99eded0e",
-"class_lumex_1_1_core_1_1_string_view_1_1_lumex_string_view.html#a0bf2282c376a4201ce90d6fadd512b96",
-"class_lumex_1_1_core_1_1_string_view_1_1_lumex_w_string_view.html#aaaa47a26f7a68e28ffd77ab0b7680044",
-"functions_~.html",
-"namespace_lumex_1_1_core_1_1_optional.html#af86cf7b04e3713488031cf68b9fbea4a"
+"_x_path_ast_node_8hpp.html",
+"class_lumex_1_1_applied_1_1_settings_1_1_lumex_settings_i_n_i.html#a4b6c289fb3528a0a340cf14f565d0bbe",
+"class_lumex_1_1_core_1_1_filesystem_1_1_filesystem_result_3_01void_01_4.html#a8480dc7449725fdfa61b4c6bd3723f20",
+"class_lumex_1_1_core_1_1_filesystem_1_1_space_info.html#a500415c32df3622edfe2bed5575310cb",
+"class_lumex_1_1_core_1_1_string_view_1_1_lumex_string_view.html#a5a0a5f556acaa7c95fd543f8dd1e4500",
+"class_lumex_1_1_core_1_1_string_view_1_1_lumex_w_string_view.html#ae3c307bc5b83fbfc714f1bf485a22c3d",
+"class_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute_iterator.html#adced785b76c13662152f0aae45842c5d",
+"class_lumex_1_1_xml_1_1_node_1_1_xml_node.html#adf1d3730341b8ca26c17f5c324919668",
+"class_lumex_1_1_xml_1_1_writer_1_1_xml_writer_file.html#abc9874e540e56c561273cfa4eac5d729",
+"class_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1_x_path_variable.html#a3d7e0757d4396373d70278bc54ebd234",
+"namespace_lumex_1_1_applied_1_1_hardware_1_1_constants.html#a5c66f733e8c0baf125a053732670d840",
+"namespace_lumex_1_1_string_1_1_utility.html",
+"namespace_lumex_1_1_xml_1_1_types.html#a9424dcd22169f6e5c118411767ef0497a0eb3726b809e37c832433520fe66e908",
+"struct_lumex_1_1_core_1_1_optional_1_1in__place__t.html",
+"struct_lumex_1_1_xml_1_1_utility_1_1utf32__writer.html#a72c1cf947bb5c750f25fe4686f6a83af",
+"struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__number.html#a27d1db67d8c55daebb854f10c683712c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

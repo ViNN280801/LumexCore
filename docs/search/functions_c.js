@@ -1,7 +1,26 @@
 var searchData=
 [
-  ['native_0',['native',['../class_lumex_1_1_core_1_1_filesystem_1_1_path.html#a8dd688fbbaac736c8eaaa701bd7f0aca',1,'Lumex::Core::Filesystem::Path']]],
-  ['native_5fhandle_1',['native_handle',['../class_lumex_1_1_core_1_1_stacktrace_1_1_lumex_stacktrace_entry.html#a0ffc506037b26b03028ba13e41588fb7',1,'Lumex::Core::Stacktrace::LumexStacktraceEntry']]],
-  ['nullopt_5ft_2',['nullopt_t',['../struct_lumex_1_1_core_1_1_optional_1_1nullopt__t.html#a4cfa6dbf4368496ecc9bd17e10362b6a',1,'Lumex::Core::Optional::nullopt_t']]],
-  ['numbergenerator_3',['NumberGenerator',['../class_number_generator.html#a724b6a3b1ad89e39b74629aaeccb7e60',1,'NumberGenerator::NumberGenerator()'],['../class_number_generator.html#a037366647121119f51e16f9cf744b18a',1,'NumberGenerator::NumberGenerator(T from_val, T to_val, DistributionType dist_type=DistributionType::UNIFORM)'],['../class_number_generator.html#ab3e900bce26006a004c47d4ba49ee43f',1,'NumberGenerator::NumberGenerator(NumberGenerator const &amp;)=delete'],['../class_number_generator.html#a2bbe0c6d4ee06fbbd58d12c9aba84435',1,'NumberGenerator::NumberGenerator(NumberGenerator &amp;&amp;) noexcept=delete']]]
+  ['name_5fnull_5fsentry_0',['name_null_sentry',['../struct_lumex_1_1_xml_1_1_node_1_1name__null__sentry.html#af7afb277db5688bf17aa182a85e6a4c7',1,'Lumex::Xml::Node::name_null_sentry']]],
+  ['native_1',['native',['../class_lumex_1_1_core_1_1_filesystem_1_1_path.html#a8dd688fbbaac736c8eaaa701bd7f0aca',1,'Lumex::Core::Filesystem::Path']]],
+  ['native_5fhandle_2',['native_handle',['../class_lumex_1_1_core_1_1_stacktrace_1_1_lumex_stacktrace_entry.html#a0ffc506037b26b03028ba13e41588fb7',1,'Lumex::Core::Stacktrace::LumexStacktraceEntry']]],
+  ['new_5fxpath_5fvariable_3',['new_xpath_variable',['../namespace_lumex_1_1_xml_1_1_x_path_1_1_variable.html#a285a4ef255953e39bc7c3a55fe678ef0',1,'Lumex::Xml::XPath::Variable::new_xpath_variable(char_t const *name)'],['../namespace_lumex_1_1_xml_1_1_x_path_1_1_variable.html#af6ee08f61f60f7df2ef9b78b4eec9083',1,'Lumex::Xml::XPath::Variable::new_xpath_variable(xpath_value_type type, char_t const *name)']]],
+  ['next_4',['next',['../class_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_lexer_1_1_x_path_lexer.html#acacfc5680677b1edc3e5d6e431f934ba',1,'Lumex::Xml::XPath::Parser::Lexer::XPathLexer']]],
+  ['next_5fsibling_5',['next_sibling',['../class_lumex_1_1_xml_1_1_node_1_1_xml_node.html#a972e52499b1edfb04addfca3bab2213f',1,'Lumex::Xml::Node::XmlNode']]],
+  ['node_5fcopy_5fattribute_6',['node_copy_attribute',['../namespace_lumex_1_1_xml_1_1_attribute.html#a4c62019de580eef06cfb952d27691384',1,'Lumex::Xml::Attribute']]],
+  ['node_5fcopy_5fcontents_7',['node_copy_contents',['../namespace_lumex_1_1_xml_1_1_node.html#a854d772421af41d24b6bc2ed787d9b27',1,'Lumex::Xml::Node']]],
+  ['node_5fcopy_5fstring_8',['node_copy_string',['../namespace_lumex_1_1_xml_1_1_utility.html#ab334d8bd9132a798748308d8b4432235',1,'Lumex::Xml::Utility']]],
+  ['node_5fcopy_5ftree_9',['node_copy_tree',['../namespace_lumex_1_1_xml_1_1_node.html#acb6eb33e17945b00de6c9a587f358414',1,'Lumex::Xml::Node']]],
+  ['node_5fis_5fancestor_10',['node_is_ancestor',['../namespace_lumex_1_1_xml_1_1_node.html#a80ae031f36d9c5d1a6f736e8ba86fabe',1,'Lumex::Xml::Node']]],
+  ['node_5fis_5fbefore_11',['node_is_before',['../namespace_lumex_1_1_xml_1_1_x_path_1_1_document.html#a6f9a315d1047dbe0681d362c3c3a1398',1,'Lumex::Xml::XPath::Document']]],
+  ['node_5fis_5fbefore_5fsibling_12',['node_is_before_sibling',['../namespace_lumex_1_1_xml_1_1_x_path_1_1_document.html#abe2a7a4678afbef0edb0e88476c2fa4b',1,'Lumex::Xml::XPath::Document']]],
+  ['node_5foutput_13',['node_output',['../namespace_lumex_1_1_xml_1_1_node.html#a622ac6114ca459f603e2072479506941',1,'Lumex::Xml::Node']]],
+  ['node_5foutput_5fattributes_14',['node_output_attributes',['../_xml_node_8cpp.html#a0cfed1022cc6270401f0d5f6b27df607',1,'XmlNode.cpp']]],
+  ['node_5foutput_5fcomment_15',['node_output_comment',['../_xml_node_8cpp.html#afdf88c166fbef8feba73a11656d1a2a5',1,'XmlNode.cpp']]],
+  ['node_5foutput_5fend_16',['node_output_end',['../_xml_node_8cpp.html#a08731803b31fe1bac86107d608100f94',1,'XmlNode.cpp']]],
+  ['node_5foutput_5fpi_5fvalue_17',['node_output_pi_value',['../_xml_node_8cpp.html#a759553362006542d7aa6079a39a24bf4',1,'XmlNode.cpp']]],
+  ['node_5foutput_5fsimple_18',['node_output_simple',['../_xml_node_8cpp.html#a9cf6a87493cf624f41e7e716ca14c5b5',1,'XmlNode.cpp']]],
+  ['node_5foutput_5fstart_19',['node_output_start',['../_xml_node_8cpp.html#a07519fce779050e37d06f59144b370c3',1,'XmlNode.cpp']]],
+  ['normalize_5fspace_20',['normalize_space',['../namespace_lumex_1_1_xml_1_1_utility.html#a44e95b6ffabf80ce5932a119f160b6c8',1,'Lumex::Xml::Utility']]],
+  ['nullopt_5ft_21',['nullopt_t',['../struct_lumex_1_1_core_1_1_optional_1_1nullopt__t.html#a4cfa6dbf4368496ecc9bd17e10362b6a',1,'Lumex::Core::Optional::nullopt_t']]],
+  ['numbergenerator_22',['NumberGenerator',['../class_number_generator.html#a724b6a3b1ad89e39b74629aaeccb7e60',1,'NumberGenerator::NumberGenerator()'],['../class_number_generator.html#a037366647121119f51e16f9cf744b18a',1,'NumberGenerator::NumberGenerator(T from_val, T to_val, DistributionType dist_type=DistributionType::UNIFORM)'],['../class_number_generator.html#ab3e900bce26006a004c47d4ba49ee43f',1,'NumberGenerator::NumberGenerator(NumberGenerator const &amp;)=delete'],['../class_number_generator.html#a2bbe0c6d4ee06fbbd58d12c9aba84435',1,'NumberGenerator::NumberGenerator(NumberGenerator &amp;&amp;) noexcept=delete']]]
 ];

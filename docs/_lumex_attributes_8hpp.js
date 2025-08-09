@@ -13,5 +13,6 @@ var _lumex_attributes_8hpp =
     [ "LUMEX_ATTRIBUTE_NOINLINE", "_lumex_attributes_8hpp.html#acb652623305f8803081a68cf664aeeeb", null ],
     [ "LUMEX_ATTRIBUTE_NORETURN", "_lumex_attributes_8hpp.html#adcff7ab97fba8878f8a5526929644ea4", null ],
     [ "LUMEX_ATTRIBUTE_OPTIMIZE_FOR_SYNCHRONIZED", "_lumex_attributes_8hpp.html#af526877eabe3ac0bdd6d8f50d401f20d", null ],
-    [ "LUMEX_ATTRIBUTE_UNLIKELY", "_lumex_attributes_8hpp.html#a9f3e0db2f24a490f5d48348cbfbc6fb9", null ]
+    [ "LUMEX_ATTRIBUTE_UNLIKELY", "_lumex_attributes_8hpp.html#a9f3e0db2f24a490f5d48348cbfbc6fb9", null ],
+    [ "LUMEX_ATTRIBUTE_UNLIKELY_COND", "_lumex_attributes_8hpp.html#a3be58b7cdc675eda56cf33bc9c6d7f5e", null ]
 ];
