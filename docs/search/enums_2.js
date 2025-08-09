@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lumexloglevel_0',['LumexLogLevel',['../namespace_lumex_1_1_applied_1_1_logging.html#a8e9e6451b4f33ca0135e137538d24cdd',1,'Lumex::Applied::Logging']]]
+  ['distributiontype_0',['DistributionType',['../_lumex_number_generator_8hpp.html#aca272ab2bf25bfa410cbbbedfc8aef70',1,'LumexNumberGenerator.hpp']]]
 ];

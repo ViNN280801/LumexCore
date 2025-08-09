@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['value_0',['value',['../struct_lumex_1_1_core_1_1_environment_1_1_lumex_environment_1_1_env_result.html#aec7b9aa441c3c2c710b991c34aea34fa',1,'Lumex::Core::Environment::LumexEnvironment::EnvResult::value'],['../struct_lumex_1_1_string_1_1_utility_1_1all__streamable_3_01_first_00_01_rest_8_8_8_01_4.html#af484a508a258323f91297521900f7a90',1,'Lumex::String::Utility::all_streamable&lt; First, Rest... &gt;::value'],['../struct_lumex_1_1_string_1_1_utility_1_1all__streamable_3_4.html#a7806f08f27e74bdbf9d6488b3aa62123',1,'Lumex::String::Utility::all_streamable&lt;&gt;::value']]]
+  ['utf8_5fbom_5f0_0',['UTF8_BOM_0',['../namespace_lumex_1_1_applied_1_1_settings_1_1_constants.html#a359823a30831c4c9b8c7ac13a9429f58',1,'Lumex::Applied::Settings::Constants']]],
+  ['utf8_5fbom_5f1_1',['UTF8_BOM_1',['../namespace_lumex_1_1_applied_1_1_settings_1_1_constants.html#ad3d7372af7973bc996c802f8f5109498',1,'Lumex::Applied::Settings::Constants']]],
+  ['utf8_5fbom_5f2_2',['UTF8_BOM_2',['../namespace_lumex_1_1_applied_1_1_settings_1_1_constants.html#a464e156fb4fdc7e15e9f003726bd24f2',1,'Lumex::Applied::Settings::Constants']]],
+  ['utf8_5fbom_5fsize_3',['UTF8_BOM_SIZE',['../namespace_lumex_1_1_applied_1_1_settings_1_1_constants.html#abf61e5b868352c006a2c9c6d0e770285',1,'Lumex::Applied::Settings::Constants']]]
 ];

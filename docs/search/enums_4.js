@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['supportedconfigextensions_0',['SupportedConfigExtensions',['../namespace_lumex_1_1_applied_1_1_settings.html#a85c4bbbdcad9235e4d6bb51aabb2e4e7',1,'Lumex::Applied::Settings']]]
+  ['indent_5fflags_5ft_0',['indent_flags_t',['../namespace_lumex_1_1_xml_1_1_types.html#a85b854709423a22449bb69708b968e4c',1,'Lumex::Xml::Types']]]
 ];

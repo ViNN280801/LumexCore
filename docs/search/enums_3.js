@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['perms_0',['Perms',['../namespace_lumex_1_1_core_1_1_filesystem.html#ac7687441fc96772618955fdbb34d81f1',1,'Lumex::Core::Filesystem']]]
+  ['filetype_0',['FileType',['../namespace_lumex_1_1_core_1_1_filesystem.html#a593c3a9bb86b55fa3aeb075a07e78450',1,'Lumex::Core::Filesystem']]]
 ];

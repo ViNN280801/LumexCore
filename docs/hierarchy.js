@@ -3,13 +3,17 @@ var hierarchy =
     [ "Lumex::String::Utility::all_streamable< Args >", "struct_lumex_1_1_string_1_1_utility_1_1all__streamable.html", null ],
     [ "Lumex::String::Utility::all_streamable< First, Rest... >", "struct_lumex_1_1_string_1_1_utility_1_1all__streamable_3_01_first_00_01_rest_8_8_8_01_4.html", null ],
     [ "Lumex::String::Utility::all_streamable<>", "struct_lumex_1_1_string_1_1_utility_1_1all__streamable_3_4.html", null ],
+    [ "Lumex::Xml::XPath::Ast::axis_to_type< N >", "struct_lumex_1_1_xml_1_1_x_path_1_1_ast_1_1axis__to__type.html", null ],
+    [ "binary_op_t", "structbinary__op__t.html", null ],
     [ "Lumex::Core::Base64::Decoder", "class_lumex_1_1_core_1_1_base64_1_1_decoder.html", null ],
     [ "Lumex::Core::Filesystem::DirectoryEntry", "class_lumex_1_1_core_1_1_filesystem_1_1_directory_entry.html", null ],
     [ "Lumex::Core::Filesystem::DirectoryIterator", "class_lumex_1_1_core_1_1_filesystem_1_1_directory_iterator.html", null ],
+    [ "Lumex::Xml::XPath::Document::document_order_comparator", "struct_lumex_1_1_xml_1_1_x_path_1_1_document_1_1document__order__comparator.html", null ],
     [ "Lumex::Core::Base64::Encoder", "class_lumex_1_1_core_1_1_base64_1_1_encoder.html", null ],
     [ "Lumex::Core::Environment::LumexEnvironment::EnvResult", "struct_lumex_1_1_core_1_1_environment_1_1_lumex_environment_1_1_env_result.html", null ],
     [ "std::exception", null, [
-      [ "Lumex::Core::Exceptions::LumexBaseException", "class_lumex_1_1_core_1_1_exceptions_1_1_lumex_base_exception.html", null ]
+      [ "Lumex::Core::Exceptions::LumexBaseException", "class_lumex_1_1_core_1_1_exceptions_1_1_lumex_base_exception.html", null ],
+      [ "Lumex::Xml::XPath::Exception::XPathException", "class_lumex_1_1_xml_1_1_x_path_1_1_exception_1_1_x_path_exception.html", null ]
     ] ],
     [ "std::false_type", null, [
       [ "Lumex::Core::Base64::detail::has_convertible_indexed_access< T, void_t< decltype(std::declval< T >()[std::declval< size_t >()]), enable_if_t< std::is_convertible< decltype(std::declval< T >()[std::declval< size_t >()]), Types::byte_type >::value > > >", "struct_lumex_1_1_core_1_1_base64_1_1detail_1_1has__convertible__indexed__access_3_01_t_00_01void30abbf84f38bf68f69b6c0603b024346.html", null ],
@@ -22,6 +26,7 @@ var hierarchy =
     [ "Lumex::Core::Filesystem::FileStatus", "class_lumex_1_1_core_1_1_filesystem_1_1_file_status.html", null ],
     [ "Lumex::Core::Filesystem::FilesystemResult< T >", "class_lumex_1_1_core_1_1_filesystem_1_1_filesystem_result.html", null ],
     [ "Lumex::Core::Filesystem::FilesystemResult< void >", "class_lumex_1_1_core_1_1_filesystem_1_1_filesystem_result_3_01void_01_4.html", null ],
+    [ "gap", "structgap.html", null ],
     [ "HardwareCapabilities", "class_hardware_capabilities.html", null ],
     [ "Lumex::Applied::Hardware::HardwareCapabilities", "class_lumex_1_1_applied_1_1_hardware_1_1_hardware_capabilities.html", null ],
     [ "HardwareInfo", "struct_hardware_info.html", null ],
@@ -37,6 +42,12 @@ var hierarchy =
     [ "Lumex::Core::Optional::in_place_t", "struct_lumex_1_1_core_1_1_optional_1_1in__place__t.html", null ],
     [ "Lumex::Core::Optional::in_place_t::init_tag", "struct_lumex_1_1_core_1_1_optional_1_1in__place__t_1_1init__tag.html", null ],
     [ "Lumex::Core::Optional::nullopt_t::init_tag", "struct_lumex_1_1_core_1_1_optional_1_1nullopt__t_1_1init__tag.html", null ],
+    [ "Lumex::Xml::Writer::IXmlWriter", "class_lumex_1_1_xml_1_1_writer_1_1_i_xml_writer.html", [
+      [ "Lumex::Xml::Writer::XmlWriterFile", "class_lumex_1_1_xml_1_1_writer_1_1_xml_writer_file.html", null ],
+      [ "Lumex::Xml::Writer::XmlWriterStream", "class_lumex_1_1_xml_1_1_writer_1_1_xml_writer_stream.html", null ]
+    ] ],
+    [ "Lumex::Xml::Utility::latin1_decoder", "struct_lumex_1_1_xml_1_1_utility_1_1latin1__decoder.html", null ],
+    [ "Lumex::Xml::Utility::latin1_writer", "struct_lumex_1_1_xml_1_1_utility_1_1latin1__writer.html", null ],
     [ "Logger", "class_logger.html", null ],
     [ "std::logic_error", null, [
       [ "Lumex::Core::Optional::LumexBadOptionalAccess", "class_lumex_1_1_core_1_1_optional_1_1_lumex_bad_optional_access.html", null ]
@@ -53,10 +64,15 @@ var hierarchy =
     [ "Lumex::Core::Temporary::LumexTemporary", "class_lumex_1_1_core_1_1_temporary_1_1_lumex_temporary.html", null ],
     [ "Lumex::Core::Time::LumexTime", "class_lumex_1_1_core_1_1_time_1_1_lumex_time.html", null ],
     [ "Lumex::Core::StringView::LumexWStringView", "class_lumex_1_1_core_1_1_string_view_1_1_lumex_w_string_view.html", null ],
+    [ "Lumex::Xml::Node::name_null_sentry", "struct_lumex_1_1_xml_1_1_node_1_1name__null__sentry.html", null ],
     [ "Lumex::Core::Optional::nullopt_t", "struct_lumex_1_1_core_1_1_optional_1_1nullopt__t.html", null ],
     [ "NumberGenerator< T >", "class_number_generator.html", null ],
+    [ "Lumex::Xml::Utility::opt_false", "struct_lumex_1_1_xml_1_1_utility_1_1opt__false.html", null ],
+    [ "Lumex::Xml::Utility::opt_true", "struct_lumex_1_1_xml_1_1_utility_1_1opt__true.html", null ],
     [ "Lumex::Core::Filesystem::Path", "class_lumex_1_1_core_1_1_filesystem_1_1_path.html", null ],
     [ "Lumex::Core::Filesystem::SpaceInfo", "class_lumex_1_1_core_1_1_filesystem_1_1_space_info.html", null ],
+    [ "strconv_attribute_impl< opt_escape >", "structstrconv__attribute__impl.html", null ],
+    [ "strconv_pcdata_impl< opt_trim, opt_eol, opt_escape >", "structstrconv__pcdata__impl.html", null ],
     [ "Lumex::Core::Temporary::TemporaryDirectory", "class_lumex_1_1_core_1_1_temporary_1_1_temporary_directory.html", null ],
     [ "Lumex::Core::Temporary::TemporaryFile", "class_lumex_1_1_core_1_1_temporary_1_1_temporary_file.html", null ],
     [ "std::true_type", null, [
@@ -64,6 +80,68 @@ var hierarchy =
       [ "Lumex::Core::Base64::detail::has_convertible_size< T, void_t< decltype(std::declval< T >().size()), enable_if_t< std::is_convertible< decltype(std::declval< T >().size()), size_t >::value > > >", "struct_lumex_1_1_core_1_1_base64_1_1detail_1_1has__convertible__size_3_01_t_00_01void__t_3_01decafc34264bb01ed15854f507305c6fc67.html", null ],
       [ "Lumex::String::Utility::is_streamable< T, void_t< decltype(std::declval< std::ostream & >()<< std::declval< T >())> >", "struct_lumex_1_1_string_1_1_utility_1_1is__streamable_3_01_t_00_01void__t_3_01decltype_07std_1_153a1e12d0dc94627695a0680a973a936.html", null ]
     ] ],
+    [ "Lumex::Xml::Utility::utf16_counter", "struct_lumex_1_1_xml_1_1_utility_1_1utf16__counter.html", null ],
+    [ "Lumex::Xml::Utility::utf16_decoder< opt_swap >", "struct_lumex_1_1_xml_1_1_utility_1_1utf16__decoder.html", null ],
+    [ "Lumex::Xml::Utility::utf16_writer", "struct_lumex_1_1_xml_1_1_utility_1_1utf16__writer.html", null ],
+    [ "Lumex::Xml::Utility::utf32_counter", "struct_lumex_1_1_xml_1_1_utility_1_1utf32__counter.html", null ],
+    [ "Lumex::Xml::Utility::utf32_decoder< opt_swap >", "struct_lumex_1_1_xml_1_1_utility_1_1utf32__decoder.html", null ],
+    [ "Lumex::Xml::Utility::utf32_writer", "struct_lumex_1_1_xml_1_1_utility_1_1utf32__writer.html", null ],
+    [ "Lumex::Xml::Utility::utf8_counter", "struct_lumex_1_1_xml_1_1_utility_1_1utf8__counter.html", null ],
+    [ "Lumex::Xml::Utility::utf8_decoder", "struct_lumex_1_1_xml_1_1_utility_1_1utf8__decoder.html", null ],
+    [ "Lumex::Xml::Utility::utf8_writer", "struct_lumex_1_1_xml_1_1_utility_1_1utf8__writer.html", null ],
     [ "Lumex::Core::Base64::Validator", "class_lumex_1_1_core_1_1_base64_1_1_validator.html", null ],
-    [ "Lumex::Core::Base64::detail::void_t_impl<... >", "struct_lumex_1_1_core_1_1_base64_1_1detail_1_1void__t__impl.html", null ]
+    [ "Lumex::Core::Base64::detail::void_t_impl<... >", "struct_lumex_1_1_core_1_1_base64_1_1detail_1_1void__t__impl.html", null ],
+    [ "Lumex::Xml::Utility::wchar_decoder", "struct_lumex_1_1_xml_1_1_utility_1_1wchar__decoder.html", null ],
+    [ "Lumex::Xml::Utility::wchar_selector< size >", "struct_lumex_1_1_xml_1_1_utility_1_1wchar__selector.html", null ],
+    [ "Lumex::Xml::Utility::wchar_selector< 2 >", "struct_lumex_1_1_xml_1_1_utility_1_1wchar__selector_3_012_01_4.html", null ],
+    [ "Lumex::Xml::Utility::wchar_selector< 4 >", "struct_lumex_1_1_xml_1_1_utility_1_1wchar__selector_3_014_01_4.html", null ],
+    [ "Lumex::Xml::Types::xml_extra_buffer", "struct_lumex_1_1_xml_1_1_types_1_1xml__extra__buffer.html", null ],
+    [ "Lumex::Xml::Types::xml_mem_str_header_t", "struct_lumex_1_1_xml_1_1_types_1_1xml__mem__str__header__t.html", null ],
+    [ "xml_stream_chunk< T >", "structxml__stream__chunk.html", null ],
+    [ "Lumex::Xml::Memory::XmlAllocator", "struct_lumex_1_1_xml_1_1_memory_1_1_xml_allocator.html", [
+      [ "Lumex::Xml::Document::XmlDocumentBase", "struct_lumex_1_1_xml_1_1_document_1_1_xml_document_base.html", null ]
+    ] ],
+    [ "Lumex::Xml::Attribute::XmlAttribute", "class_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute.html", null ],
+    [ "Lumex::Xml::Attribute::XmlAttributeBase", "struct_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute_base.html", null ],
+    [ "Lumex::Xml::Attribute::XmlAttributeIterator", "class_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute_iterator.html", null ],
+    [ "Lumex::Xml::Writer::XmlBufferedWriter", "class_lumex_1_1_xml_1_1_writer_1_1_xml_buffered_writer.html", null ],
+    [ "Lumex::Xml::Utility::XmlCleaner< T >", "struct_lumex_1_1_xml_1_1_utility_1_1_xml_cleaner.html", null ],
+    [ "Lumex::Xml::Memory::XmlMemoryPage", "struct_lumex_1_1_xml_1_1_memory_1_1_xml_memory_page.html", null ],
+    [ "Lumex::Xml::Node::XmlNamedNodeIterator", "class_lumex_1_1_xml_1_1_node_1_1_xml_named_node_iterator.html", null ],
+    [ "Lumex::Xml::Node::XmlNode", "class_lumex_1_1_xml_1_1_node_1_1_xml_node.html", [
+      [ "Lumex::Xml::Document::XmlDocument", "class_lumex_1_1_xml_1_1_document_1_1_xml_document.html", null ]
+    ] ],
+    [ "Lumex::Xml::Node::XmlNodeBase", "struct_lumex_1_1_xml_1_1_node_1_1_xml_node_base.html", [
+      [ "Lumex::Xml::Document::XmlDocumentBase", "struct_lumex_1_1_xml_1_1_document_1_1_xml_document_base.html", null ]
+    ] ],
+    [ "Lumex::Xml::Node::XmlNodeIterator", "class_lumex_1_1_xml_1_1_node_1_1_xml_node_iterator.html", null ],
+    [ "Lumex::Xml::Range::XmlObjectRange< Iterator >", "class_lumex_1_1_xml_1_1_range_1_1_xml_object_range.html", null ],
+    [ "Lumex::Xml::Text::XmlParser", "struct_lumex_1_1_xml_1_1_text_1_1_xml_parser.html", null ],
+    [ "Lumex::Xml::Text::XmlParseResult", "struct_lumex_1_1_xml_1_1_text_1_1_xml_parse_result.html", null ],
+    [ "Lumex::Xml::Text::XmlText", "class_lumex_1_1_xml_1_1_text_1_1_xml_text.html", null ],
+    [ "Lumex::Xml::Tree::XmlTreeWalker", "class_lumex_1_1_xml_1_1_tree_1_1_xml_tree_walker.html", null ],
+    [ "Lumex::Xml::XPath::Memory::XPathAllocator", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_allocator.html", null ],
+    [ "Lumex::Xml::XPath::Memory::XPathAllocatorCapture", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_allocator_capture.html", null ],
+    [ "Lumex::Xml::XPath::Ast::XPathAstNode", "class_lumex_1_1_xml_1_1_x_path_1_1_ast_1_1_x_path_ast_node.html", null ],
+    [ "Lumex::Xml::XPath::Context::XPathContext", "struct_lumex_1_1_xml_1_1_x_path_1_1_context_1_1_x_path_context.html", null ],
+    [ "Lumex::Xml::XPath::Parser::Lexer::XPathLexer", "class_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_lexer_1_1_x_path_lexer.html", null ],
+    [ "Lumex::Xml::XPath::Parser::Lexer::XPathLexerString", "struct_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_lexer_1_1_x_path_lexer_string.html", null ],
+    [ "Lumex::Xml::XPath::Memory::XPathMemoryBlock", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_memory_block.html", null ],
+    [ "Lumex::Xml::XPath::Node::XPathNode", "class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node.html", null ],
+    [ "Lumex::Xml::XPath::Node::XPathNodeSet", "class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node_set.html", null ],
+    [ "Lumex::Xml::XPath::Node::XPathNodeSetRaw", "class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node_set_raw.html", null ],
+    [ "Lumex::Xml::XPath::Parser::XPathParser", "struct_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_x_path_parser.html", null ],
+    [ "Lumex::Xml::XPath::Parser::XPathParseResult", "struct_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_x_path_parse_result.html", null ],
+    [ "Lumex::Xml::XPath::Query::XPathQuery", "class_lumex_1_1_xml_1_1_x_path_1_1_query_1_1_x_path_query.html", null ],
+    [ "Lumex::Xml::XPath::XPathQueryImpl", "struct_lumex_1_1_xml_1_1_x_path_1_1_x_path_query_impl.html", null ],
+    [ "Lumex::Xml::XPath::Memory::XPathStack", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_stack.html", null ],
+    [ "Lumex::Xml::XPath::Memory::XPathStackData", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_stack_data.html", null ],
+    [ "Lumex::Xml::XPath::String::XPathString", "class_lumex_1_1_xml_1_1_x_path_1_1_string_1_1_x_path_string.html", null ],
+    [ "Lumex::Xml::XPath::Variable::XPathVariable", "class_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1_x_path_variable.html", [
+      [ "Lumex::Xml::XPath::Variable::xpath_variable_boolean", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__boolean.html", null ],
+      [ "Lumex::Xml::XPath::Variable::xpath_variable_node_set", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__node__set.html", null ],
+      [ "Lumex::Xml::XPath::Variable::xpath_variable_number", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__number.html", null ],
+      [ "Lumex::Xml::XPath::Variable::xpath_variable_string", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__string.html", null ]
+    ] ],
+    [ "Lumex::Xml::XPath::Variable::XPathVariableSet", "class_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1_x_path_variable_set.html", null ]
 ];
