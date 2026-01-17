@@ -1,6 +1,27 @@
 var searchData=
 [
-  ['type_5fsorted_0',['type_sorted',['../class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node_set.html#af2eadd19d1082c6cf507478bde5cb1b8a8fa0fdd3e9d0384905eb5ffd0e39e99a',1,'Lumex::Xml::XPath::Node::XPathNodeSet']]],
-  ['type_5fsorted_5freverse_1',['type_sorted_reverse',['../class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node_set.html#af2eadd19d1082c6cf507478bde5cb1b8a1d50d06d8c87e7230564ef62c2aa476c',1,'Lumex::Xml::XPath::Node::XPathNodeSet']]],
-  ['type_5funsorted_2',['type_unsorted',['../class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node_set.html#af2eadd19d1082c6cf507478bde5cb1b8afbea5008c6c30e67206612d31c6f261c',1,'Lumex::Xml::XPath::Node::XPathNodeSet']]]
+  ['set_5fgid_0',['set_gid',['../a00470.html#ac7687441fc96772618955fdbb34d81f1aea8f56585bae5bd29a5cb0d29767cccb',1,'Lumex::Core::Filesystem']]],
+  ['set_5fuid_1',['set_uid',['../a00470.html#ac7687441fc96772618955fdbb34d81f1a2154ad8380cc7d3b920b3563078a50a8',1,'Lumex::Core::Filesystem']]],
+  ['short_2',['SHORT',['../a00017.html#a51e383d4bc5efe7b8b7556ff412b6283aa35c2b02966b1563e5bf7b81b8b0cf77',1,'Logger.hpp']]],
+  ['socket_3',['socket',['../a00470.html#a593c3a9bb86b55fa3aeb075a07e78450a61f2529360aec54f5dc9804b842cf3fa',1,'Lumex::Core::Filesystem']]],
+  ['status_5fappend_5finvalid_5froot_4',['status_append_invalid_root',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fca1a7194ce62f96d595e55c80550c1ac14',1,'Lumex::Xml::Types']]],
+  ['status_5fbad_5fattribute_5',['status_bad_attribute',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fcad5b3a128b2e3f4025750a9d4dc31da8f',1,'Lumex::Xml::Types']]],
+  ['status_5fbad_5fcdata_6',['status_bad_cdata',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fcae070fc587176edcea4da5c96fcc91b07',1,'Lumex::Xml::Types']]],
+  ['status_5fbad_5fcomment_7',['status_bad_comment',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fca524e8e5646787384514eb4ea43e7bb8e',1,'Lumex::Xml::Types']]],
+  ['status_5fbad_5fdoctype_8',['status_bad_doctype',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fca8e2117ba69741157e8013170ccf8e021',1,'Lumex::Xml::Types']]],
+  ['status_5fbad_5fend_5felement_9',['status_bad_end_element',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fca46256b1d4d2b1cf7b8f925070296ad3b',1,'Lumex::Xml::Types']]],
+  ['status_5fbad_5fpcdata_10',['status_bad_pcdata',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fcab747c8597c7c89cc14d8191040a07bae',1,'Lumex::Xml::Types']]],
+  ['status_5fbad_5fpi_11',['status_bad_pi',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fca6b70445f6ba95209ca690ff216aeefce',1,'Lumex::Xml::Types']]],
+  ['status_5fbad_5fstart_5felement_12',['status_bad_start_element',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fcab6f4fe59efb8c56da5ec47e2fe1fbcca',1,'Lumex::Xml::Types']]],
+  ['status_5fend_5felement_5fmismatch_13',['status_end_element_mismatch',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fca7ef7f66349c449be1ccc9ef691f8b097',1,'Lumex::Xml::Types']]],
+  ['status_5ffile_5fnot_5ffound_14',['status_file_not_found',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fcadaec3e0479b3294612e77ea65f458e3a',1,'Lumex::Xml::Types']]],
+  ['status_5finternal_5ferror_15',['status_internal_error',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fca1662a7dfe2f78cb8fdbbce1c12f30fec',1,'Lumex::Xml::Types']]],
+  ['status_5fio_5ferror_16',['status_io_error',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fca53a747b53980e5bc5cc1e7084cfe7b53',1,'Lumex::Xml::Types']]],
+  ['status_5fno_5fdocument_5felement_17',['status_no_document_element',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fca019ed8108c670f1e106034f3714f38a4',1,'Lumex::Xml::Types']]],
+  ['status_5fok_18',['status_ok',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fcaf5f730d29cdc21b5d836397f6a7ce173',1,'Lumex::Xml::Types']]],
+  ['status_5fout_5fof_5fmemory_19',['status_out_of_memory',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fca4d3fd1bde73354e923cc989e340079c1',1,'Lumex::Xml::Types']]],
+  ['status_5funrecognized_5ftag_20',['status_unrecognized_tag',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fca7a7bc3ab9cd6401bee546b413e5bdde3',1,'Lumex::Xml::Types']]],
+  ['sticky_5fbit_21',['sticky_bit',['../a00470.html#ac7687441fc96772618955fdbb34d81f1a3a3b94501085ac7f29f89b8335e886d7',1,'Lumex::Core::Filesystem']]],
+  ['success_22',['Success',['../a00451.html#a8e9e6451b4f33ca0135e137538d24cdda505a83f220c02df2f85c3810cd9ceb38',1,'Lumex::Applied::Logging']]],
+  ['symlink_23',['symlink',['../a00470.html#a593c3a9bb86b55fa3aeb075a07e78450aa978acc8a7ae15f49f58f3495f0d85ba',1,'Lumex::Core::Filesystem']]]
 ];

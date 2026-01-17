@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['detail_3a_3acapture_5fstacktrace_0',['capture_stacktrace',['../class_lumex_1_1_core_1_1_stacktrace_1_1_lumex_basic_stacktrace.html#a306554cb0d801b4a08739e650ea807e5',1,'Lumex::Core::Stacktrace::LumexBasicStacktrace']]]
+  ['circularbuffer_0',['CircularBuffer',['../a00624.html#a8545421a5bccb994dede03af8a71b222',1,'Lumex::Core::CircularBuffer::CircularBuffer::iterator::CircularBuffer()'],['../a00628.html#a8545421a5bccb994dede03af8a71b222',1,'Lumex::Core::CircularBuffer::CircularBuffer::const_iterator::CircularBuffer()']]]
 ];

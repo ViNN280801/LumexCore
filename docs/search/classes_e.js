@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['temporarydirectory_0',['TemporaryDirectory',['../class_lumex_1_1_core_1_1_temporary_1_1_temporary_directory.html',1,'Lumex::Core::Temporary']]],
-  ['temporaryfile_1',['TemporaryFile',['../class_lumex_1_1_core_1_1_temporary_1_1_temporary_file.html',1,'Lumex::Core::Temporary']]]
+  ['result_5fof_0',['result_of',['../a00936.html',1,'Lumex::Utility::TypeTraits']]],
+  ['result_5fof_3c_20func_28args_2e_2e_2e_29_3e_1',['result_of&lt; Func(Args...)&gt;',['../a00940.html',1,'Lumex::Utility::TypeTraits']]]
 ];

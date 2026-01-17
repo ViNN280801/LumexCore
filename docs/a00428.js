@@ -1,0 +1,4 @@
+var a00428 =
+[
+    [ "LUMEX_IMPLEMENTATION", "a00428.html#a07486181f1990291c2a348de8eb4c480", null ]
+];

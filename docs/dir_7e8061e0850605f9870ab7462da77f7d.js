@@ -1,8 +1,11 @@
 var dir_7e8061e0850605f9870ab7462da77f7d =
 [
     [ "base64", "dir_d49a49fa9a141faf33dc8fc76f52da58.html", "dir_d49a49fa9a141faf33dc8fc76f52da58" ],
+    [ "circular_buffer", "dir_3e19d2eb3c4e19e8d75ccb8cee869fa6.html", "dir_3e19d2eb3c4e19e8d75ccb8cee869fa6" ],
+    [ "crc", "dir_98caa1916543dc75c4447070785a392c.html", "dir_98caa1916543dc75c4447070785a392c" ],
     [ "environment", "dir_5107d38626b14fb64e9f92b542cf3b43.html", "dir_5107d38626b14fb64e9f92b542cf3b43" ],
     [ "exceptions", "dir_6413726bd6d3aec0e0911b90031b05f8.html", "dir_6413726bd6d3aec0e0911b90031b05f8" ],
+    [ "expected", "dir_f9986bae22981771d5201cdad569a73d.html", "dir_f9986bae22981771d5201cdad569a73d" ],
     [ "filesystem", "dir_e1e67baa9906048f390f2463ae82967f.html", "dir_e1e67baa9906048f390f2463ae82967f" ],
     [ "generators", "dir_371841d01ac46cca0a1a6562cfd62b44.html", "dir_371841d01ac46cca0a1a6562cfd62b44" ],
     [ "math", "dir_5847f344bacaab2a8f546361fde6a7b9.html", "dir_5847f344bacaab2a8f546361fde6a7b9" ],

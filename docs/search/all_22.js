@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['полный_20алгоритм_20работы_20safecomparator_0',['Полный алгоритм работы SafeComparator',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#algorithm',1,'']]],
+  ['полный_20пример_20всех_20операций_20сравнения_1',['Полный пример всех операций сравнения',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#comprehensive_example',1,'']]],
+  ['последствия_20проблем_2',['Последствия проблем',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#consequences',1,'']]],
+  ['потокобезопасность_3',['Потокобезопасность',['../a00616.html#threads',1,'']]],
+  ['почему_20это_20работает_4',['Почему это работает',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#why_it_works',1,'']]],
+  ['пошаговый_20алгоритм_5',['Пошаговый алгоритм',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#step_by_step_algorithm',1,'']]],
+  ['практические_20примеры_6',['Практические примеры',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#examples',1,'']]],
+  ['практические_20примеры_20с_20кодом_7',['Практические примеры с кодом',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#practical_examples',1,'']]],
+  ['пример_20без_20safecomparator_20опасно_8',['Пример БЕЗ SafeComparator (опасно)',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#bad_example',1,'']]],
+  ['пример_20с_20safecomparator_20безопасно_9',['Пример С SafeComparator (безопасно)',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#good_example',1,'']]],
+  ['пример_20выполнения_20алгоритма_10',['Пример выполнения алгоритма',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#algorithm_example',1,'']]],
+  ['проблема_20переполнения_11',['Проблема переполнения',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#overflow',1,'']]],
+  ['проблема_20с_20плавающей_20точкой_12',['Проблема с плавающей точкой',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#floating_point',1,'']]],
+  ['проблема_3a_20небезопасное_20сравнение_20разных_20типов_13',['Проблема: Небезопасное сравнение разных типов',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#problem',1,'']]],
+  ['проверка_20диапазонов_14',['Проверка диапазонов',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#range_checking',1,'']]],
+  ['производительность_15',['Производительность',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#performance',1,'']]],
+  ['памяти_16',['Непрерывность памяти',['../a00616.html#contiguity',1,'']]],
+  ['переполнения_17',['Проблема переполнения',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#overflow',1,'']]],
+  ['плавающей_20точкой_18',['Проблема с плавающей точкой',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#floating_point',1,'']]],
+  ['примеры_19',['Практические примеры',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#examples',1,'']]],
+  ['примеры_20с_20кодом_20',['Практические примеры с кодом',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#practical_examples',1,'']]],
+  ['пример_20всех_20операций_20сравнения_21',['Полный пример всех операций сравнения',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#comprehensive_example',1,'']]],
+  ['проблем_22',['Последствия проблем',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#consequences',1,'']]]
+];
