@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['unspecified_5fbool_5ftype_0',['unspecified_bool_type',['../class_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute.html#ab9b57a68a6741e24ee0030ef3523c6b8',1,'Lumex::Xml::Attribute::XmlAttribute::unspecified_bool_type'],['../class_lumex_1_1_xml_1_1_node_1_1_xml_node.html#a1efecb5da3476ed626d655f23418924b',1,'Lumex::Xml::Node::XmlNode::unspecified_bool_type'],['../class_lumex_1_1_xml_1_1_text_1_1_xml_text.html#a6cc37848c5b38ce15c3be3c80d1a2d18',1,'Lumex::Xml::Text::XmlText::unspecified_bool_type'],['../class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node.html#a898ee2f3aa6e71aab3ca1b7a6af6214d',1,'Lumex::Xml::XPath::Node::XPathNode::unspecified_bool_type'],['../class_lumex_1_1_xml_1_1_x_path_1_1_query_1_1_x_path_query.html#a38e7ff691ad952363a4dcbe51c7ccf2c',1,'Lumex::Xml::XPath::Query::XPathQuery::unspecified_bool_type']]]
+];
