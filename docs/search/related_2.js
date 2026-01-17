@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lumexxmlnode_0',['LumexXmlNode',['../class_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute.html#a84d3a5d61aef07ed2c9d63fd6b82401a',1,'Lumex::Xml::Attribute::XmlAttribute']]]
+  ['detail_3a_3acapture_5fstacktrace_0',['capture_stacktrace',['../a00664.html#a306554cb0d801b4a08739e650ea807e5',1,'Lumex::Core::Stacktrace::LumexBasicStacktrace']]]
 ];

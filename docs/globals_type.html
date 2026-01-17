@@ -32,9 +32,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
    </div>
-   <div id="projectbrief">A C++11-20 core library for Lumex projects.</div>
+   <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -103,33 +103,111 @@ $(function(){initNavTree('globals_type.html',''); initResizable(true); });
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all typedefs with links to the files they belong to:</div><ul>
-<li>char_t&#160;:&#160;<a class="el" href="_xml_allocator_8hpp.html#a4269fd4f829e07f1b1e9a66310b2aed5">XmlAllocator.hpp</a></li>
-<li>DoubleGenerator&#160;:&#160;<a class="el" href="_lumex_number_generator_8hpp.html#a33d7021e9727a587966bdbdad6531e03">LumexNumberGenerator.hpp</a></li>
-<li>FloatGenerator&#160;:&#160;<a class="el" href="_lumex_number_generator_8hpp.html#aa9828c9784e6076091c55f6b65ade998">LumexNumberGenerator.hpp</a></li>
-<li>ILumexSettings&#160;:&#160;<a class="el" href="_i_lumex_settings_8hpp.html#ac3cea79e15d317f0354abfc191845dc6">ILumexSettings.hpp</a></li>
-<li>IntGenerator&#160;:&#160;<a class="el" href="_lumex_number_generator_8hpp.html#a79a1290b551d4a0ce0c045563f7a2b14">LumexNumberGenerator.hpp</a></li>
-<li>LongGenerator&#160;:&#160;<a class="el" href="_lumex_number_generator_8hpp.html#ad48ef5a261f7b5d4090abdc3963c1301">LumexNumberGenerator.hpp</a></li>
-<li>LumexBaseException&#160;:&#160;<a class="el" href="_lumex_exception_8hpp.html#a163c960e6710878c429dc5fdb8578c00">LumexException.hpp</a></li>
-<li>LumexCrashHandler&#160;:&#160;<a class="el" href="_lumex_crash_handler_8hpp.html#addea30ac5988395416dfc1fd8ecd19ec">LumexCrashHandler.hpp</a></li>
-<li>LumexEnvironment&#160;:&#160;<a class="el" href="_lumex_environment_8hpp.html#a849057a35e0357d925542779f79ac82d">LumexEnvironment.hpp</a></li>
-<li>LumexFilesystem&#160;:&#160;<a class="el" href="_lumex_temporary_8cpp.html#a591aa2b28a4c6130a23034fe12095624">LumexTemporary.cpp</a></li>
-<li>LumexLogging&#160;:&#160;<a class="el" href="_lumex_logging_8hpp.html#a161778f4af8e5bb60e2d33b69c10babb">LumexLogging.hpp</a></li>
-<li>LumexOptional&#160;:&#160;<a class="el" href="_lumex_optional_8hpp.html#a51e373b09f984efefcdc877904bc3444">LumexOptional.hpp</a></li>
-<li>LumexSettingsExtensions&#160;:&#160;<a class="el" href="_supported_config_extensions_8hpp.html#a0391245d6cfcc3359de121f019889033">SupportedConfigExtensions.hpp</a></li>
-<li>LumexSettingsFactory&#160;:&#160;<a class="el" href="_lumex_settings_factory_8hpp.html#a905c9ac1d4b70303a524de0bee8da127">LumexSettingsFactory.hpp</a></li>
-<li>LumexSettingsINI&#160;:&#160;<a class="el" href="_lumex_settings_i_n_i_8hpp.html#a96656e0a85c047de6fe97e642d03e130">LumexSettingsINI.hpp</a></li>
-<li>LumexStacktrace&#160;:&#160;<a class="el" href="_lumex_stacktrace_8hpp.html#a1d88bb418bd3bfb75e73a7cbf8f6b28b">LumexStacktrace.hpp</a></li>
-<li>LumexStacktraceEntry&#160;:&#160;<a class="el" href="_lumex_stacktrace_8hpp.html#adeed8ba2c7e2acbbb08a5833e7bdf841">LumexStacktrace.hpp</a></li>
-<li>LumexStringView&#160;:&#160;<a class="el" href="_lumex_string_view_8hpp.html#a032a4942b367e4fa22876631ce05b66b">LumexStringView.hpp</a></li>
-<li>LumexTemporary&#160;:&#160;<a class="el" href="_lumex_temporary_8hpp.html#a66ede0a005e814d41501d61eb9566f97">LumexTemporary.hpp</a></li>
-<li>LumexTime&#160;:&#160;<a class="el" href="_lumex_time_8hpp.html#ae651cca7b43a01c6d81d85b849241ce7">LumexTime.hpp</a></li>
-<li>LumexWStringView&#160;:&#160;<a class="el" href="_lumex_w_string_view_8hpp.html#af42bb1fb234d5002dd760e5474c0da7b">LumexWStringView.hpp</a></li>
-<li>RealNumberGeneratorHost&#160;:&#160;<a class="el" href="_lumex_number_generator_8hpp.html#add548008f917e9342d03b9cf309bcc1a">LumexNumberGenerator.hpp</a></li>
-<li>strconv_attribute_t&#160;:&#160;<a class="el" href="_xml_parser_8cpp.html#a1771b42a0b454094b266b58f4b5cd053">XmlParser.cpp</a></li>
-<li>strconv_pcdata_t&#160;:&#160;<a class="el" href="_xml_parser_8cpp.html#a674e7a8702a4fbe62d2bbf8d7813c963">XmlParser.cpp</a></li>
-<li>TemporaryDirectory&#160;:&#160;<a class="el" href="_lumex_temporary_8hpp.html#a9fd0872e5f6e30a7d9282345742d1ae9">LumexTemporary.hpp</a></li>
-<li>TemporaryFile&#160;:&#160;<a class="el" href="_lumex_temporary_8hpp.html#a78e01d31aa2cdceba5e743959ee5de15">LumexTemporary.hpp</a></li>
+<div class="textblock">Here is a list of all typedefs with links to the files they belong to:</div>
+
+<h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
+<li>AtomicCharComparator&#160;:&#160;<a class="el" href="a00203.html#a1dd40ccf8110c7bb5d8d805392c4867d">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicDoubleComparator&#160;:&#160;<a class="el" href="a00203.html#ae0015c6e1918e2fe2df59be0c244700a">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicFloatComparator&#160;:&#160;<a class="el" href="a00203.html#aa8b1820d6724e8aa615f09a809ecf2c1">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicIntComparator&#160;:&#160;<a class="el" href="a00203.html#adad5a481e7c74797cb57d4cd253cfd47">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicLongComparator&#160;:&#160;<a class="el" href="a00203.html#acd4cd70ea9941189dbe25e5143f2bc9e">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicLongDoubleComparator&#160;:&#160;<a class="el" href="a00203.html#a4011e56ad0f311a5eaed54d7d9272c25">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicLongLongComparator&#160;:&#160;<a class="el" href="a00203.html#ac11cf0ffb1c648b57f7fb01b219976bd">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicShortComparator&#160;:&#160;<a class="el" href="a00203.html#ade5d6e48edd438cdfc9d6f301fb4b3ce">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicUCharComparator&#160;:&#160;<a class="el" href="a00203.html#a516f4cfc04d74fe139a1295f960722c5">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicUIntComparator&#160;:&#160;<a class="el" href="a00203.html#acec756618a96caf3355794a33c68f3d9">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicULongComparator&#160;:&#160;<a class="el" href="a00203.html#a481b938c4e38fbe2bec2a708a819ac26">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicULongLongComparator&#160;:&#160;<a class="el" href="a00203.html#af088e6dbd0accc197039faf41228cab0">LumexSafeNumericComparator.hpp</a></li>
+<li>AtomicUShortComparator&#160;:&#160;<a class="el" href="a00203.html#a9de9a6ba461a12d2ff22d0cccc1c4ac0">LumexSafeNumericComparator.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>char_t&#160;:&#160;<a class="el" href="a00248.html#a4269fd4f829e07f1b1e9a66310b2aed5">XmlAllocator.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>DoubleGenerator&#160;:&#160;<a class="el" href="a00137.html#a33d7021e9727a587966bdbdad6531e03">LumexNumberGenerator.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>FastCharComparator&#160;:&#160;<a class="el" href="a00203.html#a740628f3d15bb9abad7f6a1829729fe5">LumexSafeNumericComparator.hpp</a></li>
+<li>FastDoubleComparator&#160;:&#160;<a class="el" href="a00203.html#a3add279bb4b40bfe819f759e3dbd6946">LumexSafeNumericComparator.hpp</a></li>
+<li>FastFloatComparator&#160;:&#160;<a class="el" href="a00203.html#a5cd732768f3503d5b793c91e8cebff36">LumexSafeNumericComparator.hpp</a></li>
+<li>FastIntComparator&#160;:&#160;<a class="el" href="a00203.html#ada5df7b620f7c13e77dd9f8a48198bc3">LumexSafeNumericComparator.hpp</a></li>
+<li>FastLongComparator&#160;:&#160;<a class="el" href="a00203.html#a4f6c6745b0ab3af103fa7e56ad463674">LumexSafeNumericComparator.hpp</a></li>
+<li>FastLongDoubleComparator&#160;:&#160;<a class="el" href="a00203.html#a16c7a1d3b9722da9dd6797de8124bc08">LumexSafeNumericComparator.hpp</a></li>
+<li>FastLongLongComparator&#160;:&#160;<a class="el" href="a00203.html#a5ba9ba41cfcc6abfa517dc86752ea362">LumexSafeNumericComparator.hpp</a></li>
+<li>FastShortComparator&#160;:&#160;<a class="el" href="a00203.html#a0752888ca98c56aa172c1a9e1e08c66a">LumexSafeNumericComparator.hpp</a></li>
+<li>FastUCharComparator&#160;:&#160;<a class="el" href="a00203.html#acd0ecbdd335ce93f9e2efcf3f94c56b7">LumexSafeNumericComparator.hpp</a></li>
+<li>FastUIntComparator&#160;:&#160;<a class="el" href="a00203.html#a99719db40cc124ca27f906d25440c789">LumexSafeNumericComparator.hpp</a></li>
+<li>FastULongComparator&#160;:&#160;<a class="el" href="a00203.html#aaa67bfe52d7d0a699788bc313ace0a4e">LumexSafeNumericComparator.hpp</a></li>
+<li>FastULongLongComparator&#160;:&#160;<a class="el" href="a00203.html#af78cea36d3a1855513054ba8aa4309bd">LumexSafeNumericComparator.hpp</a></li>
+<li>FastUShortComparator&#160;:&#160;<a class="el" href="a00203.html#a0011f8151254ef0815de7933c8f53d72">LumexSafeNumericComparator.hpp</a></li>
+<li>FloatGenerator&#160;:&#160;<a class="el" href="a00137.html#aa9828c9784e6076091c55f6b65ade998">LumexNumberGenerator.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>ILumexSettings&#160;:&#160;<a class="el" href="a00029.html#ac3cea79e15d317f0354abfc191845dc6">ILumexSettings.hpp</a></li>
+<li>IntGenerator&#160;:&#160;<a class="el" href="a00137.html#a79a1290b551d4a0ce0c045563f7a2b14">LumexNumberGenerator.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>LongGenerator&#160;:&#160;<a class="el" href="a00137.html#ad48ef5a261f7b5d4090abdc3963c1301">LumexNumberGenerator.hpp</a></li>
+<li>LumexBaseException&#160;:&#160;<a class="el" href="a00101.html#a163c960e6710878c429dc5fdb8578c00">LumexException.hpp</a></li>
+<li>LumexCrashHandler&#160;:&#160;<a class="el" href="a00089.html#addea30ac5988395416dfc1fd8ecd19ec">LumexCrashHandler.hpp</a></li>
+<li>LumexEnvironment&#160;:&#160;<a class="el" href="a00080.html#a849057a35e0357d925542779f79ac82d">LumexEnvironment.hpp</a></li>
+<li>LumexFilesystem&#160;:&#160;<a class="el" href="a00161.html#a591aa2b28a4c6130a23034fe12095624">LumexTemporary.cpp</a></li>
+<li>LumexLogging&#160;:&#160;<a class="el" href="a00023.html#a161778f4af8e5bb60e2d33b69c10babb">LumexLogging.hpp</a></li>
+<li>LumexOptional&#160;:&#160;<a class="el" href="a00143.html#a51e373b09f984efefcdc877904bc3444">LumexOptional.hpp</a></li>
+<li>LumexSettingsExtensions&#160;:&#160;<a class="el" href="a00044.html#a0391245d6cfcc3359de121f019889033">SupportedConfigExtensions.hpp</a></li>
+<li>LumexSettingsFactory&#160;:&#160;<a class="el" href="a00035.html#a905c9ac1d4b70303a524de0bee8da127">LumexSettingsFactory.hpp</a></li>
+<li>LumexSettingsINI&#160;:&#160;<a class="el" href="a00041.html#a96656e0a85c047de6fe97e642d03e130">LumexSettingsINI.hpp</a></li>
+<li>LumexStacktrace&#160;:&#160;<a class="el" href="a00107.html#a1d88bb418bd3bfb75e73a7cbf8f6b28b">LumexStacktrace.hpp</a></li>
+<li>LumexStacktraceEntry&#160;:&#160;<a class="el" href="a00107.html#adeed8ba2c7e2acbbb08a5833e7bdf841">LumexStacktrace.hpp</a></li>
+<li>LumexStringView&#160;:&#160;<a class="el" href="a00152.html#a032a4942b367e4fa22876631ce05b66b">LumexStringView.hpp</a></li>
+<li>LumexTemporary&#160;:&#160;<a class="el" href="a00164.html#a66ede0a005e814d41501d61eb9566f97">LumexTemporary.hpp</a></li>
+<li>LumexTime&#160;:&#160;<a class="el" href="a00170.html#ae651cca7b43a01c6d81d85b849241ce7">LumexTime.hpp</a></li>
+<li>LumexWStringView&#160;:&#160;<a class="el" href="a00158.html#af42bb1fb234d5002dd760e5474c0da7b">LumexWStringView.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<li>RealNumberGeneratorHost&#160;:&#160;<a class="el" href="a00137.html#add548008f917e9342d03b9cf309bcc1a">LumexNumberGenerator.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>SafeCharComparator&#160;:&#160;<a class="el" href="a00203.html#a616ec3d7f0d9275db778c79fe6943492">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeDoubleComparator&#160;:&#160;<a class="el" href="a00203.html#a76af09020cdc42f700787fafca9b269f">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeFloatComparator&#160;:&#160;<a class="el" href="a00203.html#a514c6f6a3e78aa488755e3afd364f6ec">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeIntComparator&#160;:&#160;<a class="el" href="a00203.html#a2d15746cbc52bb9fd554b6b81d30cb53">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeLongComparator&#160;:&#160;<a class="el" href="a00203.html#a30c19c456a56d4a0f7e9fa766c85c8fd">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeLongDoubleComparator&#160;:&#160;<a class="el" href="a00203.html#a3525590ce96753086c09b7f3917fc576">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeLongLongComparator&#160;:&#160;<a class="el" href="a00203.html#a398b6965d249286e2f6089f346fb5a09">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeShortComparator&#160;:&#160;<a class="el" href="a00203.html#aa59ef18594f0ed7e4fb8b31f9cca0b7e">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeUCharComparator&#160;:&#160;<a class="el" href="a00203.html#af0704846bd6bdf250e4a70d21f796e2d">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeUIntComparator&#160;:&#160;<a class="el" href="a00203.html#a23b6ddcc382a77ff0290d255762b0e14">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeULongComparator&#160;:&#160;<a class="el" href="a00203.html#afeb73a286f68ebbcb051354653f8f25c">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeULongLongComparator&#160;:&#160;<a class="el" href="a00203.html#a95e06f255be1c28b2d9d0630ec9d62a3">LumexSafeNumericComparator.hpp</a></li>
+<li>SafeUShortComparator&#160;:&#160;<a class="el" href="a00203.html#ab4ab2cfcc452643bb1f8a2a7eb09752e">LumexSafeNumericComparator.hpp</a></li>
+<li>strconv_attribute_t&#160;:&#160;<a class="el" href="a00278.html#a1771b42a0b454094b266b58f4b5cd053">XmlParser.cpp</a></li>
+<li>strconv_pcdata_t&#160;:&#160;<a class="el" href="a00278.html#a674e7a8702a4fbe62d2bbf8d7813c963">XmlParser.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>TemporaryDirectory&#160;:&#160;<a class="el" href="a00164.html#a9fd0872e5f6e30a7d9282345742d1ae9">LumexTemporary.hpp</a></li>
+<li>TemporaryFile&#160;:&#160;<a class="el" href="a00164.html#a78e01d31aa2cdceba5e743959ee5de15">LumexTemporary.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
+<li>void_t&#160;:&#160;<a class="el" href="a00017.html#ab8ddf9531fc4ac7ce28574db20c8f20e">Logger.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

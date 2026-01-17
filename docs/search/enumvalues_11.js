@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['value_0',['value',['../struct_lumex_1_1_xml_1_1_utility_1_1opt__false.html#a7f1fa59ca84909f56b4c9d3709ff8680ad40016f8a34e637435145c86b3e83ef8',1,'Lumex::Xml::Utility::opt_false::value'],['../struct_lumex_1_1_xml_1_1_utility_1_1opt__true.html#af0e8972d17e6ac6a329c2402218abe33a3766dc6280b9c965e086afd11eac1c91',1,'Lumex::Xml::Utility::opt_true::value']]]
+  ['uniform_0',['UNIFORM',['../a00137.html#aca272ab2bf25bfa410cbbbedfc8aef70a891f35a29c3d51d02ffd42dd6dcc69b2',1,'LumexNumberGenerator.hpp']]],
+  ['unknown_1',['unknown',['../a00470.html#a593c3a9bb86b55fa3aeb075a07e78450aad921d60486366258809553a3db49a4a',1,'Lumex::Core::Filesystem::unknown'],['../a00470.html#ac7687441fc96772618955fdbb34d81f1aad921d60486366258809553a3db49a4a',1,'Lumex::Core::Filesystem::unknown']]]
 ];

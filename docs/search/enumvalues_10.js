@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['uniform_0',['UNIFORM',['../_lumex_number_generator_8hpp.html#aca272ab2bf25bfa410cbbbedfc8aef70a891f35a29c3d51d02ffd42dd6dcc69b2',1,'LumexNumberGenerator.hpp']]],
-  ['unknown_1',['unknown',['../namespace_lumex_1_1_core_1_1_filesystem.html#a593c3a9bb86b55fa3aeb075a07e78450aad921d60486366258809553a3db49a4a',1,'Lumex::Core::Filesystem::unknown'],['../namespace_lumex_1_1_core_1_1_filesystem.html#ac7687441fc96772618955fdbb34d81f1aad921d60486366258809553a3db49a4a',1,'Lumex::Core::Filesystem::unknown']]]
+  ['type_5fsorted_0',['type_sorted',['../a01220.html#af2eadd19d1082c6cf507478bde5cb1b8a8fa0fdd3e9d0384905eb5ffd0e39e99a',1,'Lumex::Xml::XPath::Node::XPathNodeSet']]],
+  ['type_5fsorted_5freverse_1',['type_sorted_reverse',['../a01220.html#af2eadd19d1082c6cf507478bde5cb1b8a1d50d06d8c87e7230564ef62c2aa476c',1,'Lumex::Xml::XPath::Node::XPathNodeSet']]],
+  ['type_5funsorted_2',['type_unsorted',['../a01220.html#af2eadd19d1082c6cf507478bde5cb1b8afbea5008c6c30e67206612d31c6f261c',1,'Lumex::Xml::XPath::Node::XPathNodeSet']]]
 ];

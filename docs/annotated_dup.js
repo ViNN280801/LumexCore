@@ -1,215 +1,275 @@
 var annotated_dup =
 [
-    [ "Lumex", "namespace_lumex.html", [
-      [ "Applied", "namespace_lumex_1_1_applied.html", [
-        [ "Hardware", "namespace_lumex_1_1_applied_1_1_hardware.html", [
-          [ "HardwareCapabilities", "class_lumex_1_1_applied_1_1_hardware_1_1_hardware_capabilities.html", "class_lumex_1_1_applied_1_1_hardware_1_1_hardware_capabilities" ],
-          [ "HardwareInfo", "struct_lumex_1_1_applied_1_1_hardware_1_1_hardware_info.html", "struct_lumex_1_1_applied_1_1_hardware_1_1_hardware_info" ]
+    [ "Lumex", "a00435.html", [
+      [ "Applied", "a00436.html", [
+        [ "Hardware", "a00437.html", [
+          [ "cpu_vectorization_info_t", "a00520.html", "a00520" ],
+          [ "CPUVectorizationDetector", "a00524.html", "a00524" ],
+          [ "HardwareCapabilities", "a00532.html", "a00532" ],
+          [ "HardwareInfo", "a00528.html", "a00528" ]
         ] ],
-        [ "Logging", "namespace_lumex_1_1_applied_1_1_logging.html", [
-          [ "LumexLogging", "class_lumex_1_1_applied_1_1_logging_1_1_lumex_logging.html", "class_lumex_1_1_applied_1_1_logging_1_1_lumex_logging" ]
+        [ "Logging", "a00451.html", [
+          [ "LumexLogging", "a00568.html", "a00568" ]
         ] ],
-        [ "Settings", "namespace_lumex_1_1_applied_1_1_settings.html", [
-          [ "ILumexSettings", "class_lumex_1_1_applied_1_1_settings_1_1_i_lumex_settings.html", "class_lumex_1_1_applied_1_1_settings_1_1_i_lumex_settings" ],
-          [ "LumexSettingsFactory", "class_lumex_1_1_applied_1_1_settings_1_1_lumex_settings_factory.html", "class_lumex_1_1_applied_1_1_settings_1_1_lumex_settings_factory" ],
-          [ "LumexSettingsINI", "class_lumex_1_1_applied_1_1_settings_1_1_lumex_settings_i_n_i.html", "class_lumex_1_1_applied_1_1_settings_1_1_lumex_settings_i_n_i" ]
+        [ "Settings", "a00452.html", [
+          [ "ILumexSettings", "a00572.html", "a00572" ],
+          [ "LumexSettingsFactory", "a00576.html", "a00576" ],
+          [ "LumexSettingsINI", "a00580.html", "a00580" ]
         ] ]
       ] ],
-      [ "Core", "namespace_lumex_1_1_core.html", [
-        [ "Base64", "namespace_lumex_1_1_core_1_1_base64.html", [
-          [ "detail", "namespace_lumex_1_1_core_1_1_base64_1_1detail.html", [
-            [ "has_convertible_indexed_access", "struct_lumex_1_1_core_1_1_base64_1_1detail_1_1has__convertible__indexed__access.html", null ],
-            [ "has_convertible_indexed_access< T, void_t< decltype(std::declval< T >()[std::declval< size_t >()]), enable_if_t< std::is_convertible< decltype(std::declval< T >()[std::declval< size_t >()]), Types::byte_type >::value > > >", "struct_lumex_1_1_core_1_1_base64_1_1detail_1_1has__convertible__indexed__access_3_01_t_00_01void30abbf84f38bf68f69b6c0603b024346.html", null ],
-            [ "has_convertible_size", "struct_lumex_1_1_core_1_1_base64_1_1detail_1_1has__convertible__size.html", null ],
-            [ "has_convertible_size< T, void_t< decltype(std::declval< T >().size()), enable_if_t< std::is_convertible< decltype(std::declval< T >().size()), size_t >::value > > >", "struct_lumex_1_1_core_1_1_base64_1_1detail_1_1has__convertible__size_3_01_t_00_01void__t_3_01decafc34264bb01ed15854f507305c6fc67.html", null ],
-            [ "void_t_impl", "struct_lumex_1_1_core_1_1_base64_1_1detail_1_1void__t__impl.html", "struct_lumex_1_1_core_1_1_base64_1_1detail_1_1void__t__impl" ]
+      [ "Core", "a00455.html", [
+        [ "Base64", "a00456.html", [
+          [ "detail", "a00459.html", [
+            [ "has_convertible_indexed_access", "a00596.html", null ],
+            [ "has_convertible_indexed_access< T, void_t< decltype(std::declval< T >()[std::declval< size_t >()]), enable_if_t< std::is_convertible< decltype(std::declval< T >()[std::declval< size_t >()]), Types::byte_type >::value > > >", "a00600.html", null ],
+            [ "has_convertible_size", "a00588.html", null ],
+            [ "has_convertible_size< T, void_t< decltype(std::declval< T >().size()), enable_if_t< std::is_convertible< decltype(std::declval< T >().size()), size_t >::value > > >", "a00592.html", null ],
+            [ "void_t_impl", "a00584.html", "a00584" ]
           ] ],
-          [ "Decoder", "class_lumex_1_1_core_1_1_base64_1_1_decoder.html", "class_lumex_1_1_core_1_1_base64_1_1_decoder" ],
-          [ "Encoder", "class_lumex_1_1_core_1_1_base64_1_1_encoder.html", "class_lumex_1_1_core_1_1_base64_1_1_encoder" ],
-          [ "Validator", "class_lumex_1_1_core_1_1_base64_1_1_validator.html", "class_lumex_1_1_core_1_1_base64_1_1_validator" ]
+          [ "Decoder", "a00604.html", "a00604" ],
+          [ "Encoder", "a00608.html", "a00608" ],
+          [ "Validator", "a00612.html", "a00612" ]
         ] ],
-        [ "Environment", "namespace_lumex_1_1_core_1_1_environment.html", [
-          [ "LumexEnvironment", "class_lumex_1_1_core_1_1_environment_1_1_lumex_environment.html", "class_lumex_1_1_core_1_1_environment_1_1_lumex_environment" ]
+        [ "CircularBuffer", "a00461.html", [
+          [ "CircularBuffer", "a00616.html", "a00616" ]
         ] ],
-        [ "Exceptions", "namespace_lumex_1_1_core_1_1_exceptions.html", [
-          [ "Crash", "namespace_lumex_1_1_core_1_1_exceptions_1_1_crash.html", [
-            [ "LumexCrashHandler", "class_lumex_1_1_core_1_1_exceptions_1_1_crash_1_1_lumex_crash_handler.html", "class_lumex_1_1_core_1_1_exceptions_1_1_crash_1_1_lumex_crash_handler" ]
+        [ "crc", "a00462.html", [
+          [ "Crc4", "a00632.html", "a00632" ],
+          [ "Crc8", "a00636.html", "a00636" ]
+        ] ],
+        [ "Environment", "a00464.html", [
+          [ "LumexEnvironment", "a00640.html", "a00640" ]
+        ] ],
+        [ "Exceptions", "a00465.html", [
+          [ "Crash", "a00466.html", [
+            [ "LumexCrashHandler", "a00656.html", "a00656" ]
           ] ],
-          [ "LumexBaseException", "class_lumex_1_1_core_1_1_exceptions_1_1_lumex_base_exception.html", "class_lumex_1_1_core_1_1_exceptions_1_1_lumex_base_exception" ]
+          [ "LumexBaseException", "a00660.html", "a00660" ]
         ] ],
-        [ "Filesystem", "namespace_lumex_1_1_core_1_1_filesystem.html", [
-          [ "DirectoryEntry", "class_lumex_1_1_core_1_1_filesystem_1_1_directory_entry.html", "class_lumex_1_1_core_1_1_filesystem_1_1_directory_entry" ],
-          [ "DirectoryIterator", "class_lumex_1_1_core_1_1_filesystem_1_1_directory_iterator.html", "class_lumex_1_1_core_1_1_filesystem_1_1_directory_iterator" ],
-          [ "FileStatus", "class_lumex_1_1_core_1_1_filesystem_1_1_file_status.html", "class_lumex_1_1_core_1_1_filesystem_1_1_file_status" ],
-          [ "FilesystemResult", "class_lumex_1_1_core_1_1_filesystem_1_1_filesystem_result.html", "class_lumex_1_1_core_1_1_filesystem_1_1_filesystem_result" ],
-          [ "FilesystemResult< void >", "class_lumex_1_1_core_1_1_filesystem_1_1_filesystem_result_3_01void_01_4.html", "class_lumex_1_1_core_1_1_filesystem_1_1_filesystem_result_3_01void_01_4" ],
-          [ "LumexFilesystem", "class_lumex_1_1_core_1_1_filesystem_1_1_lumex_filesystem.html", "class_lumex_1_1_core_1_1_filesystem_1_1_lumex_filesystem" ],
-          [ "Path", "class_lumex_1_1_core_1_1_filesystem_1_1_path.html", "class_lumex_1_1_core_1_1_filesystem_1_1_path" ],
-          [ "SpaceInfo", "class_lumex_1_1_core_1_1_filesystem_1_1_space_info.html", "class_lumex_1_1_core_1_1_filesystem_1_1_space_info" ]
+        [ "Filesystem", "a00470.html", [
+          [ "DirectoryEntry", "a00756.html", "a00756" ],
+          [ "DirectoryIterator", "a00760.html", "a00760" ],
+          [ "FileStatus", "a00748.html", "a00748" ],
+          [ "FilesystemResult", "a00736.html", "a00736" ],
+          [ "FilesystemResult< void >", "a00740.html", "a00740" ],
+          [ "LumexFilesystem", "a00764.html", "a00764" ],
+          [ "Path", "a00744.html", "a00744" ],
+          [ "SpaceInfo", "a00752.html", "a00752" ]
         ] ],
-        [ "Optional", "namespace_lumex_1_1_core_1_1_optional.html", [
-          [ "in_place_t", "struct_lumex_1_1_core_1_1_optional_1_1in__place__t.html", "struct_lumex_1_1_core_1_1_optional_1_1in__place__t" ],
-          [ "LumexBadOptionalAccess", "class_lumex_1_1_core_1_1_optional_1_1_lumex_bad_optional_access.html", "class_lumex_1_1_core_1_1_optional_1_1_lumex_bad_optional_access" ],
-          [ "LumexOptional", "class_lumex_1_1_core_1_1_optional_1_1_lumex_optional.html", "class_lumex_1_1_core_1_1_optional_1_1_lumex_optional" ],
-          [ "nullopt_t", "struct_lumex_1_1_core_1_1_optional_1_1nullopt__t.html", "struct_lumex_1_1_core_1_1_optional_1_1nullopt__t" ]
+        [ "Optional", "a00472.html", [
+          [ "in_place_t", "a00780.html", "a00780" ],
+          [ "LumexBadOptionalAccess", "a00788.html", "a00788" ],
+          [ "LumexOptional", "a00792.html", "a00792" ],
+          [ "nullopt_t", "a00772.html", "a00772" ]
         ] ],
-        [ "Stacktrace", "namespace_lumex_1_1_core_1_1_stacktrace.html", [
-          [ "hash", "struct_lumex_1_1_core_1_1_stacktrace_1_1hash.html", null ],
-          [ "hash< LumexBasicStacktrace< Allocator > >", "struct_lumex_1_1_core_1_1_stacktrace_1_1hash_3_01_lumex_basic_stacktrace_3_01_allocator_01_4_01_4.html", "struct_lumex_1_1_core_1_1_stacktrace_1_1hash_3_01_lumex_basic_stacktrace_3_01_allocator_01_4_01_4" ],
-          [ "LumexBasicStacktrace", "class_lumex_1_1_core_1_1_stacktrace_1_1_lumex_basic_stacktrace.html", "class_lumex_1_1_core_1_1_stacktrace_1_1_lumex_basic_stacktrace" ],
-          [ "LumexStacktraceEntry", "class_lumex_1_1_core_1_1_stacktrace_1_1_lumex_stacktrace_entry.html", "class_lumex_1_1_core_1_1_stacktrace_1_1_lumex_stacktrace_entry" ]
+        [ "Stacktrace", "a00467.html", [
+          [ "hash", "a00668.html", null ],
+          [ "hash< LumexBasicStacktrace< Allocator > >", "a00672.html", "a00672" ],
+          [ "LumexBasicStacktrace", "a00664.html", "a00664" ],
+          [ "LumexStacktraceEntry", "a00676.html", "a00676" ]
         ] ],
-        [ "StringView", "namespace_lumex_1_1_core_1_1_string_view.html", [
-          [ "LumexStringView", "class_lumex_1_1_core_1_1_string_view_1_1_lumex_string_view.html", "class_lumex_1_1_core_1_1_string_view_1_1_lumex_string_view" ],
-          [ "LumexWStringView", "class_lumex_1_1_core_1_1_string_view_1_1_lumex_w_string_view.html", "class_lumex_1_1_core_1_1_string_view_1_1_lumex_w_string_view" ]
+        [ "StringView", "a00475.html", [
+          [ "LumexStringView", "a00820.html", "a00820" ],
+          [ "LumexWStringView", "a00824.html", "a00824" ]
         ] ],
-        [ "Temporary", "namespace_lumex_1_1_core_1_1_temporary.html", [
-          [ "LumexTemporary", "class_lumex_1_1_core_1_1_temporary_1_1_lumex_temporary.html", "class_lumex_1_1_core_1_1_temporary_1_1_lumex_temporary" ],
-          [ "TemporaryDirectory", "class_lumex_1_1_core_1_1_temporary_1_1_temporary_directory.html", "class_lumex_1_1_core_1_1_temporary_1_1_temporary_directory" ],
-          [ "TemporaryFile", "class_lumex_1_1_core_1_1_temporary_1_1_temporary_file.html", "class_lumex_1_1_core_1_1_temporary_1_1_temporary_file" ]
+        [ "Temporary", "a00476.html", [
+          [ "LumexTemporary", "a00836.html", "a00836" ],
+          [ "TemporaryDirectory", "a00828.html", "a00828" ],
+          [ "TemporaryFile", "a00832.html", "a00832" ]
         ] ],
-        [ "Time", "namespace_lumex_1_1_core_1_1_time.html", [
-          [ "LumexTime", "class_lumex_1_1_core_1_1_time_1_1_lumex_time.html", "class_lumex_1_1_core_1_1_time_1_1_lumex_time" ]
+        [ "Time", "a00477.html", [
+          [ "LumexTime", "a00840.html", "a00840" ]
         ] ]
       ] ],
       [ "DirectoryIterator", null, [
-        [ "Impl", "class_lumex_1_1_directory_iterator_1_1_impl.html", "class_lumex_1_1_directory_iterator_1_1_impl" ]
+        [ "Impl", "a00732.html", "a00732" ]
       ] ],
-      [ "String", "namespace_lumex_1_1_string.html", [
-        [ "Utility", "namespace_lumex_1_1_string_1_1_utility.html", [
-          [ "all_streamable", "struct_lumex_1_1_string_1_1_utility_1_1all__streamable.html", null ],
-          [ "all_streamable< First, Rest... >", "struct_lumex_1_1_string_1_1_utility_1_1all__streamable_3_01_first_00_01_rest_8_8_8_01_4.html", "struct_lumex_1_1_string_1_1_utility_1_1all__streamable_3_01_first_00_01_rest_8_8_8_01_4" ],
-          [ "all_streamable<>", "struct_lumex_1_1_string_1_1_utility_1_1all__streamable_3_4.html", "struct_lumex_1_1_string_1_1_utility_1_1all__streamable_3_4" ],
-          [ "is_streamable", "struct_lumex_1_1_string_1_1_utility_1_1is__streamable.html", null ],
-          [ "is_streamable< T, void_t< decltype(std::declval< std::ostream & >()<< std::declval< T >())> >", "struct_lumex_1_1_string_1_1_utility_1_1is__streamable_3_01_t_00_01void__t_3_01decltype_07std_1_153a1e12d0dc94627695a0680a973a936.html", null ]
+      [ "String", "a00473.html", [
+        [ "Utility", "a00474.html", [
+          [ "all_streamable", "a00808.html", null ],
+          [ "all_streamable< First, Rest... >", "a00812.html", "a00812" ],
+          [ "all_streamable<>", "a00816.html", "a00816" ],
+          [ "is_streamable", "a00800.html", null ],
+          [ "is_streamable< T, void_t< decltype(std::declval< std::ostream & >()<< std::declval< T >())> >", "a00804.html", null ]
         ] ]
       ] ],
-      [ "Xml", "namespace_lumex_1_1_xml.html", [
-        [ "Attribute", "namespace_lumex_1_1_xml_1_1_attribute.html", [
-          [ "XmlAttribute", "class_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute.html", "class_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute" ],
-          [ "XmlAttributeBase", "struct_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute_base.html", "struct_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute_base" ],
-          [ "XmlAttributeIterator", "class_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute_iterator.html", "class_lumex_1_1_xml_1_1_attribute_1_1_xml_attribute_iterator" ]
-        ] ],
-        [ "Document", "namespace_lumex_1_1_xml_1_1_document.html", [
-          [ "XmlDocument", "class_lumex_1_1_xml_1_1_document_1_1_xml_document.html", "class_lumex_1_1_xml_1_1_document_1_1_xml_document" ],
-          [ "XmlDocumentBase", "struct_lumex_1_1_xml_1_1_document_1_1_xml_document_base.html", "struct_lumex_1_1_xml_1_1_document_1_1_xml_document_base" ]
-        ] ],
-        [ "Memory", "namespace_lumex_1_1_xml_1_1_memory.html", [
-          [ "XmlAllocator", "struct_lumex_1_1_xml_1_1_memory_1_1_xml_allocator.html", "struct_lumex_1_1_xml_1_1_memory_1_1_xml_allocator" ],
-          [ "XmlMemoryPage", "struct_lumex_1_1_xml_1_1_memory_1_1_xml_memory_page.html", "struct_lumex_1_1_xml_1_1_memory_1_1_xml_memory_page" ]
-        ] ],
-        [ "Node", "namespace_lumex_1_1_xml_1_1_node.html", [
-          [ "name_null_sentry", "struct_lumex_1_1_xml_1_1_node_1_1name__null__sentry.html", "struct_lumex_1_1_xml_1_1_node_1_1name__null__sentry" ],
-          [ "XmlNamedNodeIterator", "class_lumex_1_1_xml_1_1_node_1_1_xml_named_node_iterator.html", "class_lumex_1_1_xml_1_1_node_1_1_xml_named_node_iterator" ],
-          [ "XmlNode", "class_lumex_1_1_xml_1_1_node_1_1_xml_node.html", "class_lumex_1_1_xml_1_1_node_1_1_xml_node" ],
-          [ "XmlNodeBase", "struct_lumex_1_1_xml_1_1_node_1_1_xml_node_base.html", "struct_lumex_1_1_xml_1_1_node_1_1_xml_node_base" ],
-          [ "XmlNodeIterator", "class_lumex_1_1_xml_1_1_node_1_1_xml_node_iterator.html", "class_lumex_1_1_xml_1_1_node_1_1_xml_node_iterator" ]
-        ] ],
-        [ "Range", "namespace_lumex_1_1_xml_1_1_range.html", [
-          [ "XmlObjectRange", "class_lumex_1_1_xml_1_1_range_1_1_xml_object_range.html", "class_lumex_1_1_xml_1_1_range_1_1_xml_object_range" ]
-        ] ],
-        [ "Text", "namespace_lumex_1_1_xml_1_1_text.html", [
-          [ "XmlParser", "struct_lumex_1_1_xml_1_1_text_1_1_xml_parser.html", "struct_lumex_1_1_xml_1_1_text_1_1_xml_parser" ],
-          [ "XmlParseResult", "struct_lumex_1_1_xml_1_1_text_1_1_xml_parse_result.html", "struct_lumex_1_1_xml_1_1_text_1_1_xml_parse_result" ],
-          [ "XmlText", "class_lumex_1_1_xml_1_1_text_1_1_xml_text.html", "class_lumex_1_1_xml_1_1_text_1_1_xml_text" ]
-        ] ],
-        [ "Tree", "namespace_lumex_1_1_xml_1_1_tree.html", [
-          [ "XmlTreeWalker", "class_lumex_1_1_xml_1_1_tree_1_1_xml_tree_walker.html", "class_lumex_1_1_xml_1_1_tree_1_1_xml_tree_walker" ]
-        ] ],
-        [ "Types", "namespace_lumex_1_1_xml_1_1_types.html", [
-          [ "xml_extra_buffer", "struct_lumex_1_1_xml_1_1_types_1_1xml__extra__buffer.html", "struct_lumex_1_1_xml_1_1_types_1_1xml__extra__buffer" ],
-          [ "xml_mem_str_header_t", "struct_lumex_1_1_xml_1_1_types_1_1xml__mem__str__header__t.html", "struct_lumex_1_1_xml_1_1_types_1_1xml__mem__str__header__t" ]
-        ] ],
-        [ "Utility", "namespace_lumex_1_1_xml_1_1_utility.html", [
-          [ "latin1_decoder", "struct_lumex_1_1_xml_1_1_utility_1_1latin1__decoder.html", "struct_lumex_1_1_xml_1_1_utility_1_1latin1__decoder" ],
-          [ "latin1_writer", "struct_lumex_1_1_xml_1_1_utility_1_1latin1__writer.html", "struct_lumex_1_1_xml_1_1_utility_1_1latin1__writer" ],
-          [ "opt_false", "struct_lumex_1_1_xml_1_1_utility_1_1opt__false.html", null ],
-          [ "opt_true", "struct_lumex_1_1_xml_1_1_utility_1_1opt__true.html", null ],
-          [ "utf16_counter", "struct_lumex_1_1_xml_1_1_utility_1_1utf16__counter.html", "struct_lumex_1_1_xml_1_1_utility_1_1utf16__counter" ],
-          [ "utf16_decoder", "struct_lumex_1_1_xml_1_1_utility_1_1utf16__decoder.html", "struct_lumex_1_1_xml_1_1_utility_1_1utf16__decoder" ],
-          [ "utf16_writer", "struct_lumex_1_1_xml_1_1_utility_1_1utf16__writer.html", "struct_lumex_1_1_xml_1_1_utility_1_1utf16__writer" ],
-          [ "utf32_counter", "struct_lumex_1_1_xml_1_1_utility_1_1utf32__counter.html", "struct_lumex_1_1_xml_1_1_utility_1_1utf32__counter" ],
-          [ "utf32_decoder", "struct_lumex_1_1_xml_1_1_utility_1_1utf32__decoder.html", "struct_lumex_1_1_xml_1_1_utility_1_1utf32__decoder" ],
-          [ "utf32_writer", "struct_lumex_1_1_xml_1_1_utility_1_1utf32__writer.html", "struct_lumex_1_1_xml_1_1_utility_1_1utf32__writer" ],
-          [ "utf8_counter", "struct_lumex_1_1_xml_1_1_utility_1_1utf8__counter.html", "struct_lumex_1_1_xml_1_1_utility_1_1utf8__counter" ],
-          [ "utf8_decoder", "struct_lumex_1_1_xml_1_1_utility_1_1utf8__decoder.html", "struct_lumex_1_1_xml_1_1_utility_1_1utf8__decoder" ],
-          [ "utf8_writer", "struct_lumex_1_1_xml_1_1_utility_1_1utf8__writer.html", "struct_lumex_1_1_xml_1_1_utility_1_1utf8__writer" ],
-          [ "wchar_decoder", "struct_lumex_1_1_xml_1_1_utility_1_1wchar__decoder.html", "struct_lumex_1_1_xml_1_1_utility_1_1wchar__decoder" ],
-          [ "wchar_selector", "struct_lumex_1_1_xml_1_1_utility_1_1wchar__selector.html", null ],
-          [ "wchar_selector< 2 >", "struct_lumex_1_1_xml_1_1_utility_1_1wchar__selector_3_012_01_4.html", "struct_lumex_1_1_xml_1_1_utility_1_1wchar__selector_3_012_01_4" ],
-          [ "wchar_selector< 4 >", "struct_lumex_1_1_xml_1_1_utility_1_1wchar__selector_3_014_01_4.html", "struct_lumex_1_1_xml_1_1_utility_1_1wchar__selector_3_014_01_4" ],
-          [ "XmlCleaner", "struct_lumex_1_1_xml_1_1_utility_1_1_xml_cleaner.html", "struct_lumex_1_1_xml_1_1_utility_1_1_xml_cleaner" ]
-        ] ],
-        [ "Writer", "namespace_lumex_1_1_xml_1_1_writer.html", [
-          [ "IXmlWriter", "class_lumex_1_1_xml_1_1_writer_1_1_i_xml_writer.html", "class_lumex_1_1_xml_1_1_writer_1_1_i_xml_writer" ],
-          [ "XmlBufferedWriter", "class_lumex_1_1_xml_1_1_writer_1_1_xml_buffered_writer.html", "class_lumex_1_1_xml_1_1_writer_1_1_xml_buffered_writer" ],
-          [ "XmlWriterFile", "class_lumex_1_1_xml_1_1_writer_1_1_xml_writer_file.html", "class_lumex_1_1_xml_1_1_writer_1_1_xml_writer_file" ],
-          [ "XmlWriterStream", "class_lumex_1_1_xml_1_1_writer_1_1_xml_writer_stream.html", "class_lumex_1_1_xml_1_1_writer_1_1_xml_writer_stream" ]
-        ] ],
-        [ "XPath", "namespace_lumex_1_1_xml_1_1_x_path.html", [
-          [ "Ast", "namespace_lumex_1_1_xml_1_1_x_path_1_1_ast.html", [
-            [ "axis_to_type", "struct_lumex_1_1_xml_1_1_x_path_1_1_ast_1_1axis__to__type.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_ast_1_1axis__to__type" ],
-            [ "XPathAstNode", "class_lumex_1_1_xml_1_1_x_path_1_1_ast_1_1_x_path_ast_node.html", "class_lumex_1_1_xml_1_1_x_path_1_1_ast_1_1_x_path_ast_node" ]
+      [ "Utility", "a00483.html", [
+        [ "TypeTraits", "a00486.html", [
+          [ "detail", "a00487.html", [
+            [ "invoke_impl", "a00916.html", "a00916" ],
+            [ "invoke_impl< MT B::* >", "a00920.html", "a00920" ],
+            [ "invoke_result_impl", "a00924.html", null ],
+            [ "invoke_result_impl< void_t< decltype(INVOKE(std::declval< F >(), std::declval< Args >()...))>, F, Args... >", "a00928.html", "a00928" ],
+            [ "is_reference_wrapper", "a00908.html", null ],
+            [ "is_reference_wrapper< std::reference_wrapper< U > >", "a00912.html", null ]
           ] ],
-          [ "Context", "namespace_lumex_1_1_xml_1_1_x_path_1_1_context.html", [
-            [ "XPathContext", "struct_lumex_1_1_xml_1_1_x_path_1_1_context_1_1_x_path_context.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_context_1_1_x_path_context" ]
+          [ "has_type", "a00944.html", null ],
+          [ "has_type< T, void_t< typename T::type > >", "a00948.html", null ],
+          [ "invoke_result", "a00932.html", null ],
+          [ "is_callable", "a00956.html", null ],
+          [ "is_callable< Func(Args...)>", "a00960.html", null ],
+          [ "is_invocable", "a00952.html", null ],
+          [ "make_void", "a00904.html", "a00904" ],
+          [ "result_of", "a00936.html", null ],
+          [ "result_of< Func(Args...)>", "a00940.html", null ]
+        ] ]
+      ] ],
+      [ "Xml", "a00488.html", [
+        [ "Attribute", "a00489.html", [
+          [ "XmlAttribute", "a00964.html", "a00964" ],
+          [ "XmlAttributeBase", "a00968.html", "a00968" ],
+          [ "XmlAttributeIterator", "a01004.html", "a01004" ]
+        ] ],
+        [ "Document", "a00494.html", [
+          [ "XmlDocument", "a00976.html", "a00976" ],
+          [ "XmlDocumentBase", "a00980.html", "a00980" ]
+        ] ],
+        [ "Memory", "a00495.html", [
+          [ "XmlAllocator", "a00984.html", "a00984" ],
+          [ "XmlMemoryPage", "a00988.html", "a00988" ]
+        ] ],
+        [ "Node", "a00491.html", [
+          [ "name_null_sentry", "a01012.html", "a01012" ],
+          [ "XmlNamedNodeIterator", "a01000.html", "a01000" ],
+          [ "XmlNode", "a00992.html", "a00992" ],
+          [ "XmlNodeBase", "a01008.html", "a01008" ],
+          [ "XmlNodeIterator", "a00996.html", "a00996" ]
+        ] ],
+        [ "Range", "a00502.html", [
+          [ "XmlObjectRange", "a01016.html", "a01016" ]
+        ] ],
+        [ "Text", "a00500.html", [
+          [ "XmlParser", "a01032.html", "a01032" ],
+          [ "XmlParseResult", "a01036.html", "a01036" ],
+          [ "XmlText", "a01040.html", "a01040" ]
+        ] ],
+        [ "Tree", "a00501.html", [
+          [ "XmlTreeWalker", "a01044.html", "a01044" ]
+        ] ],
+        [ "Types", "a00503.html", [
+          [ "xml_extra_buffer", "a01052.html", "a01052" ],
+          [ "xml_mem_str_header_t", "a01048.html", "a01048" ]
+        ] ],
+        [ "Utility", "a00490.html", [
+          [ "latin1_decoder", "a01080.html", "a01080" ],
+          [ "latin1_writer", "a01104.html", "a01104" ],
+          [ "opt_false", "a01060.html", null ],
+          [ "opt_true", "a01064.html", null ],
+          [ "utf16_counter", "a01068.html", "a01068" ],
+          [ "utf16_decoder", "a01072.html", "a01072" ],
+          [ "utf16_writer", "a01092.html", "a01092" ],
+          [ "utf32_counter", "a01096.html", "a01096" ],
+          [ "utf32_decoder", "a01076.html", "a01076" ],
+          [ "utf32_writer", "a01100.html", "a01100" ],
+          [ "utf8_counter", "a01084.html", "a01084" ],
+          [ "utf8_decoder", "a01124.html", "a01124" ],
+          [ "utf8_writer", "a01088.html", "a01088" ],
+          [ "wchar_decoder", "a01120.html", "a01120" ],
+          [ "wchar_selector", "a01108.html", null ],
+          [ "wchar_selector< 2 >", "a01112.html", "a01112" ],
+          [ "wchar_selector< 4 >", "a01116.html", "a01116" ],
+          [ "XmlCleaner", "a01056.html", "a01056" ]
+        ] ],
+        [ "Writer", "a00504.html", [
+          [ "IXmlWriter", "a01128.html", "a01128" ],
+          [ "XmlBufferedWriter", "a01132.html", "a01132" ],
+          [ "XmlWriterFile", "a01140.html", "a01140" ],
+          [ "XmlWriterStream", "a01144.html", "a01144" ]
+        ] ],
+        [ "XPath", "a00496.html", [
+          [ "Ast", "a00506.html", [
+            [ "axis_to_type", "a01168.html", "a01168" ],
+            [ "XPathAstNode", "a01172.html", "a01172" ]
           ] ],
-          [ "Document", "namespace_lumex_1_1_xml_1_1_x_path_1_1_document.html", [
-            [ "document_order_comparator", "struct_lumex_1_1_xml_1_1_x_path_1_1_document_1_1document__order__comparator.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_document_1_1document__order__comparator" ]
+          [ "Context", "a00508.html", [
+            [ "XPathContext", "a01180.html", "a01180" ]
           ] ],
-          [ "Exception", "namespace_lumex_1_1_xml_1_1_x_path_1_1_exception.html", [
-            [ "XPathException", "class_lumex_1_1_xml_1_1_x_path_1_1_exception_1_1_x_path_exception.html", "class_lumex_1_1_xml_1_1_x_path_1_1_exception_1_1_x_path_exception" ]
+          [ "Document", "a00509.html", [
+            [ "document_order_comparator", "a01184.html", "a01184" ]
           ] ],
-          [ "Memory", "namespace_lumex_1_1_xml_1_1_x_path_1_1_memory.html", [
-            [ "XPathAllocator", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_allocator.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_allocator" ],
-            [ "XPathAllocatorCapture", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_allocator_capture.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_allocator_capture" ],
-            [ "XPathMemoryBlock", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_memory_block.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_memory_block" ],
-            [ "XPathStack", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_stack.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_stack" ],
-            [ "XPathStackData", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_stack_data.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_stack_data" ]
+          [ "Exception", "a00510.html", [
+            [ "XPathException", "a01188.html", "a01188" ]
           ] ],
-          [ "Node", "namespace_lumex_1_1_xml_1_1_x_path_1_1_node.html", [
-            [ "XPathNode", "class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node.html", "class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node" ],
-            [ "XPathNodeSet", "class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node_set.html", "class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node_set" ],
-            [ "XPathNodeSetRaw", "class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node_set_raw.html", "class_lumex_1_1_xml_1_1_x_path_1_1_node_1_1_x_path_node_set_raw" ]
+          [ "Memory", "a00511.html", [
+            [ "XPathAllocator", "a01192.html", "a01192" ],
+            [ "XPathAllocatorCapture", "a01196.html", "a01196" ],
+            [ "XPathMemoryBlock", "a01200.html", "a01200" ],
+            [ "XPathStack", "a01208.html", "a01208" ],
+            [ "XPathStackData", "a01212.html", "a01212" ]
           ] ],
-          [ "Parser", "namespace_lumex_1_1_xml_1_1_x_path_1_1_parser.html", [
-            [ "Lexer", "namespace_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_lexer.html", [
-              [ "XPathLexer", "class_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_lexer_1_1_x_path_lexer.html", "class_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_lexer_1_1_x_path_lexer" ],
-              [ "XPathLexerString", "struct_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_lexer_1_1_x_path_lexer_string.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_lexer_1_1_x_path_lexer_string" ]
+          [ "Node", "a00497.html", [
+            [ "XPathNode", "a01216.html", "a01216" ],
+            [ "XPathNodeSet", "a01220.html", "a01220" ],
+            [ "XPathNodeSetRaw", "a01224.html", "a01224" ]
+          ] ],
+          [ "Parser", "a00512.html", [
+            [ "Lexer", "a00513.html", [
+              [ "XPathLexer", "a01228.html", "a01228" ],
+              [ "XPathLexerString", "a01232.html", "a01232" ]
             ] ],
-            [ "XPathParser", "struct_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_x_path_parser.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_x_path_parser" ],
-            [ "XPathParseResult", "struct_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_x_path_parse_result.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_parser_1_1_x_path_parse_result" ]
+            [ "XPathParser", "a01240.html", "a01240" ],
+            [ "XPathParseResult", "a01244.html", "a01244" ]
           ] ],
-          [ "Query", "namespace_lumex_1_1_xml_1_1_x_path_1_1_query.html", [
-            [ "XPathQuery", "class_lumex_1_1_xml_1_1_x_path_1_1_query_1_1_x_path_query.html", "class_lumex_1_1_xml_1_1_x_path_1_1_query_1_1_x_path_query" ]
+          [ "Query", "a00499.html", [
+            [ "XPathQuery", "a01248.html", "a01248" ]
           ] ],
-          [ "String", "namespace_lumex_1_1_xml_1_1_x_path_1_1_string.html", [
-            [ "XPathString", "class_lumex_1_1_xml_1_1_x_path_1_1_string_1_1_x_path_string.html", "class_lumex_1_1_xml_1_1_x_path_1_1_string_1_1_x_path_string" ]
+          [ "String", "a00515.html", [
+            [ "XPathString", "a01256.html", "a01256" ]
           ] ],
-          [ "Variable", "namespace_lumex_1_1_xml_1_1_x_path_1_1_variable.html", [
-            [ "xpath_variable_boolean", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__boolean.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__boolean" ],
-            [ "xpath_variable_node_set", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__node__set.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__node__set" ],
-            [ "xpath_variable_number", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__number.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__number" ],
-            [ "xpath_variable_string", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__string.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1xpath__variable__string" ],
-            [ "XPathVariable", "class_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1_x_path_variable.html", "class_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1_x_path_variable" ],
-            [ "XPathVariableSet", "class_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1_x_path_variable_set.html", "class_lumex_1_1_xml_1_1_x_path_1_1_variable_1_1_x_path_variable_set" ]
+          [ "Variable", "a00498.html", [
+            [ "xpath_variable_boolean", "a01264.html", "a01264" ],
+            [ "xpath_variable_node_set", "a01276.html", "a01276" ],
+            [ "xpath_variable_number", "a01268.html", "a01268" ],
+            [ "xpath_variable_string", "a01272.html", "a01272" ],
+            [ "XPathVariable", "a01260.html", "a01260" ],
+            [ "XPathVariableSet", "a01280.html", "a01280" ]
           ] ],
-          [ "XPathQueryImpl", "struct_lumex_1_1_xml_1_1_x_path_1_1_x_path_query_impl.html", "struct_lumex_1_1_xml_1_1_x_path_1_1_x_path_query_impl" ]
+          [ "XPathQueryImpl", "a01252.html", "a01252" ]
         ] ]
       ] ]
     ] ],
-    [ "std", "namespacestd.html", [
-      [ "hash< Lumex::Core::Stacktrace::LumexStacktraceEntry >", "structstd_1_1hash_3_01_lumex_1_1_core_1_1_stacktrace_1_1_lumex_stacktrace_entry_01_4.html", "structstd_1_1hash_3_01_lumex_1_1_core_1_1_stacktrace_1_1_lumex_stacktrace_entry_01_4" ],
-      [ "hash< LumexOptional< T > >", "structstd_1_1hash_3_01_lumex_optional_3_01_t_01_4_01_4.html", "structstd_1_1hash_3_01_lumex_optional_3_01_t_01_4_01_4" ]
+    [ "std", "a00450.html", [
+      [ "hash< Lumex::Core::Stacktrace::LumexStacktraceEntry >", "a00680.html", "a00680" ],
+      [ "hash< LumexOptional< T > >", "a00796.html", "a00796" ]
     ] ],
-    [ "binary_op_t", "structbinary__op__t.html", "structbinary__op__t" ],
-    [ "gap", "structgap.html", "structgap" ],
-    [ "HardwareCapabilities", "class_hardware_capabilities.html", "class_hardware_capabilities" ],
-    [ "HardwareInfo", "struct_hardware_info.html", "struct_hardware_info" ],
-    [ "Logger", "class_logger.html", null ],
-    [ "LumexBadOptionalAccess", "class_lumex_bad_optional_access.html", "class_lumex_bad_optional_access" ],
-    [ "NumberGenerator", "class_number_generator.html", "class_number_generator" ],
-    [ "strconv_attribute_impl", "structstrconv__attribute__impl.html", "structstrconv__attribute__impl" ],
-    [ "strconv_pcdata_impl", "structstrconv__pcdata__impl.html", "structstrconv__pcdata__impl" ],
-    [ "xml_stream_chunk", "structxml__stream__chunk.html", "structxml__stream__chunk" ]
+    [ "all_streamable", "a00544.html", null ],
+    [ "all_streamable< First, Rest... >", "a00548.html", "a00548" ],
+    [ "all_streamable<>", "a00552.html", "a00552" ],
+    [ "BadExpectedAccess", "a00684.html", "a00684" ],
+    [ "binary_op_t", "a01236.html", "a01236" ],
+    [ "clean_type_t", "a00864.html", "a00864" ],
+    [ "comparison_traits", "a00872.html", "a00872" ],
+    [ "CoreDumpGenerator", "a00852.html", "a00852" ],
+    [ "DumpConfiguration", "a00844.html", "a00844" ],
+    [ "DumpFactory", "a00848.html", "a00848" ],
+    [ "Expected", "a00688.html", "a00688" ],
+    [ "Expected< void, ErrorType >", "a00720.html", "a00720" ],
+    [ "gap", "a01020.html", "a01020" ],
+    [ "HardwareCapabilities", "a01561.html", "a01561" ],
+    [ "HardwareInfo", "a01565.html", "a01565" ],
+    [ "in_place_tag", "a00696.html", null ],
+    [ "is_expected", "a00708.html", null ],
+    [ "is_expected< Expected< S, E > >", "a00712.html", null ],
+    [ "is_expected< Expected< void, E > >", "a00716.html", null ],
+    [ "is_safe_comparable", "a00868.html", "a00868" ],
+    [ "is_streamable", "a00536.html", null ],
+    [ "is_streamable< T, void_t< decltype(std::declval< std::ostream & >()<< std::declval< T >())> >", "a00540.html", null ],
+    [ "log_entry_t", "a00560.html", "a00560" ],
+    [ "Logger", "a00564.html", "a00564" ],
+    [ "logger_config_t", "a00556.html", "a00556" ],
+    [ "LumexBadOptionalAccess", "a01569.html", "a01569" ],
+    [ "NumberGenerator", "a00768.html", "a00768" ],
+    [ "safe_compare_impl_helper", "a00876.html", null ],
+    [ "safe_compare_impl_helper< T, T, typename std::enable_if< std::is_floating_point< typename clean_type_t< T >::type >::value >::type >", "a00884.html", "a00884" ],
+    [ "safe_compare_impl_helper< T, T, typename std::enable_if< std::is_integral< typename clean_type_t< T >::type >::value >::type >", "a00880.html", "a00880" ],
+    [ "safe_compare_impl_helper< T, U, typename std::enable_if< std::is_floating_point< typename clean_type_t< T >::type >::value &&std::is_floating_point< typename clean_type_t< U >::type >::value &&!std::is_same< typename clean_type_t< T >::type, typename clean_type_t< U >::type >::value >::type >", "a00892.html", "a00892" ],
+    [ "safe_compare_impl_helper< T, U, typename std::enable_if< std::is_integral< typename clean_type_t< T >::type >::value &&std::is_integral< typename clean_type_t< U >::type >::value &&!std::is_same< typename clean_type_t< T >::type, typename clean_type_t< U >::type >::value >::type >", "a00888.html", "a00888" ],
+    [ "safe_compare_impl_helper< T, U, typename std::enable_if<(std::is_integral< typename clean_type_t< T >::type >::value &&std::is_floating_point< typename clean_type_t< U >::type >::value)||(std::is_floating_point< typename clean_type_t< T >::type >::value &&std::is_integral< typename clean_type_t< U >::type >::value)>::type >", "a00896.html", "a00896" ],
+    [ "SafeComparator", "a00900.html", "a00900" ],
+    [ "strconv_attribute_impl", "a01024.html", "a01024" ],
+    [ "strconv_pcdata_impl", "a01028.html", "a01028" ],
+    [ "unexpect_t", "a00704.html", null ],
+    [ "Unexpected", "a00728.html", "a00728" ],
+    [ "Unit", "a00700.html", null ],
+    [ "xml_stream_chunk", "a00972.html", "a00972" ]
 ];

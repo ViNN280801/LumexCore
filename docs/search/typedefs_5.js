@@ -1,8 +1,21 @@
 var searchData=
 [
-  ['filestatus_0',['FileStatus',['../namespace_lumex.html#a48c16203e09293b7251c0663d7ed8cc9',1,'Lumex']]],
-  ['filesystem_1',['Filesystem',['../namespace_lumex.html#a423410512bd3cf65fb864732b956bf96',1,'Lumex']]],
-  ['filesystemresult_2',['FilesystemResult',['../namespace_lumex.html#af2e598f78f3b1bfabcf30446724a1042',1,'Lumex']]],
-  ['filetype_3',['FileType',['../namespace_lumex.html#a5deedf3cb35a1a74f00a3fa27643e831',1,'Lumex']]],
-  ['floatgenerator_4',['FloatGenerator',['../_lumex_number_generator_8hpp.html#aa9828c9784e6076091c55f6b65ade998',1,'LumexNumberGenerator.hpp']]]
+  ['fastcharcomparator_0',['FastCharComparator',['../a00203.html#a740628f3d15bb9abad7f6a1829729fe5',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastdoublecomparator_1',['FastDoubleComparator',['../a00203.html#a3add279bb4b40bfe819f759e3dbd6946',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastfloatcomparator_2',['FastFloatComparator',['../a00203.html#a5cd732768f3503d5b793c91e8cebff36',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastintcomparator_3',['FastIntComparator',['../a00203.html#ada5df7b620f7c13e77dd9f8a48198bc3',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastlongcomparator_4',['FastLongComparator',['../a00203.html#a4f6c6745b0ab3af103fa7e56ad463674',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastlongdoublecomparator_5',['FastLongDoubleComparator',['../a00203.html#a16c7a1d3b9722da9dd6797de8124bc08',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastlonglongcomparator_6',['FastLongLongComparator',['../a00203.html#a5ba9ba41cfcc6abfa517dc86752ea362',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastshortcomparator_7',['FastShortComparator',['../a00203.html#a0752888ca98c56aa172c1a9e1e08c66a',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastucharcomparator_8',['FastUCharComparator',['../a00203.html#acd0ecbdd335ce93f9e2efcf3f94c56b7',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastuintcomparator_9',['FastUIntComparator',['../a00203.html#a99719db40cc124ca27f906d25440c789',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastulongcomparator_10',['FastULongComparator',['../a00203.html#aaa67bfe52d7d0a699788bc313ace0a4e',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastulonglongcomparator_11',['FastULongLongComparator',['../a00203.html#af78cea36d3a1855513054ba8aa4309bd',1,'LumexSafeNumericComparator.hpp']]],
+  ['fastushortcomparator_12',['FastUShortComparator',['../a00203.html#a0011f8151254ef0815de7933c8f53d72',1,'LumexSafeNumericComparator.hpp']]],
+  ['filestatus_13',['FileStatus',['../a00435.html#a48c16203e09293b7251c0663d7ed8cc9',1,'Lumex']]],
+  ['filesystem_14',['Filesystem',['../a00435.html#a423410512bd3cf65fb864732b956bf96',1,'Lumex']]],
+  ['filesystemresult_15',['FilesystemResult',['../a00435.html#af2e598f78f3b1bfabcf30446724a1042',1,'Lumex']]],
+  ['filetype_16',['FileType',['../a00435.html#a5deedf3cb35a1a74f00a3fa27643e831',1,'Lumex']]],
+  ['floatgenerator_17',['FloatGenerator',['../a00137.html#aa9828c9784e6076091c55f6b65ade998',1,'LumexNumberGenerator.hpp']]]
 ];

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['utf8_5fbom_5f0_0',['UTF8_BOM_0',['../namespace_lumex_1_1_applied_1_1_settings_1_1_constants.html#a359823a30831c4c9b8c7ac13a9429f58',1,'Lumex::Applied::Settings::Constants']]],
-  ['utf8_5fbom_5f1_1',['UTF8_BOM_1',['../namespace_lumex_1_1_applied_1_1_settings_1_1_constants.html#ad3d7372af7973bc996c802f8f5109498',1,'Lumex::Applied::Settings::Constants']]],
-  ['utf8_5fbom_5f2_2',['UTF8_BOM_2',['../namespace_lumex_1_1_applied_1_1_settings_1_1_constants.html#a464e156fb4fdc7e15e9f003726bd24f2',1,'Lumex::Applied::Settings::Constants']]],
-  ['utf8_5fbom_5fsize_3',['UTF8_BOM_SIZE',['../namespace_lumex_1_1_applied_1_1_settings_1_1_constants.html#abf61e5b868352c006a2c9c6d0e770285',1,'Lumex::Applied::Settings::Constants']]]
+  ['table_0',['table',['../a01172.html#a7df87329d8acc71a9cac9af8f6390dfe',1,'Lumex::Xml::XPath::Ast::XPathAstNode']]],
+  ['temp_1',['temp',['../a01208.html#a0c6bfb5b31b3c92c77906a41eb0e1261',1,'Lumex::Xml::XPath::Memory::XPathStack::temp'],['../a01212.html#aa9ebed08aa3157262d4faa9b4b68a187',1,'Lumex::Xml::XPath::Memory::XPathStackData::temp']]],
+  ['totalmemorymb_2',['totalMemoryMB',['../a00528.html#aa5cea2c40fcf45c34d552c0a3452a044',1,'Lumex::Applied::Hardware::HardwareInfo::totalMemoryMB'],['../a01565.html#aa5cea2c40fcf45c34d552c0a3452a044',1,'HardwareInfo::totalMemoryMB']]]
 ];

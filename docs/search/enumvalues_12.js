@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['warning_0',['Warning',['../namespace_lumex_1_1_applied_1_1_logging.html#a8e9e6451b4f33ca0135e137538d24cdda0eaadb4fcb48a0a0ed7bc9868be9fbaa',1,'Lumex::Applied::Logging']]]
+  ['value_0',['value',['../a01060.html#a7f1fa59ca84909f56b4c9d3709ff8680ad40016f8a34e637435145c86b3e83ef8',1,'Lumex::Xml::Utility::opt_false::value'],['../a01064.html#af0e8972d17e6ac6a329c2402218abe33a3766dc6280b9c965e086afd11eac1c91',1,'Lumex::Xml::Utility::opt_true::value']]]
 ];

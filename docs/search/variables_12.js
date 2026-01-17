@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['table_0',['table',['../class_lumex_1_1_xml_1_1_x_path_1_1_ast_1_1_x_path_ast_node.html#a7df87329d8acc71a9cac9af8f6390dfe',1,'Lumex::Xml::XPath::Ast::XPathAstNode']]],
-  ['temp_1',['temp',['../struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_stack.html#a0c6bfb5b31b3c92c77906a41eb0e1261',1,'Lumex::Xml::XPath::Memory::XPathStack::temp'],['../struct_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_stack_data.html#aa9ebed08aa3157262d4faa9b4b68a187',1,'Lumex::Xml::XPath::Memory::XPathStackData::temp']]],
-  ['totalmemorymb_2',['totalMemoryMB',['../struct_lumex_1_1_applied_1_1_hardware_1_1_hardware_info.html#aa5cea2c40fcf45c34d552c0a3452a044',1,'Lumex::Applied::Hardware::HardwareInfo::totalMemoryMB'],['../struct_hardware_info.html#aa5cea2c40fcf45c34d552c0a3452a044',1,'HardwareInfo::totalMemoryMB']]]
+  ['same_5ftype_0',['same_type',['../a00872.html#aeaab7b5d0d12fe8780e18468dbc5c695',1,'comparison_traits']]],
+  ['scratch_1',['scratch',['../a01132.html#a3cbd96be3f68ccfdc92202bb728b5b34',1,'Lumex::Xml::Writer::XmlBufferedWriter']]],
+  ['size_2',['size',['../a00972.html#a42618ba3b7bda1246cfc640149fc34eb',1,'xml_stream_chunk::size'],['../a01020.html#ad5bb3597ade78d89bbe0e300748ad508',1,'gap::size'],['../a01180.html#a9cf8422ce47ea2e037d99be6d58a768b',1,'Lumex::Xml::XPath::Context::XPathContext::size']]],
+  ['stack_3',['stack',['../a01212.html#a2d7770bd6dfcf5ee933871e4c1ba85bc',1,'Lumex::Xml::XPath::Memory::XPathStackData']]],
+  ['status_4',['status',['../a01036.html#a403c6201db3cf01e97a984cbdf02d630',1,'Lumex::Xml::Text::XmlParseResult']]],
+  ['string_5',['string',['../a01172.html#ab4373714e1647a4a6c9322402c14ffae',1,'Lumex::Xml::XPath::Ast::XPathAstNode']]],
+  ['success_6',['success',['../a00644.html#aef5567e26689919e894a382b72adea3b',1,'Lumex::Core::Environment::LumexEnvironment::EnvResult']]]
 ];

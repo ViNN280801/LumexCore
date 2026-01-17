@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['path_0',['Path',['../class_lumex_1_1_core_1_1_filesystem_1_1_path.html',1,'Lumex::Core::Filesystem']]]
+  ['opt_5ffalse_0',['opt_false',['../a01060.html',1,'Lumex::Xml::Utility']]],
+  ['opt_5ftrue_1',['opt_true',['../a01064.html',1,'Lumex::Xml::Utility']]]
 ];
