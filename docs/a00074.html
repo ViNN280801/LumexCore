@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexCrc.hpp File Reference</title>
+<title>LumexLib: LumexSerialPortEnumeration.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -106,101 +106,76 @@ $(function(){initNavTree('a00074.html',''); initResizable(true); });
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">LumexCrc.hpp File Reference</div></div>
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">LumexSerialPortEnumeration.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;array&gt;</code><br />
-<code>#include &lt;cstddef&gt;</code><br />
-<code>#include &lt;cstdint&gt;</code><br />
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00179_source.html">lumex/core/utility/LumexAttributes.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00185_source.html">lumex/core/utility/LumexConstantMacros.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00212_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00077_source.html">lumex/applied/serial/enumeration/LumexSerialPortEnumeration.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00083_source.html">lumex/applied/serial/port/LumexSerialPort.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00089_source.html">lumex/applied/serial/resolver/LumexPortProcessResolver.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00350_source.html">lumex/core/utility/os/LumexCheckOS.hpp</a>&quot;</code><br />
+<code>#include &lt;cerrno&gt;</code><br />
+<code>#include &lt;dirent.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexCrc.hpp:</div>
+Include dependency graph for LumexSerialPortEnumeration.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00075.png" border="0" usemap="#a_lumex_crc_8hpp" alt=""/></div>
-<map name="a_lumex_crc_8hpp" id="a_lumex_crc_8hpp">
-<area shape="rect" title=" " alt="" coords="228,5,334,32"/>
-<area shape="rect" title=" " alt="" coords="5,88,56,115"/>
-<area shape="poly" title=" " alt="" coords="228,34,152,54,69,82,67,83,65,78,67,78,150,49,227,29"/>
-<area shape="rect" title=" " alt="" coords="80,88,144,115"/>
-<area shape="poly" title=" " alt="" coords="256,35,153,84,151,79,254,30"/>
-<area shape="rect" title=" " alt="" coords="168,88,229,115"/>
-<area shape="poly" title=" " alt="" coords="270,34,224,79,220,75,266,31"/>
-<area shape="rect" title=" " alt="" coords="252,88,310,115"/>
-<area shape="poly" title=" " alt="" coords="284,32,284,73,278,73,278,32"/>
-<area shape="rect" href="a00179.html" title=" " alt="" coords="334,80,479,123"/>
-<area shape="poly" title=" " alt="" coords="302,30,363,69,360,74,299,35"/>
-<area shape="rect" href="a00185.html" title=" " alt="" coords="503,80,688,123"/>
-<area shape="poly" title=" " alt="" coords="331,30,501,73,499,78,330,35"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="712,88,874,115"/>
-<area shape="poly" title=" " alt="" coords="335,24,499,45,702,77,724,82,723,87,701,83,498,51,334,29"/>
-<area shape="rect" href="a00197.html" title=" " alt="" coords="524,171,668,197"/>
-<area shape="poly" title=" " alt="" coords="598,123,598,155,593,155,593,123"/>
-</map>
+<div class="center"><img src="a00075.png" border="0" usemap="#a_lumex_serial_port_enumeration_8cpp" alt=""/></div>
 </div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00076.png" border="0" usemap="#a_lumex_crc_8hppdep" alt=""/></div>
-<map name="a_lumex_crc_8hppdep" id="a_lumex_crc_8hppdep">
-<area shape="rect" title=" " alt="" coords="5,5,112,32"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="5,80,112,107"/>
-<area shape="poly" title=" " alt="" coords="61,48,61,80,56,80,56,48"/>
-</map>
-</div>
-</div>
-<p><a href="a00074_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00632.html">Lumex::Core::crc::Crc4</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс для вычисления CRC4 контрольных сумм.  <a href="a00632.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00636.html">Lumex::Core::crc::Crc8</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03755.html">lumex::applied::serial::enumeration::port_process_resolver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static facade over the platform error formatter and port-holder resolver.  <a href="a03755.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00435.html">Lumex</a></td></tr>
-<tr class="memdesc:a00435"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00455.html">Lumex::Core</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00775.html">lumex::applied</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00462.html">Lumex::Core::crc</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00808.html">lumex::applied::serial</a></td></tr>
+<tr class="memdesc:a00808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross-platform helpers for naming/resolving serial (and serial-adjacent) communication ports. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00463.html">Lumex::Core::crc::Constants</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html">lumex::applied::serial::enumeration</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a754c12d133d771363c363f5b104abdcd" id="r_a754c12d133d771363c363f5b104abdcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00185.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00463.html#a754c12d133d771363c363f5b104abdcd">Lumex::Core::crc::Constants::kUpperNibbleMask</a> = 0xF0</td></tr>
-<tr class="memdesc:a754c12d133d771363c363f5b104abdcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Константа для извлечения старших 4 бит из байта (сдвиг вправо на 4 позиции)  <br /></td></tr>
-<tr class="separator:a754c12d133d771363c363f5b104abdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72102b84bb222b0e70ecb720d74f97b7" id="r_a72102b84bb222b0e70ecb720d74f97b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00185.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00463.html#a72102b84bb222b0e70ecb720d74f97b7">Lumex::Core::crc::Constants::kLowerNibbleMask</a> = 0x0F</td></tr>
-<tr class="memdesc:a72102b84bb222b0e70ecb720d74f97b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Константа для извлечения младших 4 бит из байта (маска 0x0F)  <br /></td></tr>
-<tr class="separator:a72102b84bb222b0e70ecb720d74f97b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d1d8168ceb6774420280cb92e99505" id="r_af5d1d8168ceb6774420280cb92e99505"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00185.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00463.html#af5d1d8168ceb6774420280cb92e99505">Lumex::Core::crc::Constants::kCrc4TableSize</a> = 16UL</td></tr>
-<tr class="memdesc:af5d1d8168ceb6774420280cb92e99505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размер таблицы CRC4 (16 элементов для 4-битных значений)  <br /></td></tr>
-<tr class="separator:af5d1d8168ceb6774420280cb92e99505"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8366d5785194b0d85a8fa696ccc41e4f" id="r_a8366d5785194b0d85a8fa696ccc41e4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00185.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00463.html#a8366d5785194b0d85a8fa696ccc41e4f">Lumex::Core::crc::Constants::kCrc8TableSize</a> = 256UL</td></tr>
-<tr class="memdesc:a8366d5785194b0d85a8fa696ccc41e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размер таблицы CRC8 по умолчанию (256 элементов для 8-битных значений).  <br /></td></tr>
-<tr class="separator:a8366d5785194b0d85a8fa696ccc41e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3ad35a0a08ff633d1489019b18986b6" id="r_aa3ad35a0a08ff633d1489019b18986b6"><td class="memItemLeft" align="right" valign="top">std::array&lt; uint8_t, <a class="el" href="a00463.html#af5d1d8168ceb6774420280cb92e99505">kCrc4TableSize</a> &gt; const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00463.html#aa3ad35a0a08ff633d1489019b18986b6">Lumex::Core::crc::Constants::kCrc4Table</a> = {0, 13, 7, 10, 14, 3, 9, 4, 1, 12, 6, 11, 15, 2, 8, 5}</td></tr>
-<tr class="memdesc:aa3ad35a0a08ff633d1489019b18986b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статическая константная таблица для быстрого вычисления CRC4.  <br /></td></tr>
-<tr class="separator:aa3ad35a0a08ff633d1489019b18986b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc25c25e76223ed763a2f3b49fb3d704" id="r_adc25c25e76223ed763a2f3b49fb3d704"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00185.html#ac8388d271f79d02f47b20cfae244900a">LUMEX_CONSTINIT_CONSTANT</a> std::array&lt; uint8_t, <a class="el" href="a00463.html#a8366d5785194b0d85a8fa696ccc41e4f">kCrc8TableSize</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00463.html#adc25c25e76223ed763a2f3b49fb3d704">Lumex::Core::crc::Constants::kCrc8Table</a></td></tr>
-<tr class="memdesc:adc25c25e76223ed763a2f3b49fb3d704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статическая константная таблица для быстрого вычисления CRC8.  <br /></td></tr>
-<tr class="separator:adc25c25e76223ed763a2f3b49fb3d704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a4ba9a6ee59dc805750a1d5fb62922320" id="r_a4ba9a6ee59dc805750a1d5fb62922320"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html#a4ba9a6ee59dc805750a1d5fb62922320">lumex::applied::serial::enumeration::serial_port_state_to_string</a> (<a class="el" href="a00809.html#a2833c2a4c2aca860a7fe8ecce5e59400">serial_port_state</a> state) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="separator:a4ba9a6ee59dc805750a1d5fb62922320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cef0e5277cd0e77cc8dcee122290605" id="r_a0cef0e5277cd0e77cc8dcee122290605"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html#a0cef0e5277cd0e77cc8dcee122290605">lumex::applied::serial::enumeration::is_bluetooth_enumerated_port</a> (std::string const &amp;port_name) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a0cef0e5277cd0e77cc8dcee122290605"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when Windows registered <code>port_name</code> through a Bluetooth enumerator (<code>BTHENUM</code> / <code>BTHLEENUM</code>).  <br /></td></tr>
+<tr class="separator:a0cef0e5277cd0e77cc8dcee122290605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37c2823b7a16bf406008f7bb4287c16" id="r_ad37c2823b7a16bf406008f7bb4287c16"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="a01032.html">serial_port_info_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html#ad37c2823b7a16bf406008f7bb4287c16">lumex::applied::serial::enumeration::enumerate_serial_ports_detailed</a> (std::string const &amp;connected_port=std::string(), bool need_to_filter_bluetooth=false)</td></tr>
+<tr class="memdesc:ad37c2823b7a16bf406008f7bb4287c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate serial ports with full <code><a class="el" href="a01032.html" title="Structured description of one serial port discovered on this host.">serial_port_info_t</a></code> records.  <br /></td></tr>
+<tr class="separator:ad37c2823b7a16bf406008f7bb4287c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4294f4b203278cebf053de42c794bdf2" id="r_a4294f4b203278cebf053de42c794bdf2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html#a4294f4b203278cebf053de42c794bdf2">lumex::applied::serial::enumeration::enumerate_serial_port_names</a> (bool need_to_filter_bluetooth=false)</td></tr>
+<tr class="memdesc:a4294f4b203278cebf053de42c794bdf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate serial port paths only.  <br /></td></tr>
+<tr class="separator:a4294f4b203278cebf053de42c794bdf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab09ab9261b3038641b2bda9c7f63d821" id="r_ab09ab9261b3038641b2bda9c7f63d821"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html#ab09ab9261b3038641b2bda9c7f63d821">lumex::applied::serial::enumeration::resolve_serial_port_path</a> (std::string const &amp;portName, std::uint32_t channelType, std::function&lt; std::string()&gt; const &amp;getIpAddressCallback=nullptr, std::function&lt; void(std::string const &amp;)&gt; const &amp;logWarningCallback=nullptr) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:ab09ab9261b3038641b2bda9c7f63d821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a short serial-port name into the full, platform-specific path a channel needs in order to actually open it.  <br /></td></tr>
+<tr class="separator:ab09ab9261b3038641b2bda9c7f63d821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_98caa1916543dc75c4447070785a392c.html">crc</a></li><li class="navelem"><a class="el" href="a00074.html">LumexCrc.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_6df2cf08c7df610d9bf032fe0440ee34.html">applied</a></li><li class="navelem"><a class="el" href="dir_8a698c9a61d530817355e041c593101e.html">serial</a></li><li class="navelem"><a class="el" href="dir_0e28f329605d3df11728fd0c96368edf.html">enumeration</a></li><li class="navelem"><a class="el" href="a00074.html">LumexSerialPortEnumeration.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

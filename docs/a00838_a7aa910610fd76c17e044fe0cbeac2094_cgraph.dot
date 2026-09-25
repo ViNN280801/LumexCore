@@ -1,0 +1,15 @@
+digraph "lumex::core::crc::catalog::ComputeTransportChecksum"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="lumex::core::crc::catalog\l::ComputeTransportChecksum",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="8-bit transport checksum for the current process-global mode."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="lumex::core::crc::catalog\l::ComputeCrcWithRevEngParams",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00838.html#ac47c5bdb9dfe144b1a67d448cfe49cd5",tooltip="Computes a CRC from explicit RevEng parameters (bit engine, width 1..64)."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="lumex::core::crc::parametric\l::Detail::Reflect",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00841.html#a9c09fba6a099ff512c4716a0c86cf083",tooltip=" "];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="lumex::core::crc::catalog\l::ValidateCrcRevEngParams",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00838.html#a536a7a107a3a0c2ea882cb388d2890bf",tooltip="Validates parameters before computation (width 1..64)."];
+}

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['аллокатор_20и_20swap_0',['Аллокатор и swap',['../a00616.html#allocator',1,'']]],
-  ['алгоритма_1',['алгоритма',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#algorithm_overview',1,'Обзор алгоритма'],['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#algorithm_example',1,'Пример выполнения алгоритма'],['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#algorithm_properties',1,'Свойства алгоритма']]],
-  ['алгоритм_2',['Пошаговый алгоритм',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#step_by_step_algorithm',1,'']]],
-  ['алгоритм_20работы_20safecomparator_3',['Полный алгоритм работы SafeComparator',['../D:/Develop/LumexCore/lumex/core/utility/LumexSafeNumericComparator.hpp#algorithm',1,'']]]
+  ['yaml_0',['yaml',['../a00797.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a6eedc03a68a69933c763e674f2d7c42f',1,'lumex::applied::logger']]],
+  ['year_1',['year',['../a01880.html#abdf00f1e9ec941a79210de8281ddf35c',1,'lumex::core::fmt::Detail::civil_time_t']]],
+  ['year_5fday_2',['year_day',['../a01880.html#a1123932f47c2aa6859b091164c014d06',1,'lumex::core::fmt::Detail::civil_time_t']]]
 ];

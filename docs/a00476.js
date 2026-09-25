@@ -1,6 +1,4 @@
 var a00476 =
 [
-    [ "LumexTemporary", "a00836.html", "a00836" ],
-    [ "TemporaryDirectory", "a00828.html", "a00828" ],
-    [ "TemporaryFile", "a00832.html", "a00832" ]
+    [ "LUMEX_DEFINE_REFLECTED_ENUM", "a00476.html#ad2bc3330ea4a23750a908b9e6c8af5a0", null ]
 ];

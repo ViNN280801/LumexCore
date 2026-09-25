@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::XPath::Parser::Lexer::XPathLexer Class Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc5_g704_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,325 +104,166 @@ $(function(){initNavTree('a01228.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="a01225.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::XPath::Parser::Lexer::XPathLexer Class Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::core::crc::parametric::crc5_g704_spec_t Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="a00513.html">Lexer</a> (tokenizer) for <a class="el" href="a00496.html">XPath</a> expressions.  
+<p>CRC-5/G-704: width=5 poly=0x15 init=0x00 refin=true refout=true xorout=0x00.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00383_source.html">XPathLexer.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a748fbcdd04a85985dca01166d4f54f90" id="r_a748fbcdd04a85985dca01166d4f54f90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a748fbcdd04a85985dca01166d4f54f90">XPathLexer</a> (<a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> const *query)</td></tr>
-<tr class="memdesc:a748fbcdd04a85985dca01166d4f54f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="a01228.html" title="Lexer (tokenizer) for XPath expressions.">XPathLexer</a> and initializes it with a query string.  <br /></td></tr>
-<tr class="separator:a748fbcdd04a85985dca01166d4f54f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf93be488dafb9d26d496ffe9c4b48ef" id="r_acf93be488dafb9d26d496ffe9c4b48ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf93be488dafb9d26d496ffe9c4b48ef">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;Discarding the lexer's state means losing the current parsing position, which is essential for error &quot; &quot;reporting, debugging, or resuming parsing from a specific point.&quot;) <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> const *state() const</td></tr>
-<tr class="memdesc:acf93be488dafb9d26d496ffe9c4b48ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current parsing position in the query string.  <br /></td></tr>
-<tr class="separator:acf93be488dafb9d26d496ffe9c4b48ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acacfc5680677b1edc3e5d6e431f934ba" id="r_acacfc5680677b1edc3e5d6e431f934ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acacfc5680677b1edc3e5d6e431f934ba">next</a> ()</td></tr>
-<tr class="memdesc:acacfc5680677b1edc3e5d6e431f934ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the lexer to the next token in the <a class="el" href="a00496.html">XPath</a> query.  <br /></td></tr>
-<tr class="separator:acacfc5680677b1edc3e5d6e431f934ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac21c5cecac6e1fb85c682c6eedd3be02" id="r_ac21c5cecac6e1fb85c682c6eedd3be02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac21c5cecac6e1fb85c682c6eedd3be02">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;Discarding the current lexeme means ignoring the token type recognized by the lexer, which is crucial &quot; &quot;for guiding the parser's logic and determining the <a class="el" href="#acacfc5680677b1edc3e5d6e431f934ba">next</a> parsing action.&quot;) <a class="el" href="a00503.html#a13c781a61955b9278b8199e51fb641bb">lexeme_t</a> current() const</td></tr>
-<tr class="memdesc:ac21c5cecac6e1fb85c682c6eedd3be02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of the current lexeme.  <br /></td></tr>
-<tr class="separator:ac21c5cecac6e1fb85c682c6eedd3be02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5075f79f9dd9e5c2899db8fb63eb8b91" id="r_a5075f79f9dd9e5c2899db8fb63eb8b91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5075f79f9dd9e5c2899db8fb63eb8b91">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;Discarding the current lexer position means losing the exact character pointer where the current lexeme &quot; &quot;begins. This position is vital for error reporting, context tracking, and precise string manipulation.&quot;) <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> const *current_pos() const</td></tr>
-<tr class="memdesc:a5075f79f9dd9e5c2899db8fb63eb8b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the starting position of the current lexeme in the query string.  <br /></td></tr>
-<tr class="separator:a5075f79f9dd9e5c2899db8fb63eb8b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50065347e3b5b4416d2d837768dfa6e7" id="r_a50065347e3b5b4416d2d837768dfa6e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50065347e3b5b4416d2d837768dfa6e7">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;Discarding the lexeme's content means ignoring the actual string value of the token, which is often &quot; &quot;needed for semantic analysis, variable extraction, or direct processing of string literals.&quot;) <a class="el" href="a01232.html">XPathLexerString</a> const &amp;contents() const</td></tr>
-<tr class="memdesc:a50065347e3b5b4416d2d837768dfa6e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contents of the current lexeme as an <code><a class="el" href="a01232.html" title="Represents a string view used by the XPath lexer.">XPathLexerString</a></code>.  <br /></td></tr>
-<tr class="separator:a50065347e3b5b4416d2d837768dfa6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a7070c67c05946291d59674b1cb2cfaa6" id="r_a7070c67c05946291d59674b1cb2cfaa6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7070c67c05946291d59674b1cb2cfaa6">ValueType</a> = std::uint8_t</td></tr>
+<tr class="separator:a7070c67c05946291d59674b1cb2cfaa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:af53ec60ced38912d213ab22c67d27ccf" id="r_af53ec60ced38912d213ab22c67d27ccf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af53ec60ced38912d213ab22c67d27ccf">kWidth</a> = 5</td></tr>
+<tr class="separator:af53ec60ced38912d213ab22c67d27ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c533538e4c22848ce0456a51b368fc" id="r_a71c533538e4c22848ce0456a51b368fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71c533538e4c22848ce0456a51b368fc">kPoly</a> = 0x15U</td></tr>
+<tr class="separator:a71c533538e4c22848ce0456a51b368fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aeace4fc61ab1f95b4761bb341e7432" id="r_a1aeace4fc61ab1f95b4761bb341e7432"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aeace4fc61ab1f95b4761bb341e7432">kInit</a> = 0x00U</td></tr>
+<tr class="separator:a1aeace4fc61ab1f95b4761bb341e7432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ed934d1a0e969674cffbb703a96704" id="r_a82ed934d1a0e969674cffbb703a96704"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82ed934d1a0e969674cffbb703a96704">kRefIn</a> = true</td></tr>
+<tr class="separator:a82ed934d1a0e969674cffbb703a96704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c8a51868a7899151d66c73d8b78dae" id="r_a87c8a51868a7899151d66c73d8b78dae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87c8a51868a7899151d66c73d8b78dae">kRefOut</a> = true</td></tr>
+<tr class="separator:a87c8a51868a7899151d66c73d8b78dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97bf435443c770d9b2109f873542f979" id="r_a97bf435443c770d9b2109f873542f979"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97bf435443c770d9b2109f873542f979">kXorOut</a> = 0x00U</td></tr>
+<tr class="separator:a97bf435443c770d9b2109f873542f979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14364606b3bbe57e5c3090b9f685545" id="r_ac14364606b3bbe57e5c3090b9f685545"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac14364606b3bbe57e5c3090b9f685545">kCatalogCheck</a> = 0x07U</td></tr>
+<tr class="separator:ac14364606b3bbe57e5c3090b9f685545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="a00513.html">Lexer</a> (tokenizer) for <a class="el" href="a00496.html">XPath</a> expressions. </p>
-<p>This class is responsible for breaking down an <a class="el" href="a00496.html">XPath</a> query string into a sequence of tokens (lexemes). It handles various <a class="el" href="a00496.html">XPath</a> lexical constructs including operators, axis specifiers, node tests, numbers, strings, and variable references. It skips whitespace and identifies multi-character tokens (e.g., <code>&gt;=</code>, <code>//</code>).</p>
-<dl class="section note"><dt>Note</dt><dd>The lexer operates on a raw <code><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a></code> string and does not perform any syntax validation beyond token recognition. It maintains its internal state, allowing for sequential token retrieval. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This class does not own the <code>query</code> string passed to its constructor; the <code>query</code> must remain valid throughout the lexer's lifetime. </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a748fbcdd04a85985dca01166d4f54f90" name="a748fbcdd04a85985dca01166d4f54f90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a748fbcdd04a85985dca01166d4f54f90">&#9670;&#160;</a></span>XPathLexer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> XPathLexer::XPathLexer </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> const *</td>          <td class="paramname"><span class="paramname"><em>query</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs an <a class="el" href="a01228.html" title="Lexer (tokenizer) for XPath expressions.">XPathLexer</a> and initializes it with a query string. </p>
-<p>The lexer immediately processes the first token upon construction. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">query</td><td>A null-terminated C-style string containing the <a class="el" href="a00496.html">XPath</a> expression to lex. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>The <code>query</code> string must remain valid and unchanged for the lifetime of this lexer. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01228_a748fbcdd04a85985dca01166d4f54f90_cgraph.png" border="0" usemap="#aa01228_a748fbcdd04a85985dca01166d4f54f90_cgraph" alt=""/></div>
-<map name="aa01228_a748fbcdd04a85985dca01166d4f54f90_cgraph" id="aa01228_a748fbcdd04a85985dca01166d4f54f90_cgraph">
-<area shape="rect" title="Constructs an XPathLexer and initializes it with a query string." alt="" coords="5,5,181,64"/>
-<area shape="rect" href="a01228.html#acacfc5680677b1edc3e5d6e431f934ba" title="Advances the lexer to the next token in the XPath query." alt="" coords="229,13,437,56"/>
-<area shape="poly" title=" " alt="" coords="181,32,213,32,213,37,181,37"/>
-</map>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac21c5cecac6e1fb85c682c6eedd3be02" name="ac21c5cecac6e1fb85c682c6eedd3be02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac21c5cecac6e1fb85c682c6eedd3be02">&#9670;&#160;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[1/4]</span></h2>
+<div class="textblock"><p>CRC-5/G-704: width=5 poly=0x15 init=0x00 refin=true refout=true xorout=0x00. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-5/G-704 </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a7070c67c05946291d59674b1cb2cfaa6" name="a7070c67c05946291d59674b1cb2cfaa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7070c67c05946291d59674b1cb2cfaa6">&#9670;&#160;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Lumex::Xml::XPath::Parser::Lexer::XPathLexer::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Discarding the current lexeme means ignoring the token type recognized by the</td>          <td class="paramname"><span class="paramname"><em>lexer</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">which is crucial &quot; &quot;for guiding the parser 's logic and determining the <a class="el" href="#acacfc5680677b1edc3e5d6e431f934ba">next</a> parsing action.&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;) const</td>
+          <td class="memname">using <a class="el" href="#a7070c67c05946291d59674b1cb2cfaa6">lumex::core::crc::parametric::crc5_g704_spec_t::ValueType</a> = std::uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the type of the current lexeme. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code><a class="el" href="a00503.html#a13c781a61955b9278b8199e51fb641bb">lexeme_t</a></code> enumeration value representing the type of the token at the current lexer position. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01228_ac21c5cecac6e1fb85c682c6eedd3be02_cgraph.png" border="0" usemap="#aa01228_ac21c5cecac6e1fb85c682c6eedd3be02_cgraph" alt=""/></div>
-<map name="aa01228_ac21c5cecac6e1fb85c682c6eedd3be02_cgraph" id="aa01228_ac21c5cecac6e1fb85c682c6eedd3be02_cgraph">
-<area shape="rect" title="Returns the type of the current lexeme." alt="" coords="5,5,251,64"/>
-<area shape="rect" href="a01228.html#acf93be488dafb9d26d496ffe9c4b48ef" title="Returns the current parsing position in the query string." alt="" coords="299,5,544,64"/>
-<area shape="poly" title=" " alt="" coords="251,32,283,32,283,37,251,37"/>
-<area shape="rect" href="a01228.html#acacfc5680677b1edc3e5d6e431f934ba" title="Advances the lexer to the next token in the XPath query." alt="" coords="592,13,800,56"/>
-<area shape="poly" title=" " alt="" coords="544,32,576,32,576,37,544,37"/>
-</map>
-</div>
-
 </div>
 </div>
-<a id="a5075f79f9dd9e5c2899db8fb63eb8b91" name="a5075f79f9dd9e5c2899db8fb63eb8b91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5075f79f9dd9e5c2899db8fb63eb8b91">&#9670;&#160;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[2/4]</span></h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac14364606b3bbe57e5c3090b9f685545" name="ac14364606b3bbe57e5c3090b9f685545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14364606b3bbe57e5c3090b9f685545">&#9670;&#160;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Lumex::Xml::XPath::Parser::Lexer::XPathLexer::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Discarding the current lexer position means losing the exact character pointer where the current lexeme &quot; &quot;begins. This position is vital for error</td>          <td class="paramname"><span class="paramname"><em>reporting</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">context</td>          <td class="paramname"><span class="paramname"><em>tracking</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">and precise string manipulation.&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;) const</td>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint8_t lumex::core::crc::parametric::crc5_g704_spec_t::kCatalogCheck = 0x07U</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the starting position of the current lexeme in the query string. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> const*</code> pointing to the first character of the current lexeme. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This position is useful for error reporting or extracting the raw token string. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01228_a5075f79f9dd9e5c2899db8fb63eb8b91_cgraph.png" border="0" usemap="#aa01228_a5075f79f9dd9e5c2899db8fb63eb8b91_cgraph" alt=""/></div>
-<map name="aa01228_a5075f79f9dd9e5c2899db8fb63eb8b91_cgraph" id="aa01228_a5075f79f9dd9e5c2899db8fb63eb8b91_cgraph">
-<area shape="rect" title="Returns the starting position of the current lexeme in the query string." alt="" coords="5,5,251,64"/>
-<area shape="rect" href="a01228.html#acf93be488dafb9d26d496ffe9c4b48ef" title="Returns the current parsing position in the query string." alt="" coords="299,5,544,64"/>
-<area shape="poly" title=" " alt="" coords="251,32,283,32,283,37,251,37"/>
-<area shape="rect" href="a01228.html#acacfc5680677b1edc3e5d6e431f934ba" title="Advances the lexer to the next token in the XPath query." alt="" coords="592,13,800,56"/>
-<area shape="poly" title=" " alt="" coords="544,32,576,32,576,37,544,37"/>
-</map>
-</div>
-
 </div>
 </div>
-<a id="a50065347e3b5b4416d2d837768dfa6e7" name="a50065347e3b5b4416d2d837768dfa6e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50065347e3b5b4416d2d837768dfa6e7">&#9670;&#160;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[3/4]</span></h2>
+<a id="a1aeace4fc61ab1f95b4761bb341e7432" name="a1aeace4fc61ab1f95b4761bb341e7432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aeace4fc61ab1f95b4761bb341e7432">&#9670;&#160;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Lumex::Xml::XPath::Parser::Lexer::XPathLexer::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Discarding the lexeme's content means ignoring the actual string value of the</td>          <td class="paramname"><span class="paramname"><em>token</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">which is often &quot; &quot;needed for semantic</td>          <td class="paramname"><span class="paramname"><em>analysis</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">variable</td>          <td class="paramname"><span class="paramname"><em>extraction</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">or direct processing of string literals.&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;) const &amp;</td>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc5_g704_spec_t::kInit = 0x00U</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the contents of the current lexeme as an <code><a class="el" href="a01232.html" title="Represents a string view used by the XPath lexer.">XPathLexerString</a></code>. </p>
-<p>This provides a view of the actual characters that constitute the current token (e.g., the name of a variable, the value of a string literal). </p><dl class="section return"><dt>Returns</dt><dd>A constant reference to an <code><a class="el" href="a01232.html" title="Represents a string view used by the XPath lexer.">XPathLexerString</a></code> object. The underlying character data is valid as long as the original <code>query</code> string is valid. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">`LUMEX_ASSERT`</td><td>if the current lexeme type does not have associated contents (e.g., simple operators like <code>+</code> or <code>-</code>). </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01228_a50065347e3b5b4416d2d837768dfa6e7_cgraph.png" border="0" usemap="#aa01228_a50065347e3b5b4416d2d837768dfa6e7_cgraph" alt=""/></div>
-<map name="aa01228_a50065347e3b5b4416d2d837768dfa6e7_cgraph" id="aa01228_a50065347e3b5b4416d2d837768dfa6e7_cgraph">
-<area shape="rect" title="Returns the contents of the current lexeme as an XPathLexerString." alt="" coords="5,5,251,64"/>
-<area shape="rect" href="a01228.html#acf93be488dafb9d26d496ffe9c4b48ef" title="Returns the current parsing position in the query string." alt="" coords="299,5,544,64"/>
-<area shape="poly" title=" " alt="" coords="251,32,283,32,283,37,251,37"/>
-<area shape="rect" href="a01228.html#acacfc5680677b1edc3e5d6e431f934ba" title="Advances the lexer to the next token in the XPath query." alt="" coords="592,13,800,56"/>
-<area shape="poly" title=" " alt="" coords="544,32,576,32,576,37,544,37"/>
-</map>
-</div>
-
 </div>
 </div>
-<a id="acf93be488dafb9d26d496ffe9c4b48ef" name="acf93be488dafb9d26d496ffe9c4b48ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf93be488dafb9d26d496ffe9c4b48ef">&#9670;&#160;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[4/4]</span></h2>
+<a id="a71c533538e4c22848ce0456a51b368fc" name="a71c533538e4c22848ce0456a51b368fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71c533538e4c22848ce0456a51b368fc">&#9670;&#160;</a></span>kPoly</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Lumex::Xml::XPath::Parser::Lexer::XPathLexer::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Discarding the lexer's state means losing the current parsing</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">which is essential for error &quot; &quot;</td>          <td class="paramname"><span class="paramname"><em>reporting</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">debugging</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">or resuming parsing from a specific point.&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;) const</td>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc5_g704_spec_t::kPoly = 0x15U</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the current parsing position in the query string. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> const*</code> pointing to the character just after the current lexeme. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01228_acf93be488dafb9d26d496ffe9c4b48ef_cgraph.png" border="0" usemap="#aa01228_acf93be488dafb9d26d496ffe9c4b48ef_cgraph" alt=""/></div>
-<map name="aa01228_acf93be488dafb9d26d496ffe9c4b48ef_cgraph" id="aa01228_acf93be488dafb9d26d496ffe9c4b48ef_cgraph">
-<area shape="rect" title="Returns the current parsing position in the query string." alt="" coords="5,5,251,64"/>
-<area shape="rect" href="a01228.html#acacfc5680677b1edc3e5d6e431f934ba" title="Advances the lexer to the next token in the XPath query." alt="" coords="299,13,507,56"/>
-<area shape="poly" title=" " alt="" coords="251,32,283,32,283,37,251,37"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01228_acf93be488dafb9d26d496ffe9c4b48ef_icgraph.png" border="0" usemap="#aa01228_acf93be488dafb9d26d496ffe9c4b48ef_icgraph" alt=""/></div>
-<map name="aa01228_acf93be488dafb9d26d496ffe9c4b48ef_icgraph" id="aa01228_acf93be488dafb9d26d496ffe9c4b48ef_icgraph">
-<area shape="rect" title="Returns the current parsing position in the query string." alt="" coords="299,88,544,147"/>
-<area shape="rect" href="a01228.html#ac21c5cecac6e1fb85c682c6eedd3be02" title="Returns the type of the current lexeme." alt="" coords="5,5,251,64"/>
-<area shape="poly" title=" " alt="" coords="300,86,234,67,236,62,301,81"/>
-<area shape="rect" href="a01228.html#a5075f79f9dd9e5c2899db8fb63eb8b91" title="Returns the starting position of the current lexeme in the query string." alt="" coords="5,88,251,147"/>
-<area shape="poly" title=" " alt="" coords="283,120,251,120,251,115,283,115"/>
-<area shape="rect" href="a01228.html#a50065347e3b5b4416d2d837768dfa6e7" title="Returns the contents of the current lexeme as an XPathLexerString." alt="" coords="5,171,251,229"/>
-<area shape="poly" title=" " alt="" coords="301,154,236,173,234,167,300,149"/>
-</map>
-</div>
-
 </div>
 </div>
-<a id="acacfc5680677b1edc3e5d6e431f934ba" name="acacfc5680677b1edc3e5d6e431f934ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acacfc5680677b1edc3e5d6e431f934ba">&#9670;&#160;</a></span>next()</h2>
+<a id="a82ed934d1a0e969674cffbb703a96704" name="a82ed934d1a0e969674cffbb703a96704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82ed934d1a0e969674cffbb703a96704">&#9670;&#160;</a></span>kRefIn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void XPathLexer::next </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc5_g704_spec_t::kRefIn = true</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Advances the lexer to the next token in the <a class="el" href="a00496.html">XPath</a> query. </p>
-<p>This function parses the input string from the current position, skips any whitespace, identifies the next lexeme, and updates the internal state (<code>_cur</code>, <code>_cur_lexeme_pos</code>, <code>_cur_lexeme_contents</code>, <code>_cur_lexeme</code>). </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01228_acacfc5680677b1edc3e5d6e431f934ba_icgraph.png" border="0" usemap="#aa01228_acacfc5680677b1edc3e5d6e431f934ba_icgraph" alt=""/></div>
-<map name="aa01228_acacfc5680677b1edc3e5d6e431f934ba_icgraph" id="aa01228_acacfc5680677b1edc3e5d6e431f934ba_icgraph">
-<area shape="rect" title="Advances the lexer to the next token in the XPath query." alt="" coords="592,137,800,180"/>
-<area shape="rect" href="a01228.html#acf93be488dafb9d26d496ffe9c4b48ef" title="Returns the current parsing position in the query string." alt="" coords="299,88,544,147"/>
-<area shape="poly" title=" " alt="" coords="576,143,544,138,545,133,577,138"/>
-<area shape="rect" href="a01228.html#a748fbcdd04a85985dca01166d4f54f90" title="Constructs an XPathLexer and initializes it with a query string." alt="" coords="334,171,509,229"/>
-<area shape="poly" title=" " alt="" coords="577,179,510,189,509,184,576,174"/>
-<area shape="rect" href="a01228.html#ac21c5cecac6e1fb85c682c6eedd3be02" title="Returns the type of the current lexeme." alt="" coords="5,5,251,64"/>
-<area shape="poly" title=" " alt="" coords="300,86,234,67,236,62,301,81"/>
-<area shape="rect" href="a01228.html#a5075f79f9dd9e5c2899db8fb63eb8b91" title="Returns the starting position of the current lexeme in the query string." alt="" coords="5,88,251,147"/>
-<area shape="poly" title=" " alt="" coords="283,120,251,120,251,115,283,115"/>
-<area shape="rect" href="a01228.html#a50065347e3b5b4416d2d837768dfa6e7" title="Returns the contents of the current lexeme as an XPathLexerString." alt="" coords="5,171,251,229"/>
-<area shape="poly" title=" " alt="" coords="301,154,236,173,234,167,300,149"/>
-</map>
 </div>
+</div>
+<a id="a87c8a51868a7899151d66c73d8b78dae" name="a87c8a51868a7899151d66c73d8b78dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87c8a51868a7899151d66c73d8b78dae">&#9670;&#160;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc5_g704_spec_t::kRefOut = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00383_source.html">XPathLexer.hpp</a></li>
-<li><a class="el" href="a00380.html">XPathLexer.cpp</a></li>
+<a id="af53ec60ced38912d213ab22c67d27ccf" name="af53ec60ced38912d213ab22c67d27ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af53ec60ced38912d213ab22c67d27ccf">&#9670;&#160;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc5_g704_spec_t::kWidth = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97bf435443c770d9b2109f873542f979" name="a97bf435443c770d9b2109f873542f979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97bf435443c770d9b2109f873542f979">&#9670;&#160;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc5_g704_spec_t::kXorOut = 0x00U</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00496.html">XPath</a></li><li class="navelem"><a class="el" href="a00512.html">Parser</a></li><li class="navelem"><a class="el" href="a00513.html">Lexer</a></li><li class="navelem"><a class="el" href="a01228.html">XPathLexer</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00826.html">core</a></li><li class="navelem"><a class="el" href="a00837.html">crc</a></li><li class="navelem"><a class="el" href="a00840.html">parametric</a></li><li class="navelem"><a class="el" href="a01228.html">crc5_g704_spec_t</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

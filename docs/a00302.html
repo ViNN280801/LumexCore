@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XmlCleaner.hpp File Reference</title>
+<title>LumexLib: LumexAssert.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,61 +104,101 @@ $(function(){initNavTree('a00302.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
-  <div class="headertitle"><div class="title">XmlCleaner.hpp File Reference</div></div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">LumexAssert.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00212_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00305_source.html">LumexAssert.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for XmlCleaner.hpp:</div>
+Include dependency graph for LumexAssert.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00303.png" border="0" usemap="#a_xml_cleaner_8hpp" alt=""/></div>
-<map name="a_xml_cleaner_8hpp" id="a_xml_cleaner_8hpp">
-<area shape="rect" title=" " alt="" coords="29,5,144,32"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="5,80,168,107"/>
-<area shape="poly" title=" " alt="" coords="89,33,89,64,84,64,84,33"/>
-</map>
+<div class="center"><img src="a00303.png" border="0" usemap="#a_lumex_assert_8cpp" alt=""/></div>
 </div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00304.png" border="0" usemap="#a_xml_cleaner_8hppdep" alt=""/></div>
-<map name="a_xml_cleaner_8hppdep" id="a_xml_cleaner_8hppdep">
-<area shape="rect" title=" " alt="" coords="153,5,267,32"/>
-<area shape="rect" href="a00404.html" title=" " alt="" coords="5,80,122,107"/>
-<area shape="poly" title=" " alt="" coords="172,42,90,82,88,77,170,37"/>
-<area shape="rect" href="a00233.html" title=" " alt="" coords="146,80,275,107"/>
-<area shape="poly" title=" " alt="" coords="213,48,213,80,208,80,208,48"/>
-<area shape="rect" href="a00284.html" title=" " alt="" coords="300,80,441,107"/>
-<area shape="poly" title=" " alt="" coords="253,36,343,77,341,82,251,41"/>
-</map>
-</div>
-</div>
-<p><a href="a00302_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01056.html">Lumex::Xml::Utility::XmlCleaner&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple RAII (Resource Acquisition Is Initialization) wrapper for managing dynamically allocated memory.  <a href="a01056.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a07486181f1990291c2a348de8eb4c480" id="r_a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
+<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00435.html">Lumex</a></td></tr>
-<tr class="memdesc:a00435"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html">Lumex::Xml</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00490.html">Lumex::Xml::Utility</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a13a296973062a75b79df0c7f8748b809" id="r_a13a296973062a75b79df0c7f8748b809"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13a296973062a75b79df0c7f8748b809">lumex_assert_handler</a> (char const *assertion, char const *file, int line) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a13a296973062a75b79df0c7f8748b809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles failed assertions within the Lumex codebase.  <br /></td></tr>
+<tr class="separator:a13a296973062a75b79df0c7f8748b809"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a07486181f1990291c2a348de8eb4c480" name="a07486181f1990291c2a348de8eb4c480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&#160;</a></span>LUMEX_IMPLEMENTATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a13a296973062a75b79df0c7f8748b809" name="a13a296973062a75b79df0c7f8748b809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a296973062a75b79df0c7f8748b809">&#9670;&#160;</a></span>lumex_assert_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void lumex_assert_handler </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>assertion</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>line</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles failed assertions within the Lumex codebase. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span class="obfuscator">.nosp@m.</span>slav<span class="obfuscator">.nosp@m.</span>.semy<span class="obfuscator">.nosp@m.</span>kin@<span class="obfuscator">.nosp@m.</span>gmail<span class="obfuscator">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
+<p>This function serves as the central handler for assertion failures. It is typically invoked by an assertion macro when a specified condition evaluates to false. The handler receives details about the failed assertion, including the assertion string itself, the source file where the failure occurred, and the exact line number.</p>
+<p>Its primary responsibility is to process the assertion failure, which might involve logging the details, breaking into a debugger, or terminating the application. Implementations should provide clear diagnostic information to aid in debugging.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">assertion</td><td>A null-terminated string representing the failed assertion expression. This pointer is caller-owned and must remain valid for the duration of the call. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>A null-terminated string representing the name of the source file where the assertion failed. This pointer is caller-owned. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>The line number within the <code>file</code> where the assertion failed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function does not return to the caller under normal assertion failure scenarios, as it is expected to either terminate the program or enter a debugger. </dd>
+<dd>
+This function is declared <code>noexcept</code>, indicating that it does not throw C++ exceptions. Any internal failures should be handled without propagating exceptions. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Calling this function directly is typically not recommended; it is intended to be used by internal assertion macros or mechanisms. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_8b4095ffbb260afdde390f90a93ad48f.html">xml</a></li><li class="navelem"><a class="el" href="dir_34c9e92ad46f1f18eff5f7d8f7279d55.html">utility</a></li><li class="navelem"><a class="el" href="a00302.html">XmlCleaner.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_109abe650ca0d786f12c12c5008c1abf.html">utility</a></li><li class="navelem"><a class="el" href="dir_17f7f81fdad69e67c78c78e37ce960e9.html">assert</a></li><li class="navelem"><a class="el" href="a00302.html">LumexAssert.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

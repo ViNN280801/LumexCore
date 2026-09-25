@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexTemporary.hpp File Reference</title>
+<title>LumexLib: LumexEnvironment.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -106,116 +106,93 @@ $(function(){initNavTree('a00164.html',''); initResizable(true); });
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
-  <div class="headertitle"><div class="title">LumexTemporary.hpp File Reference</div></div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">LumexEnvironment.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00212_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
-<code>#include &quot;lumex/core/environment/LumexEnvironment&quot;</code><br />
-<code>#include &quot;lumex/core/filesystem/LumexFilesystem&quot;</code><br />
-<code>#include &quot;lumex/core/utility/LumexUtility&quot;</code><br />
+
+<p>Defines the <a class="el" href="#a6421e7685cc78f63f88346b58e913910" title="Alias for lumex::core::environment::LumexEnvironment.">LumexEnvironment</a> class for cross-platform environment variable management.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &quot;lumex/core/utility/LumexUtility&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00548_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexTemporary.hpp:</div>
+Include dependency graph for LumexEnvironment.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00165.png" border="0" usemap="#a_lumex_temporary_8hpp" alt=""/></div>
-<map name="a_lumex_temporary_8hpp" id="a_lumex_temporary_8hpp">
-<area shape="rect" title=" " alt="" coords="378,5,523,32"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="5,88,168,115"/>
-<area shape="poly" title=" " alt="" coords="394,35,159,87,158,82,393,30"/>
-<area shape="rect" title=" " alt="" coords="192,80,352,123"/>
-<area shape="poly" title=" " alt="" coords="424,35,333,76,331,71,421,30"/>
-<area shape="rect" title=" " alt="" coords="376,80,525,123"/>
-<area shape="poly" title=" " alt="" coords="453,32,453,65,448,65,448,32"/>
-<area shape="rect" title=" " alt="" coords="549,80,669,123"/>
-<area shape="poly" title=" " alt="" coords="476,30,556,70,554,75,474,35"/>
-<area shape="rect" title=" " alt="" coords="693,88,746,115"/>
-<area shape="poly" title=" " alt="" coords="515,30,596,50,682,77,685,79,683,84,680,83,594,55,514,35"/>
-</map>
+<div class="center"><img src="a00165.png" border="0" usemap="#a_lumex_environment_8hpp" alt=""/></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00166.png" border="0" usemap="#a_lumex_temporary_8hppdep" alt=""/></div>
-<map name="a_lumex_temporary_8hppdep" id="a_lumex_temporary_8hppdep">
-<area shape="rect" title=" " alt="" coords="5,5,151,32"/>
-<area shape="rect" href="a00161.html" title=" " alt="" coords="5,80,151,107"/>
-<area shape="poly" title=" " alt="" coords="81,48,81,80,75,80,75,48"/>
-</map>
+<div class="center"><img src="a00166.png" border="0" usemap="#a_lumex_environment_8hppdep" alt=""/></div>
 </div>
 </div>
 <p><a href="a00164_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00828.html">Lumex::Core::Temporary::TemporaryDirectory</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII wrapper for temporary directory management.  <a href="a00828.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01596.html">lumex::core::environment::env::LumexEnvironment</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00832.html">Lumex::Core::Temporary::TemporaryFile</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII wrapper for temporary file management.  <a href="a00832.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00836.html">Lumex::Core::Temporary::LumexTemporary</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html">lumex::core::environment::env::LumexEnvironment::EnvResult</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00435.html">Lumex</a></td></tr>
-<tr class="memdesc:a00435"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00455.html">Lumex::Core</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00826.html">lumex::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00476.html">Lumex::Core::Temporary</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00842.html">lumex::core::environment</a></td></tr>
+<tr class="memdesc:a00842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains classes and utilities for environment variable interaction. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00843.html">lumex::core::environment::env</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a78e01d31aa2cdceba5e743959ee5de15" id="r_a78e01d31aa2cdceba5e743959ee5de15"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78e01d31aa2cdceba5e743959ee5de15">TemporaryFile</a> = <a class="el" href="a00832.html">Lumex::Core::Temporary::TemporaryFile</a></td></tr>
-<tr class="separator:a78e01d31aa2cdceba5e743959ee5de15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fd0872e5f6e30a7d9282345742d1ae9" id="r_a9fd0872e5f6e30a7d9282345742d1ae9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fd0872e5f6e30a7d9282345742d1ae9">TemporaryDirectory</a> = <a class="el" href="a00828.html">Lumex::Core::Temporary::TemporaryDirectory</a></td></tr>
-<tr class="separator:a9fd0872e5f6e30a7d9282345742d1ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66ede0a005e814d41501d61eb9566f97" id="r_a66ede0a005e814d41501d61eb9566f97"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66ede0a005e814d41501d61eb9566f97">LumexTemporary</a> = <a class="el" href="a00836.html">Lumex::Core::Temporary::LumexTemporary</a></td></tr>
-<tr class="separator:a66ede0a005e814d41501d61eb9566f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6421e7685cc78f63f88346b58e913910" id="r_a6421e7685cc78f63f88346b58e913910"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6421e7685cc78f63f88346b58e913910">LumexEnvironment</a> = <a class="el" href="a01596.html">lumex::core::environment::env::LumexEnvironment</a></td></tr>
+<tr class="memdesc:a6421e7685cc78f63f88346b58e913910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for lumex::core::environment::LumexEnvironment.  <br /></td></tr>
+<tr class="separator:a6421e7685cc78f63f88346b58e913910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a124e7b18c6f898bd1efe69c2361162af" id="r_a124e7b18c6f898bd1efe69c2361162af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00843.html#a124e7b18c6f898bd1efe69c2361162af">lumex::core::environment::env::is_env_set</a> (<a class="el" href="a01596.html#a5ec8246f5384f098b278e1c75d009add">LumexEnvironment::string_type</a> const &amp;name)</td></tr>
+<tr class="memdesc:a124e7b18c6f898bd1efe69c2361162af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether an environment variable is set to a non-empty value.  <br /></td></tr>
+<tr class="separator:a124e7b18c6f898bd1efe69c2361162af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb018b9e44e87a495596b9fba8268244" id="r_adb018b9e44e87a495596b9fba8268244"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00843.html#adb018b9e44e87a495596b9fba8268244">lumex::core::environment::env::is_env_truthy</a> (<a class="el" href="a01596.html#a5ec8246f5384f098b278e1c75d009add">LumexEnvironment::string_type</a> const &amp;name)</td></tr>
+<tr class="memdesc:adb018b9e44e87a495596b9fba8268244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether an environment variable is "truthy" (enabled).  <br /></td></tr>
+<tr class="separator:adb018b9e44e87a495596b9fba8268244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a66ede0a005e814d41501d61eb9566f97" name="a66ede0a005e814d41501d61eb9566f97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66ede0a005e814d41501d61eb9566f97">&#9670;&#160;</a></span>LumexTemporary</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Defines the <a class="el" href="#a6421e7685cc78f63f88346b58e913910" title="Alias for lumex::core::environment::LumexEnvironment.">LumexEnvironment</a> class for cross-platform environment variable management. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span class="obfuscator">.nosp@m.</span>slav<span class="obfuscator">.nosp@m.</span>.semy<span class="obfuscator">.nosp@m.</span>kin@<span class="obfuscator">.nosp@m.</span>gmail<span class="obfuscator">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>This header provides the declaration for the <a class="el" href="#a6421e7685cc78f63f88346b58e913910" title="Alias for lumex::core::environment::LumexEnvironment.">LumexEnvironment</a> class, which offers a unified, thread-safe, and exception-safe interface for interacting with system environment variables across different operating systems (Windows, Linux, macOS). It utilizes design patterns like Singleton and Strategy to ensure a robust and flexible architecture. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a6421e7685cc78f63f88346b58e913910" name="a6421e7685cc78f63f88346b58e913910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6421e7685cc78f63f88346b58e913910">&#9670;&#160;</a></span>LumexEnvironment</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#a66ede0a005e814d41501d61eb9566f97">LumexTemporary</a> = <a class="el" href="a00836.html">Lumex::Core::Temporary::LumexTemporary</a></td>
+          <td class="memname">using <a class="el" href="#a6421e7685cc78f63f88346b58e913910">LumexEnvironment</a> = <a class="el" href="a01596.html">lumex::core::environment::env::LumexEnvironment</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a9fd0872e5f6e30a7d9282345742d1ae9" name="a9fd0872e5f6e30a7d9282345742d1ae9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fd0872e5f6e30a7d9282345742d1ae9">&#9670;&#160;</a></span>TemporaryDirectory</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a9fd0872e5f6e30a7d9282345742d1ae9">TemporaryDirectory</a> = <a class="el" href="a00828.html">Lumex::Core::Temporary::TemporaryDirectory</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a78e01d31aa2cdceba5e743959ee5de15" name="a78e01d31aa2cdceba5e743959ee5de15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78e01d31aa2cdceba5e743959ee5de15">&#9670;&#160;</a></span>TemporaryFile</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a78e01d31aa2cdceba5e743959ee5de15">TemporaryFile</a> = <a class="el" href="a00832.html">Lumex::Core::Temporary::TemporaryFile</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Alias for lumex::core::environment::LumexEnvironment. </p>
+<p>This using declaration simplifies the usage of the <a class="el" href="#a6421e7685cc78f63f88346b58e913910" title="Alias for lumex::core::environment::LumexEnvironment.">LumexEnvironment</a> class by allowing it to be referred to without its full namespace qualification. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02917.html#a0">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/environment/env/LumexEnvironment.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -224,7 +201,7 @@ Typedefs</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_f8c4365d8deb0b2c0fad2ce8606516c5.html">temporary</a></li><li class="navelem"><a class="el" href="a00164.html">LumexTemporary.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_5e7184c6173312a92e268ab87610b2b4.html">environment</a></li><li class="navelem"><a class="el" href="dir_a6eb1e2593103456b885148ead1307a8.html">env</a></li><li class="navelem"><a class="el" href="a00164.html">LumexEnvironment.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

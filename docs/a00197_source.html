@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexKeywords.hpp Source File</title>
+<title>LumexLib: LumexStacktrace.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -103,104 +103,574 @@ $(function(){initNavTree('a00197_source.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">LumexKeywords.hpp</div></div>
+  <div class="headertitle"><div class="title">LumexStacktrace.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00197.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LUMEX_KEYWORDS_HPP</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LUMEX_KEYWORDS_HPP</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#if __cplusplus &gt;= 202002L</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">  #define LUMEX_CONSTINIT constinit</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#elif __cplusplus &gt;= 201103L</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">  #define LUMEX_CONSTINIT constexpr</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="a00197.html#a7efa0880bd62481ba01b90becb04f413">    9</a></span><span class="preprocessor">  #define LUMEX_CONSTINIT</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#if __cplusplus &gt;= 201703L</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">  #define LUMEX_INLINE_VARIABLE inline</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="a00197.html#a47e6f687e9ccc7895ec20cace7a357d8">   15</a></span><span class="preprocessor">  #define LUMEX_INLINE_VARIABLE</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#if __cplusplus &gt;= 201103L</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">  #define LUMEX_NOEXCEPT_FUNCTION noexcept</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">  #define LUMEX_NOEXCEPT_FUNCTION_CONDITIONAL(cond) noexcept(cond)</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="a00197.html#a42fdd906f59b10053e30b1218cc2a1ac">   22</a></span><span class="preprocessor">  #define LUMEX_NOEXCEPT_FUNCTION</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="a00197.html#a11d12a3cfd6e87c464786a4ccfba3033">   23</a></span><span class="preprocessor">  #define LUMEX_NOEXCEPT_FUNCTION_CONDITIONAL(cond)</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#if defined(_MSC_VER)</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">  #define LUMEX_RESTRICT __restrict</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#elif defined(__GNUC__) || defined(__clang__)</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">  #define LUMEX_RESTRICT __restrict__</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="a00197.html#a6b5f5ff346254db7b10ff8acfb874e0a">   31</a></span><span class="preprocessor">  #define LUMEX_RESTRICT</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#if __cplusplus &gt;= 202303L</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="comment">// C++23 and newer has relaxed constraints for constexpr for all of these</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_FUNCTION constexpr</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_VIRTUAL_FUNCTION constexpr</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_CTOR constexpr</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_CTOR constexpr</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DTOR constexpr</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_DTOR constexpr</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_VIRTUAL_DTOR constexpr</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR constexpr</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#elif __cplusplus == 202002L</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="comment">// C++20: Virtual functions constexpr, but NOT virtual destructors</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_FUNCTION constexpr</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_VIRTUAL_FUNCTION constexpr</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_CTOR constexpr</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_CTOR</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DTOR constexpr</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_DTOR</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_VIRTUAL_DTOR</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#elif __cplusplus == 201703L</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="comment">// C++17: Base constexpr capabilities</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_FUNCTION constexpr</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_VIRTUAL_FUNCTION</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_CTOR constexpr</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_CTOR</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DTOR constexpr</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_DTOR</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_VIRTUAL_DTOR</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#elif __cplusplus == 201103L || __cplusplus == 201402L</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="comment">// C++11 and C++14: Very limited constexpr (only simple functions, no defaulted special members)</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_FUNCTION constexpr</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_VIRTUAL_FUNCTION</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_CTOR constexpr</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_CTOR</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DTOR</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_DTOR</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_VIRTUAL_DTOR</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="comment">// All the lower standards are not supported `constexpr` for these features, because `constexpr` was introduced in</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="comment">// C++11</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="a00197.html#a81fe93b4daec85db53b06073263b888f">   77</a></span><span class="preprocessor">  #define LUMEX_CONSTEXPR_FUNCTION</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="a00197.html#aa40239baec57106b1798029a91d87025">   78</a></span><span class="preprocessor">  #define LUMEX_CONSTEXPR_VIRTUAL_FUNCTION</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="a00197.html#a8aac503affc067676ceedfe24f4c3357">   79</a></span><span class="preprocessor">  #define LUMEX_CONSTEXPR_CTOR</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="a00197.html#a1301de49ecd91c86b7a61015084dc3fc">   80</a></span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_CTOR</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="comment">// C++ doesn&#39;t support concept of virtual ctor, so, skipping it</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="a00197.html#a01a7d3864d496126e9efae4bd106ffd3">   82</a></span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="a00197.html#ac6ade2ee3e7399a6546df90d11ec8518">   83</a></span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DTOR</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="a00197.html#a82311fbffabf10f9f7d8a089711dae6a">   84</a></span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_DTOR</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="a00197.html#a5623e00fcb6be5c2ab39f71b96fca788">   85</a></span><span class="preprocessor">  #define LUMEX_CONSTEXPR_VIRTUAL_DTOR</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">  #define LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_KEYWORDS_HPP</span></div>
+<a href="a00197.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#ifndef LUMEX_CORE_EXCEPTIONS_STACKTRACE_STACKTRACE_HPP</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define LUMEX_CORE_EXCEPTIONS_STACKTRACE_STACKTRACE_HPP</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#pragma clang diagnostic push</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wpadded&quot;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage-in-libc-call&quot;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wcovered-switch-default&quot;</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wswitch-enum&quot;</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wnrvo&quot;</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wheader-hygiene&quot;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wundefined-var-template&quot;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-redundant-constexpr-static-def&quot;</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wvariadic-macro-arguments-omitted&quot;</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunused-result&quot;</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wextra-semi-stmt&quot;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wexpansion-to-defined&quot;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wexit-time-destructors&quot;</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wundefined-func-template&quot;</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wfloat-equal&quot;</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#include &lt;algorithm&gt;</span> <span class="comment">// std::min, std::max, std::equal, std::lexicographical_compare</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#include &lt;cstring&gt;</span>    <span class="comment">// std::strlen, std::strrchr</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#include &lt;functional&gt;</span> <span class="comment">// std::hash</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#include &lt;memory&gt;</span>     <span class="comment">// std::unique_ptr</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#include &lt;string&gt;</span>     <span class="comment">// std::string, std::to_string</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#include &lt;vector&gt;</span>     <span class="comment">// std::vector</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#include &quot;<a class="code" href="a00203.html">lumex/core/exceptions/stacktrace/LumexStacktraceEntry.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#include &quot;lumex/core/utility/LumexUtility&quot;</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#include &quot;<a class="code" href="a00338.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">// ****************** Platform-specific includes ****************** //</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#if LUMEX_OS_WINDOWS</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#include &lt;Windows.h&gt;</span> <span class="comment">// This include should be 1st</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#include &lt;DbgHelp.h&gt;</span> <span class="comment">// This include should be 2nd, because it uses types from windows.h</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#include &lt;mutex&gt;</span> <span class="comment">// std::mutex</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#pragma comment(lib, &quot;dbghelp.lib&quot;)</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#include &lt;cstdio&gt;</span>     <span class="comment">// std::snprintf, popen, pclose, fgets</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#include &lt;cstdlib&gt;</span>    <span class="comment">// std::getenv, std::free, std::strtoul</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#include &lt;cxxabi.h&gt;</span>   <span class="comment">// abi::__cxa_demangle</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#include &lt;dlfcn.h&gt;</span>    <span class="comment">// dladdr, Dl_info</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#include &lt;execinfo.h&gt;</span> <span class="comment">// backtrace</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#include &lt;sstream&gt;</span>    <span class="comment">// std::istringstream</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#if defined(__linux__)</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#include &lt;sys/wait.h&gt;</span> <span class="comment">// waitpid (though not directly used, generally for popen related)</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#include &lt;unistd.h&gt;</span> <span class="comment">// fork, exec (addr2line related)</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">// *********************************************************************** //</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00774.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>{</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00826.html">core</a></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>{</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00844.html">exceptions</a></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>{</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00850.html">stacktrace</a></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>{</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator&gt; <span class="keyword">class </span><a class="code hl_class" href="a01620.html">LumexBasicStacktrace</a>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00851.html">detail</a></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>{</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="a00851.html#ab61ea5b9e5601de5e506c84e1e153dff">  140</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <span class="keywordtype">short</span> <span class="keyword">const</span> <a class="code hl_variable" href="a00851.html#ab61ea5b9e5601de5e506c84e1e153dff">kHashRightShift</a></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    = 2; </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="a00851.html#ab4b788cbc1fe1ffa4b6ce8aa3f792917">  142</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <span class="keywordtype">short</span> <span class="keyword">const</span> <a class="code hl_variable" href="a00851.html#ab4b788cbc1fe1ffa4b6ce8aa3f792917">kHashLeftShift</a></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    = 6; </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="a00851.html#a4a19298462cc9afc2cfe5a16027218de">  144</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <span class="keywordtype">short</span> <span class="keyword">const</span> <a class="code hl_variable" href="a00851.html#a4a19298462cc9afc2cfe5a16027218de">kDefaultAddrStrSize</a></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    = 32; </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="a00851.html#a8dfa109516137240d61f31f92a23a09d">  146</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <span class="keywordtype">short</span> <span class="keyword">const</span> <a class="code hl_variable" href="a00851.html#a8dfa109516137240d61f31f92a23a09d">kDefaultMaxFrames</a></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    = 128; </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="a00851.html#a01b55f5175ddb4d65f17a56434243574">  148</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <span class="keywordtype">short</span> <span class="keyword">const</span> <a class="code hl_variable" href="a00851.html#a01b55f5175ddb4d65f17a56434243574">kDefaultBufferSize</a></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    = 256; </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="a00851.html#a3117a732fece76851211984e400fd63e">  151</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <span class="keywordtype">short</span> <span class="keyword">const</span> <a class="code hl_variable" href="a00851.html#a3117a732fece76851211984e400fd63e">kDefaultCmdSize</a></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    = 512; </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="a00851.html#ab350e5aef16554f78f55daf70a1af0e7">  154</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> std::size_t <a class="code hl_variable" href="a00851.html#ab350e5aef16554f78f55daf70a1af0e7">kHashGoldenRatio</a></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    = 0x9e3779b9U; </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">#if LUMEX_OS_WINDOWS</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keyword">extern</span> std::mutex</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    g_dbghelp_mutex; <span class="comment">// NOLINT(cppcoreguidelines-avoid-non-const-global-variables)</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keyword">class </span>DbgHelpInitializer</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>{</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> s_initialized;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  DbgHelpInitializer ();</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  ~DbgHelpInitializer () = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  DbgHelpInitializer (DbgHelpInitializer <span class="keyword">const</span> &amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  DbgHelpInitializer (DbgHelpInitializer &amp;&amp;) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  DbgHelpInitializer &amp;operator= (DbgHelpInitializer <span class="keyword">const</span> &amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  DbgHelpInitializer &amp;operator= (DbgHelpInitializer &amp;&amp;) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="keywordtype">bool</span> is_initialized () <span class="keyword">const</span> <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>};</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><a class="code hl_class" href="a01620.html">stacktrace::LumexBasicStacktrace&lt;Allocator&gt;</a></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><a class="code hl_function" href="a00851.html#aa61442020de40e745e7e8fa3ad1d9b0c">capture_stacktrace</a> (std::size_t skip, std::size_t max_depth,</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                    Allocator <span class="keyword">const</span> &amp;alloc) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="keywordtype">bool</span> <a class="code hl_function" href="a00851.html#aa2cc258aceea6ae26e88ff6a4fde9c17">resolve_symbol_info</a> (<span class="keywordtype">void</span> *address, std::string &amp;function_name,</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                          std::string &amp;source_file,</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                          std::uint32_t &amp;line_number) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">#else</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>std::string <a class="code hl_function" href="a00851.html#a894eb6f8a719b5015744c5a76dc63b0b">demangle_symbol</a> (<span class="keywordtype">char</span> <span class="keyword">const</span> *mangled);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="keywordtype">bool</span> <a class="code hl_function" href="a00851.html#a42a19414115a27f01fec44312379fabc">get_source_info_addr2line</a> (<span class="keywordtype">void</span> *address, std::string &amp;file,</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                                std::uint32_t &amp;line);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><a class="code hl_class" href="a01620.html">stacktrace::LumexBasicStacktrace&lt;Allocator&gt;</a></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno"><a class="line" href="a00851.html#aa61442020de40e745e7e8fa3ad1d9b0c">  320</a></span><a class="code hl_function" href="a00851.html#aa61442020de40e745e7e8fa3ad1d9b0c">capture_stacktrace</a> (std::size_t skip, std::size_t max_depth,</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                    Allocator <span class="keyword">const</span> &amp;alloc) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="keywordtype">bool</span> <a class="code hl_function" href="a00851.html#aa2cc258aceea6ae26e88ff6a4fde9c17">resolve_symbol_info</a> (<span class="keywordtype">void</span> *address, std::string &amp;function_name,</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                          std::string &amp;source_file,</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                          std::uint32_t &amp;line_number) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>} <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="comment">// Suppress C4251 warnings for STL containers in DLL interface for the entire</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="comment">// template class C4251: &#39;class&#39; : class &#39;type&#39; needs to have dll-interface to</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="comment">// be used by clients of class &#39;class&#39; This warning is common when</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="comment">// `std::vector` (or other STL containers) is a member of a class exported from</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="comment">// a DLL, because `std::vector` itself is not exported. It&#39;s usually safe to</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="comment">// ignore if the client code is also compiled with the same C++ standard</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="comment">// library version.</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="preprocessor">#pragma warning(push)</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="preprocessor">#pragma warning(disable : 4251)</span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span></div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator = std::allocator&lt;LumexStacktraceEntry&gt;&gt;</div>
+<div class="foldopen" id="foldopen00372" data-start="{" data-end="};">
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno"><a class="line" href="a01620.html">  372</a></span><span class="keyword">class </span>LumexBasicStacktrace</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>{</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> A&gt;</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>  <span class="keyword">friend</span> LumexBasicStacktrace&lt;A&gt;</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno"><a class="line" href="a01620.html#aa7529d2a4a20f19d54c778f84f7c0381">  384</a></span>  <a class="code hl_function" href="a00851.html#aa61442020de40e745e7e8fa3ad1d9b0c">detail::capture_stacktrace</a> (std::size_t, std::size_t,</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>                              A <span class="keyword">const</span> &amp;) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>;</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno"><a class="line" href="a01620.html#a4d980972f69d3ba1a82969fcf0885b99">  390</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#a4d980972f69d3ba1a82969fcf0885b99">value_type</a> = <a class="code hl_class" href="a01632.html">LumexStacktraceEntry</a>;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno"><a class="line" href="a01620.html#a3726eebed5297c5fad61038ac5f4b013">  392</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> = Allocator;</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="a01620.html#ab4adfa5e25b981c53bf4013b75f7216b">  394</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> = <span class="keyword">typename</span> std::allocator_traits&lt;Allocator&gt;::size_type;</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno"><a class="line" href="a01620.html#a312ece76525a0188533b527ea615c9bb">  396</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#a312ece76525a0188533b527ea615c9bb">difference_type</a> =</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>      <span class="keyword">typename</span> std::allocator_traits&lt;Allocator&gt;::difference_type;</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno"><a class="line" href="a01620.html#af0c0c59c11aec6affe5c3840fb9a2d3b">  399</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#af0c0c59c11aec6affe5c3840fb9a2d3b">reference</a> = <a class="code hl_typedef" href="a01620.html#a4d980972f69d3ba1a82969fcf0885b99">value_type</a> &amp;;</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno"><a class="line" href="a01620.html#ae6914a08378f5bcd29235edc1368d033">  401</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#ae6914a08378f5bcd29235edc1368d033">const_reference</a> = <a class="code hl_typedef" href="a01620.html#a4d980972f69d3ba1a82969fcf0885b99">value_type</a> <span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno"><a class="line" href="a01620.html#a1cef50f08963046994b0cc569f7c63a8">  403</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#a1cef50f08963046994b0cc569f7c63a8">pointer</a> = <span class="keyword">typename</span> std::allocator_traits&lt;Allocator&gt;::pointer;</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno"><a class="line" href="a01620.html#afd1355b1503ff23c03fff5199e1574a9">  405</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#afd1355b1503ff23c03fff5199e1574a9">const_pointer</a> =</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>      <span class="keyword">typename</span> std::allocator_traits&lt;Allocator&gt;::const_pointer;</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span></div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno"><a class="line" href="a01620.html#a7db788a534a5c2f22ba455c7b437d15b">  410</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#a7db788a534a5c2f22ba455c7b437d15b">container_type</a> = std::vector&lt;value_type, allocator_type&gt;;</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span></div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno"><a class="line" href="a01620.html#a788ff8eebd7cc4ef73f0141dbace81ff">  413</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#a788ff8eebd7cc4ef73f0141dbace81ff">iterator</a> = <span class="keyword">typename</span> container_type::const_iterator;</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno"><a class="line" href="a01620.html#a9afab56a4b7f32b2529b6219ea4c748d">  415</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a> = <span class="keyword">typename</span> container_type::const_iterator;</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno"><a class="line" href="a01620.html#a504f2d12c9fef93cc64e0e9784466ecc">  418</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#a504f2d12c9fef93cc64e0e9784466ecc">reverse_iterator</a> = <span class="keyword">typename</span> container_type::const_reverse_iterator;</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno"><a class="line" href="a01620.html#a6a2a2201811aa87ec3b70aa7202c6b74">  421</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="a01620.html#a6a2a2201811aa87ec3b70aa7202c6b74">const_reverse_iterator</a> =</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>      <span class="keyword">typename</span> container_type::const_reverse_iterator;</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span> </div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>  <a class="code hl_typedef" href="a01620.html#a7db788a534a5c2f22ba455c7b437d15b">container_type</a> m_entries;</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span></div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="a01620.html#adfbfdd747c3fe31ad0265fb797a6ff14">LumexBasicStacktrace</a> (<a class="code hl_typedef" href="a01620.html#a7db788a534a5c2f22ba455c7b437d15b">container_type</a> &amp;&amp;entries)</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>      : m_entries (<a class="code hl_namespace" href="a00800.html">std</a>::move (entries))</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>  {</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>  }</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno"><a class="line" href="a01620.html#adfbfdd747c3fe31ad0265fb797a6ff14">  447</a></span>  <a class="code hl_function" href="a01620.html#adfbfdd747c3fe31ad0265fb797a6ff14">LumexBasicStacktrace</a> () <a class="code hl_define" href="a00338.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a> (noexcept (<a class="code hl_typedef" href="a01620.html#a7db788a534a5c2f22ba455c7b437d15b">container_type</a> ()))</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>      = default;</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span></div>
+<div class="foldopen" id="foldopen00457" data-start="{" data-end="}">
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno"><a class="line" href="a01620.html#a44c4f9ccf09a642b6f9f0ca6b21bc751">  457</a></span>  explicit LumexBasicStacktrace (<a class="code hl_typedef" href="a01620.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> const &amp;alloc) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>      : m_entries (alloc)</div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>  {</div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>  }</div>
+</div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span></div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno"><a class="line" href="a01620.html#a1e4f253e77f56c6f4ec81d7329e874bc">  466</a></span>  <a class="code hl_function" href="a01620.html#a1e4f253e77f56c6f4ec81d7329e874bc">LumexBasicStacktrace</a> (LumexBasicStacktrace <span class="keyword">const</span> &amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00474" name="l00474"></a><span class="lineno"><a class="line" href="a01620.html#a535f07320679bcabcec683c4a42a6d6e">  474</a></span>  <a class="code hl_function" href="a01620.html#a535f07320679bcabcec683c4a42a6d6e">LumexBasicStacktrace</a> (LumexBasicStacktrace &amp;&amp;) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a> = default;</div>
+<div class="line"><a id="l00480" name="l00480"></a><span class="lineno"><a class="line" href="a01620.html#a6a76c2e59fd75f9be163402f97c2317c">  480</a></span>  LumexBasicStacktrace &amp;operator= (LumexBasicStacktrace const &amp;) = default;</div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno"><a class="line" href="a01620.html#a5d3d5a95e2de5e2da398ba4caf088a16">  488</a></span>  LumexBasicStacktrace &amp;operator= (LumexBasicStacktrace &amp;&amp;) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>      = default;</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno"><a class="line" href="a01620.html#acfd0980dcd82e6ea1c893dde4f1d9fdf">  495</a></span>  ~LumexBasicStacktrace () = default;</div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span></div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>  static LumexBasicStacktrace</div>
+<div class="foldopen" id="foldopen00515" data-start="{" data-end="}">
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno"><a class="line" href="a01620.html#a6538898d6f9c3caba59b0a79144617ff">  515</a></span>  <a class="code hl_function" href="a01620.html#a6538898d6f9c3caba59b0a79144617ff">current</a> (<a class="code hl_typedef" href="a01620.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> skip = 1,</div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>           <a class="code hl_typedef" href="a01620.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> max_depth = static_cast&lt;<a class="code hl_typedef" href="a01620.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a>&gt; (-1),</div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>           <a class="code hl_typedef" href="a01620.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> const &amp;alloc = <a class="code hl_typedef" href="a01620.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> ()) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>  {</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="a00851.html#aa61442020de40e745e7e8fa3ad1d9b0c">detail::capture_stacktrace&lt;Allocator&gt;</a> (skip + 1, max_depth, alloc);</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>  }</div>
+</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span></div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>  <a class="code hl_typedef" href="a01620.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a></div>
+<div class="foldopen" id="foldopen00528" data-start="{" data-end="}">
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno"><a class="line" href="a01620.html#afa4c12c3e5cedcbd7bae9ebb8219db27">  528</a></span>  <a class="code hl_function" href="a01620.html#afa4c12c3e5cedcbd7bae9ebb8219db27">get_allocator</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>  {</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>    <span class="keywordflow">return</span> m_entries.get_allocator ();</div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>  }</div>
+</div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span></div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>  <a class="code hl_typedef" href="a01620.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a></div>
+<div class="foldopen" id="foldopen00539" data-start="{" data-end="}">
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno"><a class="line" href="a01620.html#aa28519df59a40e281d53859bf91b19a9">  539</a></span>  <a class="code hl_function" href="a01620.html#aa28519df59a40e281d53859bf91b19a9">begin</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>  {</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>    <span class="keywordflow">return</span> m_entries.begin ();</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>  }</div>
+</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span></div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>  <a class="code hl_typedef" href="a01620.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a></div>
+<div class="foldopen" id="foldopen00550" data-start="{" data-end="}">
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno"><a class="line" href="a01620.html#a947f0e68cddbb62370daa9d25d5bc69d">  550</a></span>  <a class="code hl_function" href="a01620.html#a947f0e68cddbb62370daa9d25d5bc69d">end</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>  {</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>    <span class="keywordflow">return</span> m_entries.end ();</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>  }</div>
+</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span></div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>  <a class="code hl_typedef" href="a01620.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a></div>
+<div class="foldopen" id="foldopen00561" data-start="{" data-end="}">
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno"><a class="line" href="a01620.html#a3b4f0b265d99433c3b5be1534baffeb9">  561</a></span>  <a class="code hl_function" href="a01620.html#a3b4f0b265d99433c3b5be1534baffeb9">cbegin</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>  {</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    <span class="keywordflow">return</span> m_entries.cbegin ();</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>  }</div>
+</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span></div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>  <a class="code hl_typedef" href="a01620.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a></div>
+<div class="foldopen" id="foldopen00573" data-start="{" data-end="}">
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno"><a class="line" href="a01620.html#aedb0ef1673f70f442b3d980eb85715d5">  573</a></span>  <a class="code hl_function" href="a01620.html#aedb0ef1673f70f442b3d980eb85715d5">cend</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  {</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>    <span class="keywordflow">return</span> m_entries.cend ();</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>  }</div>
+</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span></div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>  <a class="code hl_typedef" href="a01620.html#a6a2a2201811aa87ec3b70aa7202c6b74">const_reverse_iterator</a></div>
+<div class="foldopen" id="foldopen00585" data-start="{" data-end="}">
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno"><a class="line" href="a01620.html#a27cb119db17b8020ac5316b512ba18d5">  585</a></span>  <a class="code hl_function" href="a01620.html#a27cb119db17b8020ac5316b512ba18d5">rbegin</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>  {</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>    <span class="keywordflow">return</span> m_entries.rbegin ();</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>  }</div>
+</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span></div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>  <a class="code hl_typedef" href="a01620.html#a6a2a2201811aa87ec3b70aa7202c6b74">const_reverse_iterator</a></div>
+<div class="foldopen" id="foldopen00597" data-start="{" data-end="}">
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno"><a class="line" href="a01620.html#a471b0ee6c7c7c47988e6c0b2cdc6d5f8">  597</a></span>  <a class="code hl_function" href="a01620.html#a471b0ee6c7c7c47988e6c0b2cdc6d5f8">rend</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>  {</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>    <span class="keywordflow">return</span> m_entries.rend ();</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>  }</div>
+</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span></div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>  <a class="code hl_typedef" href="a01620.html#a6a2a2201811aa87ec3b70aa7202c6b74">const_reverse_iterator</a></div>
+<div class="foldopen" id="foldopen00609" data-start="{" data-end="}">
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno"><a class="line" href="a01620.html#a420892ecb69ae49d192c6e71db0af522">  609</a></span>  <a class="code hl_function" href="a01620.html#a420892ecb69ae49d192c6e71db0af522">crbegin</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>  {</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>    <span class="keywordflow">return</span> m_entries.crbegin ();</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>  }</div>
+</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span></div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>  <a class="code hl_typedef" href="a01620.html#a6a2a2201811aa87ec3b70aa7202c6b74">const_reverse_iterator</a></div>
+<div class="foldopen" id="foldopen00621" data-start="{" data-end="}">
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno"><a class="line" href="a01620.html#a06e189fc96f2426d4d1b79f45cbfd8ca">  621</a></span>  <a class="code hl_function" href="a01620.html#a06e189fc96f2426d4d1b79f45cbfd8ca">crend</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>  {</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>    <span class="keywordflow">return</span> m_entries.crend ();</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>  }</div>
+</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span></div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>  <span class="keywordtype">bool</span></div>
+<div class="foldopen" id="foldopen00632" data-start="{" data-end="}">
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno"><a class="line" href="a01620.html#ad44911a9804d02acec1a2779c0f78bcb">  632</a></span>  <a class="code hl_function" href="a01620.html#ad44911a9804d02acec1a2779c0f78bcb">empty</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>  {</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>    <span class="keywordflow">return</span> m_entries.empty ();</div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>  }</div>
+</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span></div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>  <a class="code hl_typedef" href="a01620.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a></div>
+<div class="foldopen" id="foldopen00642" data-start="{" data-end="}">
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno"><a class="line" href="a01620.html#ad518f7d9dca8458bfda553e7eb8d3b01">  642</a></span>  <a class="code hl_function" href="a01620.html#ad518f7d9dca8458bfda553e7eb8d3b01">size</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>  {</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>    <span class="keywordflow">return</span> m_entries.size ();</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>  }</div>
+</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span></div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>  <a class="code hl_typedef" href="a01620.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a></div>
+<div class="foldopen" id="foldopen00653" data-start="{" data-end="}">
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno"><a class="line" href="a01620.html#aa967915c557780a3c181eb1820fe1d35">  653</a></span>  <a class="code hl_function" href="a01620.html#aa967915c557780a3c181eb1820fe1d35">max_size</a> () const <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>  {</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>    <span class="keywordflow">return</span> m_entries.max_size ();</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>  }</div>
+</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span></div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>  <a class="code hl_typedef" href="a01620.html#ae6914a08378f5bcd29235edc1368d033">const_reference</a></div>
+<div class="foldopen" id="foldopen00666" data-start="{" data-end="}">
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno"><a class="line" href="a01620.html#a523dd13065114d9c8a43bcd514d29cd2">  666</a></span>  <a class="code hl_function" href="a01620.html#a523dd13065114d9c8a43bcd514d29cd2">operator[] </a>(<a class="code hl_typedef" href="a01620.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> pos)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>    <span class="keywordflow">return</span> m_entries[pos];</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>  }</div>
+</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span></div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>  <a class="code hl_typedef" href="a01620.html#ae6914a08378f5bcd29235edc1368d033">const_reference</a></div>
+<div class="foldopen" id="foldopen00678" data-start="{" data-end="}">
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno"><a class="line" href="a01620.html#a36a9819a837e3e9f6e0785ba628e560d">  678</a></span>  <a class="code hl_function" href="a01620.html#a36a9819a837e3e9f6e0785ba628e560d">at</a> (<a class="code hl_typedef" href="a01620.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> pos)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>    <span class="keywordflow">return</span> m_entries.at (pos);</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>  }</div>
+</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span></div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>  <span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00691" data-start="{" data-end="}">
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno"><a class="line" href="a01620.html#a109ca23aa5843e05a1075115a6776498">  691</a></span>  <a class="code hl_function" href="a01620.html#a109ca23aa5843e05a1075115a6776498">swap</a> (LumexBasicStacktrace &amp;other)</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>      <a class="code hl_define" href="a00338.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a> (<span class="keyword">noexcept</span> (m_entries.swap (other.m_entries)))</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>  {</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>    m_entries.swap (other.m_entries);</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>  }</div>
+</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>};</div>
+</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span> </div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span><span class="preprocessor">#pragma warning(pop)</span></div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span></div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno"><a class="line" href="a00850.html#aed3df8e98fabb3aad10ed64b9c724c54">  707</a></span><span class="keyword">using </span><a class="code hl_typedef" href="a00850.html#aed3df8e98fabb3aad10ed64b9c724c54">LumexStacktrace</a></div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>    = <a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;std::allocator&lt;LumexStacktraceEntry&gt;</a>&gt;;</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span></div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator1, <span class="keyword">typename</span> Allocator2&gt;</div>
+<div class="foldopen" id="foldopen00723" data-start="{" data-end="}">
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno"><a class="line" href="a00850.html#a663d9af688ef53182e300c0d12658994">  723</a></span><span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span><a class="code hl_function" href="a00850.html#a663d9af688ef53182e300c0d12658994">operator== </a>(<a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator1&gt;</a> <span class="keyword">const</span> &amp;lhs,</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>            <a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator2&gt;</a> <span class="keyword">const</span> &amp;rhs) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>{</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>  <span class="keywordflow">if</span> (lhs.size () != rhs.size ())</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>  <span class="keywordflow">return</span> std::equal (lhs.begin (), lhs.end (), rhs.begin ());</div>
+</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>}</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span></div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator1, <span class="keyword">typename</span> Allocator2&gt;</div>
+<div class="foldopen" id="foldopen00743" data-start="{" data-end="}">
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno"><a class="line" href="a00850.html#ac5b442a4c2ab34007572c58f5715bb9c">  743</a></span><span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span><a class="code hl_function" href="a00850.html#ac5b442a4c2ab34007572c58f5715bb9c">operator!= </a>(<a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator1&gt;</a> <span class="keyword">const</span> &amp;lhs,</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>            <a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator2&gt;</a> <span class="keyword">const</span> &amp;rhs) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>{</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>  <span class="keywordflow">return</span> !(lhs == rhs);</div>
+</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>}</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span></div>
+<div class="foldopen" id="foldopen00761" data-start="{" data-end="}">
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno"><a class="line" href="a00850.html#a918a88de521649f51539a5c6c7a7f579">  761</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator1, <span class="keyword">typename</span> Allocator2&gt;</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span><span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span><a class="code hl_function" href="a00850.html#a918a88de521649f51539a5c6c7a7f579">operator&lt; </a>(<a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator1&gt;</a> <span class="keyword">const</span> &amp;lhs,</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>           <a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator2&gt;</a> <span class="keyword">const</span> &amp;rhs) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>{</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>  <span class="keywordflow">return</span> std::lexicographical_compare (lhs.begin (), lhs.end (), rhs.begin (),</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>                                       rhs.end ());</div>
+</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>}</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span></div>
+<div class="foldopen" id="foldopen00782" data-start="{" data-end="}">
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno"><a class="line" href="a00850.html#adc51564fecaa51a938e2fbab7e7110a1">  782</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator1, <span class="keyword">typename</span> Allocator2&gt;</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span><span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span><a class="code hl_function" href="a00850.html#adc51564fecaa51a938e2fbab7e7110a1">operator&lt;= </a>(<a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator1&gt;</a> <span class="keyword">const</span> &amp;lhs,</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>            <a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator2&gt;</a> <span class="keyword">const</span> &amp;rhs) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>{</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>  <span class="keywordflow">return</span> !(rhs &lt; lhs);</div>
+</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>}</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span></div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator1, <span class="keyword">typename</span> Allocator2&gt;</div>
+<div class="foldopen" id="foldopen00802" data-start="{" data-end="}">
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno"><a class="line" href="a00850.html#a194e5a81d4b2e1b98121b53e4d31d31b">  802</a></span><span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span><a class="code hl_function" href="a00850.html#a194e5a81d4b2e1b98121b53e4d31d31b">operator&gt; </a>(<a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator1&gt;</a> <span class="keyword">const</span> &amp;lhs,</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>           <a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator2&gt;</a> <span class="keyword">const</span> &amp;rhs) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>{</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>  <span class="keywordflow">return</span> rhs &lt; lhs;</div>
+</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>}</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span></div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator1, <span class="keyword">typename</span> Allocator2&gt;</div>
+<div class="foldopen" id="foldopen00822" data-start="{" data-end="}">
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno"><a class="line" href="a00850.html#af1e24ebf81bec4c9d67be407caf26be5">  822</a></span><span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span><a class="code hl_function" href="a00850.html#af1e24ebf81bec4c9d67be407caf26be5">operator&gt;= </a>(<a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator1&gt;</a> <span class="keyword">const</span> &amp;lhs,</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>            <a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator2&gt;</a> <span class="keyword">const</span> &amp;rhs) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>{</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>  <span class="keywordflow">return</span> !(lhs &lt; rhs);</div>
+</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>}</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span></div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator&gt;</div>
+<div class="foldopen" id="foldopen00841" data-start="{" data-end="}">
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno"><a class="line" href="a00850.html#a55989b3d4dcd9608fa423dba21865aec">  841</a></span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span><a class="code hl_function" href="a00850.html#a55989b3d4dcd9608fa423dba21865aec">swap</a> (<a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator&gt;</a> &amp;lhs,</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>      <a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator&gt;</a> &amp;rhs)</div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>    <a class="code hl_define" href="a00338.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a> (<span class="keyword">noexcept</span> (lhs.swap (rhs)))</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>{</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>  lhs.swap (rhs);</div>
+</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>}</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span></div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator&gt;</div>
+<div class="foldopen" id="foldopen00860" data-start="{" data-end="}">
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno"><a class="line" href="a00850.html#ab9ac8080cec6c74dc7759b980a28234b">  860</a></span>std::string</div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span><a class="code hl_function" href="a00850.html#a9b962af55f800e2cbb3a49009e6676f1">to_string</a> (<a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator&gt;</a> <span class="keyword">const</span> &amp;<a class="code hl_namespace" href="a00850.html">stacktrace</a>)</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>{</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>  std::string result;</div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>  result.reserve (<a class="code hl_namespace" href="a00850.html">stacktrace</a>.size ()</div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>                  * <a class="code hl_variable" href="a00851.html#a8dfa109516137240d61f31f92a23a09d">detail::kDefaultMaxFrames</a>); <span class="comment">// Pre-allocate for efficiency</span></div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span> </div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>  <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; <a class="code hl_namespace" href="a00850.html">stacktrace</a>.size (); ++i)</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>    {</div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>      result += std::to_string (i);</div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>      result += <span class="stringliteral">&quot;# &quot;</span>;</div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>      result += <a class="code hl_namespace" href="a00850.html">stacktrace</a>[i].description ();</div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>      result += <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>    }</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span> </div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>}</div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span></div>
+<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> CharT, <span class="keyword">typename</span> Traits, <span class="keyword">typename</span> Allocator&gt;</div>
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>std::basic_ostream&lt;CharT, Traits&gt; &amp;</div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span><a class="code hl_function" href="a00850.html#ab9ac8080cec6c74dc7759b980a28234b">operator&lt;&lt; </a>(std::basic_ostream&lt;CharT, Traits&gt; &amp;ostream,</div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>            LumexBasicStacktrace&lt;Allocator&gt; <span class="keyword">const</span> &amp;<a class="code hl_namespace" href="a00850.html">stacktrace</a>)</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>{</div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>  <span class="keywordflow">return</span> ostream &lt;&lt; <a class="code hl_function" href="a00850.html#a9b962af55f800e2cbb3a49009e6676f1">to_string</a> (<a class="code hl_namespace" href="a00850.html">stacktrace</a>);</div>
+</div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>}</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span></div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator&gt; <span class="keyword">struct </span><a class="code hl_struct" href="a01624.html">hash</a>;</div>
+<div class="foldopen" id="foldopen00909" data-start="{" data-end="};">
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno"><a class="line" href="a01628.html">  909</a></span> </div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Allocator&gt; <span class="keyword">struct </span><a class="code hl_struct" href="a01624.html">hash</a>&lt;<a class="code hl_class" href="a01620.html">LumexBasicStacktrace</a>&lt;Allocator&gt;&gt;</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>{</div>
+<div class="foldopen" id="foldopen00918" data-start="{" data-end="}">
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno"><a class="line" href="a01628.html#a41d412e70778890426320d5a30e1f1f7">  918</a></span>  std::size_t</div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>  operator() (<a class="code hl_class" href="a01620.html">LumexBasicStacktrace&lt;Allocator&gt;</a> <span class="keyword">const</span> &amp;<a class="code hl_namespace" href="a00850.html">stacktrace</a>) <span class="keyword">const</span></div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>      <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>  {</div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>    std::size_t seed = 0;</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span> &amp;entry : <a class="code hl_namespace" href="a00850.html">stacktrace</a>)</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>      {</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>        seed ^= std::hash&lt;void *&gt; () (entry.native_handle ())</div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>                + <a class="code hl_variable" href="a00851.html#ab350e5aef16554f78f55daf70a1af0e7">detail::kHashGoldenRatio</a> + (seed &lt;&lt; <a class="code hl_variable" href="a00851.html#ab4b788cbc1fe1ffa4b6ce8aa3f792917">detail::kHashLeftShift</a>)</div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>                + (seed &gt;&gt; <a class="code hl_variable" href="a00851.html#ab61ea5b9e5601de5e506c84e1e153dff">detail::kHashRightShift</a>);</div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>      }</div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>    <span class="keywordflow">return</span> seed;</div>
+</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>  }</div>
+</div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>};</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>} <span class="comment">// namespace stacktrace</span></div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>} <span class="comment">// namespace exceptions</span></div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>} <span class="comment">// namespace core</span></div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>} <span class="comment">// namespace lumex</span></div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span> </div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span><span class="comment">// Global type aliases for convenience</span></div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno"><a class="line" href="a00197.html#aa65ae33a9cb60c0f3fdb50f47f7a425e">  944</a></span><span class="keyword">using </span><a class="code hl_typedef" href="a00197.html#aa65ae33a9cb60c0f3fdb50f47f7a425e">LumexStacktrace</a> = <a class="code hl_typedef" href="a00850.html#aed3df8e98fabb3aad10ed64b9c724c54">lumex::core::exceptions::stacktrace::LumexStacktrace</a>;</div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno"><a class="line" href="a00197.html#a3f60ceab597bebfcc580c78610fb5712">  951</a></span><span class="keyword">using </span><a class="code hl_typedef" href="a00197.html#a3f60ceab597bebfcc580c78610fb5712">LumexStacktraceEntry</a></div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>    = <a class="code hl_class" href="a01632.html">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a>;</div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span> </div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span><span class="comment">// Bring key functions into global namespace for convenience</span></div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span><span class="keyword">using </span><a class="code hl_function" href="a00850.html#a9b962af55f800e2cbb3a49009e6676f1">lumex::core::exceptions::stacktrace::to_string</a>;</div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span> </div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span><span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span><span class="preprocessor">#pragma clang diagnostic pop</span></div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span> </div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_CORE_EXCEPTIONS_STACKTRACE_STACKTRACE_HPP</span></div>
+<div class="ttc" id="aa00197_html_a3f60ceab597bebfcc580c78610fb5712"><div class="ttname"><a href="a00197.html#a3f60ceab597bebfcc580c78610fb5712">LumexStacktraceEntry</a></div><div class="ttdeci">lumex::core::exceptions::stacktrace::LumexStacktraceEntry LumexStacktraceEntry</div><div class="ttdoc">Global alias for lumex::core::exceptions::stacktrace::LumexStacktraceEntry.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:951</div></div>
+<div class="ttc" id="aa00197_html_aa65ae33a9cb60c0f3fdb50f47f7a425e"><div class="ttname"><a href="a00197.html#aa65ae33a9cb60c0f3fdb50f47f7a425e">LumexStacktrace</a></div><div class="ttdeci">lumex::core::exceptions::stacktrace::LumexStacktrace LumexStacktrace</div><div class="ttdoc">Global alias for lumex::core::exceptions::stacktrace::LumexStacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:944</div></div>
+<div class="ttc" id="aa00203_html"><div class="ttname"><a href="a00203.html">LumexStacktraceEntry.hpp</a></div><div class="ttdoc">Defines the LumexStacktraceEntry class, representing a single frame in a call stack.</div></div>
+<div class="ttc" id="aa00338_html"><div class="ttname"><a href="a00338.html">LumexKeywords.hpp</a></div></div>
+<div class="ttc" id="aa00338_html_a1513006a1992e7dc9cc43b2e081cc33f"><div class="ttname"><a href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a></div><div class="ttdeci">#define LUMEX_CONSTEXPR</div><div class="ttdef"><b>Definition</b> LumexKeywords.hpp:141</div></div>
+<div class="ttc" id="aa00338_html_a519cca5cda98cc22e4eaf9dea1bcca4b"><div class="ttname"><a href="a00338.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT_IF(...)</div><div class="ttdef"><b>Definition</b> LumexKeywords.hpp:70</div></div>
+<div class="ttc" id="aa00338_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition</b> LumexKeywords.hpp:69</div></div>
+<div class="ttc" id="aa00774_html"><div class="ttname"><a href="a00774.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition</b> LumexCPUVectorizationCapabilities.cpp:27</div></div>
+<div class="ttc" id="aa00800_html"><div class="ttname"><a href="a00800.html">std</a></div><div class="ttdef"><b>Definition</b> LumexLogger.hpp:151</div></div>
+<div class="ttc" id="aa00826_html"><div class="ttname"><a href="a00826.html">lumex::core</a></div><div class="ttdef"><b>Definition</b> Base64.hpp:80</div></div>
+<div class="ttc" id="aa00844_html"><div class="ttname"><a href="a00844.html">lumex::core::exceptions</a></div><div class="ttdef"><b>Definition</b> LumexCrashHandler.cpp:21</div></div>
+<div class="ttc" id="aa00850_html"><div class="ttname"><a href="a00850.html">lumex::core::exceptions::stacktrace</a></div><div class="ttdef"><b>Definition</b> LumexStacktrace.cpp:13</div></div>
+<div class="ttc" id="aa00850_html_a194e5a81d4b2e1b98121b53e4d31d31b"><div class="ttname"><a href="a00850.html#a194e5a81d4b2e1b98121b53e4d31d31b">lumex::core::exceptions::stacktrace::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(LumexBasicStacktrace&lt; Allocator1 &gt; const &amp;lhs, LumexBasicStacktrace&lt; Allocator2 &gt; const &amp;rhs) LUMEX_NOEXCEPT</div><div class="ttdoc">Compares two LumexBasicStacktrace objects for greater than.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:802</div></div>
+<div class="ttc" id="aa00850_html_a55989b3d4dcd9608fa423dba21865aec"><div class="ttname"><a href="a00850.html#a55989b3d4dcd9608fa423dba21865aec">lumex::core::exceptions::stacktrace::swap</a></div><div class="ttdeci">void swap(LumexBasicStacktrace&lt; Allocator &gt; &amp;lhs, LumexBasicStacktrace&lt; Allocator &gt; &amp;rhs) LUMEX_NOEXCEPT_IF(noexcept(lhs.swap(rhs)))</div><div class="ttdoc">Global swap function for LumexBasicStacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:841</div></div>
+<div class="ttc" id="aa00850_html_a663d9af688ef53182e300c0d12658994"><div class="ttname"><a href="a00850.html#a663d9af688ef53182e300c0d12658994">lumex::core::exceptions::stacktrace::operator==</a></div><div class="ttdeci">bool operator==(LumexBasicStacktrace&lt; Allocator1 &gt; const &amp;lhs, LumexBasicStacktrace&lt; Allocator2 &gt; const &amp;rhs) LUMEX_NOEXCEPT</div><div class="ttdoc">Compares two LumexBasicStacktrace objects for equality.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:723</div></div>
+<div class="ttc" id="aa00850_html_a918a88de521649f51539a5c6c7a7f579"><div class="ttname"><a href="a00850.html#a918a88de521649f51539a5c6c7a7f579">lumex::core::exceptions::stacktrace::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(LumexBasicStacktrace&lt; Allocator1 &gt; const &amp;lhs, LumexBasicStacktrace&lt; Allocator2 &gt; const &amp;rhs) LUMEX_NOEXCEPT</div><div class="ttdoc">Lexicographically compares two LumexBasicStacktrace objects.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:762</div></div>
+<div class="ttc" id="aa00850_html_a9b962af55f800e2cbb3a49009e6676f1"><div class="ttname"><a href="a00850.html#a9b962af55f800e2cbb3a49009e6676f1">lumex::core::exceptions::stacktrace::to_string</a></div><div class="ttdeci">std::string to_string(LumexBasicStacktrace&lt; Allocator &gt; const &amp;stacktrace)</div><div class="ttdoc">Converts a LumexBasicStacktrace object to its string representation.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:860</div></div>
+<div class="ttc" id="aa00850_html_ab9ac8080cec6c74dc7759b980a28234b"><div class="ttname"><a href="a00850.html#ab9ac8080cec6c74dc7759b980a28234b">lumex::core::exceptions::stacktrace::operator&lt;&lt;</a></div><div class="ttdeci">std::basic_ostream&lt; CharT, Traits &gt; &amp; operator&lt;&lt;(std::basic_ostream&lt; CharT, Traits &gt; &amp;ostream, LumexBasicStacktrace&lt; Allocator &gt; const &amp;stacktrace)</div><div class="ttdoc">Overloads the operator&lt;&lt; for std::basic_ostream to print a LumexBasicStacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:892</div></div>
+<div class="ttc" id="aa00850_html_ac5b442a4c2ab34007572c58f5715bb9c"><div class="ttname"><a href="a00850.html#ac5b442a4c2ab34007572c58f5715bb9c">lumex::core::exceptions::stacktrace::operator!=</a></div><div class="ttdeci">bool operator!=(LumexBasicStacktrace&lt; Allocator1 &gt; const &amp;lhs, LumexBasicStacktrace&lt; Allocator2 &gt; const &amp;rhs) LUMEX_NOEXCEPT</div><div class="ttdoc">Compares two LumexBasicStacktrace objects for inequality.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:743</div></div>
+<div class="ttc" id="aa00850_html_adc51564fecaa51a938e2fbab7e7110a1"><div class="ttname"><a href="a00850.html#adc51564fecaa51a938e2fbab7e7110a1">lumex::core::exceptions::stacktrace::operator&lt;=</a></div><div class="ttdeci">bool operator&lt;=(LumexBasicStacktrace&lt; Allocator1 &gt; const &amp;lhs, LumexBasicStacktrace&lt; Allocator2 &gt; const &amp;rhs) LUMEX_NOEXCEPT</div><div class="ttdoc">Compares two LumexBasicStacktrace objects for less than or equal to.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:783</div></div>
+<div class="ttc" id="aa00850_html_aed3df8e98fabb3aad10ed64b9c724c54"><div class="ttname"><a href="a00850.html#aed3df8e98fabb3aad10ed64b9c724c54">lumex::core::exceptions::stacktrace::LumexStacktrace</a></div><div class="ttdeci">LumexBasicStacktrace&lt; std::allocator&lt; LumexStacktraceEntry &gt; &gt; LumexStacktrace</div><div class="ttdoc">Alias for LumexBasicStacktrace using the default std::allocator.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:707</div></div>
+<div class="ttc" id="aa00850_html_af1e24ebf81bec4c9d67be407caf26be5"><div class="ttname"><a href="a00850.html#af1e24ebf81bec4c9d67be407caf26be5">lumex::core::exceptions::stacktrace::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(LumexBasicStacktrace&lt; Allocator1 &gt; const &amp;lhs, LumexBasicStacktrace&lt; Allocator2 &gt; const &amp;rhs) LUMEX_NOEXCEPT</div><div class="ttdoc">Compares two LumexBasicStacktrace objects for greater than or equal to.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:822</div></div>
+<div class="ttc" id="aa00851_html"><div class="ttname"><a href="a00851.html">lumex::core::exceptions::stacktrace::detail</a></div><div class="ttdoc">Internal detail namespace for platform-specific stacktrace functionalities.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.cpp:15</div></div>
+<div class="ttc" id="aa00851_html_a01b55f5175ddb4d65f17a56434243574"><div class="ttname"><a href="a00851.html#a01b55f5175ddb4d65f17a56434243574">lumex::core::exceptions::stacktrace::detail::kDefaultBufferSize</a></div><div class="ttdeci">LUMEX_CONSTEXPR short const kDefaultBufferSize</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:149</div></div>
+<div class="ttc" id="aa00851_html_a3117a732fece76851211984e400fd63e"><div class="ttname"><a href="a00851.html#a3117a732fece76851211984e400fd63e">lumex::core::exceptions::stacktrace::detail::kDefaultCmdSize</a></div><div class="ttdeci">LUMEX_CONSTEXPR short const kDefaultCmdSize</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:152</div></div>
+<div class="ttc" id="aa00851_html_a42a19414115a27f01fec44312379fabc"><div class="ttname"><a href="a00851.html#a42a19414115a27f01fec44312379fabc">lumex::core::exceptions::stacktrace::detail::get_source_info_addr2line</a></div><div class="ttdeci">bool get_source_info_addr2line(void *address, std::string &amp;file, std::uint32_t &amp;line)</div><div class="ttdoc">Retrieves source file and line number information for a given address using addr2line on POSIX system...</div><div class="ttdef"><b>Definition</b> LumexStacktrace.cpp:174</div></div>
+<div class="ttc" id="aa00851_html_a4a19298462cc9afc2cfe5a16027218de"><div class="ttname"><a href="a00851.html#a4a19298462cc9afc2cfe5a16027218de">lumex::core::exceptions::stacktrace::detail::kDefaultAddrStrSize</a></div><div class="ttdeci">LUMEX_CONSTEXPR short const kDefaultAddrStrSize</div><div class="ttdoc">Default buffer size for address string representations.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:145</div></div>
+<div class="ttc" id="aa00851_html_a894eb6f8a719b5015744c5a76dc63b0b"><div class="ttname"><a href="a00851.html#a894eb6f8a719b5015744c5a76dc63b0b">lumex::core::exceptions::stacktrace::detail::demangle_symbol</a></div><div class="ttdeci">std::string demangle_symbol(char const *mangled)</div><div class="ttdoc">Demangles a C++ mangled symbol name on POSIX systems.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.cpp:159</div></div>
+<div class="ttc" id="aa00851_html_a8dfa109516137240d61f31f92a23a09d"><div class="ttname"><a href="a00851.html#a8dfa109516137240d61f31f92a23a09d">lumex::core::exceptions::stacktrace::detail::kDefaultMaxFrames</a></div><div class="ttdeci">LUMEX_CONSTEXPR short const kDefaultMaxFrames</div><div class="ttdoc">Default maximum number of frames to capture in a stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:147</div></div>
+<div class="ttc" id="aa00851_html_aa2cc258aceea6ae26e88ff6a4fde9c17"><div class="ttname"><a href="a00851.html#aa2cc258aceea6ae26e88ff6a4fde9c17">lumex::core::exceptions::stacktrace::detail::resolve_symbol_info</a></div><div class="ttdeci">bool resolve_symbol_info(void *address, std::string &amp;function_name, std::string &amp;source_file, std::uint32_t &amp;line_number) LUMEX_NOEXCEPT</div><div class="ttdoc">Resolves symbol information (function name, source file, line number) for a given address on POSIX sy...</div><div class="ttdef"><b>Definition</b> LumexStacktrace.cpp:275</div></div>
+<div class="ttc" id="aa00851_html_aa61442020de40e745e7e8fa3ad1d9b0c"><div class="ttname"><a href="a00851.html#aa61442020de40e745e7e8fa3ad1d9b0c">lumex::core::exceptions::stacktrace::detail::capture_stacktrace</a></div><div class="ttdeci">stacktrace::LumexBasicStacktrace&lt; Allocator &gt; capture_stacktrace(std::size_t skip, std::size_t max_depth, Allocator const &amp;alloc) LUMEX_NOEXCEPT</div><div class="ttdoc">Platform-specific stacktrace capture implementation for POSIX systems.</div></div>
+<div class="ttc" id="aa00851_html_ab350e5aef16554f78f55daf70a1af0e7"><div class="ttname"><a href="a00851.html#ab350e5aef16554f78f55daf70a1af0e7">lumex::core::exceptions::stacktrace::detail::kHashGoldenRatio</a></div><div class="ttdeci">LUMEX_CONSTEXPR std::size_t kHashGoldenRatio</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:155</div></div>
+<div class="ttc" id="aa00851_html_ab4b788cbc1fe1ffa4b6ce8aa3f792917"><div class="ttname"><a href="a00851.html#ab4b788cbc1fe1ffa4b6ce8aa3f792917">lumex::core::exceptions::stacktrace::detail::kHashLeftShift</a></div><div class="ttdeci">LUMEX_CONSTEXPR short const kHashLeftShift</div><div class="ttdoc">Constant for left bit shift operation in hash calculation.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:143</div></div>
+<div class="ttc" id="aa00851_html_ab61ea5b9e5601de5e506c84e1e153dff"><div class="ttname"><a href="a00851.html#ab61ea5b9e5601de5e506c84e1e153dff">lumex::core::exceptions::stacktrace::detail::kHashRightShift</a></div><div class="ttdeci">LUMEX_CONSTEXPR short const kHashRightShift</div><div class="ttdoc">Constant for right bit shift operation in hash calculation.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:141</div></div>
+<div class="ttc" id="aa01620_html"><div class="ttname"><a href="a01620.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a></div><div class="ttdoc">Contains classes and utilities related to stack trace management and exception handling.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:373</div></div>
+<div class="ttc" id="aa01620_html_a06e189fc96f2426d4d1b79f45cbfd8ca"><div class="ttname"><a href="a01620.html#a06e189fc96f2426d4d1b79f45cbfd8ca">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::crend</a></div><div class="ttdeci">const_reverse_iterator crend() const LUMEX_NOEXCEPT</div><div class="ttdoc">Returns a constant reverse iterator to the reverse end of the stacktrace (C++11 alias).</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:621</div></div>
+<div class="ttc" id="aa01620_html_a109ca23aa5843e05a1075115a6776498"><div class="ttname"><a href="a01620.html#a109ca23aa5843e05a1075115a6776498">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::swap</a></div><div class="ttdeci">void swap(LumexBasicStacktrace &amp;other) LUMEX_NOEXCEPT_IF(noexcept(m_entries.swap(other.m_entries)))</div><div class="ttdoc">Exchanges the contents of the stacktrace with another stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:691</div></div>
+<div class="ttc" id="aa01620_html_a1cef50f08963046994b0cc569f7c63a8"><div class="ttname"><a href="a01620.html#a1cef50f08963046994b0cc569f7c63a8">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::pointer</a></div><div class="ttdeci">typename std::allocator_traits&lt; Allocator &gt;::pointer pointer</div><div class="ttdoc">A pointer to an element in the stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:403</div></div>
+<div class="ttc" id="aa01620_html_a1e4f253e77f56c6f4ec81d7329e874bc"><div class="ttname"><a href="a01620.html#a1e4f253e77f56c6f4ec81d7329e874bc">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::LumexBasicStacktrace</a></div><div class="ttdeci">LumexBasicStacktrace(LumexBasicStacktrace const &amp;)=default</div><div class="ttdoc">Copy constructor for LumexBasicStacktrace.</div></div>
+<div class="ttc" id="aa01620_html_a27cb119db17b8020ac5316b512ba18d5"><div class="ttname"><a href="a01620.html#a27cb119db17b8020ac5316b512ba18d5">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::rbegin</a></div><div class="ttdeci">const_reverse_iterator rbegin() const LUMEX_NOEXCEPT</div><div class="ttdoc">Returns a constant reverse iterator to the reverse beginning of the stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:585</div></div>
+<div class="ttc" id="aa01620_html_a312ece76525a0188533b527ea615c9bb"><div class="ttname"><a href="a01620.html#a312ece76525a0188533b527ea615c9bb">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::difference_type</a></div><div class="ttdeci">typename std::allocator_traits&lt; Allocator &gt;::difference_type difference_type</div><div class="ttdoc">The signed integer type used for differences between iterators.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:396</div></div>
+<div class="ttc" id="aa01620_html_a36a9819a837e3e9f6e0785ba628e560d"><div class="ttname"><a href="a01620.html#a36a9819a837e3e9f6e0785ba628e560d">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::at</a></div><div class="ttdeci">const_reference at(size_type pos) const</div><div class="ttdoc">Provides constant access to the element at the specified position with bounds checking.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:678</div></div>
+<div class="ttc" id="aa01620_html_a3726eebed5297c5fad61038ac5f4b013"><div class="ttname"><a href="a01620.html#a3726eebed5297c5fad61038ac5f4b013">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::allocator_type</a></div><div class="ttdeci">Allocator allocator_type</div><div class="ttdoc">The allocator type used by this stacktrace container.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:392</div></div>
+<div class="ttc" id="aa01620_html_a3b4f0b265d99433c3b5be1534baffeb9"><div class="ttname"><a href="a01620.html#a3b4f0b265d99433c3b5be1534baffeb9">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::cbegin</a></div><div class="ttdeci">const_iterator cbegin() const LUMEX_NOEXCEPT</div><div class="ttdoc">Returns a constant iterator to the beginning of the stacktrace (C++11 alias).</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:561</div></div>
+<div class="ttc" id="aa01620_html_a420892ecb69ae49d192c6e71db0af522"><div class="ttname"><a href="a01620.html#a420892ecb69ae49d192c6e71db0af522">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::crbegin</a></div><div class="ttdeci">const_reverse_iterator crbegin() const LUMEX_NOEXCEPT</div><div class="ttdoc">Returns a constant reverse iterator to the reverse beginning of the stacktrace (C++11 alias).</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:609</div></div>
+<div class="ttc" id="aa01620_html_a471b0ee6c7c7c47988e6c0b2cdc6d5f8"><div class="ttname"><a href="a01620.html#a471b0ee6c7c7c47988e6c0b2cdc6d5f8">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::rend</a></div><div class="ttdeci">const_reverse_iterator rend() const LUMEX_NOEXCEPT</div><div class="ttdoc">Returns a constant reverse iterator to the reverse end of the stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:597</div></div>
+<div class="ttc" id="aa01620_html_a4d980972f69d3ba1a82969fcf0885b99"><div class="ttname"><a href="a01620.html#a4d980972f69d3ba1a82969fcf0885b99">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::value_type</a></div><div class="ttdeci">LumexStacktraceEntry value_type</div><div class="ttdoc">The type of elements stored in the stacktrace, which is LumexStacktraceEntry.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:390</div></div>
+<div class="ttc" id="aa01620_html_a504f2d12c9fef93cc64e0e9784466ecc"><div class="ttname"><a href="a01620.html#a504f2d12c9fef93cc64e0e9784466ecc">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::reverse_iterator</a></div><div class="ttdeci">typename container_type::const_reverse_iterator reverse_iterator</div><div class="ttdoc">Reverse iterator type for traversing the stacktrace entries in reverse (constant).</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:418</div></div>
+<div class="ttc" id="aa01620_html_a523dd13065114d9c8a43bcd514d29cd2"><div class="ttname"><a href="a01620.html#a523dd13065114d9c8a43bcd514d29cd2">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::operator[]</a></div><div class="ttdeci">const_reference operator[](size_type pos) const</div><div class="ttdoc">Provides constant access to the element at the specified position.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:666</div></div>
+<div class="ttc" id="aa01620_html_a535f07320679bcabcec683c4a42a6d6e"><div class="ttname"><a href="a01620.html#a535f07320679bcabcec683c4a42a6d6e">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::LumexBasicStacktrace</a></div><div class="ttdeci">LumexBasicStacktrace(LumexBasicStacktrace &amp;&amp;) LUMEX_NOEXCEPT=default</div><div class="ttdoc">Move constructor for LumexBasicStacktrace.</div></div>
+<div class="ttc" id="aa01620_html_a6538898d6f9c3caba59b0a79144617ff"><div class="ttname"><a href="a01620.html#a6538898d6f9c3caba59b0a79144617ff">lumex::core::exceptions::stacktrace::LumexBasicStacktrace&lt; std::allocator&lt; LumexStacktraceEntry &gt; &gt;::current</a></div><div class="ttdeci">static LumexBasicStacktrace current(size_type skip=1, size_type max_depth=static_cast&lt; size_type &gt;(-1), allocator_type const &amp;alloc=allocator_type()) LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:515</div></div>
+<div class="ttc" id="aa01620_html_a6a2a2201811aa87ec3b70aa7202c6b74"><div class="ttname"><a href="a01620.html#a6a2a2201811aa87ec3b70aa7202c6b74">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::const_reverse_iterator</a></div><div class="ttdeci">typename container_type::const_reverse_iterator const_reverse_iterator</div><div class="ttdoc">Constant reverse iterator type for traversing the stacktrace entries in reverse.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:421</div></div>
+<div class="ttc" id="aa01620_html_a788ff8eebd7cc4ef73f0141dbace81ff"><div class="ttname"><a href="a01620.html#a788ff8eebd7cc4ef73f0141dbace81ff">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::iterator</a></div><div class="ttdeci">typename container_type::const_iterator iterator</div><div class="ttdoc">Iterator type for traversing the stacktrace entries (constant).</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:413</div></div>
+<div class="ttc" id="aa01620_html_a7db788a534a5c2f22ba455c7b437d15b"><div class="ttname"><a href="a01620.html#a7db788a534a5c2f22ba455c7b437d15b">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::container_type</a></div><div class="ttdeci">std::vector&lt; value_type, allocator_type &gt; container_type</div><div class="ttdoc">The underlying container type used to store stacktrace entries, typically std::vector.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:410</div></div>
+<div class="ttc" id="aa01620_html_a947f0e68cddbb62370daa9d25d5bc69d"><div class="ttname"><a href="a01620.html#a947f0e68cddbb62370daa9d25d5bc69d">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::end</a></div><div class="ttdeci">const_iterator end() const LUMEX_NOEXCEPT</div><div class="ttdoc">Returns a constant iterator to the end of the stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:550</div></div>
+<div class="ttc" id="aa01620_html_a9afab56a4b7f32b2529b6219ea4c748d"><div class="ttname"><a href="a01620.html#a9afab56a4b7f32b2529b6219ea4c748d">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::const_iterator</a></div><div class="ttdeci">typename container_type::const_iterator const_iterator</div><div class="ttdoc">Constant iterator type for traversing the stacktrace entries.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:415</div></div>
+<div class="ttc" id="aa01620_html_aa28519df59a40e281d53859bf91b19a9"><div class="ttname"><a href="a01620.html#aa28519df59a40e281d53859bf91b19a9">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::begin</a></div><div class="ttdeci">const_iterator begin() const LUMEX_NOEXCEPT</div><div class="ttdoc">Returns a constant iterator to the beginning of the stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:539</div></div>
+<div class="ttc" id="aa01620_html_aa967915c557780a3c181eb1820fe1d35"><div class="ttname"><a href="a01620.html#aa967915c557780a3c181eb1820fe1d35">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::max_size</a></div><div class="ttdeci">size_type max_size() const LUMEX_NOEXCEPT</div><div class="ttdoc">Returns the maximum possible number of entries that can be stored in the stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:653</div></div>
+<div class="ttc" id="aa01620_html_ab4adfa5e25b981c53bf4013b75f7216b"><div class="ttname"><a href="a01620.html#ab4adfa5e25b981c53bf4013b75f7216b">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::size_type</a></div><div class="ttdeci">typename std::allocator_traits&lt; Allocator &gt;::size_type size_type</div><div class="ttdoc">The unsigned integer type used for sizes and counts.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:394</div></div>
+<div class="ttc" id="aa01620_html_ad44911a9804d02acec1a2779c0f78bcb"><div class="ttname"><a href="a01620.html#ad44911a9804d02acec1a2779c0f78bcb">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::empty</a></div><div class="ttdeci">bool empty() const LUMEX_NOEXCEPT</div><div class="ttdoc">Checks if the stacktrace contains no entries.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:632</div></div>
+<div class="ttc" id="aa01620_html_ad518f7d9dca8458bfda553e7eb8d3b01"><div class="ttname"><a href="a01620.html#ad518f7d9dca8458bfda553e7eb8d3b01">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::size</a></div><div class="ttdeci">size_type size() const LUMEX_NOEXCEPT</div><div class="ttdoc">Returns the number of entries in the stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:642</div></div>
+<div class="ttc" id="aa01620_html_adfbfdd747c3fe31ad0265fb797a6ff14"><div class="ttname"><a href="a01620.html#adfbfdd747c3fe31ad0265fb797a6ff14">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::LumexBasicStacktrace</a></div><div class="ttdeci">LumexBasicStacktrace() LUMEX_NOEXCEPT_IF(noexcept(container_type()))=default</div><div class="ttdoc">Default constructor for LumexBasicStacktrace.</div></div>
+<div class="ttc" id="aa01620_html_ae6914a08378f5bcd29235edc1368d033"><div class="ttname"><a href="a01620.html#ae6914a08378f5bcd29235edc1368d033">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::const_reference</a></div><div class="ttdeci">value_type const &amp; const_reference</div><div class="ttdoc">A constant reference to an element in the stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:401</div></div>
+<div class="ttc" id="aa01620_html_aedb0ef1673f70f442b3d980eb85715d5"><div class="ttname"><a href="a01620.html#aedb0ef1673f70f442b3d980eb85715d5">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::cend</a></div><div class="ttdeci">const_iterator cend() const LUMEX_NOEXCEPT</div><div class="ttdoc">Returns a constant iterator to the end of the stacktrace (C++11 alias).</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:573</div></div>
+<div class="ttc" id="aa01620_html_af0c0c59c11aec6affe5c3840fb9a2d3b"><div class="ttname"><a href="a01620.html#af0c0c59c11aec6affe5c3840fb9a2d3b">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::reference</a></div><div class="ttdeci">value_type &amp; reference</div><div class="ttdoc">A reference to an element in the stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:399</div></div>
+<div class="ttc" id="aa01620_html_afa4c12c3e5cedcbd7bae9ebb8219db27"><div class="ttname"><a href="a01620.html#afa4c12c3e5cedcbd7bae9ebb8219db27">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::get_allocator</a></div><div class="ttdeci">allocator_type get_allocator() const LUMEX_NOEXCEPT</div><div class="ttdoc">Returns a copy of the allocator used by the internal container.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:528</div></div>
+<div class="ttc" id="aa01620_html_afd1355b1503ff23c03fff5199e1574a9"><div class="ttname"><a href="a01620.html#afd1355b1503ff23c03fff5199e1574a9">lumex::core::exceptions::stacktrace::LumexBasicStacktrace::const_pointer</a></div><div class="ttdeci">typename std::allocator_traits&lt; Allocator &gt;::const_pointer const_pointer</div><div class="ttdoc">A constant pointer to an element in the stacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:405</div></div>
+<div class="ttc" id="aa01624_html"><div class="ttname"><a href="a01624.html">lumex::core::exceptions::stacktrace::hash</a></div><div class="ttdoc">Partial specialization of std::hash for LumexBasicStacktrace.</div><div class="ttdef"><b>Definition</b> LumexStacktrace.hpp:907</div></div>
+<div class="ttc" id="aa01632_html"><div class="ttname"><a href="a01632.html">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a></div><div class="ttdef"><b>Definition</b> LumexStacktraceEntry.hpp:112</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_89e42b2a70e8a88de526b25cf537eb3f.html">utility</a></li><li class="navelem"><a class="el" href="a00197.html">LumexKeywords.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_a3441288cad593ecc41bd2411108526e.html">exceptions</a></li><li class="navelem"><a class="el" href="dir_5e36a95047b068cba52935ea3cf15469.html">stacktrace</a></li><li class="navelem"><a class="el" href="a00197.html">LumexStacktrace.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

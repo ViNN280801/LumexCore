@@ -1,5 +1,4 @@
 var a01052 =
 [
-    [ "buffer", "a01052.html#a9268219212c5414f93707c07cb983d1b", null ],
-    [ "next", "a01052.html#aff64fcca89967cfeb439d2238be0c412", null ]
+    [ "~port_holder_resolver", "a01052.html#ace632104174bb30fea3e0396c34b9ab0", null ]
 ];

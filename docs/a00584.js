@@ -1,4 +1,6 @@
 var a00584 =
 [
-    [ "type", "a00584.html#a457018b5f75d3b7021bc24677cb4b1c0", null ]
+    [ "lumex::xml::memory::XmlAllocator", "a02576.html", "a02576" ],
+    [ "char_t", "a00584.html#ac9cef37ca254389bd0bc64861a803655", null ],
+    [ "lumex::xml::memory::get_allocator", "a00945.html#ab0a72a296e2036ad23e4de44f96c15ca", null ]
 ];

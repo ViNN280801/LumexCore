@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XmlNodeBase.hpp Source File</title>
+<title>LumexLib: LumexStringify.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -103,157 +103,178 @@ $(function(){initNavTree('a00269_source.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">XmlNodeBase.hpp</div></div>
+  <div class="headertitle"><div class="title">LumexStringify.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00269.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LUMEX_XML_NODE_BASE_HPP</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LUMEX_XML_NODE_BASE_HPP</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="a00212.html">lumex/LumexExport.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="a00224.html">lumex/xml/attribute/XmlAttributeBase.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="a00248.html">lumex/xml/memory/XmlAllocator.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="a00299.html">lumex/xml/types/XmlTypes.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00495.html">Lumex::Xml::Memory</a>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00503.html">Lumex::Xml::Types</a>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00489.html">Lumex::Xml::Attribute</a>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00435.html">Lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keyword">namespace </span><a class="code hl_namespace" href="a00488.html">Xml</a></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="a00491.html">Node</a></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a01008.html">   30</a></span>      <span class="keyword">struct </span><a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code hl_function" href="a01008.html#a5937db6365696f1ac0b661fdc9d7c3bd">XmlNodeBase</a> {</div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a01008.html#a5937db6365696f1ac0b661fdc9d7c3bd">   37</a></span>        <a class="code hl_function" href="a01008.html#a5937db6365696f1ac0b661fdc9d7c3bd">XmlNodeBase</a>(<a class="code hl_struct" href="a00988.html">XmlMemoryPage</a> *page, <a class="code hl_enumeration" href="a00503.html#a6fd92baef45f0608a4e9c97818ae6abf">Types::xml_node_type</a> type) : <a class="code hl_variable" href="a01008.html#a78babd2874d3d330f6be3118f52daeaf">header</a>(<a class="code hl_define" href="a00305.html#a329b1c53e66ebee947f7b4b82656ad04">LUMEX_XML_GETHEADER_IMPL</a>(this, page, type))</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {}</div>
+<a href="a00269.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#ifndef LUMEX_CORE_STRING_UTILITY_STRINGIFY_HPP</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#define LUMEX_CORE_STRING_UTILITY_STRINGIFY_HPP</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#include &quot;<a class="code" href="a00305.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &quot;<a class="code" href="a00308.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &quot;<a class="code" href="a00338.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &quot;<a class="code" href="a00359.html">lumex/core/utility/traits/LumexTypeTraits.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00774.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00826.html">core</a></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00874.html">string</a></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="a00877.html">   60</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00877.html">utility</a></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#if __cplusplus &lt; 202002L</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> D&gt;</div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="a00877.html#a069a5bbde352f2d95ec427f786215113">   68</a></span>std::ostream &amp;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><a class="code hl_function" href="a00877.html#a069a5bbde352f2d95ec427f786215113">operator&lt;&lt; </a>(std::ostream &amp;ostream, std::unique_ptr&lt;T, D&gt; <span class="keyword">const</span> &amp;ptr)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordflow">return</span> ostream &lt;&lt; ptr.get ();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
 </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a01008.html#a78babd2874d3d330f6be3118f52daeaf">   41</a></span>        uintptr_t <a class="code hl_variable" href="a01008.html#a78babd2874d3d330f6be3118f52daeaf">header</a>; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="a01008.html#af2a2c298c0a66b18782dd22c74ec70e7">   44</a></span>        <a class="code hl_typedef" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *<a class="code hl_variable" href="a01008.html#af2a2c298c0a66b18782dd22c74ec70e7">name</a>{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="a01008.html#ac1b001449465d9b705817cfa3444f9cd">   46</a></span>        <a class="code hl_typedef" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *<a class="code hl_variable" href="a01008.html#ac1b001449465d9b705817cfa3444f9cd">value</a>{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="a01008.html#ab9679d6fa825596b0e38d188fea398c2">   49</a></span>        <a class="code hl_function" href="a01008.html#a5937db6365696f1ac0b661fdc9d7c3bd">XmlNodeBase</a> *<a class="code hl_variable" href="a01008.html#ab9679d6fa825596b0e38d188fea398c2">parent</a>{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a01008.html#ad7b1ca11b68b62834b219bce3e092a6e">   52</a></span>        <a class="code hl_function" href="a01008.html#a5937db6365696f1ac0b661fdc9d7c3bd">XmlNodeBase</a> *<a class="code hl_variable" href="a01008.html#ad7b1ca11b68b62834b219bce3e092a6e">first_child</a>{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="a01008.html#a390614bd6e365fbaa96578a3a5d866aa">   56</a></span>        <a class="code hl_function" href="a01008.html#a5937db6365696f1ac0b661fdc9d7c3bd">XmlNodeBase</a> *<a class="code hl_variable" href="a01008.html#a390614bd6e365fbaa96578a3a5d866aa">prev_sibling_c</a>{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="a01008.html#a205188b39dbdb93a6999536f9bbdfe2c">   58</a></span>        <a class="code hl_function" href="a01008.html#a5937db6365696f1ac0b661fdc9d7c3bd">XmlNodeBase</a> *<a class="code hl_variable" href="a01008.html#a205188b39dbdb93a6999536f9bbdfe2c">next_sibling</a>{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="a01008.html#a6a1a747808f5c651f51d3541363684b1">   61</a></span>        <a class="code hl_struct" href="a00968.html">XmlAttributeBase</a> *<a class="code hl_variable" href="a01008.html#a6a1a747808f5c651f51d3541363684b1">first_attribute</a>{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      };</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="a00877.html#aabd30bcdf02da92ec12422a30fd4c4f4">   76</a></span>std::ostream &amp;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><a class="code hl_function" href="a00877.html#a069a5bbde352f2d95ec427f786215113">operator&lt;&lt; </a>(std::ostream &amp;ostream, std::shared_ptr&lt;T&gt; <span class="keyword">const</span> &amp;ptr)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordflow">return</span> ostream &lt;&lt; ptr.get ();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
 </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="};">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="a01012.html">   69</a></span>      <span class="keyword">struct </span><a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code hl_function" href="a01012.html#af7afb277db5688bf17aa182a85e6a4c7">name_null_sentry</a> { <span class="comment">// NOLINT(cppcoreguidelines-special-member-functions)</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="a01012.html#a515766760a71ac405c34ee4871081c7f">   71</a></span>        <a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *<a class="code hl_variable" href="a01012.html#a515766760a71ac405c34ee4871081c7f">node</a>{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="a01012.html#a14425645eaafe5211a3f1a6cb259ba5e">   73</a></span>        <a class="code hl_typedef" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *<a class="code hl_variable" href="a01012.html#a14425645eaafe5211a3f1a6cb259ba5e">name</a>{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="a01012.html#af7afb277db5688bf17aa182a85e6a4c7">   80</a></span>        <a class="code hl_function" href="a01012.html#af7afb277db5688bf17aa182a85e6a4c7">name_null_sentry</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *node_) : <a class="code hl_variable" href="a01012.html#a515766760a71ac405c34ee4871081c7f">node</a>(node_), <a class="code hl_variable" href="a01012.html#a14425645eaafe5211a3f1a6cb259ba5e">name</a>(node_-&gt;<a class="code hl_variable" href="a01012.html#a14425645eaafe5211a3f1a6cb259ba5e">name</a>) { <a class="code hl_variable" href="a01012.html#a515766760a71ac405c34ee4871081c7f">node</a>-&gt;name = <span class="keyword">nullptr</span>; }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="a01012.html#a24364c1de7b1112384dcaa5391e9f996">   86</a></span>        <a class="code hl_function" href="a01012.html#a24364c1de7b1112384dcaa5391e9f996">~name_null_sentry</a>() { <a class="code hl_variable" href="a01012.html#a515766760a71ac405c34ee4871081c7f">node</a>-&gt;name = <a class="code hl_variable" href="a01012.html#a14425645eaafe5211a3f1a6cb259ba5e">name</a>; }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      };</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#if __cplusplus &gt;= 202002L</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">template</span> &lt;lumex::core::utility::traits::stream::AllStreamable... Args&gt;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>std::string</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><a class="code hl_function" href="a00877.html#ac5e4669bec0d49b722ad8e60b61be911">stringify</a> (Args &amp;&amp;...args)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>{</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_define" href="a00338.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a> (<span class="keyword">sizeof</span>...(args) == 0) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>; }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    std::ostringstream oss;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    ((oss &lt;&lt; std::forward&lt;Args&gt; (args)), ...);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> oss.str ();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#elif __cplusplus &gt;= 201703L</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>std::string</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><a class="code hl_function" href="a00877.html#ac5e4669bec0d49b722ad8e60b61be911">stringify</a> (Args &amp;&amp;...args)</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>{</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <a class="code hl_define" href="a00305.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a> (</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      lumex::core::utility::traits::stream::all_streamable_v&lt;Args...&gt;,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <span class="stringliteral">&quot;All arguments must be streamable&quot;</span>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <a class="code hl_define" href="a00338.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a> (<span class="keyword">sizeof</span>...(args) == 0) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>; }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    std::ostringstream oss;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    ((oss &lt;&lt; std::forward&lt;Args&gt; (args)), ...);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> oss.str ();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#elif __cplusplus &gt;= 201402L</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>std::string</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><a class="code hl_function" href="a00877.html#ac5e4669bec0d49b722ad8e60b61be911">stringify</a> (Args &amp;&amp;...args)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>{</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <a class="code hl_define" href="a00305.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a> (</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      lumex::core::utility::traits::stream::all_streamable_v&lt;Args...&gt;,</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="stringliteral">&quot;All arguments must be streamable&quot;</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  std::ostringstream oss;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="keywordtype">int</span> expanded[] = { 0, ((oss &lt;&lt; std::forward&lt;Args&gt; (args)), 0)... };</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <a class="code hl_define" href="a00308.html#a4f7e1c4a689aff4cf2c75942d17d5ba2">LUMEX_ATTRIBUTE_MAYBE_UNUSED_VAR</a> (expanded);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keywordflow">return</span> oss.str ();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>std::string</div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="a00877.html#a644d51beb3d991564cc81242883fd17a">  145</a></span><a class="code hl_function" href="a00877.html#ac5e4669bec0d49b722ad8e60b61be911">stringify</a> (Args &amp;&amp;...args)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>{</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <a class="code hl_define" href="a00305.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a> (</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      <a class="code hl_struct" href="a02336.html">lumex::core::utility::traits::stream::all_streamable&lt;Args...&gt;::value</a>,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      <span class="stringliteral">&quot;All arguments must be streamable&quot;</span>);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  std::ostringstream oss;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keywordtype">int</span> expanded[] = { 0, ((oss &lt;&lt; std::forward&lt;Args&gt; (args)), 0)... };</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <a class="code hl_define" href="a00308.html#a4f7e1c4a689aff4cf2c75942d17d5ba2">LUMEX_ATTRIBUTE_MAYBE_UNUSED_VAR</a> (expanded);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <span class="keywordflow">return</span> oss.str ();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
 </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *<a class="code hl_function" href="a00491.html#ab00798aa6b37d582610607ab52d361ae">allocate_node</a>(<a class="code hl_struct" href="a00984.html">XmlAllocator</a> &amp;alloc, <a class="code hl_enumeration" href="a00503.html#a6fd92baef45f0608a4e9c97818ae6abf">xml_node_type</a> type);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <span class="keywordtype">void</span> <a class="code hl_function" href="a00491.html#afee169eb8db7e9c5e009fc4f6fe52ced">destroy_node</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *n, <a class="code hl_struct" href="a00984.html">XmlAllocator</a> &amp;alloc);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="a00491.html#aa6eda3cc0eceac6c60c04b31823a5ddb">append_node</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *child, <a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *node);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="a00491.html#a065d3a41dbf8fb90bb4b15a35b479779">prepend_node</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *child, <a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *node);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="a00491.html#ac3b3837c677e3abbb9ce5bc49e79f938">insert_node_after</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *child, <a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *node);</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="a00491.html#a82a5bfd44472a992a70a90d06d8761f6">insert_node_before</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *child, <a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *node);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="a00491.html#a2c1cc277e615570f2e4533d67e25653b">remove_node</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *node);</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      <a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *<a class="code hl_function" href="a00491.html#ae751b2ab27382c57e1871b23d1b4e1ed">append_new_node</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *node, <a class="code hl_struct" href="a00984.html">XmlAllocator</a> &amp;alloc, <a class="code hl_enumeration" href="a00503.html#a6fd92baef45f0608a4e9c97818ae6abf">xml_node_type</a> type = <a class="code hl_enumvalue" href="a00503.html#a6fd92baef45f0608a4e9c97818ae6abfada7c1ba2d69a2350b1c595296123e1fe">node_element</a>);</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>      <a class="code hl_define" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="a00491.html#af702d692ab508c77a38f56727e312348">append_attribute</a>(<a class="code hl_struct" href="a00968.html">XmlAttributeBase</a> *attr, <a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *node);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>      <a class="code hl_struct" href="a00968.html">XmlAttributeBase</a> *<a class="code hl_function" href="a00491.html#af2ee9c65d4237bb78932c2b73748cc1d">append_new_attribute</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *node, <a class="code hl_struct" href="a00984.html">XmlAllocator</a> &amp;alloc);</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="a00491.html#a854d772421af41d24b6bc2ed787d9b27">node_copy_contents</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *dn_, <a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *sn_, <span class="comment">// NOLINT(misc-use-internal-linkage)</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                              <a class="code hl_struct" href="a00984.html">XmlAllocator</a> *shared_alloc);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span></div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="a00491.html#acb6eb33e17945b00de6c9a587f358414">node_copy_tree</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *dn_, <a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *sn_);</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span></div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>      <a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      <span class="keywordtype">bool</span> <a class="code hl_function" href="a00491.html#a80ae031f36d9c5d1a6f736e8ba86fabe">node_is_ancestor</a>(<a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *parent, <a class="code hl_struct" href="a01008.html">XmlNodeBase</a> *node);</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    } <span class="comment">// namespace Node</span></div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  } <span class="comment">// namespace Xml</span></div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>} <span class="comment">// namespace Lumex</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_XML_NODE_BASE_HPP</span></div>
-<div class="ttc" id="aa00212_html"><div class="ttname"><a href="a00212.html">LumexExport.hpp</a></div></div>
-<div class="ttc" id="aa00212_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition</b> LumexExport.hpp:32</div></div>
-<div class="ttc" id="aa00212_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition</b> LumexExport.hpp:51</div></div>
-<div class="ttc" id="aa00224_html"><div class="ttname"><a href="a00224.html">XmlAttributeBase.hpp</a></div></div>
-<div class="ttc" id="aa00248_html"><div class="ttname"><a href="a00248.html">XmlAllocator.hpp</a></div></div>
-<div class="ttc" id="aa00299_html"><div class="ttname"><a href="a00299.html">XmlTypes.hpp</a></div></div>
-<div class="ttc" id="aa00305_html_a329b1c53e66ebee947f7b4b82656ad04"><div class="ttname"><a href="a00305.html#a329b1c53e66ebee947f7b4b82656ad04">LUMEX_XML_GETHEADER_IMPL</a></div><div class="ttdeci">#define LUMEX_XML_GETHEADER_IMPL(object, page, flags)</div><div class="ttdef"><b>Definition</b> XmlMacros.hpp:53</div></div>
-<div class="ttc" id="aa00435_html"><div class="ttname"><a href="a00435.html">Lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition</b> LumexCPUVectorizationCapabilities.cpp:25</div></div>
-<div class="ttc" id="aa00488_html"><div class="ttname"><a href="a00488.html">Lumex::Xml</a></div><div class="ttdef"><b>Definition</b> XmlAttribute.hpp:21</div></div>
-<div class="ttc" id="aa00489_html"><div class="ttname"><a href="a00489.html">Lumex::Xml::Attribute</a></div><div class="ttdef"><b>Definition</b> XmlAttribute.hpp:23</div></div>
-<div class="ttc" id="aa00491_html"><div class="ttname"><a href="a00491.html">Lumex::Xml::Node</a></div><div class="ttdef"><b>Definition</b> XmlAttributeBase.hpp:17</div></div>
-<div class="ttc" id="aa00491_html_a065d3a41dbf8fb90bb4b15a35b479779"><div class="ttname"><a href="a00491.html#a065d3a41dbf8fb90bb4b15a35b479779">Lumex::Xml::Node::prepend_node</a></div><div class="ttdeci">LUMEX_API void prepend_node(XmlNodeBase *child, XmlNodeBase *node)</div><div class="ttdoc">Prepends a child node to the beginning of a node&#39;s child list.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:84</div></div>
-<div class="ttc" id="aa00491_html_a2c1cc277e615570f2e4533d67e25653b"><div class="ttname"><a href="a00491.html#a2c1cc277e615570f2e4533d67e25653b">Lumex::Xml::Node::remove_node</a></div><div class="ttdeci">LUMEX_API void remove_node(XmlNodeBase *node)</div><div class="ttdoc">Removes a node from its parent&#39;s child list.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:146</div></div>
-<div class="ttc" id="aa00491_html_a80ae031f36d9c5d1a6f736e8ba86fabe"><div class="ttname"><a href="a00491.html#a80ae031f36d9c5d1a6f736e8ba86fabe">Lumex::Xml::Node::node_is_ancestor</a></div><div class="ttdeci">LUMEX_API bool node_is_ancestor(XmlNodeBase *parent, XmlNodeBase *node)</div><div class="ttdoc">Checks if a given parent node is an ancestor of a node.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:292</div></div>
-<div class="ttc" id="aa00491_html_a82a5bfd44472a992a70a90d06d8761f6"><div class="ttname"><a href="a00491.html#a82a5bfd44472a992a70a90d06d8761f6">Lumex::Xml::Node::insert_node_before</a></div><div class="ttdeci">LUMEX_API void insert_node_before(XmlNodeBase *child, XmlNodeBase *node)</div><div class="ttdoc">Inserts a child node before an existing sibling node.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:125</div></div>
-<div class="ttc" id="aa00491_html_a854d772421af41d24b6bc2ed787d9b27"><div class="ttname"><a href="a00491.html#a854d772421af41d24b6bc2ed787d9b27">Lumex::Xml::Node::node_copy_contents</a></div><div class="ttdeci">LUMEX_API void node_copy_contents(XmlNodeBase *dn_, XmlNodeBase *sn_, XmlAllocator *shared_alloc)</div><div class="ttdoc">Copies the name and value strings and all attributes from a source XmlNodeBase to a destination XmlNo...</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:215</div></div>
-<div class="ttc" id="aa00491_html_aa6eda3cc0eceac6c60c04b31823a5ddb"><div class="ttname"><a href="a00491.html#aa6eda3cc0eceac6c60c04b31823a5ddb">Lumex::Xml::Node::append_node</a></div><div class="ttdeci">LUMEX_API void append_node(XmlNodeBase *child, XmlNodeBase *node)</div><div class="ttdoc">Appends a child node to the end of a node&#39;s child list.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:61</div></div>
-<div class="ttc" id="aa00491_html_ab00798aa6b37d582610607ab52d361ae"><div class="ttname"><a href="a00491.html#ab00798aa6b37d582610607ab52d361ae">Lumex::Xml::Node::allocate_node</a></div><div class="ttdeci">LUMEX_API XmlNodeBase * allocate_node(XmlAllocator &amp;alloc, xml_node_type type)</div><div class="ttdoc">Allocates a new XmlNodeBase object using the provided allocator.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:48</div></div>
-<div class="ttc" id="aa00491_html_ac3b3837c677e3abbb9ce5bc49e79f938"><div class="ttname"><a href="a00491.html#ac3b3837c677e3abbb9ce5bc49e79f938">Lumex::Xml::Node::insert_node_after</a></div><div class="ttdeci">LUMEX_API void insert_node_after(XmlNodeBase *child, XmlNodeBase *node)</div><div class="ttdoc">Inserts a child node after an existing sibling node.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:104</div></div>
-<div class="ttc" id="aa00491_html_acb6eb33e17945b00de6c9a587f358414"><div class="ttname"><a href="a00491.html#acb6eb33e17945b00de6c9a587f358414">Lumex::Xml::Node::node_copy_tree</a></div><div class="ttdeci">LUMEX_API void node_copy_tree(XmlNodeBase *dn_, XmlNodeBase *sn_)</div><div class="ttdoc">Performs a deep copy of an XML node&#39;s entire subtree (including itself, children, and attributes).</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:238</div></div>
-<div class="ttc" id="aa00491_html_ae751b2ab27382c57e1871b23d1b4e1ed"><div class="ttname"><a href="a00491.html#ae751b2ab27382c57e1871b23d1b4e1ed">Lumex::Xml::Node::append_new_node</a></div><div class="ttdeci">LUMEX_API XmlNodeBase * append_new_node(XmlNodeBase *node, XmlAllocator &amp;alloc, xml_node_type type=node_element)</div><div class="ttdoc">Appends a newly allocated child node of a specified type to the current node.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:170</div></div>
-<div class="ttc" id="aa00491_html_af2ee9c65d4237bb78932c2b73748cc1d"><div class="ttname"><a href="a00491.html#af2ee9c65d4237bb78932c2b73748cc1d">Lumex::Xml::Node::append_new_attribute</a></div><div class="ttdeci">LUMEX_API XmlAttributeBase * append_new_attribute(XmlNodeBase *node, XmlAllocator &amp;alloc)</div><div class="ttdoc">Appends a newly allocated attribute to the current node.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:203</div></div>
-<div class="ttc" id="aa00491_html_af702d692ab508c77a38f56727e312348"><div class="ttname"><a href="a00491.html#af702d692ab508c77a38f56727e312348">Lumex::Xml::Node::append_attribute</a></div><div class="ttdeci">LUMEX_PUBLIC_API void append_attribute(XmlAttributeBase *attr, XmlNodeBase *node)</div><div class="ttdoc">Appends an attribute to the end of a node&#39;s attribute list.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:182</div></div>
-<div class="ttc" id="aa00491_html_afee169eb8db7e9c5e009fc4f6fe52ced"><div class="ttname"><a href="a00491.html#afee169eb8db7e9c5e009fc4f6fe52ced">Lumex::Xml::Node::destroy_node</a></div><div class="ttdeci">LUMEX_API void destroy_node(XmlNodeBase *n, XmlAllocator &amp;alloc)</div><div class="ttdoc">Destroys an XmlNodeBase object and recursively deallocates its children and attributes.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.cpp:17</div></div>
-<div class="ttc" id="aa00495_html"><div class="ttname"><a href="a00495.html">Lumex::Xml::Memory</a></div><div class="ttdef"><b>Definition</b> XmlAllocator.hpp:19</div></div>
-<div class="ttc" id="aa00503_html"><div class="ttname"><a href="a00503.html">Lumex::Xml::Types</a></div><div class="ttdef"><b>Definition</b> XmlTypes.hpp:14</div></div>
-<div class="ttc" id="aa00503_html_a4269fd4f829e07f1b1e9a66310b2aed5"><div class="ttname"><a href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">Lumex::Xml::Types::char_t</a></div><div class="ttdeci">LUMEX_XML_CHAR char_t</div><div class="ttdef"><b>Definition</b> XmlTypes.hpp:15</div></div>
-<div class="ttc" id="aa00503_html_a6fd92baef45f0608a4e9c97818ae6abf"><div class="ttname"><a href="a00503.html#a6fd92baef45f0608a4e9c97818ae6abf">Lumex::Xml::Types::xml_node_type</a></div><div class="ttdeci">xml_node_type</div><div class="ttdef"><b>Definition</b> XmlTypes.hpp:48</div></div>
-<div class="ttc" id="aa00503_html_a6fd92baef45f0608a4e9c97818ae6abfada7c1ba2d69a2350b1c595296123e1fe"><div class="ttname"><a href="a00503.html#a6fd92baef45f0608a4e9c97818ae6abfada7c1ba2d69a2350b1c595296123e1fe">Lumex::Xml::Types::node_element</a></div><div class="ttdeci">@ node_element</div><div class="ttdoc">Element tag, i.e. &#39;&lt;node&gt;&#39;.</div><div class="ttdef"><b>Definition</b> XmlTypes.hpp:51</div></div>
-<div class="ttc" id="aa00968_html"><div class="ttname"><a href="a00968.html">Lumex::Xml::Attribute::XmlAttributeBase</a></div><div class="ttdoc">Base structure for representing an XML attribute.</div><div class="ttdef"><b>Definition</b> XmlAttributeBase.hpp:31</div></div>
-<div class="ttc" id="aa00984_html"><div class="ttname"><a href="a00984.html">Lumex::Xml::Memory::XmlAllocator</a></div><div class="ttdoc">Manages memory allocation and deallocation for XML nodes, attributes, and strings within a document.</div><div class="ttdef"><b>Definition</b> XmlAllocator.hpp:31</div></div>
-<div class="ttc" id="aa00988_html"><div class="ttname"><a href="a00988.html">Lumex::Xml::Memory::XmlMemoryPage</a></div><div class="ttdoc">Represents a single fixed-size memory page used by the XmlAllocator.</div><div class="ttdef"><b>Definition</b> XmlMemoryPage.hpp:26</div></div>
-<div class="ttc" id="aa01008_html"><div class="ttname"><a href="a01008.html">Lumex::Xml::Node::XmlNodeBase</a></div><div class="ttdoc">Base structure representing an XML node in the document tree.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:30</div></div>
-<div class="ttc" id="aa01008_html_a205188b39dbdb93a6999536f9bbdfe2c"><div class="ttname"><a href="a01008.html#a205188b39dbdb93a6999536f9bbdfe2c">Lumex::Xml::Node::XmlNodeBase::next_sibling</a></div><div class="ttdeci">XmlNodeBase * next_sibling</div><div class="ttdoc">Pointer to the next sibling node. nullptr for the last child.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:58</div></div>
-<div class="ttc" id="aa01008_html_a390614bd6e365fbaa96578a3a5d866aa"><div class="ttname"><a href="a01008.html#a390614bd6e365fbaa96578a3a5d866aa">Lumex::Xml::Node::XmlNodeBase::prev_sibling_c</a></div><div class="ttdeci">XmlNodeBase * prev_sibling_c</div><div class="ttdoc">Pointer to the previous sibling node in the circular doubly-linked list of children....</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:56</div></div>
-<div class="ttc" id="aa01008_html_a5937db6365696f1ac0b661fdc9d7c3bd"><div class="ttname"><a href="a01008.html#a5937db6365696f1ac0b661fdc9d7c3bd">Lumex::Xml::Node::XmlNodeBase::XmlNodeBase</a></div><div class="ttdeci">XmlNodeBase(XmlMemoryPage *page, Types::xml_node_type type)</div><div class="ttdoc">Constructs an XmlNodeBase object.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:37</div></div>
-<div class="ttc" id="aa01008_html_a6a1a747808f5c651f51d3541363684b1"><div class="ttname"><a href="a01008.html#a6a1a747808f5c651f51d3541363684b1">Lumex::Xml::Node::XmlNodeBase::first_attribute</a></div><div class="ttdeci">XmlAttributeBase * first_attribute</div><div class="ttdoc">Pointer to the first attribute of this node. nullptr if no attributes.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:61</div></div>
-<div class="ttc" id="aa01008_html_a78babd2874d3d330f6be3118f52daeaf"><div class="ttname"><a href="a01008.html#a78babd2874d3d330f6be3118f52daeaf">Lumex::Xml::Node::XmlNodeBase::header</a></div><div class="ttdeci">uintptr_t header</div><div class="ttdoc">Internal header containing node type, memory page pointer, and allocation flags.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:41</div></div>
-<div class="ttc" id="aa01008_html_ab9679d6fa825596b0e38d188fea398c2"><div class="ttname"><a href="a01008.html#ab9679d6fa825596b0e38d188fea398c2">Lumex::Xml::Node::XmlNodeBase::parent</a></div><div class="ttdeci">XmlNodeBase * parent</div><div class="ttdoc">Pointer to the parent node. nullptr for the document node.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:49</div></div>
-<div class="ttc" id="aa01008_html_ac1b001449465d9b705817cfa3444f9cd"><div class="ttname"><a href="a01008.html#ac1b001449465d9b705817cfa3444f9cd">Lumex::Xml::Node::XmlNodeBase::value</a></div><div class="ttdeci">char_t * value</div><div class="ttdoc">Pointer to the null-terminated value string of the node. May be nullptr.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:46</div></div>
-<div class="ttc" id="aa01008_html_ad7b1ca11b68b62834b219bce3e092a6e"><div class="ttname"><a href="a01008.html#ad7b1ca11b68b62834b219bce3e092a6e">Lumex::Xml::Node::XmlNodeBase::first_child</a></div><div class="ttdeci">XmlNodeBase * first_child</div><div class="ttdoc">Pointer to the first child node. nullptr if no children.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:52</div></div>
-<div class="ttc" id="aa01008_html_af2a2c298c0a66b18782dd22c74ec70e7"><div class="ttname"><a href="a01008.html#af2a2c298c0a66b18782dd22c74ec70e7">Lumex::Xml::Node::XmlNodeBase::name</a></div><div class="ttdeci">char_t * name</div><div class="ttdoc">Pointer to the null-terminated name string of the node. May be nullptr.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:44</div></div>
-<div class="ttc" id="aa01012_html_a14425645eaafe5211a3f1a6cb259ba5e"><div class="ttname"><a href="a01012.html#a14425645eaafe5211a3f1a6cb259ba5e">Lumex::Xml::Node::name_null_sentry::name</a></div><div class="ttdeci">char_t * name</div><div class="ttdoc">Temporary storage for the original name pointer.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:73</div></div>
-<div class="ttc" id="aa01012_html_a24364c1de7b1112384dcaa5391e9f996"><div class="ttname"><a href="a01012.html#a24364c1de7b1112384dcaa5391e9f996">Lumex::Xml::Node::name_null_sentry::~name_null_sentry</a></div><div class="ttdeci">~name_null_sentry()</div><div class="ttdoc">Destructor that restores the node&#39;s original name.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:86</div></div>
-<div class="ttc" id="aa01012_html_a515766760a71ac405c34ee4871081c7f"><div class="ttname"><a href="a01012.html#a515766760a71ac405c34ee4871081c7f">Lumex::Xml::Node::name_null_sentry::node</a></div><div class="ttdeci">XmlNodeBase * node</div><div class="ttdoc">Pointer to the XmlNodeBase whose name is being managed.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:71</div></div>
-<div class="ttc" id="aa01012_html_af7afb277db5688bf17aa182a85e6a4c7"><div class="ttname"><a href="a01012.html#af7afb277db5688bf17aa182a85e6a4c7">Lumex::Xml::Node::name_null_sentry::name_null_sentry</a></div><div class="ttdeci">name_null_sentry(XmlNodeBase *node_)</div><div class="ttdoc">Constructs a name_null_sentry and nullifies the node&#39;s name.</div><div class="ttdef"><b>Definition</b> XmlNodeBase.hpp:80</div></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keyword">inline</span> std::string</div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="a00877.html#ac5e4669bec0d49b722ad8e60b61be911">  163</a></span><a class="code hl_function" href="a00877.html#ac5e4669bec0d49b722ad8e60b61be911">stringify</a> () <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>{</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>}</div>
+</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">#if __cplusplus &gt;= 202002L</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="keyword">requires</span> lumex::core::utility::traits::stream::AllStreamable&lt;Args...&gt;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>std::string</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>stringify_v2 (Args &amp;&amp;...args)</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>{</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <a class="code hl_define" href="a00338.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a> (<span class="keyword">sizeof</span>...(args) == 0) { <span class="keywordflow">return</span> {}; }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    std::ostringstream oss;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    ((oss &lt;&lt; std::forward&lt;Args&gt; (args)), ...);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">return</span> oss.str ();</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>}</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>} <span class="comment">// namespace utility</span></div>
+</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>} <span class="comment">// namespace string</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>} <span class="comment">// namespace core</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>} <span class="comment">// namespace lumex</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_CORE_STRING_UTILITY_STRINGIFY_HPP</span></div>
+<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">LumexAssert.hpp</a></div></div>
+<div class="ttc" id="aa00305_html_a5216865b2fc83a9979ea50b2172a1dfb"><div class="ttname"><a href="a00305.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a></div><div class="ttdeci">#define LUMEX_STATIC_ASSERT_MSG(...)</div><div class="ttdef"><b>Definition</b> LumexAssert.hpp:94</div></div>
+<div class="ttc" id="aa00308_html"><div class="ttname"><a href="a00308.html">LumexAttributes.hpp</a></div></div>
+<div class="ttc" id="aa00308_html_a4f7e1c4a689aff4cf2c75942d17d5ba2"><div class="ttname"><a href="a00308.html#a4f7e1c4a689aff4cf2c75942d17d5ba2">LUMEX_ATTRIBUTE_MAYBE_UNUSED_VAR</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_MAYBE_UNUSED_VAR(...)</div><div class="ttdef"><b>Definition</b> LumexAttributes.hpp:177</div></div>
+<div class="ttc" id="aa00338_html"><div class="ttname"><a href="a00338.html">LumexKeywords.hpp</a></div></div>
+<div class="ttc" id="aa00338_html_a38079da46fca9b9ae17e90b731d6ab0c"><div class="ttname"><a href="a00338.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a></div><div class="ttdeci">#define LUMEX_CONSTEXPR_IF</div><div class="ttdef"><b>Definition</b> LumexKeywords.hpp:76</div></div>
+<div class="ttc" id="aa00338_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition</b> LumexKeywords.hpp:69</div></div>
+<div class="ttc" id="aa00359_html"><div class="ttname"><a href="a00359.html">LumexTypeTraits.hpp</a></div><div class="ttdoc">Every general-purpose type trait of LumexLib, one sub-namespace of lumex::core::utility::traits per t...</div></div>
+<div class="ttc" id="aa00774_html"><div class="ttname"><a href="a00774.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition</b> LumexCPUVectorizationCapabilities.cpp:27</div></div>
+<div class="ttc" id="aa00826_html"><div class="ttname"><a href="a00826.html">lumex::core</a></div><div class="ttdef"><b>Definition</b> Base64.hpp:80</div></div>
+<div class="ttc" id="aa00874_html"><div class="ttname"><a href="a00874.html">lumex::core::string</a></div><div class="ttdef"><b>Definition</b> LumexJoin.hpp:60</div></div>
+<div class="ttc" id="aa00877_html"><div class="ttname"><a href="a00877.html">lumex::core::string::utility</a></div><div class="ttdef"><b>Definition</b> LumexStringify.hpp:61</div></div>
+<div class="ttc" id="aa00877_html_a069a5bbde352f2d95ec427f786215113"><div class="ttname"><a href="a00877.html#a069a5bbde352f2d95ec427f786215113">lumex::core::string::utility::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;ostream, std::unique_ptr&lt; T, D &gt; const &amp;ptr)</div><div class="ttdoc">Streams the raw address held by a std::unique_ptr.</div><div class="ttdef"><b>Definition</b> LumexStringify.hpp:69</div></div>
+<div class="ttc" id="aa00877_html_ac5e4669bec0d49b722ad8e60b61be911"><div class="ttname"><a href="a00877.html#ac5e4669bec0d49b722ad8e60b61be911">lumex::core::string::utility::stringify</a></div><div class="ttdeci">std::string stringify() LUMEX_NOEXCEPT</div><div class="ttdoc">No arguments: an empty string, without creating a stream.</div><div class="ttdef"><b>Definition</b> LumexStringify.hpp:163</div></div>
+<div class="ttc" id="aa02336_html"><div class="ttname"><a href="a02336.html">lumex::core::utility::traits::stream::all_streamable</a></div><div class="ttdoc">value is true when every type in Args (after std::decay) is streamable; true for an empty pack.</div><div class="ttdef"><b>Definition</b> LumexTypeTraits.hpp:575</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_8b4095ffbb260afdde390f90a93ad48f.html">xml</a></li><li class="navelem"><a class="el" href="dir_fcd557762cccdde607a20ddedb7dfad2.html">node</a></li><li class="navelem"><a class="el" href="a00269.html">XmlNodeBase.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_b16f055399eb077e29306fae1a7898e7.html">string</a></li><li class="navelem"><a class="el" href="dir_929dfe309a94b0b88a7930225ed7ebcd.html">utility</a></li><li class="navelem"><a class="el" href="a00269.html">LumexStringify.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

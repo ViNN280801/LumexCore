@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: D:/Develop/LumexCore/lumex/core/utility/LumexDemangle.hpp</title>
+<title>LumexLib: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('a01317.html',''); initResizable(true); });
+$(function(){initNavTree('a01320.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -103,59 +103,21 @@ $(function(){initNavTree('a01317.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">D:/Develop/LumexCore/lumex/core/utility/LumexDemangle.hpp</div></div>
+  <div class="headertitle"><div class="title">lumex::core::crc::parametric::crc8_tech3250_spec_t Member List</div></div>
 </div><!--header-->
 <div class="contents">
-<p>Demangles a C++ type name for human-readable output.</p>
-<p>Demangles a C++ type name for human-readable output.This method takes a mangled C++ type name (as returned by typeid) and attempts to demangle it into a human-readable format. On GCC/Clang platforms, it uses the ABI's demangling function. On other platforms, it returns the original name.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The mangled type name to demangle (typically from typeid().name()) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>std::string The demangled name if successful, or the original name if:<ul>
-<li>Platform doesn't support demangling (non-GNU)</li>
-<li>Demangling failed</li>
-<li>Input was nullptr</li>
-</ul>
-</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>On GNU-compatible compilers (GCC/Clang), this uses abi::__cxa_demangle which handles:<ul>
-<li>Template instantiations</li>
-<li>Namespace qualifications</li>
-<li>CV-qualifiers</li>
-<li>Calling conventions</li>
-</ul>
-</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>The caller must ensure the input pointer is valid (not dangling). The method makes no ownership claims on the input string.</dd></dl>
-<p>std::cout &lt;&lt; _demangle(typeid(std::vector&lt;int&gt;).name()); // Outputs: "std::vector&lt;int, std::allocator&lt;int&gt;&gt;" instead of "St6vectorIiSaIiEE"</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#ifndef LUMEX_DEMANGLE_HPP</span></div>
-<div class="line"><span class="preprocessor">#define LUMEX_DEMANGLE_HPP</span></div>
-<div class="line"></div>
-<div class="line"><span class="preprocessor">#ifdef __GNUG__</span></div>
-<div class="line"><span class="preprocessor">  #include &lt;cstdlib&gt;</span></div>
-<div class="line"><span class="preprocessor">  #include &lt;cxxabi.h&gt;</span></div>
-<div class="line"><span class="preprocessor">  #include &lt;string&gt;</span></div>
-<div class="line"><span class="preprocessor">  #include &lt;typeinfo&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">  #define lumDemangle(type)                                                           \</span></div>
-<div class="line"><span class="preprocessor">    ([&amp;]() -&gt; std::string {                                                           \</span></div>
-<div class="line"><span class="preprocessor">      std::string name = typeid(type).name();                                         \</span></div>
-<div class="line"><span class="preprocessor">      int status = 0;                                                                 \</span></div>
-<div class="line"><span class="preprocessor">      char *demangled = abi::__cxa_demangle(name.c_str(), nullptr, nullptr, &amp;status); \</span></div>
-<div class="line"><span class="preprocessor">      std::string result = (status == 0 &amp;&amp; demangled) ? demangled : name;             \</span></div>
-<div class="line"><span class="preprocessor">      free(demangled);                                                                \</span></div>
-<div class="line"><span class="preprocessor">      return result;                                                                  \</span></div>
-<div class="line"><span class="preprocessor">    }())</span></div>
-<div class="line"><span class="preprocessor">#else</span></div>
-<div class="line"><span class="preprocessor">  #include &lt;string&gt;</span></div>
-<div class="line"><span class="preprocessor">  #include &lt;typeinfo&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">  #define lumDemangle(type) std::string(typeid(type).name())</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_DEMANGLE_HPP</span></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p>This is the complete list of members for <a class="el" href="a01320.html">lumex::core::crc::parametric::crc8_tech3250_spec_t</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a01320.html#a8c77265eaa5091e5d0bb25d3717a0135">kCatalogCheck</a></td><td class="entry"><a class="el" href="a01320.html">lumex::core::crc::parametric::crc8_tech3250_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a01320.html#abc272a54c94e9b07a5cff249a28165ed">kInit</a></td><td class="entry"><a class="el" href="a01320.html">lumex::core::crc::parametric::crc8_tech3250_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a01320.html#aa50f9d7975e201eaf64bf353a7e5e34b">kPoly</a></td><td class="entry"><a class="el" href="a01320.html">lumex::core::crc::parametric::crc8_tech3250_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a01320.html#a1ef325dafa119333d56d03a4ab287c0f">kRefIn</a></td><td class="entry"><a class="el" href="a01320.html">lumex::core::crc::parametric::crc8_tech3250_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a01320.html#a64d5765c51b6bbb56e6bfa8b7f9c5ebf">kRefOut</a></td><td class="entry"><a class="el" href="a01320.html">lumex::core::crc::parametric::crc8_tech3250_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a01320.html#aad9c1354ae40d733fc1761424744420b">kWidth</a></td><td class="entry"><a class="el" href="a01320.html">lumex::core::crc::parametric::crc8_tech3250_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a01320.html#a6701bb99d7d5843aa7df811aff8ef58b">kXorOut</a></td><td class="entry"><a class="el" href="a01320.html">lumex::core::crc::parametric::crc8_tech3250_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a01320.html#a0595c9a79d06bf2ce0cc8abd18be5ec0">ValueType</a> typedef</td><td class="entry"><a class="el" href="a01320.html">lumex::core::crc::parametric::crc8_tech3250_spec_t</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

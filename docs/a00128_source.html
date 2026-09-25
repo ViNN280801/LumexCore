@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Unexpected.hpp Source File</title>
+<title>LumexLib: Base64.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -103,74 +103,249 @@ $(function(){initNavTree('a00128_source.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Unexpected.hpp</div></div>
+  <div class="headertitle"><div class="title">Base64.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00128.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef UNEXPECTED_HPP</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define UNEXPECTED_HPP</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// ====================== Unexpected класс (имитация C++23) ======================</span></div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="a00728.html">   14</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> ErrorType&gt; <span class="keyword">class </span><a class="code hl_function" href="a00728.html#a33ea27bdabc1b1b3544d0311fdbeae7e">Unexpected</a></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="a00728.html#a33ea27bdabc1b1b3544d0311fdbeae7e">   22</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="a00728.html#a33ea27bdabc1b1b3544d0311fdbeae7e">Unexpected</a>(ErrorType <span class="keyword">const</span> &amp;<a class="code hl_function" href="a00728.html#a8a13debe4d9c2ae8b17fd7d1db8c6cfc">error</a>) : m_error(<a class="code hl_function" href="a00728.html#a8a13debe4d9c2ae8b17fd7d1db8c6cfc">error</a>) {}</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="a00728.html#a6d0d2bbfb20a558ca73ae6dc81652ab1">   29</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="a00728.html#a6d0d2bbfb20a558ca73ae6dc81652ab1">Unexpected</a>(ErrorType &amp;&amp;<a class="code hl_function" href="a00728.html#a8a13debe4d9c2ae8b17fd7d1db8c6cfc">error</a>) : m_error(<a class="code hl_namespace" href="a00450.html">std</a>::move(<a class="code hl_function" href="a00728.html#a8a13debe4d9c2ae8b17fd7d1db8c6cfc">error</a>)) {}</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  ErrorType &amp;</div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00728.html#a8a13debe4d9c2ae8b17fd7d1db8c6cfc">   37</a></span>  <a class="code hl_function" href="a00728.html#a8a13debe4d9c2ae8b17fd7d1db8c6cfc">error</a>() &amp;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">return</span> m_error;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  }</div>
+<a href="a00128.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#ifndef LUMEX_CORE_BASE64_CODEC_HPP</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#define LUMEX_CORE_BASE64_CODEC_HPP</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#include &quot;<a class="code" href="a00305.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#include &quot;<a class="code" href="a00338.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#include &quot;<a class="code" href="a00359.html">lumex/core/utility/traits/LumexTypeTraits.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#if __cplusplus &gt;= 201703L</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00774.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="a00826.html">   79</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00826.html">core</a></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="a00827.html">   81</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00827.html">base64</a></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>{</div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="a00828.html">   83</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00828.html">codec</a></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>{</div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="a00829.html">   85</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00829.html">Types</a></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="a00829.html#a5e9a9660b44f2279e84d63cbdb62ffd1">   87</a></span><span class="keyword">using </span><a class="code hl_typedef" href="a00829.html#a5e9a9660b44f2279e84d63cbdb62ffd1">byte_type</a> = <span class="keywordtype">unsigned</span> char;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#if __cplusplus &gt;= 201703L</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">using </span><a class="code hl_typedef" href="a00829.html#a9e501ac64840df01990141048151d584">string_type_t</a> = std::string_view;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="a00829.html#a9e501ac64840df01990141048151d584">   92</a></span><span class="keyword">using </span><a class="code hl_typedef" href="a00829.html#a9e501ac64840df01990141048151d584">string_type_t</a> = std::string <span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>} <span class="comment">// namespace Types</span></div>
 </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  ErrorType <span class="keyword">const</span> &amp;</div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="a00728.html#aa7c30a80330f23f15d9c4e5e82d11ef5">   48</a></span>  <a class="code hl_function" href="a00728.html#aa7c30a80330f23f15d9c4e5e82d11ef5">error</a>() const &amp;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">return</span> m_error;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="a00830.html">   96</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00830.html">Constants</a></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>{</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="a00830.html#ad6f95b035510dec551a9c3eb4539cfe9">   98</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <a class="code hl_typedef" href="a00829.html#a5e9a9660b44f2279e84d63cbdb62ffd1">Types::byte_type</a> <a class="code hl_variable" href="a00830.html#ad6f95b035510dec551a9c3eb4539cfe9">kBase64DecodeInvalidChar</a></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    = 0xFF; <span class="comment">// Represents 0b11111111 for invalid characters</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="a00830.html#af075c8ac027ac5d651303f3c4ad468d7">  100</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <a class="code hl_typedef" href="a00829.html#a5e9a9660b44f2279e84d63cbdb62ffd1">Types::byte_type</a> <a class="code hl_variable" href="a00830.html#af075c8ac027ac5d651303f3c4ad468d7">kBase64MaskSixBits</a></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    = 0x3F; <span class="comment">// Represents 0b00111111 for masking 6 bits</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="a00830.html#ab7480306bde04a66afdd69fe09d2f6a8">  102</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <a class="code hl_typedef" href="a00829.html#a5e9a9660b44f2279e84d63cbdb62ffd1">Types::byte_type</a> <a class="code hl_variable" href="a00830.html#ab7480306bde04a66afdd69fe09d2f6a8">kBase64MaskFourBits</a></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    = 0x0F; <span class="comment">// Represents 0b00001111 for masking 4 bits</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="a00830.html#af0ce58726d87dcd643dfaf781c2527a2">  104</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <a class="code hl_typedef" href="a00829.html#a5e9a9660b44f2279e84d63cbdb62ffd1">Types::byte_type</a> <a class="code hl_variable" href="a00830.html#af0ce58726d87dcd643dfaf781c2527a2">kBase64MaskTwoBits</a></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    = 0x03; <span class="comment">// Represents 0b00000011 for masking 2 bits</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="a00830.html#abd7b9936d1233d8017b8c798515b81da">  106</a></span><a class="code hl_define" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <a class="code hl_typedef" href="a00829.html#a5e9a9660b44f2279e84d63cbdb62ffd1">Types::byte_type</a> <a class="code hl_variable" href="a00830.html#abd7b9936d1233d8017b8c798515b81da">kBase64RightShiftSixBits</a></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    = 0x06; <span class="comment">// Represents 0b00000110 for right shifting 6 bits</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>} <span class="comment">// namespace Constants</span></div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  ErrorType &amp;&amp;</div>
-<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="a00728.html#ab2f4e6c10ba97962494afd5b9cbbe56f">   59</a></span>  <a class="code hl_function" href="a00728.html#ab2f4e6c10ba97962494afd5b9cbbe56f">error</a>() &amp;&amp;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">return</span> std::move(m_error);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="a00831.html">  110</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00831.html">detail</a></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>{</div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="};">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="a00831.html#a9d7e600219f0ee2a9f913871d1ebb0b4">  113</a></span>std::array&lt;char, 64&gt; <span class="keyword">const</span> <a class="code hl_variable" href="a00831.html#a9d7e600219f0ee2a9f913871d1ebb0b4">_base64_chars</a></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    = { <span class="charliteral">&#39;A&#39;</span>, <span class="charliteral">&#39;B&#39;</span>, <span class="charliteral">&#39;C&#39;</span>, <span class="charliteral">&#39;D&#39;</span>, <span class="charliteral">&#39;E&#39;</span>, <span class="charliteral">&#39;F&#39;</span>, <span class="charliteral">&#39;G&#39;</span>, <span class="charliteral">&#39;H&#39;</span>, <span class="charliteral">&#39;I&#39;</span>, <span class="charliteral">&#39;J&#39;</span>, <span class="charliteral">&#39;K&#39;</span>, <span class="charliteral">&#39;L&#39;</span>, <span class="charliteral">&#39;M&#39;</span>,</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="charliteral">&#39;N&#39;</span>, <span class="charliteral">&#39;O&#39;</span>, <span class="charliteral">&#39;P&#39;</span>, <span class="charliteral">&#39;Q&#39;</span>, <span class="charliteral">&#39;R&#39;</span>, <span class="charliteral">&#39;S&#39;</span>, <span class="charliteral">&#39;T&#39;</span>, <span class="charliteral">&#39;U&#39;</span>, <span class="charliteral">&#39;V&#39;</span>, <span class="charliteral">&#39;W&#39;</span>, <span class="charliteral">&#39;X&#39;</span>, <span class="charliteral">&#39;Y&#39;</span>, <span class="charliteral">&#39;Z&#39;</span>,</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;b&#39;</span>, <span class="charliteral">&#39;c&#39;</span>, <span class="charliteral">&#39;d&#39;</span>, <span class="charliteral">&#39;e&#39;</span>, <span class="charliteral">&#39;f&#39;</span>, <span class="charliteral">&#39;g&#39;</span>, <span class="charliteral">&#39;h&#39;</span>, <span class="charliteral">&#39;i&#39;</span>, <span class="charliteral">&#39;j&#39;</span>, <span class="charliteral">&#39;k&#39;</span>, <span class="charliteral">&#39;l&#39;</span>, <span class="charliteral">&#39;m&#39;</span>,</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="charliteral">&#39;n&#39;</span>, <span class="charliteral">&#39;o&#39;</span>, <span class="charliteral">&#39;p&#39;</span>, <span class="charliteral">&#39;q&#39;</span>, <span class="charliteral">&#39;r&#39;</span>, <span class="charliteral">&#39;s&#39;</span>, <span class="charliteral">&#39;t&#39;</span>, <span class="charliteral">&#39;u&#39;</span>, <span class="charliteral">&#39;v&#39;</span>, <span class="charliteral">&#39;w&#39;</span>, <span class="charliteral">&#39;x&#39;</span>, <span class="charliteral">&#39;y&#39;</span>, <span class="charliteral">&#39;z&#39;</span>,</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;2&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;+&#39;</span>, <span class="charliteral">&#39;/&#39;</span> };</div>
 </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  ErrorType <span class="keyword">const</span> &amp;&amp;</div>
-<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="a00728.html#a1795a3ffaa2f3d2e3ccd35976bec0b4a">   70</a></span>  <a class="code hl_function" href="a00728.html#a1795a3ffaa2f3d2e3ccd35976bec0b4a">error</a>() const &amp;&amp;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">return</span> std::move(m_error);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="};">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="a00831.html#a1532c566da2e92bae3b58e0ad551ef7e">  121</a></span>std::array&lt;Types::byte_type, 256&gt; <span class="keyword">const</span> <a class="code hl_variable" href="a00831.html#a1532c566da2e92bae3b58e0ad551ef7e">_decode_table</a> = {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  0xFF, 0xFF, 0xFF, 0xFF, 0x3E, 0xFF, 0xFF, 0xFF, 0x3F, 0x34, 0x35, 0x36, 0x37,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  0x38, 0x39, 0x3A, 0x3B, 0x3C, 0x3D, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  0x0D, 0x0E, 0x0F, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x1A, 0x1B, 0x1C, 0x1D, 0x1E, 0x1F, 0x20,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  0x21, 0x22, 0x23, 0x24, 0x25, 0x26, 0x27, 0x28, 0x29, 0x2A, 0x2B, 0x2C, 0x2D,</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  0x2E, 0x2F, 0x30, 0x31, 0x32, 0x33, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>};</div>
 </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  ErrorType m_error; </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="keyword">inline</span> <span class="keywordtype">bool</span></div>
+<div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="a00831.html#a6e5d73c8550e0ccb9b380dd26557488d">  153</a></span><a class="code hl_function" href="a00831.html#a6e5d73c8550e0ccb9b380dd26557488d">_is_base64_char_impl</a> (<a class="code hl_typedef" href="a00829.html#a5e9a9660b44f2279e84d63cbdb62ffd1">Types::byte_type</a> chr) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>{</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="comment">// A character is a valid Base64 alphabet character if its decoded value is</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="comment">// not kBase64DecodeInvalidChar. This function specifically excludes &#39;=&#39; as a</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="comment">// valid alphabet character, as &#39;=&#39; is padding.</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="a00831.html#a1532c566da2e92bae3b58e0ad551ef7e">_decode_table</a>.at (chr) != <a class="code hl_variable" href="a00830.html#ad6f95b035510dec551a9c3eb4539cfe9">Constants::kBase64DecodeInvalidChar</a>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>}</div>
 </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif </span><span class="comment">// !UNEXPECTED_HPP</span></div>
-<div class="ttc" id="aa00450_html"><div class="ttname"><a href="a00450.html">std</a></div><div class="ttdef"><b>Definition</b> Logger.hpp:201</div></div>
-<div class="ttc" id="aa00728_html_a1795a3ffaa2f3d2e3ccd35976bec0b4a"><div class="ttname"><a href="a00728.html#a1795a3ffaa2f3d2e3ccd35976bec0b4a">Unexpected::error</a></div><div class="ttdeci">ErrorType const &amp;&amp; error() const &amp;&amp;</div><div class="ttdoc">Возвращает константную rvalue ссылку на хранимую ошибку.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:70</div></div>
-<div class="ttc" id="aa00728_html_a33ea27bdabc1b1b3544d0311fdbeae7e"><div class="ttname"><a href="a00728.html#a33ea27bdabc1b1b3544d0311fdbeae7e">Unexpected::Unexpected</a></div><div class="ttdeci">Unexpected(ErrorType const &amp;error)</div><div class="ttdoc">Конструктор.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:22</div></div>
-<div class="ttc" id="aa00728_html_a6d0d2bbfb20a558ca73ae6dc81652ab1"><div class="ttname"><a href="a00728.html#a6d0d2bbfb20a558ca73ae6dc81652ab1">Unexpected::Unexpected</a></div><div class="ttdeci">Unexpected(ErrorType &amp;&amp;error)</div><div class="ttdoc">Конструктор перемещения.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:29</div></div>
-<div class="ttc" id="aa00728_html_a8a13debe4d9c2ae8b17fd7d1db8c6cfc"><div class="ttname"><a href="a00728.html#a8a13debe4d9c2ae8b17fd7d1db8c6cfc">Unexpected::error</a></div><div class="ttdeci">ErrorType &amp; error() &amp;</div><div class="ttdoc">Возвращает изменяемую lvalue ссылку на хранимую ошибку.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:37</div></div>
-<div class="ttc" id="aa00728_html_aa7c30a80330f23f15d9c4e5e82d11ef5"><div class="ttname"><a href="a00728.html#aa7c30a80330f23f15d9c4e5e82d11ef5">Unexpected::error</a></div><div class="ttdeci">ErrorType const &amp; error() const &amp;</div><div class="ttdoc">Возвращает константную lvalue ссылку на хранимую ошибку.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:48</div></div>
-<div class="ttc" id="aa00728_html_ab2f4e6c10ba97962494afd5b9cbbe56f"><div class="ttname"><a href="a00728.html#ab2f4e6c10ba97962494afd5b9cbbe56f">Unexpected::error</a></div><div class="ttdeci">ErrorType &amp;&amp; error() &amp;&amp;</div><div class="ttdoc">Возвращает rvalue ссылку на хранимую ошибку.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:59</div></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>std::string</div>
+<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="a00831.html#abda97488987b0b151816d6cc1ee24873">  171</a></span><a class="code hl_function" href="a00831.html#abda97488987b0b151816d6cc1ee24873">_encode_impl</a> (T <span class="keyword">const</span> &amp;data_view)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>{</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <a class="code hl_define" href="a00305.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a> (</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      <a class="code hl_struct" href="a02396.html">lumex::core::utility::traits::range::has_convertible_size&lt;T&gt;::value</a>,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      <span class="stringliteral">&quot;Encoding data requires a type with a .size() method whose &quot;</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      <span class="stringliteral">&quot;return type is convertible to std::size_t.&quot;</span>);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <a class="code hl_define" href="a00305.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a> (</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      <a class="code hl_struct" href="a02404.html">lumex::core::utility::traits::range::has_convertible_indexed_access</a>&lt;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>          T, <a class="code hl_typedef" href="a00829.html#a5e9a9660b44f2279e84d63cbdb62ffd1">Types::byte_type</a>&gt;::value,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      <span class="stringliteral">&quot;Encoding data requires a type with an operator[] that &quot;</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>      <span class="stringliteral">&quot;accepts std::size_t as an index and returns &quot;</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      <span class="stringliteral">&quot;a type convertible to byte_type.&quot;</span>);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <span class="keywordflow">if</span> (data_view.empty ())</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="comment">// Calculate output length and reserve space</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  std::string result;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  std::size_t out_length{ 4 * ((data_view.size () + 2) / 3) };</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  result.reserve (out_length);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="comment">// 1. Process 3-byte chunks</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  std::size_t pos{};</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="keywordflow">while</span> (pos + 2 &lt; data_view.size ())</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      <span class="comment">// 1.1. Get the first 6 bits of the first byte</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>      result += <a class="code hl_variable" href="a00831.html#a9d7e600219f0ee2a9f913871d1ebb0b4">detail::_base64_chars</a>.at ((data_view[pos] &gt;&gt; 2)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                                          &amp; <a class="code hl_variable" href="a00830.html#af075c8ac027ac5d651303f3c4ad468d7">Constants::kBase64MaskSixBits</a>);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      <span class="comment">// 1.2. Get the last 2 bits of the first byte and the first 4 bits of the</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>      <span class="comment">// second byte</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>      result += <a class="code hl_variable" href="a00831.html#a9d7e600219f0ee2a9f913871d1ebb0b4">detail::_base64_chars</a>.at (</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>          ((data_view[pos] &amp; <a class="code hl_variable" href="a00830.html#af0ce58726d87dcd643dfaf781c2527a2">Constants::kBase64MaskTwoBits</a>) &lt;&lt; 4)</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>          | ((data_view[pos + 1] &gt;&gt; 4) &amp; <a class="code hl_variable" href="a00830.html#ab7480306bde04a66afdd69fe09d2f6a8">Constants::kBase64MaskFourBits</a>));</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>      <span class="comment">// 1.3. Get the last 4 bits of the second byte and the first 2 bits of</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <span class="comment">// the third byte</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>      result += <a class="code hl_variable" href="a00831.html#a9d7e600219f0ee2a9f913871d1ebb0b4">detail::_base64_chars</a>.at (</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>          ((data_view[pos + 1] &amp; <a class="code hl_variable" href="a00830.html#ab7480306bde04a66afdd69fe09d2f6a8">Constants::kBase64MaskFourBits</a>) &lt;&lt; 2)</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>          | ((data_view[pos + 2] &gt;&gt; <a class="code hl_variable" href="a00830.html#abd7b9936d1233d8017b8c798515b81da">Constants::kBase64RightShiftSixBits</a>)</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>             &amp; <a class="code hl_variable" href="a00830.html#af0ce58726d87dcd643dfaf781c2527a2">Constants::kBase64MaskTwoBits</a>));</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>      <span class="comment">// 1.4. Get the last 6 bits of the third byte</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>      result += <a class="code hl_variable" href="a00831.html#a9d7e600219f0ee2a9f913871d1ebb0b4">detail::_base64_chars</a>.at (data_view[pos + 2]</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                                          &amp; <a class="code hl_variable" href="a00830.html#af075c8ac027ac5d651303f3c4ad468d7">Constants::kBase64MaskSixBits</a>);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>      <span class="comment">// 1.5. Move to the next 3 bytes to process</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>      pos += 3;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    }</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  <span class="comment">// 2. Handle remaining bytes</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="keywordflow">if</span> (pos &lt; data_view.size ())</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      <span class="comment">// 2.1. Get the first 6 bits of the first byte</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      result += <a class="code hl_variable" href="a00831.html#a9d7e600219f0ee2a9f913871d1ebb0b4">detail::_base64_chars</a>.at ((data_view[pos] &gt;&gt; 2)</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                                          &amp; <a class="code hl_variable" href="a00830.html#af075c8ac027ac5d651303f3c4ad468d7">Constants::kBase64MaskSixBits</a>);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      <span class="keywordflow">if</span> (pos + 1 &lt; data_view.size ())</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        {</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>          <span class="comment">// 2.1.1. Get the last 2 bits of the first byte and the first 4 bits</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>          <span class="comment">// of the second byte</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>          result += <a class="code hl_variable" href="a00831.html#a9d7e600219f0ee2a9f913871d1ebb0b4">detail::_base64_chars</a>.at (</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>              ((data_view[pos] &amp; <a class="code hl_variable" href="a00830.html#af0ce58726d87dcd643dfaf781c2527a2">Constants::kBase64MaskTwoBits</a>) &lt;&lt; 4)</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>              | ((data_view[pos + 1] &gt;&gt; 4) &amp; <a class="code hl_variable" href="a00830.html#ab7480306bde04a66afdd69fe09d2f6a8">Constants::kBase64MaskFourBits</a>));</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>          <span class="comment">// 2.1.2. Get the last 4 bits of the second byte</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>          result += <a class="code hl_variable" href="a00831.html#a9d7e600219f0ee2a9f913871d1ebb0b4">detail::_base64_chars</a>.at (</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>              (data_view[pos + 1] &amp; <a class="code hl_variable" href="a00830.html#ab7480306bde04a66afdd69fe09d2f6a8">Constants::kBase64MaskFourBits</a>) &lt;&lt; 2);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>          <span class="comment">// 2.1.3. Add padding</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>          result += <span class="charliteral">&#39;=&#39;</span>;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        {</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>          <span class="comment">// 2.2.1. Get the last 2 bits of the first byte and the first 4 bits</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>          <span class="comment">// of the second byte</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>          result += <a class="code hl_variable" href="a00831.html#a9d7e600219f0ee2a9f913871d1ebb0b4">detail::_base64_chars</a>.at (</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>              (data_view[pos] &amp; <a class="code hl_variable" href="a00830.html#af0ce58726d87dcd643dfaf781c2527a2">Constants::kBase64MaskTwoBits</a>) &lt;&lt; 4);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>          <span class="comment">// 2.2.2. Add double padding, because there is only one byte left</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>          result += <span class="stringliteral">&quot;==&quot;</span>;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        }</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <span class="comment">// 3. Return the result</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>}</div>
+</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>} <span class="comment">// namespace detail</span></div>
+</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>} <span class="comment">// namespace codec</span></div>
+</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>} <span class="comment">// namespace base64</span></div>
+</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>} <span class="comment">// namespace core</span></div>
+</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>} <span class="comment">// namespace lumex</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_CORE_BASE64_CODEC_HPP</span></div>
+<div class="ttc" id="aa00305_html"><div class="ttname"><a href="a00305.html">LumexAssert.hpp</a></div></div>
+<div class="ttc" id="aa00305_html_a5216865b2fc83a9979ea50b2172a1dfb"><div class="ttname"><a href="a00305.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a></div><div class="ttdeci">#define LUMEX_STATIC_ASSERT_MSG(...)</div><div class="ttdef"><b>Definition</b> LumexAssert.hpp:94</div></div>
+<div class="ttc" id="aa00338_html"><div class="ttname"><a href="a00338.html">LumexKeywords.hpp</a></div></div>
+<div class="ttc" id="aa00338_html_a1513006a1992e7dc9cc43b2e081cc33f"><div class="ttname"><a href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a></div><div class="ttdeci">#define LUMEX_CONSTEXPR</div><div class="ttdef"><b>Definition</b> LumexKeywords.hpp:141</div></div>
+<div class="ttc" id="aa00338_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition</b> LumexKeywords.hpp:69</div></div>
+<div class="ttc" id="aa00359_html"><div class="ttname"><a href="a00359.html">LumexTypeTraits.hpp</a></div><div class="ttdoc">Every general-purpose type trait of LumexLib, one sub-namespace of lumex::core::utility::traits per t...</div></div>
+<div class="ttc" id="aa00774_html"><div class="ttname"><a href="a00774.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition</b> LumexCPUVectorizationCapabilities.cpp:27</div></div>
+<div class="ttc" id="aa00826_html"><div class="ttname"><a href="a00826.html">lumex::core</a></div><div class="ttdef"><b>Definition</b> Base64.hpp:80</div></div>
+<div class="ttc" id="aa00827_html"><div class="ttname"><a href="a00827.html">lumex::core::base64</a></div><div class="ttdoc">Provides Base64 decoding functionalities.</div><div class="ttdef"><b>Definition</b> Base64.hpp:82</div></div>
+<div class="ttc" id="aa00828_html"><div class="ttname"><a href="a00828.html">lumex::core::base64::codec</a></div><div class="ttdef"><b>Definition</b> Base64.hpp:84</div></div>
+<div class="ttc" id="aa00829_html"><div class="ttname"><a href="a00829.html">lumex::core::base64::codec::Types</a></div><div class="ttdef"><b>Definition</b> Base64.hpp:86</div></div>
+<div class="ttc" id="aa00829_html_a5e9a9660b44f2279e84d63cbdb62ffd1"><div class="ttname"><a href="a00829.html#a5e9a9660b44f2279e84d63cbdb62ffd1">lumex::core::base64::codec::Types::byte_type</a></div><div class="ttdeci">unsigned char byte_type</div><div class="ttdef"><b>Definition</b> Base64.hpp:87</div></div>
+<div class="ttc" id="aa00829_html_a9e501ac64840df01990141048151d584"><div class="ttname"><a href="a00829.html#a9e501ac64840df01990141048151d584">lumex::core::base64::codec::Types::string_type_t</a></div><div class="ttdeci">std::string const &amp; string_type_t</div><div class="ttdef"><b>Definition</b> Base64.hpp:92</div></div>
+<div class="ttc" id="aa00830_html"><div class="ttname"><a href="a00830.html">lumex::core::base64::codec::Constants</a></div><div class="ttdef"><b>Definition</b> Base64.hpp:97</div></div>
+<div class="ttc" id="aa00830_html_ab7480306bde04a66afdd69fe09d2f6a8"><div class="ttname"><a href="a00830.html#ab7480306bde04a66afdd69fe09d2f6a8">lumex::core::base64::codec::Constants::kBase64MaskFourBits</a></div><div class="ttdeci">LUMEX_CONSTEXPR Types::byte_type kBase64MaskFourBits</div><div class="ttdef"><b>Definition</b> Base64.hpp:103</div></div>
+<div class="ttc" id="aa00830_html_abd7b9936d1233d8017b8c798515b81da"><div class="ttname"><a href="a00830.html#abd7b9936d1233d8017b8c798515b81da">lumex::core::base64::codec::Constants::kBase64RightShiftSixBits</a></div><div class="ttdeci">LUMEX_CONSTEXPR Types::byte_type kBase64RightShiftSixBits</div><div class="ttdef"><b>Definition</b> Base64.hpp:107</div></div>
+<div class="ttc" id="aa00830_html_ad6f95b035510dec551a9c3eb4539cfe9"><div class="ttname"><a href="a00830.html#ad6f95b035510dec551a9c3eb4539cfe9">lumex::core::base64::codec::Constants::kBase64DecodeInvalidChar</a></div><div class="ttdeci">LUMEX_CONSTEXPR Types::byte_type kBase64DecodeInvalidChar</div><div class="ttdef"><b>Definition</b> Base64.hpp:99</div></div>
+<div class="ttc" id="aa00830_html_af075c8ac027ac5d651303f3c4ad468d7"><div class="ttname"><a href="a00830.html#af075c8ac027ac5d651303f3c4ad468d7">lumex::core::base64::codec::Constants::kBase64MaskSixBits</a></div><div class="ttdeci">LUMEX_CONSTEXPR Types::byte_type kBase64MaskSixBits</div><div class="ttdef"><b>Definition</b> Base64.hpp:101</div></div>
+<div class="ttc" id="aa00830_html_af0ce58726d87dcd643dfaf781c2527a2"><div class="ttname"><a href="a00830.html#af0ce58726d87dcd643dfaf781c2527a2">lumex::core::base64::codec::Constants::kBase64MaskTwoBits</a></div><div class="ttdeci">LUMEX_CONSTEXPR Types::byte_type kBase64MaskTwoBits</div><div class="ttdef"><b>Definition</b> Base64.hpp:105</div></div>
+<div class="ttc" id="aa00831_html"><div class="ttname"><a href="a00831.html">lumex::core::base64::codec::detail</a></div><div class="ttdef"><b>Definition</b> Base64.hpp:111</div></div>
+<div class="ttc" id="aa00831_html_a1532c566da2e92bae3b58e0ad551ef7e"><div class="ttname"><a href="a00831.html#a1532c566da2e92bae3b58e0ad551ef7e">lumex::core::base64::codec::detail::_decode_table</a></div><div class="ttdeci">std::array&lt; Types::byte_type, 256 &gt; const _decode_table</div><div class="ttdoc">Decode table - maps ASCII chars to base64 values.</div><div class="ttdef"><b>Definition</b> Base64.hpp:121</div></div>
+<div class="ttc" id="aa00831_html_a6e5d73c8550e0ccb9b380dd26557488d"><div class="ttname"><a href="a00831.html#a6e5d73c8550e0ccb9b380dd26557488d">lumex::core::base64::codec::detail::_is_base64_char_impl</a></div><div class="ttdeci">bool _is_base64_char_impl(Types::byte_type chr) LUMEX_NOEXCEPT</div><div class="ttdoc">Internal helper to check if a character is a valid Base64 alphabet character. This excludes the paddi...</div><div class="ttdef"><b>Definition</b> Base64.hpp:153</div></div>
+<div class="ttc" id="aa00831_html_a9d7e600219f0ee2a9f913871d1ebb0b4"><div class="ttname"><a href="a00831.html#a9d7e600219f0ee2a9f913871d1ebb0b4">lumex::core::base64::codec::detail::_base64_chars</a></div><div class="ttdeci">std::array&lt; char, 64 &gt; const _base64_chars</div><div class="ttdoc">Base64 alphabet.</div><div class="ttdef"><b>Definition</b> Base64.hpp:114</div></div>
+<div class="ttc" id="aa00831_html_abda97488987b0b151816d6cc1ee24873"><div class="ttname"><a href="a00831.html#abda97488987b0b151816d6cc1ee24873">lumex::core::base64::codec::detail::_encode_impl</a></div><div class="ttdeci">std::string _encode_impl(T const &amp;data_view)</div><div class="ttdoc">Internal helper to encode binary data into a Base64 string from a view-like type.</div><div class="ttdef"><b>Definition</b> Base64.hpp:171</div></div>
+<div class="ttc" id="aa02396_html"><div class="ttname"><a href="a02396.html">lumex::core::utility::traits::range::has_convertible_size</a></div><div class="ttdoc">std::declval&lt;T&gt;().size() exists and converts to std::size_t.</div><div class="ttdef"><b>Definition</b> LumexTypeTraits.hpp:713</div></div>
+<div class="ttc" id="aa02404_html"><div class="ttname"><a href="a02404.html">lumex::core::utility::traits::range::has_convertible_indexed_access</a></div><div class="ttdoc">std::declval&lt;T&gt;()[std::size_t] exists and its result converts to To (for example a byte type for a by...</div><div class="ttdef"><b>Definition</b> LumexTypeTraits.hpp:729</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_f9986bae22981771d5201cdad569a73d.html">expected</a></li><li class="navelem"><a class="el" href="a00128.html">Unexpected.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_fcc11d9d4489756bebee156e5831453f.html">base64</a></li><li class="navelem"><a class="el" href="dir_46df5ba7a2bc10e3a9a8fb070faa3aa8.html">codec</a></li><li class="navelem"><a class="el" href="a00128.html">Base64.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

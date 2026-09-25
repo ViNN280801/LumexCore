@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tree_3a_3axmltreewalker_0',['XmlTreeWalker',['../a00992.html#aefd5acb199fb07859f8e487578233ace',1,'Lumex::Xml::Node::XmlNode']]]
+  ['tree_3a_3axmltreewalker_0',['XmlTreeWalker',['../a02584.html#a7442b0bb008d73c271f0903901e0288a',1,'lumex::xml::node::XmlNode']]]
 ];

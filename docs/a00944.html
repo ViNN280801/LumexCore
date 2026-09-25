@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Utility::TypeTraits::has_type&lt; T, typename &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::xml::document Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -103,40 +103,90 @@ $(function(){initNavTree('a00944.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Lumex::Utility::TypeTraits::has_type&lt; T, typename &gt; Struct Template Reference</div></div>
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">lumex::xml::document Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02568.html">XmlDocument</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XML document, providing methods for loading, saving, and manipulating XML data.  <a href="a02568.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02572.html">XmlDocumentBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base structure representing an XML document, combining node and allocator functionalities.  <a href="a02572.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac1d27dbbf1791fa0a099ce0ab7c66df6" id="r_ac1d27dbbf1791fa0a099ce0ab7c66df6"><td class="memTemplParams" colspan="2">template&lt;typename Object&gt; </td></tr>
+<tr class="memitem:ac1d27dbbf1791fa0a099ce0ab7c66df6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="el" href="a02572.html">XmlDocumentBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac1d27dbbf1791fa0a099ce0ab7c66df6">get_document</a> (Object const *object)</td></tr>
+<tr class="memdesc:ac1d27dbbf1791fa0a099ce0ab7c66df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a reference to the <code><a class="el" href="a02572.html" title="Base structure representing an XML document, combining node and allocator functionalities.">XmlDocumentBase</a></code> object that owns a given object (node or attribute).  <br /></td></tr>
+<tr class="separator:ac1d27dbbf1791fa0a099ce0ab7c66df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ac1d27dbbf1791fa0a099ce0ab7c66df6" name="ac1d27dbbf1791fa0a099ce0ab7c66df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d27dbbf1791fa0a099ce0ab7c66df6">&#9670;&#160;</a></span>get_document()</h2>
 
-<p><code>#include &lt;<a class="el" href="a00206_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Object&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="el" href="a02572.html">XmlDocumentBase</a> &amp; lumex::xml::document::get_document </td>
+          <td>(</td>
+          <td class="paramtype">Object const *</td>          <td class="paramname"><span class="paramname"><em>object</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a reference to the <code><a class="el" href="a02572.html" title="Base structure representing an XML document, combining node and allocator functionalities.">XmlDocumentBase</a></code> object that owns a given object (node or attribute). </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Object</td><td>The type of the object (e.g., <code><a class="el" href="a02600.html" title="Base structure representing an XML node in the document tree.">XmlNodeBase</a></code>, <code><a class="el" href="a02560.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">object</td><td>A pointer to the object whose owning document is to be retrieved. Must not be <code>nullptr</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the <code><a class="el" href="a02572.html" title="Base structure representing an XML document, combining node and allocator functionalities.">XmlDocumentBase</a></code> that manages the memory for <code>object</code>.</dd></dl>
+<p>This function works by accessing the <code><a class="el" href="a02580.html" title="Represents a single fixed-size memory page used by the XmlAllocator.">XmlMemoryPage</a></code> associated with <code>object</code> and then retrieving the allocator (which is the <code><a class="el" href="a02572.html" title="Base structure representing an XML document, combining node and allocator functionalities.">XmlDocumentBase</a></code> itself) from that page. </p><dl class="section note"><dt>Note</dt><dd>This is an internal utility function, primarily used for memory management and ownership checks. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">`LUMEX_ASSERT`</td><td>if <code>object</code> is <code>nullptr</code> (debug builds only). </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
-Inheritance diagram for Lumex::Utility::TypeTraits::has_type&lt; T, typename &gt;:</div>
+Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00943.png" border="0" usemap="#a_lumex_1_1_utility_1_1_type_traits_1_1has__type_3_01_t_00_01typename_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_lumex_1_1_utility_1_1_type_traits_1_1has__type_3_01_t_00_01typename_01_4_inherit__map" id="a_lumex_1_1_utility_1_1_type_traits_1_1has__type_3_01_t_00_01typename_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,183,123"/>
-<area shape="rect" title=" " alt="" coords="40,5,148,32"/>
-<area shape="poly" title=" " alt="" coords="97,48,97,80,91,80,91,48"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Lumex::Utility::TypeTraits::has_type&lt; T, typename &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00942.png" border="0" usemap="#a_lumex_1_1_utility_1_1_type_traits_1_1has__type_3_01_t_00_01typename_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="a_lumex_1_1_utility_1_1_type_traits_1_1has__type_3_01_t_00_01typename_01_4_coll__map" id="a_lumex_1_1_utility_1_1_type_traits_1_1has__type_3_01_t_00_01typename_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,183,123"/>
-<area shape="rect" title=" " alt="" coords="40,5,148,32"/>
-<area shape="poly" title=" " alt="" coords="97,48,97,80,91,80,91,48"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00206_source.html">LumexTypeTraits.hpp</a></li>
-</ul>
+<div class="center"><img src="a00944_ac1d27dbbf1791fa0a099ce0ab7c66df6_icgraph.png" border="0" usemap="#aa00944_ac1d27dbbf1791fa0a099ce0ab7c66df6_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00483.html">Utility</a></li><li class="navelem"><a class="el" href="a00486.html">TypeTraits</a></li><li class="navelem"><a class="el" href="a00944.html">has_type</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00937.html">xml</a></li><li class="navelem"><a class="el" href="a00944.html">document</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

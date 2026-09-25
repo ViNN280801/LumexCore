@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Core::Filesystem::SpaceInfo Class Reference</title>
+<title>LumexLib: XPathUtils.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,90 +104,47 @@ $(function(){initNavTree('a00752.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a00749.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Core::Filesystem::SpaceInfo Class Reference</div></div>
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">XPathUtils.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Space information for a filesystem.  
- <a href="#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00134_source.html">LumexFilesystem.hpp</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a500415c32df3622edfe2bed5575310cb" id="r_a500415c32df3622edfe2bed5575310cb"><td class="memItemLeft" align="right" valign="top">std::uintmax_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a500415c32df3622edfe2bed5575310cb">capacity</a> {}</td></tr>
-<tr class="memdesc:a500415c32df3622edfe2bed5575310cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total capacity of the filesystem in bytes.  <br /></td></tr>
-<tr class="separator:a500415c32df3622edfe2bed5575310cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e2909af1fb675f5a43557c57c382d75" id="r_a4e2909af1fb675f5a43557c57c382d75"><td class="memItemLeft" align="right" valign="top">std::uintmax_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e2909af1fb675f5a43557c57c382d75">free</a> {}</td></tr>
-<tr class="memdesc:a4e2909af1fb675f5a43557c57c382d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total free space on the filesystem in bytes.  <br /></td></tr>
-<tr class="separator:a4e2909af1fb675f5a43557c57c382d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2b465a99d70f9702aee04d8b01bd476" id="r_ab2b465a99d70f9702aee04d8b01bd476"><td class="memItemLeft" align="right" valign="top">std::uintmax_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2b465a99d70f9702aee04d8b01bd476">available</a> {}</td></tr>
-<tr class="memdesc:ab2b465a99d70f9702aee04d8b01bd476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available free space for unprivileged users in bytes.  <br /></td></tr>
-<tr class="separator:ab2b465a99d70f9702aee04d8b01bd476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00305_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00683_source.html">lumex/xml/xpath/document/XPathDocumentOrderComparator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00761_source.html">lumex/xml/xpath/variable/XPathVariable.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00755_source.html">XPathUtils.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for XPathUtils.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00753.png" border="0" usemap="#a_x_path_utils_8cpp" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a07486181f1990291c2a348de8eb4c480" id="r_a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
+<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Space information for a filesystem. </p>
-<p>This class provides details about the disk space, including total capacity, free space, and available space. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="ab2b465a99d70f9702aee04d8b01bd476" name="ab2b465a99d70f9702aee04d8b01bd476"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2b465a99d70f9702aee04d8b01bd476">&#9670;&#160;</a></span>available</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a07486181f1990291c2a348de8eb4c480" name="a07486181f1990291c2a348de8eb4c480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&#160;</a></span>LUMEX_IMPLEMENTATION</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::uintmax_t Lumex::Core::Filesystem::SpaceInfo::available {}</td>
+          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Available free space for unprivileged users in bytes. </p>
-
 </div>
 </div>
-<a id="a500415c32df3622edfe2bed5575310cb" name="a500415c32df3622edfe2bed5575310cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a500415c32df3622edfe2bed5575310cb">&#9670;&#160;</a></span>capacity</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::uintmax_t Lumex::Core::Filesystem::SpaceInfo::capacity {}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Total capacity of the filesystem in bytes. </p>
-
-</div>
-</div>
-<a id="a4e2909af1fb675f5a43557c57c382d75" name="a4e2909af1fb675f5a43557c57c382d75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e2909af1fb675f5a43557c57c382d75">&#9670;&#160;</a></span>free</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::uintmax_t Lumex::Core::Filesystem::SpaceInfo::free {}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Total free space on the filesystem in bytes. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00134_source.html">LumexFilesystem.hpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00455.html">Core</a></li><li class="navelem"><a class="el" href="a00470.html">Filesystem</a></li><li class="navelem"><a class="el" href="a00752.html">SpaceInfo</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_e14a662551c0edfc65d2ea9dddaf4ad0.html">xml</a></li><li class="navelem"><a class="el" href="dir_c65643557bcea8ae61e1958ac89db781.html">xpath</a></li><li class="navelem"><a class="el" href="dir_7e22c5ad34bf709b720a213843195aaa.html">utility</a></li><li class="navelem"><a class="el" href="a00752.html">XPathUtils.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

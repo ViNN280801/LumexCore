@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['xpath_5ftype_5fboolean_0',['xpath_type_boolean',['../a00503.html#ad950a60fd946531aaffa5768dd7f2a5ca8703efce7f4f8de1beddba22ba6f24a2',1,'Lumex::Xml::Types']]],
-  ['xpath_5ftype_5fnode_5fset_1',['xpath_type_node_set',['../a00503.html#ad950a60fd946531aaffa5768dd7f2a5ca16178287e5b6f8f976a57fde807e7b2c',1,'Lumex::Xml::Types']]],
-  ['xpath_5ftype_5fnone_2',['xpath_type_none',['../a00503.html#ad950a60fd946531aaffa5768dd7f2a5ca20bd85fa03bcea9a72c8eb40108a640a',1,'Lumex::Xml::Types']]],
-  ['xpath_5ftype_5fnumber_3',['xpath_type_number',['../a00503.html#ad950a60fd946531aaffa5768dd7f2a5ca5600a0861a3c6caee993c8c6fc333acd',1,'Lumex::Xml::Types']]],
-  ['xpath_5ftype_5fstring_4',['xpath_type_string',['../a00503.html#ad950a60fd946531aaffa5768dd7f2a5ca550a61d064c24ab62ebcc9af150cae84',1,'Lumex::Xml::Types']]]
+  ['value_0',['value',['../a02652.html#a3f1bebe388067ee6376c68ef8e0ea8cfae66d773fd3aa4c8b526657ef42708add',1,'lumex::xml::utility::opt_false::value'],['../a02656.html#a36aeb1809576c32f7019935c0ae2a579acafb1df299968e7fb2195b2dbe88c598',1,'lumex::xml::utility::opt_true::value']]]
 ];

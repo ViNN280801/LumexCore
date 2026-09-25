@@ -1,9 +1,8 @@
 var a00164 =
 [
-    [ "Lumex::Core::Temporary::TemporaryDirectory", "a00828.html", "a00828" ],
-    [ "Lumex::Core::Temporary::TemporaryFile", "a00832.html", "a00832" ],
-    [ "Lumex::Core::Temporary::LumexTemporary", "a00836.html", "a00836" ],
-    [ "LumexTemporary", "a00164.html#a66ede0a005e814d41501d61eb9566f97", null ],
-    [ "TemporaryDirectory", "a00164.html#a9fd0872e5f6e30a7d9282345742d1ae9", null ],
-    [ "TemporaryFile", "a00164.html#a78e01d31aa2cdceba5e743959ee5de15", null ]
+    [ "lumex::core::environment::env::LumexEnvironment", "a01596.html", "a01596" ],
+    [ "lumex::core::environment::env::LumexEnvironment::EnvResult", "a01600.html", "a01600" ],
+    [ "LumexEnvironment", "a00164.html#a6421e7685cc78f63f88346b58e913910", null ],
+    [ "lumex::core::environment::env::is_env_set", "a00843.html#a124e7b18c6f898bd1efe69c2361162af", null ],
+    [ "lumex::core::environment::env::is_env_truthy", "a00843.html#adb018b9e44e87a495596b9fba8268244", null ]
 ];

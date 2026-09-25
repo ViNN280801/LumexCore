@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['type_5ft_0',['type_t',['../a01220.html#af2eadd19d1082c6cf507478bde5cb1b8',1,'Lumex::Xml::XPath::Node::XPathNodeSet']]]
+  ['transportcrcmode_0',['TransportCrcMode',['../a00838.html#a550c04492ccdbe76b3c82f02ac7c3dc0',1,'lumex::core::crc::catalog']]],
+  ['type_5ft_1',['type_t',['../a02812.html#adb8cd64c821b92dc30490b083e5e686c',1,'lumex::xml::xpath::node::XPathNodeSet']]]
 ];

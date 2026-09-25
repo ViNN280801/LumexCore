@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexWStringView.cpp File Reference</title>
+<title>LumexLib: LumexCrcCatalog.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,110 +104,112 @@ $(function(){initNavTree('a00155.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">LumexWStringView.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">LumexCrcCatalog.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00158_source.html">LumexWStringView.hpp</a>&quot;</code><br />
-<code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;stdexcept&gt;</code><br />
+<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00548_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00308_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00332_source.html">lumex/core/utility/macros/LumexConstantMacros.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexWStringView.cpp:</div>
+Include dependency graph for LumexCrcCatalog.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00156.png" border="0" usemap="#a_lumex_w_string_view_8cpp" alt=""/></div>
-<map name="a_lumex_w_string_view_8cpp" id="a_lumex_w_string_view_8cpp">
-<area shape="rect" title=" " alt="" coords="360,5,520,32"/>
-<area shape="rect" href="a00158.html" title="C++11 lightweight, non&#45;owning view over contiguous wide character sequences." alt="" coords="219,80,379,107"/>
-<area shape="poly" title=" " alt="" coords="417,35,338,75,336,70,414,30"/>
-<area shape="rect" title=" " alt="" coords="403,80,477,107"/>
-<area shape="poly" title=" " alt="" coords="443,33,443,64,438,64,438,33"/>
-<area shape="rect" title=" " alt="" coords="501,80,579,107"/>
-<area shape="poly" title=" " alt="" coords="459,30,512,68,509,73,456,35"/>
-<area shape="rect" title=" " alt="" coords="5,163,70,189"/>
-<area shape="poly" title=" " alt="" coords="245,110,167,130,82,157,78,159,76,154,81,152,166,125,243,105"/>
-<area shape="rect" title=" " alt="" coords="94,163,154,189"/>
-<area shape="poly" title=" " alt="" coords="272,110,168,157,165,158,163,153,166,152,270,105"/>
-<area shape="rect" title=" " alt="" coords="179,163,240,189"/>
-<area shape="poly" title=" " alt="" coords="287,109,236,154,233,150,283,105"/>
-<area shape="rect" title=" " alt="" coords="265,163,333,189"/>
-<area shape="poly" title=" " alt="" coords="302,107,302,147,296,147,296,107"/>
-<area shape="rect" title=" " alt="" coords="358,163,411,189"/>
-<area shape="poly" title=" " alt="" coords="314,105,362,150,358,154,310,109"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="435,163,597,189"/>
-<area shape="poly" title=" " alt="" coords="334,105,469,154,467,159,332,110"/>
-<area shape="rect" title=" " alt="" coords="621,155,742,197"/>
-<area shape="poly" title=" " alt="" coords="374,105,607,151,606,157,373,110"/>
-</map>
+<div class="center"><img src="a00156.png" border="0" usemap="#a_lumex_crc_catalog_8hpp" alt=""/></div>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a07486181f1990291c2a348de8eb4c480" id="r_a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
-<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00157.png" border="0" usemap="#a_lumex_crc_catalog_8hppdep" alt=""/></div>
+</div>
+</div>
+<p><a href="a00155_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01120.html">lumex::core::crc::catalog::crc_params_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC parameters in CRC RevEng notation (see <a class="el" href="a00158.html">LumexCrcParametric.hpp</a> / Greg Cook catalogue).  <a href="a01120.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00826.html">lumex::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00837.html">lumex::core::crc</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html">lumex::core::crc::catalog</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a550c04492ccdbe76b3c82f02ac7c3dc0" id="r_a550c04492ccdbe76b3c82f02ac7c3dc0"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a550c04492ccdbe76b3c82f02ac7c3dc0">lumex::core::crc::catalog::TransportCrcMode</a> : std::uint8_t { <a class="el" href="a00838.html#a550c04492ccdbe76b3c82f02ac7c3dc0a7a1920d61156abc05a60135aefe8bc67">lumex::core::crc::catalog::Default</a> = 0
+, <a class="el" href="a00838.html#a550c04492ccdbe76b3c82f02ac7c3dc0ac32516babc5b6c47eb8ce1bfc223253c">lumex::core::crc::catalog::Catalog</a> = 1
+, <a class="el" href="a00838.html#a550c04492ccdbe76b3c82f02ac7c3dc0a90589c47f06eb971d548591f23c285af">lumex::core::crc::catalog::Custom</a> = 2
+ }</td></tr>
+<tr class="memdesc:a550c04492ccdbe76b3c82f02ac7c3dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process-global 8-bit transport checksum mode (one byte per frame).  <a href="a00838.html#a550c04492ccdbe76b3c82f02ac7c3dc0">More...</a><br /></td></tr>
+<tr class="separator:a550c04492ccdbe76b3c82f02ac7c3dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac5d76e9777fbe508c2f887b3eb0e85d9" id="r_ac5d76e9777fbe508c2f887b3eb0e85d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::wostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5d76e9777fbe508c2f887b3eb0e85d9">operator&lt;&lt;</a> (std::wostream &amp;wostr, <a class="el" href="a00158.html#af42bb1fb234d5002dd760e5474c0da7b">LumexWStringView</a> wsview)</td></tr>
-<tr class="separator:ac5d76e9777fbe508c2f887b3eb0e85d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6fbf44fafd1232c7b412e9997238e7" id="r_a6a6fbf44fafd1232c7b412e9997238e7"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a6a6fbf44fafd1232c7b412e9997238e7">lumex::core::crc::catalog::CrcCatalogLegacyIndex</a> () <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="separator:a6a6fbf44fafd1232c7b412e9997238e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a24668726e509d5db41a0ea21d135fb" id="r_a4a24668726e509d5db41a0ea21d135fb"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a4a24668726e509d5db41a0ea21d135fb">lumex::core::crc::catalog::CrcTransportUsesCustomSpecSentinel</a> () <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a4a24668726e509d5db41a0ea21d135fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of <a class="el" href="a00838.html#a96b04b4ec3f9a7e87d9abb1eee6f4a95">GetTransportCrcCatalogIndex</a> when the mode is <code>Custom</code>.  <br /></td></tr>
+<tr class="separator:a4a24668726e509d5db41a0ea21d135fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a536a7a107a3a0c2ea882cb388d2890bf" id="r_a536a7a107a3a0c2ea882cb388d2890bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a536a7a107a3a0c2ea882cb388d2890bf">lumex::core::crc::catalog::ValidateCrcRevEngParams</a> (<a class="el" href="a01120.html">crc_params_t</a> const &amp;params) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a536a7a107a3a0c2ea882cb388d2890bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates parameters before computation (width 1..64).  <br /></td></tr>
+<tr class="separator:a536a7a107a3a0c2ea882cb388d2890bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47c5bdb9dfe144b1a67d448cfe49cd5" id="r_ac47c5bdb9dfe144b1a67d448cfe49cd5"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#ac47c5bdb9dfe144b1a67d448cfe49cd5">lumex::core::crc::catalog::ComputeCrcWithRevEngParams</a> (<a class="el" href="a01120.html">crc_params_t</a> const &amp;params, std::uint8_t const *data, std::size_t byteCount) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:ac47c5bdb9dfe144b1a67d448cfe49cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a CRC from explicit RevEng parameters (bit engine, width 1..64).  <br /></td></tr>
+<tr class="separator:ac47c5bdb9dfe144b1a67d448cfe49cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5a4a809e309723e68d1d13e0f8ebb6" id="r_a4c5a4a809e309723e68d1d13e0f8ebb6"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a4c5a4a809e309723e68d1d13e0f8ebb6">lumex::core::crc::catalog::ComputeCrcCatalog</a> (std::uint32_t catalogIndex, std::uint8_t const *data, std::size_t byteCount) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a4c5a4a809e309723e68d1d13e0f8ebb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC for catalogue index <code><a class="el" href="a00840.html#ab5b7b2701d5366bb0389b8e944d65c13" title="Every RevEng catalogue specification of width 3..64 (112 entries). Order is the runtime catalogue ind...">all_crc_specs_t</a></code> (0 ... <a class="el" href="a00838.html#a587fd5795ab660d7755e2378e3df7270">GetCrcCatalogEntryCount</a> - 1).  <br /></td></tr>
+<tr class="separator:a4c5a4a809e309723e68d1d13e0f8ebb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587fd5795ab660d7755e2378e3df7270" id="r_a587fd5795ab660d7755e2378e3df7270"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a587fd5795ab660d7755e2378e3df7270">lumex::core::crc::catalog::GetCrcCatalogEntryCount</a> () <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a587fd5795ab660d7755e2378e3df7270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of catalogue algorithms (order matches <code><a class="el" href="a00840.html#ab5b7b2701d5366bb0389b8e944d65c13" title="Every RevEng catalogue specification of width 3..64 (112 entries). Order is the runtime catalogue ind...">all_crc_specs_t</a></code>).  <br /></td></tr>
+<tr class="separator:a587fd5795ab660d7755e2378e3df7270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabeacbf71d4bd9d8da91ba25668f11f9" id="r_aabeacbf71d4bd9d8da91ba25668f11f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#aabeacbf71d4bd9d8da91ba25668f11f9">lumex::core::crc::catalog::GetCrcCatalogBitWidth</a> (std::uint32_t catalogIndex) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:aabeacbf71d4bd9d8da91ba25668f11f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Catalogue entry width in bits; -1 on error.  <br /></td></tr>
+<tr class="separator:aabeacbf71d4bd9d8da91ba25668f11f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267be9f38c0450188a1abb661528ed30" id="r_a267be9f38c0450188a1abb661528ed30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a267be9f38c0450188a1abb661528ed30">lumex::core::crc::catalog::SetTransportCrcDefault</a> () <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a267be9f38c0450188a1abb661528ed30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore the default CRC-8/MAXIM-DOW transport mode.  <br /></td></tr>
+<tr class="separator:a267be9f38c0450188a1abb661528ed30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19fb73820d64096cfbfa4e3f04f24bb5" id="r_a19fb73820d64096cfbfa4e3f04f24bb5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a19fb73820d64096cfbfa4e3f04f24bb5">lumex::core::crc::catalog::SetTransportCrcCatalogIndex</a> (std::uint32_t catalogIndex) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a19fb73820d64096cfbfa4e3f04f24bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transport: 8-bit catalogue entry by index.  <br /></td></tr>
+<tr class="separator:a19fb73820d64096cfbfa4e3f04f24bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abade803b2de1508ef0074f0347c32d85" id="r_abade803b2de1508ef0074f0347c32d85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#abade803b2de1508ef0074f0347c32d85">lumex::core::crc::catalog::SetTransportCrcRevEngParams</a> (<a class="el" href="a01120.html">crc_params_t</a> const &amp;params) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:abade803b2de1508ef0074f0347c32d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transport: caller-defined 8-bit CRC (must match the peer).  <br /></td></tr>
+<tr class="separator:abade803b2de1508ef0074f0347c32d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95649628e523b6cb885d5f409e9515cf" id="r_a95649628e523b6cb885d5f409e9515cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a95649628e523b6cb885d5f409e9515cf">lumex::core::crc::catalog::LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;Caller may need transport CRC mode for logging or tests.&quot;) <a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00838.html#a550c04492ccdbe76b3c82f02ac7c3dc0">TransportCrcMode</a> <a class="el" href="a00838.html#ac80c292782f59577a2c9c2d9b596c15d">GetTransportCrcMode</a>() <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="separator:a95649628e523b6cb885d5f409e9515cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b04b4ec3f9a7e87d9abb1eee6f4a95" id="r_a96b04b4ec3f9a7e87d9abb1eee6f4a95"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a96b04b4ec3f9a7e87d9abb1eee6f4a95">lumex::core::crc::catalog::GetTransportCrcCatalogIndex</a> () <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a96b04b4ec3f9a7e87d9abb1eee6f4a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Catalogue index in <code>Catalog</code> mode; otherwise <a class="el" href="a00838.html#a6a6fbf44fafd1232c7b412e9997238e7">CrcCatalogLegacyIndex</a> or <a class="el" href="a00838.html#a4a24668726e509d5db41a0ea21d135fb">CrcTransportUsesCustomSpecSentinel</a>.  <br /></td></tr>
+<tr class="separator:a96b04b4ec3f9a7e87d9abb1eee6f4a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5d79d41b6f44e17d6f6b11e13fe2e9" id="r_a6e5d79d41b6f44e17d6f6b11e13fe2e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a6e5d79d41b6f44e17d6f6b11e13fe2e9">lumex::core::crc::catalog::TryGetTransportCrcRevEngParams</a> (<a class="el" href="a01120.html">crc_params_t</a> &amp;out) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a6e5d79d41b6f44e17d6f6b11e13fe2e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes <code class="param">out</code> in <code>Custom</code> mode; otherwise leaves <code class="param">out</code> unchanged.  <br /></td></tr>
+<tr class="separator:a6e5d79d41b6f44e17d6f6b11e13fe2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa910610fd76c17e044fe0cbeac2094" id="r_a7aa910610fd76c17e044fe0cbeac2094"><td class="memItemLeft" align="right" valign="top">std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a7aa910610fd76c17e044fe0cbeac2094">lumex::core::crc::catalog::ComputeTransportChecksum</a> (std::uint8_t const *data, std::size_t byteCount) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a7aa910610fd76c17e044fe0cbeac2094"><td class="mdescLeft">&#160;</td><td class="mdescRight">8-bit transport checksum for the current process-global mode.  <br /></td></tr>
+<tr class="separator:a7aa910610fd76c17e044fe0cbeac2094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b05e5337533d3b2eea1395b4c2f23ab" id="r_a6b05e5337533d3b2eea1395b4c2f23ab"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00838.html#a6b05e5337533d3b2eea1395b4c2f23ab">lumex::core::crc::catalog::ComputeCrcCatalog</a> (std::uint32_t catalogIndex, std::vector&lt; std::uint8_t &gt; const &amp;bytes) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a6b05e5337533d3b2eea1395b4c2f23ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Catalogue CRC of a byte vector. Available from C++11 so C++14 examples and tests can pass <code>std::vector</code> without a pointer+size pair. Empty vector is the same as a zero-length buffer.  <br /></td></tr>
+<tr class="separator:a6b05e5337533d3b2eea1395b4c2f23ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a07486181f1990291c2a348de8eb4c480" name="a07486181f1990291c2a348de8eb4c480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&#160;</a></span>LUMEX_IMPLEMENTATION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ac5d76e9777fbe508c2f887b3eb0e85d9" name="ac5d76e9777fbe508c2f887b3eb0e85d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5d76e9777fbe508c2f887b3eb0e85d9">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::wostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::wostream &amp;</td>          <td class="paramname"><span class="paramname"><em>wostr</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00158.html#af42bb1fb234d5002dd760e5474c0da7b">LumexWStringView</a></td>          <td class="paramname"><span class="paramname"><em>wsview</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00155_ac5d76e9777fbe508c2f887b3eb0e85d9_cgraph.png" border="0" usemap="#aa00155_ac5d76e9777fbe508c2f887b3eb0e85d9_cgraph" alt=""/></div>
-<map name="aa00155_ac5d76e9777fbe508c2f887b3eb0e85d9_cgraph" id="aa00155_ac5d76e9777fbe508c2f887b3eb0e85d9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,83,90,109"/>
-<area shape="rect" href="a00824.html#a4da572ed644a342ae1ee32422aa5d203" title="Returns a pointer to the beginning of the wide character data." alt="" coords="138,29,315,72"/>
-<area shape="poly" title=" " alt="" coords="89,83,124,74,126,79,91,88"/>
-<area shape="rect" href="a00824.html#a7b0fcc2dec23a2e580eb87adb299dcc0" title="Returns the number of wide characters in the view." alt="" coords="138,120,314,163"/>
-<area shape="poly" title=" " alt="" coords="91,104,126,113,124,118,89,109"/>
-<area shape="poly" title=" " alt="" coords="192,29,190,19,196,10,208,5,226,3,246,5,257,11,255,16,244,10,226,8,210,10,200,14,196,21,197,28"/>
-<area shape="poly" title=" " alt="" coords="192,120,190,110,196,101,208,95,226,93,246,96,257,102,255,107,244,101,226,99,210,101,200,105,196,111,197,119"/>
-</map>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_c3e912f02bd96a1ef83a1ff1d1367fc2.html">string_view</a></li><li class="navelem"><a class="el" href="a00155.html">LumexWStringView.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_f99b6ea4c1e48700886262ea1f8bb451.html">crc</a></li><li class="navelem"><a class="el" href="dir_c19a030623f05e03f58b9711e1b1e7d2.html">catalog</a></li><li class="navelem"><a class="el" href="a00155.html">LumexCrcCatalog.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

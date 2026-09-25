@@ -1,4 +1,4 @@
 var a00059 =
 [
-    [ "Lumex::Core::Base64::Encoder", "a00608.html", "a00608" ]
+    [ "LUMEX_IMPLEMENTATION", "a00059.html#a07486181f1990291c2a348de8eb4c480", null ]
 ];

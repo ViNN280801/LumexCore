@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::Utility::opt_false Struct Reference</title>
+<title>LumexLib: lumex::applied::settings::factory::LumexSettingsFactory Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,47 +104,88 @@ $(function(){initNavTree('a01060.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a01057.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::Utility::opt_false Struct Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::applied::settings::factory::LumexSettingsFactory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00308_source.html">XmlUtils.hpp</a>&gt;</code></p>
+<p>Factory class for creating <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instances.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00095_source.html">LumexSettingsFactory.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a7f1fa59ca84909f56b4c9d3709ff8680" id="r_a7f1fa59ca84909f56b4c9d3709ff8680"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: std::uint8_t { <a class="el" href="#a7f1fa59ca84909f56b4c9d3709ff8680ad40016f8a34e637435145c86b3e83ef8">value</a> = 0
- }</td></tr>
-<tr class="separator:a7f1fa59ca84909f56b4c9d3709ff8680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:addb03776b27a0a5e39ef1e956699eded" id="r_addb03776b27a0a5e39ef1e956699eded"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="a01076.html">ILumexSettings</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addb03776b27a0a5e39ef1e956699eded">create</a> (<a class="el" href="a00819.html#a1af005d4f6d6cbc1fe9b8ac0dd312222">LumexSettingsExtensions</a> ext)</td></tr>
+<tr class="memdesc:addb03776b27a0a5e39ef1e956699eded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a settings object for the specified file format.  <br /></td></tr>
+<tr class="separator:addb03776b27a0a5e39ef1e956699eded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a7f1fa59ca84909f56b4c9d3709ff8680" name="a7f1fa59ca84909f56b4c9d3709ff8680"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f1fa59ca84909f56b4c9d3709ff8680">&#9670;&#160;</a></span>anonymous enum</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Factory class for creating <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instances. </p>
+<p>Provides a static method to instantiate settings objects based on the desired configuration file format (INI, XML when <code>LUMEX_SETTINGS_WITH_XML</code> is defined, JSON when <code>LUMEX_SETTINGS_WITH_JSON</code> is defined). </p><dl class="section note"><dt>Note</dt><dd>Thread-safe: The factory method is stateless and can be called concurrently. </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="addb03776b27a0a5e39ef1e956699eded" name="addb03776b27a0a5e39ef1e956699eded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb03776b27a0a5e39ef1e956699eded">&#9670;&#160;</a></span>create()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">anonymous enum : std::uint8_t</td>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::unique_ptr&lt; <a class="el" href="a01076.html">ILumexSettings</a> &gt; lumex::applied::settings::factory::LumexSettingsFactory::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00819.html#a1af005d4f6d6cbc1fe9b8ac0dd312222">LumexSettingsExtensions</a></td>          <td class="paramname"><span class="paramname"><em>ext</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7f1fa59ca84909f56b4c9d3709ff8680ad40016f8a34e637435145c86b3e83ef8" name="a7f1fa59ca84909f56b4c9d3709ff8680ad40016f8a34e637435145c86b3e83ef8"></a>value&#160;</td><td class="fielddoc"></td></tr>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
 </table>
+</div><div class="memdoc">
+
+<p>Creates a settings object for the specified file format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ext</td><td>The configuration file format (e.g., <code>SupportedConfigExtensions::INI</code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code>std::unique_ptr</code> to the new <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instance. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>If the format is unsupported. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>The caller assumes ownership of the returned pointer, which means:<ul>
+<li>The caller is responsible for the lifetime of the returned object.</li>
+<li>The pointer must not be manually deleted! It is managed by <code>std::unique_ptr</code>.</li>
+<li>Ownership is non-shared, see <a href="https://en.cppreference.com/w/cpp/memory/unique_ptr">https://en.cppreference.com/w/cpp/memory/unique_ptr</a>. </li>
+</ul>
+</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01060_addb03776b27a0a5e39ef1e956699eded_icgraph.png" border="0" usemap="#aa01060_addb03776b27a0a5e39ef1e956699eded_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00308_source.html">XmlUtils.hpp</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00095_source.html">LumexSettingsFactory.hpp</a></li>
+<li><a class="el" href="a00092.html">LumexSettingsFactory.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00490.html">Utility</a></li><li class="navelem"><a class="el" href="a01060.html">opt_false</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00775.html">applied</a></li><li class="navelem"><a class="el" href="a00816.html">settings</a></li><li class="navelem"><a class="el" href="a00817.html">factory</a></li><li class="navelem"><a class="el" href="a01060.html">LumexSettingsFactory</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

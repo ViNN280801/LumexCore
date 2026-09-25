@@ -1,7 +1,7 @@
 var a01012 =
 [
-    [ "name_null_sentry", "a01012.html#af7afb277db5688bf17aa182a85e6a4c7", null ],
-    [ "~name_null_sentry", "a01012.html#a24364c1de7b1112384dcaa5391e9f996", null ],
-    [ "name", "a01012.html#a14425645eaafe5211a3f1a6cb259ba5e", null ],
-    [ "node", "a01012.html#a515766760a71ac405c34ee4871081c7f", null ]
+    [ "log_entry_t", "a01012.html#a32e5560dc8ed05812437a629b92deb04", null ],
+    [ "level", "a01012.html#aedce3417fed0732d6a765c39dab2b4d7", null ],
+    [ "message", "a01012.html#a728f5d7b7d8997eb17a025a7279ed91a", null ],
+    [ "timestamp", "a01012.html#a060e999accc52a8ed7857ac703469085", null ]
 ];

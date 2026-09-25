@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexTemporary.cpp File Reference</title>
+<title>LumexLib: LumexEnvironment.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -105,42 +105,17 @@ $(function(){initNavTree('a00161.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
-  <div class="headertitle"><div class="title">LumexTemporary.cpp File Reference</div></div>
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">LumexEnvironment.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00164_source.html">LumexTemporary.hpp</a>&quot;</code><br />
-<code>#include &lt;atomic&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;random&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cctype&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00164_source.html">LumexEnvironment.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexTemporary.cpp:</div>
+Include dependency graph for LumexEnvironment.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00162.png" border="0" usemap="#a_lumex_temporary_8cpp" alt=""/></div>
-<map name="a_lumex_temporary_8cpp" id="a_lumex_temporary_8cpp">
-<area shape="rect" title=" " alt="" coords="591,5,736,32"/>
-<area shape="rect" href="a00164.html" title=" " alt="" coords="378,80,523,107"/>
-<area shape="poly" title=" " alt="" coords="628,35,503,77,501,72,626,30"/>
-<area shape="rect" title=" " alt="" coords="547,80,607,107"/>
-<area shape="poly" title=" " alt="" coords="650,35,605,72,602,68,647,30"/>
-<area shape="rect" title=" " alt="" coords="631,80,696,107"/>
-<area shape="poly" title=" " alt="" coords="666,33,666,64,661,64,661,33"/>
-<area shape="rect" title=" " alt="" coords="721,80,785,107"/>
-<area shape="poly" title=" " alt="" coords="681,30,728,68,724,72,678,35"/>
-<area shape="rect" title=" " alt="" coords="810,80,878,107"/>
-<area shape="poly" title=" " alt="" coords="696,30,799,71,797,76,694,35"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="5,163,168,189"/>
-<area shape="poly" title=" " alt="" coords="394,110,159,161,158,156,393,105"/>
-<area shape="rect" title=" " alt="" coords="192,155,352,197"/>
-<area shape="poly" title=" " alt="" coords="424,110,333,150,331,145,421,105"/>
-<area shape="rect" title=" " alt="" coords="376,155,525,197"/>
-<area shape="poly" title=" " alt="" coords="453,107,453,139,448,139,448,107"/>
-<area shape="rect" title=" " alt="" coords="549,155,669,197"/>
-<area shape="poly" title=" " alt="" coords="476,105,556,145,554,150,474,110"/>
-<area shape="rect" title=" " alt="" coords="693,163,746,189"/>
-<area shape="poly" title=" " alt="" coords="515,105,596,124,682,152,685,153,683,158,680,157,594,129,514,110"/>
-</map>
+<div class="center"><img src="a00162.png" border="0" usemap="#a_lumex_environment_8cpp" alt=""/></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -148,10 +123,12 @@ Macros</h2></td></tr>
 <tr class="memitem:a07486181f1990291c2a348de8eb4c480" id="r_a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
 <tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a591aa2b28a4c6130a23034fe12095624" id="r_a591aa2b28a4c6130a23034fe12095624"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a591aa2b28a4c6130a23034fe12095624">LumexFilesystem</a> = <a class="el" href="a00435.html#a423410512bd3cf65fb864732b956bf96">Lumex::Filesystem</a></td></tr>
-<tr class="separator:a591aa2b28a4c6130a23034fe12095624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a9aaed9597ea4976efa9fa825f23366d7" id="r_a9aaed9597ea4976efa9fa825f23366d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9aaed9597ea4976efa9fa825f23366d7">is_env_set</a> (<a class="el" href="a01596.html#a5ec8246f5384f098b278e1c75d009add">LumexEnvironment::string_type</a> const &amp;name)</td></tr>
+<tr class="separator:a9aaed9597ea4976efa9fa825f23366d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42700e890df4ee643f9f03c60a9bbda9" id="r_a42700e890df4ee643f9f03c60a9bbda9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42700e890df4ee643f9f03c60a9bbda9">is_env_truthy</a> (<a class="el" href="a01596.html#a5ec8246f5384f098b278e1c75d009add">LumexEnvironment::string_type</a> const &amp;name)</td></tr>
+<tr class="separator:a42700e890df4ee643f9f03c60a9bbda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a07486181f1990291c2a348de8eb4c480" name="a07486181f1990291c2a348de8eb4c480"></a>
@@ -168,18 +145,53 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a591aa2b28a4c6130a23034fe12095624" name="a591aa2b28a4c6130a23034fe12095624"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a591aa2b28a4c6130a23034fe12095624">&#9670;&#160;</a></span>LumexFilesystem</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a9aaed9597ea4976efa9fa825f23366d7" name="a9aaed9597ea4976efa9fa825f23366d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aaed9597ea4976efa9fa825f23366d7">&#9670;&#160;</a></span>is_env_set()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#a591aa2b28a4c6130a23034fe12095624">LumexFilesystem</a> = <a class="el" href="a00435.html#a423410512bd3cf65fb864732b956bf96">Lumex::Filesystem</a></td>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool is_env_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01596.html#a5ec8246f5384f098b278e1c75d009add">LumexEnvironment::string_type</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00161_a9aaed9597ea4976efa9fa825f23366d7_cgraph.png" border="0" usemap="#aa00161_a9aaed9597ea4976efa9fa825f23366d7_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00161_a9aaed9597ea4976efa9fa825f23366d7_icgraph.png" border="0" usemap="#aa00161_a9aaed9597ea4976efa9fa825f23366d7_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a42700e890df4ee643f9f03c60a9bbda9" name="a42700e890df4ee643f9f03c60a9bbda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42700e890df4ee643f9f03c60a9bbda9">&#9670;&#160;</a></span>is_env_truthy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool is_env_truthy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01596.html#a5ec8246f5384f098b278e1c75d009add">LumexEnvironment::string_type</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00161_a42700e890df4ee643f9f03c60a9bbda9_cgraph.png" border="0" usemap="#aa00161_a42700e890df4ee643f9f03c60a9bbda9_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -188,7 +200,7 @@ Typedefs</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_f8c4365d8deb0b2c0fad2ce8606516c5.html">temporary</a></li><li class="navelem"><a class="el" href="a00161.html">LumexTemporary.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_5e7184c6173312a92e268ab87610b2b4.html">environment</a></li><li class="navelem"><a class="el" href="dir_a6eb1e2593103456b885148ead1307a8.html">env</a></li><li class="navelem"><a class="el" href="a00161.html">LumexEnvironment.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

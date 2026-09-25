@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['enable_5fif_5ft_0',['enable_if_t',['../a00459.html#a02b690b212543319b68fa39231a07532',1,'Lumex::Core::Base64::detail']]],
-  ['error_5ftype_1',['error_type',['../a00688.html#a96d511e6e922d9fe681a283de7a19e8c',1,'Expected::error_type'],['../a00720.html#a0289fc15161a2f88a7b342c95d5c8850',1,'Expected&lt; void, ErrorType &gt;::error_type'],['../a00688.html#a96d511e6e922d9fe681a283de7a19e8c',1,'Expected&lt; void, ErrorType &gt;::error_type']]]
+  ['element_5ftype_0',['element_type',['../a01948.html#af1ab8627f1d71b4a8f4904bcaa45d9c8',1,'lumex::core::fmt::Formatter&lt; Range, Char, typename std::enable_if&lt; Detail::is_formattable_range&lt; Range, Char &gt;::value &gt;::type &gt;']]],
+  ['error_5ftype_1',['error_type',['../a01648.html#aa3a2c07da94785f166c68655bbad5524',1,'lumex::core::expected::result::Expected::error_type'],['../a01668.html#a158f216904bec15785a855e338130093',1,'lumex::core::expected::result::Expected&lt; void, ErrorType &gt;::error_type'],['../a03775.html#aa3a2c07da94785f166c68655bbad5524',1,'lumex::core::expected::result::Expected&lt; void, ErrorType &gt;::error_type'],['../a03775.html#aa3a2c07da94785f166c68655bbad5524',1,'Expected::error_type'],['../a01648.html#aa3a2c07da94785f166c68655bbad5524',1,'lumex::core::expected::result::Expected&lt; void, ErrorType &gt;::error_type'],['../a03775.html#aa3a2c07da94785f166c68655bbad5524',1,'lumex::core::expected::result::Expected&lt; void, ErrorType &gt;::error_type']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['xml_5fencoding_0',['xml_encoding',['../a00503.html#a0e420a3442e40eff85fc1300bf31e94f',1,'Lumex::Xml::Types']]],
-  ['xml_5fnode_5ftype_1',['xml_node_type',['../a00503.html#a6fd92baef45f0608a4e9c97818ae6abf',1,'Lumex::Xml::Types']]],
-  ['xml_5fparse_5fstatus_2',['xml_parse_status',['../a00503.html#a0b418e7248a6647dcc356cd8c3d833fc',1,'Lumex::Xml::Types']]],
-  ['xpath_5fvalue_5ftype_3',['xpath_value_type',['../a00503.html#ad950a60fd946531aaffa5768dd7f2a5c',1,'Lumex::Xml::Types']]]
+  ['xml_5fencoding_0',['xml_encoding',['../a00954.html#af1767ae022d3845084f92ab0bc3776a0',1,'lumex::xml::types::Types']]],
+  ['xml_5fnode_5ftype_1',['xml_node_type',['../a00954.html#a2ea2ab672e10bb614a49da9b5a7f0801',1,'lumex::xml::types::Types']]],
+  ['xml_5fparse_5fstatus_2',['xml_parse_status',['../a00954.html#a8264dfa29bbe6720c402fec104db5408',1,'lumex::xml::types::Types']]],
+  ['xpath_5fvalue_5ftype_3',['xpath_value_type',['../a00954.html#ab45611a4d899512e32aa65eb48a191a5',1,'lumex::xml::types::Types']]]
 ];

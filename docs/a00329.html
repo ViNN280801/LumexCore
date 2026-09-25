@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XmlWriterStream.hpp File Reference</title>
+<title>LumexLib: LumexCoreDumpGenerator.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -105,67 +105,766 @@ $(function(){initNavTree('a00329.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
-  <div class="headertitle"><div class="title">XmlWriterStream.hpp File Reference</div></div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">LumexCoreDumpGenerator.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00212_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cctype&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00311_source.html">IXmlWriter.hpp</a>&quot;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;system_error&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00548_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00359_source.html">lumex/core/utility/traits/LumexTypeTraits.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for XmlWriterStream.hpp:</div>
+Include dependency graph for LumexCoreDumpGenerator.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00330.png" border="0" usemap="#a_xml_writer_stream_8hpp" alt=""/></div>
-<map name="a_xml_writer_stream_8hpp" id="a_xml_writer_stream_8hpp">
-<area shape="rect" title=" " alt="" coords="5,5,151,32"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="17,155,179,181"/>
-<area shape="poly" title=" " alt="" coords="64,34,50,49,37,67,30,86,32,106,47,126,65,144,62,148,42,130,28,108,25,86,32,64,46,46,61,31"/>
-<area shape="rect" title=" " alt="" coords="42,80,114,107"/>
-<area shape="poly" title=" " alt="" coords="81,33,81,64,75,64,75,33"/>
-<area shape="rect" href="a00311.html" title=" " alt="" coords="138,80,245,107"/>
-<area shape="poly" title=" " alt="" coords="99,30,160,69,157,74,96,35"/>
-<area shape="poly" title=" " alt="" coords="177,109,128,147,124,143,173,105"/>
-</map>
+<div class="center"><img src="a00330.png" border="0" usemap="#a_lumex_core_dump_generator_8hpp" alt=""/></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00331.png" border="0" usemap="#a_xml_writer_stream_8hppdep" alt=""/></div>
-<map name="a_xml_writer_stream_8hppdep" id="a_xml_writer_stream_8hppdep">
-<area shape="rect" title=" " alt="" coords="136,5,281,32"/>
-<area shape="rect" href="a00233.html" title=" " alt="" coords="5,80,135,107"/>
-<area shape="poly" title=" " alt="" coords="172,42,96,82,93,77,170,37"/>
-<area shape="rect" href="a00260.html" title=" " alt="" coords="158,80,259,107"/>
-<area shape="poly" title=" " alt="" coords="211,48,211,80,206,80,206,48"/>
-<area shape="rect" href="a00326.html" title=" " alt="" coords="283,80,428,107"/>
-<area shape="poly" title=" " alt="" coords="249,37,331,77,328,82,247,42"/>
-</map>
+<div class="center"><img src="a00331.png" border="0" usemap="#a_lumex_core_dump_generator_8hppdep" alt=""/></div>
 </div>
 </div>
 <p><a href="a00329_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01144.html">Lumex::Xml::Writer::XmlWriterStream</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <code><a class="el" href="a01128.html" title="Abstract base interface for writing XML data to various destinations.">IXmlWriter</a></code> implementation that writes XML data to a C++ standard output stream.  <a href="a01144.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02152.html">lumex::core::utility::dump::DumpConfiguration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprehensive configuration class for crash dump generation.  <a href="a02152.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02156.html">lumex::core::utility::dump::DumpFactory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory class for creating and configuring crash dump generators.  <a href="a02156.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02160.html">lumex::core::utility::dump::CoreDumpGenerator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross-platform crash dump handler with comprehensive debugging support.  <a href="a02160.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00435.html">Lumex</a></td></tr>
-<tr class="memdesc:a00435"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00488.html">Lumex::Xml</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00826.html">lumex::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00504.html">Lumex::Xml::Writer</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00886.html">lumex::core::utility</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00894.html">lumex::core::utility::dump</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00895.html">DumpTypeUtils</a></td></tr>
+<tr class="memdesc:a00895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validation and utility functions for DumpType enum. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00896.html">lumex::core::utility::dump::DumpTypeUtils</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00897.html">lumex::core::utility::dump::DumpTypeUtils::Constants</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00898.html">lumex::core::utility::dump::DumpTypeUtils::CharacterConstants</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a14812586a9c3cc9f5ac6308c2945a5aa" id="r_a14812586a9c3cc9f5ac6308c2945a5aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14812586a9c3cc9f5ac6308c2945a5aa">CPP11_OR_GREATER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a14812586a9c3cc9f5ac6308c2945a5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84bbc88283c16b3061bf428df6620b0c" id="r_a84bbc88283c16b3061bf428df6620b0c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84bbc88283c16b3061bf428df6620b0c">CPP14_OR_GREATER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a84bbc88283c16b3061bf428df6620b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41d4dfa37f2c4d4ed4afcf249998f84f" id="r_a41d4dfa37f2c4d4ed4afcf249998f84f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41d4dfa37f2c4d4ed4afcf249998f84f">CPP17_OR_GREATER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a41d4dfa37f2c4d4ed4afcf249998f84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066c5a9898832c6b5711f7a42519d5d3" id="r_a066c5a9898832c6b5711f7a42519d5d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a066c5a9898832c6b5711f7a42519d5d3">CPP20_OR_GREATER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a066c5a9898832c6b5711f7a42519d5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff34cbd561d4dbd558593661ea02e300" id="r_aff34cbd561d4dbd558593661ea02e300"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff34cbd561d4dbd558593661ea02e300">CPP23_OR_GREATER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aff34cbd561d4dbd558593661ea02e300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c36f7dda3748f926ae7f669ade24b30" id="r_a1c36f7dda3748f926ae7f669ade24b30"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c36f7dda3748f926ae7f669ade24b30">CPP26_OR_GREATER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a1c36f7dda3748f926ae7f669ade24b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f535657fb06c213f34d6284d0e0cce" id="r_a36f535657fb06c213f34d6284d0e0cce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36f535657fb06c213f34d6284d0e0cce">HAS_TYPE_TRAITS</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a36f535657fb06c213f34d6284d0e0cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c78472654d3743e1dc8909bf6d1f0f" id="r_ab3c78472654d3743e1dc8909bf6d1f0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3c78472654d3743e1dc8909bf6d1f0f">HAS_ATOMIC</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ab3c78472654d3743e1dc8909bf6d1f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51c5fd888ce8550c65f37f9fc5cf393" id="r_aa51c5fd888ce8550c65f37f9fc5cf393"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa51c5fd888ce8550c65f37f9fc5cf393">HAS_THREAD</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aa51c5fd888ce8550c65f37f9fc5cf393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052a017864868ace6c05070e48aa5898" id="r_a052a017864868ace6c05070e48aa5898"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a052a017864868ace6c05070e48aa5898">HAS_MUTEX</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a052a017864868ace6c05070e48aa5898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd7bc3e736917afa6c46392004b1fc9" id="r_a2dd7bc3e736917afa6c46392004b1fc9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dd7bc3e736917afa6c46392004b1fc9">HAS_CONDITION_VARIABLE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a2dd7bc3e736917afa6c46392004b1fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c61c0aeccc759d1a40aa64e8ff865e" id="r_aa3c61c0aeccc759d1a40aa64e8ff865e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3c61c0aeccc759d1a40aa64e8ff865e">HAS_FUTURE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aa3c61c0aeccc759d1a40aa64e8ff865e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d7531534b42c2904e22510571109c86" id="r_a0d7531534b42c2904e22510571109c86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d7531534b42c2904e22510571109c86">HAS_CHRONO</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a0d7531534b42c2904e22510571109c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebdbceb5c205a3fcad132302235f50a9" id="r_aebdbceb5c205a3fcad132302235f50a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebdbceb5c205a3fcad132302235f50a9">HAS_MAKE_UNIQUE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aebdbceb5c205a3fcad132302235f50a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffac86491128ac017e6c7a28b138686" id="r_adffac86491128ac017e6c7a28b138686"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adffac86491128ac017e6c7a28b138686">HAS_SHARED_MUTEX</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:adffac86491128ac017e6c7a28b138686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6fdabafcc1a017f1b2855654d0171af" id="r_ab6fdabafcc1a017f1b2855654d0171af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6fdabafcc1a017f1b2855654d0171af">HAS_OPTIONAL</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ab6fdabafcc1a017f1b2855654d0171af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39aa1fcbc8191effddb5178368afb2b" id="r_ab39aa1fcbc8191effddb5178368afb2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab39aa1fcbc8191effddb5178368afb2b">HAS_VARIANT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ab39aa1fcbc8191effddb5178368afb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace8e5cf61829a6085ba5c5a226cfb31" id="r_aace8e5cf61829a6085ba5c5a226cfb31"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aace8e5cf61829a6085ba5c5a226cfb31">HAS_ANY</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aace8e5cf61829a6085ba5c5a226cfb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355f08725825926dae76d6204e55188d" id="r_a355f08725825926dae76d6204e55188d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a355f08725825926dae76d6204e55188d">HAS_STRING_VIEW</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a355f08725825926dae76d6204e55188d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffac86491128ac017e6c7a28b138686" id="r_adffac86491128ac017e6c7a28b138686"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adffac86491128ac017e6c7a28b138686">HAS_SHARED_MUTEX</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:adffac86491128ac017e6c7a28b138686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad302267be2187d84f844ef5ac5b74c5a" id="r_ad302267be2187d84f844ef5ac5b74c5a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad302267be2187d84f844ef5ac5b74c5a">HAS_FILESYSTEM</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ad302267be2187d84f844ef5ac5b74c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0133a9b18efbe8fb1820fc52b0512f3d" id="r_a0133a9b18efbe8fb1820fc52b0512f3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0133a9b18efbe8fb1820fc52b0512f3d">HAS_PARALLEL_ALGORITHMS</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a0133a9b18efbe8fb1820fc52b0512f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa302fb241965e3d2366c03ecdc87e56e" id="r_aa302fb241965e3d2366c03ecdc87e56e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa302fb241965e3d2366c03ecdc87e56e">HAS_CONCEPTS</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aa302fb241965e3d2366c03ecdc87e56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa842cb963d2d44a227186ad7d75de95a" id="r_aa842cb963d2d44a227186ad7d75de95a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa842cb963d2d44a227186ad7d75de95a">HAS_RANGES</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aa842cb963d2d44a227186ad7d75de95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a756081268cf945942093236ab4eacab6" id="r_a756081268cf945942093236ab4eacab6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a756081268cf945942093236ab4eacab6">HAS_SPAN</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a756081268cf945942093236ab4eacab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bad52056f458b94bd0008d9a8452db8" id="r_a8bad52056f458b94bd0008d9a8452db8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bad52056f458b94bd0008d9a8452db8">HAS_FORMAT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a8bad52056f458b94bd0008d9a8452db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0041f3492b646dcf2dbbd3e59b086d" id="r_add0041f3492b646dcf2dbbd3e59b086d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add0041f3492b646dcf2dbbd3e59b086d">HAS_COROUTINES</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:add0041f3492b646dcf2dbbd3e59b086d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86fcf154dee027edc321b5e82e2ca6fe" id="r_a86fcf154dee027edc321b5e82e2ca6fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86fcf154dee027edc321b5e82e2ca6fe">HAS_JTHREAD</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a86fcf154dee027edc321b5e82e2ca6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbf4bca9cecc715193d4e537e1102785" id="r_afbf4bca9cecc715193d4e537e1102785"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbf4bca9cecc715193d4e537e1102785">HAS_BARRIER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:afbf4bca9cecc715193d4e537e1102785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6ae5009899aa89245686aa8c69dcd23" id="r_ac6ae5009899aa89245686aa8c69dcd23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6ae5009899aa89245686aa8c69dcd23">HAS_LATCH</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ac6ae5009899aa89245686aa8c69dcd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397fa3535af25f6dbddbb6788bb4ffae" id="r_a397fa3535af25f6dbddbb6788bb4ffae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a397fa3535af25f6dbddbb6788bb4ffae">HAS_SEMAPHORE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a397fa3535af25f6dbddbb6788bb4ffae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a133ba187385601c90ec5791d7dfa7498" id="r_a133ba187385601c90ec5791d7dfa7498"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a133ba187385601c90ec5791d7dfa7498">HAS_EXPECTED</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a133ba187385601c90ec5791d7dfa7498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83f7f73a41461724a3675875f710ad12" id="r_a83f7f73a41461724a3675875f710ad12"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83f7f73a41461724a3675875f710ad12">HAS_MDSpan</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a83f7f73a41461724a3675875f710ad12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c3890919da84370acd65f4b8a3914f" id="r_a35c3890919da84370acd65f4b8a3914f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35c3890919da84370acd65f4b8a3914f">HAS_STACKTRACE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a35c3890919da84370acd65f4b8a3914f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743a113c749a29ff562219bde705692e" id="r_a743a113c749a29ff562219bde705692e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a743a113c749a29ff562219bde705692e">HAS_REFLECTION</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a743a113c749a29ff562219bde705692e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a984c549e8e283632ece967bf35a1bed3" id="r_a984c549e8e283632ece967bf35a1bed3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a984c549e8e283632ece967bf35a1bed3">HAS_EXECUTORS</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a984c549e8e283632ece967bf35a1bed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a8ccf1bd2864104aaf2e850d72d393c19" id="r_a8ccf1bd2864104aaf2e850d72d393c19"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19">lumex::core::utility::dump::DumpType</a> : std::int8_t { <br />
+&#160;&#160;<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19af86553cc5ee5d4c46e196a1d160cea44">lumex::core::utility::dump::MINI_DUMP_NORMAL</a> = 0
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a40cc9c713d7282935aed84cae38d69e8">lumex::core::utility::dump::MINI_DUMP_WITH_DATA_SEGS</a> = 1
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a69ff42aca122b1ae86906976183b89c1">lumex::core::utility::dump::MINI_DUMP_WITH_FULL_MEMORY</a> = 2
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a56e50f0befce5802844736a94a8727ac">lumex::core::utility::dump::MINI_DUMP_WITH_HANDLE_DATA</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a1654087a0cd5f9d2c523b8a2f2bb418d">lumex::core::utility::dump::MINI_DUMP_FILTER_MEMORY</a> = 4
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a69d5658fe3f5348a288c48282f33a0e2">lumex::core::utility::dump::MINI_DUMP_SCAN_MEMORY</a> = 5
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a72f8ff715345f41ce2af6cbc93a8d7da">lumex::core::utility::dump::MINI_DUMP_WITH_UNLOADED_MODULES</a> = 6
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a2c2a358d0f56959e50640798a932badf">lumex::core::utility::dump::MINI_DUMP_WITH_INDIRECTLY_REFERENCED_MEMORY</a> = 7
+, <br />
+&#160;&#160;<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19ab731f53ec888dfd3e6267842c80f2c13">lumex::core::utility::dump::MINI_DUMP_FILTER_MODULE_PATHS</a> = 8
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19ad81cbc9a10def7efa2b72281220085c9">lumex::core::utility::dump::MINI_DUMP_WITH_PROCESS_THREAD_DATA</a> = 9
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a026f141f7b4b9d5b6f708c97cb57e7e3">lumex::core::utility::dump::MINI_DUMP_WITH_PRIVATE_READ_WRITE_MEMORY</a> = 10
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a600ca71628c28b396dfaed4d2b808f92">lumex::core::utility::dump::MINI_DUMP_WITHOUT_OPTIONAL_DATA</a> = 11
+, <br />
+&#160;&#160;<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a7b198cc64fdabd7db8f3d3fc7f26c7a6">lumex::core::utility::dump::MINI_DUMP_WITH_FULL_MEMORY_INFO</a> = 12
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19ad2b4540179f3c081fe0d19315ce1e69f">lumex::core::utility::dump::MINI_DUMP_WITH_THREAD_INFO</a> = 13
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a7b6b4bf7fb6694cc20ca441838c8d4ac">lumex::core::utility::dump::MINI_DUMP_WITH_CODE_SEGMENTS</a> = 14
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a862abc28385a0003c30474222bc794d2">lumex::core::utility::dump::MINI_DUMP_WITHOUT_AUXILIARY_STATE</a> = 15
+, <br />
+&#160;&#160;<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a7b9523fafe0b4671ffe9e1a4429c1b54">lumex::core::utility::dump::MINI_DUMP_WITH_FULL_AUXILIARY_STATE</a> = 16
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a8a68894fcc4e1df5546722f08e266e54">lumex::core::utility::dump::MINI_DUMP_WITH_PRIVATE_WRITE_COPY_MEMORY</a> = 17
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a72207fd91fad5718f1b540c92a73763b">lumex::core::utility::dump::MINI_DUMP_IGNORE_INACCESSIBLE_MEMORY</a> = 18
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a11db456efbc7c32e5bddf3504c0b49ba">lumex::core::utility::dump::MINI_DUMP_WITH_TOKEN_INFORMATION</a> = 19
+, <br />
+&#160;&#160;<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19acf042458a2225a06326c75ae7aa7922a">lumex::core::utility::dump::KERNEL_FULL_DUMP</a> = 20
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19ad56f41e4d3e37c4a67be80b7f32d100c">lumex::core::utility::dump::KERNEL_KERNEL_DUMP</a> = 21
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a822dbbaed89e068a415c67c7d3cbb728">lumex::core::utility::dump::KERNEL_SMALL_DUMP</a> = 22
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19ad4e2a6b1adf21e3e90b86042c974e60a">lumex::core::utility::dump::KERNEL_AUTOMATIC_DUMP</a> = 23
+, <br />
+&#160;&#160;<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a9f1a237a1f081c3126b239fc96054ffd">lumex::core::utility::dump::KERNEL_ACTIVE_DUMP</a> = 24
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a0161cca65bafb112cfa0a080e7fd4719">lumex::core::utility::dump::CORE_DUMP_FULL</a> = 25
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19af5588dcd19ef0355937643f25b463a88">lumex::core::utility::dump::DEFAULT_WINDOWS</a> = MINI_DUMP_WITH_FULL_MEMORY
+, <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19acf79fb41c645cbae74dc08d2dda86889">lumex::core::utility::dump::DEFAULT_UNIX</a> = CORE_DUMP_FULL
+, <br />
+&#160;&#160;<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a3eb47c0801f946a2b7a32843449d5ba3">lumex::core::utility::dump::DEFAULT_AUTO</a> = -1
+<br />
+ }</td></tr>
+<tr class="memdesc:a8ccf1bd2864104aaf2e850d72d393c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprehensive enumeration of all supported crash dump types across platforms.  <a href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19">More...</a><br /></td></tr>
+<tr class="separator:a8ccf1bd2864104aaf2e850d72d393c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a0264a97abfedb4b6b44f8ef4e4066a0c" id="r_a0264a97abfedb4b6b44f8ef4e4066a0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00896.html#a0264a97abfedb4b6b44f8ef4e4066a0c">lumex::core::utility::dump::DumpTypeUtils::isValid</a> (<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a> type) noexcept</td></tr>
+<tr class="memdesc:a0264a97abfedb4b6b44f8ef4e4066a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19" title="Comprehensive enumeration of all supported crash dump types across platforms.">DumpType</a> value is valid.  <br /></td></tr>
+<tr class="separator:a0264a97abfedb4b6b44f8ef4e4066a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98511483c2ca2027c1b6bc0eb32173c" id="r_ae98511483c2ca2027c1b6bc0eb32173c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00896.html#ae98511483c2ca2027c1b6bc0eb32173c">lumex::core::utility::dump::DumpTypeUtils::isWindowsType</a> (<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a> type) noexcept</td></tr>
+<tr class="memdesc:ae98511483c2ca2027c1b6bc0eb32173c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19" title="Comprehensive enumeration of all supported crash dump types across platforms.">DumpType</a> is a Windows-specific type.  <br /></td></tr>
+<tr class="separator:ae98511483c2ca2027c1b6bc0eb32173c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f4e6d2e8d4b78a084bd2bec12fb8148" id="r_a8f4e6d2e8d4b78a084bd2bec12fb8148"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00896.html#a8f4e6d2e8d4b78a084bd2bec12fb8148">lumex::core::utility::dump::DumpTypeUtils::isUnixType</a> (<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a> type) noexcept</td></tr>
+<tr class="memdesc:a8f4e6d2e8d4b78a084bd2bec12fb8148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19" title="Comprehensive enumeration of all supported crash dump types across platforms.">DumpType</a> is a UNIX-specific type.  <br /></td></tr>
+<tr class="separator:a8f4e6d2e8d4b78a084bd2bec12fb8148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa9dfcfe446a463faba51cdba58b7e96" id="r_aaa9dfcfe446a463faba51cdba58b7e96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00896.html#aaa9dfcfe446a463faba51cdba58b7e96">lumex::core::utility::dump::DumpTypeUtils::isKernelType</a> (<a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a> type) noexcept</td></tr>
+<tr class="memdesc:aaa9dfcfe446a463faba51cdba58b7e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19" title="Comprehensive enumeration of all supported crash dump types across platforms.">DumpType</a> is a kernel dump type.  <br /></td></tr>
+<tr class="separator:aaa9dfcfe446a463faba51cdba58b7e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672f346b71e06abd8d8966d99eebf335" id="r_a672f346b71e06abd8d8966d99eebf335"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00896.html#a672f346b71e06abd8d8966d99eebf335">lumex::core::utility::dump::DumpTypeUtils::getMinValue</a> () noexcept</td></tr>
+<tr class="memdesc:a672f346b71e06abd8d8966d99eebf335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum valid <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19" title="Comprehensive enumeration of all supported crash dump types across platforms.">DumpType</a> value.  <br /></td></tr>
+<tr class="separator:a672f346b71e06abd8d8966d99eebf335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6634d9954b5bfa72e16ac1ea026c7f4e" id="r_a6634d9954b5bfa72e16ac1ea026c7f4e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00896.html#a6634d9954b5bfa72e16ac1ea026c7f4e">lumex::core::utility::dump::DumpTypeUtils::getMaxValue</a> () noexcept</td></tr>
+<tr class="memdesc:a6634d9954b5bfa72e16ac1ea026c7f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum valid <a class="el" href="a00894.html#a8ccf1bd2864104aaf2e850d72d393c19" title="Comprehensive enumeration of all supported crash dump types across platforms.">DumpType</a> value.  <br /></td></tr>
+<tr class="separator:a6634d9954b5bfa72e16ac1ea026c7f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2b9da98670ad6744370413e1529d2e35" id="r_a2b9da98670ad6744370413e1529d2e35"><td class="memItemLeft" align="right" valign="top">static constexpr std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00897.html#a2b9da98670ad6744370413e1529d2e35">lumex::core::utility::dump::DumpTypeUtils::Constants::MIN_DUMP_TYPE_VALUE</a> = 0</td></tr>
+<tr class="separator:a2b9da98670ad6744370413e1529d2e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6134dec000b7e65ca6b13b3c337e5e82" id="r_a6134dec000b7e65ca6b13b3c337e5e82"><td class="memItemLeft" align="right" valign="top">static constexpr std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00897.html#a6134dec000b7e65ca6b13b3c337e5e82">lumex::core::utility::dump::DumpTypeUtils::Constants::MAX_DUMP_TYPE_VALUE</a> = 25</td></tr>
+<tr class="separator:a6134dec000b7e65ca6b13b3c337e5e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aa8d474ba5f634a039b4b295eadae05" id="r_a3aa8d474ba5f634a039b4b295eadae05"><td class="memItemLeft" align="right" valign="top">static constexpr std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00897.html#a3aa8d474ba5f634a039b4b295eadae05">lumex::core::utility::dump::DumpTypeUtils::Constants::AUTO_DETECT_VALUE</a> = -1</td></tr>
+<tr class="separator:a3aa8d474ba5f634a039b4b295eadae05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c513090e51fdf43898fed0ee9397c46" id="r_a6c513090e51fdf43898fed0ee9397c46"><td class="memItemLeft" align="right" valign="top">static constexpr std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00897.html#a6c513090e51fdf43898fed0ee9397c46">lumex::core::utility::dump::DumpTypeUtils::Constants::WINDOWS_MAX_TYPE</a> = 24</td></tr>
+<tr class="separator:a6c513090e51fdf43898fed0ee9397c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee42ceecc8f748626a1c0aa1d1dc8d37" id="r_aee42ceecc8f748626a1c0aa1d1dc8d37"><td class="memItemLeft" align="right" valign="top">static constexpr std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00897.html#aee42ceecc8f748626a1c0aa1d1dc8d37">lumex::core::utility::dump::DumpTypeUtils::Constants::UNIX_MIN_TYPE</a> = 25</td></tr>
+<tr class="separator:aee42ceecc8f748626a1c0aa1d1dc8d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aac9ef55e0a8cb94eeb70736f6593fb" id="r_a8aac9ef55e0a8cb94eeb70736f6593fb"><td class="memItemLeft" align="right" valign="top">static constexpr std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00897.html#a8aac9ef55e0a8cb94eeb70736f6593fb">lumex::core::utility::dump::DumpTypeUtils::Constants::UNIX_MAX_TYPE</a> = 25</td></tr>
+<tr class="separator:a8aac9ef55e0a8cb94eeb70736f6593fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b6ceeffc1c983147092e86b5722874" id="r_ad6b6ceeffc1c983147092e86b5722874"><td class="memItemLeft" align="right" valign="top">static constexpr std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00897.html#ad6b6ceeffc1c983147092e86b5722874">lumex::core::utility::dump::DumpTypeUtils::Constants::KERNEL_MIN_TYPE</a> = 20</td></tr>
+<tr class="separator:ad6b6ceeffc1c983147092e86b5722874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd66e6a09d6b8c10bc57029d970079d9" id="r_acd66e6a09d6b8c10bc57029d970079d9"><td class="memItemLeft" align="right" valign="top">static constexpr std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00897.html#acd66e6a09d6b8c10bc57029d970079d9">lumex::core::utility::dump::DumpTypeUtils::Constants::KERNEL_MAX_TYPE</a> = 24</td></tr>
+<tr class="separator:acd66e6a09d6b8c10bc57029d970079d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f0617b8cdfbf965bb7e78cc5638fc62" id="r_a0f0617b8cdfbf965bb7e78cc5638fc62"><td class="memItemLeft" align="right" valign="top">static constexpr std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00897.html#a0f0617b8cdfbf965bb7e78cc5638fc62">lumex::core::utility::dump::DumpTypeUtils::Constants::KERNEL_ONLY_TYPE</a> = 26</td></tr>
+<tr class="separator:a0f0617b8cdfbf965bb7e78cc5638fc62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f21df461a8d52a1ac6d433c8def0456" id="r_a1f21df461a8d52a1ac6d433c8def0456"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00898.html#a1f21df461a8d52a1ac6d433c8def0456">lumex::core::utility::dump::DumpTypeUtils::CharacterConstants::CONTROL_CHAR_THRESHOLD</a> = 32</td></tr>
+<tr class="separator:a1f21df461a8d52a1ac6d433c8def0456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdefb1fc053d60dda36ce56313f5000f" id="r_acdefb1fc053d60dda36ce56313f5000f"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00898.html#acdefb1fc053d60dda36ce56313f5000f">lumex::core::utility::dump::DumpTypeUtils::CharacterConstants::COLON_CHAR</a> = ':'</td></tr>
+<tr class="separator:acdefb1fc053d60dda36ce56313f5000f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03296a422b94724e0b1cb5c533dd7ef4" id="r_a03296a422b94724e0b1cb5c533dd7ef4"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00898.html#a03296a422b94724e0b1cb5c533dd7ef4">lumex::core::utility::dump::DumpTypeUtils::CharacterConstants::ASTERISK_CHAR</a> = '*'</td></tr>
+<tr class="separator:a03296a422b94724e0b1cb5c533dd7ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec778756a39f40d88d409118f61e872" id="r_a3ec778756a39f40d88d409118f61e872"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00898.html#a3ec778756a39f40d88d409118f61e872">lumex::core::utility::dump::DumpTypeUtils::CharacterConstants::QUESTION_CHAR</a> = '?'</td></tr>
+<tr class="separator:a3ec778756a39f40d88d409118f61e872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b2452358a28caba418f0e2af8d56bb" id="r_ac0b2452358a28caba418f0e2af8d56bb"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00898.html#ac0b2452358a28caba418f0e2af8d56bb">lumex::core::utility::dump::DumpTypeUtils::CharacterConstants::QUOTE_CHAR</a> = '&quot;'</td></tr>
+<tr class="separator:ac0b2452358a28caba418f0e2af8d56bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14f5f56e692a8865260a73c2d419740f" id="r_a14f5f56e692a8865260a73c2d419740f"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00898.html#a14f5f56e692a8865260a73c2d419740f">lumex::core::utility::dump::DumpTypeUtils::CharacterConstants::LESS_THAN_CHAR</a> = '&lt;'</td></tr>
+<tr class="separator:a14f5f56e692a8865260a73c2d419740f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44dd74f6dc632b3ce2f40e0211350481" id="r_a44dd74f6dc632b3ce2f40e0211350481"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00898.html#a44dd74f6dc632b3ce2f40e0211350481">lumex::core::utility::dump::DumpTypeUtils::CharacterConstants::GREATER_THAN_CHAR</a> = '&gt;'</td></tr>
+<tr class="separator:a44dd74f6dc632b3ce2f40e0211350481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a444f3eb3e5c399b4f6024e840c961" id="r_aa4a444f3eb3e5c399b4f6024e840c961"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00898.html#aa4a444f3eb3e5c399b4f6024e840c961">lumex::core::utility::dump::DumpTypeUtils::CharacterConstants::PIPE_CHAR</a> = '|'</td></tr>
+<tr class="separator:aa4a444f3eb3e5c399b4f6024e840c961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a14812586a9c3cc9f5ac6308c2945a5aa" name="a14812586a9c3cc9f5ac6308c2945a5aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14812586a9c3cc9f5ac6308c2945a5aa">&#9670;&#160;</a></span>CPP11_OR_GREATER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CPP11_OR_GREATER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84bbc88283c16b3061bf428df6620b0c" name="a84bbc88283c16b3061bf428df6620b0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84bbc88283c16b3061bf428df6620b0c">&#9670;&#160;</a></span>CPP14_OR_GREATER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CPP14_OR_GREATER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41d4dfa37f2c4d4ed4afcf249998f84f" name="a41d4dfa37f2c4d4ed4afcf249998f84f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41d4dfa37f2c4d4ed4afcf249998f84f">&#9670;&#160;</a></span>CPP17_OR_GREATER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CPP17_OR_GREATER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a066c5a9898832c6b5711f7a42519d5d3" name="a066c5a9898832c6b5711f7a42519d5d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a066c5a9898832c6b5711f7a42519d5d3">&#9670;&#160;</a></span>CPP20_OR_GREATER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CPP20_OR_GREATER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff34cbd561d4dbd558593661ea02e300" name="aff34cbd561d4dbd558593661ea02e300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff34cbd561d4dbd558593661ea02e300">&#9670;&#160;</a></span>CPP23_OR_GREATER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CPP23_OR_GREATER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c36f7dda3748f926ae7f669ade24b30" name="a1c36f7dda3748f926ae7f669ade24b30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c36f7dda3748f926ae7f669ade24b30">&#9670;&#160;</a></span>CPP26_OR_GREATER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CPP26_OR_GREATER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aace8e5cf61829a6085ba5c5a226cfb31" name="aace8e5cf61829a6085ba5c5a226cfb31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace8e5cf61829a6085ba5c5a226cfb31">&#9670;&#160;</a></span>HAS_ANY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_ANY&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3c78472654d3743e1dc8909bf6d1f0f" name="ab3c78472654d3743e1dc8909bf6d1f0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c78472654d3743e1dc8909bf6d1f0f">&#9670;&#160;</a></span>HAS_ATOMIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_ATOMIC&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbf4bca9cecc715193d4e537e1102785" name="afbf4bca9cecc715193d4e537e1102785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbf4bca9cecc715193d4e537e1102785">&#9670;&#160;</a></span>HAS_BARRIER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_BARRIER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d7531534b42c2904e22510571109c86" name="a0d7531534b42c2904e22510571109c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d7531534b42c2904e22510571109c86">&#9670;&#160;</a></span>HAS_CHRONO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_CHRONO&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa302fb241965e3d2366c03ecdc87e56e" name="aa302fb241965e3d2366c03ecdc87e56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa302fb241965e3d2366c03ecdc87e56e">&#9670;&#160;</a></span>HAS_CONCEPTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_CONCEPTS&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2dd7bc3e736917afa6c46392004b1fc9" name="a2dd7bc3e736917afa6c46392004b1fc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd7bc3e736917afa6c46392004b1fc9">&#9670;&#160;</a></span>HAS_CONDITION_VARIABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_CONDITION_VARIABLE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add0041f3492b646dcf2dbbd3e59b086d" name="add0041f3492b646dcf2dbbd3e59b086d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0041f3492b646dcf2dbbd3e59b086d">&#9670;&#160;</a></span>HAS_COROUTINES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_COROUTINES&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a984c549e8e283632ece967bf35a1bed3" name="a984c549e8e283632ece967bf35a1bed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a984c549e8e283632ece967bf35a1bed3">&#9670;&#160;</a></span>HAS_EXECUTORS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_EXECUTORS&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a133ba187385601c90ec5791d7dfa7498" name="a133ba187385601c90ec5791d7dfa7498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a133ba187385601c90ec5791d7dfa7498">&#9670;&#160;</a></span>HAS_EXPECTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_EXPECTED&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad302267be2187d84f844ef5ac5b74c5a" name="ad302267be2187d84f844ef5ac5b74c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad302267be2187d84f844ef5ac5b74c5a">&#9670;&#160;</a></span>HAS_FILESYSTEM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_FILESYSTEM&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bad52056f458b94bd0008d9a8452db8" name="a8bad52056f458b94bd0008d9a8452db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bad52056f458b94bd0008d9a8452db8">&#9670;&#160;</a></span>HAS_FORMAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_FORMAT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3c61c0aeccc759d1a40aa64e8ff865e" name="aa3c61c0aeccc759d1a40aa64e8ff865e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3c61c0aeccc759d1a40aa64e8ff865e">&#9670;&#160;</a></span>HAS_FUTURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_FUTURE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86fcf154dee027edc321b5e82e2ca6fe" name="a86fcf154dee027edc321b5e82e2ca6fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86fcf154dee027edc321b5e82e2ca6fe">&#9670;&#160;</a></span>HAS_JTHREAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_JTHREAD&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6ae5009899aa89245686aa8c69dcd23" name="ac6ae5009899aa89245686aa8c69dcd23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6ae5009899aa89245686aa8c69dcd23">&#9670;&#160;</a></span>HAS_LATCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_LATCH&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebdbceb5c205a3fcad132302235f50a9" name="aebdbceb5c205a3fcad132302235f50a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebdbceb5c205a3fcad132302235f50a9">&#9670;&#160;</a></span>HAS_MAKE_UNIQUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_MAKE_UNIQUE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83f7f73a41461724a3675875f710ad12" name="a83f7f73a41461724a3675875f710ad12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83f7f73a41461724a3675875f710ad12">&#9670;&#160;</a></span>HAS_MDSpan</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_MDSpan&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a052a017864868ace6c05070e48aa5898" name="a052a017864868ace6c05070e48aa5898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a052a017864868ace6c05070e48aa5898">&#9670;&#160;</a></span>HAS_MUTEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_MUTEX&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6fdabafcc1a017f1b2855654d0171af" name="ab6fdabafcc1a017f1b2855654d0171af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6fdabafcc1a017f1b2855654d0171af">&#9670;&#160;</a></span>HAS_OPTIONAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_OPTIONAL&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0133a9b18efbe8fb1820fc52b0512f3d" name="a0133a9b18efbe8fb1820fc52b0512f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0133a9b18efbe8fb1820fc52b0512f3d">&#9670;&#160;</a></span>HAS_PARALLEL_ALGORITHMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_PARALLEL_ALGORITHMS&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa842cb963d2d44a227186ad7d75de95a" name="aa842cb963d2d44a227186ad7d75de95a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa842cb963d2d44a227186ad7d75de95a">&#9670;&#160;</a></span>HAS_RANGES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_RANGES&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a743a113c749a29ff562219bde705692e" name="a743a113c749a29ff562219bde705692e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a743a113c749a29ff562219bde705692e">&#9670;&#160;</a></span>HAS_REFLECTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_REFLECTION&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a397fa3535af25f6dbddbb6788bb4ffae" name="a397fa3535af25f6dbddbb6788bb4ffae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a397fa3535af25f6dbddbb6788bb4ffae">&#9670;&#160;</a></span>HAS_SEMAPHORE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_SEMAPHORE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adffac86491128ac017e6c7a28b138686" name="adffac86491128ac017e6c7a28b138686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adffac86491128ac017e6c7a28b138686">&#9670;&#160;</a></span>HAS_SHARED_MUTEX <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_SHARED_MUTEX&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adffac86491128ac017e6c7a28b138686" name="adffac86491128ac017e6c7a28b138686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adffac86491128ac017e6c7a28b138686">&#9670;&#160;</a></span>HAS_SHARED_MUTEX <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_SHARED_MUTEX&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a756081268cf945942093236ab4eacab6" name="a756081268cf945942093236ab4eacab6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a756081268cf945942093236ab4eacab6">&#9670;&#160;</a></span>HAS_SPAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_SPAN&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35c3890919da84370acd65f4b8a3914f" name="a35c3890919da84370acd65f4b8a3914f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c3890919da84370acd65f4b8a3914f">&#9670;&#160;</a></span>HAS_STACKTRACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_STACKTRACE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a355f08725825926dae76d6204e55188d" name="a355f08725825926dae76d6204e55188d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a355f08725825926dae76d6204e55188d">&#9670;&#160;</a></span>HAS_STRING_VIEW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_STRING_VIEW&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa51c5fd888ce8550c65f37f9fc5cf393" name="aa51c5fd888ce8550c65f37f9fc5cf393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51c5fd888ce8550c65f37f9fc5cf393">&#9670;&#160;</a></span>HAS_THREAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_THREAD&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36f535657fb06c213f34d6284d0e0cce" name="a36f535657fb06c213f34d6284d0e0cce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f535657fb06c213f34d6284d0e0cce">&#9670;&#160;</a></span>HAS_TYPE_TRAITS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_TYPE_TRAITS&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab39aa1fcbc8191effddb5178368afb2b" name="ab39aa1fcbc8191effddb5178368afb2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39aa1fcbc8191effddb5178368afb2b">&#9670;&#160;</a></span>HAS_VARIANT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAS_VARIANT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_8b4095ffbb260afdde390f90a93ad48f.html">xml</a></li><li class="navelem"><a class="el" href="dir_0e81158b7eea304ccdc9c0421a52bc82.html">writer</a></li><li class="navelem"><a class="el" href="a00329.html">XmlWriterStream.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_109abe650ca0d786f12c12c5008c1abf.html">utility</a></li><li class="navelem"><a class="el" href="dir_1ddd2dccfaa6e77788f96810017e074d.html">dump</a></li><li class="navelem"><a class="el" href="a00329.html">LumexCoreDumpGenerator.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

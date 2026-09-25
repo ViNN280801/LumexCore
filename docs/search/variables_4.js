@@ -1,11 +1,20 @@
 var searchData=
 [
-  ['data_0',['data',['../a00972.html#ae10ae4ce4a599491695d96493143c5b7',1,'xml_stream_chunk::data'],['../a01056.html#a9ac62effabb72b822e5134199d23ebe0',1,'Lumex::Xml::Utility::XmlCleaner::data'],['../a01200.html#acd430afa1d14b8ad75b10f8ceb174cbb',1,'Lumex::Xml::XPath::Memory::XPathMemoryBlock::data']]],
-  ['data_5fchar_1',['data_char',['../a01132.html#a53d7636ecac71b83b2071cab192914eb',1,'Lumex::Xml::Writer::XmlBufferedWriter']]],
-  ['data_5fu16_2',['data_u16',['../a01132.html#ac7b7dc0c3ccf2884eb285be54f1b9bb3',1,'Lumex::Xml::Writer::XmlBufferedWriter']]],
-  ['data_5fu32_3',['data_u32',['../a01132.html#ae303921fd7b77b95a9e33d390ac6f6d3',1,'Lumex::Xml::Writer::XmlBufferedWriter']]],
-  ['data_5fu8_4',['data_u8',['../a01132.html#ada75c71bd9963515d4bf29d5d5e54042',1,'Lumex::Xml::Writer::XmlBufferedWriter']]],
-  ['deleter_5',['deleter',['../a01056.html#aeb68e7cb2bc35e60584ca0d10e61d4c0',1,'Lumex::Xml::Utility::XmlCleaner']]],
-  ['dirp_6',['dirp',['../a00732.html#a50f33d90d5e5786b919ceab44292c3a3',1,'Lumex::DirectoryIterator::Impl']]],
-  ['dummy_5fnode_5fset_7',['dummy_node_set',['../a00497.html#ad72121805057f14ded767ccd0da24004',1,'Lumex::Xml::XPath::Node']]]
+  ['data_0',['data',['../a01788.html#ac6df6e75c02401533cb84a7ced86b822',1,'lumex::core::fmt::Detail::string_arg_t::data'],['../a02564.html#a176c44a772ecd28f7edc89e70cdc787d',1,'xml_stream_chunk::data'],['../a02648.html#a1d7b92a76885fd307aa47c268d794ed3',1,'lumex::xml::utility::XmlCleaner::data'],['../a02792.html#aa848e282072570af57e6c0adc3bb5090',1,'lumex::xml::xpath::memory::XPathMemoryBlock::data']]],
+  ['data_5fchar_1',['data_char',['../a02724.html#a2f523b6487d296b15dd459940b672ac5',1,'lumex::xml::writer::XmlBufferedWriter']]],
+  ['data_5fu16_2',['data_u16',['../a02724.html#a09387c5c81b53196286647fcb6337a39',1,'lumex::xml::writer::XmlBufferedWriter']]],
+  ['data_5fu32_3',['data_u32',['../a02724.html#af361ef6b60883c83899f5109beae27f4',1,'lumex::xml::writer::XmlBufferedWriter']]],
+  ['data_5fu8_4',['data_u8',['../a02724.html#a2a98dd3ca2690bb1701f5b69eb835621',1,'lumex::xml::writer::XmlBufferedWriter']]],
+  ['day_5',['day',['../a01880.html#ad9096255436b39e9e3d35e85b054ce39',1,'lumex::core::fmt::Detail::civil_time_t']]],
+  ['days_6',['days',['../a01880.html#ab91e8391da3a9dd63dba48da4c11fb11',1,'lumex::core::fmt::Detail::civil_time_t']]],
+  ['default_5fvalue_7',['default_value',['../a01064.html#ae4d8c105ce3463d71321a0bf12382519',1,'lumex::applied::settings::guard::lumex_settings_key_spec_t']]],
+  ['deleter_8',['deleter',['../a02648.html#a2e5e1d091887e2da0ba8e0e8444bde4a',1,'lumex::xml::utility::XmlCleaner']]],
+  ['describe_5fframe_9',['describe_frame',['../a01008.html#a5ae646db41a0ac7d949c18720bf94c05',1,'lumex::applied::logger::logger::logger_config_t']]],
+  ['device_5fclass_10',['device_class',['../a01032.html#a50a1b980afd2d078f4128a3e089dbdd7',1,'lumex::applied::serial::enumeration::serial_port_info_t']]],
+  ['device_5fdetails_11',['device_details',['../a01032.html#adf55a585c4cbd10dfb7b1d1b2a0aa904',1,'lumex::applied::serial::enumeration::serial_port_info_t']]],
+  ['digits_12',['digits',['../a01880.html#a46041da81d633ca55305df34c61deee5',1,'lumex::core::fmt::Detail::civil_time_t']]],
+  ['dirp_13',['dirp',['../a01676.html#ab745731ba1c1f26ef5275eb68e574eff',1,'lumex::core::filesystem::fs::lumex::directory_iterator::Impl']]],
+  ['double_5fvalue_14',['double_value',['../a01796.html#a1eb4d50817e4275be070b99289b0e118',1,'lumex::core::fmt::Detail::format_arg_t']]],
+  ['driver_15',['driver',['../a01032.html#a6d5ed032bb64e7b30fecd38874171e2b',1,'lumex::applied::serial::enumeration::serial_port_info_t']]],
+  ['dummy_5fnode_5fset_16',['dummy_node_set',['../a00947.html#ae25bb9cdc14472d3df8176c4529130bf',1,'lumex::xml::xpath::node']]]
 ];

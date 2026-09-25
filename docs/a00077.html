@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexEnvironment.cpp File Reference</title>
+<title>LumexLib: LumexSerialPortEnumeration.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,60 +104,106 @@ $(function(){initNavTree('a00077.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
-  <div class="headertitle"><div class="title">LumexEnvironment.cpp File Reference</div></div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">LumexSerialPortEnumeration.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00080_source.html">LumexEnvironment.hpp</a>&quot;</code><br />
+
+<p>Enumerates serial ports and reports structured device information.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00548_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00308_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexEnvironment.cpp:</div>
+Include dependency graph for LumexSerialPortEnumeration.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00078.png" border="0" usemap="#a_lumex_environment_8cpp" alt=""/></div>
-<map name="a_lumex_environment_8cpp" id="a_lumex_environment_8cpp">
-<area shape="rect" title=" " alt="" coords="232,5,390,32"/>
-<area shape="rect" href="a00080.html" title="Defines the LumexEnvironment class for cross&#45;platform environment variable management." alt="" coords="232,80,390,107"/>
-<area shape="poly" title=" " alt="" coords="314,33,314,64,308,64,308,33"/>
-<area shape="rect" title=" " alt="" coords="5,155,126,197"/>
-<area shape="poly" title=" " alt="" coords="273,110,141,153,140,148,272,105"/>
-<area shape="rect" title=" " alt="" coords="150,163,210,189"/>
-<area shape="poly" title=" " alt="" coords="292,109,215,157,212,152,289,105"/>
-<area shape="rect" title=" " alt="" coords="234,163,302,189"/>
-<area shape="poly" title=" " alt="" coords="307,108,284,150,279,148,302,106"/>
-<area shape="rect" title=" " alt="" coords="326,163,384,189"/>
-<area shape="poly" title=" " alt="" coords="320,106,343,148,339,151,315,108"/>
-<area shape="rect" title=" " alt="" coords="408,163,462,189"/>
-<area shape="poly" title=" " alt="" coords="332,105,404,152,402,156,329,109"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="486,163,648,189"/>
-<area shape="poly" title=" " alt="" coords="352,105,513,155,512,160,350,110"/>
-</map>
+<div class="center"><img src="a00078.png" border="0" usemap="#a_lumex_serial_port_enumeration_8hpp" alt=""/></div>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a07486181f1990291c2a348de8eb4c480" id="r_a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
-<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00079.png" border="0" usemap="#a_lumex_serial_port_enumeration_8hppdep" alt=""/></div>
+</div>
+</div>
+<p><a href="a00077_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01032.html">lumex::applied::serial::enumeration::serial_port_info_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structured description of one serial port discovered on this host.  <a href="a01032.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00775.html">lumex::applied</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00808.html">lumex::applied::serial</a></td></tr>
+<tr class="memdesc:a00808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross-platform helpers for naming/resolving serial (and serial-adjacent) communication ports. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html">lumex::applied::serial::enumeration</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a2833c2a4c2aca860a7fe8ecce5e59400" id="r_a2833c2a4c2aca860a7fe8ecce5e59400"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html#a2833c2a4c2aca860a7fe8ecce5e59400">lumex::applied::serial::enumeration::serial_port_state</a> { <a class="el" href="a00809.html#a2833c2a4c2aca860a7fe8ecce5e59400aaa2d6e4f578eb0cfaba23beef76c2194">lumex::applied::serial::enumeration::free</a>
+, <a class="el" href="a00809.html#a2833c2a4c2aca860a7fe8ecce5e59400a8bc1b2f84252c3df4edd53e4aad097a7">lumex::applied::serial::enumeration::busy</a>
+, <a class="el" href="a00809.html#a2833c2a4c2aca860a7fe8ecce5e59400ae4894ca167b08880bfc35862f18575eb">lumex::applied::serial::enumeration::available</a>
+ }</td></tr>
+<tr class="memdesc:a2833c2a4c2aca860a7fe8ecce5e59400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of an open-probe performed during enumeration.  <a href="a00809.html#a2833c2a4c2aca860a7fe8ecce5e59400">More...</a><br /></td></tr>
+<tr class="separator:a2833c2a4c2aca860a7fe8ecce5e59400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a6c5dcff6ed0fae8ba912596fa56dc21e" id="r_a6c5dcff6ed0fae8ba912596fa56dc21e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html#a6c5dcff6ed0fae8ba912596fa56dc21e">lumex::applied::serial::enumeration::LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;Serial port state string is required for logging and diagnostics.&quot;) <a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> char const *<a class="el" href="a00809.html#a4ba9a6ee59dc805750a1d5fb62922320">serial_port_state_to_string</a>(<a class="el" href="a00809.html#a2833c2a4c2aca860a7fe8ecce5e59400">serial_port_state</a> state) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a6c5dcff6ed0fae8ba912596fa56dc21e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert <code>state</code> to a stable ASCII token.  <br /></td></tr>
+<tr class="separator:a6c5dcff6ed0fae8ba912596fa56dc21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37c2823b7a16bf406008f7bb4287c16" id="r_ad37c2823b7a16bf406008f7bb4287c16"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="a01032.html">serial_port_info_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html#ad37c2823b7a16bf406008f7bb4287c16">lumex::applied::serial::enumeration::enumerate_serial_ports_detailed</a> (std::string const &amp;connected_port=std::string(), bool need_to_filter_bluetooth=false)</td></tr>
+<tr class="memdesc:ad37c2823b7a16bf406008f7bb4287c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate serial ports with full <code><a class="el" href="a01032.html" title="Structured description of one serial port discovered on this host.">serial_port_info_t</a></code> records.  <br /></td></tr>
+<tr class="separator:ad37c2823b7a16bf406008f7bb4287c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4294f4b203278cebf053de42c794bdf2" id="r_a4294f4b203278cebf053de42c794bdf2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html#a4294f4b203278cebf053de42c794bdf2">lumex::applied::serial::enumeration::enumerate_serial_port_names</a> (bool need_to_filter_bluetooth=false)</td></tr>
+<tr class="memdesc:a4294f4b203278cebf053de42c794bdf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate serial port paths only.  <br /></td></tr>
+<tr class="separator:a4294f4b203278cebf053de42c794bdf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cef0e5277cd0e77cc8dcee122290605" id="r_a0cef0e5277cd0e77cc8dcee122290605"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html#a0cef0e5277cd0e77cc8dcee122290605">lumex::applied::serial::enumeration::is_bluetooth_enumerated_port</a> (std::string const &amp;port_name) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a0cef0e5277cd0e77cc8dcee122290605"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when Windows registered <code>port_name</code> through a Bluetooth enumerator (<code>BTHENUM</code> / <code>BTHLEENUM</code>).  <br /></td></tr>
+<tr class="separator:a0cef0e5277cd0e77cc8dcee122290605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a94a2885dc60a216e50441898ce62c" id="r_a72a94a2885dc60a216e50441898ce62c"><td class="memTemplParams" colspan="2">template&lt;typename CharT, typename Traits&gt; </td></tr>
+<tr class="memitem:a72a94a2885dc60a216e50441898ce62c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00809.html#a72a94a2885dc60a216e50441898ce62c">lumex::applied::serial::enumeration::print_serial_ports_info</a> (std::basic_ostream&lt; CharT, Traits &gt; &amp;os, std::vector&lt; <a class="el" href="a01032.html">serial_port_info_t</a> &gt; const &amp;infos)</td></tr>
+<tr class="memdesc:a72a94a2885dc60a216e50441898ce62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a grouped port table to <code>os</code>.  <br /></td></tr>
+<tr class="separator:a72a94a2885dc60a216e50441898ce62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a07486181f1990291c2a348de8eb4c480" name="a07486181f1990291c2a348de8eb4c480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&#160;</a></span>LUMEX_IMPLEMENTATION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Enumerates serial ports and reports structured device information. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span class="obfuscator">.nosp@m.</span>slav<span class="obfuscator">.nosp@m.</span>.semy<span class="obfuscator">.nosp@m.</span>kin@<span class="obfuscator">.nosp@m.</span>gmail<span class="obfuscator">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>Two consumer surfaces:</p><ol type="1">
+<li><code>enumerate_serial_ports_detailed</code> fills a <code>serial_port_info_t</code> per port (path, state, friendly name, USB identifiers, holder text).</li>
+<li><code>print_serial_ports_info</code> writes a grouped table to any <code>std::basic_ostream</code>.</li>
+</ol>
+<p>Platform sources:</p><ul>
+<li>Windows: SetupAPI classes <code>Ports</code> and <code>Modem</code>, registry <code>PortName</code>, <code>SPDRP_*</code> properties. Fallback: <code>COM1</code>..<code>COM255</code> via <code>CreateFileA</code>.</li>
+<li>POSIX: <code>/sys/class/tty</code> with USB sysfs attributes, then <code>/dev</code>.</li>
+</ul>
+<p>Enumeration is not thread-safe against a concurrent scan of the same device set. Opening each port to classify its state can be slow on Windows when many COM names exist.</p>
+<p>Bluetooth SPP/LE virtual COM ports (<code>BTHENUM</code> / <code>BTHLEENUM</code>) sit in the same SetupAPI <code>"Ports"</code> class as real serial devices. Opening a paired but disconnected Bluetooth port blocks in the radio stack (<code>ERROR_SEM_TIMEOUT</code>). Pass <code>need_to_filter_bluetooth = true</code> to drop those ports from the result. The default is <code>false</code> so callers that need the Bluetooth COM names still receive them. Included Bluetooth ports are not open-probed: state is <code>available</code> from SetupAPI presence only. <code>is_bluetooth_enumerated_port</code> is the same enumerator-name predicate and can be called on its own; it never opens the port. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_5107d38626b14fb64e9f92b542cf3b43.html">environment</a></li><li class="navelem"><a class="el" href="a00077.html">LumexEnvironment.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_6df2cf08c7df610d9bf032fe0440ee34.html">applied</a></li><li class="navelem"><a class="el" href="dir_8a698c9a61d530817355e041c593101e.html">serial</a></li><li class="navelem"><a class="el" href="dir_0e28f329605d3df11728fd0c96368edf.html">enumeration</a></li><li class="navelem"><a class="el" href="a00077.html">LumexSerialPortEnumeration.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::Utility::utf32_decoder&lt; opt_swap &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::applied::settings::ILumexSettings Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,96 +104,287 @@ $(function(){initNavTree('a01076.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a01073.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::Utility::utf32_decoder&lt; opt_swap &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::applied::settings::ILumexSettings Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00308_source.html">XmlUtils.hpp</a>&gt;</code></p>
+<p>Factory interface for creating and managing settings objects.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00113_source.html">ILumexSettings.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::applied::settings::ILumexSettings:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01075.png" border="0" usemap="#alumex_1_1applied_1_1settings_1_1_i_lumex_settings_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:af8a1ac20f47a31d4c474ca212c5f30f1" id="r_af8a1ac20f47a31d4c474ca212c5f30f1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8a1ac20f47a31d4c474ca212c5f30f1">type</a> = uint32_t</td></tr>
-<tr class="separator:af8a1ac20f47a31d4c474ca212c5f30f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a200d4c4c544141a40c911736e36f3dee" id="r_a200d4c4c544141a40c911736e36f3dee"><td class="memTemplParams" colspan="2">template&lt;typename Traits&gt; </td></tr>
-<tr class="memitem:a200d4c4c544141a40c911736e36f3dee"><td class="memTemplItemLeft" align="right" valign="top">static Traits::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a200d4c4c544141a40c911736e36f3dee">process</a> (uint32_t const *data, size_t size, typename Traits::value_type result, Traits)</td></tr>
-<tr class="separator:a200d4c4c544141a40c911736e36f3dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a67340373f009ef86ebf93a8c3bd15104" id="r_a67340373f009ef86ebf93a8c3bd15104"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67340373f009ef86ebf93a8c3bd15104">~ILumexSettings</a> ()=default</td></tr>
+<tr class="memdesc:a67340373f009ef86ebf93a8c3bd15104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaulted virtual destructor for polymorphic behavior.  <br /></td></tr>
+<tr class="separator:a67340373f009ef86ebf93a8c3bd15104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8c879f253d759120c2ef9dce35a6fe" id="r_a5e8c879f253d759120c2ef9dce35a6fe"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e8c879f253d759120c2ef9dce35a6fe">load</a> (std::string const &amp;<a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">path</a>)=0</td></tr>
+<tr class="memdesc:a5e8c879f253d759120c2ef9dce35a6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load settings from a configuration file.  <br /></td></tr>
+<tr class="separator:a5e8c879f253d759120c2ef9dce35a6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c93c820977807fe52ac6dbbf8f3ca4c" id="r_a8c93c820977807fe52ac6dbbf8f3ca4c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c93c820977807fe52ac6dbbf8f3ca4c">save</a> (std::string const &amp;<a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">path</a>) const =0</td></tr>
+<tr class="memdesc:a8c93c820977807fe52ac6dbbf8f3ca4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save settings to a configuration file.  <br /></td></tr>
+<tr class="separator:a8c93c820977807fe52ac6dbbf8f3ca4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd441bfa740a2514899dfecceb4dd70" id="r_a4dd441bfa740a2514899dfecceb4dd70"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dd441bfa740a2514899dfecceb4dd70">get</a> (std::string const &amp;section, std::string const &amp;key) const =0</td></tr>
+<tr class="memdesc:a4dd441bfa740a2514899dfecceb4dd70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a setting value by section and key.  <br /></td></tr>
+<tr class="separator:a4dd441bfa740a2514899dfecceb4dd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62d2c035f9f5262cc3ff5ed0aa090e6" id="r_aa62d2c035f9f5262cc3ff5ed0aa090e6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa62d2c035f9f5262cc3ff5ed0aa090e6">add</a> (std::string const &amp;section, std::string const &amp;key, std::string const &amp;value)=0</td></tr>
+<tr class="memdesc:aa62d2c035f9f5262cc3ff5ed0aa090e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set or update a setting value.  <br /></td></tr>
+<tr class="separator:aa62d2c035f9f5262cc3ff5ed0aa090e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dd9c0cca546a7b92b0250f1af966c01" id="r_a7dd9c0cca546a7b92b0250f1af966c01"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dd9c0cca546a7b92b0250f1af966c01">remove</a> (std::string const &amp;section, std::string const &amp;key)=0</td></tr>
+<tr class="memdesc:a7dd9c0cca546a7b92b0250f1af966c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a setting by section and key.  <br /></td></tr>
+<tr class="separator:a7dd9c0cca546a7b92b0250f1af966c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="af8a1ac20f47a31d4c474ca212c5f30f1" name="af8a1ac20f47a31d4c474ca212c5f30f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8a1ac20f47a31d4c474ca212c5f30f1">&#9670;&#160;</a></span>type</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Factory interface for creating and managing settings objects. </p>
+<p>This interface defines the contract for loading, saving, and manipulating application settings stored in configuration files. Implementations should handle platform-specific file operations and parsing logic. </p><dl class="section note"><dt>Note</dt><dd>Thread-safety: Implementations must ensure thread-safe access if used in a multi-threaded context. Exception safety: Implementations must ensure that no exceptions are thrown from any of the public member functions. </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a67340373f009ef86ebf93a8c3bd15104" name="a67340373f009ef86ebf93a8c3bd15104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67340373f009ef86ebf93a8c3bd15104">&#9670;&#160;</a></span>~ILumexSettings()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename opt_swap&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01076.html">Lumex::Xml::Utility::utf32_decoder</a>&lt; opt_swap &gt;::type = uint32_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a200d4c4c544141a40c911736e36f3dee" name="a200d4c4c544141a40c911736e36f3dee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a200d4c4c544141a40c911736e36f3dee">&#9670;&#160;</a></span>process()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename opt_swap&gt; </div>
-<div class="memtemplate">
-template&lt;typename Traits&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static Traits::value_type <a class="el" href="a01076.html">Lumex::Xml::Utility::utf32_decoder</a>&lt; opt_swap &gt;::process </td>
+          <td class="memname">virtual lumex::applied::settings::ILumexSettings::~ILumexSettings </td>
           <td>(</td>
-          <td class="paramtype">uint32_t const *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename Traits::value_type</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Traits</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Defaulted virtual destructor for polymorphic behavior. </p>
+
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00308_source.html">XmlUtils.hpp</a></li>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa62d2c035f9f5262cc3ff5ed0aa090e6" name="aa62d2c035f9f5262cc3ff5ed0aa090e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa62d2c035f9f5262cc3ff5ed0aa090e6">&#9670;&#160;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void lumex::applied::settings::ILumexSettings::add </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set or update a setting value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">section</td><td>The section name in the configuration file. </td></tr>
+    <tr><td class="paramname">key</td><td>The key name within the section. </td></tr>
+    <tr><td class="paramname">value</td><td>The new value to assign. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Do nothing if the section or key does not exist. </dd></dl>
+
+<p>Implemented in <a class="el" href="a01072.html#ab41fbcf2067471c42f83d90f97262497">lumex::applied::settings::ini::LumexSettingsINI</a>, <a class="el" href="a01080.html#a64597e2fc10db22592041979937c805f">lumex::applied::settings::json::LumexSettingsJSON</a>, and <a class="el" href="a01084.html#a76cc3328a14791a8606a5ad7c6ad107d">lumex::applied::settings::xml::LumexSettingsXML</a>.</p>
+
+</div>
+</div>
+<a id="a4dd441bfa740a2514899dfecceb4dd70" name="a4dd441bfa740a2514899dfecceb4dd70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd441bfa740a2514899dfecceb4dd70">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string lumex::applied::settings::ILumexSettings::get </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve a setting value by section and key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">section</td><td>The section name in the configuration file. </td></tr>
+    <tr><td class="paramname">key</td><td>The key name within the section. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The value associated with the key, or an empty string if not found. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Keys and sections are case-sensitive. </dd></dl>
+
+<p>Implemented in <a class="el" href="a01072.html#ab66c4426117f127f91da343a0dee6874">lumex::applied::settings::ini::LumexSettingsINI</a>, <a class="el" href="a01080.html#a49dbc530773789623553b1e43f3c82aa">lumex::applied::settings::json::LumexSettingsJSON</a>, and <a class="el" href="a01084.html#ae092082fd419c652cb040e956f4d1ac7">lumex::applied::settings::xml::LumexSettingsXML</a>.</p>
+
+</div>
+</div>
+<a id="a5e8c879f253d759120c2ef9dce35a6fe" name="a5e8c879f253d759120c2ef9dce35a6fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e8c879f253d759120c2ef9dce35a6fe">&#9670;&#160;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool lumex::applied::settings::ILumexSettings::load </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load settings from a configuration file. </p>
+<p>"Load" means that the settings have been successfully read from the file to the internal storage and can be retrieved by the <code>get</code> method or modified by the <code>set</code> method. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The filesystem path to the configuration file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the settings were loaded successfully, <code>false</code> otherwise. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The file format (e.g., JSON, INI) is implementation-defined. </dd></dl>
+
+<p>Implemented in <a class="el" href="a01072.html#ac4ceff05de39a4edfc61a5fa9761faaf">lumex::applied::settings::ini::LumexSettingsINI</a>, <a class="el" href="a01080.html#a9ff56a8416e53f0ff0ba378ed92d7b0e">lumex::applied::settings::json::LumexSettingsJSON</a>, and <a class="el" href="a01084.html#a22916dcbd6852f3ce472c1b6ddbd88d4">lumex::applied::settings::xml::LumexSettingsXML</a>.</p>
+
+</div>
+</div>
+<a id="a7dd9c0cca546a7b92b0250f1af966c01" name="a7dd9c0cca546a7b92b0250f1af966c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd9c0cca546a7b92b0250f1af966c01">&#9670;&#160;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void lumex::applied::settings::ILumexSettings::remove </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a setting by section and key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">section</td><td>The section name in the configuration file. </td></tr>
+    <tr><td class="paramname">key</td><td>The key name within the section. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Do nothing if the section or key does not exist. </dd></dl>
+
+<p>Implemented in <a class="el" href="a01072.html#aed77b6ab2c588e2e9cc09dd9c5e89d16">lumex::applied::settings::ini::LumexSettingsINI</a>, <a class="el" href="a01080.html#a23ec75266d2eb3424989459654c826d3">lumex::applied::settings::json::LumexSettingsJSON</a>, and <a class="el" href="a01084.html#a65944a9863143befa675c32a0fa8882f">lumex::applied::settings::xml::LumexSettingsXML</a>.</p>
+
+</div>
+</div>
+<a id="a8c93c820977807fe52ac6dbbf8f3ca4c" name="a8c93c820977807fe52ac6dbbf8f3ca4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c93c820977807fe52ac6dbbf8f3ca4c">&#9670;&#160;</a></span>save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool lumex::applied::settings::ILumexSettings::save </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Save settings to a configuration file. </p>
+<p>"Save" means that the settings have been successfully written to the file from the internal storage. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The filesystem path to the target configuration file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the settings were saved successfully, <code>false</code> otherwise. </dd></dl>
+
+<p>Implemented in <a class="el" href="a01072.html#a578e706fcf6a2af1298eb96e7f0a5e00">lumex::applied::settings::ini::LumexSettingsINI</a>, <a class="el" href="a01080.html#a059aa5cbbf1da0eb690bde60bc210a03">lumex::applied::settings::json::LumexSettingsJSON</a>, and <a class="el" href="a01084.html#a76db138b67dad81464041f5a4a0f4179">lumex::applied::settings::xml::LumexSettingsXML</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00113_source.html">ILumexSettings.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00490.html">Utility</a></li><li class="navelem"><a class="el" href="a01076.html">utf32_decoder</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00775.html">applied</a></li><li class="navelem"><a class="el" href="a00816.html">settings</a></li><li class="navelem"><a class="el" href="a01076.html">ILumexSettings</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

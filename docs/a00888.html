@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: safe_compare_impl_helper&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename clean_type_t&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename clean_type_t&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename clean_type_t&lt; T &gt;::type, typename clean_type_t&lt; U &gt;::type &gt;::value &gt;::type &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::core::utility::callback Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,437 +104,49 @@ $(function(){initNavTree('a00888.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="a00885.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">safe_compare_impl_helper&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename clean_type_t&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename clean_type_t&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename clean_type_t&lt; T &gt;::type, typename clean_type_t&lt; U &gt;::type &gt;::value &gt;::type &gt; Struct Template Reference</div></div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">lumex::core::utility::callback Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Специализация для целочисленных типов  
- <a href="#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00203_source.html">LumexSafeNumericComparator.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a8548878ed4383f00f35414210ab58af9" id="r_a8548878ed4383f00f35414210ab58af9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8548878ed4383f00f35414210ab58af9">clean_T</a> = typename <a class="el" href="a00864.html">clean_type_t</a>&lt;T&gt;::type</td></tr>
-<tr class="separator:a8548878ed4383f00f35414210ab58af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a613ae4e3fa732cc8e55dfd3798319836" id="r_a613ae4e3fa732cc8e55dfd3798319836"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a613ae4e3fa732cc8e55dfd3798319836">clean_U</a> = typename <a class="el" href="a00864.html">clean_type_t</a>&lt;U&gt;::type</td></tr>
-<tr class="separator:a613ae4e3fa732cc8e55dfd3798319836"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a682412a29f6cb68bf40b518486f9f283" id="r_a682412a29f6cb68bf40b518486f9f283"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a682412a29f6cb68bf40b518486f9f283">CommonType</a> = typename std::common_type&lt;<a class="el" href="#a8548878ed4383f00f35414210ab58af9">clean_T</a>, <a class="el" href="#a613ae4e3fa732cc8e55dfd3798319836">clean_U</a>&gt;::type</td></tr>
-<tr class="memdesc:a682412a29f6cb68bf40b518486f9f283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общий тип для безопасного преобразования  <br /></td></tr>
-<tr class="separator:a682412a29f6cb68bf40b518486f9f283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02136.html">LumexCallbackSlot</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primary template; only the function-type specialization below is defined.  <a href="a02136.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02140.html">LumexCallbackSlot&lt; Tag, Result(Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a057e2dfaa1b228f971d7f0f1f47544fa" id="r_a057e2dfaa1b228f971d7f0f1f47544fa"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a057e2dfaa1b228f971d7f0f1f47544fa">compare</a> (T current, U other) noexcept</td></tr>
-<tr class="memdesc:a057e2dfaa1b228f971d7f0f1f47544fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение &gt;= для целочисленных типов  <br /></td></tr>
-<tr class="separator:a057e2dfaa1b228f971d7f0f1f47544fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefa1ee0a8970d9ff059b96dbf333fc35" id="r_aefa1ee0a8970d9ff059b96dbf333fc35"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefa1ee0a8970d9ff059b96dbf333fc35">greater_equal</a> (T current, U other) noexcept</td></tr>
-<tr class="memdesc:aefa1ee0a8970d9ff059b96dbf333fc35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение &gt;= для целочисленных типов  <br /></td></tr>
-<tr class="separator:aefa1ee0a8970d9ff059b96dbf333fc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35fe53c877805c8b7c4deee4bc104f91" id="r_a35fe53c877805c8b7c4deee4bc104f91"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35fe53c877805c8b7c4deee4bc104f91">less_equal</a> (T current, U other) noexcept</td></tr>
-<tr class="memdesc:a35fe53c877805c8b7c4deee4bc104f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение &lt;= для целочисленных типов  <br /></td></tr>
-<tr class="separator:a35fe53c877805c8b7c4deee4bc104f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad86ce39307beefd985c06524d4335877" id="r_ad86ce39307beefd985c06524d4335877"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad86ce39307beefd985c06524d4335877">less</a> (T current, U other) noexcept</td></tr>
-<tr class="memdesc:ad86ce39307beefd985c06524d4335877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение &lt; для целочисленных типов  <br /></td></tr>
-<tr class="separator:ad86ce39307beefd985c06524d4335877"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7013d961690628bf01182544211b8a3" id="r_ae7013d961690628bf01182544211b8a3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7013d961690628bf01182544211b8a3">greater</a> (T current, U other) noexcept</td></tr>
-<tr class="memdesc:ae7013d961690628bf01182544211b8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение &gt; для целочисленных типов  <br /></td></tr>
-<tr class="separator:ae7013d961690628bf01182544211b8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac10a8b85e448215bfe610cde22f09649" id="r_ac10a8b85e448215bfe610cde22f09649"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac10a8b85e448215bfe610cde22f09649">equal</a> (T current, U other) noexcept</td></tr>
-<tr class="memdesc:ac10a8b85e448215bfe610cde22f09649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение == для целочисленных типов  <br /></td></tr>
-<tr class="separator:ac10a8b85e448215bfe610cde22f09649"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fd9d26699903b9da7960a78b5af1892" id="r_a3fd9d26699903b9da7960a78b5af1892"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fd9d26699903b9da7960a78b5af1892">not_equal</a> (T current, U other) noexcept</td></tr>
-<tr class="memdesc:a3fd9d26699903b9da7960a78b5af1892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение != для целочисленных типов  <br /></td></tr>
-<tr class="separator:a3fd9d26699903b9da7960a78b5af1892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aae9a86eeace996140fe4d3d2e2e9ed82" id="r_aae9a86eeace996140fe4d3d2e2e9ed82"><td class="memTemplParams" colspan="2">template&lt;typename Tag, typename Result, typename... Args&gt; </td></tr>
+<tr class="memitem:aae9a86eeace996140fe4d3d2e2e9ed82"><td class="memTemplItemLeft" align="right" valign="top">std::atomic&lt; Result(*)(Args...)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aae9a86eeace996140fe4d3d2e2e9ed82">LumexCallbackSlot&lt; Tag, Result(Args...)&gt;::m_slot</a> { nullptr }</td></tr>
+<tr class="separator:aae9a86eeace996140fe4d3d2e2e9ed82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T, typename U&gt;<br />
-struct safe_compare_impl_helper&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename clean_type_t&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename clean_type_t&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename clean_type_t&lt; T &gt;::type, typename clean_type_t&lt; U &gt;::type &gt;::value &gt;::type &gt;</div><p>Специализация для целочисленных типов </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Первый целочисленный тип </td></tr>
-    <tr><td class="paramname">U</td><td>Второй целочисленный тип</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Реализует безопасное сравнение между разными целочисленными типами. Проверяет диапазоны значений для предотвращения переполнения при преобразовании типов. </p><dl class="section note"><dt>Note</dt><dd>Проверяет границы типов перед преобразованием, предотвращает неопределенное поведение </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a8548878ed4383f00f35414210ab58af9" name="a8548878ed4383f00f35414210ab58af9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8548878ed4383f00f35414210ab58af9">&#9670;&#160;</a></span>clean_T</h2>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aae9a86eeace996140fe4d3d2e2e9ed82" name="aae9a86eeace996140fe4d3d2e2e9ed82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae9a86eeace996140fe4d3d2e2e9ed82">&#9670;&#160;</a></span>LumexCallbackSlot&lt; Tag, Result(Args...)&gt;::m_slot</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, typename U&gt; </div>
+template&lt;typename Tag, typename Result, typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type, typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &gt;::type &gt;::clean_T = typename <a class="el" href="a00864.html">clean_type_t</a>&lt;T&gt;::type</td>
+          <td class="memname">std::atomic&lt;Result (*) (Args...)&gt; <a class="el" href="a02136.html">lumex::core::utility::callback::LumexCallbackSlot</a>&lt; Tag, Result(Args...)&gt;::m_slot { nullptr }</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a613ae4e3fa732cc8e55dfd3798319836" name="a613ae4e3fa732cc8e55dfd3798319836"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a613ae4e3fa732cc8e55dfd3798319836">&#9670;&#160;</a></span>clean_U</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename U&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type, typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &gt;::type &gt;::clean_U = typename <a class="el" href="a00864.html">clean_type_t</a>&lt;U&gt;::type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a682412a29f6cb68bf40b518486f9f283" name="a682412a29f6cb68bf40b518486f9f283"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a682412a29f6cb68bf40b518486f9f283">&#9670;&#160;</a></span>CommonType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename U&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type, typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &gt;::type &gt;::CommonType = typename std::common_type&lt;<a class="el" href="#a8548878ed4383f00f35414210ab58af9">clean_T</a>, <a class="el" href="#a613ae4e3fa732cc8e55dfd3798319836">clean_U</a>&gt;::type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Общий тип для безопасного преобразования </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a057e2dfaa1b228f971d7f0f1f47544fa" name="a057e2dfaa1b228f971d7f0f1f47544fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a057e2dfaa1b228f971d7f0f1f47544fa">&#9670;&#160;</a></span>compare()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename U&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type, typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &gt;::type &gt;::compare </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">U</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Безопасное сравнение &gt;= для целочисленных типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение типа T </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения типа U </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current &gt;= other</dd></dl>
-<p>Проверяет диапазоны значений перед преобразованием для предотвращения переполнения. Если other превышает максимальное значение T, возвращает false. Если other меньше минимального значения T, возвращает true. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00888_a057e2dfaa1b228f971d7f0f1f47544fa_icgraph.png" border="0" usemap="#aa00888_a057e2dfaa1b228f971d7f0f1f47544fa_icgraph" alt=""/></div>
-<map name="aa00888_a057e2dfaa1b228f971d7f0f1f47544fa_icgraph" id="aa00888_a057e2dfaa1b228f971d7f0f1f47544fa_icgraph">
-<area shape="rect" title="Безопасное сравнение &gt;= для целочисленных типов" alt="" coords="302,5,546,160"/>
-<area shape="rect" href="a00888.html#aefa1ee0a8970d9ff059b96dbf333fc35" title="Безопасное сравнение &gt;= для целочисленных типов" alt="" coords="5,5,254,160"/>
-<area shape="poly" title=" " alt="" coords="286,85,254,85,254,80,286,80"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ac10a8b85e448215bfe610cde22f09649" name="ac10a8b85e448215bfe610cde22f09649"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac10a8b85e448215bfe610cde22f09649">&#9670;&#160;</a></span>equal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename U&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type, typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &gt;::type &gt;::equal </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">U</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Безопасное сравнение == для целочисленных типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение типа T </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения типа U </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current == other</dd></dl>
-<p>Проверяет диапазоны значений перед преобразованием для предотвращения переполнения. Если other не помещается в диапазон T, возвращает false. </p>
-
-</div>
-</div>
-<a id="ae7013d961690628bf01182544211b8a3" name="ae7013d961690628bf01182544211b8a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7013d961690628bf01182544211b8a3">&#9670;&#160;</a></span>greater()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename U&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type, typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &gt;::type &gt;::greater </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">U</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Безопасное сравнение &gt; для целочисленных типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение типа T </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения типа U </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current &gt; other</dd></dl>
-<p>Проверяет диапазоны значений перед преобразованием для предотвращения переполнения. Если other превышает максимальное значение T, возвращает false. Если other меньше минимального значения T, возвращает true. </p>
-
-</div>
-</div>
-<a id="aefa1ee0a8970d9ff059b96dbf333fc35" name="aefa1ee0a8970d9ff059b96dbf333fc35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefa1ee0a8970d9ff059b96dbf333fc35">&#9670;&#160;</a></span>greater_equal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename U&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type, typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &gt;::type &gt;::greater_equal </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">U</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Безопасное сравнение &gt;= для целочисленных типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение типа T </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения типа U </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current &gt;= other </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00888_aefa1ee0a8970d9ff059b96dbf333fc35_cgraph.png" border="0" usemap="#aa00888_aefa1ee0a8970d9ff059b96dbf333fc35_cgraph" alt=""/></div>
-<map name="aa00888_aefa1ee0a8970d9ff059b96dbf333fc35_cgraph" id="aa00888_aefa1ee0a8970d9ff059b96dbf333fc35_cgraph">
-<area shape="rect" title="Безопасное сравнение &gt;= для целочисленных типов" alt="" coords="5,5,254,160"/>
-<area shape="rect" href="a00888.html#a057e2dfaa1b228f971d7f0f1f47544fa" title="Безопасное сравнение &gt;= для целочисленных типов" alt="" coords="302,5,546,160"/>
-<area shape="poly" title=" " alt="" coords="254,80,286,80,286,85,254,85"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ad86ce39307beefd985c06524d4335877" name="ad86ce39307beefd985c06524d4335877"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad86ce39307beefd985c06524d4335877">&#9670;&#160;</a></span>less()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename U&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type, typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &gt;::type &gt;::less </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">U</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Безопасное сравнение &lt; для целочисленных типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение типа T </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения типа U </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current &lt; other</dd></dl>
-<p>Проверяет диапазоны значений перед преобразованием для предотвращения переполнения. Если other превышает максимальное значение T, возвращает true. Если other меньше минимального значения T, возвращает false. </p>
-
-</div>
-</div>
-<a id="a35fe53c877805c8b7c4deee4bc104f91" name="a35fe53c877805c8b7c4deee4bc104f91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35fe53c877805c8b7c4deee4bc104f91">&#9670;&#160;</a></span>less_equal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename U&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type, typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &gt;::type &gt;::less_equal </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">U</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Безопасное сравнение &lt;= для целочисленных типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение типа T </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения типа U </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current &lt;= other</dd></dl>
-<p>Проверяет диапазоны значений перед преобразованием для предотвращения переполнения. Если other превышает максимальное значение T, возвращает true. Если other меньше минимального значения T, возвращает false. </p>
-
-</div>
-</div>
-<a id="a3fd9d26699903b9da7960a78b5af1892" name="a3fd9d26699903b9da7960a78b5af1892"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fd9d26699903b9da7960a78b5af1892">&#9670;&#160;</a></span>not_equal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename U&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type, typename <a class="el" href="a00864.html">clean_type_t</a>&lt; U &gt;::type &gt;::value &gt;::type &gt;::not_equal </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">U</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Безопасное сравнение != для целочисленных типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение типа T </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения типа U </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current != other</dd></dl>
-<p>Проверяет диапазоны значений перед преобразованием для предотвращения переполнения. Если other не помещается в диапазон T, возвращает true. </p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00203_source.html">LumexSafeNumericComparator.hpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00888.html">safe_compare_impl_helper&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; typename clean_type_t&lt; T &gt;::type &gt;::value &amp;&amp;std::is_integral&lt; typename clean_type_t&lt; U &gt;::type &gt;::value &amp;&amp;!std::is_same&lt; typename clean_type_t&lt; T &gt;::type, typename clean_type_t&lt; U &gt;::type &gt;::value &gt;::type &gt;</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00826.html">core</a></li><li class="navelem"><a class="el" href="a00886.html">utility</a></li><li class="navelem"><a class="el" href="a00888.html">callback</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

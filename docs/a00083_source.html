@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: DefaultPaths.hpp Source File</title>
+<title>LumexLib: LumexSerialPort.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -103,26 +103,80 @@ $(function(){initNavTree('a00083_source.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">DefaultPaths.hpp</div></div>
+  <div class="headertitle"><div class="title">LumexSerialPort.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00083.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef DEFAULT_PATHS_HPP</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define DEFAULT_PATHS_HPP</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="a00083.html#ae819fe30ef0a48d959e7c0385fc64402">    4</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code hl_variable" href="a00083.html#ae819fe30ef0a48d959e7c0385fc64402">KDEFAULT_CRASHES_DIR_PATH</a>    = <span class="stringliteral">&quot;crashes&quot;</span>;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="a00083.html#a484d83bdcb379a8a66dfa42e468fdcbb">    5</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code hl_variable" href="a00083.html#a484d83bdcb379a8a66dfa42e468fdcbb">KDEFAULT_MINIDUMP_PREFIX</a>     = <span class="stringliteral">&quot;dump_&quot;</span>;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="a00083.html#a2d23e4c6ff026ae2e1b0b0c7808bde52">    6</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code hl_variable" href="a00083.html#a2d23e4c6ff026ae2e1b0b0c7808bde52">KDEFAULT_CRASH_REPORT_PREFIX</a> = <span class="stringliteral">&quot;crash_report_&quot;</span>;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif </span><span class="comment">// !DEFAULT_PATHS_HPP</span></div>
-<div class="ttc" id="aa00083_html_a2d23e4c6ff026ae2e1b0b0c7808bde52"><div class="ttname"><a href="a00083.html#a2d23e4c6ff026ae2e1b0b0c7808bde52">KDEFAULT_CRASH_REPORT_PREFIX</a></div><div class="ttdeci">static constexpr char const  * KDEFAULT_CRASH_REPORT_PREFIX</div><div class="ttdef"><b>Definition</b> DefaultPaths.hpp:6</div></div>
-<div class="ttc" id="aa00083_html_a484d83bdcb379a8a66dfa42e468fdcbb"><div class="ttname"><a href="a00083.html#a484d83bdcb379a8a66dfa42e468fdcbb">KDEFAULT_MINIDUMP_PREFIX</a></div><div class="ttdeci">static constexpr char const  * KDEFAULT_MINIDUMP_PREFIX</div><div class="ttdef"><b>Definition</b> DefaultPaths.hpp:5</div></div>
-<div class="ttc" id="aa00083_html_ae819fe30ef0a48d959e7c0385fc64402"><div class="ttname"><a href="a00083.html#ae819fe30ef0a48d959e7c0385fc64402">KDEFAULT_CRASHES_DIR_PATH</a></div><div class="ttdeci">static constexpr char const  * KDEFAULT_CRASHES_DIR_PATH</div><div class="ttdef"><b>Definition</b> DefaultPaths.hpp:4</div></div>
+<a href="a00083.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#ifndef LUMEX_APPLIED_SERIAL_PORT_HPP</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define LUMEX_APPLIED_SERIAL_PORT_HPP</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#include &quot;<a class="code" href="a00548.html">lumex/LumexExport.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#include &quot;<a class="code" href="a00332.html">lumex/core/utility/macros/LumexConstantMacros.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#include &quot;<a class="code" href="a00338.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00774.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00775.html">applied</a></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00808.html">serial</a></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00811.html">port</a></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>{</div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="a00813.html">   87</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00813.html">Constants</a></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="a00813.html#ae67f90821ae38d7e3fa43230a875da47">   89</a></span><a class="code hl_define" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t <a class="code hl_variable" href="a00813.html#ae67f90821ae38d7e3fa43230a875da47">KSERIAL_PORT_CHANNEL_TYPE</a></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    = 0x100; </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="a00813.html#adeb755541e0892f8ef2a63916279e0a2">   91</a></span><a class="code hl_define" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t <a class="code hl_variable" href="a00813.html#adeb755541e0892f8ef2a63916279e0a2">KSERIAL_PORT_SYNC_CHANNEL_TYPE</a></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    = 0x101; </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="a00813.html#a278db05e5c15402d266c009c3a14ae44">   93</a></span><a class="code hl_define" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t <a class="code hl_variable" href="a00813.html#a278db05e5c15402d266c009c3a14ae44">KNET_TCP_CHANNEL_TYPE</a></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    = 0x810; </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="a00813.html#a13f993aed4a93972fe10bc1bcbc8e050">   95</a></span><a class="code hl_define" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t <a class="code hl_variable" href="a00813.html#a13f993aed4a93972fe10bc1bcbc8e050">KNET_UDP_CHANNEL_TYPE</a></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    = 0x820; </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>} <span class="comment">// namespace Constants</span></div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><a class="code hl_define" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>std::string <a class="code hl_function" href="a00811.html#ab09ab9261b3038641b2bda9c7f63d821">resolve_serial_port_path</a> (</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    std::string <span class="keyword">const</span> &amp;portName, std::uint32_t channelType,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    std::function&lt;std::string ()&gt; <span class="keyword">const</span> &amp;getIpAddressCallback = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    std::function&lt;<span class="keywordtype">void</span> (std::string <span class="keyword">const</span> &amp;)&gt; <span class="keyword">const</span> &amp;logWarningCallback</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    = <span class="keyword">nullptr</span>) <a class="code hl_define" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>} <span class="comment">// namespace port</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>} <span class="comment">// namespace serial</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>} <span class="comment">// namespace applied</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>} <span class="comment">// namespace lumex</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_APPLIED_SERIAL_PORT_HPP</span></div>
+<div class="ttc" id="aa00332_html"><div class="ttname"><a href="a00332.html">LumexConstantMacros.hpp</a></div></div>
+<div class="ttc" id="aa00332_html_a294baa8c8ad4246130f881cd1da7cbe1"><div class="ttname"><a href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a></div><div class="ttdeci">#define LUMEX_CONST_NUM</div><div class="ttdef"><b>Definition</b> LumexConstantMacros.hpp:157</div></div>
+<div class="ttc" id="aa00338_html"><div class="ttname"><a href="a00338.html">LumexKeywords.hpp</a></div></div>
+<div class="ttc" id="aa00338_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition</b> LumexKeywords.hpp:69</div></div>
+<div class="ttc" id="aa00548_html"><div class="ttname"><a href="a00548.html">LumexExport.hpp</a></div></div>
+<div class="ttc" id="aa00548_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition</b> LumexExport.hpp:108</div></div>
+<div class="ttc" id="aa00774_html"><div class="ttname"><a href="a00774.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition</b> LumexCPUVectorizationCapabilities.cpp:27</div></div>
+<div class="ttc" id="aa00775_html"><div class="ttname"><a href="a00775.html">lumex::applied</a></div><div class="ttdef"><b>Definition</b> LumexCPUVectorizationCapabilities.cpp:29</div></div>
+<div class="ttc" id="aa00808_html"><div class="ttname"><a href="a00808.html">lumex::applied::serial</a></div><div class="ttdoc">Cross-platform helpers for naming/resolving serial (and serial-adjacent) communication ports.</div><div class="ttdef"><b>Definition</b> LumexSerialPortEnumeration.cpp:53</div></div>
+<div class="ttc" id="aa00811_html"><div class="ttname"><a href="a00811.html">lumex::applied::serial::port</a></div><div class="ttdef"><b>Definition</b> LumexSerialPort.cpp:16</div></div>
+<div class="ttc" id="aa00811_html_ab09ab9261b3038641b2bda9c7f63d821"><div class="ttname"><a href="a00811.html#ab09ab9261b3038641b2bda9c7f63d821">lumex::applied::serial::port::resolve_serial_port_path</a></div><div class="ttdeci">LUMEX_PUBLIC_API std::string resolve_serial_port_path(std::string const &amp;portName, std::uint32_t channelType, std::function&lt; std::string()&gt; const &amp;getIpAddressCallback, std::function&lt; void(std::string const &amp;)&gt; const &amp;logWarningCallback) LUMEX_NOEXCEPT</div><div class="ttdoc">Converts a short serial-port name into the full, platform-specific path a channel needs in order to a...</div><div class="ttdef"><b>Definition</b> LumexSerialPort.cpp:43</div></div>
+<div class="ttc" id="aa00813_html"><div class="ttname"><a href="a00813.html">lumex::applied::serial::port::Constants</a></div><div class="ttdoc">Numeric channel-type identifiers this module understands.</div><div class="ttdef"><b>Definition</b> LumexSerialPort.hpp:88</div></div>
+<div class="ttc" id="aa00813_html_a13f993aed4a93972fe10bc1bcbc8e050"><div class="ttname"><a href="a00813.html#a13f993aed4a93972fe10bc1bcbc8e050">lumex::applied::serial::port::Constants::KNET_UDP_CHANNEL_TYPE</a></div><div class="ttdeci">LUMEX_CONST_NUM std::uint32_t KNET_UDP_CHANNEL_TYPE</div><div class="ttdoc">UDP network channel.</div><div class="ttdef"><b>Definition</b> LumexSerialPort.hpp:96</div></div>
+<div class="ttc" id="aa00813_html_a278db05e5c15402d266c009c3a14ae44"><div class="ttname"><a href="a00813.html#a278db05e5c15402d266c009c3a14ae44">lumex::applied::serial::port::Constants::KNET_TCP_CHANNEL_TYPE</a></div><div class="ttdeci">LUMEX_CONST_NUM std::uint32_t KNET_TCP_CHANNEL_TYPE</div><div class="ttdoc">TCP network channel.</div><div class="ttdef"><b>Definition</b> LumexSerialPort.hpp:94</div></div>
+<div class="ttc" id="aa00813_html_adeb755541e0892f8ef2a63916279e0a2"><div class="ttname"><a href="a00813.html#adeb755541e0892f8ef2a63916279e0a2">lumex::applied::serial::port::Constants::KSERIAL_PORT_SYNC_CHANNEL_TYPE</a></div><div class="ttdeci">LUMEX_CONST_NUM std::uint32_t KSERIAL_PORT_SYNC_CHANNEL_TYPE</div><div class="ttdoc">Synchronous serial port.</div><div class="ttdef"><b>Definition</b> LumexSerialPort.hpp:92</div></div>
+<div class="ttc" id="aa00813_html_ae67f90821ae38d7e3fa43230a875da47"><div class="ttname"><a href="a00813.html#ae67f90821ae38d7e3fa43230a875da47">lumex::applied::serial::port::Constants::KSERIAL_PORT_CHANNEL_TYPE</a></div><div class="ttdeci">LUMEX_CONST_NUM std::uint32_t KSERIAL_PORT_CHANNEL_TYPE</div><div class="ttdoc">Asynchronous serial port.</div><div class="ttdef"><b>Definition</b> LumexSerialPort.hpp:90</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_6413726bd6d3aec0e0911b90031b05f8.html">exceptions</a></li><li class="navelem"><a class="el" href="dir_6417190310dfb8af81128bb0d0176812.html">crash</a></li><li class="navelem"><a class="el" href="a00083.html">DefaultPaths.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_6df2cf08c7df610d9bf032fe0440ee34.html">applied</a></li><li class="navelem"><a class="el" href="dir_8a698c9a61d530817355e041c593101e.html">serial</a></li><li class="navelem"><a class="el" href="dir_abfca509473238a02fa4dfbe54f6ad75.html">port</a></li><li class="navelem"><a class="el" href="a00083.html">LumexSerialPort.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

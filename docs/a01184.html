@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::XPath::Document::document_order_comparator Struct Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc16_ibm3740_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,92 +104,166 @@ $(function(){initNavTree('a01184.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="a01181.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::XPath::Document::document_order_comparator Struct Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::core::crc::parametric::crc16_ibm3740_spec_t Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Functor for comparing two <a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a> objects based on their document order.  
+<p>CRC-16/IBM-3740: width=16 poly=0x1021 init=0xffff refin=false refout=false xorout=0.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00347_source.html">XPathDocumentOrderComparator.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:aa0d0c8105346683721ff28844954de55" id="r_aa0d0c8105346683721ff28844954de55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0d0c8105346683721ff28844954de55">operator()</a> (<a class="el" href="a01216.html">XPathNode</a> const &amp;lhs, <a class="el" href="a01216.html">XPathNode</a> const &amp;rhs) const</td></tr>
-<tr class="memdesc:aa0d0c8105346683721ff28844954de55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a> objects for their document order.  <br /></td></tr>
-<tr class="separator:aa0d0c8105346683721ff28844954de55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a86c805f70162d367f8771aa54a43c02f" id="r_a86c805f70162d367f8771aa54a43c02f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86c805f70162d367f8771aa54a43c02f">ValueType</a> = std::uint16_t</td></tr>
+<tr class="separator:a86c805f70162d367f8771aa54a43c02f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a0650d8b5afe7a7b39f9bac4ce59815b6" id="r_a0650d8b5afe7a7b39f9bac4ce59815b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0650d8b5afe7a7b39f9bac4ce59815b6">kWidth</a> = 16</td></tr>
+<tr class="separator:a0650d8b5afe7a7b39f9bac4ce59815b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ed73ac16cb84a182c80e1fc7e999f7" id="r_a38ed73ac16cb84a182c80e1fc7e999f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38ed73ac16cb84a182c80e1fc7e999f7">kPoly</a> = 0x1021U</td></tr>
+<tr class="separator:a38ed73ac16cb84a182c80e1fc7e999f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c432124749883a80498e94de242af3a" id="r_a3c432124749883a80498e94de242af3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c432124749883a80498e94de242af3a">kInit</a> = 0xFFFFU</td></tr>
+<tr class="separator:a3c432124749883a80498e94de242af3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3b77f3200ac15cbc43a7b6d8c9ded1" id="r_a7e3b77f3200ac15cbc43a7b6d8c9ded1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e3b77f3200ac15cbc43a7b6d8c9ded1">kRefIn</a> = false</td></tr>
+<tr class="separator:a7e3b77f3200ac15cbc43a7b6d8c9ded1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba144b3dc2e80efb2f9ac5aa2ac4477" id="r_adba144b3dc2e80efb2f9ac5aa2ac4477"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adba144b3dc2e80efb2f9ac5aa2ac4477">kRefOut</a> = false</td></tr>
+<tr class="separator:adba144b3dc2e80efb2f9ac5aa2ac4477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaca8020904483a72923bd386136e063" id="r_aeaca8020904483a72923bd386136e063"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeaca8020904483a72923bd386136e063">kXorOut</a> = 0x0000U</td></tr>
+<tr class="separator:aeaca8020904483a72923bd386136e063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a856dc52945d37177531ab44ecd200562" id="r_a856dc52945d37177531ab44ecd200562"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a856dc52945d37177531ab44ecd200562">kCatalogCheck</a> = 0x29B1U</td></tr>
+<tr class="separator:a856dc52945d37177531ab44ecd200562"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Functor for comparing two <a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a> objects based on their document order. </p>
-<p>This comparator provides the logic for sorting or comparing <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> objects according to the XML <a class="el" href="a00509.html">Document</a> Order. It first attempts an optimized comparison using <code>document_buffer_order</code> and falls back to a more robust, recursive comparison using <code>node_is_before</code> if the optimization is not applicable. It correctly handles comparisons between element nodes, attribute nodes, and combinations thereof. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa0d0c8105346683721ff28844954de55" name="aa0d0c8105346683721ff28844954de55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0d0c8105346683721ff28844954de55">&#9670;&#160;</a></span>operator()()</h2>
+<div class="textblock"><p>CRC-16/IBM-3740: width=16 poly=0x1021 init=0xffff refin=false refout=false xorout=0. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-16/IBM-3740 </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a86c805f70162d367f8771aa54a43c02f" name="a86c805f70162d367f8771aa54a43c02f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c805f70162d367f8771aa54a43c02f">&#9670;&#160;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool Lumex::Xml::XPath::Document::document_order_comparator::operator() </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01216.html">XPathNode</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a01216.html">XPathNode</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;) const</td>
+          <td class="memname">using <a class="el" href="#a86c805f70162d367f8771aa54a43c02f">lumex::core::crc::parametric::crc16_ibm3740_spec_t::ValueType</a> = std::uint16_t</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Compares two <a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a> objects for their document order. </p>
-<p>This operator overload defines the comparison logic for <code><a class="el" href="a01184.html" title="Functor for comparing two XPathNode objects based on their document order.">document_order_comparator</a></code>. It prioritizes an optimized buffer order comparison if available, otherwise it performs a full document order traversal. Special handling is included for attribute nodes which always appear after their parent element but before any of their parent's children. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>The left-hand side <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> to compare. </td></tr>
-    <tr><td class="paramname">rhs</td><td>The right-hand side <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> to compare. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if <code>lhs</code> comes before <code>rhs</code> in document order, <code>false</code> otherwise. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01184_aa0d0c8105346683721ff28844954de55_cgraph.png" border="0" usemap="#aa01184_aa0d0c8105346683721ff28844954de55_cgraph" alt=""/></div>
-<map name="aa01184_aa0d0c8105346683721ff28844954de55_cgraph" id="aa01184_aa0d0c8105346683721ff28844954de55_cgraph">
-<area shape="rect" title="Compares two XPathNode objects for their document order." alt="" coords="5,35,188,93"/>
-<area shape="rect" href="a00509.html#af2042817ce2d250aa6b4406cb3cb3175" title="Retrieves a pointer to a buffer location for document order comparison optimization." alt="" coords="236,8,457,51"/>
-<area shape="poly" title=" " alt="" coords="188,49,220,44,220,50,188,54"/>
-<area shape="rect" href="a00509.html#a6f9a315d1047dbe0681d362c3c3a1398" title="Determines if ln_node comes before rn_node in overall document order." alt="" coords="258,76,435,119"/>
-<area shape="poly" title=" " alt="" coords="188,74,242,81,242,86,188,79"/>
-<area shape="rect" href="a00494.html#a874bdaeb509d189772973ba76f93c637" title="Retrieves a reference to the XmlDocumentBase object that owns a given object (node or attribute)." alt="" coords="514,5,673,48"/>
-<area shape="poly" title=" " alt="" coords="457,25,499,25,499,30,458,31"/>
-<area shape="rect" href="a00509.html#abe2a7a4678afbef0edb0e88476c2fa4b" title="Determines if ln_node comes before rn_node among siblings in document order." alt="" coords="505,72,682,131"/>
-<area shape="poly" title=" " alt="" coords="436,96,490,97,490,102,436,101"/>
-</map>
 </div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a856dc52945d37177531ab44ecd200562" name="a856dc52945d37177531ab44ecd200562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a856dc52945d37177531ab44ecd200562">&#9670;&#160;</a></span>kCatalogCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint16_t lumex::core::crc::parametric::crc16_ibm3740_spec_t::kCatalogCheck = 0x29B1U</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="a00347_source.html">XPathDocumentOrderComparator.hpp</a></li>
-<li><a class="el" href="a00344.html">XPathDocumentOrderComparator.cpp</a></li>
+<a id="a3c432124749883a80498e94de242af3a" name="a3c432124749883a80498e94de242af3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c432124749883a80498e94de242af3a">&#9670;&#160;</a></span>kInit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_ibm3740_spec_t::kInit = 0xFFFFU</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38ed73ac16cb84a182c80e1fc7e999f7" name="a38ed73ac16cb84a182c80e1fc7e999f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ed73ac16cb84a182c80e1fc7e999f7">&#9670;&#160;</a></span>kPoly</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_ibm3740_spec_t::kPoly = 0x1021U</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e3b77f3200ac15cbc43a7b6d8c9ded1" name="a7e3b77f3200ac15cbc43a7b6d8c9ded1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e3b77f3200ac15cbc43a7b6d8c9ded1">&#9670;&#160;</a></span>kRefIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc16_ibm3740_spec_t::kRefIn = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adba144b3dc2e80efb2f9ac5aa2ac4477" name="adba144b3dc2e80efb2f9ac5aa2ac4477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba144b3dc2e80efb2f9ac5aa2ac4477">&#9670;&#160;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc16_ibm3740_spec_t::kRefOut = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0650d8b5afe7a7b39f9bac4ce59815b6" name="a0650d8b5afe7a7b39f9bac4ce59815b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0650d8b5afe7a7b39f9bac4ce59815b6">&#9670;&#160;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc16_ibm3740_spec_t::kWidth = 16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeaca8020904483a72923bd386136e063" name="aeaca8020904483a72923bd386136e063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaca8020904483a72923bd386136e063">&#9670;&#160;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_ibm3740_spec_t::kXorOut = 0x0000U</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00496.html">XPath</a></li><li class="navelem"><a class="el" href="a00509.html">Document</a></li><li class="navelem"><a class="el" href="a01184.html">document_order_comparator</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00826.html">core</a></li><li class="navelem"><a class="el" href="a00837.html">crc</a></li><li class="navelem"><a class="el" href="a00840.html">parametric</a></li><li class="navelem"><a class="el" href="a01184.html">crc16_ibm3740_spec_t</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

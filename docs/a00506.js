@@ -1,6 +1,5 @@
 var a00506 =
 [
-    [ "axis_to_type", "a01168.html", "a01168" ],
-    [ "XPathAstNode", "a01172.html", "a01172" ],
-    [ "axis_to_type< N >::axis", "a00506.html#af65633071ef9e75b4e9c1da33144301f", null ]
+    [ "main", "a00506.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ],
+    [ "stringify", "a00506.html#a644d51beb3d991564cc81242883fd17a", null ]
 ];

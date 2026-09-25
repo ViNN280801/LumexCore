@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::Node::XmlNodeIterator Class Reference</title>
+<title>LumexLib: lumex::applied::json::normalization::LumexJsonSchemaNormalizer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,150 +104,86 @@ $(function(){initNavTree('a00996.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="a00993.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::Node::XmlNodeIterator Class Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::applied::json::normalization::LumexJsonSchemaNormalizer Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A bidirectional iterator for traversing direct child nodes of an <code><a class="el" href="a00992.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code>.  
+<p>Shares the schema walker and the strict/non-strict error policy between concrete normalizers.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00263_source.html">XmlNode.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00035_source.html">LumexJsonSchemaNormalizer.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::applied::json::normalization::LumexJsonSchemaNormalizer:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00995.png" border="0" usemap="#alumex_1_1applied_1_1json_1_1normalization_1_1_lumex_json_schema_normalizer_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for lumex::applied::json::normalization::LumexJsonSchemaNormalizer:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00994.png" border="0" usemap="#alumex_1_1applied_1_1json_1_1normalization_1_1_lumex_json_schema_normalizer_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a3616c26f4708f68953f7f7e493e92ef1" id="r_a3616c26f4708f68953f7f7e493e92ef1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3616c26f4708f68953f7f7e493e92ef1">difference_type</a> = ptrdiff_t</td></tr>
-<tr class="separator:a3616c26f4708f68953f7f7e493e92ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d91ea9ab41d0ed7902f9309c01fb046" id="r_a0d91ea9ab41d0ed7902f9309c01fb046"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d91ea9ab41d0ed7902f9309c01fb046">value_type</a> = <a class="el" href="a00992.html">XmlNode</a></td></tr>
-<tr class="separator:a0d91ea9ab41d0ed7902f9309c01fb046"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbba6212f5a73bc84773b2ab3262bc47" id="r_abbba6212f5a73bc84773b2ab3262bc47"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbba6212f5a73bc84773b2ab3262bc47">pointer</a> = <a class="el" href="a00992.html">XmlNode</a> *</td></tr>
-<tr class="separator:abbba6212f5a73bc84773b2ab3262bc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68db4dd5c91f6270e816619f96449676" id="r_a68db4dd5c91f6270e816619f96449676"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68db4dd5c91f6270e816619f96449676">reference</a> = <a class="el" href="a00992.html">XmlNode</a> &amp;</td></tr>
-<tr class="separator:a68db4dd5c91f6270e816619f96449676"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b328574fb0dc2878f74a6d732e1336c" id="r_a4b328574fb0dc2878f74a6d732e1336c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b328574fb0dc2878f74a6d732e1336c">iterator_category</a> = std::bidirectional_iterator_tag</td></tr>
-<tr class="separator:a4b328574fb0dc2878f74a6d732e1336c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af108f6b869f3aaa413e2ad6c7f8cd257" id="r_af108f6b869f3aaa413e2ad6c7f8cd257"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af108f6b869f3aaa413e2ad6c7f8cd257">XmlNodeIterator</a> ()=default</td></tr>
-<tr class="memdesc:af108f6b869f3aaa413e2ad6c7f8cd257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Constructs a singular (invalid) iterator.  <br /></td></tr>
-<tr class="separator:af108f6b869f3aaa413e2ad6c7f8cd257"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3bd43fea1234236afd742c5193f511e" id="r_ac3bd43fea1234236afd742c5193f511e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3bd43fea1234236afd742c5193f511e">XmlNodeIterator</a> (<a class="el" href="a00992.html">XmlNode</a> const &amp;node)</td></tr>
-<tr class="memdesc:ac3bd43fea1234236afd742c5193f511e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an iterator which points to the specified node.  <br /></td></tr>
-<tr class="separator:ac3bd43fea1234236afd742c5193f511e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad16581a59b0f6cb82e501fdadc0da97e" id="r_ad16581a59b0f6cb82e501fdadc0da97e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad16581a59b0f6cb82e501fdadc0da97e">operator==</a> (<a class="el" href="a00996.html">XmlNodeIterator</a> const &amp;rhs) const</td></tr>
-<tr class="memdesc:ad16581a59b0f6cb82e501fdadc0da97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a00996.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> objects for equality.  <br /></td></tr>
-<tr class="separator:ad16581a59b0f6cb82e501fdadc0da97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a345d5423f86434f461d9c58c57dd3d48" id="r_a345d5423f86434f461d9c58c57dd3d48"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a345d5423f86434f461d9c58c57dd3d48">operator!=</a> (<a class="el" href="a00996.html">XmlNodeIterator</a> const &amp;rhs) const</td></tr>
-<tr class="memdesc:a345d5423f86434f461d9c58c57dd3d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a00996.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> objects for inequality.  <br /></td></tr>
-<tr class="separator:a345d5423f86434f461d9c58c57dd3d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea5593228e611856f9418e8be7d56475" id="r_aea5593228e611856f9418e8be7d56475"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00992.html">XmlNode</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea5593228e611856f9418e8be7d56475">operator*</a> () const</td></tr>
-<tr class="memdesc:aea5593228e611856f9418e8be7d56475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereferences the iterator to provide access to the current <code><a class="el" href="a00992.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object.  <br /></td></tr>
-<tr class="separator:aea5593228e611856f9418e8be7d56475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe3f77510e7bfd7a6741af7d4a5477f7" id="r_abe3f77510e7bfd7a6741af7d4a5477f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00992.html">XmlNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe3f77510e7bfd7a6741af7d4a5477f7">operator-&gt;</a> () const</td></tr>
-<tr class="memdesc:abe3f77510e7bfd7a6741af7d4a5477f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereferences the iterator to provide pointer-like access to the current <code><a class="el" href="a00992.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object.  <br /></td></tr>
-<tr class="separator:abe3f77510e7bfd7a6741af7d4a5477f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e1763b5e327a01b8fbd13115ca10a99" id="r_a5e1763b5e327a01b8fbd13115ca10a99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00996.html">XmlNodeIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e1763b5e327a01b8fbd13115ca10a99">operator++</a> ()</td></tr>
-<tr class="memdesc:a5e1763b5e327a01b8fbd13115ca10a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-increments the iterator to move to the next child node.  <br /></td></tr>
-<tr class="separator:a5e1763b5e327a01b8fbd13115ca10a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9f2871c8cee0ca068a9bed2fc3ea869" id="r_ad9f2871c8cee0ca068a9bed2fc3ea869"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00996.html">XmlNodeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9f2871c8cee0ca068a9bed2fc3ea869">operator++</a> (int)</td></tr>
-<tr class="memdesc:ad9f2871c8cee0ca068a9bed2fc3ea869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-increments the iterator to move to the next child node.  <br /></td></tr>
-<tr class="separator:ad9f2871c8cee0ca068a9bed2fc3ea869"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a544dd74a00f91e2996a7ee86db5c1132" id="r_a544dd74a00f91e2996a7ee86db5c1132"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00996.html">XmlNodeIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a544dd74a00f91e2996a7ee86db5c1132">operator--</a> ()</td></tr>
-<tr class="memdesc:a544dd74a00f91e2996a7ee86db5c1132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-decrements the iterator to move to the previous child node.  <br /></td></tr>
-<tr class="separator:a544dd74a00f91e2996a7ee86db5c1132"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c6ae878dd271d6f255c17dc8d585835" id="r_a9c6ae878dd271d6f255c17dc8d585835"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00996.html">XmlNodeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c6ae878dd271d6f255c17dc8d585835">operator--</a> (int)</td></tr>
-<tr class="memdesc:a9c6ae878dd271d6f255c17dc8d585835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-decrements the iterator to move to the previous child node.  <br /></td></tr>
-<tr class="separator:a9c6ae878dd271d6f255c17dc8d585835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f4dde669dafce82c9c5768a1cf23ee5" id="r_a6f4dde669dafce82c9c5768a1cf23ee5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f4dde669dafce82c9c5768a1cf23ee5">validate</a> (<a class="el" href="a02108.html">lumex::core::string_view::view::LumexStringView</a> raw) const =0</td></tr>
+<tr class="memdesc:a6f4dde669dafce82c9c5768a1cf23ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks without building anything. Strict: throws on the first violation. Non-strict: never throws for a violation (the usual implementation forwards to the <code>error</code> overload and ignores it).  <br /></td></tr>
+<tr class="separator:a6f4dde669dafce82c9c5768a1cf23ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679b69c6f8d7e29b190061702a88af03" id="r_a679b69c6f8d7e29b190061702a88af03"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a679b69c6f8d7e29b190061702a88af03">validate</a> (<a class="el" href="a02108.html">lumex::core::string_view::view::LumexStringView</a> raw, std::exception_ptr &amp;error) const =0</td></tr>
+<tr class="memdesc:a679b69c6f8d7e29b190061702a88af03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same check with a non-throwing option; see <code><a class="el" href="a00992.html#a55776e2b94b12a57fd8b1c64e850352c" title="Returns the canonical document. A strict implementation throws on the first violation (including unpa...">ILumexJsonNormalizer::normalize</a></code> for the meaning of <code>error</code>.  <br /></td></tr>
+<tr class="separator:a679b69c6f8d7e29b190061702a88af03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609eadc7b818703eb9f5036dd528f306" id="r_a609eadc7b818703eb9f5036dd528f306"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a609eadc7b818703eb9f5036dd528f306">is_strict</a> () const <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a609eadc7b818703eb9f5036dd528f306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether violations throw (<code>true</code>) or are reported (<code>false</code>).  <br /></td></tr>
+<tr class="separator:a609eadc7b818703eb9f5036dd528f306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00992"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_a00992')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00992.html">lumex::applied::json::normalization::ILumexJsonNormalizer</a></td></tr>
+<tr class="memitem:a67d2467937fd7eed290938a31b2b7733 inherit pub_methods_a00992" id="r_a67d2467937fd7eed290938a31b2b7733"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00992.html#a67d2467937fd7eed290938a31b2b7733">~ILumexJsonNormalizer</a> ()=default</td></tr>
+<tr class="separator:a67d2467937fd7eed290938a31b2b7733 inherit pub_methods_a00992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55776e2b94b12a57fd8b1c64e850352c inherit pub_methods_a00992" id="r_a55776e2b94b12a57fd8b1c64e850352c"><td class="memItemLeft" align="right" valign="top">virtual nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00992.html#a55776e2b94b12a57fd8b1c64e850352c">normalize</a> (<a class="el" href="a02108.html">lumex::core::string_view::view::LumexStringView</a> raw) const =0</td></tr>
+<tr class="memdesc:a55776e2b94b12a57fd8b1c64e850352c inherit pub_methods_a00992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the canonical document. A strict implementation throws on the first violation (including unparsable text); a non-strict one returns a <code>null</code> document instead of throwing.  <br /></td></tr>
+<tr class="separator:a55776e2b94b12a57fd8b1c64e850352c inherit pub_methods_a00992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf53bbebdf6b8f9ca547657c0e8f617 inherit pub_methods_a00992" id="r_abcf53bbebdf6b8f9ca547657c0e8f617"><td class="memItemLeft" align="right" valign="top">virtual nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00992.html#abcf53bbebdf6b8f9ca547657c0e8f617">normalize</a> (<a class="el" href="a02108.html">lumex::core::string_view::view::LumexStringView</a> raw, std::exception_ptr &amp;error) const =0</td></tr>
+<tr class="memdesc:abcf53bbebdf6b8f9ca547657c0e8f617 inherit pub_methods_a00992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <code>normalize(raw)</code> with a non-throwing option.  <br /></td></tr>
+<tr class="separator:abcf53bbebdf6b8f9ca547657c0e8f617 inherit pub_methods_a00992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a88b009b38305b720f82e3bfc4695b70f" id="r_a88b009b38305b720f82e3bfc4695b70f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88b009b38305b720f82e3bfc4695b70f">XmlNode</a></td></tr>
-<tr class="separator:a88b009b38305b720f82e3bfc4695b70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a0093a38d730c3b69223f7da3df124866" id="r_a0093a38d730c3b69223f7da3df124866"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0093a38d730c3b69223f7da3df124866">get_exception_message</a> (std::exception_ptr const &amp;error) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a0093a38d730c3b69223f7da3df124866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text of the exception held by <code>error</code>.  <br /></td></tr>
+<tr class="separator:a0093a38d730c3b69223f7da3df124866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aedd3c33c43541f0a7ee954e540280fe6" id="r_aedd3c33c43541f0a7ee954e540280fe6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedd3c33c43541f0a7ee954e540280fe6">LumexJsonSchemaNormalizer</a> (bool strict) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="separator:aedd3c33c43541f0a7ee954e540280fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e6f91a4cc39ea650825173f0406128" id="r_ad4e6f91a4cc39ea650825173f0406128"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4e6f91a4cc39ea650825173f0406128">report_or_rethrow</a> (std::exception_ptr &amp;error) const</td></tr>
+<tr class="memdesc:ad4e6f91a4cc39ea650825173f0406128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call only from inside a <code>catch</code> block.  <br /></td></tr>
+<tr class="separator:ad4e6f91a4cc39ea650825173f0406128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a8ae52f1cd83ea06bf9c6cb850704d156" id="r_a8ae52f1cd83ea06bf9c6cb850704d156"><td class="memItemLeft" align="right" valign="top">static nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ae52f1cd83ea06bf9c6cb850704d156">parse</a> (<a class="el" href="a02108.html">lumex::core::string_view::view::LumexStringView</a> raw)</td></tr>
+<tr class="memdesc:a8ae52f1cd83ea06bf9c6cb850704d156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses raw text.  <br /></td></tr>
+<tr class="separator:a8ae52f1cd83ea06bf9c6cb850704d156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b52d105932cbbf487e7111f269f13f9" id="r_a8b52d105932cbbf487e7111f269f13f9"><td class="memItemLeft" align="right" valign="top">static nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b52d105932cbbf487e7111f269f13f9">process_against_schema</a> (nlohmann::json const &amp;schema, nlohmann::json const &amp;input, lumex::applied::json::schema::LumexJsonSchemaCheckMode mode, std::string const &amp;<a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">path</a>=&quot;$&quot;)</td></tr>
+<tr class="memdesc:a8b52d105932cbbf487e7111f269f13f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single entry into the shared walker; <code>mode</code> decides whether the normalized tree is built. Prefer it over the two wrappers below when <code><a class="el" href="a00992.html#a55776e2b94b12a57fd8b1c64e850352c" title="Returns the canonical document. A strict implementation throws on the first violation (including unpa...">normalize()</a></code> and <code><a class="el" href="#a6f4dde669dafce82c9c5768a1cf23ee5" title="Checks without building anything. Strict: throws on the first violation. Non-strict: never throws for...">validate()</a></code> share one walk over a larger structure (for example a loop over elements).  <br /></td></tr>
+<tr class="separator:a8b52d105932cbbf487e7111f269f13f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6a03c5740ff75f5149ea6fdee9dc06" id="r_a6d6a03c5740ff75f5149ea6fdee9dc06"><td class="memItemLeft" align="right" valign="top">static nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d6a03c5740ff75f5149ea6fdee9dc06">normalize_against_schema</a> (nlohmann::json const &amp;schema, nlohmann::json const &amp;input, std::string const &amp;<a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">path</a>=&quot;$&quot;)</td></tr>
+<tr class="memdesc:a6d6a03c5740ff75f5149ea6fdee9dc06"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>validate_and_normalize</code>: returns the built tree.  <br /></td></tr>
+<tr class="separator:a6d6a03c5740ff75f5149ea6fdee9dc06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1384265ea61be8a83ba651e8fb89a8c5" id="r_a1384265ea61be8a83ba651e8fb89a8c5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1384265ea61be8a83ba651e8fb89a8c5">validate_against_schema</a> (nlohmann::json const &amp;schema, nlohmann::json const &amp;input, std::string const &amp;<a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">path</a>=&quot;$&quot;)</td></tr>
+<tr class="memdesc:a1384265ea61be8a83ba651e8fb89a8c5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>validate_only</code>: throws on the first violation, builds nothing.  <br /></td></tr>
+<tr class="separator:a1384265ea61be8a83ba651e8fb89a8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A bidirectional iterator for traversing direct child nodes of an <code><a class="el" href="a00992.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code>. </p>
-<p>This iterator allows standard C++ algorithm usage and range-based for loops over a node's children. It wraps an <code><a class="el" href="a00992.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object (<code>m_wrap</code>) and keeps a reference to its parent for reverse iteration and boundary checks. </p><dl class="section note"><dt>Note</dt><dd>The iterator holds a mutable <code><a class="el" href="a00992.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> to allow its internal pointer to be updated during traversal (<code>operator++</code>, <code>operator--</code>). </dd></dl>
-<dl class="section see"><dt>See also</dt><dd>XmlNode::begin() </dd>
-<dd>
-XmlNode::end() </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a3616c26f4708f68953f7f7e493e92ef1" name="a3616c26f4708f68953f7f7e493e92ef1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3616c26f4708f68953f7f7e493e92ef1">&#9670;&#160;</a></span>difference_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a3616c26f4708f68953f7f7e493e92ef1">Lumex::Xml::Node::XmlNodeIterator::difference_type</a> = ptrdiff_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4b328574fb0dc2878f74a6d732e1336c" name="a4b328574fb0dc2878f74a6d732e1336c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b328574fb0dc2878f74a6d732e1336c">&#9670;&#160;</a></span>iterator_category</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a4b328574fb0dc2878f74a6d732e1336c">Lumex::Xml::Node::XmlNodeIterator::iterator_category</a> = std::bidirectional_iterator_tag</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abbba6212f5a73bc84773b2ab3262bc47" name="abbba6212f5a73bc84773b2ab3262bc47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbba6212f5a73bc84773b2ab3262bc47">&#9670;&#160;</a></span>pointer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#abbba6212f5a73bc84773b2ab3262bc47">Lumex::Xml::Node::XmlNodeIterator::pointer</a> = <a class="el" href="a00992.html">XmlNode</a> *</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a68db4dd5c91f6270e816619f96449676" name="a68db4dd5c91f6270e816619f96449676"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68db4dd5c91f6270e816619f96449676">&#9670;&#160;</a></span>reference</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a68db4dd5c91f6270e816619f96449676">Lumex::Xml::Node::XmlNodeIterator::reference</a> = <a class="el" href="a00992.html">XmlNode</a> &amp;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0d91ea9ab41d0ed7902f9309c01fb046" name="a0d91ea9ab41d0ed7902f9309c01fb046"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d91ea9ab41d0ed7902f9309c01fb046">&#9670;&#160;</a></span>value_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a0d91ea9ab41d0ed7902f9309c01fb046">Lumex::Xml::Node::XmlNodeIterator::value_type</a> = <a class="el" href="a00992.html">XmlNode</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af108f6b869f3aaa413e2ad6c7f8cd257" name="af108f6b869f3aaa413e2ad6c7f8cd257"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af108f6b869f3aaa413e2ad6c7f8cd257">&#9670;&#160;</a></span>XmlNodeIterator() <span class="overload">[1/2]</span></h2>
+<div class="textblock"><p>Shares the schema walker and the strict/non-strict error policy between concrete normalizers. </p>
+<p>Deliberately abstract: which schema applies and which legacy fields to rewrite depend on the concrete operation, so <code><a class="el" href="a00992.html#a55776e2b94b12a57fd8b1c64e850352c" title="Returns the canonical document. A strict implementation throws on the first violation (including unpa...">normalize()</a></code> (from <code><a class="el" href="a00992.html" title="Parses raw JSON text, checks it and returns the canonical document.">ILumexJsonNormalizer</a></code>) and <code><a class="el" href="#a6f4dde669dafce82c9c5768a1cf23ee5" title="Checks without building anything. Strict: throws on the first violation. Non-strict: never throws for...">validate()</a></code> are left to subclasses. A subclass typically parses with <code><a class="el" href="#a8ae52f1cd83ea06bf9c6cb850704d156" title="Parses raw text.">parse()</a></code>, rewrites legacy forms, then calls <code><a class="el" href="#a6d6a03c5740ff75f5149ea6fdee9dc06" title="validate_and_normalize: returns the built tree.">normalize_against_schema()</a></code> or <code><a class="el" href="#a1384265ea61be8a83ba651e8fb89a8c5" title="validate_only: throws on the first violation, builds nothing.">validate_against_schema()</a></code> inside a <code>try</code> block whose <code>catch</code> calls <code>report_or_rethrow(error)</code>. Checking without normalization is <code><a class="el" href="a03803.html" title="Parses raw JSON text and walks it against one schema tree in validate_only mode. It never normalizes ...">LumexJsonSchemaValidator</a></code>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aedd3c33c43541f0a7ee954e540280fe6" name="aedd3c33c43541f0a7ee954e540280fe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd3c33c43541f0a7ee954e540280fe6">&#9670;&#160;</a></span>LumexJsonSchemaNormalizer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,112 +192,30 @@ XmlNode::end() </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Lumex::Xml::Node::XmlNodeIterator::XmlNodeIterator </td>
+          <td class="memname">lumex::applied::json::normalization::LumexJsonSchemaNormalizer::LumexJsonSchemaNormalizer </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>strict</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Default constructor. Constructs a singular (invalid) iterator. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00996_af108f6b869f3aaa413e2ad6c7f8cd257_cgraph.png" border="0" usemap="#aa00996_af108f6b869f3aaa413e2ad6c7f8cd257_cgraph" alt=""/></div>
-<map name="aa00996_af108f6b869f3aaa413e2ad6c7f8cd257_cgraph" id="aa00996_af108f6b869f3aaa413e2ad6c7f8cd257_cgraph">
-<area shape="rect" title="Default constructor. Constructs a singular (invalid) iterator." alt="" coords="5,139,198,181"/>
-<area shape="poly" title=" " alt="" coords="56,139,54,129,62,120,78,114,102,112,127,114,143,121,141,126,126,120,101,117,79,119,65,124,59,130,61,138"/>
-<area shape="rect" href="a00996.html#a345d5423f86434f461d9c58c57dd3d48" title="Compares two XmlNodeIterator objects for inequality." alt="" coords="246,5,438,48"/>
-<area shape="poly" title=" " alt="" coords="141,136,189,103,244,70,287,52,289,56,247,74,192,107,144,140"/>
-<area shape="rect" href="a00996.html#aea5593228e611856f9418e8be7d56475" title="Dereferences the iterator to provide access to the current XmlNode object." alt="" coords="246,72,438,115"/>
-<area shape="poly" title=" " alt="" coords="180,136,247,117,248,122,181,141"/>
-<area shape="rect" href="a00996.html#a5e1763b5e327a01b8fbd13115ca10a99" title="Pre&#45;increments the iterator to move to the next child node." alt="" coords="246,139,438,181"/>
-<area shape="poly" title=" " alt="" coords="198,157,230,157,230,163,198,163"/>
-<area shape="rect" href="a00996.html#a544dd74a00f91e2996a7ee86db5c1132" title="Pre&#45;decrements the iterator to move to the previous child node." alt="" coords="246,205,438,248"/>
-<area shape="poly" title=" " alt="" coords="181,179,248,198,247,203,180,184"/>
-<area shape="rect" href="a00996.html#abe3f77510e7bfd7a6741af7d4a5477f7" title="Dereferences the iterator to provide pointer&#45;like access to the current XmlNode object." alt="" coords="246,272,438,315"/>
-<area shape="poly" title=" " alt="" coords="131,180,183,219,247,258,259,263,256,268,244,262,180,223,128,184"/>
-<area shape="rect" href="a00996.html#a88b009b38305b720f82e3bfc4695b70f" title=" " alt="" coords="246,363,438,405"/>
-<area shape="poly" title=" " alt="" coords="120,180,173,248,209,288,247,325,286,352,283,357,244,329,205,292,169,252,116,184"/>
-<area shape="poly" title=" " alt="" coords="246,51,184,89,132,130,129,126,181,85,244,46"/>
-<area shape="poly" title=" " alt="" coords="296,363,295,353,302,344,318,338,342,336,367,338,383,345,381,350,366,344,342,341,319,343,305,348,300,354,302,362"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00996_af108f6b869f3aaa413e2ad6c7f8cd257_icgraph.png" border="0" usemap="#aa00996_af108f6b869f3aaa413e2ad6c7f8cd257_icgraph" alt=""/></div>
-<map name="aa00996_af108f6b869f3aaa413e2ad6c7f8cd257_icgraph" id="aa00996_af108f6b869f3aaa413e2ad6c7f8cd257_icgraph">
-<area shape="rect" title="Default constructor. Constructs a singular (invalid) iterator." alt="" coords="246,72,438,115"/>
-<area shape="poly" title=" " alt="" coords="381,59,366,53,342,51,319,53,305,57,300,63,302,71,296,72,295,62,302,53,318,47,342,45,367,48,383,54"/>
-<area shape="rect" href="a00996.html#a345d5423f86434f461d9c58c57dd3d48" title="Compares two XmlNodeIterator objects for inequality." alt="" coords="5,5,198,48"/>
-<area shape="poly" title=" " alt="" coords="230,74,153,51,155,46,231,69"/>
-<area shape="rect" href="a00996.html#ad9f2871c8cee0ca068a9bed2fc3ea869" title="Post&#45;increments the iterator to move to the next child node." alt="" coords="5,72,198,115"/>
-<area shape="poly" title=" " alt="" coords="230,96,198,96,198,91,230,91"/>
-<area shape="rect" href="a00996.html#a9c6ae878dd271d6f255c17dc8d585835" title="Post&#45;decrements the iterator to move to the previous child node." alt="" coords="5,139,198,181"/>
-<area shape="poly" title=" " alt="" coords="249,122,182,141,181,135,248,117"/>
-<area shape="rect" href="a00996.html#ad16581a59b0f6cb82e501fdadc0da97e" title="Compares two XmlNodeIterator objects for equality." alt="" coords="5,205,198,248"/>
-<area shape="poly" title=" " alt="" coords="304,127,255,162,199,196,173,207,171,202,196,191,252,158,301,122"/>
-<area shape="poly" title=" " alt="" coords="214,46,290,69,289,74,212,51"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ac3bd43fea1234236afd742c5193f511e" name="ac3bd43fea1234236afd742c5193f511e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3bd43fea1234236afd742c5193f511e">&#9670;&#160;</a></span>XmlNodeIterator() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> XmlNodeIterator::XmlNodeIterator </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00992.html">XmlNode</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs an iterator which points to the specified node. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>The <code><a class="el" href="a00992.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object to which the iterator should point.</td></tr>
+    <tr><td class="paramname">strict</td><td><code>true</code>: throw on the first violation. <code>false</code>: report it through <code>report_or_rethrow</code>. </td></tr>
   </table>
   </dd>
 </dl>
-<p>This constructor initializes the iterator to point to <code>node</code> and stores its parent for bidirectional traversal. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00996_ac3bd43fea1234236afd742c5193f511e_cgraph.png" border="0" usemap="#aa00996_ac3bd43fea1234236afd742c5193f511e_cgraph" alt=""/></div>
-<map name="aa00996_ac3bd43fea1234236afd742c5193f511e_cgraph" id="aa00996_ac3bd43fea1234236afd742c5193f511e_cgraph">
-<area shape="rect" title="Constructs an iterator which points to the specified node." alt="" coords="5,29,198,72"/>
-<area shape="rect" href="a00996.html#a88b009b38305b720f82e3bfc4695b70f" title=" " alt="" coords="246,29,438,72"/>
-<area shape="poly" title=" " alt="" coords="198,48,230,48,230,53,198,53"/>
-<area shape="poly" title=" " alt="" coords="296,29,295,19,302,10,318,5,342,3,367,5,383,11,381,16,366,10,342,8,319,10,305,15,300,21,302,28"/>
-</map>
-</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a345d5423f86434f461d9c58c57dd3d48" name="a345d5423f86434f461d9c58c57dd3d48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a345d5423f86434f461d9c58c57dd3d48">&#9670;&#160;</a></span>operator!=()</h2>
+<a id="a0093a38d730c3b69223f7da3df124866" name="a0093a38d730c3b69223f7da3df124866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0093a38d730c3b69223f7da3df124866">&#9670;&#160;</a></span>get_exception_message()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -370,73 +224,26 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool XmlNodeIterator::operator!= </td>
+          <td class="memname">static std::string lumex::applied::json::normalization::LumexJsonSchemaNormalizer::get_exception_message </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00996.html">XmlNodeIterator</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">std::exception_ptr const &amp;</td>          <td class="paramname"><span class="paramname"><em>error</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compares two <code><a class="el" href="a00996.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> objects for inequality. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>The <code><a class="el" href="a00996.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> to compare with. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the iterators point to different nodes or belong to different parents, <code>false</code> otherwise. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00996_a345d5423f86434f461d9c58c57dd3d48_cgraph.png" border="0" usemap="#aa00996_a345d5423f86434f461d9c58c57dd3d48_cgraph" alt=""/></div>
-<map name="aa00996_a345d5423f86434f461d9c58c57dd3d48_cgraph" id="aa00996_a345d5423f86434f461d9c58c57dd3d48_cgraph">
-<area shape="rect" title="Compares two XmlNodeIterator objects for inequality." alt="" coords="5,139,198,181"/>
-<area shape="rect" href="a00996.html#af108f6b869f3aaa413e2ad6c7f8cd257" title="Default constructor. Constructs a singular (invalid) iterator." alt="" coords="246,139,438,181"/>
-<area shape="poly" title=" " alt="" coords="198,166,230,166,230,172,198,172"/>
-<area shape="poly" title=" " alt="" coords="245,154,213,154,213,148,245,148"/>
-<area shape="poly" title=" " alt="" coords="296,139,295,129,302,120,318,114,342,112,367,114,383,121,381,126,366,120,342,117,319,119,305,124,300,130,302,138"/>
-<area shape="rect" href="a00996.html#aea5593228e611856f9418e8be7d56475" title="Dereferences the iterator to provide access to the current XmlNode object." alt="" coords="486,5,678,48"/>
-<area shape="poly" title=" " alt="" coords="368,136,420,97,485,58,497,52,499,57,487,62,423,101,371,140"/>
-<area shape="rect" href="a00996.html#a5e1763b5e327a01b8fbd13115ca10a99" title="Pre&#45;increments the iterator to move to the next child node." alt="" coords="486,72,678,115"/>
-<area shape="poly" title=" " alt="" coords="420,136,487,117,489,122,422,141"/>
-<area shape="rect" href="a00996.html#a544dd74a00f91e2996a7ee86db5c1132" title="Pre&#45;decrements the iterator to move to the previous child node." alt="" coords="486,139,678,181"/>
-<area shape="poly" title=" " alt="" coords="438,157,470,157,470,163,438,163"/>
-<area shape="rect" href="a00996.html#abe3f77510e7bfd7a6741af7d4a5477f7" title="Dereferences the iterator to provide pointer&#45;like access to the current XmlNode object." alt="" coords="486,205,678,248"/>
-<area shape="poly" title=" " alt="" coords="422,179,489,198,487,203,420,184"/>
-<area shape="rect" href="a00996.html#a88b009b38305b720f82e3bfc4695b70f" title=" " alt="" coords="486,296,678,339"/>
-<area shape="poly" title=" " alt="" coords="374,179,487,258,532,286,529,290,485,262,371,184"/>
-<area shape="poly" title=" " alt="" coords="537,296,535,286,542,277,558,271,582,269,608,272,623,278,621,283,607,277,582,275,559,277,545,281,540,287,542,295"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00996_a345d5423f86434f461d9c58c57dd3d48_icgraph.png" border="0" usemap="#aa00996_a345d5423f86434f461d9c58c57dd3d48_icgraph" alt=""/></div>
-<map name="aa00996_a345d5423f86434f461d9c58c57dd3d48_icgraph" id="aa00996_a345d5423f86434f461d9c58c57dd3d48_icgraph">
-<area shape="rect" title="Compares two XmlNodeIterator objects for inequality." alt="" coords="486,72,678,115"/>
-<area shape="rect" href="a00996.html#af108f6b869f3aaa413e2ad6c7f8cd257" title="Default constructor. Constructs a singular (invalid) iterator." alt="" coords="246,72,438,115"/>
-<area shape="poly" title=" " alt="" coords="470,105,438,105,438,100,471,100"/>
-<area shape="poly" title=" " alt="" coords="454,82,486,82,486,87,454,87"/>
-<area shape="poly" title=" " alt="" coords="381,59,366,53,342,51,319,53,305,57,300,63,302,71,296,72,295,62,302,53,318,47,342,45,367,48,383,54"/>
-<area shape="rect" href="a00996.html#ad9f2871c8cee0ca068a9bed2fc3ea869" title="Post&#45;increments the iterator to move to the next child node." alt="" coords="5,5,198,48"/>
-<area shape="poly" title=" " alt="" coords="248,70,181,51,182,46,249,65"/>
-<area shape="rect" href="a00996.html#a9c6ae878dd271d6f255c17dc8d585835" title="Post&#45;decrements the iterator to move to the previous child node." alt="" coords="5,72,198,115"/>
-<area shape="poly" title=" " alt="" coords="230,96,198,96,198,91,230,91"/>
-<area shape="rect" href="a00996.html#ad16581a59b0f6cb82e501fdadc0da97e" title="Compares two XmlNodeIterator objects for equality." alt="" coords="5,139,198,181"/>
-<area shape="poly" title=" " alt="" coords="249,122,182,141,181,135,248,117"/>
-</map>
-</div>
+<p>Text of the exception held by <code>error</code>. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>what()</code> of a <code>std::exception</code>, <code>"&lt;unknown exception&gt;"</code> for any other type, and <code>""</code> for a null <code>error</code>. </dd></dl>
 
 </div>
 </div>
-<a id="aea5593228e611856f9418e8be7d56475" name="aea5593228e611856f9418e8be7d56475"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea5593228e611856f9418e8be7d56475">&#9670;&#160;</a></span>operator*()</h2>
+<a id="a609eadc7b818703eb9f5036dd528f306" name="a609eadc7b818703eb9f5036dd528f306"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609eadc7b818703eb9f5036dd528f306">&#9670;&#160;</a></span>is_strict()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -445,7 +252,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00992.html">XmlNode</a> &amp; XmlNodeIterator::operator* </td>
+          <td class="memname">bool lumex::applied::json::normalization::LumexJsonSchemaNormalizer::is_strict </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -458,198 +265,111 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Dereferences the iterator to provide access to the current <code><a class="el" href="a00992.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object. </p>
-<dl class="section return"><dt>Returns</dt><dd>A non-const reference to the <code><a class="el" href="a00992.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object the iterator currently points to. </dd></dl>
+<p>Whether violations throw (<code>true</code>) or are reported (<code>false</code>). </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00996_a609eadc7b818703eb9f5036dd528f306_cgraph.png" border="0" usemap="#aa00996_a609eadc7b818703eb9f5036dd528f306_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00996_a609eadc7b818703eb9f5036dd528f306_icgraph.png" border="0" usemap="#aa00996_a609eadc7b818703eb9f5036dd528f306_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6d6a03c5740ff75f5149ea6fdee9dc06" name="a6d6a03c5740ff75f5149ea6fdee9dc06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d6a03c5740ff75f5149ea6fdee9dc06">&#9670;&#160;</a></span>normalize_against_schema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static nlohmann::json lumex::applied::json::normalization::LumexJsonSchemaNormalizer::normalize_against_schema </td>
+          <td>(</td>
+          <td class="paramtype">nlohmann::json const &amp;</td>          <td class="paramname"><span class="paramname"><em>schema</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">nlohmann::json const &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;$&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>validate_and_normalize</code>: returns the built tree. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00996_a6d6a03c5740ff75f5149ea6fdee9dc06_cgraph.png" border="0" usemap="#aa00996_a6d6a03c5740ff75f5149ea6fdee9dc06_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00996_a6d6a03c5740ff75f5149ea6fdee9dc06_icgraph.png" border="0" usemap="#aa00996_a6d6a03c5740ff75f5149ea6fdee9dc06_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a8ae52f1cd83ea06bf9c6cb850704d156" name="a8ae52f1cd83ea06bf9c6cb850704d156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae52f1cd83ea06bf9c6cb850704d156">&#9670;&#160;</a></span>parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static nlohmann::json lumex::applied::json::normalization::LumexJsonSchemaNormalizer::parse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02108.html">lumex::core::string_view::view::LumexStringView</a></td>          <td class="paramname"><span class="paramname"><em>raw</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parses raw text. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">`LUMEX_ASSERT`</td><td>if the internal node pointer (<code>m_wrap.m_root</code>) is <code>nullptr</code> (debug builds only). </td></tr>
+    <tr><td class="paramname">lumex::applied::json::schema::LumexJsonSchemaException</td><td>With <code>parse_error</code> when the text is not valid JSON. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>Dereferencing a singular (end) or invalid iterator leads to undefined behavior. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00996_aea5593228e611856f9418e8be7d56475_icgraph.png" border="0" usemap="#aa00996_aea5593228e611856f9418e8be7d56475_icgraph" alt=""/></div>
-<map name="aa00996_aea5593228e611856f9418e8be7d56475_icgraph" id="aa00996_aea5593228e611856f9418e8be7d56475_icgraph">
-<area shape="rect" title="Dereferences the iterator to provide access to the current XmlNode object." alt="" coords="486,72,678,115"/>
-<area shape="rect" href="a00996.html#af108f6b869f3aaa413e2ad6c7f8cd257" title="Default constructor. Constructs a singular (invalid) iterator." alt="" coords="246,72,438,115"/>
-<area shape="poly" title=" " alt="" coords="471,96,438,96,438,91,471,91"/>
-<area shape="poly" title=" " alt="" coords="381,59,366,53,342,51,319,53,305,57,300,63,302,71,296,72,295,62,302,53,318,47,342,45,367,48,383,54"/>
-<area shape="rect" href="a00996.html#a345d5423f86434f461d9c58c57dd3d48" title="Compares two XmlNodeIterator objects for inequality." alt="" coords="5,5,198,48"/>
-<area shape="poly" title=" " alt="" coords="230,74,153,51,155,46,231,69"/>
-<area shape="rect" href="a00996.html#ad9f2871c8cee0ca068a9bed2fc3ea869" title="Post&#45;increments the iterator to move to the next child node." alt="" coords="5,72,198,115"/>
-<area shape="poly" title=" " alt="" coords="230,96,198,96,198,91,230,91"/>
-<area shape="rect" href="a00996.html#a9c6ae878dd271d6f255c17dc8d585835" title="Post&#45;decrements the iterator to move to the previous child node." alt="" coords="5,139,198,181"/>
-<area shape="poly" title=" " alt="" coords="249,122,182,141,181,135,248,117"/>
-<area shape="rect" href="a00996.html#ad16581a59b0f6cb82e501fdadc0da97e" title="Compares two XmlNodeIterator objects for equality." alt="" coords="5,205,198,248"/>
-<area shape="poly" title=" " alt="" coords="304,127,255,162,199,196,173,207,171,202,196,191,252,158,301,122"/>
-<area shape="poly" title=" " alt="" coords="214,46,290,69,289,74,212,51"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a5e1763b5e327a01b8fbd13115ca10a99" name="a5e1763b5e327a01b8fbd13115ca10a99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e1763b5e327a01b8fbd13115ca10a99">&#9670;&#160;</a></span>operator++() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00996.html">XmlNodeIterator</a> &amp; XmlNodeIterator::operator++ </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pre-increments the iterator to move to the next child node. </p>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the incremented <code><a class="el" href="a00996.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> object (<code>*this</code>). </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">`LUMEX_ASSERT`</td><td>if the internal node pointer (<code>m_wrap.m_root</code>) is <code>nullptr</code> before increment (debug builds only). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>If the iterator is at the last child, it will become a singular (end) iterator after this operation. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00996_a5e1763b5e327a01b8fbd13115ca10a99_icgraph.png" border="0" usemap="#aa00996_a5e1763b5e327a01b8fbd13115ca10a99_icgraph" alt=""/></div>
-<map name="aa00996_a5e1763b5e327a01b8fbd13115ca10a99_icgraph" id="aa00996_a5e1763b5e327a01b8fbd13115ca10a99_icgraph">
-<area shape="rect" title="Pre&#45;increments the iterator to move to the next child node." alt="" coords="486,72,678,115"/>
-<area shape="rect" href="a00996.html#af108f6b869f3aaa413e2ad6c7f8cd257" title="Default constructor. Constructs a singular (invalid) iterator." alt="" coords="246,72,438,115"/>
-<area shape="poly" title=" " alt="" coords="471,96,438,96,438,91,471,91"/>
-<area shape="poly" title=" " alt="" coords="381,59,366,53,342,51,319,53,305,57,300,63,302,71,296,72,295,62,302,53,318,47,342,45,367,48,383,54"/>
-<area shape="rect" href="a00996.html#a345d5423f86434f461d9c58c57dd3d48" title="Compares two XmlNodeIterator objects for inequality." alt="" coords="5,5,198,48"/>
-<area shape="poly" title=" " alt="" coords="230,74,153,51,155,46,231,69"/>
-<area shape="rect" href="a00996.html#ad9f2871c8cee0ca068a9bed2fc3ea869" title="Post&#45;increments the iterator to move to the next child node." alt="" coords="5,72,198,115"/>
-<area shape="poly" title=" " alt="" coords="230,96,198,96,198,91,230,91"/>
-<area shape="rect" href="a00996.html#a9c6ae878dd271d6f255c17dc8d585835" title="Post&#45;decrements the iterator to move to the previous child node." alt="" coords="5,139,198,181"/>
-<area shape="poly" title=" " alt="" coords="249,122,182,141,181,135,248,117"/>
-<area shape="rect" href="a00996.html#ad16581a59b0f6cb82e501fdadc0da97e" title="Compares two XmlNodeIterator objects for equality." alt="" coords="5,205,198,248"/>
-<area shape="poly" title=" " alt="" coords="304,127,255,162,199,196,173,207,171,202,196,191,252,158,301,122"/>
-<area shape="poly" title=" " alt="" coords="214,46,290,69,289,74,212,51"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ad9f2871c8cee0ca068a9bed2fc3ea869" name="ad9f2871c8cee0ca068a9bed2fc3ea869"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9f2871c8cee0ca068a9bed2fc3ea869">&#9670;&#160;</a></span>operator++() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00996.html">XmlNodeIterator</a> XmlNodeIterator::operator++ </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Post-increments the iterator to move to the next child node. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the iterator's state BEFORE it was incremented.</dd></dl>
-<p>Creates a temporary copy of the current iterator, then increments the current iterator, and returns the temporary. </p><dl class="section note"><dt>Note</dt><dd>This operation is generally less efficient than pre-increment (<code><a class="el" href="#a5e1763b5e327a01b8fbd13115ca10a99" title="Pre-increments the iterator to move to the next child node.">operator++()</a></code>) due to the creation of a temporary object. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00996_ad9f2871c8cee0ca068a9bed2fc3ea869_cgraph.png" border="0" usemap="#aa00996_ad9f2871c8cee0ca068a9bed2fc3ea869_cgraph" alt=""/></div>
-<map name="aa00996_ad9f2871c8cee0ca068a9bed2fc3ea869_cgraph" id="aa00996_ad9f2871c8cee0ca068a9bed2fc3ea869_cgraph">
-<area shape="rect" title="Post&#45;increments the iterator to move to the next child node." alt="" coords="5,139,198,181"/>
-<area shape="rect" href="a00996.html#af108f6b869f3aaa413e2ad6c7f8cd257" title="Default constructor. Constructs a singular (invalid) iterator." alt="" coords="246,139,438,181"/>
-<area shape="poly" title=" " alt="" coords="198,157,230,157,230,163,198,163"/>
-<area shape="poly" title=" " alt="" coords="296,139,295,129,302,120,318,114,342,112,367,114,383,121,381,126,366,120,342,117,319,119,305,124,300,130,302,138"/>
-<area shape="rect" href="a00996.html#a345d5423f86434f461d9c58c57dd3d48" title="Compares two XmlNodeIterator objects for inequality." alt="" coords="486,5,678,48"/>
-<area shape="poly" title=" " alt="" coords="381,136,429,103,485,70,527,52,529,56,487,74,432,107,384,140"/>
-<area shape="rect" href="a00996.html#aea5593228e611856f9418e8be7d56475" title="Dereferences the iterator to provide access to the current XmlNode object." alt="" coords="486,72,678,115"/>
-<area shape="poly" title=" " alt="" coords="420,136,487,117,489,122,422,141"/>
-<area shape="rect" href="a00996.html#a5e1763b5e327a01b8fbd13115ca10a99" title="Pre&#45;increments the iterator to move to the next child node." alt="" coords="486,139,678,181"/>
-<area shape="poly" title=" " alt="" coords="438,157,470,157,470,163,438,163"/>
-<area shape="rect" href="a00996.html#a544dd74a00f91e2996a7ee86db5c1132" title="Pre&#45;decrements the iterator to move to the previous child node." alt="" coords="486,205,678,248"/>
-<area shape="poly" title=" " alt="" coords="422,179,489,198,487,203,420,184"/>
-<area shape="rect" href="a00996.html#abe3f77510e7bfd7a6741af7d4a5477f7" title="Dereferences the iterator to provide pointer&#45;like access to the current XmlNode object." alt="" coords="486,272,678,315"/>
-<area shape="poly" title=" " alt="" coords="371,180,423,219,487,258,499,263,497,268,485,262,420,223,368,184"/>
-<area shape="rect" href="a00996.html#a88b009b38305b720f82e3bfc4695b70f" title=" " alt="" coords="486,363,678,405"/>
-<area shape="poly" title=" " alt="" coords="361,180,413,248,449,288,488,325,527,352,524,357,484,329,445,292,409,252,356,184"/>
-<area shape="poly" title=" " alt="" coords="487,51,424,89,373,130,369,126,421,85,484,46"/>
-<area shape="poly" title=" " alt="" coords="537,363,535,353,542,344,558,338,582,336,608,338,623,345,621,350,607,344,582,341,559,343,545,348,540,354,542,362"/>
-</map>
+<div class="center"><img src="a00996_a8ae52f1cd83ea06bf9c6cb850704d156_cgraph.png" border="0" usemap="#aa00996_a8ae52f1cd83ea06bf9c6cb850704d156_cgraph" alt=""/></div>
 </div>
-
-</div>
-</div>
-<a id="a544dd74a00f91e2996a7ee86db5c1132" name="a544dd74a00f91e2996a7ee86db5c1132"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a544dd74a00f91e2996a7ee86db5c1132">&#9670;&#160;</a></span>operator--() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00996.html">XmlNodeIterator</a> &amp; XmlNodeIterator::operator-- </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pre-decrements the iterator to move to the previous child node. </p>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the decremented <code><a class="el" href="a00996.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> object (<code>*this</code>).</dd></dl>
-<p>If the iterator is singular (points to <code>nullptr</code>), this operation moves it to the last child of its parent. Otherwise, it moves to the previous sibling. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00996_a544dd74a00f91e2996a7ee86db5c1132_icgraph.png" border="0" usemap="#aa00996_a544dd74a00f91e2996a7ee86db5c1132_icgraph" alt=""/></div>
-<map name="aa00996_a544dd74a00f91e2996a7ee86db5c1132_icgraph" id="aa00996_a544dd74a00f91e2996a7ee86db5c1132_icgraph">
-<area shape="rect" title="Pre&#45;decrements the iterator to move to the previous child node." alt="" coords="486,72,678,115"/>
-<area shape="rect" href="a00996.html#af108f6b869f3aaa413e2ad6c7f8cd257" title="Default constructor. Constructs a singular (invalid) iterator." alt="" coords="246,72,438,115"/>
-<area shape="poly" title=" " alt="" coords="471,96,438,96,438,91,471,91"/>
-<area shape="poly" title=" " alt="" coords="381,59,366,53,342,51,319,53,305,57,300,63,302,71,296,72,295,62,302,53,318,47,342,45,367,48,383,54"/>
-<area shape="rect" href="a00996.html#a345d5423f86434f461d9c58c57dd3d48" title="Compares two XmlNodeIterator objects for inequality." alt="" coords="5,5,198,48"/>
-<area shape="poly" title=" " alt="" coords="230,74,153,51,155,46,231,69"/>
-<area shape="rect" href="a00996.html#ad9f2871c8cee0ca068a9bed2fc3ea869" title="Post&#45;increments the iterator to move to the next child node." alt="" coords="5,72,198,115"/>
-<area shape="poly" title=" " alt="" coords="230,96,198,96,198,91,230,91"/>
-<area shape="rect" href="a00996.html#a9c6ae878dd271d6f255c17dc8d585835" title="Post&#45;decrements the iterator to move to the previous child node." alt="" coords="5,139,198,181"/>
-<area shape="poly" title=" " alt="" coords="249,122,182,141,181,135,248,117"/>
-<area shape="rect" href="a00996.html#ad16581a59b0f6cb82e501fdadc0da97e" title="Compares two XmlNodeIterator objects for equality." alt="" coords="5,205,198,248"/>
-<area shape="poly" title=" " alt="" coords="304,127,255,162,199,196,173,207,171,202,196,191,252,158,301,122"/>
-<area shape="poly" title=" " alt="" coords="214,46,290,69,289,74,212,51"/>
-</map>
+<div class="center"><img src="a00996_a8ae52f1cd83ea06bf9c6cb850704d156_icgraph.png" border="0" usemap="#aa00996_a8ae52f1cd83ea06bf9c6cb850704d156_icgraph" alt=""/></div>
 </div>
 
 </div>
 </div>
-<a id="a9c6ae878dd271d6f255c17dc8d585835" name="a9c6ae878dd271d6f255c17dc8d585835"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c6ae878dd271d6f255c17dc8d585835">&#9670;&#160;</a></span>operator--() <span class="overload">[2/2]</span></h2>
+<a id="a8b52d105932cbbf487e7111f269f13f9" name="a8b52d105932cbbf487e7111f269f13f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b52d105932cbbf487e7111f269f13f9">&#9670;&#160;</a></span>process_against_schema()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -658,52 +378,49 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00996.html">XmlNodeIterator</a> XmlNodeIterator::operator-- </td>
+          <td class="memname">static nlohmann::json lumex::applied::json::normalization::LumexJsonSchemaNormalizer::process_against_schema </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">nlohmann::json const &amp;</td>          <td class="paramname"><span class="paramname"><em>schema</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">nlohmann::json const &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lumex::applied::json::schema::LumexJsonSchemaCheckMode</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;$&quot;</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Post-decrements the iterator to move to the previous child node. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the iterator's state BEFORE it was decremented.</dd></dl>
-<p>Creates a temporary copy of the current iterator, then decrements the current iterator, and returns the temporary. </p><dl class="section note"><dt>Note</dt><dd>This operation is generally less efficient than pre-decrement (<code><a class="el" href="#a544dd74a00f91e2996a7ee86db5c1132" title="Pre-decrements the iterator to move to the previous child node.">operator--()</a></code>) due to the creation of a temporary object. </dd></dl>
+<p>Single entry into the shared walker; <code>mode</code> decides whether the normalized tree is built. Prefer it over the two wrappers below when <code><a class="el" href="a00992.html#a55776e2b94b12a57fd8b1c64e850352c" title="Returns the canonical document. A strict implementation throws on the first violation (including unpa...">normalize()</a></code> and <code><a class="el" href="#a6f4dde669dafce82c9c5768a1cf23ee5" title="Checks without building anything. Strict: throws on the first violation. Non-strict: never throws for...">validate()</a></code> share one walk over a larger structure (for example a loop over elements). </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00996_a9c6ae878dd271d6f255c17dc8d585835_cgraph.png" border="0" usemap="#aa00996_a9c6ae878dd271d6f255c17dc8d585835_cgraph" alt=""/></div>
-<map name="aa00996_a9c6ae878dd271d6f255c17dc8d585835_cgraph" id="aa00996_a9c6ae878dd271d6f255c17dc8d585835_cgraph">
-<area shape="rect" title="Post&#45;decrements the iterator to move to the previous child node." alt="" coords="5,139,198,181"/>
-<area shape="rect" href="a00996.html#af108f6b869f3aaa413e2ad6c7f8cd257" title="Default constructor. Constructs a singular (invalid) iterator." alt="" coords="246,139,438,181"/>
-<area shape="poly" title=" " alt="" coords="198,157,230,157,230,163,198,163"/>
-<area shape="poly" title=" " alt="" coords="296,139,295,129,302,120,318,114,342,112,367,114,383,121,381,126,366,120,342,117,319,119,305,124,300,130,302,138"/>
-<area shape="rect" href="a00996.html#a345d5423f86434f461d9c58c57dd3d48" title="Compares two XmlNodeIterator objects for inequality." alt="" coords="486,5,678,48"/>
-<area shape="poly" title=" " alt="" coords="381,136,429,103,485,70,527,52,529,56,487,74,432,107,384,140"/>
-<area shape="rect" href="a00996.html#aea5593228e611856f9418e8be7d56475" title="Dereferences the iterator to provide access to the current XmlNode object." alt="" coords="486,72,678,115"/>
-<area shape="poly" title=" " alt="" coords="420,136,487,117,489,122,422,141"/>
-<area shape="rect" href="a00996.html#a5e1763b5e327a01b8fbd13115ca10a99" title="Pre&#45;increments the iterator to move to the next child node." alt="" coords="486,139,678,181"/>
-<area shape="poly" title=" " alt="" coords="438,157,470,157,470,163,438,163"/>
-<area shape="rect" href="a00996.html#a544dd74a00f91e2996a7ee86db5c1132" title="Pre&#45;decrements the iterator to move to the previous child node." alt="" coords="486,205,678,248"/>
-<area shape="poly" title=" " alt="" coords="422,179,489,198,487,203,420,184"/>
-<area shape="rect" href="a00996.html#abe3f77510e7bfd7a6741af7d4a5477f7" title="Dereferences the iterator to provide pointer&#45;like access to the current XmlNode object." alt="" coords="486,272,678,315"/>
-<area shape="poly" title=" " alt="" coords="371,180,423,219,487,258,499,263,497,268,485,262,420,223,368,184"/>
-<area shape="rect" href="a00996.html#a88b009b38305b720f82e3bfc4695b70f" title=" " alt="" coords="486,363,678,405"/>
-<area shape="poly" title=" " alt="" coords="361,180,413,248,449,288,488,325,527,352,524,357,484,329,445,292,409,252,356,184"/>
-<area shape="poly" title=" " alt="" coords="487,51,424,89,373,130,369,126,421,85,484,46"/>
-<area shape="poly" title=" " alt="" coords="537,363,535,353,542,344,558,338,582,336,608,338,623,345,621,350,607,344,582,341,559,343,545,348,540,354,542,362"/>
-</map>
+<div class="center"><img src="a00996_a8b52d105932cbbf487e7111f269f13f9_cgraph.png" border="0" usemap="#aa00996_a8b52d105932cbbf487e7111f269f13f9_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00996_a8b52d105932cbbf487e7111f269f13f9_icgraph.png" border="0" usemap="#aa00996_a8b52d105932cbbf487e7111f269f13f9_icgraph" alt=""/></div>
 </div>
 
 </div>
 </div>
-<a id="abe3f77510e7bfd7a6741af7d4a5477f7" name="abe3f77510e7bfd7a6741af7d4a5477f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe3f77510e7bfd7a6741af7d4a5477f7">&#9670;&#160;</a></span>operator-&gt;()</h2>
+<a id="ad4e6f91a4cc39ea650825173f0406128" name="ad4e6f91a4cc39ea650825173f0406128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4e6f91a4cc39ea650825173f0406128">&#9670;&#160;</a></span>report_or_rethrow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -712,53 +429,26 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00992.html">XmlNode</a> * XmlNodeIterator::operator-&gt; </td>
+          <td class="memname">void lumex::applied::json::normalization::LumexJsonSchemaNormalizer::report_or_rethrow </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">std::exception_ptr &amp;</td>          <td class="paramname"><span class="paramname"><em>error</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Dereferences the iterator to provide pointer-like access to the current <code><a class="el" href="a00992.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object. </p>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the <code><a class="el" href="a00992.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object the iterator currently points to. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">`LUMEX_ASSERT`</td><td>if the internal node pointer (<code>m_wrap.m_root</code>) is <code>nullptr</code> (debug builds only). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>Dereferencing a singular (end) or invalid iterator leads to undefined behavior. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00996_abe3f77510e7bfd7a6741af7d4a5477f7_icgraph.png" border="0" usemap="#aa00996_abe3f77510e7bfd7a6741af7d4a5477f7_icgraph" alt=""/></div>
-<map name="aa00996_abe3f77510e7bfd7a6741af7d4a5477f7_icgraph" id="aa00996_abe3f77510e7bfd7a6741af7d4a5477f7_icgraph">
-<area shape="rect" title="Dereferences the iterator to provide pointer&#45;like access to the current XmlNode object." alt="" coords="486,72,678,115"/>
-<area shape="rect" href="a00996.html#af108f6b869f3aaa413e2ad6c7f8cd257" title="Default constructor. Constructs a singular (invalid) iterator." alt="" coords="246,72,438,115"/>
-<area shape="poly" title=" " alt="" coords="471,96,438,96,438,91,471,91"/>
-<area shape="poly" title=" " alt="" coords="381,59,366,53,342,51,319,53,305,57,300,63,302,71,296,72,295,62,302,53,318,47,342,45,367,48,383,54"/>
-<area shape="rect" href="a00996.html#a345d5423f86434f461d9c58c57dd3d48" title="Compares two XmlNodeIterator objects for inequality." alt="" coords="5,5,198,48"/>
-<area shape="poly" title=" " alt="" coords="230,74,153,51,155,46,231,69"/>
-<area shape="rect" href="a00996.html#ad9f2871c8cee0ca068a9bed2fc3ea869" title="Post&#45;increments the iterator to move to the next child node." alt="" coords="5,72,198,115"/>
-<area shape="poly" title=" " alt="" coords="230,96,198,96,198,91,230,91"/>
-<area shape="rect" href="a00996.html#a9c6ae878dd271d6f255c17dc8d585835" title="Post&#45;decrements the iterator to move to the previous child node." alt="" coords="5,139,198,181"/>
-<area shape="poly" title=" " alt="" coords="249,122,182,141,181,135,248,117"/>
-<area shape="rect" href="a00996.html#ad16581a59b0f6cb82e501fdadc0da97e" title="Compares two XmlNodeIterator objects for equality." alt="" coords="5,205,198,248"/>
-<area shape="poly" title=" " alt="" coords="304,127,255,162,199,196,173,207,171,202,196,191,252,158,301,122"/>
-<area shape="poly" title=" " alt="" coords="214,46,290,69,289,74,212,51"/>
-</map>
-</div>
+<p>Call only from inside a <code>catch</code> block. </p>
+<p>Strict: rethrows the current exception. Non-strict: stores <code>std::current_exception()</code> in <code>error</code> and returns normally, so the caller can read the full message without an exception escaping <code><a class="el" href="a00992.html#a55776e2b94b12a57fd8b1c64e850352c" title="Returns the canonical document. A strict implementation throws on the first violation (including unpa...">normalize()</a></code> or <code><a class="el" href="#a6f4dde669dafce82c9c5768a1cf23ee5" title="Checks without building anything. Strict: throws on the first violation. Non-strict: never throws for...">validate()</a></code>. </p>
 
 </div>
 </div>
-<a id="ad16581a59b0f6cb82e501fdadc0da97e" name="ad16581a59b0f6cb82e501fdadc0da97e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad16581a59b0f6cb82e501fdadc0da97e">&#9670;&#160;</a></span>operator==()</h2>
+<a id="a6f4dde669dafce82c9c5768a1cf23ee5" name="a6f4dde669dafce82c9c5768a1cf23ee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f4dde669dafce82c9c5768a1cf23ee5">&#9670;&#160;</a></span>validate() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -767,58 +457,31 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool XmlNodeIterator::operator== </td>
+          <td class="memname">virtual void lumex::applied::json::normalization::LumexJsonSchemaNormalizer::validate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00996.html">XmlNodeIterator</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="a02108.html">lumex::core::string_view::view::LumexStringView</a></td>          <td class="paramname"><span class="paramname"><em>raw</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compares two <code><a class="el" href="a00996.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> objects for equality. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>The <code><a class="el" href="a00996.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> to compare with. </td></tr>
+<p>Checks without building anything. Strict: throws on the first violation. Non-strict: never throws for a violation (the usual implementation forwards to the <code>error</code> overload and ignores it). </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">lumex::applied::json::schema::LumexJsonSchemaException</td><td>Strict mode only. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if both iterators point to the same node within the same parent, <code>false</code> otherwise. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00996_ad16581a59b0f6cb82e501fdadc0da97e_cgraph.png" border="0" usemap="#aa00996_ad16581a59b0f6cb82e501fdadc0da97e_cgraph" alt=""/></div>
-<map name="aa00996_ad16581a59b0f6cb82e501fdadc0da97e_cgraph" id="aa00996_ad16581a59b0f6cb82e501fdadc0da97e_cgraph">
-<area shape="rect" title="Compares two XmlNodeIterator objects for equality." alt="" coords="5,139,198,181"/>
-<area shape="rect" href="a00996.html#af108f6b869f3aaa413e2ad6c7f8cd257" title="Default constructor. Constructs a singular (invalid) iterator." alt="" coords="246,139,438,181"/>
-<area shape="poly" title=" " alt="" coords="198,157,230,157,230,163,198,163"/>
-<area shape="poly" title=" " alt="" coords="296,139,295,129,302,120,318,114,342,112,367,114,383,121,381,126,366,120,342,117,319,119,305,124,300,130,302,138"/>
-<area shape="rect" href="a00996.html#a345d5423f86434f461d9c58c57dd3d48" title="Compares two XmlNodeIterator objects for inequality." alt="" coords="486,5,678,48"/>
-<area shape="poly" title=" " alt="" coords="381,136,429,103,485,70,527,52,529,56,487,74,432,107,384,140"/>
-<area shape="rect" href="a00996.html#aea5593228e611856f9418e8be7d56475" title="Dereferences the iterator to provide access to the current XmlNode object." alt="" coords="486,72,678,115"/>
-<area shape="poly" title=" " alt="" coords="420,136,487,117,489,122,422,141"/>
-<area shape="rect" href="a00996.html#a5e1763b5e327a01b8fbd13115ca10a99" title="Pre&#45;increments the iterator to move to the next child node." alt="" coords="486,139,678,181"/>
-<area shape="poly" title=" " alt="" coords="438,157,470,157,470,163,438,163"/>
-<area shape="rect" href="a00996.html#a544dd74a00f91e2996a7ee86db5c1132" title="Pre&#45;decrements the iterator to move to the previous child node." alt="" coords="486,205,678,248"/>
-<area shape="poly" title=" " alt="" coords="422,179,489,198,487,203,420,184"/>
-<area shape="rect" href="a00996.html#abe3f77510e7bfd7a6741af7d4a5477f7" title="Dereferences the iterator to provide pointer&#45;like access to the current XmlNode object." alt="" coords="486,272,678,315"/>
-<area shape="poly" title=" " alt="" coords="371,180,423,219,487,258,499,263,497,268,485,262,420,223,368,184"/>
-<area shape="rect" href="a00996.html#a88b009b38305b720f82e3bfc4695b70f" title=" " alt="" coords="486,363,678,405"/>
-<area shape="poly" title=" " alt="" coords="361,180,413,248,449,288,488,325,527,352,524,357,484,329,445,292,409,252,356,184"/>
-<area shape="poly" title=" " alt="" coords="487,51,424,89,373,130,369,126,421,85,484,46"/>
-<area shape="poly" title=" " alt="" coords="537,363,535,353,542,344,558,338,582,336,608,338,623,345,621,350,607,344,582,341,559,343,545,348,540,354,542,362"/>
-</map>
-</div>
 
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="a88b009b38305b720f82e3bfc4695b70f" name="a88b009b38305b720f82e3bfc4695b70f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88b009b38305b720f82e3bfc4695b70f">&#9670;&#160;</a></span>XmlNode</h2>
+<a id="a679b69c6f8d7e29b190061702a88af03" name="a679b69c6f8d7e29b190061702a88af03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679b69c6f8d7e29b190061702a88af03">&#9670;&#160;</a></span>validate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -827,28 +490,77 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="a00992.html">XmlNode</a></td>
+          <td class="memname">virtual void lumex::applied::json::normalization::LumexJsonSchemaNormalizer::validate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02108.html">lumex::core::string_view::view::LumexStringView</a></td>          <td class="paramname"><span class="paramname"><em>raw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::exception_ptr &amp;</td>          <td class="paramname"><span class="paramname"><em>error</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Same check with a non-throwing option; see <code><a class="el" href="a00992.html#a55776e2b94b12a57fd8b1c64e850352c" title="Returns the canonical document. A strict implementation throws on the first violation (including unpa...">ILumexJsonNormalizer::normalize</a></code> for the meaning of <code>error</code>. </p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00263_source.html">XmlNode.hpp</a></li>
-<li><a class="el" href="a00272.html">XmlNodeIterator.cpp</a></li>
+<a id="a1384265ea61be8a83ba651e8fb89a8c5" name="a1384265ea61be8a83ba651e8fb89a8c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1384265ea61be8a83ba651e8fb89a8c5">&#9670;&#160;</a></span>validate_against_schema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void lumex::applied::json::normalization::LumexJsonSchemaNormalizer::validate_against_schema </td>
+          <td>(</td>
+          <td class="paramtype">nlohmann::json const &amp;</td>          <td class="paramname"><span class="paramname"><em>schema</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">nlohmann::json const &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;$&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>validate_only</code>: throws on the first violation, builds nothing. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00996_a1384265ea61be8a83ba651e8fb89a8c5_cgraph.png" border="0" usemap="#aa00996_a1384265ea61be8a83ba651e8fb89a8c5_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00035_source.html">LumexJsonSchemaNormalizer.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00491.html">Node</a></li><li class="navelem"><a class="el" href="a00996.html">XmlNodeIterator</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00775.html">applied</a></li><li class="navelem"><a class="el" href="a00789.html">json</a></li><li class="navelem"><a class="el" href="a00794.html">normalization</a></li><li class="navelem"><a class="el" href="a00996.html">LumexJsonSchemaNormalizer</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

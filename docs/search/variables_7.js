@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gpuname_0',['gpuName',['../a00528.html#aa57981543f878b2433fc441429af3527',1,'Lumex::Applied::Hardware::HardwareInfo::gpuName'],['../a01565.html#aa57981543f878b2433fc441429af3527',1,'HardwareInfo::gpuName']]],
-  ['greater_5fthan_5fchar_1',['GREATER_THAN_CHAR',['../a00481.html#ad60a9da2775b419feb8e42c95d47cc13',1,'DumpTypeUtils::CharacterConstants']]]
+  ['gpu_5fname_0',['gpu_name',['../a00980.html#ad25f2a59a1dcab8a231ac1169bc3d9ab',1,'lumex::applied::hardware::caps::hardware_info_t::gpu_name'],['../a03747.html#ad25f2a59a1dcab8a231ac1169bc3d9ab',1,'hardware_info_t::gpu_name']]],
+  ['greater_5fthan_5fchar_1',['GREATER_THAN_CHAR',['../a00898.html#a44dd74f6dc632b3ce2f40e0211350481',1,'lumex::core::utility::dump::DumpTypeUtils::CharacterConstants']]]
 ];

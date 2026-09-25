@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['distributiontype_0',['DistributionType',['../a00137.html#aca272ab2bf25bfa410cbbbedfc8aef70',1,'LumexNumberGenerator.hpp']]],
-  ['dumptype_1',['DumpType',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829e',1,'LumexCoreDumpGenerator.hpp']]]
+  ['distributiontype_0',['DistributionType',['../a00862.html#ac790ad052a54165bc304a20f53f7a502',1,'lumex::core::generators::number_generator']]],
+  ['dumptype_1',['DumpType',['../a00894.html#a8ccf1bd2864104aaf2e850d72d393c19',1,'lumex::core::utility::dump']]]
 ];

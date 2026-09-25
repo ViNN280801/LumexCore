@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: std::hash&lt; Lumex::Core::Stacktrace::LumexStacktraceEntry &gt; Struct Reference</title>
+<title>LumexLib: XPathDocumentOrderComparator.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,71 +104,46 @@ $(function(){initNavTree('a00680.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="a00677.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">std::hash&lt; Lumex::Core::Stacktrace::LumexStacktraceEntry &gt; Struct Reference</div></div>
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">XPathDocumentOrderComparator.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Partial specialization of <code>std::hash</code> for <code><a class="el" href="a00676.html">Lumex::Core::Stacktrace::LumexStacktraceEntry</a></code>.  
- <a href="#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00113_source.html">LumexStacktraceEntry.hpp</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a2ae1ddb9697e166aeae03c7466be2b7f" id="r_a2ae1ddb9697e166aeae03c7466be2b7f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ae1ddb9697e166aeae03c7466be2b7f">operator()</a> (<a class="el" href="a00676.html">Lumex::Core::Stacktrace::LumexStacktraceEntry</a> const &amp;entry) const noexcept</td></tr>
-<tr class="memdesc:a2ae1ddb9697e166aeae03c7466be2b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the hash value for a <code><a class="el" href="a00107.html#adeed8ba2c7e2acbbb08a5833e7bdf841" title="Global alias for Lumex::Core::Stacktrace::LumexStacktraceEntry.">LumexStacktraceEntry</a></code> object.  <br /></td></tr>
-<tr class="separator:a2ae1ddb9697e166aeae03c7466be2b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00305_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00566_source.html">lumex/xml/constants/XmlConstants.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00578_source.html">lumex/xml/document/XmlDocumentBase.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00683_source.html">XPathDocumentOrderComparator.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for XPathDocumentOrderComparator.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00681.png" border="0" usemap="#a_x_path_document_order_comparator_8cpp" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a07486181f1990291c2a348de8eb4c480" id="r_a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
+<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Partial specialization of <code>std::hash</code> for <code><a class="el" href="a00676.html">Lumex::Core::Stacktrace::LumexStacktraceEntry</a></code>. </p>
-<p>This specialization provides a hash function for <code><a class="el" href="a00107.html#adeed8ba2c7e2acbbb08a5833e7bdf841" title="Global alias for Lumex::Core::Stacktrace::LumexStacktraceEntry.">LumexStacktraceEntry</a></code> objects, enabling their use in hash-based containers like <code>std::unordered_set</code> and <code>std::unordered_map</code>. The hash value is computed based on the native handle (address) of the stack entry. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2ae1ddb9697e166aeae03c7466be2b7f" name="a2ae1ddb9697e166aeae03c7466be2b7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ae1ddb9697e166aeae03c7466be2b7f">&#9670;&#160;</a></span>operator()()</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a07486181f1990291c2a348de8eb4c480" name="a07486181f1990291c2a348de8eb4c480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&#160;</a></span>LUMEX_IMPLEMENTATION</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t std::hash&lt; <a class="el" href="a00676.html">Lumex::Core::Stacktrace::LumexStacktraceEntry</a> &gt;::operator() </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00676.html">Lumex::Core::Stacktrace::LumexStacktraceEntry</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>entry</em></span></td><td>)</td>
-          <td> const</td>
+          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Computes the hash value for a <code><a class="el" href="a00107.html#adeed8ba2c7e2acbbb08a5833e7bdf841" title="Global alias for Lumex::Core::Stacktrace::LumexStacktraceEntry.">LumexStacktraceEntry</a></code> object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">entry</td><td>The <code><a class="el" href="a00107.html#adeed8ba2c7e2acbbb08a5833e7bdf841" title="Global alias for Lumex::Core::Stacktrace::LumexStacktraceEntry.">LumexStacktraceEntry</a></code> object to hash. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <code>size_t</code> representing the hash value of the entry's native handle. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This operator is <code>noexcept</code>. </dd></dl>
-
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00113_source.html">LumexStacktraceEntry.hpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00450.html">std</a></li><li class="navelem"><a class="el" href="a00680.html">hash&lt; Lumex::Core::Stacktrace::LumexStacktraceEntry &gt;</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_e14a662551c0edfc65d2ea9dddaf4ad0.html">xml</a></li><li class="navelem"><a class="el" href="dir_c65643557bcea8ae61e1958ac89db781.html">xpath</a></li><li class="navelem"><a class="el" href="dir_82f707e1e0aac94fa107fd649a848ee4.html">document</a></li><li class="navelem"><a class="el" href="a00680.html">XPathDocumentOrderComparator.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

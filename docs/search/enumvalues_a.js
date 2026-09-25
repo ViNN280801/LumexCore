@@ -1,24 +1,8 @@
 var searchData=
 [
-  ['mask_0',['mask',['../a00470.html#ac7687441fc96772618955fdbb34d81f1af2ce11ebf110993621bedd8e747d7b1b',1,'Lumex::Core::Filesystem']]],
-  ['mini_5fdump_5ffilter_5fmemory_1',['MINI_DUMP_FILTER_MEMORY',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea1654087a0cd5f9d2c523b8a2f2bb418d',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5ffilter_5fmodule_5fpaths_2',['MINI_DUMP_FILTER_MODULE_PATHS',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829eab731f53ec888dfd3e6267842c80f2c13',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fignore_5finaccessible_5fmemory_3',['MINI_DUMP_IGNORE_INACCESSIBLE_MEMORY',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea72207fd91fad5718f1b540c92a73763b',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fnormal_4',['MINI_DUMP_NORMAL',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829eaf86553cc5ee5d4c46e196a1d160cea44',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fscan_5fmemory_5',['MINI_DUMP_SCAN_MEMORY',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea69d5658fe3f5348a288c48282f33a0e2',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5fcode_5fsegments_6',['MINI_DUMP_WITH_CODE_SEGMENTS',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea7b6b4bf7fb6694cc20ca441838c8d4ac',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5fdata_5fsegs_7',['MINI_DUMP_WITH_DATA_SEGS',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea40cc9c713d7282935aed84cae38d69e8',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5ffull_5fauxiliary_5fstate_8',['MINI_DUMP_WITH_FULL_AUXILIARY_STATE',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea7b9523fafe0b4671ffe9e1a4429c1b54',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5ffull_5fmemory_9',['MINI_DUMP_WITH_FULL_MEMORY',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea69ff42aca122b1ae86906976183b89c1',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5ffull_5fmemory_5finfo_10',['MINI_DUMP_WITH_FULL_MEMORY_INFO',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea7b198cc64fdabd7db8f3d3fc7f26c7a6',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5fhandle_5fdata_11',['MINI_DUMP_WITH_HANDLE_DATA',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea56e50f0befce5802844736a94a8727ac',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5findirectly_5freferenced_5fmemory_12',['MINI_DUMP_WITH_INDIRECTLY_REFERENCED_MEMORY',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea2c2a358d0f56959e50640798a932badf',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5fprivate_5fread_5fwrite_5fmemory_13',['MINI_DUMP_WITH_PRIVATE_READ_WRITE_MEMORY',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea026f141f7b4b9d5b6f708c97cb57e7e3',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5fprivate_5fwrite_5fcopy_5fmemory_14',['MINI_DUMP_WITH_PRIVATE_WRITE_COPY_MEMORY',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea8a68894fcc4e1df5546722f08e266e54',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5fprocess_5fthread_5fdata_15',['MINI_DUMP_WITH_PROCESS_THREAD_DATA',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ead81cbc9a10def7efa2b72281220085c9',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5fthread_5finfo_16',['MINI_DUMP_WITH_THREAD_INFO',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ead2b4540179f3c081fe0d19315ce1e69f',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5ftoken_5finformation_17',['MINI_DUMP_WITH_TOKEN_INFORMATION',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea11db456efbc7c32e5bddf3504c0b49ba',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwith_5funloaded_5fmodules_18',['MINI_DUMP_WITH_UNLOADED_MODULES',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea72f8ff715345f41ce2af6cbc93a8d7da',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwithout_5fauxiliary_5fstate_19',['MINI_DUMP_WITHOUT_AUXILIARY_STATE',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea862abc28385a0003c30474222bc794d2',1,'LumexCoreDumpGenerator.hpp']]],
-  ['mini_5fdump_5fwithout_5foptional_5fdata_20',['MINI_DUMP_WITHOUT_OPTIONAL_DATA',['../a00188.html#a9f303cf02a13fafa3c9423e97bfb829ea600ca71628c28b396dfaed4d2b808f92',1,'LumexCoreDumpGenerator.hpp']]]
+  ['kernel_5factive_5fdump_0',['KERNEL_ACTIVE_DUMP',['../a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a9f1a237a1f081c3126b239fc96054ffd',1,'lumex::core::utility::dump']]],
+  ['kernel_5fautomatic_5fdump_1',['KERNEL_AUTOMATIC_DUMP',['../a00894.html#a8ccf1bd2864104aaf2e850d72d393c19ad4e2a6b1adf21e3e90b86042c974e60a',1,'lumex::core::utility::dump']]],
+  ['kernel_5ffull_5fdump_2',['KERNEL_FULL_DUMP',['../a00894.html#a8ccf1bd2864104aaf2e850d72d393c19acf042458a2225a06326c75ae7aa7922a',1,'lumex::core::utility::dump']]],
+  ['kernel_5fkernel_5fdump_3',['KERNEL_KERNEL_DUMP',['../a00894.html#a8ccf1bd2864104aaf2e850d72d393c19ad56f41e4d3e37c4a67be80b7f32d100c',1,'lumex::core::utility::dump']]],
+  ['kernel_5fsmall_5fdump_4',['KERNEL_SMALL_DUMP',['../a00894.html#a8ccf1bd2864104aaf2e850d72d393c19a822dbbaed89e068a415c67c7d3cbb728',1,'lumex::core::utility::dump']]]
 ];

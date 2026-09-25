@@ -1,4 +1,4 @@
 var a00680 =
 [
-    [ "operator()", "a00680.html#a2ae1ddb9697e166aeae03c7466be2b7f", null ]
+    [ "LUMEX_IMPLEMENTATION", "a00680.html#a07486181f1990291c2a348de8eb4c480", null ]
 ];

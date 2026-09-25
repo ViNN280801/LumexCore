@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexDemangle.hpp File Reference</title>
+<title>LumexLib: LumexStacktrace.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,49 +104,69 @@ $(function(){initNavTree('a00194.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
-  <div class="headertitle"><div class="title">LumexDemangle.hpp File Reference</div></div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">LumexStacktrace.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &lt;typeinfo&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00548_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00197_source.html">LumexStacktrace.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexDemangle.hpp:</div>
+Include dependency graph for LumexStacktrace.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00195.png" border="0" usemap="#a_lumex_demangle_8hpp" alt=""/></div>
-<map name="a_lumex_demangle_8hpp" id="a_lumex_demangle_8hpp">
-<area shape="rect" title=" " alt="" coords="5,5,150,32"/>
-<area shape="rect" title=" " alt="" coords="10,80,63,107"/>
-<area shape="poly" title=" " alt="" coords="73,34,53,68,48,65,68,31"/>
-<area shape="rect" title=" " alt="" coords="86,80,154,107"/>
-<area shape="poly" title=" " alt="" coords="87,31,107,65,103,68,83,34"/>
-</map>
+<div class="center"><img src="a00195.png" border="0" usemap="#a_lumex_stacktrace_8cpp" alt=""/></div>
 </div>
-</div>
-<p><a href="a00194_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00826.html">lumex::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00844.html">lumex::core::exceptions</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00850.html">lumex::core::exceptions::stacktrace</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html">lumex::core::exceptions::stacktrace::detail</a></td></tr>
+<tr class="memdesc:a00851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal detail namespace for platform-specific stacktrace functionalities. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ad6621f383796b8a7a3dc899f94d7c0f4" id="r_ad6621f383796b8a7a3dc899f94d7c0f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6621f383796b8a7a3dc899f94d7c0f4">lumDemangle</a>(type)</td></tr>
-<tr class="separator:ad6621f383796b8a7a3dc899f94d7c0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07486181f1990291c2a348de8eb4c480" id="r_a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
+<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a894eb6f8a719b5015744c5a76dc63b0b" id="r_a894eb6f8a719b5015744c5a76dc63b0b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#a894eb6f8a719b5015744c5a76dc63b0b">lumex::core::exceptions::stacktrace::detail::demangle_symbol</a> (char const *mangled)</td></tr>
+<tr class="memdesc:a894eb6f8a719b5015744c5a76dc63b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demangles a C++ mangled symbol name on POSIX systems.  <br /></td></tr>
+<tr class="separator:a894eb6f8a719b5015744c5a76dc63b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a19414115a27f01fec44312379fabc" id="r_a42a19414115a27f01fec44312379fabc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#a42a19414115a27f01fec44312379fabc">lumex::core::exceptions::stacktrace::detail::get_source_info_addr2line</a> (void *address, std::string &amp;file, std::uint32_t &amp;line)</td></tr>
+<tr class="memdesc:a42a19414115a27f01fec44312379fabc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves source file and line number information for a given address using <code>addr2line</code> on POSIX systems.  <br /></td></tr>
+<tr class="separator:a42a19414115a27f01fec44312379fabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acccfa377540a554f2547587c45cad1d3" id="r_acccfa377540a554f2547587c45cad1d3"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:acccfa377540a554f2547587c45cad1d3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; std::allocator&lt; <a class="el" href="a01632.html">LumexStacktraceEntry</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00851.html#acccfa377540a554f2547587c45cad1d3">lumex::core::exceptions::stacktrace::detail::capture_stacktrace&lt; std::allocator&lt; LumexStacktraceEntry &gt; &gt;</a> (std::size_t skip, std::size_t max_depth, std::allocator&lt; <a class="el" href="a01632.html">LumexStacktraceEntry</a> &gt; const &amp;alloc) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="separator:acccfa377540a554f2547587c45cad1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2cc258aceea6ae26e88ff6a4fde9c17" id="r_aa2cc258aceea6ae26e88ff6a4fde9c17"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#aa2cc258aceea6ae26e88ff6a4fde9c17">lumex::core::exceptions::stacktrace::detail::resolve_symbol_info</a> (void *address, std::string &amp;function_name, std::string &amp;source_file, std::uint32_t &amp;line_number) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:aa2cc258aceea6ae26e88ff6a4fde9c17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves symbol information (function name, source file, line number) for a given address on POSIX systems.  <br /></td></tr>
+<tr class="separator:aa2cc258aceea6ae26e88ff6a4fde9c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ad6621f383796b8a7a3dc899f94d7c0f4" name="ad6621f383796b8a7a3dc899f94d7c0f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6621f383796b8a7a3dc899f94d7c0f4">&#9670;&#160;</a></span>lumDemangle</h2>
+<a id="a07486181f1990291c2a348de8eb4c480" name="a07486181f1990291c2a348de8eb4c480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&#160;</a></span>LUMEX_IMPLEMENTATION</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define lumDemangle</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">std::string(<span class="keyword">typeid</span>(type).name())</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->
@@ -154,7 +174,7 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_89e42b2a70e8a88de526b25cf537eb3f.html">utility</a></li><li class="navelem"><a class="el" href="a00194.html">LumexDemangle.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_a3441288cad593ecc41bd2411108526e.html">exceptions</a></li><li class="navelem"><a class="el" href="dir_5e36a95047b068cba52935ea3cf15469.html">stacktrace</a></li><li class="navelem"><a class="el" href="a00194.html">LumexStacktrace.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

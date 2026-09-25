@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: D:/Develop/LumexCore/lumex/core/utility/LumexUtilities.hpp</title>
+<title>LumexLib: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('a01325.html',''); initResizable(true); });
+$(function(){initNavTree('a01328.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -103,60 +103,21 @@ $(function(){initNavTree('a01325.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">D:/Develop/LumexCore/lumex/core/utility/LumexUtilities.hpp</div></div>
+  <div class="headertitle"><div class="title">lumex::core::crc::parametric::crc10_atm_spec_t Member List</div></div>
 </div><!--header-->
 <div class="contents">
-<p>Safe reverse conversion of void* to POSIX file descriptor (int).</p>
-<p>Safe reverse conversion of void* to POSIX file descriptor (int). Reverse operation for Lumex::Utility::fd_to_ptr. Restores the original file descriptor from void* representation.</p>
-<p>Mechanism of work:</p><ol type="1">
-<li><code>reinterpret_cast&lt;intptr_t&gt;(ptr)</code>:<ul>
-<li>void* (64 bits) -&gt; intptr_t (64 bits) bitwise</li>
-<li>Highest 32 bits = 0x00000000 (from the original FD_TO_PTR conversion)</li>
-<li>Lowest 32 bits = original file descriptor</li>
-</ul>
-</li>
-<li><code>static_cast&lt;int&gt;(intptr_t)</code>:<ul>
-<li>Truncates to 32 bits (takes lowest bits)</li>
-<li>Get original fd</li>
-</ul>
-</li>
-</ol>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ptr</td><td>void* representation of the descriptor (from Lumex::Utility::fd_to_ptr) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>int POSIX file descriptor</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span>* stored_ptr = Lumex::Utility::fd_to_ptr(5); <span class="comment">// fd=5 -&gt; void*</span></div>
-<div class="line"><span class="keywordtype">int</span> fd = Lumex::Utility::ptr_to_fd(stored_ptr);  <span class="comment">// void* -&gt; fd=5</span></div>
-<div class="line">assert(fd == 5); <span class="comment">// Restored original descriptor</span></div>
-</div><!-- fragment --><div class="fragment"><div class="line"><span class="preprocessor">#ifndef LUMEX_UTILITY_UTILITIES_HPP</span></div>
-<div class="line"><span class="preprocessor">#define LUMEX_UTILITY_UTILITIES_HPP</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00197.html">lumex/core/utility/LumexKeywords.hpp</a>&quot;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> *</div>
-<div class="line"><a id="a0" name="a0"></a><a class="code hl_function" href="a00209.html#a0bac93cbc3f1e49f40047f7c07ee8a8c">fd_to_ptr</a>(<span class="keywordtype">int</span> fileDescriptor) <a class="code hl_define" href="a00197.html#a42fdd906f59b10053e30b1218cc2a1ac">LUMEX_NOEXCEPT_FUNCTION</a></div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span> <span class="comment">// NOLINT(performance-no-int-to-ptr)</span></div>
-<div class="line">    <span class="keywordtype">void</span> *<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>intptr_t<span class="keyword">&gt;</span>(fileDescriptor));</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line"><span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">int</span></div>
-<div class="line"><a id="a1" name="a1"></a><a class="code hl_function" href="a00209.html#abce3d3b8a6bed8a0eff15065e5b7833c">ptr_to_fd</a>(<span class="keywordtype">void</span> *pointer) <a class="code hl_define" href="a00197.html#a42fdd906f59b10053e30b1218cc2a1ac">LUMEX_NOEXCEPT_FUNCTION</a></div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<span class="keyword">reinterpret_cast&lt;</span>intptr_t<span class="keyword">&gt;</span>(pointer));</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_UTILITY_UTILITIES_HPP</span></div>
-<div class="ttc" id="aa00197_html"><div class="ttname"><a href="a00197.html">LumexKeywords.hpp</a></div></div>
-<div class="ttc" id="aa00197_html_a42fdd906f59b10053e30b1218cc2a1ac"><div class="ttname"><a href="a00197.html#a42fdd906f59b10053e30b1218cc2a1ac">LUMEX_NOEXCEPT_FUNCTION</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT_FUNCTION</div><div class="ttdef"><b>Definition</b> LumexKeywords.hpp:22</div></div>
-<div class="ttc" id="aa00209_html_a0bac93cbc3f1e49f40047f7c07ee8a8c"><div class="ttname"><a href="a00209.html#a0bac93cbc3f1e49f40047f7c07ee8a8c">fd_to_ptr</a></div><div class="ttdeci">static void * fd_to_ptr(int fileDescriptor) LUMEX_NOEXCEPT_FUNCTION</div><div class="ttdef"><b>Definition</b> LumexUtilities.hpp:69</div></div>
-<div class="ttc" id="aa00209_html_abce3d3b8a6bed8a0eff15065e5b7833c"><div class="ttname"><a href="a00209.html#abce3d3b8a6bed8a0eff15065e5b7833c">ptr_to_fd</a></div><div class="ttdeci">static int ptr_to_fd(void *pointer) LUMEX_NOEXCEPT_FUNCTION</div><div class="ttdef"><b>Definition</b> LumexUtilities.hpp:100</div></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p>This is the complete list of members for <a class="el" href="a01328.html">lumex::core::crc::parametric::crc10_atm_spec_t</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a01328.html#a7c5f9c972dc46e55ca7e697faffdf89d">kCatalogCheck</a></td><td class="entry"><a class="el" href="a01328.html">lumex::core::crc::parametric::crc10_atm_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a01328.html#aed2ff265af5a7e2d938d9e0805d44c63">kInit</a></td><td class="entry"><a class="el" href="a01328.html">lumex::core::crc::parametric::crc10_atm_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a01328.html#a85d6c183c9d985a413913135458c9883">kPoly</a></td><td class="entry"><a class="el" href="a01328.html">lumex::core::crc::parametric::crc10_atm_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a01328.html#a22d62c647f0ff4b678bc364ab41ebe27">kRefIn</a></td><td class="entry"><a class="el" href="a01328.html">lumex::core::crc::parametric::crc10_atm_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a01328.html#a4efa1bff951566544949e214076d0bb0">kRefOut</a></td><td class="entry"><a class="el" href="a01328.html">lumex::core::crc::parametric::crc10_atm_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a01328.html#ac370ec57388fe0405a48575ab93597c9">kWidth</a></td><td class="entry"><a class="el" href="a01328.html">lumex::core::crc::parametric::crc10_atm_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a01328.html#ac96e70cd11f8f42007e90d2a897826c1">kXorOut</a></td><td class="entry"><a class="el" href="a01328.html">lumex::core::crc::parametric::crc10_atm_spec_t</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a01328.html#a8710fc6b59de6fde344643aff4080dca">ValueType</a> typedef</td><td class="entry"><a class="el" href="a01328.html">lumex::core::crc::parametric::crc10_atm_spec_t</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

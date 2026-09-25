@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XPathContext.hpp Source File</title>
+<title>LumexLib: LumexMacros.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -103,68 +103,39 @@ $(function(){initNavTree('a00341_source.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">XPathContext.hpp</div></div>
+  <div class="headertitle"><div class="title">LumexMacros.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00341.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LUMEX_XML_XPATH_CONTEXT_HPP</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LUMEX_XML_XPATH_CONTEXT_HPP</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="a00212.html">lumex/LumexExport.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="a00371.html">lumex/xml/xpath/node/XPathNode.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="a00497.html">Lumex::Xml::XPath::Node</a>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00435.html">Lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keyword">namespace </span><a class="code hl_namespace" href="a00488.html">Xml</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="a00496.html">XPath</a></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="a00508.html">   16</a></span>      <span class="keyword">namespace </span><a class="code hl_namespace" href="a00508.html">Context</a></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>      {</div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="a01180.html">   30</a></span>        <span class="keyword">struct </span><a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code hl_function" href="a01180.html#a44f03df8761e98dd1e8ccf8c04303346">XPathContext</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="a01180.html#a59bd9d6132076043569ed2b22ec36741">   32</a></span>          <a class="code hl_class" href="a01216.html">Xml::XPath::Node::XPathNode</a> <a class="code hl_variable" href="a01180.html#a59bd9d6132076043569ed2b22ec36741">node</a>; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="a01180.html#ad741820f7a7d47b30fb71e22bef0c2d6">   34</a></span>          <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a01180.html#ad741820f7a7d47b30fb71e22bef0c2d6">position</a>{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="a01180.html#a9cf8422ce47ea2e037d99be6d58a768b">   36</a></span>          <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a01180.html#a9cf8422ce47ea2e037d99be6d58a768b">size</a>{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
-<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="a01180.html#a44f03df8761e98dd1e8ccf8c04303346">   46</a></span>          <a class="code hl_function" href="a01180.html#a44f03df8761e98dd1e8ccf8c04303346">XPathContext</a>(<a class="code hl_class" href="a01216.html">Xml::XPath::Node::XPathNode</a> <span class="keyword">const</span> &amp;node_,</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                       <span class="keywordtype">size_t</span> position_, <span class="comment">// NOLINT(bugprone-easily-swappable-parameters)</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                       <span class="keywordtype">size_t</span> size_)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>              : <a class="code hl_variable" href="a01180.html#a59bd9d6132076043569ed2b22ec36741">node</a>(node_), <a class="code hl_variable" href="a01180.html#ad741820f7a7d47b30fb71e22bef0c2d6">position</a>(position_), <a class="code hl_variable" href="a01180.html#a9cf8422ce47ea2e037d99be6d58a768b">size</a>(size_)</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>          {}</div>
-</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        };</div>
-</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      } <span class="comment">// namespace Context</span></div>
-</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    } <span class="comment">// namespace XPath</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  } <span class="comment">// namespace Xml</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace Lumex</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_XML_XPATH_CONTEXT_HPP</span></div>
-<div class="ttc" id="aa00212_html"><div class="ttname"><a href="a00212.html">LumexExport.hpp</a></div></div>
-<div class="ttc" id="aa00212_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition</b> LumexExport.hpp:32</div></div>
-<div class="ttc" id="aa00371_html"><div class="ttname"><a href="a00371.html">XPathNode.hpp</a></div></div>
-<div class="ttc" id="aa00435_html"><div class="ttname"><a href="a00435.html">Lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition</b> LumexCPUVectorizationCapabilities.cpp:25</div></div>
-<div class="ttc" id="aa00488_html"><div class="ttname"><a href="a00488.html">Lumex::Xml</a></div><div class="ttdef"><b>Definition</b> XmlAttribute.hpp:21</div></div>
-<div class="ttc" id="aa00496_html"><div class="ttname"><a href="a00496.html">Lumex::Xml::XPath</a></div><div class="ttdef"><b>Definition</b> XmlNode.hpp:48</div></div>
-<div class="ttc" id="aa00497_html"><div class="ttname"><a href="a00497.html">Lumex::Xml::XPath::Node</a></div><div class="ttdef"><b>Definition</b> XmlNode.hpp:50</div></div>
-<div class="ttc" id="aa00508_html"><div class="ttname"><a href="a00508.html">Lumex::Xml::XPath::Context</a></div><div class="ttdef"><b>Definition</b> XPathContext.hpp:17</div></div>
-<div class="ttc" id="aa01180_html_a44f03df8761e98dd1e8ccf8c04303346"><div class="ttname"><a href="a01180.html#a44f03df8761e98dd1e8ccf8c04303346">Lumex::Xml::XPath::Context::XPathContext::XPathContext</a></div><div class="ttdeci">XPathContext(Xml::XPath::Node::XPathNode const &amp;node_, size_t position_, size_t size_)</div><div class="ttdoc">Constructs an XPathContext with the specified node, position, and size.</div><div class="ttdef"><b>Definition</b> XPathContext.hpp:46</div></div>
-<div class="ttc" id="aa01180_html_a59bd9d6132076043569ed2b22ec36741"><div class="ttname"><a href="a01180.html#a59bd9d6132076043569ed2b22ec36741">Lumex::Xml::XPath::Context::XPathContext::node</a></div><div class="ttdeci">Xml::XPath::Node::XPathNode node</div><div class="ttdoc">The current context node.</div><div class="ttdef"><b>Definition</b> XPathContext.hpp:32</div></div>
-<div class="ttc" id="aa01180_html_a9cf8422ce47ea2e037d99be6d58a768b"><div class="ttname"><a href="a01180.html#a9cf8422ce47ea2e037d99be6d58a768b">Lumex::Xml::XPath::Context::XPathContext::size</a></div><div class="ttdeci">size_t size</div><div class="ttdoc">The total number of nodes in the context node list.</div><div class="ttdef"><b>Definition</b> XPathContext.hpp:36</div></div>
-<div class="ttc" id="aa01180_html_ad741820f7a7d47b30fb71e22bef0c2d6"><div class="ttname"><a href="a01180.html#ad741820f7a7d47b30fb71e22bef0c2d6">Lumex::Xml::XPath::Context::XPathContext::position</a></div><div class="ttdeci">size_t position</div><div class="ttdoc">The position of the context node within the context node list (1-indexed).</div><div class="ttdef"><b>Definition</b> XPathContext.hpp:34</div></div>
-<div class="ttc" id="aa01216_html"><div class="ttname"><a href="a01216.html">Lumex::Xml::XPath::Node::XPathNode</a></div><div class="ttdoc">Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...</div><div class="ttdef"><b>Definition</b> XPathNode.hpp:38</div></div>
+<a href="a00341.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef LUMEX_CORE_UTILITY_MACROS_MACROS_HPP</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define LUMEX_CORE_UTILITY_MACROS_MACROS_HPP</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#if defined(_WIN32) || defined(__WIN32__) || defined(__WIN64__)               \</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">    || defined(__MINGW32__) || defined(__MINGW64__)</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define LUMEX_FUNCTION_NAME __FUNCSIG__</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#elif defined(__linux__) || defined(__APPLE__) || defined(__MACH__)           \</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">    || defined(__MACOS__) || defined(__GNUC__) || defined(__clang__)</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define LUMEX_FUNCTION_NAME __PRETTY_FUNCTION__</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#elif defined(__ICC) || defined(__INTEL_COMPILER)</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define LUMEX_FUNCTION_NAME __FUNCTION__</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="a00341.html#aaae5674dd2d0d351d585e646e72118fd">   37</a></span><span class="preprocessor">#define LUMEX_FUNCTION_NAME __FUNCTION__</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="a00341.html#a95e334f9f38e1a11501236e102cd7b9f">   40</a></span><span class="preprocessor">#define LUMEX_STRINGIZE_DETAIL(x) #x</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="a00341.html#a71aa3eda60310f254574a8539871bbe8">   41</a></span><span class="preprocessor">#define LUMEX_STRINGIZE(x) LUMEX_STRINGIZE_DETAIL (x)</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="a00341.html#aaf4d476c935300eaa955f76f0aad4db1">   43</a></span><span class="preprocessor">#define LUMEX_CONCAT_DETAIL(x, y) x##y</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="a00341.html#ace296af29308b6f8d22b8fac6616869e">   44</a></span><span class="preprocessor">#define LUMEX_CONCAT(x, y) LUMEX_CONCAT_DETAIL (x, y)</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_CORE_UTILITY_MACROS_MACROS_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_8b4095ffbb260afdde390f90a93ad48f.html">xml</a></li><li class="navelem"><a class="el" href="dir_2102a7c881d67452fc8c547064ab7eec.html">xpath</a></li><li class="navelem"><a class="el" href="dir_8eed3765c28620a3ca5f56dca7d153d5.html">context</a></li><li class="navelem"><a class="el" href="a00341.html">XPathContext.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_109abe650ca0d786f12c12c5008c1abf.html">utility</a></li><li class="navelem"><a class="el" href="dir_fd5831d469cdf01c6eb622c08c2a60e1.html">macros</a></li><li class="navelem"><a class="el" href="a00341.html">LumexMacros.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

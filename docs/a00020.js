@@ -1,4 +1,5 @@
 var a00020 =
 [
+    [ "LUMEX_HAS_GETENTROPY", "a00020.html#a226762b2a199486d557abe18fc2bff5c", null ],
     [ "LUMEX_IMPLEMENTATION", "a00020.html#a07486181f1990291c2a348de8eb4c480", null ]
 ];

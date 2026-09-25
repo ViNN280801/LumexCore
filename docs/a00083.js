@@ -1,6 +1,8 @@
 var a00083 =
 [
-    [ "KDEFAULT_CRASH_REPORT_PREFIX", "a00083.html#a2d23e4c6ff026ae2e1b0b0c7808bde52", null ],
-    [ "KDEFAULT_CRASHES_DIR_PATH", "a00083.html#ae819fe30ef0a48d959e7c0385fc64402", null ],
-    [ "KDEFAULT_MINIDUMP_PREFIX", "a00083.html#a484d83bdcb379a8a66dfa42e468fdcbb", null ]
+    [ "lumex::applied::serial::port::resolve_serial_port_path", "a00811.html#ab09ab9261b3038641b2bda9c7f63d821", null ],
+    [ "lumex::applied::serial::port::Constants::KNET_TCP_CHANNEL_TYPE", "a00813.html#a278db05e5c15402d266c009c3a14ae44", null ],
+    [ "lumex::applied::serial::port::Constants::KNET_UDP_CHANNEL_TYPE", "a00813.html#a13f993aed4a93972fe10bc1bcbc8e050", null ],
+    [ "lumex::applied::serial::port::Constants::KSERIAL_PORT_CHANNEL_TYPE", "a00813.html#ae67f90821ae38d7e3fa43230a875da47", null ],
+    [ "lumex::applied::serial::port::Constants::KSERIAL_PORT_SYNC_CHANNEL_TYPE", "a00813.html#adeb755541e0892f8ef2a63916279e0a2", null ]
 ];

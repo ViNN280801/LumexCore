@@ -1,9 +1,8 @@
 var a01016 =
 [
-    [ "const_iterator", "a01016.html#a405a2f0331c0c19461f450a57c453ae3", null ],
-    [ "iterator", "a01016.html#ad66e6cea79eeb2adcb9d3c63e2cca506", null ],
-    [ "XmlObjectRange", "a01016.html#a663ded5f49f7d4b695b336811c5f90f6", null ],
-    [ "begin", "a01016.html#a95a5d6a471fe6018613618851c1eba68", null ],
-    [ "end", "a01016.html#a7ffb182e1194d1dcced6009629ac1d7c", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a01016.html#a6cd3038a5fca743d1071b125d76eedd1", null ]
+    [ "log_buffer_flush_level_configured", "a01016.html#a4e5e115c27378cb2e4e3d5b39ba870be", null ],
+    [ "log_buffer_flush_trigger_level", "a01016.html#ac5e787e56b952ba48ee33450b2f8f86c", null ],
+    [ "show_stack_trace_in_messages", "a01016.html#ac65af752d0d3114636096ad50b4833e3", null ],
+    [ "stack_trace_max_frames", "a01016.html#a8f83bcdb2bd432297d55abe91e9e7d14", null ],
+    [ "use_timestamped_logs", "a01016.html#ae3ba3a6fd3eb320cd02b92d8a587b326", null ]
 ];

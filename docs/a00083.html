@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: DefaultPaths.hpp File Reference</title>
+<title>LumexLib: LumexSerialPort.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,107 +104,85 @@ $(function(){initNavTree('a00083.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">DefaultPaths.hpp File Reference</div></div>
+  <div class="headertitle"><div class="title">LumexSerialPort.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+
+<p>Resolves short, configuration-style serial-port names into the platform-specific path or identifier a communication channel actually needs in order to open them.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00548_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00332_source.html">lumex/core/utility/macros/LumexConstantMacros.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for LumexSerialPort.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00084.png" border="0" usemap="#a_lumex_serial_port_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00085.png" border="0" usemap="#a_default_paths_8hppdep" alt=""/></div>
-<map name="a_default_paths_8hppdep" id="a_default_paths_8hppdep">
-<area shape="rect" title=" " alt="" coords="116,5,238,32"/>
-<area shape="rect" href="a00086.html" title=" " alt="" coords="5,80,171,107"/>
-<area shape="poly" title=" " alt="" coords="152,44,105,82,102,78,148,40"/>
-<area shape="rect" href="a00098.html" title=" " alt="" coords="195,80,338,107"/>
-<area shape="poly" title=" " alt="" coords="206,40,253,78,250,82,203,44"/>
-</map>
+<div class="center"><img src="a00085.png" border="0" usemap="#a_lumex_serial_port_8hppdep" alt=""/></div>
 </div>
 </div>
 <p><a href="a00083_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00775.html">lumex::applied</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00808.html">lumex::applied::serial</a></td></tr>
+<tr class="memdesc:a00808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross-platform helpers for naming/resolving serial (and serial-adjacent) communication ports. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00811.html">lumex::applied::serial::port</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00813.html">lumex::applied::serial::port::Constants</a></td></tr>
+<tr class="memdesc:a00813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numeric channel-type identifiers this module understands. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab09ab9261b3038641b2bda9c7f63d821" id="r_ab09ab9261b3038641b2bda9c7f63d821"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00811.html#ab09ab9261b3038641b2bda9c7f63d821">lumex::applied::serial::port::resolve_serial_port_path</a> (std::string const &amp;portName, std::uint32_t channelType, std::function&lt; std::string()&gt; const &amp;getIpAddressCallback=nullptr, std::function&lt; void(std::string const &amp;)&gt; const &amp;logWarningCallback=nullptr) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:ab09ab9261b3038641b2bda9c7f63d821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a short serial-port name into the full, platform-specific path a channel needs in order to actually open it.  <br /></td></tr>
+<tr class="separator:ab09ab9261b3038641b2bda9c7f63d821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ae819fe30ef0a48d959e7c0385fc64402" id="r_ae819fe30ef0a48d959e7c0385fc64402"><td class="memItemLeft" align="right" valign="top">static constexpr char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae819fe30ef0a48d959e7c0385fc64402">KDEFAULT_CRASHES_DIR_PATH</a> = &quot;crashes&quot;</td></tr>
-<tr class="separator:ae819fe30ef0a48d959e7c0385fc64402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a484d83bdcb379a8a66dfa42e468fdcbb" id="r_a484d83bdcb379a8a66dfa42e468fdcbb"><td class="memItemLeft" align="right" valign="top">static constexpr char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a484d83bdcb379a8a66dfa42e468fdcbb">KDEFAULT_MINIDUMP_PREFIX</a> = &quot;dump_&quot;</td></tr>
-<tr class="separator:a484d83bdcb379a8a66dfa42e468fdcbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d23e4c6ff026ae2e1b0b0c7808bde52" id="r_a2d23e4c6ff026ae2e1b0b0c7808bde52"><td class="memItemLeft" align="right" valign="top">static constexpr char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d23e4c6ff026ae2e1b0b0c7808bde52">KDEFAULT_CRASH_REPORT_PREFIX</a> = &quot;crash_report_&quot;</td></tr>
-<tr class="separator:a2d23e4c6ff026ae2e1b0b0c7808bde52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67f90821ae38d7e3fa43230a875da47" id="r_ae67f90821ae38d7e3fa43230a875da47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00813.html#ae67f90821ae38d7e3fa43230a875da47">lumex::applied::serial::port::Constants::KSERIAL_PORT_CHANNEL_TYPE</a> = 0x100</td></tr>
+<tr class="memdesc:ae67f90821ae38d7e3fa43230a875da47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous serial port.  <br /></td></tr>
+<tr class="separator:ae67f90821ae38d7e3fa43230a875da47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeb755541e0892f8ef2a63916279e0a2" id="r_adeb755541e0892f8ef2a63916279e0a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00813.html#adeb755541e0892f8ef2a63916279e0a2">lumex::applied::serial::port::Constants::KSERIAL_PORT_SYNC_CHANNEL_TYPE</a> = 0x101</td></tr>
+<tr class="memdesc:adeb755541e0892f8ef2a63916279e0a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronous serial port.  <br /></td></tr>
+<tr class="separator:adeb755541e0892f8ef2a63916279e0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278db05e5c15402d266c009c3a14ae44" id="r_a278db05e5c15402d266c009c3a14ae44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00813.html#a278db05e5c15402d266c009c3a14ae44">lumex::applied::serial::port::Constants::KNET_TCP_CHANNEL_TYPE</a> = 0x810</td></tr>
+<tr class="memdesc:a278db05e5c15402d266c009c3a14ae44"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP network channel.  <br /></td></tr>
+<tr class="separator:a278db05e5c15402d266c009c3a14ae44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f993aed4a93972fe10bc1bcbc8e050" id="r_a13f993aed4a93972fe10bc1bcbc8e050"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00813.html#a13f993aed4a93972fe10bc1bcbc8e050">lumex::applied::serial::port::Constants::KNET_UDP_CHANNEL_TYPE</a> = 0x820</td></tr>
+<tr class="memdesc:a13f993aed4a93972fe10bc1bcbc8e050"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP network channel.  <br /></td></tr>
+<tr class="separator:a13f993aed4a93972fe10bc1bcbc8e050"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a2d23e4c6ff026ae2e1b0b0c7808bde52" name="a2d23e4c6ff026ae2e1b0b0c7808bde52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d23e4c6ff026ae2e1b0b0c7808bde52">&#9670;&#160;</a></span>KDEFAULT_CRASH_REPORT_PREFIX</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char const* KDEFAULT_CRASH_REPORT_PREFIX = &quot;crash_report_&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae819fe30ef0a48d959e7c0385fc64402" name="ae819fe30ef0a48d959e7c0385fc64402"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae819fe30ef0a48d959e7c0385fc64402">&#9670;&#160;</a></span>KDEFAULT_CRASHES_DIR_PATH</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char const* KDEFAULT_CRASHES_DIR_PATH = &quot;crashes&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a484d83bdcb379a8a66dfa42e468fdcbb" name="a484d83bdcb379a8a66dfa42e468fdcbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a484d83bdcb379a8a66dfa42e468fdcbb">&#9670;&#160;</a></span>KDEFAULT_MINIDUMP_PREFIX</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char const* KDEFAULT_MINIDUMP_PREFIX = &quot;dump_&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Resolves short, configuration-style serial-port names into the platform-specific path or identifier a communication channel actually needs in order to open them. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span class="obfuscator">.nosp@m.</span>slav<span class="obfuscator">.nosp@m.</span>.semy<span class="obfuscator">.nosp@m.</span>kin@<span class="obfuscator">.nosp@m.</span>gmail<span class="obfuscator">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>Handles the differences between how Windows, Linux and macOS name serial ports (<code>COM1</code> vs. <code>/dev/ttyUSB0</code> vs. <code>/dev/serial/by-id/...</code>), plus a couple of historical fallback quirks (see lumex::applied::serial::resolve_serial_port_path for the full list) that keep a slightly malformed configuration value from failing outright. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_6413726bd6d3aec0e0911b90031b05f8.html">exceptions</a></li><li class="navelem"><a class="el" href="dir_6417190310dfb8af81128bb0d0176812.html">crash</a></li><li class="navelem"><a class="el" href="a00083.html">DefaultPaths.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_6df2cf08c7df610d9bf032fe0440ee34.html">applied</a></li><li class="navelem"><a class="el" href="dir_8a698c9a61d530817355e041c593101e.html">serial</a></li><li class="navelem"><a class="el" href="dir_abfca509473238a02fa4dfbe54f6ad75.html">port</a></li><li class="navelem"><a class="el" href="a00083.html">LumexSerialPort.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

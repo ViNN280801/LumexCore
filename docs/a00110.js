@@ -1,5 +1,9 @@
 var a00110 =
 [
-    [ "LUMEX_IMPLEMENTATION", "a00110.html#a07486181f1990291c2a348de8eb4c480", null ],
-    [ "Lumex::Core::Stacktrace::detail::resolve_symbol_info", "a00468.html#a508f15814412b1344e694df01f8e559f", null ]
+    [ "LumexSettingsExtensions", "a00110.html#ac438d1e8fa1811a2273f163d14e87c50", null ],
+    [ "lumex::applied::settings::ini::SupportedConfigExtensions", "a00819.html#a1af005d4f6d6cbc1fe9b8ac0dd312222", [
+      [ "lumex::applied::settings::ini::INI", "a00819.html#a1af005d4f6d6cbc1fe9b8ac0dd312222a1ca736f3ae57c78e792455365acb1e43", null ],
+      [ "lumex::applied::settings::ini::XML", "a00819.html#a1af005d4f6d6cbc1fe9b8ac0dd312222ad38d2aabee52a0cb2d5d2bc9e713baaa", null ],
+      [ "lumex::applied::settings::ini::JSON", "a00819.html#a1af005d4f6d6cbc1fe9b8ac0dd312222a65f566b1d2f043ba85cca8a07058759e", null ]
+    ] ]
 ];

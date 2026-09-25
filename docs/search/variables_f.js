@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['page_5foffset_0',['page_offset',['../a01048.html#af28f1b4a67bb262577fb8780f8938657',1,'Lumex::Xml::Types::xml_mem_str_header_t']]],
-  ['parent_1',['parent',['../a01008.html#ab9679d6fa825596b0e38d188fea398c2',1,'Lumex::Xml::Node::XmlNodeBase']]],
-  ['pipe_5fchar_2',['PIPE_CHAR',['../a00481.html#ab01f3135014ce0c22747566592066b34',1,'DumpTypeUtils::CharacterConstants']]],
-  ['pos_3',['pos',['../a00820.html#a754bca829772693b5f4b41275c839ba4',1,'Lumex::Core::StringView::LumexStringView::pos'],['../a00824.html#aca0b94636278258a1abbd1cc6f1a5eac',1,'Lumex::Core::StringView::LumexWStringView::pos']]],
-  ['position_4',['position',['../a01180.html#ad741820f7a7d47b30fb71e22bef0c2d6',1,'Lumex::Xml::XPath::Context::XPathContext']]],
-  ['precedence_5',['precedence',['../a01236.html#a74551758842b6bda42d24faa9f9dacc6',1,'binary_op_t']]],
-  ['preferred_5fseparator_6',['preferred_separator',['../a00744.html#a6dc8c441b31df7d206fcf27655d42b56',1,'Lumex::Core::Filesystem::Path']]],
-  ['prev_7',['prev',['../a00988.html#afc5b52c3b4cf122e135a295d6c6bf8aa',1,'Lumex::Xml::Memory::XmlMemoryPage']]],
-  ['prev_5fattribute_5fc_8',['prev_attribute_c',['../a00968.html#a6937e34f054804482f5573c208034715',1,'Lumex::Xml::Attribute::XmlAttributeBase']]],
-  ['prev_5fsibling_5fc_9',['prev_sibling_c',['../a01008.html#a390614bd6e365fbaa96578a3a5d866aa',1,'Lumex::Xml::Node::XmlNodeBase']]]
+  ['offset_0',['offset',['../a02628.html#a10a08ed832bcc010788978cb1b3d073b',1,'lumex::xml::text::xml_parse_result_t::offset'],['../a02836.html#ae0e682e73b11250fc7e52667bce1b995',1,'lumex::xml::xpath::parser::xpath_parse_result_t::offset']]],
+  ['ok_1',['ok',['../a02096.html#a26c615242e7dc7ffc3fa7b02cdb84208',1,'lumex::core::reflection::field_reflection::detail::count_fields_impl&lt; Aggregate, Lo, Hi, false &gt;']]],
+  ['oom_2',['oom',['../a02804.html#a4c0a787a0450b3149d1315f2e589b673',1,'lumex::xml::xpath::memory::XPathStackData::oom'],['../a02844.html#a48c536799c009e5c3fd1a9e28621be68',1,'lumex::xml::xpath::XPathQueryImpl::oom']]],
+  ['out_3',['out',['../a01872.html#aedf732781558e4f7ecaee89f17b77b0f',1,'lumex::core::fmt::format_to_n_result_t']]]
 ];

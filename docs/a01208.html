@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::XPath::Memory::XPathStack Struct Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc64_ecma182_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,85 +104,166 @@ $(function(){initNavTree('a01208.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="a01205.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::XPath::Memory::XPathStack Struct Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::core::crc::parametric::crc64_ecma182_spec_t Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a pair of <a class="el" href="a00496.html">XPath</a> allocators for managing expression evaluation memory.  
+<p>CRC-64/ECMA-182 (XZ, WE).  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00365_source.html">XPathStack.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Lumex::Xml::XPath::Memory::XPathStack:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01206.png" border="0" usemap="#a_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_stack_coll__map" alt="Collaboration graph"/></div>
-<map name="a_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_stack_coll__map" id="a_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_stack_coll__map">
-<area shape="rect" title="Represents a pair of XPath allocators for managing expression evaluation memory." alt="" coords="28,235,175,277"/>
-<area shape="rect" href="a01192.html" title="Allocator for XPath&#45;related data structures." alt="" coords="20,112,183,155"/>
-<area shape="poly" title=" " alt="" coords="104,170,104,234,99,234,99,170"/>
-<area shape="rect" href="a01200.html" title="Represents a block of memory used by XPathAllocator." alt="" coords="5,5,198,48"/>
-<area shape="poly" title=" " alt="" coords="104,64,104,111,99,111,99,64"/>
-<area shape="poly" title=" " alt="" coords="215,18,224,27,216,35,199,38,198,33,214,30,219,27,212,22"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1d56d182c4463b5bb53a9425aa43c304" id="r_a1d56d182c4463b5bb53a9425aa43c304"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d56d182c4463b5bb53a9425aa43c304">ValueType</a> = std::uint64_t</td></tr>
+<tr class="separator:a1d56d182c4463b5bb53a9425aa43c304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a94785fdfa5e983c665dcaa9644d62640" id="r_a94785fdfa5e983c665dcaa9644d62640"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01192.html">XPathAllocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94785fdfa5e983c665dcaa9644d62640">result</a></td></tr>
-<tr class="memdesc:a94785fdfa5e983c665dcaa9644d62640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the allocator used for storing final <a class="el" href="a00496.html">XPath</a> expression results.  <br /></td></tr>
-<tr class="separator:a94785fdfa5e983c665dcaa9644d62640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c6bfb5b31b3c92c77906a41eb0e1261" id="r_a0c6bfb5b31b3c92c77906a41eb0e1261"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01192.html">XPathAllocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c6bfb5b31b3c92c77906a41eb0e1261">temp</a></td></tr>
-<tr class="memdesc:a0c6bfb5b31b3c92c77906a41eb0e1261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the allocator used for temporary memory during <a class="el" href="a00496.html">XPath</a> evaluation.  <br /></td></tr>
-<tr class="separator:a0c6bfb5b31b3c92c77906a41eb0e1261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6567f54cd2f332dcd223dd2839d13c" id="r_a0e6567f54cd2f332dcd223dd2839d13c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e6567f54cd2f332dcd223dd2839d13c">kWidth</a> = 64</td></tr>
+<tr class="separator:a0e6567f54cd2f332dcd223dd2839d13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6244e257e564d5d2fb05ff50eb79238e" id="r_a6244e257e564d5d2fb05ff50eb79238e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6244e257e564d5d2fb05ff50eb79238e">kPoly</a> = 0x42F0E1EBA9EA3693ULL</td></tr>
+<tr class="separator:a6244e257e564d5d2fb05ff50eb79238e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bdfd7a4232fa9fdbecc338470e9b624" id="r_a8bdfd7a4232fa9fdbecc338470e9b624"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bdfd7a4232fa9fdbecc338470e9b624">kInit</a> = 0x0ULL</td></tr>
+<tr class="separator:a8bdfd7a4232fa9fdbecc338470e9b624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b6b7f13a4dcebde76a6ba2c55ac388b" id="r_a2b6b7f13a4dcebde76a6ba2c55ac388b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b6b7f13a4dcebde76a6ba2c55ac388b">kRefIn</a> = false</td></tr>
+<tr class="separator:a2b6b7f13a4dcebde76a6ba2c55ac388b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af268ab849fc3d965ce7737bd1580f973" id="r_af268ab849fc3d965ce7737bd1580f973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af268ab849fc3d965ce7737bd1580f973">kRefOut</a> = false</td></tr>
+<tr class="separator:af268ab849fc3d965ce7737bd1580f973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af66615ad273d65ca3a2401dac50f1d15" id="r_af66615ad273d65ca3a2401dac50f1d15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af66615ad273d65ca3a2401dac50f1d15">kXorOut</a> = 0x0ULL</td></tr>
+<tr class="separator:af66615ad273d65ca3a2401dac50f1d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e50ae6e34dba34292e2314224ce98f" id="r_a73e50ae6e34dba34292e2314224ce98f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73e50ae6e34dba34292e2314224ce98f">kCatalogCheck</a> = 0x6C40DF5F0B497347ULL</td></tr>
+<tr class="separator:a73e50ae6e34dba34292e2314224ce98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a pair of <a class="el" href="a00496.html">XPath</a> allocators for managing expression evaluation memory. </p>
-<p>This structure groups two <code><a class="el" href="a01192.html" title="Allocator for XPath-related data structures.">XPathAllocator</a></code> instances: <code>result</code> for storing final evaluation results and <code>temp</code> for temporary allocations that can be freed frequently during intermediate steps. This separation helps optimize memory usage during complex <a class="el" href="a00496.html">XPath</a> evaluations.</p>
-<dl class="section note"><dt>Note</dt><dd>This struct itself does not manage the lifetime of the <code><a class="el" href="a01192.html" title="Allocator for XPath-related data structures.">XPathAllocator</a></code> objects it points to; it merely holds references. The actual allocators are typically owned by <code><a class="el" href="a01212.html" title="Manages the memory for XPath evaluation, providing dedicated allocators.">XPathStackData</a></code>. </dd></dl>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a94785fdfa5e983c665dcaa9644d62640" name="a94785fdfa5e983c665dcaa9644d62640"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94785fdfa5e983c665dcaa9644d62640">&#9670;&#160;</a></span>result</h2>
+<div class="textblock"><p>CRC-64/ECMA-182 (XZ, WE). </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-64/ECMA-182 </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a1d56d182c4463b5bb53a9425aa43c304" name="a1d56d182c4463b5bb53a9425aa43c304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d56d182c4463b5bb53a9425aa43c304">&#9670;&#160;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01192.html">XPathAllocator</a>* Lumex::Xml::XPath::Memory::XPathStack::result</td>
+          <td class="memname">using <a class="el" href="#a1d56d182c4463b5bb53a9425aa43c304">lumex::core::crc::parametric::crc64_ecma182_spec_t::ValueType</a> = std::uint64_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pointer to the allocator used for storing final <a class="el" href="a00496.html">XPath</a> expression results. </p>
-
 </div>
 </div>
-<a id="a0c6bfb5b31b3c92c77906a41eb0e1261" name="a0c6bfb5b31b3c92c77906a41eb0e1261"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c6bfb5b31b3c92c77906a41eb0e1261">&#9670;&#160;</a></span>temp</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a73e50ae6e34dba34292e2314224ce98f" name="a73e50ae6e34dba34292e2314224ce98f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e50ae6e34dba34292e2314224ce98f">&#9670;&#160;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01192.html">XPathAllocator</a>* Lumex::Xml::XPath::Memory::XPathStack::temp</td>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc64_ecma182_spec_t::kCatalogCheck = 0x6C40DF5F0B497347ULL</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pointer to the allocator used for temporary memory during <a class="el" href="a00496.html">XPath</a> evaluation. </p>
+</div>
+</div>
+<a id="a8bdfd7a4232fa9fdbecc338470e9b624" name="a8bdfd7a4232fa9fdbecc338470e9b624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bdfd7a4232fa9fdbecc338470e9b624">&#9670;&#160;</a></span>kInit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc64_ecma182_spec_t::kInit = 0x0ULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6244e257e564d5d2fb05ff50eb79238e" name="a6244e257e564d5d2fb05ff50eb79238e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6244e257e564d5d2fb05ff50eb79238e">&#9670;&#160;</a></span>kPoly</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc64_ecma182_spec_t::kPoly = 0x42F0E1EBA9EA3693ULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b6b7f13a4dcebde76a6ba2c55ac388b" name="a2b6b7f13a4dcebde76a6ba2c55ac388b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b6b7f13a4dcebde76a6ba2c55ac388b">&#9670;&#160;</a></span>kRefIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc64_ecma182_spec_t::kRefIn = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af268ab849fc3d965ce7737bd1580f973" name="af268ab849fc3d965ce7737bd1580f973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af268ab849fc3d965ce7737bd1580f973">&#9670;&#160;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc64_ecma182_spec_t::kRefOut = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e6567f54cd2f332dcd223dd2839d13c" name="a0e6567f54cd2f332dcd223dd2839d13c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6567f54cd2f332dcd223dd2839d13c">&#9670;&#160;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc64_ecma182_spec_t::kWidth = 64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af66615ad273d65ca3a2401dac50f1d15" name="af66615ad273d65ca3a2401dac50f1d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af66615ad273d65ca3a2401dac50f1d15">&#9670;&#160;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc64_ecma182_spec_t::kXorOut = 0x0ULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00365_source.html">XPathStack.hpp</a></li>
+<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00496.html">XPath</a></li><li class="navelem"><a class="el" href="a00511.html">Memory</a></li><li class="navelem"><a class="el" href="a01208.html">XPathStack</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00826.html">core</a></li><li class="navelem"><a class="el" href="a00837.html">crc</a></li><li class="navelem"><a class="el" href="a00840.html">parametric</a></li><li class="navelem"><a class="el" href="a01208.html">crc64_ecma182_spec_t</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

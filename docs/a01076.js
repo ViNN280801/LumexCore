@@ -1,5 +1,9 @@
 var a01076 =
 [
-    [ "type", "a01076.html#af8a1ac20f47a31d4c474ca212c5f30f1", null ],
-    [ "process", "a01076.html#a200d4c4c544141a40c911736e36f3dee", null ]
+    [ "~ILumexSettings", "a01076.html#a67340373f009ef86ebf93a8c3bd15104", null ],
+    [ "add", "a01076.html#aa62d2c035f9f5262cc3ff5ed0aa090e6", null ],
+    [ "get", "a01076.html#a4dd441bfa740a2514899dfecceb4dd70", null ],
+    [ "load", "a01076.html#a5e8c879f253d759120c2ef9dce35a6fe", null ],
+    [ "remove", "a01076.html#a7dd9c0cca546a7b92b0250f1af966c01", null ],
+    [ "save", "a01076.html#a8c93c820977807fe52ac6dbbf8f3ca4c", null ]
 ];

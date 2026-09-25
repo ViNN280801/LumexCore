@@ -1,16 +1,11 @@
 var a01224 =
 [
-    [ "XPathNodeSetRaw", "a01224.html#aa8a13e15a10c9c354f4765de51152d69", null ],
-    [ "append", "a01224.html#a72291120e50ea24d3e51278ddb8aa916", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a01224.html#ae2776dc1cd57428d32e9d3d167969fc3", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a01224.html#aa32ae9d0e79445589c4f06ffe6bdca3c", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a01224.html#ae6a4edbd21514bd3d97327759c461c61", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a01224.html#a22b6aba1e5f883f5ffded67b262638c4", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a01224.html#acba7622988721412b79db69de077aea8", null ],
-    [ "push_back", "a01224.html#a16981a6ea3ae03d4e103f6cd45b70504", null ],
-    [ "push_back_grow", "a01224.html#a64973a7e961830375ed4dde98f4bdb25", null ],
-    [ "remove_duplicates", "a01224.html#abe5f5d997074f2927096847b55ce0a75", null ],
-    [ "set_type", "a01224.html#aa319eaf956c4cce9c6eca82ecb820049", null ],
-    [ "sort_do", "a01224.html#a05db737282cd4606ffc5c7c99095ee38", null ],
-    [ "truncate", "a01224.html#a2bf093e561799c2f04fdeda4e7614c1d", null ]
+    [ "ValueType", "a01224.html#afabe8cd0353541b7ccd192ba2e11a997", null ],
+    [ "kCatalogCheck", "a01224.html#a4fd70136cdd0c55d479ef920ec1e2632", null ],
+    [ "kInit", "a01224.html#afc2772333bef876c1c6a724e366aa4a7", null ],
+    [ "kPoly", "a01224.html#aa4aa1c2cbd402f7ab00a3903bc043a3f", null ],
+    [ "kRefIn", "a01224.html#a989f60872ff20f2c1dc71a37eb0c0ff4", null ],
+    [ "kRefOut", "a01224.html#a8a5c063981cba2a3dc6386608a4ef34c", null ],
+    [ "kWidth", "a01224.html#a42d7b3ddd37f404a3b409d7ea12fea93", null ],
+    [ "kXorOut", "a01224.html#a43a03736b085deb678d398f1c88e3d0e", null ]
 ];

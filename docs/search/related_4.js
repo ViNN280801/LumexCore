@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node_3a_3axmlnode_0',['Node::XmlNode',['../a01004.html#a49eb59f84b432ea0f6613728713d9549',1,'Lumex::Xml::Attribute::XmlAttributeIterator::XmlNode()'],['../a01040.html#a49eb59f84b432ea0f6613728713d9549',1,'Lumex::Xml::Text::XmlText::XmlNode()']]]
+  ['node_3a_3axmlnode_0',['node::XmlNode',['../a02596.html#a93c80d4442ba4b50bfd4dd7985283928',1,'lumex::xml::attribute::XmlAttributeIterator::XmlNode()'],['../a02632.html#a93c80d4442ba4b50bfd4dd7985283928',1,'lumex::xml::text::XmlText::XmlNode()']]]
 ];

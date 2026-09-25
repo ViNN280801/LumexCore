@@ -1,10 +1,11 @@
 var a01212 =
 [
-    [ "XPathStackData", "a01212.html#a12bbaf4e5a1696358aee6a530974e461", null ],
-    [ "~XPathStackData", "a01212.html#a40d2c5f6cc635f4a255b8c82795988ab", null ],
-    [ "blocks", "a01212.html#aa3513aacb1f6d740589259f1ee5b2bbd", null ],
-    [ "oom", "a01212.html#aa12599e3bf9eaf8d608bc98a3fd3ea90", null ],
-    [ "result", "a01212.html#a0dddc65f7d957de149d8630bb0b93fa8", null ],
-    [ "stack", "a01212.html#a2d7770bd6dfcf5ee933871e4c1ba85bc", null ],
-    [ "temp", "a01212.html#aa9ebed08aa3157262d4faa9b4b68a187", null ]
+    [ "ValueType", "a01212.html#a9366d309e925795f8382fa868841dd66", null ],
+    [ "kCatalogCheck", "a01212.html#addb071d8b297b2a2adefdc729b3082f0", null ],
+    [ "kInit", "a01212.html#ae6475915b911b2645b7522e46d571967", null ],
+    [ "kPoly", "a01212.html#a6088b4a9674bda7bcbec683520bf72db", null ],
+    [ "kRefIn", "a01212.html#a7763a1b80edab17b52cad7dc36585a1a", null ],
+    [ "kRefOut", "a01212.html#a6f1c2a274e52fd066adc60d50f9dd413", null ],
+    [ "kWidth", "a01212.html#acab48faa11d5b9d42eeb501a9712f797", null ],
+    [ "kXorOut", "a01212.html#a23b0b9eca4c41d596067730591375a8e", null ]
 ];

@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['same_5ftype_0',['same_type',['../a00872.html#aeaab7b5d0d12fe8780e18468dbc5c695',1,'comparison_traits']]],
-  ['scratch_1',['scratch',['../a01132.html#a3cbd96be3f68ccfdc92202bb728b5b34',1,'Lumex::Xml::Writer::XmlBufferedWriter']]],
-  ['size_2',['size',['../a00972.html#a42618ba3b7bda1246cfc640149fc34eb',1,'xml_stream_chunk::size'],['../a01020.html#ad5bb3597ade78d89bbe0e300748ad508',1,'gap::size'],['../a01180.html#a9cf8422ce47ea2e037d99be6d58a768b',1,'Lumex::Xml::XPath::Context::XPathContext::size']]],
-  ['stack_3',['stack',['../a01212.html#a2d7770bd6dfcf5ee933871e4c1ba85bc',1,'Lumex::Xml::XPath::Memory::XPathStackData']]],
-  ['status_4',['status',['../a01036.html#a403c6201db3cf01e97a984cbdf02d630',1,'Lumex::Xml::Text::XmlParseResult']]],
-  ['string_5',['string',['../a01172.html#ab4373714e1647a4a6c9322402c14ffae',1,'Lumex::Xml::XPath::Ast::XPathAstNode']]],
-  ['success_6',['success',['../a00644.html#aef5567e26689919e894a382b72adea3b',1,'Lumex::Core::Environment::LumexEnvironment::EnvResult']]]
+  ['refin_0',['refIn',['../a01120.html#a4c28d3d75ce4fcb56fca7875c71c77a2',1,'lumex::core::crc::catalog::crc_params_t']]],
+  ['refout_1',['refOut',['../a01120.html#a385fb2d6379507789c485e3b6f3d0a01',1,'lumex::core::crc::catalog::crc_params_t']]],
+  ['regex_5fkey_5fvalue_2',['REGEX_KEY_VALUE',['../a00821.html#a121eca19e5da0bc3bbb1ebc47f6be935',1,'lumex::applied::settings::ini::Constants']]],
+  ['regex_5fsection_3',['REGEX_SECTION',['../a00821.html#ae1cef8a8201ce9d0553cc42b4e7b993b',1,'lumex::applied::settings::ini::Constants']]],
+  ['result_4',['result',['../a02800.html#ad5093c7978d7ea040ad32c514826ad8e',1,'lumex::xml::xpath::memory::XPathStack::result'],['../a02804.html#a32d3926e9e3e45966c8c51a1933e899e',1,'lumex::xml::xpath::memory::XPathStackData::result']]],
+  ['rettype_5',['rettype',['../a02828.html#a520412ecc9d356b11ed57cce956a7549',1,'binary_op_t::rettype'],['../a02832.html#a84510bdc1c33ef644cd1be8c8fa026ed',1,'lumex::xml::xpath::parser::XPathParser::rettype']]],
+  ['revision_6',['revision',['../a01032.html#a72447032618d1676fa289765d3725d7e',1,'lumex::applied::serial::enumeration::serial_port_info_t']]],
+  ['root_7',['root',['../a02844.html#a7e02fb35e7966ae1447939149f2b6e45',1,'lumex::xml::xpath::XPathQueryImpl']]]
 ];

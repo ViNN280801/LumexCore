@@ -1,5 +1,9 @@
 var a01120 =
 [
-    [ "type", "a01120.html#ac11618780d884975ac061035563644c7", null ],
-    [ "process", "a01120.html#a623b17d6c5c29c4c0ca8ef65c830819a", null ]
+    [ "init", "a01120.html#abeb40ff7bcce9217909ef1356d4e083f", null ],
+    [ "poly", "a01120.html#a20ce03300d984746aa9bc6679d90e246", null ],
+    [ "refIn", "a01120.html#a4c28d3d75ce4fcb56fca7875c71c77a2", null ],
+    [ "refOut", "a01120.html#a385fb2d6379507789c485e3b6f3d0a01", null ],
+    [ "widthBits", "a01120.html#a922850c27198d41cfbac66ae0d3ea022", null ],
+    [ "xorOut", "a01120.html#ad274e477a4b1f7269b2bb8d9d736cdfe", null ]
 ];

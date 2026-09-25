@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: WindowsSEHTranslator.hpp Source File</title>
+<title>LumexLib: LumexSettingsFactory.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -103,39 +103,63 @@ $(function(){initNavTree('a00095_source.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">WindowsSEHTranslator.hpp</div></div>
+  <div class="headertitle"><div class="title">LumexSettingsFactory.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00095.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef WINDOWS_SEH_TRANSLATOR_HPP</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define WINDOWS_SEH_TRANSLATOR_HPP</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="a00212.html">lumex/LumexExport.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;lumex/core/utility/LumexUtility&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#if LUMEX_OS_WINDOWS</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">  #include &lt;Windows.h&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">  #include &lt;eh.h&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_define" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">inline</span> <span class="keywordtype">void</span> seh_translator(<a class="code hl_define" href="a00179.html#a06748e501657bea60452820c04a1cb9e">LUMEX_ATTRIBUTE_MAYBE_UNUSED</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> code, _EXCEPTION_POINTERS *info);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#if LUMEX_OS_WINDOWS</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">  #define SET_SEH_TRANSLATOR _set_se_translator(seh_translator);</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="a00095.html#a0d7aeb5eed30cf65a5415d7bb1014f5b">   23</a></span><span class="preprocessor">  #define SET_SEH_TRANSLATOR</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif </span><span class="comment">// !WINDOWS_SEH_TRANSLATOR_HPP</span></div>
-<div class="ttc" id="aa00179_html_a06748e501657bea60452820c04a1cb9e"><div class="ttname"><a href="a00179.html#a06748e501657bea60452820c04a1cb9e">LUMEX_ATTRIBUTE_MAYBE_UNUSED</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_MAYBE_UNUSED</div><div class="ttdef"><b>Definition</b> LumexAttributes.hpp:131</div></div>
-<div class="ttc" id="aa00212_html"><div class="ttname"><a href="a00212.html">LumexExport.hpp</a></div></div>
-<div class="ttc" id="aa00212_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition</b> LumexExport.hpp:51</div></div>
+<a href="a00095.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef LUMEX_APPLIED_SETTINGS_FACTORY_HPP</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define LUMEX_APPLIED_SETTINGS_FACTORY_HPP</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="a00548.html">lumex/LumexExport.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;memory&gt;</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="a00110.html">lumex/applied/settings/ini/SupportedConfigExtensions.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="a00113.html">lumex/applied/settings/interface/ILumexSettings.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00774.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00775.html">applied</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00816.html">settings</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00817.html">factory</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a01060.html">   52</a></span><span class="keyword">class </span><a class="code hl_define" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code hl_class" href="a01060.html">LumexSettingsFactory</a></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keyword">static</span> std::unique_ptr&lt;ILumexSettings&gt; <a class="code hl_function" href="a01060.html#addb03776b27a0a5e39ef1e956699eded">create</a> (<a class="code hl_typedef" href="a00110.html#ac438d1e8fa1811a2273f163d14e87c50">LumexSettingsExtensions</a> ext);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// namespace factory</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>} <span class="comment">// namespace settings</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>} <span class="comment">// namespace applied</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>} <span class="comment">// namespace lumex</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="a00095.html#a90f219acff9eb90d97465a960d7a7d0f">   77</a></span><span class="keyword">using </span><a class="code hl_typedef" href="a00095.html#a90f219acff9eb90d97465a960d7a7d0f">LumexSettingsFactory</a></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    = <a class="code hl_class" href="a01060.html">lumex::applied::settings::factory::LumexSettingsFactory</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_APPLIED_SETTINGS_FACTORY_HPP</span></div>
+<div class="ttc" id="aa00095_html_a90f219acff9eb90d97465a960d7a7d0f"><div class="ttname"><a href="a00095.html#a90f219acff9eb90d97465a960d7a7d0f">LumexSettingsFactory</a></div><div class="ttdeci">lumex::applied::settings::factory::LumexSettingsFactory LumexSettingsFactory</div><div class="ttdef"><b>Definition</b> LumexSettingsFactory.hpp:77</div></div>
+<div class="ttc" id="aa00110_html"><div class="ttname"><a href="a00110.html">SupportedConfigExtensions.hpp</a></div></div>
+<div class="ttc" id="aa00110_html_ac438d1e8fa1811a2273f163d14e87c50"><div class="ttname"><a href="a00110.html#ac438d1e8fa1811a2273f163d14e87c50">LumexSettingsExtensions</a></div><div class="ttdeci">lumex::applied::settings::ini::SupportedConfigExtensions LumexSettingsExtensions</div><div class="ttdef"><b>Definition</b> SupportedConfigExtensions.hpp:74</div></div>
+<div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">ILumexSettings.hpp</a></div></div>
+<div class="ttc" id="aa00548_html"><div class="ttname"><a href="a00548.html">LumexExport.hpp</a></div></div>
+<div class="ttc" id="aa00548_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition</b> LumexExport.hpp:73</div></div>
+<div class="ttc" id="aa00774_html"><div class="ttname"><a href="a00774.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition</b> LumexCPUVectorizationCapabilities.cpp:27</div></div>
+<div class="ttc" id="aa00775_html"><div class="ttname"><a href="a00775.html">lumex::applied</a></div><div class="ttdef"><b>Definition</b> LumexCPUVectorizationCapabilities.cpp:29</div></div>
+<div class="ttc" id="aa00816_html"><div class="ttname"><a href="a00816.html">lumex::applied::settings</a></div><div class="ttdef"><b>Definition</b> LumexSettingsFactory.cpp:16</div></div>
+<div class="ttc" id="aa00817_html"><div class="ttname"><a href="a00817.html">lumex::applied::settings::factory</a></div><div class="ttdef"><b>Definition</b> LumexSettingsFactory.cpp:18</div></div>
+<div class="ttc" id="aa01060_html"><div class="ttname"><a href="a01060.html">lumex::applied::settings::factory::LumexSettingsFactory</a></div><div class="ttdoc">Factory class for creating ILumexSettings instances.</div><div class="ttdef"><b>Definition</b> LumexSettingsFactory.hpp:53</div></div>
+<div class="ttc" id="aa01060_html_addb03776b27a0a5e39ef1e956699eded"><div class="ttname"><a href="a01060.html#addb03776b27a0a5e39ef1e956699eded">lumex::applied::settings::factory::LumexSettingsFactory::create</a></div><div class="ttdeci">static std::unique_ptr&lt; ILumexSettings &gt; create(LumexSettingsExtensions ext)</div><div class="ttdoc">Creates a settings object for the specified file format.</div><div class="ttdef"><b>Definition</b> LumexSettingsFactory.cpp:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_6413726bd6d3aec0e0911b90031b05f8.html">exceptions</a></li><li class="navelem"><a class="el" href="dir_6417190310dfb8af81128bb0d0176812.html">crash</a></li><li class="navelem"><a class="el" href="a00095.html">WindowsSEHTranslator.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_6df2cf08c7df610d9bf032fe0440ee34.html">applied</a></li><li class="navelem"><a class="el" href="dir_f8a442d41528e2aada91bcdeb5bd8658.html">settings</a></li><li class="navelem"><a class="el" href="dir_2a6078512d0798a9351fd416762bc197.html">factory</a></li><li class="navelem"><a class="el" href="a00095.html">LumexSettingsFactory.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

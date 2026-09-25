@@ -1,19 +1,4 @@
 var searchData=
 [
-  ['longgenerator_0',['LongGenerator',['../a00137.html#ad48ef5a261f7b5d4090abdc3963c1301',1,'LumexNumberGenerator.hpp']]],
-  ['lumexbaseexception_1',['LumexBaseException',['../a00101.html#a163c960e6710878c429dc5fdb8578c00',1,'LumexException.hpp']]],
-  ['lumexcrashhandler_2',['LumexCrashHandler',['../a00089.html#addea30ac5988395416dfc1fd8ecd19ec',1,'LumexCrashHandler.hpp']]],
-  ['lumexenvironment_3',['LumexEnvironment',['../a00080.html#a849057a35e0357d925542779f79ac82d',1,'LumexEnvironment.hpp']]],
-  ['lumexfilesystem_4',['LumexFilesystem',['../a00161.html#a591aa2b28a4c6130a23034fe12095624',1,'LumexTemporary.cpp']]],
-  ['lumexlogging_5',['LumexLogging',['../a00023.html#a161778f4af8e5bb60e2d33b69c10babb',1,'LumexLogging.hpp']]],
-  ['lumexoptional_6',['LumexOptional',['../a00143.html#a51e373b09f984efefcdc877904bc3444',1,'LumexOptional.hpp']]],
-  ['lumexsettingsextensions_7',['LumexSettingsExtensions',['../a00044.html#a0391245d6cfcc3359de121f019889033',1,'SupportedConfigExtensions.hpp']]],
-  ['lumexsettingsfactory_8',['LumexSettingsFactory',['../a00035.html#a905c9ac1d4b70303a524de0bee8da127',1,'LumexSettingsFactory.hpp']]],
-  ['lumexsettingsini_9',['LumexSettingsINI',['../a00041.html#a96656e0a85c047de6fe97e642d03e130',1,'LumexSettingsINI.hpp']]],
-  ['lumexstacktrace_10',['LumexStacktrace',['../a00467.html#a36b7661924f5b9b62691e8cc3f4c35e6',1,'Lumex::Core::Stacktrace::LumexStacktrace'],['../a00107.html#a1d88bb418bd3bfb75e73a7cbf8f6b28b',1,'LumexStacktrace:&#160;LumexStacktrace.hpp']]],
-  ['lumexstacktraceentry_11',['LumexStacktraceEntry',['../a00107.html#adeed8ba2c7e2acbbb08a5833e7bdf841',1,'LumexStacktrace.hpp']]],
-  ['lumexstringview_12',['LumexStringView',['../a00152.html#a032a4942b367e4fa22876631ce05b66b',1,'LumexStringView.hpp']]],
-  ['lumextemporary_13',['LumexTemporary',['../a00164.html#a66ede0a005e814d41501d61eb9566f97',1,'LumexTemporary.hpp']]],
-  ['lumextime_14',['LumexTime',['../a00170.html#ae651cca7b43a01c6d81d85b849241ce7',1,'LumexTime.hpp']]],
-  ['lumexwstringview_15',['LumexWStringView',['../a00158.html#af42bb1fb234d5002dd760e5474c0da7b',1,'LumexWStringView.hpp']]]
+  ['kind_5ftag_0',['kind_tag',['../a00860.html#acdb0f6bc94d9a0450f79dfdb50335e4a',1,'lumex::core::fmt::Detail']]]
 ];

@@ -1,4 +1,4 @@
 var a00353 =
 [
-    [ "LUMEX_IMPLEMENTATION", "a00353.html#a07486181f1990291c2a348de8eb4c480", null ]
+    [ "lumex::core::utility::process::get_current_pid", "a00903.html#a190ac949630204e250c83b69f717e48d", null ]
 ];

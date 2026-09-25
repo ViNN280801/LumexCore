@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::XPath::Memory::XPathMemoryBlock Struct Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc32_iso_hdlc_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,137 +104,166 @@ $(function(){initNavTree('a01200.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="a01197.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::XPath::Memory::XPathMemoryBlock Struct Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::core::crc::parametric::crc32_iso_hdlc_spec_t Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a block of memory used by <a class="el" href="a01192.html" title="Allocator for XPath-related data structures.">XPathAllocator</a>.  
+<p>CRC-32/ISO-HDLC (IEEE 802.3 FCS, PKZIP, zlib crc32).  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00359_source.html">XPathMemoryBlock.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Lumex::Xml::XPath::Memory::XPathMemoryBlock:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01198.png" border="0" usemap="#a_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_memory_block_coll__map" alt="Collaboration graph"/></div>
-<map name="a_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_memory_block_coll__map" id="a_lumex_1_1_xml_1_1_x_path_1_1_memory_1_1_x_path_memory_block_coll__map">
-<area shape="rect" title="Represents a block of memory used by XPathAllocator." alt="" coords="5,5,198,48"/>
-<area shape="poly" title=" " alt="" coords="214,19,224,27,216,34,199,37,198,31,214,29,219,27,212,24"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:abf1d2f98716bcdc64db0b18244f2fdb6" id="r_abf1d2f98716bcdc64db0b18244f2fdb6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf1d2f98716bcdc64db0b18244f2fdb6">ValueType</a> = std::uint32_t</td></tr>
+<tr class="separator:abf1d2f98716bcdc64db0b18244f2fdb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a727a2f6ebc9a1abdef5c07ece435a054" id="r_a727a2f6ebc9a1abdef5c07ece435a054"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01200.html">XPathMemoryBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a727a2f6ebc9a1abdef5c07ece435a054">next</a></td></tr>
-<tr class="memdesc:a727a2f6ebc9a1abdef5c07ece435a054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the next memory block in the chain. <code>nullptr</code> if this is the last block.  <br /></td></tr>
-<tr class="separator:a727a2f6ebc9a1abdef5c07ece435a054"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7238ea260db781d54bb3050701998f3" id="r_af7238ea260db781d54bb3050701998f3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7238ea260db781d54bb3050701998f3">capacity</a></td></tr>
-<tr class="memdesc:af7238ea260db781d54bb3050701998f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total usable capacity of the <code>data</code> array in bytes.  <br /></td></tr>
-<tr class="separator:af7238ea260db781d54bb3050701998f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab38979ed832903a512cdb82dae9866cc" id="r_ab38979ed832903a512cdb82dae9866cc"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a534b4b4f73e5818a7b9b618b084e1a55" id="r_a534b4b4f73e5818a7b9b618b084e1a55"><td class="memItemLeft" >&#160;&#160;&#160;std::array&lt; char, kxpath_memory_page_size &gt;&#160;&#160;&#160;<a class="el" href="#acd430afa1d14b8ad75b10f8ceb174cbb">data</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:a534b4b4f73e5818a7b9b618b084e1a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">The raw character array used for general-purpose memory allocation.  <a href="#acd430afa1d14b8ad75b10f8ceb174cbb">More...</a><br /></td></tr>
-<tr class="separator:a534b4b4f73e5818a7b9b618b084e1a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2e9bab96836563a513f5cdd1ff1ebf5" id="r_ad2e9bab96836563a513f5cdd1ff1ebf5"><td class="memItemLeft" >&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="#a9b4e494d52323ba5a5c221fefbb6c7ab">alignment</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:ad2e9bab96836563a513f5cdd1ff1ebf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dummy member used to ensure the <code>data</code> array is aligned for <code>double</code>s.  <a href="#a9b4e494d52323ba5a5c221fefbb6c7ab">More...</a><br /></td></tr>
-<tr class="separator:ad2e9bab96836563a513f5cdd1ff1ebf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab38979ed832903a512cdb82dae9866cc" id="r_ab38979ed832903a512cdb82dae9866cc"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ab38979ed832903a512cdb82dae9866cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac00c24469df9dd0d489179ec043f6d6a" id="r_ac00c24469df9dd0d489179ec043f6d6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac00c24469df9dd0d489179ec043f6d6a">kWidth</a> = 32</td></tr>
+<tr class="separator:ac00c24469df9dd0d489179ec043f6d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593c043b264aaa5bd007348f241752b5" id="r_a593c043b264aaa5bd007348f241752b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a593c043b264aaa5bd007348f241752b5">kPoly</a> = 0x04C11DB7UL</td></tr>
+<tr class="separator:a593c043b264aaa5bd007348f241752b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5c7b19f359e7fc001f818b24515bc2" id="r_a3a5c7b19f359e7fc001f818b24515bc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a5c7b19f359e7fc001f818b24515bc2">kInit</a> = 0xFFFFFFFFUL</td></tr>
+<tr class="separator:a3a5c7b19f359e7fc001f818b24515bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab778c7720a2ba5eb0b86935f4b67dcf1" id="r_ab778c7720a2ba5eb0b86935f4b67dcf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab778c7720a2ba5eb0b86935f4b67dcf1">kRefIn</a> = true</td></tr>
+<tr class="separator:ab778c7720a2ba5eb0b86935f4b67dcf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4262e13166cebb97605e6d374f909b99" id="r_a4262e13166cebb97605e6d374f909b99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4262e13166cebb97605e6d374f909b99">kRefOut</a> = true</td></tr>
+<tr class="separator:a4262e13166cebb97605e6d374f909b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18250eb87ea10f1a49056e824fd4c19b" id="r_a18250eb87ea10f1a49056e824fd4c19b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18250eb87ea10f1a49056e824fd4c19b">kXorOut</a> = 0xFFFFFFFFUL</td></tr>
+<tr class="separator:a18250eb87ea10f1a49056e824fd4c19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a496f1235c0da95fabdea9f9625a61f8e" id="r_a496f1235c0da95fabdea9f9625a61f8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a496f1235c0da95fabdea9f9625a61f8e">kCatalogCheck</a> = 0xCBF43926UL</td></tr>
+<tr class="separator:a496f1235c0da95fabdea9f9625a61f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a block of memory used by <a class="el" href="a01192.html" title="Allocator for XPath-related data structures.">XPathAllocator</a>. </p>
-<p>This structure defines a contiguous block of memory that the <code><a class="el" href="a01192.html" title="Allocator for XPath-related data structures.">XPathAllocator</a></code> uses for its allocations. Each block can link to the next, forming a singly linked list of memory pages. The union is used to ensure proper alignment of the data buffer for various data types.</p>
-<dl class="section note"><dt>Note</dt><dd>The <code>kxpath_memory_page_size</code> constant (defined in <code><a class="el" href="a00338.html">XPathConstants.hpp</a></code>) determines the fixed size of the data buffer within each block. </dd></dl>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="ab38979ed832903a512cdb82dae9866cc" name="ab38979ed832903a512cdb82dae9866cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab38979ed832903a512cdb82dae9866cc">&#9670;&#160;</a></span>[union]</h2>
+<div class="textblock"><p>CRC-32/ISO-HDLC (IEEE 802.3 FCS, PKZIP, zlib crc32). </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-32/ISO-HDLC </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="abf1d2f98716bcdc64db0b18244f2fdb6" name="abf1d2f98716bcdc64db0b18244f2fdb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1d2f98716bcdc64db0b18244f2fdb6">&#9670;&#160;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union  { ... }  <a class="el" href="a01200.html">Lumex::Xml::XPath::Memory::XPathMemoryBlock</a></td>
+          <td class="memname">using <a class="el" href="#abf1d2f98716bcdc64db0b18244f2fdb6">lumex::core::crc::parametric::crc32_iso_hdlc_spec_t::ValueType</a> = std::uint32_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a9b4e494d52323ba5a5c221fefbb6c7ab" name="a9b4e494d52323ba5a5c221fefbb6c7ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b4e494d52323ba5a5c221fefbb6c7ab">&#9670;&#160;</a></span>alignment</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a496f1235c0da95fabdea9f9625a61f8e" name="a496f1235c0da95fabdea9f9625a61f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a496f1235c0da95fabdea9f9625a61f8e">&#9670;&#160;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double Lumex::Xml::XPath::Memory::XPathMemoryBlock::alignment</td>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t lumex::core::crc::parametric::crc32_iso_hdlc_spec_t::kCatalogCheck = 0xCBF43926UL</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>A dummy member used to ensure the <code>data</code> array is aligned for <code>double</code>s. </p>
-
 </div>
 </div>
-<a id="af7238ea260db781d54bb3050701998f3" name="af7238ea260db781d54bb3050701998f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7238ea260db781d54bb3050701998f3">&#9670;&#160;</a></span>capacity</h2>
+<a id="a3a5c7b19f359e7fc001f818b24515bc2" name="a3a5c7b19f359e7fc001f818b24515bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5c7b19f359e7fc001f818b24515bc2">&#9670;&#160;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">size_t Lumex::Xml::XPath::Memory::XPathMemoryBlock::capacity</td>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_iso_hdlc_spec_t::kInit = 0xFFFFFFFFUL</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The total usable capacity of the <code>data</code> array in bytes. </p>
-
 </div>
 </div>
-<a id="acd430afa1d14b8ad75b10f8ceb174cbb" name="acd430afa1d14b8ad75b10f8ceb174cbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd430afa1d14b8ad75b10f8ceb174cbb">&#9670;&#160;</a></span>data</h2>
+<a id="a593c043b264aaa5bd007348f241752b5" name="a593c043b264aaa5bd007348f241752b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a593c043b264aaa5bd007348f241752b5">&#9670;&#160;</a></span>kPoly</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;char, kxpath_memory_page_size&gt; Lumex::Xml::XPath::Memory::XPathMemoryBlock::data</td>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_iso_hdlc_spec_t::kPoly = 0x04C11DB7UL</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The raw character array used for general-purpose memory allocation. </p>
-
 </div>
 </div>
-<a id="a727a2f6ebc9a1abdef5c07ece435a054" name="a727a2f6ebc9a1abdef5c07ece435a054"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a727a2f6ebc9a1abdef5c07ece435a054">&#9670;&#160;</a></span>next</h2>
+<a id="ab778c7720a2ba5eb0b86935f4b67dcf1" name="ab778c7720a2ba5eb0b86935f4b67dcf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab778c7720a2ba5eb0b86935f4b67dcf1">&#9670;&#160;</a></span>kRefIn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01200.html">XPathMemoryBlock</a>* Lumex::Xml::XPath::Memory::XPathMemoryBlock::next</td>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc32_iso_hdlc_spec_t::kRefIn = true</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pointer to the next memory block in the chain. <code>nullptr</code> if this is the last block. </p>
+</div>
+</div>
+<a id="a4262e13166cebb97605e6d374f909b99" name="a4262e13166cebb97605e6d374f909b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4262e13166cebb97605e6d374f909b99">&#9670;&#160;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc32_iso_hdlc_spec_t::kRefOut = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac00c24469df9dd0d489179ec043f6d6a" name="ac00c24469df9dd0d489179ec043f6d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac00c24469df9dd0d489179ec043f6d6a">&#9670;&#160;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc32_iso_hdlc_spec_t::kWidth = 32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18250eb87ea10f1a49056e824fd4c19b" name="a18250eb87ea10f1a49056e824fd4c19b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18250eb87ea10f1a49056e824fd4c19b">&#9670;&#160;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_iso_hdlc_spec_t::kXorOut = 0xFFFFFFFFUL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00359_source.html">XPathMemoryBlock.hpp</a></li>
+<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00496.html">XPath</a></li><li class="navelem"><a class="el" href="a00511.html">Memory</a></li><li class="navelem"><a class="el" href="a01200.html">XPathMemoryBlock</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00826.html">core</a></li><li class="navelem"><a class="el" href="a00837.html">crc</a></li><li class="navelem"><a class="el" href="a00840.html">parametric</a></li><li class="navelem"><a class="el" href="a01200.html">crc32_iso_hdlc_spec_t</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

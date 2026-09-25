@@ -1,11 +1,9 @@
 var a00074 =
 [
-    [ "Lumex::Core::crc::Crc4", "a00632.html", "a00632" ],
-    [ "Lumex::Core::crc::Crc8", "a00636.html", "a00636" ],
-    [ "Lumex::Core::crc::Constants::kCrc4Table", "a00463.html#aa3ad35a0a08ff633d1489019b18986b6", null ],
-    [ "Lumex::Core::crc::Constants::kCrc4TableSize", "a00463.html#af5d1d8168ceb6774420280cb92e99505", null ],
-    [ "Lumex::Core::crc::Constants::kCrc8Table", "a00463.html#adc25c25e76223ed763a2f3b49fb3d704", null ],
-    [ "Lumex::Core::crc::Constants::kCrc8TableSize", "a00463.html#a8366d5785194b0d85a8fa696ccc41e4f", null ],
-    [ "Lumex::Core::crc::Constants::kLowerNibbleMask", "a00463.html#a72102b84bb222b0e70ecb720d74f97b7", null ],
-    [ "Lumex::Core::crc::Constants::kUpperNibbleMask", "a00463.html#a754c12d133d771363c363f5b104abdcd", null ]
+    [ "lumex::applied::serial::enumeration::port_process_resolver", "a03755.html", "a03755" ],
+    [ "lumex::applied::serial::enumeration::enumerate_serial_port_names", "a00809.html#a4294f4b203278cebf053de42c794bdf2", null ],
+    [ "lumex::applied::serial::enumeration::enumerate_serial_ports_detailed", "a00809.html#ad37c2823b7a16bf406008f7bb4287c16", null ],
+    [ "lumex::applied::serial::enumeration::is_bluetooth_enumerated_port", "a00809.html#a0cef0e5277cd0e77cc8dcee122290605", null ],
+    [ "lumex::applied::serial::enumeration::resolve_serial_port_path", "a00809.html#ab09ab9261b3038641b2bda9c7f63d821", null ],
+    [ "lumex::applied::serial::enumeration::serial_port_state_to_string", "a00809.html#a4ba9a6ee59dc805750a1d5fb62922320", null ]
 ];

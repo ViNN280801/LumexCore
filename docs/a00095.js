@@ -1,4 +1,5 @@
 var a00095 =
 [
-    [ "SET_SEH_TRANSLATOR", "a00095.html#a0d7aeb5eed30cf65a5415d7bb1014f5b", null ]
+    [ "lumex::applied::settings::factory::LumexSettingsFactory", "a01060.html", "a01060" ],
+    [ "LumexSettingsFactory", "a00095.html#a90f219acff9eb90d97465a960d7a7d0f", null ]
 ];

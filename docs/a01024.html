@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: strconv_attribute_impl&lt; opt_escape &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::applied::logging::log::LumexLogging Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -106,42 +106,69 @@ $(function(){initNavTree('a01024.html',''); initResizable(true); });
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a01021.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">strconv_attribute_impl&lt; opt_escape &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::applied::logging::log::LumexLogging Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="a00062_source.html">LumexLogging.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4b2e8f59dbc8a5d1ba9d54edd11349fc" id="r_a4b2e8f59dbc8a5d1ba9d54edd11349fc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b2e8f59dbc8a5d1ba9d54edd11349fc">parse_wnorm</a> (<a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *str, <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> end_quote)</td></tr>
-<tr class="separator:a4b2e8f59dbc8a5d1ba9d54edd11349fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5b19645d4ab2e20aee5774a1a2d807c" id="r_aa5b19645d4ab2e20aee5774a1a2d807c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5b19645d4ab2e20aee5774a1a2d807c">parse_wconv</a> (<a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *str, <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> end_quote)</td></tr>
-<tr class="separator:aa5b19645d4ab2e20aee5774a1a2d807c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67479865aa424943ead8779b27649a3f" id="r_a67479865aa424943ead8779b27649a3f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67479865aa424943ead8779b27649a3f">parse_eol</a> (<a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *str, <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> end_quote)</td></tr>
-<tr class="separator:a67479865aa424943ead8779b27649a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6c6f4abbfd01615619607334cb6babe" id="r_ab6c6f4abbfd01615619607334cb6babe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6c6f4abbfd01615619607334cb6babe">parse_simple</a> (<a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *str, <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> end_quote)</td></tr>
-<tr class="separator:ab6c6f4abbfd01615619607334cb6babe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44ad22b8a67f4f15a9a574b3d4d5cd74" id="r_a44ad22b8a67f4f15a9a574b3d4d5cd74"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a44ad22b8a67f4f15a9a574b3d4d5cd74"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a44ad22b8a67f4f15a9a574b3d4d5cd74">debug</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a44ad22b8a67f4f15a9a574b3d4d5cd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a DEBUG-level message.  <br /></td></tr>
+<tr class="separator:a44ad22b8a67f4f15a9a574b3d4d5cd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb110cd6feeb2ab91305f27352b9118" id="r_aafb110cd6feeb2ab91305f27352b9118"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:aafb110cd6feeb2ab91305f27352b9118"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aafb110cd6feeb2ab91305f27352b9118">info</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:aafb110cd6feeb2ab91305f27352b9118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log an INFO-level message.  <br /></td></tr>
+<tr class="separator:aafb110cd6feeb2ab91305f27352b9118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7bac7289460386a2e59d59c388d4b6" id="r_a8e7bac7289460386a2e59d59c388d4b6"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a8e7bac7289460386a2e59d59c388d4b6"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8e7bac7289460386a2e59d59c388d4b6">success</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a8e7bac7289460386a2e59d59c388d4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a SUCCESS-level message (custom level).  <br /></td></tr>
+<tr class="separator:a8e7bac7289460386a2e59d59c388d4b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4fec23e76323ffee4eaf2aaf716eb15" id="r_af4fec23e76323ffee4eaf2aaf716eb15"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:af4fec23e76323ffee4eaf2aaf716eb15"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af4fec23e76323ffee4eaf2aaf716eb15">warning</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:af4fec23e76323ffee4eaf2aaf716eb15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a WARNING-level message.  <br /></td></tr>
+<tr class="separator:af4fec23e76323ffee4eaf2aaf716eb15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeebb797a274ef51607814be5801bcc4" id="r_aaeebb797a274ef51607814be5801bcc4"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:aaeebb797a274ef51607814be5801bcc4"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaeebb797a274ef51607814be5801bcc4">error</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:aaeebb797a274ef51607814be5801bcc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log an ERROR-level message.  <br /></td></tr>
+<tr class="separator:aaeebb797a274ef51607814be5801bcc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab45388c23b278021a8bb9e4a7b435e0c" id="r_ab45388c23b278021a8bb9e4a7b435e0c"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ab45388c23b278021a8bb9e4a7b435e0c"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab45388c23b278021a8bb9e4a7b435e0c">critical</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:ab45388c23b278021a8bb9e4a7b435e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a CRITICAL-level message.  <br /></td></tr>
+<tr class="separator:ab45388c23b278021a8bb9e4a7b435e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab31dea6342d9372271a5247ae1db1e9" id="r_aab31dea6342d9372271a5247ae1db1e9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab31dea6342d9372271a5247ae1db1e9">toFile</a> (char const *filename, <a class="el" href="a00803.html#ab89470b4db8a7dc224df84237c78270c">LumexLogLevel</a> level, char const *moduleName, char const *msg, bool appendTimestamp=true)</td></tr>
+<tr class="memdesc:aab31dea6342d9372271a5247ae1db1e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a log to a file in the logs/ directory.  <br /></td></tr>
+<tr class="separator:aab31dea6342d9372271a5247ae1db1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec99d8722042f4425c34a4d004fea354" id="r_aec99d8722042f4425c34a4d004fea354"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">lumex::path</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec99d8722042f4425c34a4d004fea354">getLogsDirectory</a> ()</td></tr>
+<tr class="memdesc:aec99d8722042f4425c34a4d004fea354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path to the logs directory.  <br /></td></tr>
+<tr class="separator:aec99d8722042f4425c34a4d004fea354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9273496ead1261dbdbc3c5209c3a7e8" id="r_ae9273496ead1261dbdbc3c5209c3a7e8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9273496ead1261dbdbc3c5209c3a7e8">setAppName</a> (std::string const &amp;appName)</td></tr>
+<tr class="memdesc:ae9273496ead1261dbdbc3c5209c3a7e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name of the application.  <br /></td></tr>
+<tr class="separator:ae9273496ead1261dbdbc3c5209c3a7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a67479865aa424943ead8779b27649a3f" name="a67479865aa424943ead8779b27649a3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67479865aa424943ead8779b27649a3f">&#9670;&#160;</a></span>parse_eol()</h2>
+<a id="ab45388c23b278021a8bb9e4a7b435e0c" name="ab45388c23b278021a8bb9e4a7b435e0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab45388c23b278021a8bb9e4a7b435e0c">&#9670;&#160;</a></span>critical()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename opt_escape&gt; </div>
+template&lt;typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> * <a class="el" href="a01024.html">strconv_attribute_impl</a>&lt; opt_escape &gt;::parse_eol </td>
+          <td class="memname">static void lumex::applied::logging::log::LumexLogging::critical </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>moduleName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a></td>          <td class="paramname"><span class="paramname"><em>end_quote</em></span>&#160;)</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -150,80 +177,41 @@ template&lt;typename opt_escape&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Log a CRITICAL-level message. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01024_a67479865aa424943ead8779b27649a3f_cgraph.png" border="0" usemap="#aa01024_a67479865aa424943ead8779b27649a3f_cgraph" alt=""/></div>
-<map name="aa01024_a67479865aa424943ead8779b27649a3f_cgraph" id="aa01024_a67479865aa424943ead8779b27649a3f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,48,155,91"/>
-<area shape="rect" href="a01020.html#a7d5e84d56dbeef1310977fe1ecec5ded" title=" " alt="" coords="220,5,298,32"/>
-<area shape="poly" title=" " alt="" coords="154,46,204,31,206,36,156,51"/>
-<area shape="rect" href="a01020.html#a9c0d0b12bc778c8439c8aec7747ab2b0" title=" " alt="" coords="392,56,470,83"/>
-<area shape="poly" title=" " alt="" coords="155,67,376,67,376,72,155,72"/>
-<area shape="rect" href="a00278.html#a572ca023c41c429e54892e03cdc88a64" title=" " alt="" coords="203,107,316,133"/>
-<area shape="poly" title=" " alt="" coords="156,88,196,99,194,104,154,93"/>
-<area shape="poly" title=" " alt="" coords="306,103,375,83,377,88,308,109"/>
-<area shape="rect" href="a01088.html#a5b060500812b36855f7b7bebe47a381e" title=" " alt="" coords="364,107,497,149"/>
-<area shape="poly" title=" " alt="" coords="316,120,349,122,348,127,316,125"/>
-<area shape="rect" href="a01088.html#a03906e7784b102c019033a5916376505" title=" " alt="" coords="545,73,679,116"/>
-<area shape="poly" title=" " alt="" coords="497,113,530,107,531,112,498,118"/>
-<area shape="rect" href="a01088.html#a5c4a9a26abcfcb97f8ce0adeb5a559b1" title=" " alt="" coords="545,140,679,183"/>
-<area shape="poly" title=" " alt="" coords="498,138,531,144,530,149,497,143"/>
-</map>
+<div class="center"><img src="a01024_ab45388c23b278021a8bb9e4a7b435e0c_cgraph.png" border="0" usemap="#aa01024_ab45388c23b278021a8bb9e4a7b435e0c_cgraph" alt=""/></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01024_a67479865aa424943ead8779b27649a3f_icgraph.png" border="0" usemap="#aa01024_a67479865aa424943ead8779b27649a3f_icgraph" alt=""/></div>
-<map name="aa01024_a67479865aa424943ead8779b27649a3f_icgraph" id="aa01024_a67479865aa424943ead8779b27649a3f_icgraph">
-<area shape="rect" title=" " alt="" coords="1625,109,1774,152"/>
-<area shape="rect" href="a00278.html#a51e9b0004ac41f142aeed82a9801e288" title=" " alt="" coords="1433,117,1577,144"/>
-<area shape="poly" title=" " alt="" coords="1609,133,1577,133,1577,128,1609,128"/>
-<area shape="rect" href="a01032.html#aaea40c6d848e6acca45b732a473d2ca4" title="The main parsing function that constructs the XML document tree from a buffer." alt="" coords="1192,109,1385,152"/>
-<area shape="poly" title=" " alt="" coords="1418,133,1386,133,1386,128,1418,128"/>
-<area shape="rect" href="a01032.html#aad5182b10b946c20ab7208f21bad00bc" title="Parses an XML buffer and builds the document tree." alt="" coords="951,109,1144,152"/>
-<area shape="poly" title=" " alt="" coords="1177,133,1144,133,1144,128,1177,128"/>
-<area shape="rect" href="a00500.html#a3c1a18e907838c8ea12512b6180686d5" title="Internal implementation for loading an XML document from a buffer." alt="" coords="746,109,903,152"/>
-<area shape="poly" title=" " alt="" coords="935,133,903,133,903,128,935,128"/>
-<area shape="rect" href="a00992.html#a34a466d798a26f92f3dd952627c16f58" title="Parses an XML buffer as a document fragment and appends its root&#45;level nodes as children to the curre..." alt="" coords="506,5,698,48"/>
-<area shape="poly" title=" " alt="" coords="774,104,697,62,669,51,671,46,699,58,777,99"/>
-<area shape="rect" href="a00976.html#a7c84e78521a2dd05bc6981e900ac82de" title="Loads an XML document from a read&#45;only memory buffer." alt="" coords="510,72,694,115"/>
-<area shape="poly" title=" " alt="" coords="730,118,694,111,695,106,731,112"/>
-<area shape="rect" href="a00976.html#a4f0ef63219e142131edacaab5fd73c45" title="Loads an XML document by parsing a provided memory buffer in&#45;place." alt="" coords="510,139,694,197"/>
-<area shape="poly" title=" " alt="" coords="731,149,695,155,694,150,730,144"/>
-<area shape="rect" href="a00976.html#a5327a45f1b3c8a83cf9b074776d24d7e" title="Loads an XML document by parsing a provided memory buffer in&#45;place, with ownership transfer." alt="" coords="510,221,694,280"/>
-<area shape="poly" title=" " alt="" coords="781,163,700,212,676,223,674,219,697,207,778,158"/>
-<area shape="rect" href="a00992.html#ab838302273f869f6d7bd3170c701e200" title="Retrieves the text content of a named child node." alt="" coords="213,5,458,48"/>
-<area shape="poly" title=" " alt="" coords="490,29,459,29,459,24,490,24"/>
-<area shape="rect" href="a00976.html#a0c59b65ecf92ef3a7855d6b7b7cd9925" title="Loads an XML document from a zero&#45;terminated C&#45;style string." alt="" coords="244,72,427,115"/>
-<area shape="poly" title=" " alt="" coords="495,96,427,96,427,91,495,91"/>
-<area shape="rect" href="a00976.html#a6eefd323486f47b20c59e4eaa34c7731" title="DEPRECATED: Loads an XML document from a zero&#45;terminated C&#45;style string. Use load_string instead." alt="" coords="5,72,165,115"/>
-<area shape="poly" title=" " alt="" coords="228,96,165,96,165,91,228,91"/>
-</map>
+<div class="center"><img src="a01024_ab45388c23b278021a8bb9e4a7b435e0c_icgraph.png" border="0" usemap="#aa01024_ab45388c23b278021a8bb9e4a7b435e0c_icgraph" alt=""/></div>
 </div>
 
 </div>
 </div>
-<a id="ab6c6f4abbfd01615619607334cb6babe" name="ab6c6f4abbfd01615619607334cb6babe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6c6f4abbfd01615619607334cb6babe">&#9670;&#160;</a></span>parse_simple()</h2>
+<a id="a44ad22b8a67f4f15a9a574b3d4d5cd74" name="a44ad22b8a67f4f15a9a574b3d4d5cd74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ad22b8a67f4f15a9a574b3d4d5cd74">&#9670;&#160;</a></span>debug()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename opt_escape&gt; </div>
+template&lt;typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> * <a class="el" href="a01024.html">strconv_attribute_impl</a>&lt; opt_escape &gt;::parse_simple </td>
+          <td class="memname">static void lumex::applied::logging::log::LumexLogging::debug </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>moduleName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a></td>          <td class="paramname"><span class="paramname"><em>end_quote</em></span>&#160;)</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -232,79 +220,41 @@ template&lt;typename opt_escape&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Log a DEBUG-level message. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01024_ab6c6f4abbfd01615619607334cb6babe_cgraph.png" border="0" usemap="#aa01024_ab6c6f4abbfd01615619607334cb6babe_cgraph" alt=""/></div>
-<map name="aa01024_ab6c6f4abbfd01615619607334cb6babe_cgraph" id="aa01024_ab6c6f4abbfd01615619607334cb6babe_cgraph">
-<area shape="rect" title=" " alt="" coords="5,43,155,85"/>
-<area shape="rect" href="a01020.html#a7d5e84d56dbeef1310977fe1ecec5ded" title=" " alt="" coords="220,25,298,52"/>
-<area shape="poly" title=" " alt="" coords="155,51,204,44,205,49,156,56"/>
-<area shape="rect" href="a00278.html#a572ca023c41c429e54892e03cdc88a64" title=" " alt="" coords="203,76,316,103"/>
-<area shape="poly" title=" " alt="" coords="156,72,187,77,187,82,155,77"/>
-<area shape="rect" href="a01088.html#a5b060500812b36855f7b7bebe47a381e" title=" " alt="" coords="364,39,497,81"/>
-<area shape="poly" title=" " alt="" coords="316,77,348,71,349,77,317,82"/>
-<area shape="rect" href="a01020.html#a9c0d0b12bc778c8439c8aec7747ab2b0" title=" " alt="" coords="392,105,470,132"/>
-<area shape="poly" title=" " alt="" coords="317,96,377,107,376,112,316,102"/>
-<area shape="rect" href="a01088.html#a03906e7784b102c019033a5916376505" title=" " alt="" coords="545,5,679,48"/>
-<area shape="poly" title=" " alt="" coords="497,45,530,39,531,44,498,50"/>
-<area shape="rect" href="a01088.html#a5c4a9a26abcfcb97f8ce0adeb5a559b1" title=" " alt="" coords="545,72,679,115"/>
-<area shape="poly" title=" " alt="" coords="498,70,531,76,530,81,497,75"/>
-</map>
+<div class="center"><img src="a01024_a44ad22b8a67f4f15a9a574b3d4d5cd74_cgraph.png" border="0" usemap="#aa01024_a44ad22b8a67f4f15a9a574b3d4d5cd74_cgraph" alt=""/></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01024_ab6c6f4abbfd01615619607334cb6babe_icgraph.png" border="0" usemap="#aa01024_ab6c6f4abbfd01615619607334cb6babe_icgraph" alt=""/></div>
-<map name="aa01024_ab6c6f4abbfd01615619607334cb6babe_icgraph" id="aa01024_ab6c6f4abbfd01615619607334cb6babe_icgraph">
-<area shape="rect" title=" " alt="" coords="1625,109,1774,152"/>
-<area shape="rect" href="a00278.html#a51e9b0004ac41f142aeed82a9801e288" title=" " alt="" coords="1433,117,1577,144"/>
-<area shape="poly" title=" " alt="" coords="1609,133,1577,133,1577,128,1609,128"/>
-<area shape="rect" href="a01032.html#aaea40c6d848e6acca45b732a473d2ca4" title="The main parsing function that constructs the XML document tree from a buffer." alt="" coords="1192,109,1385,152"/>
-<area shape="poly" title=" " alt="" coords="1418,133,1386,133,1386,128,1418,128"/>
-<area shape="rect" href="a01032.html#aad5182b10b946c20ab7208f21bad00bc" title="Parses an XML buffer and builds the document tree." alt="" coords="951,109,1144,152"/>
-<area shape="poly" title=" " alt="" coords="1177,133,1144,133,1144,128,1177,128"/>
-<area shape="rect" href="a00500.html#a3c1a18e907838c8ea12512b6180686d5" title="Internal implementation for loading an XML document from a buffer." alt="" coords="746,109,903,152"/>
-<area shape="poly" title=" " alt="" coords="935,133,903,133,903,128,935,128"/>
-<area shape="rect" href="a00992.html#a34a466d798a26f92f3dd952627c16f58" title="Parses an XML buffer as a document fragment and appends its root&#45;level nodes as children to the curre..." alt="" coords="506,5,698,48"/>
-<area shape="poly" title=" " alt="" coords="774,104,697,62,669,51,671,46,699,58,777,99"/>
-<area shape="rect" href="a00976.html#a7c84e78521a2dd05bc6981e900ac82de" title="Loads an XML document from a read&#45;only memory buffer." alt="" coords="510,72,694,115"/>
-<area shape="poly" title=" " alt="" coords="730,118,694,111,695,106,731,112"/>
-<area shape="rect" href="a00976.html#a4f0ef63219e142131edacaab5fd73c45" title="Loads an XML document by parsing a provided memory buffer in&#45;place." alt="" coords="510,139,694,197"/>
-<area shape="poly" title=" " alt="" coords="731,149,695,155,694,150,730,144"/>
-<area shape="rect" href="a00976.html#a5327a45f1b3c8a83cf9b074776d24d7e" title="Loads an XML document by parsing a provided memory buffer in&#45;place, with ownership transfer." alt="" coords="510,221,694,280"/>
-<area shape="poly" title=" " alt="" coords="781,163,700,212,676,223,674,219,697,207,778,158"/>
-<area shape="rect" href="a00992.html#ab838302273f869f6d7bd3170c701e200" title="Retrieves the text content of a named child node." alt="" coords="213,5,458,48"/>
-<area shape="poly" title=" " alt="" coords="490,29,459,29,459,24,490,24"/>
-<area shape="rect" href="a00976.html#a0c59b65ecf92ef3a7855d6b7b7cd9925" title="Loads an XML document from a zero&#45;terminated C&#45;style string." alt="" coords="244,72,427,115"/>
-<area shape="poly" title=" " alt="" coords="495,96,427,96,427,91,495,91"/>
-<area shape="rect" href="a00976.html#a6eefd323486f47b20c59e4eaa34c7731" title="DEPRECATED: Loads an XML document from a zero&#45;terminated C&#45;style string. Use load_string instead." alt="" coords="5,72,165,115"/>
-<area shape="poly" title=" " alt="" coords="228,96,165,96,165,91,228,91"/>
-</map>
+<div class="center"><img src="a01024_a44ad22b8a67f4f15a9a574b3d4d5cd74_icgraph.png" border="0" usemap="#aa01024_a44ad22b8a67f4f15a9a574b3d4d5cd74_icgraph" alt=""/></div>
 </div>
 
 </div>
 </div>
-<a id="aa5b19645d4ab2e20aee5774a1a2d807c" name="aa5b19645d4ab2e20aee5774a1a2d807c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5b19645d4ab2e20aee5774a1a2d807c">&#9670;&#160;</a></span>parse_wconv()</h2>
+<a id="aaeebb797a274ef51607814be5801bcc4" name="aaeebb797a274ef51607814be5801bcc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeebb797a274ef51607814be5801bcc4">&#9670;&#160;</a></span>error()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename opt_escape&gt; </div>
+template&lt;typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> * <a class="el" href="a01024.html">strconv_attribute_impl</a>&lt; opt_escape &gt;::parse_wconv </td>
+          <td class="memname">static void lumex::applied::logging::log::LumexLogging::error </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>moduleName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a></td>          <td class="paramname"><span class="paramname"><em>end_quote</em></span>&#160;)</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -313,80 +263,79 @@ template&lt;typename opt_escape&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Log an ERROR-level message. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01024_aa5b19645d4ab2e20aee5774a1a2d807c_cgraph.png" border="0" usemap="#aa01024_aa5b19645d4ab2e20aee5774a1a2d807c_cgraph" alt=""/></div>
-<map name="aa01024_aa5b19645d4ab2e20aee5774a1a2d807c_cgraph" id="aa01024_aa5b19645d4ab2e20aee5774a1a2d807c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,48,155,91"/>
-<area shape="rect" href="a01020.html#a7d5e84d56dbeef1310977fe1ecec5ded" title=" " alt="" coords="220,5,298,32"/>
-<area shape="poly" title=" " alt="" coords="154,46,204,31,206,36,156,51"/>
-<area shape="rect" href="a01020.html#a9c0d0b12bc778c8439c8aec7747ab2b0" title=" " alt="" coords="392,56,470,83"/>
-<area shape="poly" title=" " alt="" coords="155,67,376,67,376,72,155,72"/>
-<area shape="rect" href="a00278.html#a572ca023c41c429e54892e03cdc88a64" title=" " alt="" coords="203,107,316,133"/>
-<area shape="poly" title=" " alt="" coords="156,88,196,99,194,104,154,93"/>
-<area shape="poly" title=" " alt="" coords="306,103,375,83,377,88,308,109"/>
-<area shape="rect" href="a01088.html#a5b060500812b36855f7b7bebe47a381e" title=" " alt="" coords="364,107,497,149"/>
-<area shape="poly" title=" " alt="" coords="316,120,349,122,348,127,316,125"/>
-<area shape="rect" href="a01088.html#a03906e7784b102c019033a5916376505" title=" " alt="" coords="545,73,679,116"/>
-<area shape="poly" title=" " alt="" coords="497,113,530,107,531,112,498,118"/>
-<area shape="rect" href="a01088.html#a5c4a9a26abcfcb97f8ce0adeb5a559b1" title=" " alt="" coords="545,140,679,183"/>
-<area shape="poly" title=" " alt="" coords="498,138,531,144,530,149,497,143"/>
-</map>
+<div class="center"><img src="a01024_aaeebb797a274ef51607814be5801bcc4_cgraph.png" border="0" usemap="#aa01024_aaeebb797a274ef51607814be5801bcc4_cgraph" alt=""/></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01024_aa5b19645d4ab2e20aee5774a1a2d807c_icgraph.png" border="0" usemap="#aa01024_aa5b19645d4ab2e20aee5774a1a2d807c_icgraph" alt=""/></div>
-<map name="aa01024_aa5b19645d4ab2e20aee5774a1a2d807c_icgraph" id="aa01024_aa5b19645d4ab2e20aee5774a1a2d807c_icgraph">
-<area shape="rect" title=" " alt="" coords="1625,109,1774,152"/>
-<area shape="rect" href="a00278.html#a51e9b0004ac41f142aeed82a9801e288" title=" " alt="" coords="1433,117,1577,144"/>
-<area shape="poly" title=" " alt="" coords="1609,133,1577,133,1577,128,1609,128"/>
-<area shape="rect" href="a01032.html#aaea40c6d848e6acca45b732a473d2ca4" title="The main parsing function that constructs the XML document tree from a buffer." alt="" coords="1192,109,1385,152"/>
-<area shape="poly" title=" " alt="" coords="1418,133,1386,133,1386,128,1418,128"/>
-<area shape="rect" href="a01032.html#aad5182b10b946c20ab7208f21bad00bc" title="Parses an XML buffer and builds the document tree." alt="" coords="951,109,1144,152"/>
-<area shape="poly" title=" " alt="" coords="1177,133,1144,133,1144,128,1177,128"/>
-<area shape="rect" href="a00500.html#a3c1a18e907838c8ea12512b6180686d5" title="Internal implementation for loading an XML document from a buffer." alt="" coords="746,109,903,152"/>
-<area shape="poly" title=" " alt="" coords="935,133,903,133,903,128,935,128"/>
-<area shape="rect" href="a00992.html#a34a466d798a26f92f3dd952627c16f58" title="Parses an XML buffer as a document fragment and appends its root&#45;level nodes as children to the curre..." alt="" coords="506,5,698,48"/>
-<area shape="poly" title=" " alt="" coords="774,104,697,62,669,51,671,46,699,58,777,99"/>
-<area shape="rect" href="a00976.html#a7c84e78521a2dd05bc6981e900ac82de" title="Loads an XML document from a read&#45;only memory buffer." alt="" coords="510,72,694,115"/>
-<area shape="poly" title=" " alt="" coords="730,118,694,111,695,106,731,112"/>
-<area shape="rect" href="a00976.html#a4f0ef63219e142131edacaab5fd73c45" title="Loads an XML document by parsing a provided memory buffer in&#45;place." alt="" coords="510,139,694,197"/>
-<area shape="poly" title=" " alt="" coords="731,149,695,155,694,150,730,144"/>
-<area shape="rect" href="a00976.html#a5327a45f1b3c8a83cf9b074776d24d7e" title="Loads an XML document by parsing a provided memory buffer in&#45;place, with ownership transfer." alt="" coords="510,221,694,280"/>
-<area shape="poly" title=" " alt="" coords="781,163,700,212,676,223,674,219,697,207,778,158"/>
-<area shape="rect" href="a00992.html#ab838302273f869f6d7bd3170c701e200" title="Retrieves the text content of a named child node." alt="" coords="213,5,458,48"/>
-<area shape="poly" title=" " alt="" coords="490,29,459,29,459,24,490,24"/>
-<area shape="rect" href="a00976.html#a0c59b65ecf92ef3a7855d6b7b7cd9925" title="Loads an XML document from a zero&#45;terminated C&#45;style string." alt="" coords="244,72,427,115"/>
-<area shape="poly" title=" " alt="" coords="495,96,427,96,427,91,495,91"/>
-<area shape="rect" href="a00976.html#a6eefd323486f47b20c59e4eaa34c7731" title="DEPRECATED: Loads an XML document from a zero&#45;terminated C&#45;style string. Use load_string instead." alt="" coords="5,72,165,115"/>
-<area shape="poly" title=" " alt="" coords="228,96,165,96,165,91,228,91"/>
-</map>
+<div class="center"><img src="a01024_aaeebb797a274ef51607814be5801bcc4_icgraph.png" border="0" usemap="#aa01024_aaeebb797a274ef51607814be5801bcc4_icgraph" alt=""/></div>
 </div>
 
 </div>
 </div>
-<a id="a4b2e8f59dbc8a5d1ba9d54edd11349fc" name="a4b2e8f59dbc8a5d1ba9d54edd11349fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b2e8f59dbc8a5d1ba9d54edd11349fc">&#9670;&#160;</a></span>parse_wnorm()</h2>
+<a id="aec99d8722042f4425c34a4d004fea354" name="aec99d8722042f4425c34a4d004fea354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec99d8722042f4425c34a4d004fea354">&#9670;&#160;</a></span>getLogsDirectory()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename opt_escape&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> * <a class="el" href="a01024.html">strconv_attribute_impl</a>&lt; opt_escape &gt;::parse_wnorm </td>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">lumex::path</a> lumex::applied::logging::log::LumexLogging::getLogsDirectory </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the path to the logs directory. </p>
+<dl class="section return"><dt>Returns</dt><dd>The path to the logs directory </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01024_aec99d8722042f4425c34a4d004fea354_cgraph.png" border="0" usemap="#aa01024_aec99d8722042f4425c34a4d004fea354_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01024_aec99d8722042f4425c34a4d004fea354_icgraph.png" border="0" usemap="#aa01024_aec99d8722042f4425c34a4d004fea354_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aafb110cd6feeb2ab91305f27352b9118" name="aafb110cd6feeb2ab91305f27352b9118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb110cd6feeb2ab91305f27352b9118">&#9670;&#160;</a></span>info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void lumex::applied::logging::log::LumexLogging::info </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>moduleName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a></td>          <td class="paramname"><span class="paramname"><em>end_quote</em></span>&#160;)</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -395,69 +344,222 @@ template&lt;typename opt_escape&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Log an INFO-level message. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01024_a4b2e8f59dbc8a5d1ba9d54edd11349fc_cgraph.png" border="0" usemap="#aa01024_a4b2e8f59dbc8a5d1ba9d54edd11349fc_cgraph" alt=""/></div>
-<map name="aa01024_a4b2e8f59dbc8a5d1ba9d54edd11349fc_cgraph" id="aa01024_a4b2e8f59dbc8a5d1ba9d54edd11349fc_cgraph">
-<area shape="rect" title=" " alt="" coords="5,48,155,91"/>
-<area shape="rect" href="a01020.html#a7d5e84d56dbeef1310977fe1ecec5ded" title=" " alt="" coords="220,5,298,32"/>
-<area shape="poly" title=" " alt="" coords="154,46,204,31,206,36,156,51"/>
-<area shape="rect" href="a01020.html#a9c0d0b12bc778c8439c8aec7747ab2b0" title=" " alt="" coords="392,56,470,83"/>
-<area shape="poly" title=" " alt="" coords="155,67,376,67,376,72,155,72"/>
-<area shape="rect" href="a00278.html#a572ca023c41c429e54892e03cdc88a64" title=" " alt="" coords="203,107,316,133"/>
-<area shape="poly" title=" " alt="" coords="156,88,196,99,194,104,154,93"/>
-<area shape="poly" title=" " alt="" coords="306,103,375,83,377,88,308,109"/>
-<area shape="rect" href="a01088.html#a5b060500812b36855f7b7bebe47a381e" title=" " alt="" coords="364,107,497,149"/>
-<area shape="poly" title=" " alt="" coords="316,120,349,122,348,127,316,125"/>
-<area shape="rect" href="a01088.html#a03906e7784b102c019033a5916376505" title=" " alt="" coords="545,73,679,116"/>
-<area shape="poly" title=" " alt="" coords="497,113,530,107,531,112,498,118"/>
-<area shape="rect" href="a01088.html#a5c4a9a26abcfcb97f8ce0adeb5a559b1" title=" " alt="" coords="545,140,679,183"/>
-<area shape="poly" title=" " alt="" coords="498,138,531,144,530,149,497,143"/>
-</map>
+<div class="center"><img src="a01024_aafb110cd6feeb2ab91305f27352b9118_cgraph.png" border="0" usemap="#aa01024_aafb110cd6feeb2ab91305f27352b9118_cgraph" alt=""/></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01024_a4b2e8f59dbc8a5d1ba9d54edd11349fc_icgraph.png" border="0" usemap="#aa01024_a4b2e8f59dbc8a5d1ba9d54edd11349fc_icgraph" alt=""/></div>
-<map name="aa01024_a4b2e8f59dbc8a5d1ba9d54edd11349fc_icgraph" id="aa01024_a4b2e8f59dbc8a5d1ba9d54edd11349fc_icgraph">
-<area shape="rect" title=" " alt="" coords="1625,109,1774,152"/>
-<area shape="rect" href="a00278.html#a51e9b0004ac41f142aeed82a9801e288" title=" " alt="" coords="1433,117,1577,144"/>
-<area shape="poly" title=" " alt="" coords="1609,133,1577,133,1577,128,1609,128"/>
-<area shape="rect" href="a01032.html#aaea40c6d848e6acca45b732a473d2ca4" title="The main parsing function that constructs the XML document tree from a buffer." alt="" coords="1192,109,1385,152"/>
-<area shape="poly" title=" " alt="" coords="1418,133,1386,133,1386,128,1418,128"/>
-<area shape="rect" href="a01032.html#aad5182b10b946c20ab7208f21bad00bc" title="Parses an XML buffer and builds the document tree." alt="" coords="951,109,1144,152"/>
-<area shape="poly" title=" " alt="" coords="1177,133,1144,133,1144,128,1177,128"/>
-<area shape="rect" href="a00500.html#a3c1a18e907838c8ea12512b6180686d5" title="Internal implementation for loading an XML document from a buffer." alt="" coords="746,109,903,152"/>
-<area shape="poly" title=" " alt="" coords="935,133,903,133,903,128,935,128"/>
-<area shape="rect" href="a00992.html#a34a466d798a26f92f3dd952627c16f58" title="Parses an XML buffer as a document fragment and appends its root&#45;level nodes as children to the curre..." alt="" coords="506,5,698,48"/>
-<area shape="poly" title=" " alt="" coords="774,104,697,62,669,51,671,46,699,58,777,99"/>
-<area shape="rect" href="a00976.html#a7c84e78521a2dd05bc6981e900ac82de" title="Loads an XML document from a read&#45;only memory buffer." alt="" coords="510,72,694,115"/>
-<area shape="poly" title=" " alt="" coords="730,118,694,111,695,106,731,112"/>
-<area shape="rect" href="a00976.html#a4f0ef63219e142131edacaab5fd73c45" title="Loads an XML document by parsing a provided memory buffer in&#45;place." alt="" coords="510,139,694,197"/>
-<area shape="poly" title=" " alt="" coords="731,149,695,155,694,150,730,144"/>
-<area shape="rect" href="a00976.html#a5327a45f1b3c8a83cf9b074776d24d7e" title="Loads an XML document by parsing a provided memory buffer in&#45;place, with ownership transfer." alt="" coords="510,221,694,280"/>
-<area shape="poly" title=" " alt="" coords="781,163,700,212,676,223,674,219,697,207,778,158"/>
-<area shape="rect" href="a00992.html#ab838302273f869f6d7bd3170c701e200" title="Retrieves the text content of a named child node." alt="" coords="213,5,458,48"/>
-<area shape="poly" title=" " alt="" coords="490,29,459,29,459,24,490,24"/>
-<area shape="rect" href="a00976.html#a0c59b65ecf92ef3a7855d6b7b7cd9925" title="Loads an XML document from a zero&#45;terminated C&#45;style string." alt="" coords="244,72,427,115"/>
-<area shape="poly" title=" " alt="" coords="495,96,427,96,427,91,495,91"/>
-<area shape="rect" href="a00976.html#a6eefd323486f47b20c59e4eaa34c7731" title="DEPRECATED: Loads an XML document from a zero&#45;terminated C&#45;style string. Use load_string instead." alt="" coords="5,72,165,115"/>
-<area shape="poly" title=" " alt="" coords="228,96,165,96,165,91,228,91"/>
-</map>
+<div class="center"><img src="a01024_aafb110cd6feeb2ab91305f27352b9118_icgraph.png" border="0" usemap="#aa01024_aafb110cd6feeb2ab91305f27352b9118_icgraph" alt=""/></div>
 </div>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00278.html">XmlParser.cpp</a></li>
+<a id="ae9273496ead1261dbdbc3c5209c3a7e8" name="ae9273496ead1261dbdbc3c5209c3a7e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9273496ead1261dbdbc3c5209c3a7e8">&#9670;&#160;</a></span>setAppName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void lumex::applied::logging::log::LumexLogging::setAppName </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>appName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the name of the application. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appName</td><td>The name of the application </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01024_ae9273496ead1261dbdbc3c5209c3a7e8_icgraph.png" border="0" usemap="#aa01024_ae9273496ead1261dbdbc3c5209c3a7e8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a8e7bac7289460386a2e59d59c388d4b6" name="a8e7bac7289460386a2e59d59c388d4b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7bac7289460386a2e59d59c388d4b6">&#9670;&#160;</a></span>success()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void lumex::applied::logging::log::LumexLogging::success </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>moduleName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Log a SUCCESS-level message (custom level). </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01024_a8e7bac7289460386a2e59d59c388d4b6_cgraph.png" border="0" usemap="#aa01024_a8e7bac7289460386a2e59d59c388d4b6_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01024_a8e7bac7289460386a2e59d59c388d4b6_icgraph.png" border="0" usemap="#aa01024_a8e7bac7289460386a2e59d59c388d4b6_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aab31dea6342d9372271a5247ae1db1e9" name="aab31dea6342d9372271a5247ae1db1e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab31dea6342d9372271a5247ae1db1e9">&#9670;&#160;</a></span>toFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::logging::log::LumexLogging::toFile </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00803.html#ab89470b4db8a7dc224df84237c78270c">LumexLogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>moduleName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>appendTimestamp</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write a log to a file in the logs/ directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>The name of the log file </td></tr>
+    <tr><td class="paramname">level</td><td>The log level </td></tr>
+    <tr><td class="paramname">moduleName</td><td>The name of the module </td></tr>
+    <tr><td class="paramname">msg</td><td>The message </td></tr>
+    <tr><td class="paramname">appendTimestamp</td><td>Whether to add a timestamp to the file name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true in case of success, false otherwise </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01024_aab31dea6342d9372271a5247ae1db1e9_cgraph.png" border="0" usemap="#aa01024_aab31dea6342d9372271a5247ae1db1e9_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01024_aab31dea6342d9372271a5247ae1db1e9_icgraph.png" border="0" usemap="#aa01024_aab31dea6342d9372271a5247ae1db1e9_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af4fec23e76323ffee4eaf2aaf716eb15" name="af4fec23e76323ffee4eaf2aaf716eb15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4fec23e76323ffee4eaf2aaf716eb15">&#9670;&#160;</a></span>warning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void lumex::applied::logging::log::LumexLogging::warning </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>moduleName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Log a WARNING-level message. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01024_af4fec23e76323ffee4eaf2aaf716eb15_cgraph.png" border="0" usemap="#aa01024_af4fec23e76323ffee4eaf2aaf716eb15_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01024_af4fec23e76323ffee4eaf2aaf716eb15_icgraph.png" border="0" usemap="#aa01024_af4fec23e76323ffee4eaf2aaf716eb15_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00062_source.html">LumexLogging.hpp</a></li>
+<li><a class="el" href="a00059.html">LumexLogging.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a01024.html">strconv_attribute_impl</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00775.html">applied</a></li><li class="navelem"><a class="el" href="a00802.html">logging</a></li><li class="navelem"><a class="el" href="a00803.html">log</a></li><li class="navelem"><a class="el" href="a01024.html">LumexLogging</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

@@ -1,5 +1,26 @@
 var searchData=
 [
-  ['offset_0',['offset',['../a01036.html#a4d62a71b5c0e841bc23ce5f2fe05efac',1,'Lumex::Xml::Text::XmlParseResult::offset'],['../a01244.html#a182d824b9215a5a198fd1868b7b6b9cd',1,'Lumex::Xml::XPath::Parser::XPathParseResult::offset']]],
-  ['oom_1',['oom',['../a01212.html#aa12599e3bf9eaf8d608bc98a3fd3ea90',1,'Lumex::Xml::XPath::Memory::XPathStackData::oom'],['../a01252.html#af84af951a0bee2bcc7181057d5fbc7f6',1,'Lumex::Xml::XPath::XPathQueryImpl::oom']]]
+  ['n_0',['n',['../a02108.html#a8aae31532895fe158533c8d4ddf96918',1,'lumex::core::string_view::view::LumexStringView::n'],['../a02112.html#a85fca8eb404b35d3e0cd6ca143823cbe',1,'lumex::core::string_view::view::LumexWStringView::n'],['../a03807.html#a8aae31532895fe158533c8d4ddf96918',1,'LumexStringView::n']]],
+  ['name_1',['name',['../a01748.html#ac1c45dd81326729e5ecd54e503876d75',1,'lumex::core::fmt::Detail::arg_ref_t::name'],['../a01756.html#aeff16f0f2ff5f3529cb5059a909617f6',1,'lumex::core::fmt::Detail::named_arg_t::name'],['../a01804.html#a3a66c12ab578e2274ecbead2facd7078',1,'lumex::core::fmt::Detail::named_arg_entry_t::name'],['../a02560.html#a4e4aa56391a38168c0b3d007c9518d32',1,'lumex::xml::attribute::XmlAttributeBase::name'],['../a02600.html#af9526c7fb8a12bda3a301320c999c694',1,'lumex::xml::node::XmlNodeBase::name'],['../a02604.html#a8d126e4a233b87fd9054d31b5bf5114e',1,'lumex::xml::node::name_null_sentry::name'],['../a02856.html#a585a041ad4a67f58ac2bd534157afc81',1,'lumex::xml::xpath::variable::xpath_variable_boolean::name'],['../a02860.html#ad27bcbebec0c04fd186e1ace18e1c1d4',1,'lumex::xml::xpath::variable::xpath_variable_number::name'],['../a02864.html#af8af305fdca1715d3b7440590e87adc2',1,'lumex::xml::xpath::variable::xpath_variable_string::name'],['../a02868.html#ad8ceb9ed9c194c120205e9ebf8fa3a47',1,'lumex::xml::xpath::variable::xpath_variable_node_set::name']]],
+  ['name_5fsize_2',['name_size',['../a01748.html#a4dc91f075a8945f9144e178604d5ad12',1,'lumex::core::fmt::Detail::arg_ref_t']]],
+  ['named_3',['named',['../a01808.html#a22e5c74e26e4e3300c468e848ec852e8',1,'lumex::core::fmt::Detail::format_arg_store_t']]],
+  ['named_5fcount_4',['named_count',['../a01808.html#a485837aa9bfefcc233a02e9bf5a13b47',1,'lumex::core::fmt::Detail::format_arg_store_t']]],
+  ['negative_5',['negative',['../a01880.html#a70e63ac5c62c076233f1b0a189f7b856',1,'lumex::core::fmt::Detail::civil_time_t']]],
+  ['next_6',['next',['../a02564.html#ad00071f7340adb2bde7c4157d4100b3c',1,'xml_stream_chunk::next'],['../a02580.html#a41dd6e87dab4591425415dc76842a020',1,'lumex::xml::memory::XmlMemoryPage::next'],['../a02644.html#afa1b4dc90d28cc56fa80f4a0ab5ee9c9',1,'lumex::xml::types::Types::xml_extra_buffer::next'],['../a02792.html#aeac00b0c5dbaab1cc464d0e6023b7d02',1,'lumex::xml::xpath::memory::XPathMemoryBlock::next']]],
+  ['next_5fattribute_7',['next_attribute',['../a02560.html#aa47074083f71aa800b2b23df2b597eee',1,'lumex::xml::attribute::XmlAttributeBase']]],
+  ['next_5fsibling_8',['next_sibling',['../a02600.html#ac1a2e86dd7b3a14bdc16593d60d3fb5f',1,'lumex::xml::node::XmlNodeBase']]],
+  ['node_9',['node',['../a02604.html#ac9a5674d6d8bac0f82f304c1cccd6d82',1,'lumex::xml::node::name_null_sentry::node'],['../a02772.html#ad6b91f3b74d0ef7b6d9b6829dfada689',1,'lumex::xml::xpath::context::XPathContext::node']]],
+  ['nodetest_10',['nodetest',['../a02764.html#aeb6fa117698457085ff89264f9ce4b58',1,'lumex::xml::xpath::ast::XPathAstNode']]],
+  ['npos_11',['npos',['../a02108.html#aeb1edb344c7351bef900036eae5ff4cc',1,'lumex::core::string_view::view::LumexStringView::npos'],['../a02112.html#ac8a45f4042fec8efa4221f4e25a13049',1,'lumex::core::string_view::view::LumexWStringView::npos'],['../a03807.html#aeb1edb344c7351bef900036eae5ff4cc',1,'LumexStringView::npos']]],
+  ['ns_5fin_5fd_12',['NS_IN_D',['../a00884.html#a920e49b137a882060a55ea25a9e53a13',1,'lumex::core::time::clock::Constants']]],
+  ['ns_5fin_5fh_13',['NS_IN_H',['../a00884.html#a6e66d177baba37c8e08e6d77357a1231',1,'lumex::core::time::clock::Constants']]],
+  ['ns_5fin_5fm_14',['NS_IN_M',['../a00884.html#ab2f1ced81fa531b0267e75ef9f6bdc48',1,'lumex::core::time::clock::Constants']]],
+  ['ns_5fin_5fmcs_15',['NS_IN_MCS',['../a00884.html#ab49a0056cc08217a2e7c07e00875f62e',1,'lumex::core::time::clock::Constants']]],
+  ['ns_5fin_5fmin_16',['NS_IN_MIN',['../a00884.html#ade5e62ca080e1d147dd767b4e1af097b',1,'lumex::core::time::clock::Constants']]],
+  ['ns_5fin_5fms_17',['NS_IN_MS',['../a00884.html#a8f68c9ca20890dc624de4fd02404a881',1,'lumex::core::time::clock::Constants']]],
+  ['ns_5fin_5fs_18',['NS_IN_S',['../a00884.html#ae5368ad7875347f20c1ad376bac365d6',1,'lumex::core::time::clock::Constants']]],
+  ['ns_5fin_5fw_19',['NS_IN_W',['../a00884.html#a535dc6514365c778c031095c8227d8b6',1,'lumex::core::time::clock::Constants']]],
+  ['ns_5fin_5fy_20',['NS_IN_Y',['../a00884.html#aa828e9f09aadbc1899a3b1a6a2d5130f',1,'lumex::core::time::clock::Constants']]],
+  ['nullopt_21',['nullopt',['../a00868.html#a08911e543a05bdcf64074cef318451a2',1,'lumex::core::optional::opt']]],
+  ['number_22',['number',['../a02764.html#ad31b55bb2738e8c7f0af405c94359a43',1,'lumex::xml::xpath::ast::XPathAstNode']]]
 ];

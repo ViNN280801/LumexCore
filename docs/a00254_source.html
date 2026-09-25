@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XmlMemoryPage.hpp Source File</title>
+<title>LumexLib: LumexReflectedEnum.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -103,65 +103,260 @@ $(function(){initNavTree('a00254_source.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">XmlMemoryPage.hpp</div></div>
+  <div class="headertitle"><div class="title">LumexReflectedEnum.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00254.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LUMEX_XML_MEMORY_PAGE_HPP</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LUMEX_XML_MEMORY_PAGE_HPP</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="a00212.html">lumex/LumexExport.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00435.html">Lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <span class="keyword">namespace </span><a class="code hl_namespace" href="a00488.html">Xml</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">namespace </span><a class="code hl_namespace" href="a00495.html">Memory</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>      <span class="comment">// Forward declarations (do not touch this fwd decl !!!)</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>      <span class="keyword">struct </span><a class="code hl_struct" href="a00984.html">XmlAllocator</a>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="a00988.html">   26</a></span>      <span class="keyword">struct </span><a class="code hl_define" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code hl_struct" href="a00988.html">XmlMemoryPage</a> {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">static</span> <a class="code hl_struct" href="a00988.html">XmlMemoryPage</a> *<a class="code hl_function" href="a00988.html#ac3b797dbeb8f0599a6ec93ac7439cf29">construct</a>(<span class="keywordtype">void</span> *memory);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="a00988.html#a76704b355c8471e0d5045d8aba98b62d">   45</a></span>        <a class="code hl_struct" href="a00984.html">XmlAllocator</a> *<a class="code hl_variable" href="a00988.html#a76704b355c8471e0d5045d8aba98b62d">allocator</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="a00988.html#afc5b52c3b4cf122e135a295d6c6bf8aa">   52</a></span>        <a class="code hl_struct" href="a00988.html">XmlMemoryPage</a> *<a class="code hl_variable" href="a00988.html#afc5b52c3b4cf122e135a295d6c6bf8aa">prev</a>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="a00988.html#a4c5e41a1e1d2088915054b73c941b05d">   58</a></span>        <a class="code hl_struct" href="a00988.html">XmlMemoryPage</a> *<a class="code hl_variable" href="a00988.html#a4c5e41a1e1d2088915054b73c941b05d">next</a>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="a00988.html#af9007193e3b74259de311a3b9de67e26">   65</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a00988.html#af9007193e3b74259de311a3b9de67e26">busy_size</a>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="a00988.html#ac951010c9b437e8e278976ac27b61b42">   72</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_variable" href="a00988.html#ac951010c9b437e8e278976ac27b61b42">freed_size</a>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      };</div>
-</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="a00495.html#a3f09b040b2209af4a7b023455b0d354d">   82</a></span>      <span class="keyword">static</span> <span class="keywordtype">size_t</span> <span class="keyword">const</span> <a class="code hl_variable" href="a00495.html#a3f09b040b2209af4a7b023455b0d354d">kdefault_xml_memory_page_size</a> = 32768 - <span class="keyword">sizeof</span>(<a class="code hl_struct" href="a00988.html">XmlMemoryPage</a>); </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    } <span class="comment">// namespace Memory</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  } <span class="comment">// namespace Xml</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>} <span class="comment">// namespace Lumex</span></div>
+<a href="a00254.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#ifndef LUMEX_CORE_REFLECTION_REFLECTED_ENUM_HPP</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define LUMEX_CORE_REFLECTION_REFLECTED_ENUM_HPP</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &quot;<a class="code" href="a00308.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &quot;<a class="code" href="a00332.html">lumex/core/utility/macros/LumexConstantMacros.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &quot;<a class="code" href="a00338.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// clang-format off</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">// Each entry passed to LUMEX_DEFINE_REFLECTED_ENUM is (Name) or (Name, Value), e.g.</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">//   LUMEX_DEFINE_REFLECTED_ENUM(Foo, std::uint8_t, (A), (B, 5), (C))</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">// The wrapping parens make every entry ONE macro argument regardless of an</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// internal comma, so LUMEX_PP_ARG_COUNT below counts entries, not tokens.</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">//</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// LUMEX_DEFINE_REFLECTED_ENUM always emits toString(EnumName). Display strings</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// default to the enumerator identifiers (#Name): toString(Foo::B) == &quot;B&quot;.</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">//</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// Custom strings: do NOT also call LUMEX_DEFINE_REFLECTED_ENUM (that would define</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">// toString twice). Use LUMEX_DEFINE_REFLECTED_ENUM_TO_STRING instead:</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">//   #define FOO_STRINGS(ENTRY) ENTRY(A, &quot;alpha&quot;) ENTRY(B, &quot;beta&quot;) ENTRY(C, &quot;charlie&quot;)</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">//   LUMEX_DEFINE_REFLECTED_ENUM_TO_STRING(Foo, std::uint8_t, FOO_STRINGS, (A), (B, 5), (C))</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">//   char const* s = toString(Foo::B); // &quot;beta&quot;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// There must be no comma between ENTRY(...) entries. Do not name the X-macro</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// parameter after an enumerator (ENTRY(X, &quot;ex&quot;) is fine; X(X, &quot;ex&quot;) is not:</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">// the preprocessor would replace both identifiers). Unlisted enumerators and</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// non-enumerator values of a fixed underlying type return &quot;&lt;Unknown&gt;&quot; (an</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// enumerator can still map to &quot;&quot; explicitly via its own X-macro entry - that</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">// is a distinct, deliberate case, not the fallback). The returned pointer is</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// never null.</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">//</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">// Reflection data is emitted as plain EnumName##Values/First/Size/Last</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">// constants next to the enum itself, NOT as an lumex_enum_traits_t&lt;Enum&gt; specialization.</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// Two independent reasons rule that out, both stemming from [temp.expl.spec]</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">// (an explicit specialization must be declared in the SAME namespace as its</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">// primary template):</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">//   1. MSVC (C2888) additionally refuses a lambda inside such a specialization</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//      when it is defined inside a namespace - an earlier design built</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//      lumex_enum_traits_t&lt;Enum&gt;::values via `[]{ using enum Enum; return std::array{...}; }()`.</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">//   2. Even lambda-free, LUMEX_DEFINE_REFLECTED_ENUM is meant to be invoked from</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">//      inside arbitrary namespaces, or even inside a nested struct/class -</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">//      neither is the global scope lumex_enum_traits_t&lt;T&gt; would need, so the</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">//      specialization itself would be ill-formed regardless of what is inside it.</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">// `static constexpr` on each generated constant is deliberate: at namespace</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">// scope it just gives ordinary internal linkage (harmless per-TU duplication</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">// of a few small constexpr values); at class scope it is required for the</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">// constant to be a shared class constant rather than a bogus non-static data</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">// member. One spelling, both invocation contexts.</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_XML_MEMORY_PAGE_HPP</span></div>
-<div class="ttc" id="aa00212_html"><div class="ttname"><a href="a00212.html">LumexExport.hpp</a></div></div>
-<div class="ttc" id="aa00212_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition</b> LumexExport.hpp:32</div></div>
-<div class="ttc" id="aa00435_html"><div class="ttname"><a href="a00435.html">Lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition</b> LumexCPUVectorizationCapabilities.cpp:25</div></div>
-<div class="ttc" id="aa00488_html"><div class="ttname"><a href="a00488.html">Lumex::Xml</a></div><div class="ttdef"><b>Definition</b> XmlAttribute.hpp:21</div></div>
-<div class="ttc" id="aa00495_html"><div class="ttname"><a href="a00495.html">Lumex::Xml::Memory</a></div><div class="ttdef"><b>Definition</b> XmlAllocator.hpp:19</div></div>
-<div class="ttc" id="aa00495_html_a3f09b040b2209af4a7b023455b0d354d"><div class="ttname"><a href="a00495.html#a3f09b040b2209af4a7b023455b0d354d">Lumex::Xml::Memory::kdefault_xml_memory_page_size</a></div><div class="ttdeci">static size_t const kdefault_xml_memory_page_size</div><div class="ttdoc">Defines the default size of a memory page for XML allocation.</div><div class="ttdef"><b>Definition</b> XmlMemoryPage.hpp:82</div></div>
-<div class="ttc" id="aa00984_html"><div class="ttname"><a href="a00984.html">Lumex::Xml::Memory::XmlAllocator</a></div><div class="ttdoc">Manages memory allocation and deallocation for XML nodes, attributes, and strings within a document.</div><div class="ttdef"><b>Definition</b> XmlAllocator.hpp:31</div></div>
-<div class="ttc" id="aa00988_html"><div class="ttname"><a href="a00988.html">Lumex::Xml::Memory::XmlMemoryPage</a></div><div class="ttdoc">Represents a single fixed-size memory page used by the XmlAllocator.</div><div class="ttdef"><b>Definition</b> XmlMemoryPage.hpp:26</div></div>
-<div class="ttc" id="aa00988_html_a4c5e41a1e1d2088915054b73c941b05d"><div class="ttname"><a href="a00988.html#a4c5e41a1e1d2088915054b73c941b05d">Lumex::Xml::Memory::XmlMemoryPage::next</a></div><div class="ttdeci">XmlMemoryPage * next</div><div class="ttdoc">Pointer to the next XmlMemoryPage in the allocator&#39;s linked list of pages.</div><div class="ttdef"><b>Definition</b> XmlMemoryPage.hpp:58</div></div>
-<div class="ttc" id="aa00988_html_a76704b355c8471e0d5045d8aba98b62d"><div class="ttname"><a href="a00988.html#a76704b355c8471e0d5045d8aba98b62d">Lumex::Xml::Memory::XmlMemoryPage::allocator</a></div><div class="ttdeci">XmlAllocator * allocator</div><div class="ttdoc">Pointer to the XmlAllocator that owns and manages this memory page.</div><div class="ttdef"><b>Definition</b> XmlMemoryPage.hpp:45</div></div>
-<div class="ttc" id="aa00988_html_ac3b797dbeb8f0599a6ec93ac7439cf29"><div class="ttname"><a href="a00988.html#ac3b797dbeb8f0599a6ec93ac7439cf29">Lumex::Xml::Memory::XmlMemoryPage::construct</a></div><div class="ttdeci">static XmlMemoryPage * construct(void *memory)</div><div class="ttdoc">Constructs an XmlMemoryPage object in a pre-allocated memory block.</div><div class="ttdef"><b>Definition</b> XmlMemoryPage.cpp:9</div></div>
-<div class="ttc" id="aa00988_html_ac951010c9b437e8e278976ac27b61b42"><div class="ttname"><a href="a00988.html#ac951010c9b437e8e278976ac27b61b42">Lumex::Xml::Memory::XmlMemoryPage::freed_size</a></div><div class="ttdeci">size_t freed_size</div><div class="ttdoc">The amount of memory that has been deallocated within this page.</div><div class="ttdef"><b>Definition</b> XmlMemoryPage.hpp:72</div></div>
-<div class="ttc" id="aa00988_html_af9007193e3b74259de311a3b9de67e26"><div class="ttname"><a href="a00988.html#af9007193e3b74259de311a3b9de67e26">Lumex::Xml::Memory::XmlMemoryPage::busy_size</a></div><div class="ttdeci">size_t busy_size</div><div class="ttdoc">The amount of memory currently in use within this page (allocated to objects).</div><div class="ttdef"><b>Definition</b> XmlMemoryPage.hpp:65</div></div>
-<div class="ttc" id="aa00988_html_afc5b52c3b4cf122e135a295d6c6bf8aa"><div class="ttname"><a href="a00988.html#afc5b52c3b4cf122e135a295d6c6bf8aa">Lumex::Xml::Memory::XmlMemoryPage::prev</a></div><div class="ttdeci">XmlMemoryPage * prev</div><div class="ttdoc">Pointer to the previous XmlMemoryPage in the allocator&#39;s linked list of pages.</div><div class="ttdef"><b>Definition</b> XmlMemoryPage.hpp:52</div></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">// - FOR_EACH, unrolled up to 16 entries (extend if a reflected enum needs more) -</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">// NOLINTBEGIN(cppcoreguidelines-macro-usage)</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="a00254.html#a90ad72bd9cfc2926f5a3d3b52a3b457a">   89</a></span><span class="preprocessor">#define LUMEX_PP_EXPAND(x) x</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="a00254.html#a9936aa6ba4dbabba51ef5a5c6b48e392">   91</a></span><span class="preprocessor">#define LUMEX_PP_ARG_N(                                                    \</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">  _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, N, ...) N</span></div>
+<div class="foldopen" id="foldopen00093" data-start="" data-end="">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="a00254.html#a53bbaabecc0e1c96e65a90a0a9450236">   93</a></span><span class="preprocessor">#define LUMEX_PP_ARG_COUNT(...) \</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">  LUMEX_PP_EXPAND(LUMEX_PP_ARG_N(__VA_ARGS__, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1))</span></div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="a00254.html#a4a3d2a1e705e86754cb6277735b832c9">   96</a></span><span class="preprocessor">#define LUMEX_PP_CAT_(a, b) a##b</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="a00254.html#afae3aba0867f289393d9a9c44923dd36">   97</a></span><span class="preprocessor">#define LUMEX_PP_CAT(a, b)  LUMEX_PP_CAT_(a, b)</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">// apply F(x) to each entry, comma-joined</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="a00254.html#ac6db871ece4e8173c5ef837e25d1bb5e">  100</a></span><span class="preprocessor">#define LUMEX_PP_FE_1(F, x)       F(x)</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="a00254.html#a5e2ccf9c5bb48e51b1b70c8eefc203cc">  101</a></span><span class="preprocessor">#define LUMEX_PP_FE_2(F, x, ...)  F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_1(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="a00254.html#ab0ee542c83d60b6c21ce05409cc8040c">  102</a></span><span class="preprocessor">#define LUMEX_PP_FE_3(F, x, ...)  F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_2(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="a00254.html#aa1d41dcce01e52a20a06727a1f5fa6c0">  103</a></span><span class="preprocessor">#define LUMEX_PP_FE_4(F, x, ...)  F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_3(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="a00254.html#af008c906cc45bb687796e9694d2dd6d6">  104</a></span><span class="preprocessor">#define LUMEX_PP_FE_5(F, x, ...)  F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_4(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="a00254.html#a17b63d11a1de89564bc59584f80ff7d3">  105</a></span><span class="preprocessor">#define LUMEX_PP_FE_6(F, x, ...)  F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_5(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="a00254.html#a65f2cb54ba623bf3f02485bc99367488">  106</a></span><span class="preprocessor">#define LUMEX_PP_FE_7(F, x, ...)  F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_6(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="a00254.html#abeb309777fa4a513a644c172b2530a27">  107</a></span><span class="preprocessor">#define LUMEX_PP_FE_8(F, x, ...)  F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_7(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="a00254.html#a2872cfcd7b90b576fb95ee57ab87a682">  108</a></span><span class="preprocessor">#define LUMEX_PP_FE_9(F, x, ...)  F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_8(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="a00254.html#abf6e01c8500d46e4a5fa35143aa4a248">  109</a></span><span class="preprocessor">#define LUMEX_PP_FE_10(F, x, ...) F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_9(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="a00254.html#aaded0f55e592ac0a834d3359ee0e7e53">  110</a></span><span class="preprocessor">#define LUMEX_PP_FE_11(F, x, ...) F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_10(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="a00254.html#a29e5d8d8df1bc7995289fb556f4c05b6">  111</a></span><span class="preprocessor">#define LUMEX_PP_FE_12(F, x, ...) F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_11(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="a00254.html#adec4fd5294650000ad0d418e5b362a30">  112</a></span><span class="preprocessor">#define LUMEX_PP_FE_13(F, x, ...) F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_12(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="a00254.html#a7934ab03d345d6b87c48289fec6da5ba">  113</a></span><span class="preprocessor">#define LUMEX_PP_FE_14(F, x, ...) F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_13(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="a00254.html#a6a34451353242a5c60187e7da9b346e0">  114</a></span><span class="preprocessor">#define LUMEX_PP_FE_15(F, x, ...) F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_14(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="a00254.html#a446be7369de6d54d29bfc29f5c0d87e9">  115</a></span><span class="preprocessor">#define LUMEX_PP_FE_16(F, x, ...) F(x), LUMEX_PP_EXPAND(LUMEX_PP_FE_15(F, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="" data-end="">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="a00254.html#ae2f9d5a613e469eb9a2e2a0a24e5aaec">  117</a></span><span class="preprocessor">#define LUMEX_PP_FOR_EACH(F, ...) \</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">  LUMEX_PP_EXPAND(LUMEX_PP_CAT(LUMEX_PP_FE_, LUMEX_PP_ARG_COUNT(__VA_ARGS__))(F, __VA_ARGS__))</span></div>
+</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">// same, but F also receives a fixed leading argument A on every call</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="a00254.html#aacf1928dd14ea593485e3fb9d3a98e48">  121</a></span><span class="preprocessor">#define LUMEX_PP_FEA_1(F, A, x)       F(A, x)</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="a00254.html#a5cdc8382296dd142803ea63b749d1149">  122</a></span><span class="preprocessor">#define LUMEX_PP_FEA_2(F, A, x, ...)  F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_1(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="a00254.html#af16e15114ce955f583ea6d18669ee734">  123</a></span><span class="preprocessor">#define LUMEX_PP_FEA_3(F, A, x, ...)  F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_2(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="a00254.html#ae857c44520b26ef2f2d8b37ed6da44c1">  124</a></span><span class="preprocessor">#define LUMEX_PP_FEA_4(F, A, x, ...)  F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_3(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="a00254.html#a23cae8710591e7d468f4c9464a9ebd3f">  125</a></span><span class="preprocessor">#define LUMEX_PP_FEA_5(F, A, x, ...)  F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_4(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="a00254.html#a439c9379db75ca5d3f0bafea93c929f2">  126</a></span><span class="preprocessor">#define LUMEX_PP_FEA_6(F, A, x, ...)  F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_5(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="a00254.html#a540df63d516dce05005ad6bead3e0736">  127</a></span><span class="preprocessor">#define LUMEX_PP_FEA_7(F, A, x, ...)  F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_6(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="a00254.html#a6c4be132647a4478585c772b8936d46c">  128</a></span><span class="preprocessor">#define LUMEX_PP_FEA_8(F, A, x, ...)  F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_7(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="a00254.html#a4d40c4b3ad0ec4dfb590bbb3af4aab5d">  129</a></span><span class="preprocessor">#define LUMEX_PP_FEA_9(F, A, x, ...)  F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_8(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="a00254.html#a48a69705a3d552a6204ad15e5f56db9c">  130</a></span><span class="preprocessor">#define LUMEX_PP_FEA_10(F, A, x, ...) F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_9(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="a00254.html#a0b57efd16de1462d383961f44eddfcc5">  131</a></span><span class="preprocessor">#define LUMEX_PP_FEA_11(F, A, x, ...) F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_10(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="a00254.html#a0ec429dc7d09b74f9ca197af99c7a661">  132</a></span><span class="preprocessor">#define LUMEX_PP_FEA_12(F, A, x, ...) F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_11(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="a00254.html#a7c69ff65fd22df9e2b661b94cb851eb9">  133</a></span><span class="preprocessor">#define LUMEX_PP_FEA_13(F, A, x, ...) F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_12(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="a00254.html#a7c014f43073cdc429e424326f1c73d98">  134</a></span><span class="preprocessor">#define LUMEX_PP_FEA_14(F, A, x, ...) F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_13(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="a00254.html#aed6e7c8d37314d39acbe59b6cfe7e4b3">  135</a></span><span class="preprocessor">#define LUMEX_PP_FEA_15(F, A, x, ...) F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_14(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="a00254.html#afaa187dbd20953ae882fc784449baea1">  136</a></span><span class="preprocessor">#define LUMEX_PP_FEA_16(F, A, x, ...) F(A, x), LUMEX_PP_EXPAND(LUMEX_PP_FEA_15(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="foldopen" id="foldopen00138" data-start="" data-end="">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="a00254.html#a2d3dfaf11b460863485a6d0928aaf296">  138</a></span><span class="preprocessor">#define LUMEX_PP_FOR_EACH_ARG(F, A, ...) \</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">  LUMEX_PP_EXPAND(LUMEX_PP_CAT(LUMEX_PP_FEA_, LUMEX_PP_ARG_COUNT(__VA_ARGS__))(F, A, __VA_ARGS__))</span></div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">// same as LUMEX_PP_FOR_EACH_ARG but not comma-joined (switch arms)</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="a00254.html#ab7ba4db674fd31b9aa9397f4081f8f6d">  142</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_1(F, A, x)       F(A, x)</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="a00254.html#afd6e9cfd775f4d6340d5c8cb2adc4627">  143</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_2(F, A, x, ...)  F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_1(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="a00254.html#a6b989b6be7492adee13c2b6651a3bb96">  144</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_3(F, A, x, ...)  F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_2(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="a00254.html#a0313e4124d7287c77c7556b59dcd82ce">  145</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_4(F, A, x, ...)  F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_3(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="a00254.html#aab4bb4a00bbfd55b3a8c093ede334376">  146</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_5(F, A, x, ...)  F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_4(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="a00254.html#a3bea7158684ed81ff483ee3c2f24c638">  147</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_6(F, A, x, ...)  F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_5(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="a00254.html#adf943fc58686cf152f685cbb3a6e7859">  148</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_7(F, A, x, ...)  F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_6(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="a00254.html#a9dc5a32014402cc1c940866a792f91b0">  149</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_8(F, A, x, ...)  F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_7(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="a00254.html#a404d9f903c84420d6e97809ba854b054">  150</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_9(F, A, x, ...)  F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_8(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="a00254.html#aee1c313a5f6dcf2427fe449e50f3341a">  151</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_10(F, A, x, ...) F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_9(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="a00254.html#aaa0375eee5ada935f31f8ea8cf9f82bb">  152</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_11(F, A, x, ...) F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_10(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="a00254.html#a86eaebc149829321bbcbf899821efa6a">  153</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_12(F, A, x, ...) F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_11(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="a00254.html#a9a3242e2a9e8c0aa83db3150983f3352">  154</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_13(F, A, x, ...) F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_12(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="a00254.html#a5ae9323648b3a6d1641c8954d47c014d">  155</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_14(F, A, x, ...) F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_13(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="a00254.html#a821e189abc6af19bb73efa9132a10795">  156</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_15(F, A, x, ...) F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_14(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="a00254.html#a4b04a598316436eb7196909cdaf3f8e6">  157</a></span><span class="preprocessor">#define LUMEX_PP_FEA_NC_16(F, A, x, ...) F(A, x) LUMEX_PP_EXPAND(LUMEX_PP_FEA_NC_15(F, A, __VA_ARGS__))</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="foldopen" id="foldopen00159" data-start="" data-end="">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="a00254.html#aac8d0287fbfaf08a88eafb40f01f4436">  159</a></span><span class="preprocessor">#define LUMEX_PP_FOR_EACH_ARG_NC(F, A, ...) \</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">  LUMEX_PP_EXPAND(LUMEX_PP_CAT(LUMEX_PP_FEA_NC_, LUMEX_PP_ARG_COUNT(__VA_ARGS__))(F, A, __VA_ARGS__))</span></div>
+</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">// per-entry expansion: entry is (Name) or (Name, Value)</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="a00254.html#ae71707cc8112fe39ddc4439af4b73111">  163</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_BODY_PICK(_1, _2, N, ...) N</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="a00254.html#ae0c598eb9308fb5f3f1d6bc7995d446e">  164</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_BODY_1(name)        name</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="a00254.html#a50d7861958de9d85d2bc0bd46c6605ea">  165</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_BODY_2(name, value) name = value</span></div>
+<div class="foldopen" id="foldopen00166" data-start="" data-end="">
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="a00254.html#acce2746df3ca574adf6a9e06dc4a46b4">  166</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_BODY_DISPATCH(...) \</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">  LUMEX_PP_EXPAND(LUMEX_PP_ENUM_BODY_PICK(__VA_ARGS__, LUMEX_PP_ENUM_BODY_2, LUMEX_PP_ENUM_BODY_1)(__VA_ARGS__))</span></div>
+</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="a00254.html#a97ae9335a476e6f40563f2c4d90820fd">  168</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_BODY(entry) LUMEX_PP_ENUM_BODY_DISPATCH entry</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="a00254.html#a45651882fb5a835d62f134af89219a21">  170</a></span><span class="preprocessor">#define LUMEX_PP_UNWRAP(...) __VA_ARGS__</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="a00254.html#abb32348e969c946022a948459a693260">  172</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_VALUE_PICK(_1, _2, N, ...) N</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="a00254.html#af3eaa6f3c8d688ee8e248f1aaf8b61e2">  173</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_VALUE_1(enumName, name)        enumName::name</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="a00254.html#a001f5297a0a637ffebf7e52126bd5570">  174</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_VALUE_2(enumName, name, value) enumName::name</span></div>
+<div class="foldopen" id="foldopen00175" data-start="" data-end="">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="a00254.html#a6b20adf6005cc51ebdc651fb90a28b36">  175</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_VALUE_DISPATCH(enumName, ...) \</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">  LUMEX_PP_EXPAND(LUMEX_PP_ENUM_VALUE_PICK(__VA_ARGS__, LUMEX_PP_ENUM_VALUE_2, LUMEX_PP_ENUM_VALUE_1)(enumName, __VA_ARGS__))</span></div>
+</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="a00254.html#ae721f73a3a7b0118eb1f2b8ff0e46744">  177</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_VALUE(enumName, entry) LUMEX_PP_ENUM_VALUE_DISPATCH(enumName, LUMEX_PP_UNWRAP entry)</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="a00254.html#a516473fe2fb201f3cc7c39828a80d06a">  179</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_DEFAULT_STRING_1(name)        #name</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="a00254.html#a7d95f8bd9081a56bb1a4b5eadd6c3d45">  180</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_DEFAULT_STRING_2(name, value) #name</span></div>
+<div class="foldopen" id="foldopen00181" data-start="" data-end="">
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="a00254.html#a3afb10889a0b9271565b0f67fa5506a0">  181</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_DEFAULT_STRING_DISPATCH(...) \</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">  LUMEX_PP_EXPAND(LUMEX_PP_ENUM_BODY_PICK(__VA_ARGS__, LUMEX_PP_ENUM_DEFAULT_STRING_2, LUMEX_PP_ENUM_DEFAULT_STRING_1)(__VA_ARGS__))</span></div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="a00254.html#a98aa83b02a3458cf3c2873bcc663055a">  183</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_DEFAULT_STRING(entry) LUMEX_PP_ENUM_DEFAULT_STRING_DISPATCH entry</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="a00254.html#a22edd4ad428bb3cdcff710a26ebd1b2b">  185</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_NAME_1(name)        name</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="a00254.html#a425ed89e964e35c17d809f0cdab57e35">  186</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_NAME_2(name, value) name</span></div>
+<div class="foldopen" id="foldopen00187" data-start="" data-end="">
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="a00254.html#acc0794a34a7762756670e476cdd1dcfc">  187</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_NAME_DISPATCH(...) \</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">  LUMEX_PP_EXPAND(LUMEX_PP_ENUM_BODY_PICK(__VA_ARGS__, LUMEX_PP_ENUM_NAME_2, LUMEX_PP_ENUM_NAME_1)(__VA_ARGS__))</span></div>
+</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="a00254.html#aaf3a3b531d09de9a49a24108ce62e7be">  189</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_NAME(entry) LUMEX_PP_ENUM_NAME_DISPATCH entry</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="foldopen" id="foldopen00191" data-start="" data-end="">
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="a00254.html#a47e2a7bc09d67782c2bda288c66ca63b">  191</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_DEFAULT_TO_STRING_ARM(enumName, entry) \</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">  case LumexToStringEnum_::LUMEX_PP_ENUM_NAME(entry):        \</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">    return LUMEX_PP_ENUM_DEFAULT_STRING(entry);</span></div>
+</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="comment">// Companion constants. They stay `constexpr` in every standard: C++20</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">// LUMEX_CONST_NUM is `constinit`, which does not make EnumNameValues usable in</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">// a constant expression, so EnumNameFirst = EnumNameValues.front() would not</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">// compile, and a plain `static const` std::array cannot be initialized inside</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment">// a class before C++17.</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="a00254.html#ae8f9f7d44d8edbe998e91e1333df095c">  200</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_CONSTANT static LUMEX_INLINE_VARIABLE constexpr</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="foldopen" id="foldopen00202" data-start="" data-end="">
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="a00254.html#a5335f7f85b6fb38b16d56eb9ed618492">  202</a></span><span class="preprocessor">#define LUMEX_PP_DEFINE_REFLECTED_ENUM_DECL(EnumName, UnderlyingType, ...)                          \</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">  enum class EnumName : UnderlyingType                                                              \</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">  {                                                                                                  \</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">    LUMEX_PP_FOR_EACH(LUMEX_PP_ENUM_BODY, __VA_ARGS__)                                              \</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">  };                                                                                                 \</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">                                                                                                      \</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">  LUMEX_ATTRIBUTE_MAYBE_UNUSED LUMEX_PP_ENUM_CONSTANT std::array&lt;EnumName, LUMEX_PP_ARG_COUNT(__VA_ARGS__)&gt;            \</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">    LUMEX_PP_CAT(EnumName, Values){                                                                  \</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">      LUMEX_PP_FOR_EACH_ARG(LUMEX_PP_ENUM_VALUE, EnumName, __VA_ARGS__)                              \</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="preprocessor">    };                                                                                               \</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">  LUMEX_ATTRIBUTE_MAYBE_UNUSED LUMEX_PP_ENUM_CONSTANT EnumName LUMEX_PP_CAT(EnumName, First) =                         \</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">    LUMEX_PP_CAT(EnumName, Values).front();                                                          \</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="preprocessor">  LUMEX_ATTRIBUTE_MAYBE_UNUSED LUMEX_PP_ENUM_CONSTANT std::size_t LUMEX_PP_CAT(EnumName, Size) =                       \</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="preprocessor">    LUMEX_PP_CAT(EnumName, Values).size();                                                           \</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="preprocessor">  LUMEX_ATTRIBUTE_MAYBE_UNUSED LUMEX_PP_ENUM_CONSTANT EnumName LUMEX_PP_CAT(EnumName, Last) =                          \</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="preprocessor">    LUMEX_PP_CAT(EnumName, Values).back();</span></div>
+</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="foldopen" id="foldopen00219" data-start="" data-end="">
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="a00254.html#aba95d1dc3f9b233044e6e424717a4d36">  219</a></span><span class="preprocessor">#define LUMEX_PP_ENUM_TO_STRING_CASE(enumerator, str) \</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="preprocessor">  case LumexToStringEnum_::enumerator:                \</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="preprocessor">    return str;</span></div>
+</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="foldopen" id="foldopen00223" data-start="" data-end="">
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="a00254.html#abfce0b9b2d5310f6e28ddd5fcb8bc6ff">  223</a></span><span class="preprocessor">#define LUMEX_PP_DEFINE_TO_STRING_FN(EnumName, SwitchBody)                                       \</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="preprocessor">  LUMEX_ATTRIBUTE_NODISCARD (&quot;return value must be used&quot;) LUMEX_ATTRIBUTE_MAYBE_UNUSED static LUMEX_CONSTEXPR char const * toString(EnumName value) LUMEX_NOEXCEPT  \</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="preprocessor">  {                                                                                               \</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="preprocessor">    using LumexToStringEnum_ = EnumName;                                                         \</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="preprocessor">    switch(value)                                                                                \</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="preprocessor">    {                                                                                             \</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">      SwitchBody                                                                                 \</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">    default:                                                                                     \</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">      return &quot;&lt;Unknown&gt;&quot;;                                                                        \</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">    }                                                                                             \</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">  }</span></div>
+</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="foldopen" id="foldopen00235" data-start="" data-end="">
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="a00254.html#a12a938ac25a11da793255a14b2a8b2f5">  235</a></span><span class="preprocessor">#define LUMEX_DEFINE_REFLECTED_ENUM(EnumName, UnderlyingType, ...)             \</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">  LUMEX_PP_DEFINE_REFLECTED_ENUM_DECL(EnumName, UnderlyingType, __VA_ARGS__) \</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="preprocessor">  LUMEX_PP_DEFINE_TO_STRING_FN(                                          \</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">    EnumName,                                                            \</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">    LUMEX_PP_FOR_EACH_ARG_NC(LUMEX_PP_ENUM_DEFAULT_TO_STRING_ARM, EnumName, __VA_ARGS__))</span></div>
+</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="foldopen" id="foldopen00241" data-start="" data-end="">
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="a00254.html#a591f5222096a18bf46c1a5efdb041c18">  241</a></span><span class="preprocessor">#define LUMEX_DEFINE_REFLECTED_ENUM_TO_STRING(EnumName, UnderlyingType, XList, ...) \</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="preprocessor">  LUMEX_PP_DEFINE_REFLECTED_ENUM_DECL(EnumName, UnderlyingType, __VA_ARGS__)  \</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="preprocessor">  LUMEX_PP_DEFINE_TO_STRING_FN(EnumName, XList(LUMEX_PP_ENUM_TO_STRING_CASE))</span></div>
+</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="comment">// NOLINTEND(cppcoreguidelines-macro-usage)</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment">// clang-format on</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_CORE_REFLECTION_REFLECTED_ENUM_HPP</span></div>
+<div class="ttc" id="aa00308_html"><div class="ttname"><a href="a00308.html">LumexAttributes.hpp</a></div></div>
+<div class="ttc" id="aa00332_html"><div class="ttname"><a href="a00332.html">LumexConstantMacros.hpp</a></div></div>
+<div class="ttc" id="aa00338_html"><div class="ttname"><a href="a00338.html">LumexKeywords.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_8b4095ffbb260afdde390f90a93ad48f.html">xml</a></li><li class="navelem"><a class="el" href="dir_2f6f6f14791ecd974f17c6fba97efef0.html">memory</a></li><li class="navelem"><a class="el" href="a00254.html">XmlMemoryPage.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_31797d9c327ca8a12ffc03669c2ea784.html">reflection</a></li><li class="navelem"><a class="el" href="dir_aa39d5cc3ad764535257dfa3f7562586.html">reflected_enum</a></li><li class="navelem"><a class="el" href="a00254.html">LumexReflectedEnum.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

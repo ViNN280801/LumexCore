@@ -1,6 +1,5 @@
 var a00080 =
 [
-    [ "Lumex::Core::Environment::LumexEnvironment", "a00640.html", "a00640" ],
-    [ "Lumex::Core::Environment::LumexEnvironment::EnvResult", "a00644.html", "a00644" ],
-    [ "LumexEnvironment", "a00080.html#a849057a35e0357d925542779f79ac82d", null ]
+    [ "LUMEX_IMPLEMENTATION", "a00080.html#a07486181f1990291c2a348de8eb4c480", null ],
+    [ "lumex::applied::serial::port::resolve_serial_port_path", "a00811.html#ab09ab9261b3038641b2bda9c7f63d821", null ]
 ];

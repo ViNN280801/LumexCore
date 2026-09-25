@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::Node::name_null_sentry Struct Reference</title>
+<title>LumexLib: lumex::applied::logger::logger::log_entry_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -107,53 +107,39 @@ $(function(){initNavTree('a01012.html',''); initResizable(true); });
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="a01009.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::Node::name_null_sentry Struct Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::applied::logger::logger::log_entry_t Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A RAII helper to temporarily set a node's name to <code>nullptr</code> and restore it upon destruction.  
+<p>Buffered log-record structure.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00269_source.html">XmlNodeBase.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Lumex::Xml::Node::name_null_sentry:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01010.png" border="0" usemap="#a_lumex_1_1_xml_1_1_node_1_1name__null__sentry_coll__map" alt="Collaboration graph"/></div>
-<map name="a_lumex_1_1_xml_1_1_node_1_1name__null__sentry_coll__map" id="a_lumex_1_1_xml_1_1_node_1_1name__null__sentry_coll__map">
-<area shape="rect" title="A RAII helper to temporarily set a node&#39;s name to nullptr and restore it upon destruction." alt="" coords="31,240,202,283"/>
-<area shape="rect" href="a01008.html" title="Base structure representing an XML node in the document tree." alt="" coords="5,131,228,157"/>
-<area shape="poly" title=" " alt="" coords="119,173,119,240,114,240,114,173"/>
-<area shape="poly" title=" " alt="" coords="244,134,254,144,246,153,228,157,227,152,244,148,249,144,241,139"/>
-<area shape="rect" href="a00968.html" title="Base structure for representing an XML attribute." alt="" coords="42,5,191,48"/>
-<area shape="poly" title=" " alt="" coords="119,64,119,130,114,130,114,64"/>
-<area shape="poly" title=" " alt="" coords="208,18,217,27,209,35,191,39,190,34,207,31,212,27,204,22"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;<a class="el" href="a00056_source.html">LumexLogger.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af7afb277db5688bf17aa182a85e6a4c7" id="r_af7afb277db5688bf17aa182a85e6a4c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7afb277db5688bf17aa182a85e6a4c7">name_null_sentry</a> (<a class="el" href="a01008.html">XmlNodeBase</a> *node_)</td></tr>
-<tr class="memdesc:af7afb277db5688bf17aa182a85e6a4c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <code><a class="el" href="a01012.html" title="A RAII helper to temporarily set a node&#39;s name to nullptr and restore it upon destruction.">name_null_sentry</a></code> and nullifies the node's name.  <br /></td></tr>
-<tr class="separator:af7afb277db5688bf17aa182a85e6a4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24364c1de7b1112384dcaa5391e9f996" id="r_a24364c1de7b1112384dcaa5391e9f996"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24364c1de7b1112384dcaa5391e9f996">~name_null_sentry</a> ()</td></tr>
-<tr class="memdesc:a24364c1de7b1112384dcaa5391e9f996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor that restores the node's original name.  <br /></td></tr>
-<tr class="separator:a24364c1de7b1112384dcaa5391e9f996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e5560dc8ed05812437a629b92deb04" id="r_a32e5560dc8ed05812437a629b92deb04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32e5560dc8ed05812437a629b92deb04">log_entry_t</a> (<a class="el" href="a00798.html#a8abbc573ad9bfc4d4c761d4c300a1e07">LogLevel</a> level_, std::string message_, std::chrono::system_clock::time_point timestamp_=std::chrono::system_clock::now()) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a32e5560dc8ed05812437a629b92deb04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Padding: 7 bytes to align to 8 bytes.  <br /></td></tr>
+<tr class="separator:a32e5560dc8ed05812437a629b92deb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a515766760a71ac405c34ee4871081c7f" id="r_a515766760a71ac405c34ee4871081c7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01008.html">XmlNodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a515766760a71ac405c34ee4871081c7f">node</a> {}</td></tr>
-<tr class="memdesc:a515766760a71ac405c34ee4871081c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the <code><a class="el" href="a01008.html" title="Base structure representing an XML node in the document tree.">XmlNodeBase</a></code> whose name is being managed.  <br /></td></tr>
-<tr class="separator:a515766760a71ac405c34ee4871081c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14425645eaafe5211a3f1a6cb259ba5e" id="r_a14425645eaafe5211a3f1a6cb259ba5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14425645eaafe5211a3f1a6cb259ba5e">name</a> {}</td></tr>
-<tr class="memdesc:a14425645eaafe5211a3f1a6cb259ba5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary storage for the original name pointer.  <br /></td></tr>
-<tr class="separator:a14425645eaafe5211a3f1a6cb259ba5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728f5d7b7d8997eb17a025a7279ed91a" id="r_a728f5d7b7d8997eb17a025a7279ed91a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a728f5d7b7d8997eb17a025a7279ed91a">message</a></td></tr>
+<tr class="memdesc:a728f5d7b7d8997eb17a025a7279ed91a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Large types (8+ bytes)  <br /></td></tr>
+<tr class="separator:a728f5d7b7d8997eb17a025a7279ed91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a060e999accc52a8ed7857ac703469085" id="r_a060e999accc52a8ed7857ac703469085"><td class="memItemLeft" align="right" valign="top">std::chrono::system_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a060e999accc52a8ed7857ac703469085">timestamp</a></td></tr>
+<tr class="memdesc:a060e999accc52a8ed7857ac703469085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record timestamp.  <br /></td></tr>
+<tr class="separator:a060e999accc52a8ed7857ac703469085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedce3417fed0732d6a765c39dab2b4d7" id="r_aedce3417fed0732d6a765c39dab2b4d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00798.html#a8abbc573ad9bfc4d4c761d4c300a1e07">LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedce3417fed0732d6a765c39dab2b4d7">level</a></td></tr>
+<tr class="memdesc:aedce3417fed0732d6a765c39dab2b4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Small types (1 byte)  <br /></td></tr>
+<tr class="separator:aedce3417fed0732d6a765c39dab2b4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A RAII helper to temporarily set a node's name to <code>nullptr</code> and restore it upon destruction. </p>
-<p>Used internally during node manipulation to manage string lifetimes and prevent double-frees or incorrect string references during copy operations. </p>
+<div class="textblock"><p>Buffered log-record structure. </p>
+<p>Holds log records in a buffer before they are written to the file. Holds everything needed for a later write. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af7afb277db5688bf17aa182a85e6a4c7" name="af7afb277db5688bf17aa182a85e6a4c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7afb277db5688bf17aa182a85e6a4c7">&#9670;&#160;</a></span>name_null_sentry()</h2>
+<a id="a32e5560dc8ed05812437a629b92deb04" name="a32e5560dc8ed05812437a629b92deb04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e5560dc8ed05812437a629b92deb04">&#9670;&#160;</a></span>log_entry_t()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,10 +148,19 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Lumex::Xml::Node::name_null_sentry::name_null_sentry </td>
+          <td class="memname">lumex::applied::logger::logger::log_entry_t::log_entry_t </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a01008.html">XmlNodeBase</a> *</td>          <td class="paramname"><span class="paramname"><em>node_</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="a00798.html#a8abbc573ad9bfc4d4c761d4c300a1e07">LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>message_</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::chrono::system_clock::time_point</td>          <td class="paramname"><span class="paramname"><em>timestamp_</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::chrono::system_clock::now&#160;()</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -175,87 +170,78 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <code><a class="el" href="a01012.html" title="A RAII helper to temporarily set a node&#39;s name to nullptr and restore it upon destruction.">name_null_sentry</a></code> and nullifies the node's name. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Padding: 7 bytes to align to 8 bytes. </p>
+<p>Constructor with parameters. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">node_</td><td>The <code><a class="el" href="a01008.html" title="Base structure representing an XML node in the document tree.">XmlNodeBase</a></code> object whose name will be temporarily set to <code>nullptr</code>.</td></tr>
+    <tr><td class="paramname">level_</td><td>Log level. </td></tr>
+    <tr><td class="paramname">message_</td><td>Log message. </td></tr>
+    <tr><td class="paramname">timestamp_</td><td>Timestamp (defaults to now). </td></tr>
   </table>
   </dd>
 </dl>
-<p>Stores the original name pointer and sets <code>node_-&gt;name</code> to <code>nullptr</code>. </p>
-
-</div>
-</div>
-<a id="a24364c1de7b1112384dcaa5391e9f996" name="a24364c1de7b1112384dcaa5391e9f996"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24364c1de7b1112384dcaa5391e9f996">&#9670;&#160;</a></span>~name_null_sentry()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Lumex::Xml::Node::name_null_sentry::~name_null_sentry </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Destructor that restores the node's original name. </p>
-<p>Resets <code>node-&gt;name</code> to its value before the sentry was constructed. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a14425645eaafe5211a3f1a6cb259ba5e" name="a14425645eaafe5211a3f1a6cb259ba5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14425645eaafe5211a3f1a6cb259ba5e">&#9670;&#160;</a></span>name</h2>
+<a id="aedce3417fed0732d6a765c39dab2b4d7" name="aedce3417fed0732d6a765c39dab2b4d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedce3417fed0732d6a765c39dab2b4d7">&#9670;&#160;</a></span>level</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00503.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a>* Lumex::Xml::Node::name_null_sentry::name {}</td>
+          <td class="memname"><a class="el" href="a00798.html#a8abbc573ad9bfc4d4c761d4c300a1e07">LogLevel</a> lumex::applied::logger::logger::log_entry_t::level</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Temporary storage for the original name pointer. </p>
+<p>Small types (1 byte) </p>
+<p>Log level </p>
 
 </div>
 </div>
-<a id="a515766760a71ac405c34ee4871081c7f" name="a515766760a71ac405c34ee4871081c7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a515766760a71ac405c34ee4871081c7f">&#9670;&#160;</a></span>node</h2>
+<a id="a728f5d7b7d8997eb17a025a7279ed91a" name="a728f5d7b7d8997eb17a025a7279ed91a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728f5d7b7d8997eb17a025a7279ed91a">&#9670;&#160;</a></span>message</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01008.html">XmlNodeBase</a>* Lumex::Xml::Node::name_null_sentry::node {}</td>
+          <td class="memname">std::string lumex::applied::logger::logger::log_entry_t::message</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pointer to the <code><a class="el" href="a01008.html" title="Base structure representing an XML node in the document tree.">XmlNodeBase</a></code> whose name is being managed. </p>
+<p>Large types (8+ bytes) </p>
+<p>Log message </p>
+
+</div>
+</div>
+<a id="a060e999accc52a8ed7857ac703469085" name="a060e999accc52a8ed7857ac703469085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a060e999accc52a8ed7857ac703469085">&#9670;&#160;</a></span>timestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::chrono::system_clock::time_point lumex::applied::logger::logger::log_entry_t::timestamp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Record timestamp. </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00269_source.html">XmlNodeBase.hpp</a></li>
+<li><a class="el" href="a00056_source.html">LumexLogger.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00491.html">Node</a></li><li class="navelem"><a class="el" href="a01012.html">name_null_sentry</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00775.html">applied</a></li><li class="navelem"><a class="el" href="a00797.html">logger</a></li><li class="navelem"><a class="el" href="a00798.html">logger</a></li><li class="navelem"><a class="el" href="a01012.html">log_entry_t</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

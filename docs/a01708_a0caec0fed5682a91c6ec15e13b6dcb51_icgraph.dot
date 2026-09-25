@@ -1,0 +1,43 @@
+digraph "lumex::core::filesystem::fs::lumex_filesystem::status"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="lumex::core::filesystem\l::fs::lumex_filesystem\l::status",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Returns the status of the file or directory at the specified path_arg, following symbolic links."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="lumex::core::filesystem\l::fs::lumex_filesystem\l::equivalent",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01708.html#a1fd3cf8550cf181b04b1b22e8458f328",tooltip="Checks if two paths refer to the same file system entity."];
+  Node2 -> Node2 [id="edge2_Node000002_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node3 [id="edge3_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="lumex::core::filesystem\l::fs::lumex_filesystem\l::move_directory",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01708.html#afd282c7fe983255c40345c1ea2e6fc9a",tooltip="Moves a directory and its contents from one location to another."];
+  Node3 -> Node3 [id="edge4_Node000003_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node4 [id="edge5_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="lumex::core::filesystem\l::fs::lumex_filesystem\l::is_block_file",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01708.html#ad15ced64dd4b82c3de1c910c00df209c",tooltip="Checks if the specified path_arg refers to a block device file."];
+  Node4 -> Node5 [id="edge6_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="lumex::core::filesystem\l::fs::directory_entry\l::is_block_file",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01700.html#ab53ee96c15d07ac0f7394b5f5ff2ac52",tooltip="Checks if the entry represents a block device file."];
+  Node4 -> Node4 [id="edge7_Node000004_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge8_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="lumex::core::filesystem\l::fs::lumex_filesystem\l::is_character_file",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01708.html#ad9680d88bfcce3b2f21e976aea3f7b82",tooltip="Checks if the specified path_arg refers to a character device file."];
+  Node6 -> Node7 [id="edge9_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="lumex::core::filesystem\l::fs::directory_entry\l::is_character_file",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01700.html#ad69c621e6b19e78fac38dec29937e09b",tooltip="Checks if the entry represents a character device file."];
+  Node6 -> Node6 [id="edge10_Node000006_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node8 [id="edge11_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="lumex::core::filesystem\l::fs::lumex_filesystem\l::is_fifo",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01708.html#a03c881f92021e268d197a190094be082",tooltip="Checks if the specified path_arg refers to a FIFO (named pipe) file."];
+  Node8 -> Node9 [id="edge12_Node000008_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="lumex::core::filesystem\l::fs::directory_entry\l::is_fifo",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01700.html#a64599b9d7adc1a6c718631e4d67c0cea",tooltip="Checks if the entry represents a FIFO (named pipe) file."];
+  Node8 -> Node8 [id="edge13_Node000008_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node10 [id="edge14_Node000001_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="lumex::core::filesystem\l::fs::lumex_filesystem\l::is_other",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01708.html#a43d00d2d3ad895ad68caf8f8f42a76c2",tooltip="Checks if the specified path_arg refers to a file type other than regular file or directory."];
+  Node10 -> Node11 [id="edge15_Node000010_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="lumex::core::filesystem\l::fs::directory_entry\l::is_other",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01700.html#a73cc1793e770f25fa063b9027a44ceaf",tooltip="Checks if the entry represents a file type other than regular file or directory."];
+  Node10 -> Node10 [id="edge16_Node000010_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node12 [id="edge17_Node000001_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="lumex::core::filesystem\l::fs::lumex_filesystem\l::is_socket",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01708.html#a7c2082e6e92ee6d45d63af89a683103e",tooltip="Checks if the specified path_arg refers to a socket file."];
+  Node12 -> Node13 [id="edge18_Node000012_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="lumex::core::filesystem\l::fs::directory_entry\l::is_socket",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01700.html#a069812e2fd08071eb55d76333358d5e5",tooltip="Checks if the entry represents a socket file."];
+  Node12 -> Node12 [id="edge19_Node000012_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node14 [id="edge20_Node000001_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="lumex::core::filesystem\l::fs::directory_entry\l::status",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01700.html#ac140b27107dc3f8fdf638e20d0e47fbe",tooltip="Retrieves the status of the file system entry, following symbolic links."];
+  Node1 -> Node1 [id="edge21_Node000001_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

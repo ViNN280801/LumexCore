@@ -1,0 +1,21 @@
+digraph "lumex::core::fmt::Detail::truncate_to_width"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="lumex::core::fmt::Detail\l::truncate_to_width",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="End of the longest prefix of whole grapheme clusters whose estimated width is <= limit."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="lumex::core::fmt::Detail\l::next_grapheme",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#ad59acf536facd1a3338fa47f0848c4fd",tooltip="Moves it past one extended grapheme cluster and returns its estimated width: the width of its first c..."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="lumex::core::fmt::Detail\l::decode",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#a11c0b45ef3e75893d41b9a0674371d7f",tooltip="Decodes one code point at it (UTF-8 for char, UTF-16 or UTF-32 for wchar_t); an invalid sequence yiel..."];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="lumex::core::fmt::Detail\l::is_extended_pictographic",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#af311f1583c1c0ace6e9129b44dbf41c7",tooltip="Extended_Pictographic (approximated by the emoji blocks): a code point that a zero width joiner glues..."];
+  Node2 -> Node5 [id="edge4_Node000002_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="lumex::core::fmt::Detail\l::is_grapheme_extend",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#ac9e7878d05f274930197335a25394d69",tooltip="The code point joins the preceding one in the same extended grapheme cluster: Grapheme_Cluster_Break ..."];
+  Node2 -> Node6 [id="edge5_Node000002_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="lumex::core::fmt::Detail\l::is_regional_indicator",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#ac0653720a2893d293e5707bee936247d",tooltip="Regional indicator symbols (two of them form one flag)."];
+  Node2 -> Node7 [id="edge6_Node000002_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="lumex::core::fmt::Detail\l::is_wide_code_point",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#a1875222fdcf348bccf4d3ca7cdc5a57a",tooltip=" "];
+}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename clean_type_t&lt; T &gt;::type &gt;::value &gt;::type &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::core::time::clock::Constants Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,378 +104,268 @@ $(function(){initNavTree('a00884.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="a00881.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename clean_type_t&lt; T &gt;::type &gt;::value &gt;::type &gt; Struct Template Reference</div></div>
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">lumex::core::time::clock::Constants Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Специализация для одинаковых типов с плавающей точкой  
- <a href="#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00203_source.html">LumexSafeNumericComparator.hpp</a>&gt;</code></p>
+<p>Contains compile-time constants related to time calculations.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a29d74baea83ba016eeba5c8cc2f394be" id="r_a29d74baea83ba016eeba5c8cc2f394be"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29d74baea83ba016eeba5c8cc2f394be">clean_T</a> = typename <a class="el" href="a00864.html">clean_type_t</a>&lt;T&gt;::type</td></tr>
-<tr class="separator:a29d74baea83ba016eeba5c8cc2f394be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af977a2cc5254403905177ea866a50a09" id="r_af977a2cc5254403905177ea866a50a09"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af977a2cc5254403905177ea866a50a09">compare</a> (T current, T other) noexcept</td></tr>
-<tr class="memdesc:af977a2cc5254403905177ea866a50a09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение &gt;= для одинаковых floating-point типов  <br /></td></tr>
-<tr class="separator:af977a2cc5254403905177ea866a50a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d69cf11507534505d5f232940914e7a" id="r_a1d69cf11507534505d5f232940914e7a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d69cf11507534505d5f232940914e7a">equal</a> (T current, T other) noexcept</td></tr>
-<tr class="memdesc:a1d69cf11507534505d5f232940914e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение == для одинаковых floating-point типов  <br /></td></tr>
-<tr class="separator:a1d69cf11507534505d5f232940914e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fa00289da0d444c40a2f4d12bb36a61" id="r_a5fa00289da0d444c40a2f4d12bb36a61"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fa00289da0d444c40a2f4d12bb36a61">not_equal</a> (T current, T other) noexcept</td></tr>
-<tr class="memdesc:a5fa00289da0d444c40a2f4d12bb36a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение != для одинаковых floating-point типов  <br /></td></tr>
-<tr class="separator:a5fa00289da0d444c40a2f4d12bb36a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bbd9779173110214a3a020098054e28" id="r_a6bbd9779173110214a3a020098054e28"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bbd9779173110214a3a020098054e28">less</a> (T current, T other) noexcept</td></tr>
-<tr class="memdesc:a6bbd9779173110214a3a020098054e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение &lt; для одинаковых floating-point типов  <br /></td></tr>
-<tr class="separator:a6bbd9779173110214a3a020098054e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af240ac048e2140d6d94e546b79eef6f0" id="r_af240ac048e2140d6d94e546b79eef6f0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af240ac048e2140d6d94e546b79eef6f0">greater</a> (T current, T other) noexcept</td></tr>
-<tr class="memdesc:af240ac048e2140d6d94e546b79eef6f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение &gt; для одинаковых floating-point типов  <br /></td></tr>
-<tr class="separator:af240ac048e2140d6d94e546b79eef6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cb58d4e2b15c971be830714f207882b" id="r_a1cb58d4e2b15c971be830714f207882b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cb58d4e2b15c971be830714f207882b">less_equal</a> (T current, T other) noexcept</td></tr>
-<tr class="memdesc:a1cb58d4e2b15c971be830714f207882b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение &lt;= для одинаковых floating-point типов  <br /></td></tr>
-<tr class="separator:a1cb58d4e2b15c971be830714f207882b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaa609d66e143a3a3631a93cf3d38df2" id="r_adaa609d66e143a3a3631a93cf3d38df2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adaa609d66e143a3a3631a93cf3d38df2">greater_equal</a> (T current, T other) noexcept</td></tr>
-<tr class="memdesc:adaa609d66e143a3a3631a93cf3d38df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Безопасное сравнение &gt;= для одинаковых floating-point типов  <br /></td></tr>
-<tr class="separator:adaa609d66e143a3a3631a93cf3d38df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a5384dd85a0e7cdf65031e8a619c4d6b0" id="r_a5384dd85a0e7cdf65031e8a619c4d6b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5384dd85a0e7cdf65031e8a619c4d6b0">KDEFAULT_DATETIME_BUF_SIZE</a> = 128UL</td></tr>
+<tr class="memdesc:a5384dd85a0e7cdf65031e8a619c4d6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default buffer size for date and time strings.  <br /></td></tr>
+<tr class="separator:a5384dd85a0e7cdf65031e8a619c4d6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c99f6314691dacd62fde7e133e35c3a" id="r_a8c99f6314691dacd62fde7e133e35c3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c99f6314691dacd62fde7e133e35c3a">K_MICROSECONDS_IN_MILLISECOND</a> = 1000</td></tr>
+<tr class="memdesc:a8c99f6314691dacd62fde7e133e35c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of microseconds in one millisecond.  <br /></td></tr>
+<tr class="separator:a8c99f6314691dacd62fde7e133e35c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49a0056cc08217a2e7c07e00875f62e" id="r_ab49a0056cc08217a2e7c07e00875f62e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab49a0056cc08217a2e7c07e00875f62e">NS_IN_MCS</a> = 1000LL</td></tr>
+<tr class="memdesc:ab49a0056cc08217a2e7c07e00875f62e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nanoseconds in one microsecond.  <br /></td></tr>
+<tr class="separator:ab49a0056cc08217a2e7c07e00875f62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f68c9ca20890dc624de4fd02404a881" id="r_a8f68c9ca20890dc624de4fd02404a881"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f68c9ca20890dc624de4fd02404a881">NS_IN_MS</a> = 1000LL * <a class="el" href="#ab49a0056cc08217a2e7c07e00875f62e">NS_IN_MCS</a></td></tr>
+<tr class="memdesc:a8f68c9ca20890dc624de4fd02404a881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nanoseconds in one millisecond.  <br /></td></tr>
+<tr class="separator:a8f68c9ca20890dc624de4fd02404a881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5368ad7875347f20c1ad376bac365d6" id="r_ae5368ad7875347f20c1ad376bac365d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5368ad7875347f20c1ad376bac365d6">NS_IN_S</a> = 1000LL * <a class="el" href="#a8f68c9ca20890dc624de4fd02404a881">NS_IN_MS</a></td></tr>
+<tr class="memdesc:ae5368ad7875347f20c1ad376bac365d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nanoseconds in one second.  <br /></td></tr>
+<tr class="separator:ae5368ad7875347f20c1ad376bac365d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade5e62ca080e1d147dd767b4e1af097b" id="r_ade5e62ca080e1d147dd767b4e1af097b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade5e62ca080e1d147dd767b4e1af097b">NS_IN_MIN</a> = 60LL * <a class="el" href="#ae5368ad7875347f20c1ad376bac365d6">NS_IN_S</a></td></tr>
+<tr class="memdesc:ade5e62ca080e1d147dd767b4e1af097b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nanoseconds in one minute.  <br /></td></tr>
+<tr class="separator:ade5e62ca080e1d147dd767b4e1af097b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e66d177baba37c8e08e6d77357a1231" id="r_a6e66d177baba37c8e08e6d77357a1231"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e66d177baba37c8e08e6d77357a1231">NS_IN_H</a> = 60LL * <a class="el" href="#ade5e62ca080e1d147dd767b4e1af097b">NS_IN_MIN</a></td></tr>
+<tr class="memdesc:a6e66d177baba37c8e08e6d77357a1231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nanoseconds in one hour.  <br /></td></tr>
+<tr class="separator:a6e66d177baba37c8e08e6d77357a1231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920e49b137a882060a55ea25a9e53a13" id="r_a920e49b137a882060a55ea25a9e53a13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a920e49b137a882060a55ea25a9e53a13">NS_IN_D</a> = 24LL * <a class="el" href="#a6e66d177baba37c8e08e6d77357a1231">NS_IN_H</a></td></tr>
+<tr class="memdesc:a920e49b137a882060a55ea25a9e53a13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nanoseconds in one day.  <br /></td></tr>
+<tr class="separator:a920e49b137a882060a55ea25a9e53a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a535dc6514365c778c031095c8227d8b6" id="r_a535dc6514365c778c031095c8227d8b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a535dc6514365c778c031095c8227d8b6">NS_IN_W</a> = 7LL * <a class="el" href="#a920e49b137a882060a55ea25a9e53a13">NS_IN_D</a></td></tr>
+<tr class="memdesc:a535dc6514365c778c031095c8227d8b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nanoseconds in one week.  <br /></td></tr>
+<tr class="separator:a535dc6514365c778c031095c8227d8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f1ced81fa531b0267e75ef9f6bdc48" id="r_ab2f1ced81fa531b0267e75ef9f6bdc48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2f1ced81fa531b0267e75ef9f6bdc48">NS_IN_M</a> = 30LL * <a class="el" href="#a920e49b137a882060a55ea25a9e53a13">NS_IN_D</a></td></tr>
+<tr class="memdesc:ab2f1ced81fa531b0267e75ef9f6bdc48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approximate number of nanoseconds in one month.  <br /></td></tr>
+<tr class="separator:ab2f1ced81fa531b0267e75ef9f6bdc48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa828e9f09aadbc1899a3b1a6a2d5130f" id="r_aa828e9f09aadbc1899a3b1a6a2d5130f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa828e9f09aadbc1899a3b1a6a2d5130f">NS_IN_Y</a> = 365LL * <a class="el" href="#a920e49b137a882060a55ea25a9e53a13">NS_IN_D</a></td></tr>
+<tr class="memdesc:aa828e9f09aadbc1899a3b1a6a2d5130f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approximate number of nanoseconds in one year.  <br /></td></tr>
+<tr class="separator:aa828e9f09aadbc1899a3b1a6a2d5130f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-struct safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename clean_type_t&lt; T &gt;::type &gt;::value &gt;::type &gt;</div><p>Специализация для одинаковых типов с плавающей точкой </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Тип с плавающей точкой для сравнения</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Прямое сравнение без преобразований типов для максимальной производительности. Используется когда оба типа идентичны и являются floating-point типами. </p><dl class="section note"><dt>Note</dt><dd>No-throw, максимальная производительность для floating-point типов </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a29d74baea83ba016eeba5c8cc2f394be" name="a29d74baea83ba016eeba5c8cc2f394be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29d74baea83ba016eeba5c8cc2f394be">&#9670;&#160;</a></span>clean_T</h2>
+<div class="textblock"><p>Contains compile-time constants related to time calculations. </p>
+<p>This namespace provides a collection of <code>constexpr</code> unsigned long and long long constants that represent various time unit conversions and buffer sizes. These are used internally by <code><a class="el" href="a02128.html" title="Provides static utility methods for time and date handling.">LumexTime</a></code> for precision and efficiency in timestamp calculations and formatting. </p>
+</div><h2 class="groupheader">Variable Documentation</h2>
+<a id="a8c99f6314691dacd62fde7e133e35c3a" name="a8c99f6314691dacd62fde7e133e35c3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c99f6314691dacd62fde7e133e35c3a">&#9670;&#160;</a></span>K_MICROSECONDS_IN_MILLISECOND</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &gt;::type &gt;::clean_T = typename <a class="el" href="a00864.html">clean_type_t</a>&lt;T&gt;::type</td>
+          <td class="memname"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> int lumex::core::time::clock::Constants::K_MICROSECONDS_IN_MILLISECOND = 1000</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Number of microseconds in one millisecond. </p>
+<p>Used for converting between microseconds and milliseconds. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02925.html#a1">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
+</dl>
+
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="af977a2cc5254403905177ea866a50a09" name="af977a2cc5254403905177ea866a50a09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af977a2cc5254403905177ea866a50a09">&#9670;&#160;</a></span>compare()</h2>
+<a id="a5384dd85a0e7cdf65031e8a619c4d6b0" name="a5384dd85a0e7cdf65031e8a619c4d6b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5384dd85a0e7cdf65031e8a619c4d6b0">&#9670;&#160;</a></span>KDEFAULT_DATETIME_BUF_SIZE</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &gt;::type &gt;::compare </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+          <td class="memname"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> unsigned long lumex::core::time::clock::Constants::KDEFAULT_DATETIME_BUF_SIZE = 128UL</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Безопасное сравнение &gt;= для одинаковых floating-point типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения </td></tr>
-  </table>
-  </dd>
+<p>Default buffer size for date and time strings. </p>
+<p>Specifies the recommended buffer size for C-style character arrays used in <code>strftime</code> or similar functions when formatting date and time. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02925.html#a0">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current &gt;= other </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Прямое сравнение без преобразований, максимальная производительность </dd></dl>
 
 </div>
 </div>
-<a id="a1d69cf11507534505d5f232940914e7a" name="a1d69cf11507534505d5f232940914e7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d69cf11507534505d5f232940914e7a">&#9670;&#160;</a></span>equal()</h2>
+<a id="a920e49b137a882060a55ea25a9e53a13" name="a920e49b137a882060a55ea25a9e53a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a920e49b137a882060a55ea25a9e53a13">&#9670;&#160;</a></span>NS_IN_D</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &gt;::type &gt;::equal </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+          <td class="memname"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long lumex::core::time::clock::Constants::NS_IN_D = 24LL * <a class="el" href="#a6e66d177baba37c8e08e6d77357a1231">NS_IN_H</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Безопасное сравнение == для одинаковых floating-point типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения </td></tr>
-  </table>
-  </dd>
+<p>Number of nanoseconds in one day. </p>
+<p>Calculated as <code>NS_IN_H * 24LL</code>. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02925.html#a7">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current == other </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Прямое сравнение без преобразований, максимальная производительность </dd></dl>
 
 </div>
 </div>
-<a id="af240ac048e2140d6d94e546b79eef6f0" name="af240ac048e2140d6d94e546b79eef6f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af240ac048e2140d6d94e546b79eef6f0">&#9670;&#160;</a></span>greater()</h2>
+<a id="a6e66d177baba37c8e08e6d77357a1231" name="a6e66d177baba37c8e08e6d77357a1231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e66d177baba37c8e08e6d77357a1231">&#9670;&#160;</a></span>NS_IN_H</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &gt;::type &gt;::greater </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+          <td class="memname"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long lumex::core::time::clock::Constants::NS_IN_H = 60LL * <a class="el" href="#ade5e62ca080e1d147dd767b4e1af097b">NS_IN_MIN</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Безопасное сравнение &gt; для одинаковых floating-point типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения </td></tr>
-  </table>
-  </dd>
+<p>Number of nanoseconds in one hour. </p>
+<p>Calculated as <code>NS_IN_MIN * 60LL</code>. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02925.html#a6">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current &gt; other </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Прямое сравнение без преобразований, максимальная производительность </dd></dl>
 
 </div>
 </div>
-<a id="adaa609d66e143a3a3631a93cf3d38df2" name="adaa609d66e143a3a3631a93cf3d38df2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaa609d66e143a3a3631a93cf3d38df2">&#9670;&#160;</a></span>greater_equal()</h2>
+<a id="ab2f1ced81fa531b0267e75ef9f6bdc48" name="ab2f1ced81fa531b0267e75ef9f6bdc48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f1ced81fa531b0267e75ef9f6bdc48">&#9670;&#160;</a></span>NS_IN_M</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &gt;::type &gt;::greater_equal </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+          <td class="memname"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long lumex::core::time::clock::Constants::NS_IN_M = 30LL * <a class="el" href="#a920e49b137a882060a55ea25a9e53a13">NS_IN_D</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Безопасное сравнение &gt;= для одинаковых floating-point типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения </td></tr>
-  </table>
-  </dd>
+<p>Approximate number of nanoseconds in one month. </p>
+<p>Approximation based on 30 days per month: <code>NS_IN_D * 30LL</code>. </p><dl class="section warning"><dt>Warning</dt><dd>This is an approximation and does not account for varying month lengths. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02925.html#a9">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current &gt;= other </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Прямое сравнение без преобразований, максимальная производительность </dd></dl>
 
 </div>
 </div>
-<a id="a6bbd9779173110214a3a020098054e28" name="a6bbd9779173110214a3a020098054e28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bbd9779173110214a3a020098054e28">&#9670;&#160;</a></span>less()</h2>
+<a id="ab49a0056cc08217a2e7c07e00875f62e" name="ab49a0056cc08217a2e7c07e00875f62e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49a0056cc08217a2e7c07e00875f62e">&#9670;&#160;</a></span>NS_IN_MCS</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &gt;::type &gt;::less </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+          <td class="memname"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long lumex::core::time::clock::Constants::NS_IN_MCS = 1000LL</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Безопасное сравнение &lt; для одинаковых floating-point типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения </td></tr>
-  </table>
-  </dd>
+<p>Number of nanoseconds in one microsecond. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02925.html#a2">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current &lt; other </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Прямое сравнение без преобразований, максимальная производительность </dd></dl>
 
 </div>
 </div>
-<a id="a1cb58d4e2b15c971be830714f207882b" name="a1cb58d4e2b15c971be830714f207882b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cb58d4e2b15c971be830714f207882b">&#9670;&#160;</a></span>less_equal()</h2>
+<a id="ade5e62ca080e1d147dd767b4e1af097b" name="ade5e62ca080e1d147dd767b4e1af097b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade5e62ca080e1d147dd767b4e1af097b">&#9670;&#160;</a></span>NS_IN_MIN</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &gt;::type &gt;::less_equal </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+          <td class="memname"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long lumex::core::time::clock::Constants::NS_IN_MIN = 60LL * <a class="el" href="#ae5368ad7875347f20c1ad376bac365d6">NS_IN_S</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Безопасное сравнение &lt;= для одинаковых floating-point типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения </td></tr>
-  </table>
-  </dd>
+<p>Number of nanoseconds in one minute. </p>
+<p>Calculated as <code>NS_IN_S * 60LL</code>. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02925.html#a5">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current &lt;= other </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Прямое сравнение без преобразований, максимальная производительность </dd></dl>
 
 </div>
 </div>
-<a id="a5fa00289da0d444c40a2f4d12bb36a61" name="a5fa00289da0d444c40a2f4d12bb36a61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fa00289da0d444c40a2f4d12bb36a61">&#9670;&#160;</a></span>not_equal()</h2>
+<a id="a8f68c9ca20890dc624de4fd02404a881" name="a8f68c9ca20890dc624de4fd02404a881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f68c9ca20890dc624de4fd02404a881">&#9670;&#160;</a></span>NS_IN_MS</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool <a class="el" href="a00876.html">safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename <a class="el" href="a00864.html">clean_type_t</a>&lt; T &gt;::type &gt;::value &gt;::type &gt;::not_equal </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>current</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+          <td class="memname"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long lumex::core::time::clock::Constants::NS_IN_MS = 1000LL * <a class="el" href="#ab49a0056cc08217a2e7c07e00875f62e">NS_IN_MCS</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Безопасное сравнение != для одинаковых floating-point типов </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Текущее значение </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Значение для сравнения </td></tr>
-  </table>
-  </dd>
+<p>Number of nanoseconds in one millisecond. </p>
+<p>Calculated as <code>NS_IN_MCS * 1000LL</code>. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02925.html#a3">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true если current != other </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Прямое сравнение без преобразований, максимальная производительность </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00203_source.html">LumexSafeNumericComparator.hpp</a></li>
-</ul>
+<a id="ae5368ad7875347f20c1ad376bac365d6" name="ae5368ad7875347f20c1ad376bac365d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5368ad7875347f20c1ad376bac365d6">&#9670;&#160;</a></span>NS_IN_S</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long lumex::core::time::clock::Constants::NS_IN_S = 1000LL * <a class="el" href="#a8f68c9ca20890dc624de4fd02404a881">NS_IN_MS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of nanoseconds in one second. </p>
+<p>Calculated as <code>NS_IN_MS * 1000LL</code>. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02925.html#a4">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a535dc6514365c778c031095c8227d8b6" name="a535dc6514365c778c031095c8227d8b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a535dc6514365c778c031095c8227d8b6">&#9670;&#160;</a></span>NS_IN_W</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long lumex::core::time::clock::Constants::NS_IN_W = 7LL * <a class="el" href="#a920e49b137a882060a55ea25a9e53a13">NS_IN_D</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of nanoseconds in one week. </p>
+<p>Calculated as <code>NS_IN_D * 7LL</code>. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02925.html#a8">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="aa828e9f09aadbc1899a3b1a6a2d5130f" name="aa828e9f09aadbc1899a3b1a6a2d5130f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa828e9f09aadbc1899a3b1a6a2d5130f">&#9670;&#160;</a></span>NS_IN_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> long long lumex::core::time::clock::Constants::NS_IN_Y = 365LL * <a class="el" href="#a920e49b137a882060a55ea25a9e53a13">NS_IN_D</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Approximate number of nanoseconds in one year. </p>
+<p>Approximation based on 365 days per year: <code>NS_IN_D * 365LL</code>. </p><dl class="section warning"><dt>Warning</dt><dd>This is an approximation and does not account for leap years. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02925.html#a10">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00884.html">safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; typename clean_type_t&lt; T &gt;::type &gt;::value &gt;::type &gt;</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00826.html">core</a></li><li class="navelem"><a class="el" href="a00882.html">time</a></li><li class="navelem"><a class="el" href="a00883.html">clock</a></li><li class="navelem"><a class="el" href="a00884.html">Constants</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

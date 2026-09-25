@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexStringView.cpp File Reference</title>
+<title>LumexLib: CircularBuffer.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,104 +104,85 @@ $(function(){initNavTree('a00149.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">LumexStringView.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">CircularBuffer.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00152_source.html">LumexStringView.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;iterator&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00305_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00332_source.html">lumex/core/utility/macros/LumexConstantMacros.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexStringView.cpp:</div>
+Include dependency graph for CircularBuffer.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00150.png" border="0" usemap="#a_lumex_string_view_8cpp" alt=""/></div>
-<map name="a_lumex_string_view_8cpp" id="a_lumex_string_view_8cpp">
-<area shape="rect" title=" " alt="" coords="225,5,372,32"/>
-<area shape="rect" href="a00152.html" title="C++11 lightweight, non&#45;owning view over character sequences." alt="" coords="225,80,372,107"/>
-<area shape="poly" title=" " alt="" coords="302,33,302,64,296,64,296,33"/>
-<area shape="rect" title=" " alt="" coords="5,163,70,189"/>
-<area shape="poly" title=" " alt="" coords="245,110,167,130,82,157,78,159,76,154,81,152,166,125,243,105"/>
-<area shape="rect" title=" " alt="" coords="94,163,154,189"/>
-<area shape="poly" title=" " alt="" coords="272,110,168,157,165,158,163,153,166,152,270,105"/>
-<area shape="rect" title=" " alt="" coords="179,163,240,189"/>
-<area shape="poly" title=" " alt="" coords="287,109,236,154,233,150,283,105"/>
-<area shape="rect" title=" " alt="" coords="265,163,333,189"/>
-<area shape="poly" title=" " alt="" coords="302,107,302,147,296,147,296,107"/>
-<area shape="rect" title=" " alt="" coords="358,163,411,189"/>
-<area shape="poly" title=" " alt="" coords="314,105,362,150,358,154,310,109"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="435,163,597,189"/>
-<area shape="poly" title=" " alt="" coords="334,105,469,154,467,159,332,110"/>
-<area shape="rect" title=" " alt="" coords="621,155,742,197"/>
-<area shape="poly" title=" " alt="" coords="373,105,607,151,606,157,372,110"/>
-</map>
+<div class="center"><img src="a00150.png" border="0" usemap="#a_circular_buffer_8hpp" alt=""/></div>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a07486181f1990291c2a348de8eb4c480" id="r_a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
-<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div>
+<p><a href="a00149_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01100.html">lumex::core::circular_buffer::CircularBuffer&lt; T, Allocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed-capacity circular buffer that overwrites when full (similar to Boost's <code><a class="el" href="a00836.html">circular_buffer</a></code>).  <a href="a01100.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01108.html">lumex::core::circular_buffer::CircularBuffer&lt; T, Allocator &gt;::iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random-access iterator over the logical element sequence.  <a href="a01108.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01112.html">lumex::core::circular_buffer::CircularBuffer&lt; T, Allocator &gt;::const_iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const random-access iterator.  <a href="a01112.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00826.html">lumex::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00836.html">lumex::core::circular_buffer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa1a3c91f6a9ec0b1fa5908da90c80eaf" id="r_aa1a3c91f6a9ec0b1fa5908da90c80eaf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1a3c91f6a9ec0b1fa5908da90c80eaf">operator&lt;&lt;</a> (std::ostream &amp;ostr, <a class="el" href="a00152.html#a032a4942b367e4fa22876631ce05b66b">LumexStringView</a> sview)</td></tr>
-<tr class="separator:aa1a3c91f6a9ec0b1fa5908da90c80eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96da0807d416d4354f8e227a54404fe" id="r_ac96da0807d416d4354f8e227a54404fe"><td class="memTemplParams" colspan="2">template&lt;class T, class Alloc&gt; </td></tr>
+<tr class="memitem:ac96da0807d416d4354f8e227a54404fe"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00836.html#ac96da0807d416d4354f8e227a54404fe">lumex::core::circular_buffer::operator==</a> (<a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;lhs, <a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:ac96da0807d416d4354f8e227a54404fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality comparison of two <code><a class="el" href="a01100.html" title="Fixed-capacity circular buffer that overwrites when full (similar to Boost&#39;s circular_buffer).">CircularBuffer</a></code> objects.  <br /></td></tr>
+<tr class="separator:ac96da0807d416d4354f8e227a54404fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f2053ec78d256b9511bcb2ad97a7df2" id="r_a9f2053ec78d256b9511bcb2ad97a7df2"><td class="memTemplParams" colspan="2">template&lt;class T, class Alloc&gt; </td></tr>
+<tr class="memitem:a9f2053ec78d256b9511bcb2ad97a7df2"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00836.html#a9f2053ec78d256b9511bcb2ad97a7df2">lumex::core::circular_buffer::operator!=</a> (<a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;lhs, <a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:a9f2053ec78d256b9511bcb2ad97a7df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality comparison of two <code><a class="el" href="a01100.html" title="Fixed-capacity circular buffer that overwrites when full (similar to Boost&#39;s circular_buffer).">CircularBuffer</a></code> objects.  <br /></td></tr>
+<tr class="separator:a9f2053ec78d256b9511bcb2ad97a7df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56bbfbab60073a9b1102f21f970563c9" id="r_a56bbfbab60073a9b1102f21f970563c9"><td class="memTemplParams" colspan="2">template&lt;class T, class Alloc&gt; </td></tr>
+<tr class="memitem:a56bbfbab60073a9b1102f21f970563c9"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00836.html#a56bbfbab60073a9b1102f21f970563c9">lumex::core::circular_buffer::operator&lt;</a> (<a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;lhs, <a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:a56bbfbab60073a9b1102f21f970563c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">"less" operator for two <code><a class="el" href="a01100.html" title="Fixed-capacity circular buffer that overwrites when full (similar to Boost&#39;s circular_buffer).">CircularBuffer</a></code> objects.  <br /></td></tr>
+<tr class="separator:a56bbfbab60073a9b1102f21f970563c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2d75691303d649ca012fbe8dda517a" id="r_a4f2d75691303d649ca012fbe8dda517a"><td class="memTemplParams" colspan="2">template&lt;class T, class Alloc&gt; </td></tr>
+<tr class="memitem:a4f2d75691303d649ca012fbe8dda517a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00836.html#a4f2d75691303d649ca012fbe8dda517a">lumex::core::circular_buffer::operator&lt;=</a> (<a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;lhs, <a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:a4f2d75691303d649ca012fbe8dda517a"><td class="mdescLeft">&#160;</td><td class="mdescRight">"less or equal" operator for two <code><a class="el" href="a01100.html" title="Fixed-capacity circular buffer that overwrites when full (similar to Boost&#39;s circular_buffer).">CircularBuffer</a></code> objects.  <br /></td></tr>
+<tr class="separator:a4f2d75691303d649ca012fbe8dda517a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc6a20ddca8e466131ac5c016f8db307" id="r_acc6a20ddca8e466131ac5c016f8db307"><td class="memTemplParams" colspan="2">template&lt;class T, class Alloc&gt; </td></tr>
+<tr class="memitem:acc6a20ddca8e466131ac5c016f8db307"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00836.html#acc6a20ddca8e466131ac5c016f8db307">lumex::core::circular_buffer::operator&gt;</a> (<a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;lhs, <a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:acc6a20ddca8e466131ac5c016f8db307"><td class="mdescLeft">&#160;</td><td class="mdescRight">"greater" operator for two <code><a class="el" href="a01100.html" title="Fixed-capacity circular buffer that overwrites when full (similar to Boost&#39;s circular_buffer).">CircularBuffer</a></code> objects.  <br /></td></tr>
+<tr class="separator:acc6a20ddca8e466131ac5c016f8db307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf35e00dcf39d60a23f37e0e5a02048" id="r_aeaf35e00dcf39d60a23f37e0e5a02048"><td class="memTemplParams" colspan="2">template&lt;class T, class Alloc&gt; </td></tr>
+<tr class="memitem:aeaf35e00dcf39d60a23f37e0e5a02048"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00836.html#aeaf35e00dcf39d60a23f37e0e5a02048">lumex::core::circular_buffer::operator&gt;=</a> (<a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;lhs, <a class="el" href="a01100.html">CircularBuffer</a>&lt; T, Alloc &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:aeaf35e00dcf39d60a23f37e0e5a02048"><td class="mdescLeft">&#160;</td><td class="mdescRight">"greater or equal" operator for two <code><a class="el" href="a01100.html" title="Fixed-capacity circular buffer that overwrites when full (similar to Boost&#39;s circular_buffer).">CircularBuffer</a></code> objects.  <br /></td></tr>
+<tr class="separator:aeaf35e00dcf39d60a23f37e0e5a02048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a07486181f1990291c2a348de8eb4c480" name="a07486181f1990291c2a348de8eb4c480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&#160;</a></span>LUMEX_IMPLEMENTATION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="aa1a3c91f6a9ec0b1fa5908da90c80eaf" name="aa1a3c91f6a9ec0b1fa5908da90c80eaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1a3c91f6a9ec0b1fa5908da90c80eaf">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>ostr</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00152.html#a032a4942b367e4fa22876631ce05b66b">LumexStringView</a></td>          <td class="paramname"><span class="paramname"><em>sview</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00149_aa1a3c91f6a9ec0b1fa5908da90c80eaf_cgraph.png" border="0" usemap="#aa00149_aa1a3c91f6a9ec0b1fa5908da90c80eaf_cgraph" alt=""/></div>
-<map name="aa00149_aa1a3c91f6a9ec0b1fa5908da90c80eaf_cgraph" id="aa00149_aa1a3c91f6a9ec0b1fa5908da90c80eaf_cgraph">
-<area shape="rect" title=" " alt="" coords="5,83,90,109"/>
-<area shape="rect" href="a00820.html#a028b63915823f00780fe8db26d769356" title="Returns a pointer to the beginning of the character data." alt="" coords="138,29,305,72"/>
-<area shape="poly" title=" " alt="" coords="90,82,122,74,123,79,91,88"/>
-<area shape="rect" href="a00820.html#ac6ccfe3fe04e0897d8df34e22570e8ac" title="Returns the number of characters in the view." alt="" coords="138,120,305,163"/>
-<area shape="poly" title=" " alt="" coords="91,104,123,113,122,118,90,110"/>
-<area shape="poly" title=" " alt="" coords="188,29,186,19,192,10,204,5,221,3,240,5,252,11,249,16,239,10,221,8,205,10,195,14,192,20,193,28"/>
-<area shape="poly" title=" " alt="" coords="188,120,186,110,192,101,204,95,221,93,240,96,252,102,249,107,239,101,221,99,205,101,195,105,192,111,193,119"/>
-</map>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_c3e912f02bd96a1ef83a1ff1d1367fc2.html">string_view</a></li><li class="navelem"><a class="el" href="a00149.html">LumexStringView.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_60526041721474fa5f0f9dc5d3661a35.html">circular_buffer</a></li><li class="navelem"><a class="el" href="a00149.html">CircularBuffer.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

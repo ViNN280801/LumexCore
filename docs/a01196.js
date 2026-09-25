@@ -1,7 +1,11 @@
 var a01196 =
 [
-    [ "XPathAllocatorCapture", "a01196.html#af17eb46a374fdc63d71c62dbff1190ba", null ],
-    [ "~XPathAllocatorCapture", "a01196.html#ab17ba73a0b5607ae26c7d70448047ca0", null ],
-    [ "_state", "a01196.html#afe0b6b670ab6b0e0d5430f1699c9c0e3", null ],
-    [ "_target", "a01196.html#a6620f3462316b083ca4ad5f4f97db369", null ]
+    [ "ValueType", "a01196.html#abe73a9e2b2ed8a7d1f9601c5617dee26", null ],
+    [ "kCatalogCheck", "a01196.html#adcf735fa36e58643c0fc0fb32e1d5bc2", null ],
+    [ "kInit", "a01196.html#a427f61225644802b46549d79945352bd", null ],
+    [ "kPoly", "a01196.html#add9dc249438aecc0c69fbe5c4866fdcd", null ],
+    [ "kRefIn", "a01196.html#a9b53705a522d74138aab2479b0517e14", null ],
+    [ "kRefOut", "a01196.html#ad3fa63748fe01d2f929c7e00f63fb4e1", null ],
+    [ "kWidth", "a01196.html#a226825a2a5eab4c7dced1d42ee9a3474", null ],
+    [ "kXorOut", "a01196.html#a9f689f64ab276b415462c267cfac7c48", null ]
 ];

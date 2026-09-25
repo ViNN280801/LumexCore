@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['filetype_0',['FileType',['../a00470.html#a593c3a9bb86b55fa3aeb075a07e78450',1,'Lumex::Core::Filesystem']]],
-  ['functionnamemode_1',['FunctionNameMode',['../a00017.html#a51e383d4bc5efe7b8b7556ff412b6283',1,'Logger.hpp']]]
+  ['file_5ftype_0',['file_type',['../a00856.html#ab64d400fe6c2cab49e4cf4c63a82cc19',1,'lumex::core::filesystem::fs']]],
+  ['floatstyle_1',['FloatStyle',['../a00860.html#a6d0e5ca2289d7692d18fc6fd0b832ef7',1,'lumex::core::fmt::Detail']]],
+  ['functionnamemode_2',['FunctionNameMode',['../a00798.html#a620d10efcad9ba3f0f1e124a0989ca01',1,'lumex::applied::logger::logger']]]
 ];

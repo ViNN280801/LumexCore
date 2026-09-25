@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::Utility::wchar_decoder Struct Reference</title>
+<title>LumexLib: lumex::core::crc::catalog::crc_params_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,111 +104,147 @@ $(function(){initNavTree('a01120.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="a01117.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::Utility::wchar_decoder Struct Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::core::crc::catalog::crc_params_t Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00308_source.html">XmlUtils.hpp</a>&gt;</code></p>
+<p>CRC parameters in CRC RevEng notation (see <a class="el" href="a00158.html">LumexCrcParametric.hpp</a> / Greg Cook catalogue).  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00155_source.html">LumexCrcCatalog.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:ac11618780d884975ac061035563644c7" id="r_ac11618780d884975ac061035563644c7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac11618780d884975ac061035563644c7">type</a> = wchar_t</td></tr>
-<tr class="separator:ac11618780d884975ac061035563644c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a623b17d6c5c29c4c0ca8ef65c830819a" id="r_a623b17d6c5c29c4c0ca8ef65c830819a"><td class="memTemplParams" colspan="2">template&lt;typename Traits&gt; </td></tr>
-<tr class="memitem:a623b17d6c5c29c4c0ca8ef65c830819a"><td class="memTemplItemLeft" align="right" valign="top">static Traits::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a623b17d6c5c29c4c0ca8ef65c830819a">process</a> (wchar_t const *data, size_t size, typename Traits::value_type result, Traits traits)</td></tr>
-<tr class="separator:a623b17d6c5c29c4c0ca8ef65c830819a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a922850c27198d41cfbac66ae0d3ea022" id="r_a922850c27198d41cfbac66ae0d3ea022"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a922850c27198d41cfbac66ae0d3ea022">widthBits</a> {}</td></tr>
+<tr class="memdesc:a922850c27198d41cfbac66ae0d3ea022"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC width in bits (1..64).  <br /></td></tr>
+<tr class="separator:a922850c27198d41cfbac66ae0d3ea022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ce03300d984746aa9bc6679d90e246" id="r_a20ce03300d984746aa9bc6679d90e246"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20ce03300d984746aa9bc6679d90e246">poly</a> {}</td></tr>
+<tr class="memdesc:a20ce03300d984746aa9bc6679d90e246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polynomial without the implicit high bit (catalogue form).  <br /></td></tr>
+<tr class="separator:a20ce03300d984746aa9bc6679d90e246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb40ff7bcce9217909ef1356d4e083f" id="r_abeb40ff7bcce9217909ef1356d4e083f"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abeb40ff7bcce9217909ef1356d4e083f">init</a> {}</td></tr>
+<tr class="memdesc:abeb40ff7bcce9217909ef1356d4e083f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial register value.  <br /></td></tr>
+<tr class="separator:abeb40ff7bcce9217909ef1356d4e083f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c28d3d75ce4fcb56fca7875c71c77a2" id="r_a4c28d3d75ce4fcb56fca7875c71c77a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c28d3d75ce4fcb56fca7875c71c77a2">refIn</a> {}</td></tr>
+<tr class="memdesc:a4c28d3d75ce4fcb56fca7875c71c77a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflect input bytes (RefIn).  <br /></td></tr>
+<tr class="separator:a4c28d3d75ce4fcb56fca7875c71c77a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385fb2d6379507789c485e3b6f3d0a01" id="r_a385fb2d6379507789c485e3b6f3d0a01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a385fb2d6379507789c485e3b6f3d0a01">refOut</a> {}</td></tr>
+<tr class="memdesc:a385fb2d6379507789c485e3b6f3d0a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflect output before xorOut (RefOut).  <br /></td></tr>
+<tr class="separator:a385fb2d6379507789c485e3b6f3d0a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad274e477a4b1f7269b2bb8d9d736cdfe" id="r_ad274e477a4b1f7269b2bb8d9d736cdfe"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad274e477a4b1f7269b2bb8d9d736cdfe">xorOut</a> {}</td></tr>
+<tr class="memdesc:ad274e477a4b1f7269b2bb8d9d736cdfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Final XOR.  <br /></td></tr>
+<tr class="separator:ad274e477a4b1f7269b2bb8d9d736cdfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ac11618780d884975ac061035563644c7" name="ac11618780d884975ac061035563644c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac11618780d884975ac061035563644c7">&#9670;&#160;</a></span>type</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>CRC parameters in CRC RevEng notation (see <a class="el" href="a00158.html">LumexCrcParametric.hpp</a> / Greg Cook catalogue). </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> </dd></dl>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="abeb40ff7bcce9217909ef1356d4e083f" name="abeb40ff7bcce9217909ef1356d4e083f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb40ff7bcce9217909ef1356d4e083f">&#9670;&#160;</a></span>init</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ac11618780d884975ac061035563644c7">Lumex::Xml::Utility::wchar_decoder::type</a> = wchar_t</td>
+          <td class="memname">std::uint64_t lumex::core::crc::catalog::crc_params_t::init {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initial register value. </p>
+
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a623b17d6c5c29c4c0ca8ef65c830819a" name="a623b17d6c5c29c4c0ca8ef65c830819a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a623b17d6c5c29c4c0ca8ef65c830819a">&#9670;&#160;</a></span>process()</h2>
+<a id="a20ce03300d984746aa9bc6679d90e246" name="a20ce03300d984746aa9bc6679d90e246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ce03300d984746aa9bc6679d90e246">&#9670;&#160;</a></span>poly</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Traits&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static Traits::value_type Lumex::Xml::Utility::wchar_decoder::process </td>
-          <td>(</td>
-          <td class="paramtype">wchar_t const *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename Traits::value_type</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Traits</td>          <td class="paramname"><span class="paramname"><em>traits</em></span>&#160;)</td>
+          <td class="memname">std::uint64_t lumex::core::crc::catalog::crc_params_t::poly {}</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01120_a623b17d6c5c29c4c0ca8ef65c830819a_icgraph.png" border="0" usemap="#aa01120_a623b17d6c5c29c4c0ca8ef65c830819a_icgraph" alt=""/></div>
-<map name="aa01120_a623b17d6c5c29c4c0ca8ef65c830819a_icgraph" id="aa01120_a623b17d6c5c29c4c0ca8ef65c830819a_icgraph">
-<area shape="rect" title=" " alt="" coords="549,39,721,81"/>
-<area shape="rect" href="a00490.html#a15d17d6d1751acd7103a6a72f565b8be" title=" " alt="" coords="368,5,501,48"/>
-<area shape="poly" title=" " alt="" coords="533,46,501,40,502,35,534,41"/>
-<area shape="rect" href="a00490.html#a3ca2ec36454db54f669063cd880b1265" title=" " alt="" coords="368,72,501,115"/>
-<area shape="poly" title=" " alt="" coords="534,79,502,85,501,80,533,74"/>
-<area shape="rect" href="a00490.html#a44e9a29dd3476d2e7069125dae71918f" title=" " alt="" coords="187,39,320,81"/>
-<area shape="poly" title=" " alt="" coords="354,44,321,50,320,45,353,39"/>
-<area shape="rect" href="a00490.html#ae5ed4a7e96b81018c1a16547c1d12305" title=" " alt="" coords="5,5,139,48"/>
-<area shape="poly" title=" " alt="" coords="171,48,138,42,139,36,172,42"/>
-<area shape="rect" href="a00490.html#a69e8b47e604fe2d572a4a4b0a5884744" title=" " alt="" coords="5,72,139,115"/>
-<area shape="poly" title=" " alt="" coords="172,78,139,84,138,78,171,72"/>
-<area shape="poly" title=" " alt="" coords="353,81,320,75,321,70,354,76"/>
-</map>
+
+<p>Polynomial without the implicit high bit (catalogue form). </p>
+
 </div>
+</div>
+<a id="a4c28d3d75ce4fcb56fca7875c71c77a2" name="a4c28d3d75ce4fcb56fca7875c71c77a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c28d3d75ce4fcb56fca7875c71c77a2">&#9670;&#160;</a></span>refIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::crc::catalog::crc_params_t::refIn {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reflect input bytes (RefIn). </p>
+
+</div>
+</div>
+<a id="a385fb2d6379507789c485e3b6f3d0a01" name="a385fb2d6379507789c485e3b6f3d0a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385fb2d6379507789c485e3b6f3d0a01">&#9670;&#160;</a></span>refOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::crc::catalog::crc_params_t::refOut {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reflect output before xorOut (RefOut). </p>
+
+</div>
+</div>
+<a id="a922850c27198d41cfbac66ae0d3ea022" name="a922850c27198d41cfbac66ae0d3ea022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a922850c27198d41cfbac66ae0d3ea022">&#9670;&#160;</a></span>widthBits</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lumex::core::crc::catalog::crc_params_t::widthBits {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CRC width in bits (1..64). </p>
+
+</div>
+</div>
+<a id="ad274e477a4b1f7269b2bb8d9d736cdfe" name="ad274e477a4b1f7269b2bb8d9d736cdfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad274e477a4b1f7269b2bb8d9d736cdfe">&#9670;&#160;</a></span>xorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint64_t lumex::core::crc::catalog::crc_params_t::xorOut {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Final XOR. </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00308_source.html">XmlUtils.hpp</a></li>
+<li><a class="el" href="a00155_source.html">LumexCrcCatalog.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00490.html">Utility</a></li><li class="navelem"><a class="el" href="a01120.html">wchar_decoder</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00826.html">core</a></li><li class="navelem"><a class="el" href="a00837.html">crc</a></li><li class="navelem"><a class="el" href="a00838.html">catalog</a></li><li class="navelem"><a class="el" href="a01120.html">crc_params_t</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

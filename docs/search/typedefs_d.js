@@ -1,5 +1,24 @@
 var searchData=
 [
-  ['unexpected_5ftype_0',['unexpected_type',['../a00688.html#af2309ddde2d71c2b1f3174963a391af2',1,'Expected::unexpected_type'],['../a00720.html#a7fd5c7bfa8fd1c345f2be46eddd02806',1,'Expected&lt; void, ErrorType &gt;::unexpected_type'],['../a00688.html#af2309ddde2d71c2b1f3174963a391af2',1,'Expected&lt; void, ErrorType &gt;::unexpected_type']]],
-  ['unspecified_5fbool_5ftype_1',['unspecified_bool_type',['../a00964.html#ab9b57a68a6741e24ee0030ef3523c6b8',1,'Lumex::Xml::Attribute::XmlAttribute::unspecified_bool_type'],['../a00992.html#a1efecb5da3476ed626d655f23418924b',1,'Lumex::Xml::Node::XmlNode::unspecified_bool_type'],['../a01040.html#a6cc37848c5b38ce15c3be3c80d1a2d18',1,'Lumex::Xml::Text::XmlText::unspecified_bool_type'],['../a01216.html#a898ee2f3aa6e71aab3ca1b7a6af6214d',1,'Lumex::Xml::XPath::Node::XPathNode::unspecified_bool_type'],['../a01248.html#a38e7ff691ad952363a4dcbe51c7ccf2c',1,'Lumex::Xml::XPath::Query::XPathQuery::unspecified_bool_type']]]
+  ['safe_5fcall_5freport_5ffn_0',['safe_call_report_fn',['../a00847.html#a44e9e9da5b97d168978390c418a62b3f',1,'lumex::core::exceptions::Wrapper']]],
+  ['safecharcomparator_1',['SafeCharComparator',['../a00902.html#a93fe8815419b67f1cf6463d0442e33d2',1,'lumex::core::utility::numeric']]],
+  ['safedoublecomparator_2',['SafeDoubleComparator',['../a00902.html#a2f61352089f0bc5bd951fef7cff4bbab',1,'lumex::core::utility::numeric']]],
+  ['safefloatcomparator_3',['SafeFloatComparator',['../a00902.html#aadec8b16c3c01fa74607e0d07a8572cb',1,'lumex::core::utility::numeric']]],
+  ['safeintcomparator_4',['SafeIntComparator',['../a00902.html#a5454b8bd498b7613efdf9b720459c362',1,'lumex::core::utility::numeric']]],
+  ['safelongcomparator_5',['SafeLongComparator',['../a00902.html#a55f32459aa0fbf46eba798a6767e3237',1,'lumex::core::utility::numeric']]],
+  ['safelongdoublecomparator_6',['SafeLongDoubleComparator',['../a00902.html#a0c62fe9147c054698c3113d188bc516d',1,'lumex::core::utility::numeric']]],
+  ['safelonglongcomparator_7',['SafeLongLongComparator',['../a00902.html#aa31fe354af8d373fabcdf42b96b3947b',1,'lumex::core::utility::numeric']]],
+  ['safeshortcomparator_8',['SafeShortComparator',['../a00902.html#a4a7d3c22d553891a2ae11bb5021c546c',1,'lumex::core::utility::numeric']]],
+  ['safeucharcomparator_9',['SafeUCharComparator',['../a00902.html#a3f04ed664501744b9fc56c0e6d44a04e',1,'lumex::core::utility::numeric']]],
+  ['safeuintcomparator_10',['SafeUIntComparator',['../a00902.html#a1e54f2b10fbce662ac671c245ad1e1f3',1,'lumex::core::utility::numeric']]],
+  ['safeulongcomparator_11',['SafeULongComparator',['../a00902.html#a5cc2860b24d1f73471392f594d60bd17',1,'lumex::core::utility::numeric']]],
+  ['safeulonglongcomparator_12',['SafeULongLongComparator',['../a00902.html#ae0763dc45e3d7ef918045e49dc40b6ef',1,'lumex::core::utility::numeric']]],
+  ['safeushortcomparator_13',['SafeUShortComparator',['../a00902.html#a90da1615e41fee0e8a5d3937bb7ae8a2',1,'lumex::core::utility::numeric']]],
+  ['size_5ftype_14',['size_type',['../a01100.html#a04b5963bf05b566242464d7dc2c50272',1,'lumex::core::circular_buffer::CircularBuffer::size_type'],['../a01596.html#aa39eac0cb690d203d033c337d59bbb6a',1,'lumex::core::environment::env::LumexEnvironment::size_type'],['../a01620.html#ab4adfa5e25b981c53bf4013b75f7216b',1,'lumex::core::exceptions::stacktrace::LumexBasicStacktrace::size_type'],['../a02108.html#a325d72880bfc3306bcaba8043559b438',1,'lumex::core::string_view::view::LumexStringView::size_type'],['../a02112.html#a16652142e896f765a96b3813e208f9a0',1,'lumex::core::string_view::view::LumexWStringView::size_type'],['../a03807.html#a325d72880bfc3306bcaba8043559b438',1,'LumexStringView::size_type']]],
+  ['space_5finfo_15',['space_info',['../a00774.html#ac969d538333bc541eb7d13de1f4e1944',1,'lumex']]],
+  ['strconv_5fattribute_5ft_16',['strconv_attribute_t',['../a00614.html#a1771b42a0b454094b266b58f4b5cd053',1,'XmlParser.cpp']]],
+  ['strconv_5fpcdata_5ft_17',['strconv_pcdata_t',['../a00614.html#a674e7a8702a4fbe62d2bbf8d7813c963',1,'XmlParser.cpp']]],
+  ['string_5ft_18',['string_t',['../a00954.html#a684035fd005e18d771065d359ceca62f',1,'lumex::xml::types::Types']]],
+  ['string_5ftype_19',['string_type',['../a01596.html#a5ec8246f5384f098b278e1c75d009add',1,'lumex::core::environment::env::LumexEnvironment::string_type'],['../a01688.html#ad3a6b9a9e1edbd1a7e1a657228b6c5ec',1,'lumex::core::filesystem::fs::path::string_type']]],
+  ['string_5ftype_5ft_20',['string_type_t',['../a00829.html#a9e501ac64840df01990141048151d584',1,'lumex::core::base64::codec::Types']]]
 ];

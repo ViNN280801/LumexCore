@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['type_5fsorted_0',['type_sorted',['../a01220.html#af2eadd19d1082c6cf507478bde5cb1b8a8fa0fdd3e9d0384905eb5ffd0e39e99a',1,'Lumex::Xml::XPath::Node::XPathNodeSet']]],
-  ['type_5fsorted_5freverse_1',['type_sorted_reverse',['../a01220.html#af2eadd19d1082c6cf507478bde5cb1b8a1d50d06d8c87e7230564ef62c2aa476c',1,'Lumex::Xml::XPath::Node::XPathNodeSet']]],
-  ['type_5funsorted_2',['type_unsorted',['../a01220.html#af2eadd19d1082c6cf507478bde5cb1b8afbea5008c6c30e67206612d31c6f261c',1,'Lumex::Xml::XPath::Node::XPathNodeSet']]]
+  ['regular_0',['regular',['../a00856.html#ab64d400fe6c2cab49e4cf4c63a82cc19aaf37d08ae228a87dc6b265fd1019c97d',1,'lumex::core::filesystem::fs']]],
+  ['right_1',['right',['../a00860.html#abe67ccdc56db545e7be6a70de290cc7ea7c4f29407893c334a6cb7a87bf045c0d',1,'lumex::core::fmt::Detail']]]
 ];

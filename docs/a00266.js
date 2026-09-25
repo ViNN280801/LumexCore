@@ -1,5 +1,5 @@
 var a00266 =
 [
-    [ "LUMEX_IMPLEMENTATION", "a00266.html#a07486181f1990291c2a348de8eb4c480", null ],
-    [ "destroy_node", "a00266.html#a3daf1c53ae48cce7ed718ac240ce961c", null ]
+    [ "lumex::core::string::text::to_case_insensitive", "a00875.html#ad8f7eb93f5a0d72fd633cee8e25bd05a", null ],
+    [ "lumex::core::string::text::to_case_insensitive", "a00875.html#af2d09555090576cec202f328fb11ddbf", null ]
 ];

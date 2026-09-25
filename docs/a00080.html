@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexEnvironment.hpp File Reference</title>
+<title>LumexLib: LumexSerialPort.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,98 +104,58 @@ $(function(){initNavTree('a00080.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
-  <div class="headertitle"><div class="title">LumexEnvironment.hpp File Reference</div></div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">LumexSerialPort.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Defines the <a class="el" href="#a849057a35e0357d925542779f79ac82d" title="Alias for Lumex::Core::Environment::LumexEnvironment.">LumexEnvironment</a> class for cross-platform environment variable management.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;lumex/core/utility/LumexUtility&quot;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;mutex&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00212_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;cctype&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00308_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00083_source.html">LumexSerialPort.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexEnvironment.hpp:</div>
+Include dependency graph for LumexSerialPort.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00081.png" border="0" usemap="#a_lumex_environment_8hpp" alt=""/></div>
-<map name="a_lumex_environment_8hpp" id="a_lumex_environment_8hpp">
-<area shape="rect" title="Defines the LumexEnvironment class for cross&#45;platform environment variable management." alt="" coords="232,5,390,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,126,123"/>
-<area shape="poly" title=" " alt="" coords="273,35,141,78,140,73,272,30"/>
-<area shape="rect" title=" " alt="" coords="150,88,210,115"/>
-<area shape="poly" title=" " alt="" coords="292,35,215,82,212,77,289,30"/>
-<area shape="rect" title=" " alt="" coords="234,88,302,115"/>
-<area shape="poly" title=" " alt="" coords="307,34,284,76,279,73,302,31"/>
-<area shape="rect" title=" " alt="" coords="326,88,384,115"/>
-<area shape="poly" title=" " alt="" coords="320,31,343,73,339,76,315,34"/>
-<area shape="rect" title=" " alt="" coords="408,88,462,115"/>
-<area shape="poly" title=" " alt="" coords="332,30,404,77,402,82,329,35"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="486,88,648,115"/>
-<area shape="poly" title=" " alt="" coords="352,30,513,80,512,86,350,35"/>
-</map>
+<div class="center"><img src="a00081.png" border="0" usemap="#a_lumex_serial_port_8cpp" alt=""/></div>
 </div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00082.png" border="0" usemap="#a_lumex_environment_8hppdep" alt=""/></div>
-<map name="a_lumex_environment_8hppdep" id="a_lumex_environment_8hppdep">
-<area shape="rect" title="Defines the LumexEnvironment class for cross&#45;platform environment variable management." alt="" coords="5,5,164,32"/>
-<area shape="rect" href="a00077.html" title=" " alt="" coords="5,80,164,107"/>
-<area shape="poly" title=" " alt="" coords="87,48,87,80,82,80,82,48"/>
-</map>
-</div>
-</div>
-<p><a href="a00080_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00640.html">Lumex::Core::Environment::LumexEnvironment</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00644.html">Lumex::Core::Environment::LumexEnvironment::EnvResult</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00435.html">Lumex</a></td></tr>
-<tr class="memdesc:a00435"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00455.html">Lumex::Core</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00775.html">lumex::applied</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00464.html">Lumex::Core::Environment</a></td></tr>
-<tr class="memdesc:a00464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains classes and utilities for environment variable interaction. <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00808.html">lumex::applied::serial</a></td></tr>
+<tr class="memdesc:a00808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross-platform helpers for naming/resolving serial (and serial-adjacent) communication ports. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00811.html">lumex::applied::serial::port</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a849057a35e0357d925542779f79ac82d" id="r_a849057a35e0357d925542779f79ac82d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a849057a35e0357d925542779f79ac82d">LumexEnvironment</a> = <a class="el" href="a00640.html">Lumex::Core::Environment::LumexEnvironment</a></td></tr>
-<tr class="memdesc:a849057a35e0357d925542779f79ac82d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for <a class="el" href="a00640.html">Lumex::Core::Environment::LumexEnvironment</a>.  <br /></td></tr>
-<tr class="separator:a849057a35e0357d925542779f79ac82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a07486181f1990291c2a348de8eb4c480" id="r_a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
+<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab09ab9261b3038641b2bda9c7f63d821" id="r_ab09ab9261b3038641b2bda9c7f63d821"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00811.html#ab09ab9261b3038641b2bda9c7f63d821">lumex::applied::serial::port::resolve_serial_port_path</a> (std::string const &amp;portName, std::uint32_t channelType, std::function&lt; std::string()&gt; const &amp;getIpAddressCallback=nullptr, std::function&lt; void(std::string const &amp;)&gt; const &amp;logWarningCallback=nullptr) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:ab09ab9261b3038641b2bda9c7f63d821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a short serial-port name into the full, platform-specific path a channel needs in order to actually open it.  <br /></td></tr>
+<tr class="separator:ab09ab9261b3038641b2bda9c7f63d821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Defines the <a class="el" href="#a849057a35e0357d925542779f79ac82d" title="Alias for Lumex::Core::Environment::LumexEnvironment.">LumexEnvironment</a> class for cross-platform environment variable management. </p>
-<p>This header provides the declaration for the <a class="el" href="#a849057a35e0357d925542779f79ac82d" title="Alias for Lumex::Core::Environment::LumexEnvironment.">LumexEnvironment</a> class, which offers a unified, thread-safe, and exception-safe interface for interacting with system environment variables across different operating systems (Windows, Linux, macOS). It utilizes design patterns like Singleton and Strategy to ensure a robust and flexible architecture. </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a849057a35e0357d925542779f79ac82d" name="a849057a35e0357d925542779f79ac82d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a849057a35e0357d925542779f79ac82d">&#9670;&#160;</a></span>LumexEnvironment</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a07486181f1990291c2a348de8eb4c480" name="a07486181f1990291c2a348de8eb4c480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&#160;</a></span>LUMEX_IMPLEMENTATION</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#a849057a35e0357d925542779f79ac82d">LumexEnvironment</a> = <a class="el" href="a00640.html">Lumex::Core::Environment::LumexEnvironment</a></td>
+          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Alias for <a class="el" href="a00640.html">Lumex::Core::Environment::LumexEnvironment</a>. </p>
-<p>This using declaration simplifies the usage of the <a class="el" href="#a849057a35e0357d925542779f79ac82d" title="Alias for Lumex::Core::Environment::LumexEnvironment.">LumexEnvironment</a> class by allowing it to be referred to without its full namespace qualification. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a01305.html#a0">D:/Develop/LumexCore/lumex/core/environment/LumexEnvironment.hpp</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -204,7 +164,7 @@ Typedefs</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_5107d38626b14fb64e9f92b542cf3b43.html">environment</a></li><li class="navelem"><a class="el" href="a00080.html">LumexEnvironment.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_6df2cf08c7df610d9bf032fe0440ee34.html">applied</a></li><li class="navelem"><a class="el" href="dir_8a698c9a61d530817355e041c593101e.html">serial</a></li><li class="navelem"><a class="el" href="dir_abfca509473238a02fa4dfbe54f6ad75.html">port</a></li><li class="navelem"><a class="el" href="a00080.html">LumexSerialPort.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

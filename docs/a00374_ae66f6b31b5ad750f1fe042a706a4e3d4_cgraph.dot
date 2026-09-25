@@ -1,0 +1,25 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="main",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="lumex::core::circular\l_buffer::CircularBuffer::back",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01100.html#a45ddf10dbcfa53cf0f863431fc320897",tooltip="Access the newest element (back)."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="lumex::core::circular\l_buffer::CircularBuffer\l::empty",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01100.html#a2e8973dac971e16645f1f7a133d1de9a",tooltip="Checks whether the buffer is empty."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="lumex::core::circular\l_buffer::CircularBuffer\l::front",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01100.html#aba1c8c6cac89abd09dfa0dc2a4cf879b",tooltip="Access the oldest element (front)."];
+  Node4 -> Node3 [id="edge4_Node000004_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge5_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="lumex::core::circular\l_buffer::CircularBuffer::full",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01100.html#ad0110bc7109cfc708327e2bfca474414",tooltip="Checks whether the buffer is full."];
+  Node1 -> Node6 [id="edge6_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="lumex::core::circular\l_buffer::CircularBuffer\l::push_back",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01100.html#a724cb41a65049593d9d257a3c5d89f41",tooltip="Appends a copy of an element."];
+  Node6 -> Node7 [id="edge7_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="lumex::core::circular\l_buffer::CircularBuffer\l::emplace_back",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01100.html#a04fd3c271c15c316fca1651a39bb1ca7",tooltip="Constructs an element in place at the back."];
+  Node7 -> Node5 [id="edge8_Node000007_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node8 [id="edge9_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="lumex::core::circular\l_buffer::CircularBuffer::size",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01100.html#ab625ef87ff6fd648e01b57d59014cf0f",tooltip="Returns the current number of elements in the buffer."];
+}

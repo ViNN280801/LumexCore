@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: ExpectedVoid.hpp File Reference</title>
+<title>LumexLib: LumexSettingsXML.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,56 +104,85 @@ $(function(){initNavTree('a00125.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
-  <div class="headertitle"><div class="title">ExpectedVoid.hpp File Reference</div></div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">LumexSettingsXML.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00119_source.html">Expected.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00548_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00113_source.html">lumex/applied/settings/interface/ILumexSettings.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00332_source.html">lumex/core/utility/macros/LumexConstantMacros.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for ExpectedVoid.hpp:</div>
+Include dependency graph for LumexSettingsXML.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00126.png" border="0" usemap="#a_expected_void_8hpp" alt=""/></div>
-<map name="a_expected_void_8hpp" id="a_expected_void_8hpp">
-<area shape="rect" title=" " alt="" coords="232,5,358,32"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="244,80,346,107"/>
-<area shape="poly" title=" " alt="" coords="298,33,298,64,292,64,292,33"/>
-<area shape="rect" title=" " alt="" coords="5,163,70,189"/>
-<area shape="poly" title=" " alt="" coords="248,110,89,157,83,159,81,154,87,152,246,105"/>
-<area shape="rect" title=" " alt="" coords="341,253,393,280"/>
-<area shape="poly" title=" " alt="" coords="244,101,215,107,184,118,156,134,134,156,126,176,134,196,146,206,165,216,215,234,325,257,324,262,214,239,162,221,143,211,130,199,121,176,130,153,153,129,182,113,213,102,243,96"/>
-<area shape="rect" href="a00179.html" title=" " alt="" coords="145,155,290,197"/>
-<area shape="poly" title=" " alt="" coords="285,109,249,146,245,142,281,105"/>
-<area shape="rect" href="a00116.html" title=" " alt="" coords="455,163,623,189"/>
-<area shape="poly" title=" " alt="" coords="334,105,487,155,486,160,332,110"/>
-<area shape="rect" href="a00122.html" title=" " alt="" coords="657,163,794,189"/>
-<area shape="poly" title=" " alt="" coords="346,100,635,152,656,156,655,161,634,157,345,106"/>
-<area shape="rect" href="a00128.html" title=" " alt="" coords="314,163,430,189"/>
-<area shape="poly" title=" " alt="" coords="309,105,352,150,348,154,305,109"/>
-<area shape="poly" title=" " alt="" coords="515,192,407,248,405,248,403,244,404,243,513,187"/>
-<area shape="rect" title=" " alt="" coords="418,253,495,280"/>
-<area shape="poly" title=" " alt="" coords="529,192,480,244,476,240,525,188"/>
-<area shape="rect" href="a00197.html" title=" " alt="" coords="518,245,666,288"/>
-<area shape="poly" title=" " alt="" coords="549,189,574,231,570,233,544,191"/>
-<area shape="rect" title=" " alt="" coords="690,253,772,280"/>
-<area shape="poly" title=" " alt="" coords="729,190,732,238,726,238,724,190"/>
-<area shape="poly" title=" " alt="" coords="374,190,371,238,366,238,369,190"/>
-</map>
+<div class="center"><img src="a00126.png" border="0" usemap="#a_lumex_settings_x_m_l_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00127.png" border="0" usemap="#a_lumex_settings_x_m_l_8hppdep" alt=""/></div>
 </div>
 </div>
 <p><a href="a00125_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00720.html">Expected&lt; void, ErrorType &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Специализация класса <code><a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected</a></code> для случая, когда успешное значение отсутствует (т.е. <code>void</code>).  <a href="a00720.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01084.html">lumex::applied::settings::xml::LumexSettingsXML</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lightweight, C++11-based XML settings manager.  <a href="a01084.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00775.html">lumex::applied</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00816.html">lumex::applied::settings</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00824.html">lumex::applied::settings::xml</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00825.html">lumex::applied::settings::xml::Constants</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ab23132a5fc6ee5da8ac4aa3c6f448f27" id="r_ab23132a5fc6ee5da8ac4aa3c6f448f27"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab23132a5fc6ee5da8ac4aa3c6f448f27">LumexSettingsXML</a> = <a class="el" href="a01084.html">lumex::applied::settings::xml::LumexSettingsXML</a></td></tr>
+<tr class="separator:ab23132a5fc6ee5da8ac4aa3c6f448f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a1267dd332d84ca06120ec7a747f93175" id="r_a1267dd332d84ca06120ec7a747f93175"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a79c537c78fd40b18154a50845e28fb61">LUMEX_CONST_STR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00825.html#a1267dd332d84ca06120ec7a747f93175">lumex::applied::settings::xml::Constants::XML_FILE_EXTENSION</a> = &quot;.xml&quot;</td></tr>
+<tr class="memdesc:a1267dd332d84ca06120ec7a747f93175"><td class="mdescLeft">&#160;</td><td class="mdescRight">XML file extension.  <br /></td></tr>
+<tr class="separator:a1267dd332d84ca06120ec7a747f93175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1c4737169e4cf6e031f5fe96ce6e3b" id="r_acc1c4737169e4cf6e031f5fe96ce6e3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a79c537c78fd40b18154a50845e28fb61">LUMEX_CONST_STR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00825.html#acc1c4737169e4cf6e031f5fe96ce6e3b">lumex::applied::settings::xml::Constants::SETTINGS_ROOT_NAME</a> = &quot;settings&quot;</td></tr>
+<tr class="memdesc:acc1c4737169e4cf6e031f5fe96ce6e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Canonical root written by <code>save</code>.  <br /></td></tr>
+<tr class="separator:acc1c4737169e4cf6e031f5fe96ce6e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ab23132a5fc6ee5da8ac4aa3c6f448f27" name="ab23132a5fc6ee5da8ac4aa3c6f448f27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23132a5fc6ee5da8ac4aa3c6f448f27">&#9670;&#160;</a></span>LumexSettingsXML</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ab23132a5fc6ee5da8ac4aa3c6f448f27">LumexSettingsXML</a> = <a class="el" href="a01084.html">lumex::applied::settings::xml::LumexSettingsXML</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_f9986bae22981771d5201cdad569a73d.html">expected</a></li><li class="navelem"><a class="el" href="a00125.html">ExpectedVoid.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_6df2cf08c7df610d9bf032fe0440ee34.html">applied</a></li><li class="navelem"><a class="el" href="dir_f8a442d41528e2aada91bcdeb5bd8658.html">settings</a></li><li class="navelem"><a class="el" href="dir_32e1fcf129ef0fb0cc27ef3353565ab4.html">xml</a></li><li class="navelem"><a class="el" href="a00125.html">LumexSettingsXML.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

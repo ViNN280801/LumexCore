@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexUtilities.hpp Source File</title>
+<title>LumexLib: Unexpected.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -103,44 +103,98 @@ $(function(){initNavTree('a00209_source.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">LumexUtilities.hpp</div></div>
+  <div class="headertitle"><div class="title">Unexpected.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="a00209.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LUMEX_UTILITY_UTILITIES_HPP</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LUMEX_UTILITY_UTILITIES_HPP</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="a00197.html">lumex/core/utility/LumexKeywords.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> *</div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="a00209.html#a0bac93cbc3f1e49f40047f7c07ee8a8c">   69</a></span><a class="code hl_function" href="a00209.html#a0bac93cbc3f1e49f40047f7c07ee8a8c">fd_to_ptr</a>(<span class="keywordtype">int</span> fileDescriptor) <a class="code hl_define" href="a00197.html#a42fdd906f59b10053e30b1218cc2a1ac">LUMEX_NOEXCEPT_FUNCTION</a></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span> <span class="comment">// NOLINT(performance-no-int-to-ptr)</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> *<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>intptr_t<span class="keyword">&gt;</span>(fileDescriptor));</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
+<a href="a00209.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#ifndef LUMEX_CORE_EXPECTED_ERROR_UNEXPECTED_HPP</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#define LUMEX_CORE_EXPECTED_ERROR_UNEXPECTED_HPP</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// ====================== Unexpected class (C++23 analogue)</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// ======================</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00774.html">lumex</a></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00826.html">core</a></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00852.html">expected</a></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">namespace </span><a class="code hl_namespace" href="a00853.html">error</a></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="};">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="a01644.html">   63</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> ErrorType&gt; <span class="keyword">class </span><a class="code hl_function" href="a01644.html#a075c1367f8574a76ab9e4160d6ed521c">Unexpected</a></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="a01644.html#a075c1367f8574a76ab9e4160d6ed521c">   71</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="a01644.html#a075c1367f8574a76ab9e4160d6ed521c">Unexpected</a> (ErrorType <span class="keyword">const</span> &amp;<a class="code hl_function" href="a01644.html#add04e74193f947673a08bc0dda3f6f20">error</a>) : m_error (<a class="code hl_function" href="a01644.html#add04e74193f947673a08bc0dda3f6f20">error</a>) {}</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="a01644.html#a79082b8816166114c5ee96b83ee85319">   78</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="a01644.html#a79082b8816166114c5ee96b83ee85319">Unexpected</a> (ErrorType &amp;&amp;<a class="code hl_function" href="a01644.html#add04e74193f947673a08bc0dda3f6f20">error</a>) : m_error (<a class="code hl_namespace" href="a00800.html">std</a>::move (<a class="code hl_function" href="a01644.html#add04e74193f947673a08bc0dda3f6f20">error</a>)) {}</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  ErrorType &amp;</div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="a01644.html#add04e74193f947673a08bc0dda3f6f20">   86</a></span>  <a class="code hl_function" href="a01644.html#add04e74193f947673a08bc0dda3f6f20">error</a> () &amp;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">return</span> m_error;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  }</div>
 </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">int</span></div>
-<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="a00209.html#abce3d3b8a6bed8a0eff15065e5b7833c">  100</a></span><a class="code hl_function" href="a00209.html#abce3d3b8a6bed8a0eff15065e5b7833c">ptr_to_fd</a>(<span class="keywordtype">void</span> *pointer) <a class="code hl_define" href="a00197.html#a42fdd906f59b10053e30b1218cc2a1ac">LUMEX_NOEXCEPT_FUNCTION</a></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>{</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<span class="keyword">reinterpret_cast&lt;</span>intptr_t<span class="keyword">&gt;</span>(pointer));</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  ErrorType <span class="keyword">const</span> &amp;</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="a01644.html#ab2b13d122af5d10b0b9addbf7c70f227">   97</a></span>  <a class="code hl_function" href="a01644.html#ab2b13d122af5d10b0b9addbf7c70f227">error</a> () const &amp;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> m_error;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
 </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_UTILITY_UTILITIES_HPP</span></div>
-<div class="ttc" id="aa00197_html"><div class="ttname"><a href="a00197.html">LumexKeywords.hpp</a></div></div>
-<div class="ttc" id="aa00197_html_a42fdd906f59b10053e30b1218cc2a1ac"><div class="ttname"><a href="a00197.html#a42fdd906f59b10053e30b1218cc2a1ac">LUMEX_NOEXCEPT_FUNCTION</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT_FUNCTION</div><div class="ttdef"><b>Definition</b> LumexKeywords.hpp:22</div></div>
-<div class="ttc" id="aa00209_html_a0bac93cbc3f1e49f40047f7c07ee8a8c"><div class="ttname"><a href="a00209.html#a0bac93cbc3f1e49f40047f7c07ee8a8c">fd_to_ptr</a></div><div class="ttdeci">static void * fd_to_ptr(int fileDescriptor) LUMEX_NOEXCEPT_FUNCTION</div><div class="ttdef"><b>Definition</b> LumexUtilities.hpp:69</div></div>
-<div class="ttc" id="aa00209_html_abce3d3b8a6bed8a0eff15065e5b7833c"><div class="ttname"><a href="a00209.html#abce3d3b8a6bed8a0eff15065e5b7833c">ptr_to_fd</a></div><div class="ttdeci">static int ptr_to_fd(void *pointer) LUMEX_NOEXCEPT_FUNCTION</div><div class="ttdef"><b>Definition</b> LumexUtilities.hpp:100</div></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  ErrorType &amp;&amp;</div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="a01644.html#a81f1dd1da8585415f1139c88f9dc58a9">  108</a></span>  <a class="code hl_function" href="a01644.html#a81f1dd1da8585415f1139c88f9dc58a9">error</a> () &amp;&amp;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">return</span> std::move (m_error);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  }</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  ErrorType <span class="keyword">const</span> &amp;&amp;</div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="a01644.html#aeaeb174828a6ed9cd56e17462559bacd">  119</a></span>  <a class="code hl_function" href="a01644.html#aeaeb174828a6ed9cd56e17462559bacd">error</a> () const &amp;&amp;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">return</span> std::move (m_error);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  }</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  ErrorType m_error; </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>};</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>} <span class="comment">// namespace error</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>} <span class="comment">// namespace expected</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>} <span class="comment">// namespace core</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>} <span class="comment">// namespace lumex</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keyword">using </span><a class="code hl_class" href="a01644.html">lumex::core::expected::error::Unexpected</a>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">#endif </span><span class="comment">// !LUMEX_CORE_EXPECTED_ERROR_UNEXPECTED_HPP</span></div>
+<div class="ttc" id="aa00774_html"><div class="ttname"><a href="a00774.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition</b> LumexCPUVectorizationCapabilities.cpp:27</div></div>
+<div class="ttc" id="aa00800_html"><div class="ttname"><a href="a00800.html">std</a></div><div class="ttdef"><b>Definition</b> LumexLogger.hpp:151</div></div>
+<div class="ttc" id="aa00826_html"><div class="ttname"><a href="a00826.html">lumex::core</a></div><div class="ttdef"><b>Definition</b> Base64.hpp:80</div></div>
+<div class="ttc" id="aa00852_html"><div class="ttname"><a href="a00852.html">lumex::core::expected</a></div><div class="ttdef"><b>Definition</b> BadExpectedAccess.hpp:88</div></div>
+<div class="ttc" id="aa00853_html"><div class="ttname"><a href="a00853.html">lumex::core::expected::error</a></div><div class="ttdef"><b>Definition</b> BadExpectedAccess.hpp:90</div></div>
+<div class="ttc" id="aa01644_html"><div class="ttname"><a href="a01644.html">lumex::core::expected::error::Unexpected</a></div><div class="ttdef"><b>Definition</b> Unexpected.hpp:64</div></div>
+<div class="ttc" id="aa01644_html_a075c1367f8574a76ab9e4160d6ed521c"><div class="ttname"><a href="a01644.html#a075c1367f8574a76ab9e4160d6ed521c">lumex::core::expected::error::Unexpected::Unexpected</a></div><div class="ttdeci">Unexpected(ErrorType const &amp;error)</div><div class="ttdoc">Constructs from a const lvalue error.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:71</div></div>
+<div class="ttc" id="aa01644_html_a79082b8816166114c5ee96b83ee85319"><div class="ttname"><a href="a01644.html#a79082b8816166114c5ee96b83ee85319">lumex::core::expected::error::Unexpected::Unexpected</a></div><div class="ttdeci">Unexpected(ErrorType &amp;&amp;error)</div><div class="ttdoc">Constructs from an rvalue error.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:78</div></div>
+<div class="ttc" id="aa01644_html_a81f1dd1da8585415f1139c88f9dc58a9"><div class="ttname"><a href="a01644.html#a81f1dd1da8585415f1139c88f9dc58a9">lumex::core::expected::error::Unexpected::error</a></div><div class="ttdeci">ErrorType &amp;&amp; error() &amp;&amp;</div><div class="ttdoc">Returns an rvalue reference to the stored error.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:108</div></div>
+<div class="ttc" id="aa01644_html_ab2b13d122af5d10b0b9addbf7c70f227"><div class="ttname"><a href="a01644.html#ab2b13d122af5d10b0b9addbf7c70f227">lumex::core::expected::error::Unexpected::error</a></div><div class="ttdeci">ErrorType const &amp; error() const &amp;</div><div class="ttdoc">Returns a const lvalue reference to the stored error.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:97</div></div>
+<div class="ttc" id="aa01644_html_add04e74193f947673a08bc0dda3f6f20"><div class="ttname"><a href="a01644.html#add04e74193f947673a08bc0dda3f6f20">lumex::core::expected::error::Unexpected::error</a></div><div class="ttdeci">ErrorType &amp; error() &amp;</div><div class="ttdoc">Returns a mutable lvalue reference to the stored error.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:86</div></div>
+<div class="ttc" id="aa01644_html_aeaeb174828a6ed9cd56e17462559bacd"><div class="ttname"><a href="a01644.html#aeaeb174828a6ed9cd56e17462559bacd">lumex::core::expected::error::Unexpected::error</a></div><div class="ttdeci">ErrorType const &amp;&amp; error() const &amp;&amp;</div><div class="ttdoc">Returns a const rvalue reference to the stored error.</div><div class="ttdef"><b>Definition</b> Unexpected.hpp:119</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_89e42b2a70e8a88de526b25cf537eb3f.html">utility</a></li><li class="navelem"><a class="el" href="a00209.html">LumexUtilities.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_46b34838179fae6a7a72c1756bd73487.html">expected</a></li><li class="navelem"><a class="el" href="dir_e14fbe3e0711b5702759fcc1592ca522.html">error</a></li><li class="navelem"><a class="el" href="a00209.html">Unexpected.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

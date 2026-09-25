@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Utility::TypeTraits::detail::is_reference_wrapper&lt; T &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::core::utility::traits::meta Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -103,40 +103,183 @@ $(function(){initNavTree('a00908.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Lumex::Utility::TypeTraits::detail::is_reference_wrapper&lt; T &gt; Struct Template Reference</div></div>
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">lumex::core::utility::traits::meta Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02220.html">default_return</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper providing a default value for a type, primarily meant for exception-safe fallbacks.  <a href="a02220.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02228.html">default_return&lt; T * &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02224.html">default_return&lt; void &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02208.html">has_type</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02212.html">has_type&lt; T, void_t&lt; typename T::type &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02232.html">indirection_of</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>type</code> is what a pointer or reference points to: <code>T</code> for <code>T *</code>, <code>T &amp;</code> and <code>T</code> itself.  <a href="a02232.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02240.html">indirection_of&lt; T &amp; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02236.html">indirection_of&lt; T * &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02204.html">make_void</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02216.html">type_identity</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>type</code> is <code>T</code>. Used to keep a parameter out of template argument deduction (C++20 <code>std::type_identity</code>).  <a href="a02216.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac89eed2501e6875f3f45fac66df7d004" id="r_ac89eed2501e6875f3f45fac66df7d004"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:ac89eed2501e6875f3f45fac66df7d004"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac89eed2501e6875f3f45fac66df7d004">void_t</a> = typename <a class="el" href="a02204.html">make_void</a>&lt;Ts...&gt;::type</td></tr>
+<tr class="separator:ac89eed2501e6875f3f45fac66df7d004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ad396a9f8ac20cc83c0a856aec1510" id="r_a05ad396a9f8ac20cc83c0a856aec1510"><td class="memTemplParams" colspan="2">template&lt;typename TypeToClean&gt; </td></tr>
+<tr class="memitem:a05ad396a9f8ac20cc83c0a856aec1510"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a05ad396a9f8ac20cc83c0a856aec1510">CleanType</a></td></tr>
+<tr class="separator:a05ad396a9f8ac20cc83c0a856aec1510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc02419d3b465284115ab8aeba6ec53d" id="r_adc02419d3b465284115ab8aeba6ec53d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:adc02419d3b465284115ab8aeba6ec53d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adc02419d3b465284115ab8aeba6ec53d">CleanTypeOf</a> = <a class="el" href="#a05ad396a9f8ac20cc83c0a856aec1510">CleanType</a>&lt;T&gt;</td></tr>
+<tr class="separator:adc02419d3b465284115ab8aeba6ec53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd77a2242871400fb3bbb3a9ec30e895" id="r_abd77a2242871400fb3bbb3a9ec30e895"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:abd77a2242871400fb3bbb3a9ec30e895"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abd77a2242871400fb3bbb3a9ec30e895">RemovePtr</a> = typename std::remove_pointer&lt;T&gt;::type</td></tr>
+<tr class="separator:abd77a2242871400fb3bbb3a9ec30e895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f5c4d90e5f8ff4fa1fecccdf3bbb2f" id="r_a46f5c4d90e5f8ff4fa1fecccdf3bbb2f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a46f5c4d90e5f8ff4fa1fecccdf3bbb2f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a46f5c4d90e5f8ff4fa1fecccdf3bbb2f">indirection_of_t</a> = typename <a class="el" href="a02232.html">indirection_of</a>&lt;T&gt;::type</td></tr>
+<tr class="separator:a46f5c4d90e5f8ff4fa1fecccdf3bbb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a230c42a2c97b1efa4dc17633c4bdfa6a" id="r_a230c42a2c97b1efa4dc17633c4bdfa6a"><td class="memTemplParams" colspan="2">template&lt;typename TargetType, typename SourceType&gt; </td></tr>
+<tr class="memitem:a230c42a2c97b1efa4dc17633c4bdfa6a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="#a05ad396a9f8ac20cc83c0a856aec1510">CleanType</a>&lt; TargetType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a230c42a2c97b1efa4dc17633c4bdfa6a">safe_cast</a> (SourceType &amp;&amp;value) <a class="el" href="a00338.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a>(noexcept(static_cast&lt; <a class="el" href="#a05ad396a9f8ac20cc83c0a856aec1510">CleanType</a>&lt; TargetType &gt; &gt;(std::forward&lt; SourceType &gt;(value))))</td></tr>
+<tr class="separator:a230c42a2c97b1efa4dc17633c4bdfa6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a05ad396a9f8ac20cc83c0a856aec1510" name="a05ad396a9f8ac20cc83c0a856aec1510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ad396a9f8ac20cc83c0a856aec1510">&#9670;&#160;</a></span>CleanType</h2>
 
-<p><code>#include &lt;<a class="el" href="a00206_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Lumex::Utility::TypeTraits::detail::is_reference_wrapper&lt; T &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00907.png" border="0" usemap="#a_lumex_1_1_utility_1_1_type_traits_1_1detail_1_1is__reference__wrapper_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_lumex_1_1_utility_1_1_type_traits_1_1detail_1_1is__reference__wrapper_3_01_t_01_4_inherit__map" id="a_lumex_1_1_utility_1_1_type_traits_1_1detail_1_1is__reference__wrapper_3_01_t_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,229,123"/>
-<area shape="rect" title=" " alt="" coords="63,5,171,32"/>
-<area shape="poly" title=" " alt="" coords="120,48,120,80,114,80,114,48"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Lumex::Utility::TypeTraits::detail::is_reference_wrapper&lt; T &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00906.png" border="0" usemap="#a_lumex_1_1_utility_1_1_type_traits_1_1detail_1_1is__reference__wrapper_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="a_lumex_1_1_utility_1_1_type_traits_1_1detail_1_1is__reference__wrapper_3_01_t_01_4_coll__map" id="a_lumex_1_1_utility_1_1_type_traits_1_1detail_1_1is__reference__wrapper_3_01_t_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,229,123"/>
-<area shape="rect" title=" " alt="" coords="63,5,171,32"/>
-<area shape="poly" title=" " alt="" coords="120,48,120,80,114,80,114,48"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00206_source.html">LumexTypeTraits.hpp</a></li>
-</ul>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TypeToClean&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a05ad396a9f8ac20cc83c0a856aec1510">lumex::core::utility::traits::meta::CleanType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line"> <span class="keyword">typename</span> std::remove_cv&lt;</div>
+<div class="line">    <span class="keyword">typename</span> std::remove_reference&lt;TypeToClean&gt;::type&gt;::type</div>
+</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02937.html#a1">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/utility/numeric/LumexSafeNumericComparator.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="adc02419d3b465284115ab8aeba6ec53d" name="adc02419d3b465284115ab8aeba6ec53d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc02419d3b465284115ab8aeba6ec53d">&#9670;&#160;</a></span>CleanTypeOf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#adc02419d3b465284115ab8aeba6ec53d">lumex::core::utility::traits::meta::CleanTypeOf</a> = <a class="el" href="#a05ad396a9f8ac20cc83c0a856aec1510">CleanType</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46f5c4d90e5f8ff4fa1fecccdf3bbb2f" name="a46f5c4d90e5f8ff4fa1fecccdf3bbb2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46f5c4d90e5f8ff4fa1fecccdf3bbb2f">&#9670;&#160;</a></span>indirection_of_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a46f5c4d90e5f8ff4fa1fecccdf3bbb2f">lumex::core::utility::traits::meta::indirection_of_t</a> = typename <a class="el" href="a02232.html">indirection_of</a>&lt;T&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd77a2242871400fb3bbb3a9ec30e895" name="abd77a2242871400fb3bbb3a9ec30e895"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd77a2242871400fb3bbb3a9ec30e895">&#9670;&#160;</a></span>RemovePtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#abd77a2242871400fb3bbb3a9ec30e895">lumex::core::utility::traits::meta::RemovePtr</a> = typename std::remove_pointer&lt;T&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac89eed2501e6875f3f45fac66df7d004" name="ac89eed2501e6875f3f45fac66df7d004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac89eed2501e6875f3f45fac66df7d004">&#9670;&#160;</a></span>void_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ac89eed2501e6875f3f45fac66df7d004">lumex::core::utility::traits::meta::void_t</a> = typename <a class="el" href="a02204.html">make_void</a>&lt;Ts...&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a230c42a2c97b1efa4dc17633c4bdfa6a" name="a230c42a2c97b1efa4dc17633c4bdfa6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230c42a2c97b1efa4dc17633c4bdfa6a">&#9670;&#160;</a></span>safe_cast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetType, typename SourceType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a05ad396a9f8ac20cc83c0a856aec1510">CleanType</a>&lt; TargetType &gt; lumex::core::utility::traits::meta::safe_cast </td>
+          <td>(</td>
+          <td class="paramtype">SourceType &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00483.html">Utility</a></li><li class="navelem"><a class="el" href="a00486.html">TypeTraits</a></li><li class="navelem"><a class="el" href="a00487.html">detail</a></li><li class="navelem"><a class="el" href="a00908.html">is_reference_wrapper</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00826.html">core</a></li><li class="navelem"><a class="el" href="a00886.html">utility</a></li><li class="navelem"><a class="el" href="a00907.html">traits</a></li><li class="navelem"><a class="el" href="a00908.html">meta</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

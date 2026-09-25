@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: log_entry_t Struct Reference</title>
+<title>LumexLib: XmlAttributeBase.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,144 +104,76 @@ $(function(){initNavTree('a00560.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a00557.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">log_entry_t Struct Reference</div></div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">XmlAttributeBase.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Структура для хранения буферизованной записи лога.  
- <a href="#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00017_source.html">Logger.hpp</a>&gt;</code></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00548_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00584_source.html">lumex/xml/memory/XmlAllocator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00590_source.html">lumex/xml/memory/XmlMemoryPage.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for XmlAttributeBase.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00561.png" border="0" usemap="#a_xml_attribute_base_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00562.png" border="0" usemap="#a_xml_attribute_base_8hppdep" alt=""/></div>
+</div>
+</div>
+<p><a href="a00560_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:aa7afc8c9e79f0144628e56f0a8af0201" id="r_aa7afc8c9e79f0144628e56f0a8af0201"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7afc8c9e79f0144628e56f0a8af0201">log_entry_t</a> (<a class="el" href="a00017.html#a3d8d85bddc47594db84f7f2f84022e86">LogLevel</a> level, std::string message, std::chrono::system_clock::time_point timestamp=std::chrono::system_clock::now()) noexcept</td></tr>
-<tr class="memdesc:aa7afc8c9e79f0144628e56f0a8af0201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Padding: 7 bytes для выравнивания до 8 bytes.  <br /></td></tr>
-<tr class="separator:aa7afc8c9e79f0144628e56f0a8af0201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02560.html">lumex::xml::attribute::XmlAttributeBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base structure for representing an XML attribute.  <a href="a02560.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ab7cf12857188036913e0fb20f005decc" id="r_ab7cf12857188036913e0fb20f005decc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7cf12857188036913e0fb20f005decc">m_message</a></td></tr>
-<tr class="memdesc:ab7cf12857188036913e0fb20f005decc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Большие типы (8+ bytes)  <br /></td></tr>
-<tr class="separator:ab7cf12857188036913e0fb20f005decc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18040f4703c75b994504b4f2c4892b20" id="r_a18040f4703c75b994504b4f2c4892b20"><td class="memItemLeft" align="right" valign="top">std::chrono::system_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18040f4703c75b994504b4f2c4892b20">m_timestamp</a></td></tr>
-<tr class="memdesc:a18040f4703c75b994504b4f2c4892b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Временная метка записи  <br /></td></tr>
-<tr class="separator:a18040f4703c75b994504b4f2c4892b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adab55b7fe743038865384e69f8543a6a" id="r_adab55b7fe743038865384e69f8543a6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00017.html#a3d8d85bddc47594db84f7f2f84022e86">LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adab55b7fe743038865384e69f8543a6a">m_level</a></td></tr>
-<tr class="memdesc:adab55b7fe743038865384e69f8543a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Маленькие типы (1 byte)  <br /></td></tr>
-<tr class="separator:adab55b7fe743038865384e69f8543a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00937.html">lumex::xml</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00940.html">lumex::xml::node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00938.html">lumex::xml::attribute</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a70f97e85f501b570d48ac23820cbb498" id="r_a70f97e85f501b570d48ac23820cbb498"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="el" href="a02560.html">XmlAttributeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00938.html#a70f97e85f501b570d48ac23820cbb498">lumex::xml::attribute::allocate_attribute</a> (<a class="el" href="a02576.html">XmlAllocator</a> &amp;alloc)</td></tr>
+<tr class="memdesc:a70f97e85f501b570d48ac23820cbb498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a new <code><a class="el" href="a02560.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code> object using the provided allocator.  <br /></td></tr>
+<tr class="separator:a70f97e85f501b570d48ac23820cbb498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49e387259a9f7af9dde64a7e348a52f" id="r_ae49e387259a9f7af9dde64a7e348a52f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00938.html#ae49e387259a9f7af9dde64a7e348a52f">lumex::xml::attribute::destroy_attribute</a> (<a class="el" href="a02560.html">XmlAttributeBase</a> *attr, <a class="el" href="a02576.html">XmlAllocator</a> &amp;alloc)</td></tr>
+<tr class="memdesc:ae49e387259a9f7af9dde64a7e348a52f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys and deallocates an <code><a class="el" href="a02560.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code> object.  <br /></td></tr>
+<tr class="separator:ae49e387259a9f7af9dde64a7e348a52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84368642bc6f00be967f6068a6ade73" id="r_af84368642bc6f00be967f6068a6ade73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00938.html#af84368642bc6f00be967f6068a6ade73">lumex::xml::attribute::prepend_attribute</a> (<a class="el" href="a02560.html">XmlAttributeBase</a> *attr, <a class="el" href="a02600.html">node::XmlNodeBase</a> *node)</td></tr>
+<tr class="memdesc:af84368642bc6f00be967f6068a6ade73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepends an <code><a class="el" href="a02560.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code> to the beginning of a node's attribute list.  <br /></td></tr>
+<tr class="separator:af84368642bc6f00be967f6068a6ade73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d608b70118e2251e084c876dad5be9a" id="r_a3d608b70118e2251e084c876dad5be9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00938.html#a3d608b70118e2251e084c876dad5be9a">lumex::xml::attribute::insert_attribute_after</a> (<a class="el" href="a02560.html">XmlAttributeBase</a> *attr, <a class="el" href="a02560.html">XmlAttributeBase</a> *place, <a class="el" href="a02600.html">node::XmlNodeBase</a> *node)</td></tr>
+<tr class="memdesc:a3d608b70118e2251e084c876dad5be9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts an <code><a class="el" href="a02560.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code> after a specified existing attribute.  <br /></td></tr>
+<tr class="separator:a3d608b70118e2251e084c876dad5be9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c4ffa3dd91afad8028965872a76257" id="r_a96c4ffa3dd91afad8028965872a76257"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00938.html#a96c4ffa3dd91afad8028965872a76257">lumex::xml::attribute::insert_attribute_before</a> (<a class="el" href="a02560.html">XmlAttributeBase</a> *attr, <a class="el" href="a02560.html">XmlAttributeBase</a> *place, <a class="el" href="a02600.html">node::XmlNodeBase</a> *node)</td></tr>
+<tr class="memdesc:a96c4ffa3dd91afad8028965872a76257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts an <code><a class="el" href="a02560.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code> before a specified existing attribute.  <br /></td></tr>
+<tr class="separator:a96c4ffa3dd91afad8028965872a76257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa249f00ad8cc9cababe416d4f71001ed" id="r_aa249f00ad8cc9cababe416d4f71001ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00938.html#aa249f00ad8cc9cababe416d4f71001ed">lumex::xml::attribute::remove_attribute</a> (<a class="el" href="a02560.html">XmlAttributeBase</a> *attr, <a class="el" href="a02600.html">node::XmlNodeBase</a> *node)</td></tr>
+<tr class="memdesc:aa249f00ad8cc9cababe416d4f71001ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an <code><a class="el" href="a02560.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code> from its parent node's attribute list.  <br /></td></tr>
+<tr class="separator:aa249f00ad8cc9cababe416d4f71001ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2170e740d0e55d416e91f4a9141a345a" id="r_a2170e740d0e55d416e91f4a9141a345a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00938.html#a2170e740d0e55d416e91f4a9141a345a">lumex::xml::attribute::node_copy_attribute</a> (<a class="el" href="a02560.html">XmlAttributeBase</a> *da_, <a class="el" href="a02560.html">XmlAttributeBase</a> *sa_)</td></tr>
+<tr class="memdesc:a2170e740d0e55d416e91f4a9141a345a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the name and value strings from a source <code><a class="el" href="a02560.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code> to a destination <code><a class="el" href="a02560.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code>.  <br /></td></tr>
+<tr class="separator:a2170e740d0e55d416e91f4a9141a345a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Структура для хранения буферизованной записи лога. </p>
-<p>Используется для временного хранения логов в буфере перед записью в файл. Содержит всю необходимую информацию для последующей записи. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa7afc8c9e79f0144628e56f0a8af0201" name="aa7afc8c9e79f0144628e56f0a8af0201"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7afc8c9e79f0144628e56f0a8af0201">&#9670;&#160;</a></span>log_entry_t()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">log_entry_t::log_entry_t </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00017.html#a3d8d85bddc47594db84f7f2f84022e86">LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::chrono::system_clock::time_point</td>          <td class="paramname"><span class="paramname"><em>timestamp</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::chrono::system_clock::now()</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Padding: 7 bytes для выравнивания до 8 bytes. </p>
-<p>Конструктор с параметрами. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">level</td><td>Уровень логирования. </td></tr>
-    <tr><td class="paramname">message</td><td>Сообщение лога. </td></tr>
-    <tr><td class="paramname">timestamp</td><td>Временная метка (по умолчанию текущее время). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="adab55b7fe743038865384e69f8543a6a" name="adab55b7fe743038865384e69f8543a6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adab55b7fe743038865384e69f8543a6a">&#9670;&#160;</a></span>m_level</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00017.html#a3d8d85bddc47594db84f7f2f84022e86">LogLevel</a> log_entry_t::m_level</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Маленькие типы (1 byte) </p>
-<p>Уровень логирования </p>
-
-</div>
-</div>
-<a id="ab7cf12857188036913e0fb20f005decc" name="ab7cf12857188036913e0fb20f005decc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7cf12857188036913e0fb20f005decc">&#9670;&#160;</a></span>m_message</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string log_entry_t::m_message</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Большие типы (8+ bytes) </p>
-<p>Сообщение лога </p>
-
-</div>
-</div>
-<a id="a18040f4703c75b994504b4f2c4892b20" name="a18040f4703c75b994504b4f2c4892b20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18040f4703c75b994504b4f2c4892b20">&#9670;&#160;</a></span>m_timestamp</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::chrono::system_clock::time_point log_entry_t::m_timestamp</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Временная метка записи </p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00017_source.html">Logger.hpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00560.html">log_entry_t</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_e14a662551c0edfc65d2ea9dddaf4ad0.html">xml</a></li><li class="navelem"><a class="el" href="dir_53e02ac628704b4c8637520d7d2e7822.html">attribute</a></li><li class="navelem"><a class="el" href="a00560.html">XmlAttributeBase.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

@@ -1,6 +1,10 @@
 var a00980 =
 [
-    [ "XmlDocumentBase", "a00980.html#abfe4197239fe0738657b3f9e1d90a8b1", null ],
-    [ "buffer", "a00980.html#ab6ee2ec57c76bd16ca40701badd24e19", null ],
-    [ "extra_buffers", "a00980.html#a2dff6b5681043d3977ff7b3d2588cb09", null ]
+    [ "cpu_core_count", "a00980.html#a746a33fe428ecc68641d6807292694d2", null ],
+    [ "cpu_frequency_mhz", "a00980.html#ab38d984c734feb52892eb580cffbeb13", null ],
+    [ "cpu_generation", "a00980.html#a5479f29816446c85b122a6b68bbd8124", null ],
+    [ "cpu_name", "a00980.html#a4eafec39633f8c3a5e596c13c86aebf3", null ],
+    [ "gpu_name", "a00980.html#ad25f2a59a1dcab8a231ac1169bc3d9ab", null ],
+    [ "has_discrete_gpu", "a00980.html#a7a3f925ce6a4fec8fa3f46b0c4cfdef1", null ],
+    [ "total_memory_mb", "a00980.html#a5951b3c9677bc9491fc08c68e65f085c", null ]
 ];

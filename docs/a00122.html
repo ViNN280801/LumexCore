@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: ExpectedTypes.hpp File Reference</title>
+<title>LumexLib: LumexSettingsXML.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,141 +104,50 @@ $(function(){initNavTree('a00122.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">ExpectedTypes.hpp File Reference</div></div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">LumexSettingsXML.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &quot;lumex/core/filesystem/LumexFilesystem&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00125_source.html">LumexSettingsXML.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for ExpectedTypes.hpp:</div>
+Include dependency graph for LumexSettingsXML.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00123.png" border="0" usemap="#a_expected_types_8hpp" alt=""/></div>
-<map name="a_expected_types_8hpp" id="a_expected_types_8hpp">
-<area shape="rect" title=" " alt="" coords="5,5,142,32"/>
-<area shape="rect" title=" " alt="" coords="32,80,115,107"/>
-<area shape="poly" title=" " alt="" coords="76,33,76,64,71,64,71,33"/>
-</map>
+<div class="center"><img src="a00123.png" border="0" usemap="#a_lumex_settings_x_m_l_8cpp" alt=""/></div>
 </div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00124.png" border="0" usemap="#a_expected_types_8hppdep" alt=""/></div>
-<map name="a_expected_types_8hppdep" id="a_expected_types_8hppdep">
-<area shape="rect" title=" " alt="" coords="5,5,142,32"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="23,80,124,107"/>
-<area shape="poly" title=" " alt="" coords="76,48,76,80,71,80,71,48"/>
-<area shape="rect" href="a00125.html" title=" " alt="" coords="10,155,137,181"/>
-<area shape="poly" title=" " alt="" coords="76,122,76,154,71,154,71,122"/>
-</map>
-</div>
-</div>
-<p><a href="a00122_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00696.html">in_place_tag</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++11 не имеет std::in_place. Тег для указания создания значения на месте.  <a href="a00696.html#details">More...</a><br /></td></tr>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00700.html">Unit</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вспомогательный тип для специализации <code><a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected</a>&lt;void, ErrorType&gt;</code>.  <a href="a00700.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00775.html">lumex::applied</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00704.html">unexpect_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++23-совместимый тег "сконструировать ошибку на месте".  <a href="a00704.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00816.html">lumex::applied::settings</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00708.html">is_expected&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Мета-признак для определения, является ли тип <a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected</a>, по умолчанию false, т.к. любой тип не является <a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected</a>.  <a href="a00708.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00712.html">is_expected&lt; Expected&lt; S, E &gt; &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Мета-признак для определения, является ли тип <a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected</a>. Тут true, т.к. <a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected&lt;S, E&gt;</a> и <a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected&lt;void, E&gt;</a> являются <a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected</a>.  <a href="a00712.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00716.html">is_expected&lt; Expected&lt; void, E &gt; &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Мета-признак для определения, является ли тип <a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected</a>. Тут true, т.к. специализация для void - <a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected&lt;void, E&gt;</a> является <a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected</a>.  <a href="a00716.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00824.html">lumex::applied::settings::xml</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ab77c0d6ca39438fa6341d94a016fa2b5" id="r_ab77c0d6ca39438fa6341d94a016fa2b5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="a00696.html">in_place_tag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab77c0d6ca39438fa6341d94a016fa2b5">in_place</a> {}</td></tr>
-<tr class="memdesc:ab77c0d6ca39438fa6341d94a016fa2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Глобальная константная переменная для тега <code><a class="el" href="a00696.html" title="C++11 не имеет std::in_place. Тег для указания создания значения на месте.">in_place_tag</a></code>.  <br /></td></tr>
-<tr class="separator:ab77c0d6ca39438fa6341d94a016fa2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a16eea42d207770765961abfb2ddefc" id="r_a3a16eea42d207770765961abfb2ddefc"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="a00704.html">unexpect_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a16eea42d207770765961abfb2ddefc">unexpect</a> {}</td></tr>
-<tr class="memdesc:a3a16eea42d207770765961abfb2ddefc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Глобальная константа-тег (как std::unexpect)  <br /></td></tr>
-<tr class="separator:a3a16eea42d207770765961abfb2ddefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a954d414bc4cbbf214517c0fa92d12170" id="r_a954d414bc4cbbf214517c0fa92d12170"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a954d414bc4cbbf214517c0fa92d12170"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a954d414bc4cbbf214517c0fa92d12170">is_expected_v</a> = <a class="el" href="a00708.html">is_expected</a>&lt;T&gt;::value</td></tr>
-<tr class="separator:a954d414bc4cbbf214517c0fa92d12170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a07486181f1990291c2a348de8eb4c480" id="r_a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
+<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ab77c0d6ca39438fa6341d94a016fa2b5" name="ab77c0d6ca39438fa6341d94a016fa2b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab77c0d6ca39438fa6341d94a016fa2b5">&#9670;&#160;</a></span>in_place</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a07486181f1990291c2a348de8eb4c480" name="a07486181f1990291c2a348de8eb4c480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&#160;</a></span>LUMEX_IMPLEMENTATION</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00696.html">in_place_tag</a> in_place {}</td>
+          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Глобальная константная переменная для тега <code><a class="el" href="a00696.html" title="C++11 не имеет std::in_place. Тег для указания создания значения на месте.">in_place_tag</a></code>. </p>
-<p>Используется как аргумент для конструктора <code><a class="el" href="a00688.html" title="Класс, имитирующий std::expected из С++23. https://en.cppreference.com/w/cpp/utility/expected.">Expected</a></code> для указания конструирования значения на месте. </p><dl class="section note"><dt>Note</dt><dd>Это аналог <code>std::in_place</code> из C++17. </dd></dl>
-
-</div>
-</div>
-<a id="a954d414bc4cbbf214517c0fa92d12170" name="a954d414bc4cbbf214517c0fa92d12170"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a954d414bc4cbbf214517c0fa92d12170">&#9670;&#160;</a></span>is_expected_v</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool is_expected_v = <a class="el" href="a00708.html">is_expected</a>&lt;T&gt;::value</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3a16eea42d207770765961abfb2ddefc" name="a3a16eea42d207770765961abfb2ddefc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a16eea42d207770765961abfb2ddefc">&#9670;&#160;</a></span>unexpect</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00704.html">unexpect_t</a> unexpect {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Глобальная константа-тег (как std::unexpect) </p>
 
 </div>
 </div>
@@ -247,7 +156,7 @@ template&lt;typename T&gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_f9986bae22981771d5201cdad569a73d.html">expected</a></li><li class="navelem"><a class="el" href="a00122.html">ExpectedTypes.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_6df2cf08c7df610d9bf032fe0440ee34.html">applied</a></li><li class="navelem"><a class="el" href="dir_f8a442d41528e2aada91bcdeb5bd8658.html">settings</a></li><li class="navelem"><a class="el" href="dir_32e1fcf129ef0fb0cc27ef3353565ab4.html">xml</a></li><li class="navelem"><a class="el" href="a00122.html">LumexSettingsXML.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

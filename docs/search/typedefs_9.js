@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['path_0',['Path',['../a00435.html#a96739d75b7ec5c4919ce2b65c4486170',1,'Lumex']]],
-  ['perms_1',['Perms',['../a00435.html#a63d86d36b06b3d17b5677f2932674bb8',1,'Lumex']]],
-  ['pointer_2',['pointer',['../a00616.html#a8d1c83c1f727eea3017fdea79f0ab466',1,'Lumex::Core::CircularBuffer::CircularBuffer::pointer'],['../a00624.html#a4ee8024af0c711c2c428f6e64ef5d53e',1,'Lumex::Core::CircularBuffer::CircularBuffer::iterator::pointer'],['../a00628.html#af28eefeb1fc33af1a814f2aa592a8390',1,'Lumex::Core::CircularBuffer::CircularBuffer::const_iterator::pointer'],['../a00664.html#acd6cc755d018701f662d17fad957c26a',1,'Lumex::Core::Stacktrace::LumexBasicStacktrace::pointer'],['../a00760.html#aad75a6620d794c93acb9cf4d6aa39541',1,'Lumex::Core::Filesystem::DirectoryIterator::pointer'],['../a00820.html#af12dc425468800b3ed55252bbd027397',1,'Lumex::Core::StringView::LumexStringView::pointer'],['../a00824.html#a93ade10cd88f2d2cb45ac3cf149154c7',1,'Lumex::Core::StringView::LumexWStringView::pointer'],['../a00996.html#abbba6212f5a73bc84773b2ab3262bc47',1,'Lumex::Xml::Node::XmlNodeIterator::pointer'],['../a01000.html#a54664e1a95e54bd1a77475bedab5e14c',1,'Lumex::Xml::Node::XmlNamedNodeIterator::pointer'],['../a01004.html#aa0f217dbcb9ab51d5102e9cb570a63f1',1,'Lumex::Xml::Attribute::XmlAttributeIterator::pointer']]]
+  ['native_5fhandle_5ftype_0',['native_handle_type',['../a01632.html#a1d4b9a643089a0fba09afb211cd8de41',1,'lumex::core::exceptions::stacktrace::LumexStacktraceEntry']]]
 ];

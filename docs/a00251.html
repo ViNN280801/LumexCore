@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XmlMemoryPage.cpp File Reference</title>
+<title>LumexLib: LumexFieldReflection.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,52 +104,70 @@ $(function(){initNavTree('a00251.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
-  <div class="headertitle"><div class="title">XmlMemoryPage.cpp File Reference</div></div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">LumexFieldReflection.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00254_source.html">XmlMemoryPage.hpp</a>&quot;</code><br />
+
+<p>Serializes a simple aggregate (no constructors, no private members, no base classes) to JSON by walking its fields.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00248_source.html">lumex/core/reflection/field_reflection/LumexAggregateFields.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00359_source.html">lumex/core/utility/traits/LumexTypeTraits.hpp</a>&quot;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for XmlMemoryPage.cpp:</div>
+Include dependency graph for LumexFieldReflection.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00252.png" border="0" usemap="#a_xml_memory_page_8cpp" alt=""/></div>
-<map name="a_xml_memory_page_8cpp" id="a_xml_memory_page_8cpp">
-<area shape="rect" title=" " alt="" coords="32,5,179,32"/>
-<area shape="rect" href="a00254.html" title=" " alt="" coords="32,80,179,107"/>
-<area shape="poly" title=" " alt="" coords="108,33,108,64,103,64,103,33"/>
-<area shape="rect" title=" " alt="" coords="5,155,70,181"/>
-<area shape="poly" title=" " alt="" coords="96,109,62,145,58,141,92,105"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="94,155,256,181"/>
-<area shape="poly" title=" " alt="" coords="119,105,154,141,150,145,116,109"/>
-</map>
+<div class="center"><img src="a00252.png" border="0" usemap="#a_lumex_field_reflection_8hpp" alt=""/></div>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a07486181f1990291c2a348de8eb4c480" id="r_a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
-<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div>
+<p><a href="a00251_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00826.html">lumex::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00869.html">lumex::core::reflection</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00870.html">lumex::core::reflection::field_reflection</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00871.html">lumex::core::reflection::field_reflection::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3de60e8e8d14a260ca93e37c6a0ed4b9" id="r_a3de60e8e8d14a260ca93e37c6a0ed4b9"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:a3de60e8e8d14a260ca93e37c6a0ed4b9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00871.html#a3de60e8e8d14a260ca93e37c6a0ed4b9">lumex::core::reflection::field_reflection::detail::swallow</a> (T const &amp;...) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="separator:a3de60e8e8d14a260ca93e37c6a0ed4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd209ad1a1778e47a6305485be9e311" id="r_a8cd209ad1a1778e47a6305485be9e311"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
+<tr class="memitem:a8cd209ad1a1778e47a6305485be9e311"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00871.html#a8cd209ad1a1778e47a6305485be9e311">lumex::core::reflection::field_reflection::detail::append_one</a> (nlohmann::json &amp;j, char const *name, U const &amp;field, typename std::enable_if&lt; <a class="el" href="a02468.html">lumex::core::utility::traits::value::is_optional_like</a>&lt; U &gt;::value, int &gt;::type=0)</td></tr>
+<tr class="separator:a8cd209ad1a1778e47a6305485be9e311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ccfa808b640814a57c069c6ba330c50" id="r_a6ccfa808b640814a57c069c6ba330c50"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
+<tr class="memitem:a6ccfa808b640814a57c069c6ba330c50"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00871.html#a6ccfa808b640814a57c069c6ba330c50">lumex::core::reflection::field_reflection::detail::append_one</a> (nlohmann::json &amp;j, char const *name, U const &amp;field, typename std::enable_if&lt; !<a class="el" href="a02468.html">lumex::core::utility::traits::value::is_optional_like</a>&lt; U &gt;::value, int &gt;::type=0)</td></tr>
+<tr class="separator:a6ccfa808b640814a57c069c6ba330c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a07486181f1990291c2a348de8eb4c480" name="a07486181f1990291c2a348de8eb4c480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&#160;</a></span>LUMEX_IMPLEMENTATION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Serializes a simple aggregate (no constructors, no private members, no base classes) to JSON by walking its fields. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span class="obfuscator">.nosp@m.</span>slav<span class="obfuscator">.nosp@m.</span>.semy<span class="obfuscator">.nosp@m.</span>kin@<span class="obfuscator">.nosp@m.</span>gmail<span class="obfuscator">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>The header parses as C++11 (<code>tuple_size</code>). Indexed <code>get</code> is C++14 (friend-injected field types). <code>to_json</code> needs field names, which <code><a class="el" href="a00248.html" title="Non-intrusive field count, indexed access, and (from C++20) field names for simple aggregates.">LumexAggregateFields.hpp</a></code> can recover only from C++20 (<code>LUMEX_FUNCTION_NAME</code> of a pointer NTTP). JSON is vendored nlohmann 3.12.0 at <code>3rdparty/nlohmann/json.hpp</code>. Optional-like fields (<code>has_value</code> plus unary <code>*</code>) are omitted when empty, so both <code>std::optional</code> and <code>optional</code> work. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_8b4095ffbb260afdde390f90a93ad48f.html">xml</a></li><li class="navelem"><a class="el" href="dir_2f6f6f14791ecd974f17c6fba97efef0.html">memory</a></li><li class="navelem"><a class="el" href="a00251.html">XmlMemoryPage.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_31797d9c327ca8a12ffc03669c2ea784.html">reflection</a></li><li class="navelem"><a class="el" href="dir_d1b0ef93da1bd417a56950790a0cb697.html">field_reflection</a></li><li class="navelem"><a class="el" href="a00251.html">LumexFieldReflection.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

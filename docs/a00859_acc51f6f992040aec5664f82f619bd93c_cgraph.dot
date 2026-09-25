@@ -1,0 +1,34 @@
+digraph "lumex::core::fmt::formatted_size"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="lumex::core::fmt::formatted_size",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Number of characters format would produce."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="lumex::core::fmt::Detail\l::CountingBuffer::count",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01736.html#a98ac43311a87567494c2aeed117a9d08",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="lumex::core::fmt::BasicFormat\lString::get",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01848.html#aa29363b83528f7fb908f35b19b15982c",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="lumex::core::fmt::make\l_format_args",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00859.html#a1a7369743e9a56cdf14f5bd2ce80b599",tooltip="Type-erased arguments for vformat; the result refers to args, so use it within the same full expressi..."];
+  Node4 -> Node4 [id="edge4_Node000004_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node5 [id="edge5_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="lumex::core::fmt::Detail\l::store_args",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#a7c0b83d64d43d9c8746e82f05d43db5a",tooltip=" "];
+  Node1 -> Node6 [id="edge6_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="lumex::core::fmt::Detail\l::vformat_to_buffer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#a28784f0eea53fe86ebc27478f67cfba7",tooltip="Formats into buffer; adds the field offset to errors."];
+  Node6 -> Node7 [id="edge7_Node000006_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="lumex::core::fmt::Detail\l::BasicStringRef::begin",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01720.html#a6ba6064394f3a9070526d338c129c28b",tooltip=" "];
+  Node6 -> Node8 [id="edge8_Node000006_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="lumex::core::fmt::Detail\l::BasicStringRef::end",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01720.html#abec5c7b3ca0e213654a4c8875c8f549f",tooltip=" "];
+  Node6 -> Node9 [id="edge9_Node000006_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="lumex::core::fmt::Detail\l::FormatHandler::field_start",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a01840.html#a610059a50039d9d7a77e9553cc56d5de",tooltip=" "];
+  Node6 -> Node10 [id="edge10_Node000006_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="lumex::core::fmt::Detail\l::parse_format_string",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#ae39613502edfdbbbaf32dcc3c24739e3",tooltip="Walks a format string and reports literal text, replacement fields and their specifications to handle..."];
+  Node10 -> Node11 [id="edge11_Node000010_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="lumex::core::fmt::Detail\l::parse_arg_id",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#a8ffaa60c5f5669555053a6bffc935846",tooltip="Parses an arg-id (0, 12, name) at it; leaves it on the character after it."];
+  Node11 -> Node12 [id="edge12_Node000011_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="lumex::core::fmt::Detail\l::is_digit",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#af0ef78c0e8cecf6542aeb1fb2087d37b",tooltip=" "];
+  Node11 -> Node13 [id="edge13_Node000011_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="lumex::core::fmt::Detail\l::is_name_start",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a00860.html#ab309f117b5dbb7ed8606e0fc0a722acc",tooltip=" "];
+}

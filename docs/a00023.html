@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexLogging.hpp File Reference</title>
+<title>LumexLib: LumexHardwareCapabilities.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -106,108 +106,385 @@ $(function(){initNavTree('a00023.html',''); initResizable(true); });
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
-  <div class="headertitle"><div class="title">LumexLogging.hpp File Reference</div></div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">LumexHardwareCapabilities.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
-<code>#include &lt;mutex&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00548_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00212_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
-<code>#include &quot;lumex/core/filesystem/LumexFilesystem&quot;</code><br />
-<code>#include &quot;lumex/core/string/LumexString&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00332_source.html">lumex/core/utility/macros/LumexConstantMacros.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;ifaddrs.h&gt;</code><br />
+<code>#include &lt;net/if.h&gt;</code><br />
+<code>#include &lt;netinet/in.h&gt;</code><br />
+<code>#include &lt;netpacket/packet.h&gt;</code><br />
+<code>#include &lt;sys/random.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexLogging.hpp:</div>
+Include dependency graph for LumexHardwareCapabilities.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00024.png" border="0" usemap="#a_lumex_logging_8hpp" alt=""/></div>
-<map name="a_lumex_logging_8hpp" id="a_lumex_logging_8hpp">
-<area shape="rect" title=" " alt="" coords="198,5,329,32"/>
-<area shape="rect" title=" " alt="" coords="5,88,66,115"/>
-<area shape="poly" title=" " alt="" coords="219,35,152,56,78,82,75,84,73,79,76,78,150,51,218,30"/>
-<area shape="rect" title=" " alt="" coords="90,88,147,115"/>
-<area shape="poly" title=" " alt="" coords="242,35,155,83,153,78,240,30"/>
-<area shape="rect" title=" " alt="" coords="172,88,225,115"/>
-<area shape="poly" title=" " alt="" coords="255,34,220,78,215,75,251,31"/>
-<area shape="rect" href="a00212.html" title=" " alt="" coords="249,88,411,115"/>
-<area shape="poly" title=" " alt="" coords="276,31,312,75,308,78,272,34"/>
-<area shape="rect" title=" " alt="" coords="436,80,585,123"/>
-<area shape="poly" title=" " alt="" coords="303,30,433,72,431,77,301,35"/>
-<area shape="rect" title=" " alt="" coords="608,88,807,115"/>
-<area shape="poly" title=" " alt="" coords="330,29,597,77,624,82,623,87,596,83,329,34"/>
-</map>
+<div class="center"><img src="a00024.png" border="0" usemap="#a_lumex_hardware_capabilities_8hpp" alt=""/></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00025.png" border="0" usemap="#a_lumex_logging_8hppdep" alt=""/></div>
-<map name="a_lumex_logging_8hppdep" id="a_lumex_logging_8hppdep">
-<area shape="rect" title=" " alt="" coords="91,5,221,32"/>
-<area shape="rect" href="a00020.html" title=" " alt="" coords="5,80,136,107"/>
-<area shape="poly" title=" " alt="" coords="131,44,87,82,83,78,128,40"/>
-<area shape="rect" href="a00026.html" title=" " alt="" coords="159,80,326,107"/>
-<area shape="poly" title=" " alt="" coords="184,40,229,78,226,82,181,44"/>
-</map>
+<div class="center"><img src="a00025.png" border="0" usemap="#a_lumex_hardware_capabilities_8hppdep" alt=""/></div>
 </div>
 </div>
 <p><a href="a00023_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00568.html">Lumex::Applied::Logging::LumexLogging</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00980.html">lumex::applied::hardware::caps::hardware_info_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprehensive hardware information structure containing system specifications.  <a href="a00980.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00984.html">lumex::applied::hardware::caps::HardwareCapabilities</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03747.html">hardware_info_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprehensive hardware information structure containing system specifications.  <a href="a03747.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03751.html">HardwareCapabilities</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00435.html">Lumex</a></td></tr>
-<tr class="memdesc:a00435"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00436.html">Lumex::Applied</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00775.html">lumex::applied</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00451.html">Lumex::Applied::Logging</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00776.html">lumex::applied::hardware</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00777.html">lumex::applied::hardware::caps</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html">lumex::applied::hardware::caps::Constants</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a161778f4af8e5bb60e2d33b69c10babb" id="r_a161778f4af8e5bb60e2d33b69c10babb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a161778f4af8e5bb60e2d33b69c10babb">LumexLogging</a> = <a class="el" href="a00568.html">Lumex::Applied::Logging::LumexLogging</a></td></tr>
-<tr class="separator:a161778f4af8e5bb60e2d33b69c10babb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a0a3fa5f42df0c3d51566d2702d01178e" id="r_a0a3fa5f42df0c3d51566d2702d01178e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00777.html#a0a3fa5f42df0c3d51566d2702d01178e">lumex::applied::hardware::caps::get_mac_address</a> ()</td></tr>
+<tr class="memdesc:a0a3fa5f42df0c3d51566d2702d01178e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the MAC address of the first active network interface.  <br /></td></tr>
+<tr class="separator:a0a3fa5f42df0c3d51566d2702d01178e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd5b51da0a6f3c64ea2f72753de2902" id="r_acbd5b51da0a6f3c64ea2f72753de2902"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00777.html#acbd5b51da0a6f3c64ea2f72753de2902">lumex::applied::hardware::caps::generate_cryptographic_seed</a> ()</td></tr>
+<tr class="memdesc:acbd5b51da0a6f3c64ea2f72753de2902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a cryptographically strong seed for unique identification.  <br /></td></tr>
+<tr class="separator:acbd5b51da0a6f3c64ea2f72753de2902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a8e9e6451b4f33ca0135e137538d24cdd" id="r_a8e9e6451b4f33ca0135e137538d24cdd"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00451.html#a8e9e6451b4f33ca0135e137538d24cdd">Lumex::Applied::Logging::LumexLogLevel</a> : std::uint8_t { <br />
-&#160;&#160;<a class="el" href="a00451.html#a8e9e6451b4f33ca0135e137538d24cddaa603905470e2a5b8c13e96b579ef0dba">Lumex::Applied::Logging::Debug</a> = 10
-, <a class="el" href="a00451.html#a8e9e6451b4f33ca0135e137538d24cdda4059b0251f66a18cb56f544728796875">Lumex::Applied::Logging::Info</a> = 20
-, <a class="el" href="a00451.html#a8e9e6451b4f33ca0135e137538d24cdda505a83f220c02df2f85c3810cd9ceb38">Lumex::Applied::Logging::Success</a> = 25
-, <a class="el" href="a00451.html#a8e9e6451b4f33ca0135e137538d24cdda0eaadb4fcb48a0a0ed7bc9868be9fbaa">Lumex::Applied::Logging::Warning</a> = 30
-, <br />
-&#160;&#160;<a class="el" href="a00451.html#a8e9e6451b4f33ca0135e137538d24cdda902b0d55fddef6f8d651fe1035b7d4bd">Lumex::Applied::Logging::Error</a> = 40
-, <a class="el" href="a00451.html#a8e9e6451b4f33ca0135e137538d24cdda278d01e5af56273bae1bb99a98b370cd">Lumex::Applied::Logging::Critical</a> = 50
-<br />
- }</td></tr>
-<tr class="memdesc:a8e9e6451b4f33ca0135e137538d24cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the severity levels for logging.  <a href="a00451.html#a8e9e6451b4f33ca0135e137538d24cdd">More...</a><br /></td></tr>
-<tr class="separator:a8e9e6451b4f33ca0135e137538d24cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a9521086c871d6d02a600831c6da8784b" id="r_a9521086c871d6d02a600831c6da8784b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a9521086c871d6d02a600831c6da8784b">lumex::applied::hardware::caps::Constants::KCPU_INFO_BUFFER_SIZE</a> = 0x40</td></tr>
+<tr class="memdesc:a9521086c871d6d02a600831c6da8784b"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPU brand string buffer size (64 bytes)  <br /></td></tr>
+<tr class="separator:a9521086c871d6d02a600831c6da8784b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e91243a07645444884671eedb65a6cd" id="r_a9e91243a07645444884671eedb65a6cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a9e91243a07645444884671eedb65a6cd">lumex::applied::hardware::caps::Constants::KLSPCI_BUFFER_SIZE</a> = 256</td></tr>
+<tr class="memdesc:a9e91243a07645444884671eedb65a6cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer size for lspci command output.  <br /></td></tr>
+<tr class="separator:a9e91243a07645444884671eedb65a6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49276851e82c225887780c5566897d7f" id="r_a49276851e82c225887780c5566897d7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a49276851e82c225887780c5566897d7f">lumex::applied::hardware::caps::Constants::KMIN_MEMORY_MB</a> = 4096</td></tr>
+<tr class="memdesc:a49276851e82c225887780c5566897d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum RAM in MB for hardware rendering (4GB)  <br /></td></tr>
+<tr class="separator:a49276851e82c225887780c5566897d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb2f8d71193941d21baa13477edc2ac6" id="r_afb2f8d71193941d21baa13477edc2ac6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#afb2f8d71193941d21baa13477edc2ac6">lumex::applied::hardware::caps::Constants::KMIN_CPU_CORES</a> = 2</td></tr>
+<tr class="memdesc:afb2f8d71193941d21baa13477edc2ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum CPU cores for hardware rendering.  <br /></td></tr>
+<tr class="separator:afb2f8d71193941d21baa13477edc2ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a885b0e9432a940c9857ff3d1b79eb850" id="r_a885b0e9432a940c9857ff3d1b79eb850"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a885b0e9432a940c9857ff3d1b79eb850">lumex::applied::hardware::caps::Constants::KMIN_CPU_GENERATION</a> = 2012</td></tr>
+<tr class="memdesc:a885b0e9432a940c9857ff3d1b79eb850"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum CPU generation year for hardware rendering.  <br /></td></tr>
+<tr class="separator:a885b0e9432a940c9857ff3d1b79eb850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f0378255402ae4d181732c36ff5e75" id="r_ae6f0378255402ae4d181732c36ff5e75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ae6f0378255402ae4d181732c36ff5e75">lumex::applied::hardware::caps::Constants::KHIGH_MEMORY_THRESHOLD_MB</a> = 8192</td></tr>
+<tr class="memdesc:ae6f0378255402ae4d181732c36ff5e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">High memory threshold in MB for GPU checks (8GB)  <br /></td></tr>
+<tr class="separator:ae6f0378255402ae4d181732c36ff5e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae34e54bd928cb64bfb4d85832f1b44e6" id="r_ae34e54bd928cb64bfb4d85832f1b44e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ae34e54bd928cb64bfb4d85832f1b44e6">lumex::applied::hardware::caps::Constants::KHIGH_CPU_CORES</a> = 4</td></tr>
+<tr class="memdesc:ae34e54bd928cb64bfb4d85832f1b44e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">High CPU core count threshold for GPU checks.  <br /></td></tr>
+<tr class="separator:ae34e54bd928cb64bfb4d85832f1b44e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7fa553cc58e041885c535ad76e9727" id="r_a0b7fa553cc58e041885c535ad76e9727"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a0b7fa553cc58e041885c535ad76e9727">lumex::applied::hardware::caps::Constants::KBYTES_TO_MB_FACTOR</a> = 1024ULL * 1024ULL</td></tr>
+<tr class="memdesc:a0b7fa553cc58e041885c535ad76e9727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion factor from bytes to megabytes.  <br /></td></tr>
+<tr class="separator:a0b7fa553cc58e041885c535ad76e9727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d311daa155d78325b3a7d0db5887dc" id="r_a14d311daa155d78325b3a7d0db5887dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a14d311daa155d78325b3a7d0db5887dc">lumex::applied::hardware::caps::Constants::KKB_TO_MB_FACTOR</a> = 1024ULL</td></tr>
+<tr class="memdesc:a14d311daa155d78325b3a7d0db5887dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion factor from kilobytes to megabytes.  <br /></td></tr>
+<tr class="separator:a14d311daa155d78325b3a7d0db5887dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a898f3dd2b97175ae4f3e35254053d69d" id="r_a898f3dd2b97175ae4f3e35254053d69d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a898f3dd2b97175ae4f3e35254053d69d">lumex::applied::hardware::caps::Constants::KGHZ_TO_MHZ_FACTOR</a> = 1000</td></tr>
+<tr class="memdesc:a898f3dd2b97175ae4f3e35254053d69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion factor from GHz to MHz.  <br /></td></tr>
+<tr class="separator:a898f3dd2b97175ae4f3e35254053d69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6efcd3ddfce43a99c36bebef8d184dc9" id="r_a6efcd3ddfce43a99c36bebef8d184dc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a6efcd3ddfce43a99c36bebef8d184dc9">lumex::applied::hardware::caps::Constants::KCPUID_EXTENDED_FEATURES</a> = 0x80000000</td></tr>
+<tr class="memdesc:a6efcd3ddfce43a99c36bebef8d184dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPUID function for extended feature detection.  <br /></td></tr>
+<tr class="separator:a6efcd3ddfce43a99c36bebef8d184dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6703be1c3def8f4b23a9cd9bb14b4d3" id="r_ad6703be1c3def8f4b23a9cd9bb14b4d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ad6703be1c3def8f4b23a9cd9bb14b4d3">lumex::applied::hardware::caps::Constants::KCPUID_BRAND_STRING_1</a> = 0x80000002</td></tr>
+<tr class="memdesc:ad6703be1c3def8f4b23a9cd9bb14b4d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPUID function for CPU brand string part 1.  <br /></td></tr>
+<tr class="separator:ad6703be1c3def8f4b23a9cd9bb14b4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304e58dce00464149d0c960fbff4e859" id="r_a304e58dce00464149d0c960fbff4e859"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a304e58dce00464149d0c960fbff4e859">lumex::applied::hardware::caps::Constants::KCPUID_BRAND_STRING_2</a> = 0x80000003</td></tr>
+<tr class="memdesc:a304e58dce00464149d0c960fbff4e859"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPUID function for CPU brand string part 2.  <br /></td></tr>
+<tr class="separator:a304e58dce00464149d0c960fbff4e859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f80a5e4183d11f79078bc370cf2dcc" id="r_aa8f80a5e4183d11f79078bc370cf2dcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#aa8f80a5e4183d11f79078bc370cf2dcc">lumex::applied::hardware::caps::Constants::KCPUID_BRAND_STRING_3</a> = 0x80000004</td></tr>
+<tr class="memdesc:aa8f80a5e4183d11f79078bc370cf2dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">CPUID function for CPU brand string part 3.  <br /></td></tr>
+<tr class="separator:aa8f80a5e4183d11f79078bc370cf2dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf6cc90e316243c5278e6356e1250d0" id="r_a1cf6cc90e316243c5278e6356e1250d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a1cf6cc90e316243c5278e6356e1250d0">lumex::applied::hardware::caps::Constants::KCPU_BRAND_OFFSET_16</a> = 16</td></tr>
+<tr class="memdesc:a1cf6cc90e316243c5278e6356e1250d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory offset for second part of CPU brand string.  <br /></td></tr>
+<tr class="separator:a1cf6cc90e316243c5278e6356e1250d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc46ab9a387f2877816b3eb3bff45781" id="r_adc46ab9a387f2877816b3eb3bff45781"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#adc46ab9a387f2877816b3eb3bff45781">lumex::applied::hardware::caps::Constants::KCPU_BRAND_OFFSET_32</a> = 32</td></tr>
+<tr class="memdesc:adc46ab9a387f2877816b3eb3bff45781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory offset for third part of CPU brand string.  <br /></td></tr>
+<tr class="separator:adc46ab9a387f2877816b3eb3bff45781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f04843f42275c5e89c1070fb723980d" id="r_a6f04843f42275c5e89c1070fb723980d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a6f04843f42275c5e89c1070fb723980d">lumex::applied::hardware::caps::Constants::KCPU_CORE2_GENERATION</a> = 2008</td></tr>
+<tr class="memdesc:a6f04843f42275c5e89c1070fb723980d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Core 2 Duo/Quad generation year.  <br /></td></tr>
+<tr class="separator:a6f04843f42275c5e89c1070fb723980d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e89561267d725baf32fe6bcbc491ca" id="r_ac6e89561267d725baf32fe6bcbc491ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ac6e89561267d725baf32fe6bcbc491ca">lumex::applied::hardware::caps::Constants::KCPU_NEHALEM_GENERATION</a> = 2008</td></tr>
+<tr class="memdesc:ac6e89561267d725baf32fe6bcbc491ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Nehalem generation year (1st Gen Core i-series)  <br /></td></tr>
+<tr class="separator:ac6e89561267d725baf32fe6bcbc491ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa822974fe3ff3a188d5514739144202d" id="r_aa822974fe3ff3a188d5514739144202d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#aa822974fe3ff3a188d5514739144202d">lumex::applied::hardware::caps::Constants::KCPU_SANDY_BRIDGE_GENERATION</a> = 2011</td></tr>
+<tr class="memdesc:aa822974fe3ff3a188d5514739144202d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Sandy Bridge generation year.  <br /></td></tr>
+<tr class="separator:aa822974fe3ff3a188d5514739144202d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3b0aee88d71c8155430ebb245ff34a" id="r_a4c3b0aee88d71c8155430ebb245ff34a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a4c3b0aee88d71c8155430ebb245ff34a">lumex::applied::hardware::caps::Constants::KCPU_IVY_BRIDGE_GENERATION</a> = 2012</td></tr>
+<tr class="memdesc:a4c3b0aee88d71c8155430ebb245ff34a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Ivy Bridge generation year.  <br /></td></tr>
+<tr class="separator:a4c3b0aee88d71c8155430ebb245ff34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35fd8cdb55cb416dd004bb29f7834e2a" id="r_a35fd8cdb55cb416dd004bb29f7834e2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a35fd8cdb55cb416dd004bb29f7834e2a">lumex::applied::hardware::caps::Constants::KCPU_HASWELL_GENERATION</a> = 2013</td></tr>
+<tr class="memdesc:a35fd8cdb55cb416dd004bb29f7834e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Haswell generation year.  <br /></td></tr>
+<tr class="separator:a35fd8cdb55cb416dd004bb29f7834e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6840f1a4b0f04e69bec138e8e172e4b" id="r_af6840f1a4b0f04e69bec138e8e172e4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#af6840f1a4b0f04e69bec138e8e172e4b">lumex::applied::hardware::caps::Constants::KCPU_SKYLAKE_GENERATION</a> = 2015</td></tr>
+<tr class="memdesc:af6840f1a4b0f04e69bec138e8e172e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Skylake generation year.  <br /></td></tr>
+<tr class="separator:af6840f1a4b0f04e69bec138e8e172e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c8c2ac25720571098d60055141915d6" id="r_a6c8c2ac25720571098d60055141915d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a6c8c2ac25720571098d60055141915d6">lumex::applied::hardware::caps::Constants::KCPU_KABY_LAKE_GENERATION</a> = 2017</td></tr>
+<tr class="memdesc:a6c8c2ac25720571098d60055141915d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Kaby Lake generation year (7th Gen)  <br /></td></tr>
+<tr class="separator:a6c8c2ac25720571098d60055141915d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d58ddb70ff00d57c7d44ceb788bd5a1" id="r_a1d58ddb70ff00d57c7d44ceb788bd5a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a1d58ddb70ff00d57c7d44ceb788bd5a1">lumex::applied::hardware::caps::Constants::KCPU_COFFEE_LAKE_GENERATION</a> = 2017</td></tr>
+<tr class="memdesc:a1d58ddb70ff00d57c7d44ceb788bd5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Coffee Lake generation year.  <br /></td></tr>
+<tr class="separator:a1d58ddb70ff00d57c7d44ceb788bd5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa7e87f48567e71ace67ec806bfbcaf7" id="r_aaa7e87f48567e71ace67ec806bfbcaf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#aaa7e87f48567e71ace67ec806bfbcaf7">lumex::applied::hardware::caps::Constants::KCPU_COMET_LAKE_GENERATION</a> = 2020</td></tr>
+<tr class="memdesc:aaa7e87f48567e71ace67ec806bfbcaf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Comet Lake generation year.  <br /></td></tr>
+<tr class="separator:aaa7e87f48567e71ace67ec806bfbcaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d644e76c000439ab6a7a9db18df12b" id="r_a89d644e76c000439ab6a7a9db18df12b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a89d644e76c000439ab6a7a9db18df12b">lumex::applied::hardware::caps::Constants::KCPU_ROCKET_LAKE_GENERATION</a> = 2021</td></tr>
+<tr class="memdesc:a89d644e76c000439ab6a7a9db18df12b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Rocket Lake generation year (11th Gen)  <br /></td></tr>
+<tr class="separator:a89d644e76c000439ab6a7a9db18df12b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3ae0dcf22e8885aaaa4c66ed5b4ffe" id="r_a4a3ae0dcf22e8885aaaa4c66ed5b4ffe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a4a3ae0dcf22e8885aaaa4c66ed5b4ffe">lumex::applied::hardware::caps::Constants::KCPU_ALDER_LAKE_GENERATION</a> = 2021</td></tr>
+<tr class="memdesc:a4a3ae0dcf22e8885aaaa4c66ed5b4ffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Alder Lake generation year (12th Gen)  <br /></td></tr>
+<tr class="separator:a4a3ae0dcf22e8885aaaa4c66ed5b4ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ee379fc121cad6adb66da7109518d0" id="r_a58ee379fc121cad6adb66da7109518d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a58ee379fc121cad6adb66da7109518d0">lumex::applied::hardware::caps::Constants::KCPU_RAPTOR_LAKE_GENERATION</a> = 2022</td></tr>
+<tr class="memdesc:a58ee379fc121cad6adb66da7109518d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Raptor Lake generation year (13th Gen)  <br /></td></tr>
+<tr class="separator:a58ee379fc121cad6adb66da7109518d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f3c7077fc858aa648607889c86f0b71" id="r_a4f3c7077fc858aa648607889c86f0b71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a4f3c7077fc858aa648607889c86f0b71">lumex::applied::hardware::caps::Constants::KCPU_METEOR_LAKE_GENERATION</a> = 2023</td></tr>
+<tr class="memdesc:a4f3c7077fc858aa648607889c86f0b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Meteor Lake generation year (14th Gen)  <br /></td></tr>
+<tr class="separator:a4f3c7077fc858aa648607889c86f0b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d745a0d9dcc9e6f8c742fe93104381" id="r_a70d745a0d9dcc9e6f8c742fe93104381"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a70d745a0d9dcc9e6f8c742fe93104381">lumex::applied::hardware::caps::Constants::KCPU_RYZEN_1000_GENERATION</a> = 2017</td></tr>
+<tr class="memdesc:a70d745a0d9dcc9e6f8c742fe93104381"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 1000 series generation year.  <br /></td></tr>
+<tr class="separator:a70d745a0d9dcc9e6f8c742fe93104381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af94821b1d4122fd33dc286d16eda9946" id="r_af94821b1d4122fd33dc286d16eda9946"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#af94821b1d4122fd33dc286d16eda9946">lumex::applied::hardware::caps::Constants::KCPU_RYZEN_2000_GENERATION</a> = 2018</td></tr>
+<tr class="memdesc:af94821b1d4122fd33dc286d16eda9946"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 2000 series generation year.  <br /></td></tr>
+<tr class="separator:af94821b1d4122fd33dc286d16eda9946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c54e2af73358be853a5ed3539147c1e" id="r_a5c54e2af73358be853a5ed3539147c1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a5c54e2af73358be853a5ed3539147c1e">lumex::applied::hardware::caps::Constants::KCPU_RYZEN_3000_GENERATION</a> = 2019</td></tr>
+<tr class="memdesc:a5c54e2af73358be853a5ed3539147c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 3000 series generation year.  <br /></td></tr>
+<tr class="separator:a5c54e2af73358be853a5ed3539147c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0959d1eca78826d3897f1c3deac1ac" id="r_a1b0959d1eca78826d3897f1c3deac1ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a1b0959d1eca78826d3897f1c3deac1ac">lumex::applied::hardware::caps::Constants::KCPU_RYZEN_4000_GENERATION</a> = 2020</td></tr>
+<tr class="memdesc:a1b0959d1eca78826d3897f1c3deac1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 4000 (Renoir) series generation year.  <br /></td></tr>
+<tr class="separator:a1b0959d1eca78826d3897f1c3deac1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae618ea7c38f0ac94b289d3bae4f7d04e" id="r_ae618ea7c38f0ac94b289d3bae4f7d04e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ae618ea7c38f0ac94b289d3bae4f7d04e">lumex::applied::hardware::caps::Constants::KCPU_RYZEN_5000_GENERATION</a> = 2020</td></tr>
+<tr class="memdesc:ae618ea7c38f0ac94b289d3bae4f7d04e"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 5000 series generation year.  <br /></td></tr>
+<tr class="separator:ae618ea7c38f0ac94b289d3bae4f7d04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288064eb72c07e33bfdcf2aa64ea548b" id="r_a288064eb72c07e33bfdcf2aa64ea548b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a288064eb72c07e33bfdcf2aa64ea548b">lumex::applied::hardware::caps::Constants::KCPU_RYZEN_6000_GENERATION</a> = 2022</td></tr>
+<tr class="memdesc:a288064eb72c07e33bfdcf2aa64ea548b"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 6000 (Rembrandt) series generation year.  <br /></td></tr>
+<tr class="separator:a288064eb72c07e33bfdcf2aa64ea548b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37130fa30e772997dcdca9a05dfbbcb" id="r_ac37130fa30e772997dcdca9a05dfbbcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ac37130fa30e772997dcdca9a05dfbbcb">lumex::applied::hardware::caps::Constants::KCPU_RYZEN_7000_GENERATION</a> = 2022</td></tr>
+<tr class="memdesc:ac37130fa30e772997dcdca9a05dfbbcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 7000 series generation year.  <br /></td></tr>
+<tr class="separator:ac37130fa30e772997dcdca9a05dfbbcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb82e1a3e669e42b16e3ee5400c94fc6" id="r_aeb82e1a3e669e42b16e3ee5400c94fc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#aeb82e1a3e669e42b16e3ee5400c94fc6">lumex::applied::hardware::caps::Constants::KCPU_DEFAULT_GENERATION</a> = 2015</td></tr>
+<tr class="memdesc:aeb82e1a3e669e42b16e3ee5400c94fc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default CPU generation year for unknown processors.  <br /></td></tr>
+<tr class="separator:aeb82e1a3e669e42b16e3ee5400c94fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b21ed6ae3e05ea855efd1ec96edb7c" id="r_ae5b21ed6ae3e05ea855efd1ec96edb7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ae5b21ed6ae3e05ea855efd1ec96edb7c">lumex::applied::hardware::caps::Constants::KINTEL_CORE2_IDENTIFIER</a> = &quot;Core 2&quot;</td></tr>
+<tr class="memdesc:ae5b21ed6ae3e05ea855efd1ec96edb7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Core 2 series identifier.  <br /></td></tr>
+<tr class="separator:ae5b21ed6ae3e05ea855efd1ec96edb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a165ddc368b3a4cb3a0031b32eede3628" id="r_a165ddc368b3a4cb3a0031b32eede3628"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a165ddc368b3a4cb3a0031b32eede3628">lumex::applied::hardware::caps::Constants::KINTEL_I3_2_IDENTIFIER</a> = &quot;i3-2&quot;</td></tr>
+<tr class="memdesc:a165ddc368b3a4cb3a0031b32eede3628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i3 2nd gen identifier.  <br /></td></tr>
+<tr class="separator:a165ddc368b3a4cb3a0031b32eede3628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad64c764c288c3e9ca6405666faba6df1" id="r_ad64c764c288c3e9ca6405666faba6df1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ad64c764c288c3e9ca6405666faba6df1">lumex::applied::hardware::caps::Constants::KINTEL_I5_2_IDENTIFIER</a> = &quot;i5-2&quot;</td></tr>
+<tr class="memdesc:ad64c764c288c3e9ca6405666faba6df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i5 2nd gen identifier.  <br /></td></tr>
+<tr class="separator:ad64c764c288c3e9ca6405666faba6df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dce14e0b51bfd0db2e4a1e1fac6648b" id="r_a3dce14e0b51bfd0db2e4a1e1fac6648b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a3dce14e0b51bfd0db2e4a1e1fac6648b">lumex::applied::hardware::caps::Constants::KINTEL_I7_2_IDENTIFIER</a> = &quot;i7-2&quot;</td></tr>
+<tr class="memdesc:a3dce14e0b51bfd0db2e4a1e1fac6648b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i7 2nd gen identifier.  <br /></td></tr>
+<tr class="separator:a3dce14e0b51bfd0db2e4a1e1fac6648b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae36f514afd53b0f8f0e05b29d7d095e5" id="r_ae36f514afd53b0f8f0e05b29d7d095e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ae36f514afd53b0f8f0e05b29d7d095e5">lumex::applied::hardware::caps::Constants::KINTEL_I3_3_IDENTIFIER</a> = &quot;i3-3&quot;</td></tr>
+<tr class="memdesc:ae36f514afd53b0f8f0e05b29d7d095e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i3 3rd gen identifier.  <br /></td></tr>
+<tr class="separator:ae36f514afd53b0f8f0e05b29d7d095e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88fb470bf6c003414a1bf0421324b6f2" id="r_a88fb470bf6c003414a1bf0421324b6f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a88fb470bf6c003414a1bf0421324b6f2">lumex::applied::hardware::caps::Constants::KINTEL_I5_3_IDENTIFIER</a> = &quot;i5-3&quot;</td></tr>
+<tr class="memdesc:a88fb470bf6c003414a1bf0421324b6f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i5 3rd gen identifier.  <br /></td></tr>
+<tr class="separator:a88fb470bf6c003414a1bf0421324b6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f4fba987e0fe01791b3aecb92ef1837" id="r_a7f4fba987e0fe01791b3aecb92ef1837"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a7f4fba987e0fe01791b3aecb92ef1837">lumex::applied::hardware::caps::Constants::KINTEL_I7_3_IDENTIFIER</a> = &quot;i7-3&quot;</td></tr>
+<tr class="memdesc:a7f4fba987e0fe01791b3aecb92ef1837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i7 3rd gen identifier.  <br /></td></tr>
+<tr class="separator:a7f4fba987e0fe01791b3aecb92ef1837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92bf695284bdb86113b0826d639bebe5" id="r_a92bf695284bdb86113b0826d639bebe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a92bf695284bdb86113b0826d639bebe5">lumex::applied::hardware::caps::Constants::KINTEL_I3_4_IDENTIFIER</a> = &quot;i3-4&quot;</td></tr>
+<tr class="memdesc:a92bf695284bdb86113b0826d639bebe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i3 4th gen identifier.  <br /></td></tr>
+<tr class="separator:a92bf695284bdb86113b0826d639bebe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258e20d77c90f9c5330139dde0ff42b8" id="r_a258e20d77c90f9c5330139dde0ff42b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a258e20d77c90f9c5330139dde0ff42b8">lumex::applied::hardware::caps::Constants::KINTEL_I5_4_IDENTIFIER</a> = &quot;i5-4&quot;</td></tr>
+<tr class="memdesc:a258e20d77c90f9c5330139dde0ff42b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i5 4th gen identifier.  <br /></td></tr>
+<tr class="separator:a258e20d77c90f9c5330139dde0ff42b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30c0c9a5e2eaaf655a238b3b878897e" id="r_ad30c0c9a5e2eaaf655a238b3b878897e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ad30c0c9a5e2eaaf655a238b3b878897e">lumex::applied::hardware::caps::Constants::KINTEL_I7_4_IDENTIFIER</a> = &quot;i7-4&quot;</td></tr>
+<tr class="memdesc:ad30c0c9a5e2eaaf655a238b3b878897e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i7 4th gen identifier.  <br /></td></tr>
+<tr class="separator:ad30c0c9a5e2eaaf655a238b3b878897e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987a866c56cacfd6a166248966a31d33" id="r_a987a866c56cacfd6a166248966a31d33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a987a866c56cacfd6a166248966a31d33">lumex::applied::hardware::caps::Constants::KINTEL_I3_6_IDENTIFIER</a> = &quot;i3-6&quot;</td></tr>
+<tr class="memdesc:a987a866c56cacfd6a166248966a31d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i3 6th gen identifier.  <br /></td></tr>
+<tr class="separator:a987a866c56cacfd6a166248966a31d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a643050ab10b955d4a8e3394e20d482" id="r_a1a643050ab10b955d4a8e3394e20d482"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a1a643050ab10b955d4a8e3394e20d482">lumex::applied::hardware::caps::Constants::KINTEL_I5_6_IDENTIFIER</a> = &quot;i5-6&quot;</td></tr>
+<tr class="memdesc:a1a643050ab10b955d4a8e3394e20d482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i5 6th gen identifier.  <br /></td></tr>
+<tr class="separator:a1a643050ab10b955d4a8e3394e20d482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebc480f6791d87a6e0e172e0c0ba0b5" id="r_a5ebc480f6791d87a6e0e172e0c0ba0b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a5ebc480f6791d87a6e0e172e0c0ba0b5">lumex::applied::hardware::caps::Constants::KINTEL_I7_6_IDENTIFIER</a> = &quot;i7-6&quot;</td></tr>
+<tr class="memdesc:a5ebc480f6791d87a6e0e172e0c0ba0b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i7 6th gen identifier.  <br /></td></tr>
+<tr class="separator:a5ebc480f6791d87a6e0e172e0c0ba0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92431585b27f72b03c4468928b10b3a" id="r_af92431585b27f72b03c4468928b10b3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#af92431585b27f72b03c4468928b10b3a">lumex::applied::hardware::caps::Constants::KINTEL_I3_8_IDENTIFIER</a> = &quot;i3-8&quot;</td></tr>
+<tr class="memdesc:af92431585b27f72b03c4468928b10b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i3 8th gen identifier.  <br /></td></tr>
+<tr class="separator:af92431585b27f72b03c4468928b10b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1675bd5981f6e4e30a0b260d8ea5af1" id="r_af1675bd5981f6e4e30a0b260d8ea5af1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#af1675bd5981f6e4e30a0b260d8ea5af1">lumex::applied::hardware::caps::Constants::KINTEL_I5_8_IDENTIFIER</a> = &quot;i5-8&quot;</td></tr>
+<tr class="memdesc:af1675bd5981f6e4e30a0b260d8ea5af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i5 8th gen identifier.  <br /></td></tr>
+<tr class="separator:af1675bd5981f6e4e30a0b260d8ea5af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec0da8a2e4e3152abc51517278a237d" id="r_a4ec0da8a2e4e3152abc51517278a237d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a4ec0da8a2e4e3152abc51517278a237d">lumex::applied::hardware::caps::Constants::KINTEL_I7_8_IDENTIFIER</a> = &quot;i7-8&quot;</td></tr>
+<tr class="memdesc:a4ec0da8a2e4e3152abc51517278a237d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i7 8th gen identifier.  <br /></td></tr>
+<tr class="separator:a4ec0da8a2e4e3152abc51517278a237d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea874734fb4723d3d64a515698c2d208" id="r_aea874734fb4723d3d64a515698c2d208"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#aea874734fb4723d3d64a515698c2d208">lumex::applied::hardware::caps::Constants::KINTEL_I3_10_IDENTIFIER</a> = &quot;i3-10&quot;</td></tr>
+<tr class="memdesc:aea874734fb4723d3d64a515698c2d208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i3 10th gen identifier.  <br /></td></tr>
+<tr class="separator:aea874734fb4723d3d64a515698c2d208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2fceea5ce3ae9e8d42601ead03b56f8" id="r_ad2fceea5ce3ae9e8d42601ead03b56f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ad2fceea5ce3ae9e8d42601ead03b56f8">lumex::applied::hardware::caps::Constants::KINTEL_I5_10_IDENTIFIER</a> = &quot;i5-10&quot;</td></tr>
+<tr class="memdesc:ad2fceea5ce3ae9e8d42601ead03b56f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i5 10th gen identifier.  <br /></td></tr>
+<tr class="separator:ad2fceea5ce3ae9e8d42601ead03b56f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0010bc75f3956cae89c23dc95ec266d4" id="r_a0010bc75f3956cae89c23dc95ec266d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a0010bc75f3956cae89c23dc95ec266d4">lumex::applied::hardware::caps::Constants::KINTEL_I7_10_IDENTIFIER</a> = &quot;i7-10&quot;</td></tr>
+<tr class="memdesc:a0010bc75f3956cae89c23dc95ec266d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i7 10th gen identifier.  <br /></td></tr>
+<tr class="separator:a0010bc75f3956cae89c23dc95ec266d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c8585e18d511380422e8583b412bc87" id="r_a9c8585e18d511380422e8583b412bc87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a9c8585e18d511380422e8583b412bc87">lumex::applied::hardware::caps::Constants::KINTEL_I3_11_IDENTIFIER</a> = &quot;i3-11&quot;</td></tr>
+<tr class="memdesc:a9c8585e18d511380422e8583b412bc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i3 11th gen identifier (Rocket Lake)  <br /></td></tr>
+<tr class="separator:a9c8585e18d511380422e8583b412bc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b673a6ab17f78cdd7b6c9ae6f9ca00" id="r_aa5b673a6ab17f78cdd7b6c9ae6f9ca00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#aa5b673a6ab17f78cdd7b6c9ae6f9ca00">lumex::applied::hardware::caps::Constants::KINTEL_I5_11_IDENTIFIER</a> = &quot;i5-11&quot;</td></tr>
+<tr class="memdesc:aa5b673a6ab17f78cdd7b6c9ae6f9ca00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i5 11th gen identifier (Rocket Lake)  <br /></td></tr>
+<tr class="separator:aa5b673a6ab17f78cdd7b6c9ae6f9ca00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a412ad2407b5579978c98513c29df72fa" id="r_a412ad2407b5579978c98513c29df72fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a412ad2407b5579978c98513c29df72fa">lumex::applied::hardware::caps::Constants::KINTEL_I7_11_IDENTIFIER</a> = &quot;i7-11&quot;</td></tr>
+<tr class="memdesc:a412ad2407b5579978c98513c29df72fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i7 11th gen identifier (Rocket Lake)  <br /></td></tr>
+<tr class="separator:a412ad2407b5579978c98513c29df72fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d5d4cf3ecdcf05313751a52ec33fd6" id="r_a74d5d4cf3ecdcf05313751a52ec33fd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a74d5d4cf3ecdcf05313751a52ec33fd6">lumex::applied::hardware::caps::Constants::KINTEL_I3_12_IDENTIFIER</a> = &quot;i3-12&quot;</td></tr>
+<tr class="memdesc:a74d5d4cf3ecdcf05313751a52ec33fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i3 12th gen identifier (Alder Lake)  <br /></td></tr>
+<tr class="separator:a74d5d4cf3ecdcf05313751a52ec33fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fa1e296ee189b10be23f254720cb35c" id="r_a8fa1e296ee189b10be23f254720cb35c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a8fa1e296ee189b10be23f254720cb35c">lumex::applied::hardware::caps::Constants::KINTEL_I5_12_IDENTIFIER</a> = &quot;i5-12&quot;</td></tr>
+<tr class="memdesc:a8fa1e296ee189b10be23f254720cb35c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i5 12th gen identifier (Alder Lake)  <br /></td></tr>
+<tr class="separator:a8fa1e296ee189b10be23f254720cb35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8357799ee45396d78d82eeb956a7c724" id="r_a8357799ee45396d78d82eeb956a7c724"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a8357799ee45396d78d82eeb956a7c724">lumex::applied::hardware::caps::Constants::KINTEL_I7_12_IDENTIFIER</a> = &quot;i7-12&quot;</td></tr>
+<tr class="memdesc:a8357799ee45396d78d82eeb956a7c724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i7 12th gen identifier (Alder Lake)  <br /></td></tr>
+<tr class="separator:a8357799ee45396d78d82eeb956a7c724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005368bd5c3234c00b63b3f6dd54b242" id="r_a005368bd5c3234c00b63b3f6dd54b242"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a005368bd5c3234c00b63b3f6dd54b242">lumex::applied::hardware::caps::Constants::KINTEL_I9_12_IDENTIFIER</a> = &quot;i9-12&quot;</td></tr>
+<tr class="memdesc:a005368bd5c3234c00b63b3f6dd54b242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i9 12th gen identifier (Alder Lake)  <br /></td></tr>
+<tr class="separator:a005368bd5c3234c00b63b3f6dd54b242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accdc9a09844387fe0385bf7ad4aeb5ec" id="r_accdc9a09844387fe0385bf7ad4aeb5ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#accdc9a09844387fe0385bf7ad4aeb5ec">lumex::applied::hardware::caps::Constants::KINTEL_I3_13_IDENTIFIER</a> = &quot;i3-13&quot;</td></tr>
+<tr class="memdesc:accdc9a09844387fe0385bf7ad4aeb5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i3 13th gen identifier (Raptor Lake)  <br /></td></tr>
+<tr class="separator:accdc9a09844387fe0385bf7ad4aeb5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12710274809443397d236f623f58977e" id="r_a12710274809443397d236f623f58977e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a12710274809443397d236f623f58977e">lumex::applied::hardware::caps::Constants::KINTEL_I5_13_IDENTIFIER</a> = &quot;i5-13&quot;</td></tr>
+<tr class="memdesc:a12710274809443397d236f623f58977e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i5 13th gen identifier (Raptor Lake)  <br /></td></tr>
+<tr class="separator:a12710274809443397d236f623f58977e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f0d1c584a1624790cebba0b038178dc" id="r_a4f0d1c584a1624790cebba0b038178dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a4f0d1c584a1624790cebba0b038178dc">lumex::applied::hardware::caps::Constants::KINTEL_I7_13_IDENTIFIER</a> = &quot;i7-13&quot;</td></tr>
+<tr class="memdesc:a4f0d1c584a1624790cebba0b038178dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i7 13th gen identifier (Raptor Lake)  <br /></td></tr>
+<tr class="separator:a4f0d1c584a1624790cebba0b038178dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53270704d9d4984febec010146015b96" id="r_a53270704d9d4984febec010146015b96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a53270704d9d4984febec010146015b96">lumex::applied::hardware::caps::Constants::KINTEL_I9_13_IDENTIFIER</a> = &quot;i9-13&quot;</td></tr>
+<tr class="memdesc:a53270704d9d4984febec010146015b96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i9 13th gen identifier (Raptor Lake)  <br /></td></tr>
+<tr class="separator:a53270704d9d4984febec010146015b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52fc957507e5b92e1c6abcb70071a741" id="r_a52fc957507e5b92e1c6abcb70071a741"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a52fc957507e5b92e1c6abcb70071a741">lumex::applied::hardware::caps::Constants::KINTEL_I3_7_IDENTIFIER</a> = &quot;i3-7&quot;</td></tr>
+<tr class="memdesc:a52fc957507e5b92e1c6abcb70071a741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i3 7th gen identifier (Kaby Lake)  <br /></td></tr>
+<tr class="separator:a52fc957507e5b92e1c6abcb70071a741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe05c894119862208a092eee37f9f427" id="r_abe05c894119862208a092eee37f9f427"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#abe05c894119862208a092eee37f9f427">lumex::applied::hardware::caps::Constants::KINTEL_I5_7_IDENTIFIER</a> = &quot;i5-7&quot;</td></tr>
+<tr class="memdesc:abe05c894119862208a092eee37f9f427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i5 7th gen identifier (Kaby Lake)  <br /></td></tr>
+<tr class="separator:abe05c894119862208a092eee37f9f427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae723af34f6638af399b4d8dcd52a842d" id="r_ae723af34f6638af399b4d8dcd52a842d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ae723af34f6638af399b4d8dcd52a842d">lumex::applied::hardware::caps::Constants::KINTEL_I7_7_IDENTIFIER</a> = &quot;i7-7&quot;</td></tr>
+<tr class="memdesc:ae723af34f6638af399b4d8dcd52a842d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i7 7th gen identifier (Kaby Lake)  <br /></td></tr>
+<tr class="separator:ae723af34f6638af399b4d8dcd52a842d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2708cd3e453f051642c3f91c0fa95269" id="r_a2708cd3e453f051642c3f91c0fa95269"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a2708cd3e453f051642c3f91c0fa95269">lumex::applied::hardware::caps::Constants::KINTEL_I3_14_IDENTIFIER</a> = &quot;i3-14&quot;</td></tr>
+<tr class="memdesc:a2708cd3e453f051642c3f91c0fa95269"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i3 14th gen identifier (Meteor Lake)  <br /></td></tr>
+<tr class="separator:a2708cd3e453f051642c3f91c0fa95269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2515d9d1ead881c910a9db0a8c1e401" id="r_ad2515d9d1ead881c910a9db0a8c1e401"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ad2515d9d1ead881c910a9db0a8c1e401">lumex::applied::hardware::caps::Constants::KINTEL_I5_14_IDENTIFIER</a> = &quot;i5-14&quot;</td></tr>
+<tr class="memdesc:ad2515d9d1ead881c910a9db0a8c1e401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i5 14th gen identifier (Meteor Lake)  <br /></td></tr>
+<tr class="separator:ad2515d9d1ead881c910a9db0a8c1e401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ba6b468b3084c73d347ad35c1616a2" id="r_a54ba6b468b3084c73d347ad35c1616a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a54ba6b468b3084c73d347ad35c1616a2">lumex::applied::hardware::caps::Constants::KINTEL_I7_14_IDENTIFIER</a> = &quot;i7-14&quot;</td></tr>
+<tr class="memdesc:a54ba6b468b3084c73d347ad35c1616a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i7 14th gen identifier (Meteor Lake)  <br /></td></tr>
+<tr class="separator:a54ba6b468b3084c73d347ad35c1616a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57a06a535fe01a4f4856586839e4bfb" id="r_ae57a06a535fe01a4f4856586839e4bfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ae57a06a535fe01a4f4856586839e4bfb">lumex::applied::hardware::caps::Constants::KINTEL_I9_14_IDENTIFIER</a> = &quot;i9-14&quot;</td></tr>
+<tr class="memdesc:ae57a06a535fe01a4f4856586839e4bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel i9 14th gen identifier (Meteor Lake)  <br /></td></tr>
+<tr class="separator:ae57a06a535fe01a4f4856586839e4bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2c600f826bdc4f99e3833af0e3af5a" id="r_aec2c600f826bdc4f99e3833af0e3af5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#aec2c600f826bdc4f99e3833af0e3af5a">lumex::applied::hardware::caps::Constants::KINTEL_I5_750_IDENTIFIER</a> = &quot;i5-750&quot;</td></tr>
+<tr class="memdesc:aec2c600f826bdc4f99e3833af0e3af5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Core i5-750 identifier (1st Gen)  <br /></td></tr>
+<tr class="separator:aec2c600f826bdc4f99e3833af0e3af5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ee0eb01cfeb62aad1577715852135b" id="r_af5ee0eb01cfeb62aad1577715852135b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#af5ee0eb01cfeb62aad1577715852135b">lumex::applied::hardware::caps::Constants::KINTEL_I7_9_IDENTIFIER</a> = &quot;i7-9&quot;</td></tr>
+<tr class="memdesc:af5ee0eb01cfeb62aad1577715852135b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Core i7-9xx identifier (1st Gen)  <br /></td></tr>
+<tr class="separator:af5ee0eb01cfeb62aad1577715852135b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ef0f8a505d6e75fee5bd9a0b02cfad" id="r_ab6ef0f8a505d6e75fee5bd9a0b02cfad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ab6ef0f8a505d6e75fee5bd9a0b02cfad">lumex::applied::hardware::caps::Constants::KINTEL_PENTIUM_G_IDENTIFIER</a> = &quot;Pentium G&quot;</td></tr>
+<tr class="separator:ab6ef0f8a505d6e75fee5bd9a0b02cfad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6182d0140b22efeec1b7e0aa2a02b7d9" id="r_a6182d0140b22efeec1b7e0aa2a02b7d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a6182d0140b22efeec1b7e0aa2a02b7d9">lumex::applied::hardware::caps::Constants::KAMD_RYZEN_IDENTIFIER</a> = &quot;Ryzen&quot;</td></tr>
+<tr class="memdesc:a6182d0140b22efeec1b7e0aa2a02b7d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen series identifier.  <br /></td></tr>
+<tr class="separator:a6182d0140b22efeec1b7e0aa2a02b7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a778d747f0b645afea4c48a37bfe82d35" id="r_a778d747f0b645afea4c48a37bfe82d35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a778d747f0b645afea4c48a37bfe82d35">lumex::applied::hardware::caps::Constants::KAMD_RYZEN_1000_IDENTIFIER</a> = &quot;1000&quot;</td></tr>
+<tr class="memdesc:a778d747f0b645afea4c48a37bfe82d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 1000 series identifier.  <br /></td></tr>
+<tr class="separator:a778d747f0b645afea4c48a37bfe82d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e4e294010a6d2bbe9412b7c99b99da" id="r_a78e4e294010a6d2bbe9412b7c99b99da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a78e4e294010a6d2bbe9412b7c99b99da">lumex::applied::hardware::caps::Constants::KAMD_RYZEN_2000_IDENTIFIER</a> = &quot;2000&quot;</td></tr>
+<tr class="memdesc:a78e4e294010a6d2bbe9412b7c99b99da"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 2000 series identifier.  <br /></td></tr>
+<tr class="separator:a78e4e294010a6d2bbe9412b7c99b99da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8623a384b5bd4b3eba771a6f0bfa7643" id="r_a8623a384b5bd4b3eba771a6f0bfa7643"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a8623a384b5bd4b3eba771a6f0bfa7643">lumex::applied::hardware::caps::Constants::KAMD_RYZEN_3000_IDENTIFIER</a> = &quot;3000&quot;</td></tr>
+<tr class="memdesc:a8623a384b5bd4b3eba771a6f0bfa7643"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 3000 series identifier.  <br /></td></tr>
+<tr class="separator:a8623a384b5bd4b3eba771a6f0bfa7643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a43f74378dcbb20acbd5f420557b4f0" id="r_a3a43f74378dcbb20acbd5f420557b4f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a3a43f74378dcbb20acbd5f420557b4f0">lumex::applied::hardware::caps::Constants::KAMD_RYZEN_4000_IDENTIFIER</a> = &quot;4000&quot;</td></tr>
+<tr class="memdesc:a3a43f74378dcbb20acbd5f420557b4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 4000 series identifier (Renoir)  <br /></td></tr>
+<tr class="separator:a3a43f74378dcbb20acbd5f420557b4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43a62ab673bbeaee1b22990a45f9241a" id="r_a43a62ab673bbeaee1b22990a45f9241a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a43a62ab673bbeaee1b22990a45f9241a">lumex::applied::hardware::caps::Constants::KAMD_RYZEN_5000_IDENTIFIER</a> = &quot;5000&quot;</td></tr>
+<tr class="memdesc:a43a62ab673bbeaee1b22990a45f9241a"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 5000 series identifier.  <br /></td></tr>
+<tr class="separator:a43a62ab673bbeaee1b22990a45f9241a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3daf46d4c4d52f64da43e4817cb5625" id="r_ab3daf46d4c4d52f64da43e4817cb5625"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ab3daf46d4c4d52f64da43e4817cb5625">lumex::applied::hardware::caps::Constants::KAMD_RYZEN_6000_IDENTIFIER</a> = &quot;6000&quot;</td></tr>
+<tr class="memdesc:ab3daf46d4c4d52f64da43e4817cb5625"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 6000 series identifier (Rembrandt)  <br /></td></tr>
+<tr class="separator:ab3daf46d4c4d52f64da43e4817cb5625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59920a8bb127cb248df9844494c6f300" id="r_a59920a8bb127cb248df9844494c6f300"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a59920a8bb127cb248df9844494c6f300">lumex::applied::hardware::caps::Constants::KAMD_RYZEN_7000_IDENTIFIER</a> = &quot;7000&quot;</td></tr>
+<tr class="memdesc:a59920a8bb127cb248df9844494c6f300"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Ryzen 7000 series identifier.  <br /></td></tr>
+<tr class="separator:a59920a8bb127cb248df9844494c6f300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4abcdbbccb8e4e434e16fc95ff51e474" id="r_a4abcdbbccb8e4e434e16fc95ff51e474"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a4abcdbbccb8e4e434e16fc95ff51e474">lumex::applied::hardware::caps::Constants::KMICROSOFT_GPU_IDENTIFIER</a> = &quot;Microsoft&quot;</td></tr>
+<tr class="memdesc:a4abcdbbccb8e4e434e16fc95ff51e474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Microsoft GPU driver identifier.  <br /></td></tr>
+<tr class="separator:a4abcdbbccb8e4e434e16fc95ff51e474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf3459dc58ceab76b457b16e724e7036" id="r_aaf3459dc58ceab76b457b16e724e7036"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#aaf3459dc58ceab76b457b16e724e7036">lumex::applied::hardware::caps::Constants::KBASIC_GPU_IDENTIFIER</a> = &quot;Basic&quot;</td></tr>
+<tr class="memdesc:aaf3459dc58ceab76b457b16e724e7036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic render driver identifier.  <br /></td></tr>
+<tr class="separator:aaf3459dc58ceab76b457b16e724e7036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51009c7f18fd17ad4c1fc28d4b89e50c" id="r_a51009c7f18fd17ad4c1fc28d4b89e50c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a51009c7f18fd17ad4c1fc28d4b89e50c">lumex::applied::hardware::caps::Constants::KINTEL_GPU_IDENTIFIER</a> = &quot;Intel&quot;</td></tr>
+<tr class="memdesc:a51009c7f18fd17ad4c1fc28d4b89e50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel integrated graphics identifier.  <br /></td></tr>
+<tr class="separator:a51009c7f18fd17ad4c1fc28d4b89e50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff280fd0a8a4acb5f23e69c9f7acd8f3" id="r_aff280fd0a8a4acb5f23e69c9f7acd8f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#aff280fd0a8a4acb5f23e69c9f7acd8f3">lumex::applied::hardware::caps::Constants::KNVIDIA_GPU_IDENTIFIER</a> = &quot;NVIDIA&quot;</td></tr>
+<tr class="memdesc:aff280fd0a8a4acb5f23e69c9f7acd8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVIDIA GPU identifier.  <br /></td></tr>
+<tr class="separator:aff280fd0a8a4acb5f23e69c9f7acd8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af55dd2a38cdcc248474d48555410844d" id="r_af55dd2a38cdcc248474d48555410844d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#af55dd2a38cdcc248474d48555410844d">lumex::applied::hardware::caps::Constants::KAMD_GPU_IDENTIFIER</a> = &quot;AMD&quot;</td></tr>
+<tr class="memdesc:af55dd2a38cdcc248474d48555410844d"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD GPU identifier (general)  <br /></td></tr>
+<tr class="separator:af55dd2a38cdcc248474d48555410844d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d1be3531e1db529443effad6f949498" id="r_a0d1be3531e1db529443effad6f949498"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a0d1be3531e1db529443effad6f949498">lumex::applied::hardware::caps::Constants::KAMD_RADEON_GPU_IDENTIFIER</a> = &quot;Radeon&quot;</td></tr>
+<tr class="memdesc:a0d1be3531e1db529443effad6f949498"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Radeon GPU identifier.  <br /></td></tr>
+<tr class="separator:a0d1be3531e1db529443effad6f949498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b3c696e11dbe2f0780b56f08f59eac7" id="r_a6b3c696e11dbe2f0780b56f08f59eac7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a6b3c696e11dbe2f0780b56f08f59eac7">lumex::applied::hardware::caps::Constants::KOLD_CPU_PENTIUM</a> = &quot;Pentium&quot;</td></tr>
+<tr class="memdesc:a6b3c696e11dbe2f0780b56f08f59eac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Pentium series identifier.  <br /></td></tr>
+<tr class="separator:a6b3c696e11dbe2f0780b56f08f59eac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e105b29e5ce664221cd826cf52cab1" id="r_a32e105b29e5ce664221cd826cf52cab1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a32e105b29e5ce664221cd826cf52cab1">lumex::applied::hardware::caps::Constants::KOLD_CPU_CELERON</a> = &quot;Celeron&quot;</td></tr>
+<tr class="memdesc:a32e105b29e5ce664221cd826cf52cab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Celeron series identifier.  <br /></td></tr>
+<tr class="separator:a32e105b29e5ce664221cd826cf52cab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae91ac33afcce689a825e8d8570a1eb03" id="r_ae91ac33afcce689a825e8d8570a1eb03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#ae91ac33afcce689a825e8d8570a1eb03">lumex::applied::hardware::caps::Constants::KOLD_CPU_ATOM</a> = &quot;Atom&quot;</td></tr>
+<tr class="memdesc:ae91ac33afcce689a825e8d8570a1eb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intel Atom series identifier.  <br /></td></tr>
+<tr class="separator:ae91ac33afcce689a825e8d8570a1eb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfab23f420ef602d4740432f28e09026" id="r_acfab23f420ef602d4740432f28e09026"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#acfab23f420ef602d4740432f28e09026">lumex::applied::hardware::caps::Constants::KOLD_CPU_ATHLON64</a> = &quot;Athlon 64&quot;</td></tr>
+<tr class="memdesc:acfab23f420ef602d4740432f28e09026"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Athlon 64 series identifier.  <br /></td></tr>
+<tr class="separator:acfab23f420ef602d4740432f28e09026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fba0374c34e5f63b478df2171c49306" id="r_a3fba0374c34e5f63b478df2171c49306"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a3fba0374c34e5f63b478df2171c49306">lumex::applied::hardware::caps::Constants::KOLD_CPU_PHENOM</a> = &quot;Phenom&quot;</td></tr>
+<tr class="memdesc:a3fba0374c34e5f63b478df2171c49306"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Phenom series identifier.  <br /></td></tr>
+<tr class="separator:a3fba0374c34e5f63b478df2171c49306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc1973bde6fc1a709ebc4bba2e496874" id="r_adc1973bde6fc1a709ebc4bba2e496874"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#adc1973bde6fc1a709ebc4bba2e496874">lumex::applied::hardware::caps::Constants::KOLD_CPU_SEMPRON</a> = &quot;Sempron&quot;</td></tr>
+<tr class="memdesc:adc1973bde6fc1a709ebc4bba2e496874"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD Sempron series identifier.  <br /></td></tr>
+<tr class="separator:adc1973bde6fc1a709ebc4bba2e496874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86825ae8713c45fa28a6703b82f5c77b" id="r_a86825ae8713c45fa28a6703b82f5c77b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#a86825ae8713c45fa28a6703b82f5c77b">lumex::applied::hardware::caps::Constants::KAMD_FX_IDENTIFIER</a> = &quot;FX-&quot;</td></tr>
+<tr class="memdesc:a86825ae8713c45fa28a6703b82f5c77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD FX series identifier.  <br /></td></tr>
+<tr class="separator:a86825ae8713c45fa28a6703b82f5c77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0d6836e899731f920a503e1f4d76cff" id="r_af0d6836e899731f920a503e1f4d76cff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00788.html#af0d6836e899731f920a503e1f4d76cff">lumex::applied::hardware::caps::Constants::KAMD_A_SERIES_IDENTIFIER</a> = &quot;A&quot;</td></tr>
+<tr class="memdesc:af0d6836e899731f920a503e1f4d76cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMD A-series APU identifier (e.g., A6, A10)  <br /></td></tr>
+<tr class="separator:af0d6836e899731f920a503e1f4d76cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34836ea308b08b628b65ef6dc5a1c6c" id="r_ac34836ea308b08b628b65ef6dc5a1c6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a79c537c78fd40b18154a50845e28fb61">LUMEX_CONST_STR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00777.html#ac34836ea308b08b628b65ef6dc5a1c6c">lumex::applied::hardware::caps::KMODULE_NAME</a> = &quot;HardwareCapabilities&quot;</td></tr>
+<tr class="memdesc:ac34836ea308b08b628b65ef6dc5a1c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Module identifier for logging and debugging purposes.  <br /></td></tr>
+<tr class="separator:ac34836ea308b08b628b65ef6dc5a1c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a161778f4af8e5bb60e2d33b69c10babb" name="a161778f4af8e5bb60e2d33b69c10babb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a161778f4af8e5bb60e2d33b69c10babb">&#9670;&#160;</a></span>LumexLogging</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#a161778f4af8e5bb60e2d33b69c10babb">LumexLogging</a> = <a class="el" href="a00568.html">Lumex::Applied::Logging::LumexLogging</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2b43f51257f6c37228d561dc06b1a283.html">applied</a></li><li class="navelem"><a class="el" href="dir_ca66bf100f8504996ae7539e10817d48.html">logging</a></li><li class="navelem"><a class="el" href="a00023.html">LumexLogging.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_6df2cf08c7df610d9bf032fe0440ee34.html">applied</a></li><li class="navelem"><a class="el" href="dir_f02f4d4a8e06fd910d0c3414bb3d5277.html">hardware</a></li><li class="navelem"><a class="el" href="dir_d2cfe5fdf3fb8d30a43a398821ee4c58.html">caps</a></li><li class="navelem"><a class="el" href="a00023.html">LumexHardwareCapabilities.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

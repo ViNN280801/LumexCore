@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::Types::xml_mem_str_header_t Struct Reference</title>
+<title>LumexLib: lumex::applied::serial::resolver::system_error_formatter Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,65 +104,60 @@ $(function(){initNavTree('a01048.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a01045.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::Types::xml_mem_str_header_t Struct Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::applied::serial::resolver::system_error_formatter Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00299_source.html">XmlTypes.hpp</a>&gt;</code></p>
+<p>Formats a platform error code into a diagnostic string.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00089_source.html">LumexPortProcessResolver.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:af28f1b4a67bb262577fb8780f8938657" id="r_af28f1b4a67bb262577fb8780f8938657"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af28f1b4a67bb262577fb8780f8938657">page_offset</a></td></tr>
-<tr class="memdesc:af28f1b4a67bb262577fb8780f8938657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset from page-&gt;data.  <br /></td></tr>
-<tr class="separator:af28f1b4a67bb262577fb8780f8938657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94d5e31b76c0e3021d5a9dcf704d9563" id="r_a94d5e31b76c0e3021d5a9dcf704d9563"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94d5e31b76c0e3021d5a9dcf704d9563">full_size</a></td></tr>
-<tr class="memdesc:a94d5e31b76c0e3021d5a9dcf704d9563"><td class="mdescLeft">&#160;</td><td class="mdescRight">0 if string occupies whole page  <br /></td></tr>
-<tr class="separator:a94d5e31b76c0e3021d5a9dcf704d9563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a924130970db8bdd3b171b688e7355669" id="r_a924130970db8bdd3b171b688e7355669"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a924130970db8bdd3b171b688e7355669">~system_error_formatter</a> ()=default</td></tr>
+<tr class="separator:a924130970db8bdd3b171b688e7355669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a94d5e31b76c0e3021d5a9dcf704d9563" name="a94d5e31b76c0e3021d5a9dcf704d9563"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94d5e31b76c0e3021d5a9dcf704d9563">&#9670;&#160;</a></span>full_size</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Formats a platform error code into a diagnostic string. </p>
+<p>Implementations must be stateless and thread-safe. Windows uses <code>FormatMessageW</code>; POSIX uses <code>strerror</code>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a924130970db8bdd3b171b688e7355669" name="a924130970db8bdd3b171b688e7355669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a924130970db8bdd3b171b688e7355669">&#9670;&#160;</a></span>~system_error_formatter()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t Lumex::Xml::Types::xml_mem_str_header_t::full_size</td>
+          <td class="memname">virtual lumex::applied::serial::resolver::system_error_formatter::~system_error_formatter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>0 if string occupies whole page </p>
-
 </div>
 </div>
-<a id="af28f1b4a67bb262577fb8780f8938657" name="af28f1b4a67bb262577fb8780f8938657"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af28f1b4a67bb262577fb8780f8938657">&#9670;&#160;</a></span>page_offset</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t Lumex::Xml::Types::xml_mem_str_header_t::page_offset</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Offset from page-&gt;data. </p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00299_source.html">XmlTypes.hpp</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00089_source.html">LumexPortProcessResolver.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00503.html">Types</a></li><li class="navelem"><a class="el" href="a01048.html">xml_mem_str_header_t</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00775.html">applied</a></li><li class="navelem"><a class="el" href="a00808.html">serial</a></li><li class="navelem"><a class="el" href="a00814.html">resolver</a></li><li class="navelem"><a class="el" href="a01048.html">system_error_formatter</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

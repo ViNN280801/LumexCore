@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::Utility::utf16_counter Struct Reference</title>
+<title>LumexLib: lumex::applied::settings::guard::LumexSettingsGuard Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,45 +104,99 @@ $(function(){initNavTree('a01068.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a01065.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::Utility::utf16_counter Struct Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::applied::settings::guard::LumexSettingsGuard Class Reference<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00308_source.html">XmlUtils.hpp</a>&gt;</code></p>
+<p>Format-agnostic backup/repair/validation guard for an <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instance.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00101_source.html">LumexSettingsGuard.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:ace6bbe08c639b28b0737d0862ebf6523" id="r_ace6bbe08c639b28b0737d0862ebf6523"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace6bbe08c639b28b0737d0862ebf6523">value_type</a> = size_t</td></tr>
-<tr class="separator:ace6bbe08c639b28b0737d0862ebf6523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a3ac8126fd558fbb79bffbb937d63815a" id="r_a3ac8126fd558fbb79bffbb937d63815a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ac8126fd558fbb79bffbb937d63815a">LumexSettingsGuard</a> (std::shared_ptr&lt; <a class="el" href="a01076.html">ILumexSettings</a> &gt; <a class="el" href="#ab80b2be8e2a9ef21dcc9eff967462570">settings</a>, std::string <a class="el" href="#a184f85abfacc0f33a7d542118fe122c7">filename</a>) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a3ac8126fd558fbb79bffbb937d63815a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a guard around an existing settings object and the path it persists to.  <br /></td></tr>
+<tr class="separator:a3ac8126fd558fbb79bffbb937d63815a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f397c2d325da7700804ac209294647" id="r_a13f397c2d325da7700804ac209294647"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13f397c2d325da7700804ac209294647">ensureExistsWithDefaults</a> (<a class="el" href="a00818.html#afa7cdf0a7ae72bb172b541454fb9bf5a">LumexSettingsCreateFn</a> const &amp;createDefault) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a13f397c2d325da7700804ac209294647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures the guarded file exists and is loadable; repairs it via <code>createDefault</code> otherwise.  <br /></td></tr>
+<tr class="separator:a13f397c2d325da7700804ac209294647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41747464ef9ec0fe85b8e5290cc201bc" id="r_a41747464ef9ec0fe85b8e5290cc201bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41747464ef9ec0fe85b8e5290cc201bc">repairIfCorrupted</a> (<a class="el" href="a00818.html#afa7cdf0a7ae72bb172b541454fb9bf5a">LumexSettingsCreateFn</a> const &amp;createDefault) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a41747464ef9ec0fe85b8e5290cc201bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identical repair behavior to <code>ensureExistsWithDefaults</code>, without the final error-level log.  <br /></td></tr>
+<tr class="separator:a41747464ef9ec0fe85b8e5290cc201bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16affc8ae6034d4331b1c233e25ff2a5" id="r_a16affc8ae6034d4331b1c233e25ff2a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16affc8ae6034d4331b1c233e25ff2a5">ensureKeysWithDefaults</a> (std::vector&lt; <a class="el" href="a01064.html">lumex_settings_key_spec_t</a> &gt; const &amp;specs) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a16affc8ae6034d4331b1c233e25ff2a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures every key in <code>specs</code> is present and valid, restoring <code>default_value</code> otherwise.  <br /></td></tr>
+<tr class="separator:a16affc8ae6034d4331b1c233e25ff2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80b2be8e2a9ef21dcc9eff967462570" id="r_ab80b2be8e2a9ef21dcc9eff967462570"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="a01076.html">ILumexSettings</a> &gt; const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab80b2be8e2a9ef21dcc9eff967462570">settings</a> () const <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="separator:ab80b2be8e2a9ef21dcc9eff967462570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184f85abfacc0f33a7d542118fe122c7" id="r_a184f85abfacc0f33a7d542118fe122c7"><td class="memItemLeft" align="right" valign="top">std::string const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a184f85abfacc0f33a7d542118fe122c7">filename</a> () const <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="separator:a184f85abfacc0f33a7d542118fe122c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a0791c446cadc77be9b3418259ca97007" id="r_a0791c446cadc77be9b3418259ca97007"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#ace6bbe08c639b28b0737d0862ebf6523">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0791c446cadc77be9b3418259ca97007">low</a> (<a class="el" href="#ace6bbe08c639b28b0737d0862ebf6523">value_type</a> result, uint32_t)</td></tr>
-<tr class="separator:a0791c446cadc77be9b3418259ca97007"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5155e1275afe730b82c7febcfb5bfebb" id="r_a5155e1275afe730b82c7febcfb5bfebb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#ace6bbe08c639b28b0737d0862ebf6523">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5155e1275afe730b82c7febcfb5bfebb">high</a> (<a class="el" href="#ace6bbe08c639b28b0737d0862ebf6523">value_type</a> result, uint32_t)</td></tr>
-<tr class="separator:a5155e1275afe730b82c7febcfb5bfebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b44e7b823f4298fbd2a46bd22e12c3" id="r_a48b44e7b823f4298fbd2a46bd22e12c3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48b44e7b823f4298fbd2a46bd22e12c3">backup</a> (std::string const &amp;<a class="el" href="#a184f85abfacc0f33a7d542118fe122c7">filename</a>) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a48b44e7b823f4298fbd2a46bd22e12c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies <code>filename</code> to a sibling <code>&lt;filename&gt;.bak.&lt;YYYYMMDD-HHMMSS&gt;</code> backup file.  <br /></td></tr>
+<tr class="separator:a48b44e7b823f4298fbd2a46bd22e12c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ace6bbe08c639b28b0737d0862ebf6523" name="ace6bbe08c639b28b0737d0862ebf6523"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace6bbe08c639b28b0737d0862ebf6523">&#9670;&#160;</a></span>value_type</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Format-agnostic backup/repair/validation guard for an <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instance. </p>
+<p>Adds the three behaviors PeakExpertWeb's <code>BaseConfiguration</code> provided for its JSON configuration files, generalized to work through <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> alone:</p><ul>
+<li><code>ensureExistsWithDefaults</code> / <code>repairIfCorrupted</code>: if the guarded file is missing or fails to <code>load()</code>, back it up (when it exists) and regenerate it via a caller-supplied <code><a class="el" href="a00818.html#afa7cdf0a7ae72bb172b541454fb9bf5a" title="Callback that (re)creates a settings file&#39;s default content from scratch.">LumexSettingsCreateFn</a></code>, then re-validate.</li>
+<li><code>backup</code>: a static, format-independent file-level copy to <code>&lt;filename&gt;.bak.&lt;YYYYMMDD-HHMMSS&gt;</code>, implemented purely against <code><a class="el" href="a00774.html#a77de8edea14bb4049de2fe633b6f6e4f" title="Global alias for lumex::core::filesystem::fs::lumex_filesystem::lumex_filesystem.">lumex::filesystem</a></code>/<code><a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e" title="Global alias for lumex::core::filesystem::fs::lumex_filesystem::path.">lumex::path</a></code> (no dependency on any concrete <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> implementation).</li>
+<li><code>ensureKeysWithDefaults</code>: walks a list of <code><a class="el" href="a01064.html" title="Describes a single settings key that LumexSettingsGuard::ensureKeysWithDefaults must keep present and...">lumex_settings_key_spec_t</a></code> and restores each key's default value whenever it is missing, empty, or fails its own <code>validate</code> callback. The class owns no settings storage itself - it composes an existing <code>std::shared_ptr&lt;<a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a>&gt;</code> (INI today; any future JSON/YAML/XML implementation of the same interface works unchanged) plus the filesystem path that instance loads from and saves to. <dl class="section note"><dt>Note</dt><dd>Thread-safety: an internal <code>std::recursive_mutex</code> serializes concurrent calls made through the <em>same</em> <code><a class="el" href="a01068.html" title="Format-agnostic backup/repair/validation guard for an ILumexSettings instance.">LumexSettingsGuard</a></code> instance. This is narrower than <code>BaseConfiguration</code>'s single process-wide mutex (shared with its JSON file helper)</dd></dl>
+</li>
+</ul>
+<p>by design, since a <code><a class="el" href="a01068.html" title="Format-agnostic backup/repair/validation guard for an ILumexSettings instance.">LumexSettingsGuard</a></code> composes a caller-owned <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instance rather than a global file-access chokepoint. If the same underlying file is also touched by other <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instances, other <code><a class="el" href="a01068.html" title="Format-agnostic backup/repair/validation guard for an ILumexSettings instance.">LumexSettingsGuard</a></code>s, or unrelated code, callers remain responsible for their own synchronization, exactly as <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code>'s own contract already requires of its implementations. </p><dl class="section note"><dt>Note</dt><dd>Exception safety: no public member function throws. Exceptions raised by a caller-supplied <code><a class="el" href="a00818.html#abb83c517a273434e9ce8e83640838f61" title="Validation callback for a single settings key.">LumexSettingsValidateFn</a></code>/<code><a class="el" href="a00818.html#afa7cdf0a7ae72bb172b541454fb9bf5a" title="Callback that (re)creates a settings file&#39;s default content from scratch.">LumexSettingsCreateFn</a></code> are caught and treated as failure (validation rejected / default-creation failed). </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3ac8126fd558fbb79bffbb937d63815a" name="a3ac8126fd558fbb79bffbb937d63815a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ac8126fd558fbb79bffbb937d63815a">&#9670;&#160;</a></span>LumexSettingsGuard()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ace6bbe08c639b28b0737d0862ebf6523">Lumex::Xml::Utility::utf16_counter::value_type</a> = size_t</td>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> lumex::applied::settings::guard::LumexSettingsGuard::LumexSettingsGuard </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="a01076.html">ILumexSettings</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Constructs a guard around an existing settings object and the path it persists to. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">settings</td><td>The <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instance to guard. May be any concrete implementation (<code><a class="el" href="a00107.html#aa4b9184a671b4fab21d16ff231591689">LumexSettingsINI</a></code> today). A <code>nullptr</code> is accepted defensively - every operation below then simply fails (returns <code>false</code>) instead of crashing. </td></tr>
+    <tr><td class="paramname">filename</td><td>The filesystem path this guard loads from, saves to, and backs up. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01068_a3ac8126fd558fbb79bffbb937d63815a_cgraph.png" border="0" usemap="#aa01068_a3ac8126fd558fbb79bffbb937d63815a_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5155e1275afe730b82c7febcfb5bfebb" name="a5155e1275afe730b82c7febcfb5bfebb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5155e1275afe730b82c7febcfb5bfebb">&#9670;&#160;</a></span>high()</h2>
+<a id="a48b44e7b823f4298fbd2a46bd22e12c3" name="a48b44e7b823f4298fbd2a46bd22e12c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b44e7b823f4298fbd2a46bd22e12c3">&#9670;&#160;</a></span>backup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,27 +205,104 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ace6bbe08c639b28b0737d0862ebf6523">value_type</a> Lumex::Xml::Utility::utf16_counter::high </td>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::settings::guard::LumexSettingsGuard::backup </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ace6bbe08c639b28b0737d0862ebf6523">value_type</a></td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Copies <code>filename</code> to a sibling <code>&lt;filename&gt;.bak.&lt;YYYYMMDD-HHMMSS&gt;</code> backup file. </p>
+<p>Pure filesystem operation - independent of any <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> implementation, so it works identically for INI, JSON, or any future format. Does nothing (and returns <code>false</code>) if <code>filename</code> does not exist or is not a regular file. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>The path to back up. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the backup file was created successfully, <code>false</code> otherwise. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01068_a48b44e7b823f4298fbd2a46bd22e12c3_cgraph.png" border="0" usemap="#aa01068_a48b44e7b823f4298fbd2a46bd22e12c3_cgraph" alt=""/></div>
+</div>
+
 </div>
 </div>
-<a id="a0791c446cadc77be9b3418259ca97007" name="a0791c446cadc77be9b3418259ca97007"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0791c446cadc77be9b3418259ca97007">&#9670;&#160;</a></span>low()</h2>
+<a id="a13f397c2d325da7700804ac209294647" name="a13f397c2d325da7700804ac209294647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13f397c2d325da7700804ac209294647">&#9670;&#160;</a></span>ensureExistsWithDefaults()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::settings::guard::LumexSettingsGuard::ensureExistsWithDefaults </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00818.html#afa7cdf0a7ae72bb172b541454fb9bf5a">LumexSettingsCreateFn</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>createDefault</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ensures the guarded file exists and is loadable; repairs it via <code>createDefault</code> otherwise. </p>
+<p>If <code>ILumexSettings::load(filename)</code> fails (file missing, unreadable, or fails the implementation's own parse/validity check), the current file is backed up first (when present), <code>createDefault</code> is invoked to regenerate it, and <code>load()</code> is retried once. Logs at error level if the file is still not loadable afterward. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">createDefault</td><td>Functor that (re)writes default content to <code>filename</code>. A <code>nullptr</code> or a callback returning <code>false</code> is treated as repair failure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the file exists and loads successfully after this call, <code>false</code> otherwise. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01068_a13f397c2d325da7700804ac209294647_icgraph.png" border="0" usemap="#aa01068_a13f397c2d325da7700804ac209294647_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a16affc8ae6034d4331b1c233e25ff2a5" name="a16affc8ae6034d4331b1c233e25ff2a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16affc8ae6034d4331b1c233e25ff2a5">&#9670;&#160;</a></span>ensureKeysWithDefaults()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::settings::guard::LumexSettingsGuard::ensureKeysWithDefaults </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="a01064.html">lumex_settings_key_spec_t</a> &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>specs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ensures every key in <code>specs</code> is present and valid, restoring <code>default_value</code> otherwise. </p>
+<p>Loads no file itself - it validates/repairs whatever is currently held by the guarded <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instance (typically populated by a prior <code>load()</code> or by <code>ensureExistsWithDefaults</code>), then persists the result via <code>save(filename)</code> if, and only if, at least one key was changed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">specs</td><td>The key specifications to enforce, in order. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if at least one key was changed and the save succeeded; <code>false</code> if nothing needed changing, or if saving the changes failed. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01068_a16affc8ae6034d4331b1c233e25ff2a5_cgraph.png" border="0" usemap="#aa01068_a16affc8ae6034d4331b1c233e25ff2a5_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01068_a16affc8ae6034d4331b1c233e25ff2a5_icgraph.png" border="0" usemap="#aa01068_a16affc8ae6034d4331b1c233e25ff2a5_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a184f85abfacc0f33a7d542118fe122c7" name="a184f85abfacc0f33a7d542118fe122c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a184f85abfacc0f33a7d542118fe122c7">&#9670;&#160;</a></span>filename()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,34 +311,97 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ace6bbe08c639b28b0737d0862ebf6523">value_type</a> Lumex::Xml::Utility::utf16_counter::low </td>
+          <td class="memname">std::string const  &amp; lumex::applied::settings::guard::LumexSettingsGuard::filename </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ace6bbe08c639b28b0737d0862ebf6523">value_type</a></td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The filesystem path this guard loads from, saves to, and backs up. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01068_a184f85abfacc0f33a7d542118fe122c7_icgraph.png" border="0" usemap="#aa01068_a184f85abfacc0f33a7d542118fe122c7_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00308_source.html">XmlUtils.hpp</a></li>
+<a id="a41747464ef9ec0fe85b8e5290cc201bc" name="a41747464ef9ec0fe85b8e5290cc201bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41747464ef9ec0fe85b8e5290cc201bc">&#9670;&#160;</a></span>repairIfCorrupted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::settings::guard::LumexSettingsGuard::repairIfCorrupted </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00818.html#afa7cdf0a7ae72bb172b541454fb9bf5a">LumexSettingsCreateFn</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>createDefault</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identical repair behavior to <code>ensureExistsWithDefaults</code>, without the final error-level log. </p>
+<p>Provided as a separate entry point - mirroring <code>BaseConfiguration::repairIfCorrupted</code></p><ul>
+<li>for callers that want to probe/repair a file without that failure being logged as an application error (e.g. a caller that will itself report a more specific message). <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">createDefault</td><td>Functor that (re)writes default content to <code>filename</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the file exists and loads successfully after this call, <code>false</code> otherwise. </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="ab80b2be8e2a9ef21dcc9eff967462570" name="ab80b2be8e2a9ef21dcc9eff967462570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab80b2be8e2a9ef21dcc9eff967462570">&#9670;&#160;</a></span>settings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="a01076.html">ILumexSettings</a> &gt; const  &amp; lumex::applied::settings::guard::LumexSettingsGuard::settings </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The guarded <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instance (may be <code>nullptr</code> if constructed as such). </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01068_ab80b2be8e2a9ef21dcc9eff967462570_icgraph.png" border="0" usemap="#aa01068_ab80b2be8e2a9ef21dcc9eff967462570_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00101_source.html">LumexSettingsGuard.hpp</a></li>
+<li><a class="el" href="a00098.html">LumexSettingsGuard.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00490.html">Utility</a></li><li class="navelem"><a class="el" href="a01068.html">utf16_counter</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00775.html">applied</a></li><li class="navelem"><a class="el" href="a00816.html">settings</a></li><li class="navelem"><a class="el" href="a00818.html">guard</a></li><li class="navelem"><a class="el" href="a01068.html">LumexSettingsGuard</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

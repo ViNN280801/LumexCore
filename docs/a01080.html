@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::Utility::latin1_decoder Struct Reference</title>
+<title>LumexLib: lumex::applied::settings::json::LumexSettingsJSON Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,120 +104,488 @@ $(function(){initNavTree('a01080.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a01077.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::Utility::latin1_decoder Struct Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::applied::settings::json::LumexSettingsJSON Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00308_source.html">XmlUtils.hpp</a>&gt;</code></p>
+<p>A lightweight, C++11-based JSON settings manager.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00119_source.html">LumexSettingsJSON.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::applied::settings::json::LumexSettingsJSON:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01079.png" border="0" usemap="#alumex_1_1applied_1_1settings_1_1json_1_1_lumex_settings_j_s_o_n_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for lumex::applied::settings::json::LumexSettingsJSON:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01078.png" border="0" usemap="#alumex_1_1applied_1_1settings_1_1json_1_1_lumex_settings_j_s_o_n_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:ad4ae4262521d5de031d0ccca3d174f03" id="r_ad4ae4262521d5de031d0ccca3d174f03"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4ae4262521d5de031d0ccca3d174f03">type</a> = uint8_t</td></tr>
-<tr class="separator:ad4ae4262521d5de031d0ccca3d174f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9ff56a8416e53f0ff0ba378ed92d7b0e" id="r_a9ff56a8416e53f0ff0ba378ed92d7b0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ff56a8416e53f0ff0ba378ed92d7b0e">load</a> (std::string const &amp;<a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">path</a>) override</td></tr>
+<tr class="memdesc:a9ff56a8416e53f0ff0ba378ed92d7b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and parses a JSON file from the given path.  <br /></td></tr>
+<tr class="separator:a9ff56a8416e53f0ff0ba378ed92d7b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728f61e1dbb0aa6ed5f11403773de67a" id="r_a728f61e1dbb0aa6ed5f11403773de67a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a728f61e1dbb0aa6ed5f11403773de67a">load</a> (char const *<a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">path</a>)</td></tr>
+<tr class="separator:a728f61e1dbb0aa6ed5f11403773de67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059aa5cbbf1da0eb690bde60bc210a03" id="r_a059aa5cbbf1da0eb690bde60bc210a03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a059aa5cbbf1da0eb690bde60bc210a03">save</a> (std::string const &amp;<a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">path</a>) const override</td></tr>
+<tr class="memdesc:a059aa5cbbf1da0eb690bde60bc210a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the current settings as an object of objects.  <br /></td></tr>
+<tr class="separator:a059aa5cbbf1da0eb690bde60bc210a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97a372d2b47d57aab935158b69df8d6a" id="r_a97a372d2b47d57aab935158b69df8d6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97a372d2b47d57aab935158b69df8d6a">save</a> (char const *<a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">path</a>) const</td></tr>
+<tr class="separator:a97a372d2b47d57aab935158b69df8d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49dbc530773789623553b1e43f3c82aa" id="r_a49dbc530773789623553b1e43f3c82aa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49dbc530773789623553b1e43f3c82aa">get</a> (std::string const &amp;section, std::string const &amp;key) const override</td></tr>
+<tr class="memdesc:a49dbc530773789623553b1e43f3c82aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a string value for a given section and key.  <br /></td></tr>
+<tr class="separator:a49dbc530773789623553b1e43f3c82aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5532c5462eeb21f48ee8daa2a6fd810a" id="r_a5532c5462eeb21f48ee8daa2a6fd810a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5532c5462eeb21f48ee8daa2a6fd810a">get</a> (char const *section, char const *key) const</td></tr>
+<tr class="separator:a5532c5462eeb21f48ee8daa2a6fd810a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64597e2fc10db22592041979937c805f" id="r_a64597e2fc10db22592041979937c805f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64597e2fc10db22592041979937c805f">add</a> (std::string const &amp;section, std::string const &amp;key, std::string const &amp;value) override</td></tr>
+<tr class="memdesc:a64597e2fc10db22592041979937c805f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds or updates a key-value pair in a specific section.  <br /></td></tr>
+<tr class="separator:a64597e2fc10db22592041979937c805f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64f1785bb6651fdb11fa18633aaaa06" id="r_ab64f1785bb6651fdb11fa18633aaaa06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab64f1785bb6651fdb11fa18633aaaa06">add</a> (char const *section, char const *key, char const *value)</td></tr>
+<tr class="separator:ab64f1785bb6651fdb11fa18633aaaa06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ec75266d2eb3424989459654c826d3" id="r_a23ec75266d2eb3424989459654c826d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23ec75266d2eb3424989459654c826d3">remove</a> (std::string const &amp;section, std::string const &amp;key) override</td></tr>
+<tr class="memdesc:a23ec75266d2eb3424989459654c826d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a key-value pair from a section.  <br /></td></tr>
+<tr class="separator:a23ec75266d2eb3424989459654c826d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a199032dedef6387b627b9f65ef535" id="r_a40a199032dedef6387b627b9f65ef535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40a199032dedef6387b627b9f65ef535">remove</a> (char const *section, char const *key)</td></tr>
+<tr class="separator:a40a199032dedef6387b627b9f65ef535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a01076"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_a01076')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a01076.html">lumex::applied::settings::ILumexSettings</a></td></tr>
+<tr class="memitem:a67340373f009ef86ebf93a8c3bd15104 inherit pub_methods_a01076" id="r_a67340373f009ef86ebf93a8c3bd15104"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01076.html#a67340373f009ef86ebf93a8c3bd15104">~ILumexSettings</a> ()=default</td></tr>
+<tr class="memdesc:a67340373f009ef86ebf93a8c3bd15104 inherit pub_methods_a01076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaulted virtual destructor for polymorphic behavior.  <br /></td></tr>
+<tr class="separator:a67340373f009ef86ebf93a8c3bd15104 inherit pub_methods_a01076"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab7bd8a1350cd654f0b69f18df3a786bf" id="r_ab7bd8a1350cd654f0b69f18df3a786bf"><td class="memTemplParams" colspan="2">template&lt;typename Traits&gt; </td></tr>
-<tr class="memitem:ab7bd8a1350cd654f0b69f18df3a786bf"><td class="memTemplItemLeft" align="right" valign="top">static Traits::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab7bd8a1350cd654f0b69f18df3a786bf">process</a> (uint8_t const *data, size_t size, typename Traits::value_type result, Traits)</td></tr>
-<tr class="separator:ab7bd8a1350cd654f0b69f18df3a786bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5148c5331edecced5d045f0288da7d8" id="r_ad5148c5331edecced5d045f0288da7d8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5148c5331edecced5d045f0288da7d8">is_json_valid</a> (std::string const &amp;<a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">path</a>)</td></tr>
+<tr class="memdesc:ad5148c5331edecced5d045f0288da7d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks that a path is a readable JSON object document.  <br /></td></tr>
+<tr class="separator:ad5148c5331edecced5d045f0288da7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a3102bcb1ade77ca7d010be63492e6" id="r_a17a3102bcb1ade77ca7d010be63492e6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17a3102bcb1ade77ca7d010be63492e6">is_json_valid</a> (char const *<a class="el" href="a00774.html#a45ac34be96c8025d67f85eb38698bf0e">path</a>)</td></tr>
+<tr class="separator:a17a3102bcb1ade77ca7d010be63492e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ad4ae4262521d5de031d0ccca3d174f03" name="ad4ae4262521d5de031d0ccca3d174f03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4ae4262521d5de031d0ccca3d174f03">&#9670;&#160;</a></span>type</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A lightweight, C++11-based JSON settings manager. </p>
+<p>Implements <code><a class="el" href="a01076.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> with the same section/key/value contract as <code><a class="el" href="a00107.html#aa4b9184a671b4fab21d16ff231591689">LumexSettingsINI</a></code> and <code><a class="el" href="a00125.html#ab23132a5fc6ee5da8ac4aa3c6f448f27">LumexSettingsXML</a></code>. Parsing and writing go through vendored nlohmann/json only.</p>
+<p>Load mapping:</p><ul>
+<li>The document must be a JSON object.</li>
+<li>If any value is an object, those keys are sections and their scalar children are keys. Scalar children of the root itself are stored under the implicit section <code>settings</code>.</li>
+<li>Otherwise the root is a single section named <code>settings</code> (flat <code>{ "LEVEL": "DEBUG" }</code>). Nested <code>{ "logger": { "LEVEL": "DEBUG" } }</code> loads as section <code>logger</code>.</li>
+</ul>
+<p>Save always writes an object of objects: <code>{ "section": { "key": "value" } }</code>.</p>
+<p>When <code>LUMEX_SETTINGS_WITH_JSON</code> is not defined (nlohmann header not present), <code>load</code> / <code>save</code> / <code>is_json_valid</code> return false. The factory then returns nullptr for <code>LumexSettingsExtensions::JSON</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>This class is not designed to be thread-safe for concurrent writes. External synchronization is required if instances are shared across threads. </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab64f1785bb6651fdb11fa18633aaaa06" name="ab64f1785bb6651fdb11fa18633aaaa06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64f1785bb6651fdb11fa18633aaaa06">&#9670;&#160;</a></span>add() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ad4ae4262521d5de031d0ccca3d174f03">Lumex::Xml::Utility::latin1_decoder::type</a> = uint8_t</td>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void lumex::applied::settings::json::LumexSettingsJSON::add </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_ab64f1785bb6651fdb11fa18633aaaa06_cgraph.png" border="0" usemap="#aa01080_ab64f1785bb6651fdb11fa18633aaaa06_cgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab7bd8a1350cd654f0b69f18df3a786bf" name="ab7bd8a1350cd654f0b69f18df3a786bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7bd8a1350cd654f0b69f18df3a786bf">&#9670;&#160;</a></span>process()</h2>
+<a id="a64597e2fc10db22592041979937c805f" name="a64597e2fc10db22592041979937c805f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64597e2fc10db22592041979937c805f">&#9670;&#160;</a></span>add() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Traits&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static Traits::value_type Lumex::Xml::Utility::latin1_decoder::process </td>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void lumex::applied::settings::json::LumexSettingsJSON::add </td>
           <td>(</td>
-          <td class="paramtype">uint8_t const *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">typename Traits::value_type</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Traits</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Adds or updates a key-value pair in a specific section. </p>
+<p>Creates the section if it does not exist. Empty section, key, or value is ignored (same as <code><a class="el" href="a00107.html#aa4b9184a671b4fab21d16ff231591689">LumexSettingsINI</a></code>). </p>
+
+<p>Implements <a class="el" href="a01076.html#aa62d2c035f9f5262cc3ff5ed0aa090e6">lumex::applied::settings::ILumexSettings</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01080_ab7bd8a1350cd654f0b69f18df3a786bf_icgraph.png" border="0" usemap="#aa01080_ab7bd8a1350cd654f0b69f18df3a786bf_icgraph" alt=""/></div>
-<map name="aa01080_ab7bd8a1350cd654f0b69f18df3a786bf_icgraph" id="aa01080_ab7bd8a1350cd654f0b69f18df3a786bf_icgraph">
-<area shape="rect" title=" " alt="" coords="1329,109,1497,152"/>
-<area shape="rect" href="a00490.html#a6a36b79594b0674628e1c6776dc8d5d5" title=" " alt="" coords="1132,109,1281,152"/>
-<area shape="poly" title=" " alt="" coords="1314,133,1282,133,1282,128,1314,128"/>
-<area shape="rect" href="a00490.html#ad06bf49190b2000735639680e56c998e" title=" " alt="" coords="951,109,1084,152"/>
-<area shape="poly" title=" " alt="" coords="1117,133,1085,133,1085,128,1117,128"/>
-<area shape="rect" href="a00500.html#a3c1a18e907838c8ea12512b6180686d5" title="Internal implementation for loading an XML document from a buffer." alt="" coords="746,109,903,152"/>
-<area shape="poly" title=" " alt="" coords="935,133,903,133,903,128,935,128"/>
-<area shape="rect" href="a00992.html#a34a466d798a26f92f3dd952627c16f58" title="Parses an XML buffer as a document fragment and appends its root&#45;level nodes as children to the curre..." alt="" coords="506,5,698,48"/>
-<area shape="poly" title=" " alt="" coords="774,104,697,62,669,51,671,46,699,58,777,99"/>
-<area shape="rect" href="a00976.html#a7c84e78521a2dd05bc6981e900ac82de" title="Loads an XML document from a read&#45;only memory buffer." alt="" coords="510,72,694,115"/>
-<area shape="poly" title=" " alt="" coords="730,118,694,111,695,106,731,112"/>
-<area shape="rect" href="a00976.html#a4f0ef63219e142131edacaab5fd73c45" title="Loads an XML document by parsing a provided memory buffer in&#45;place." alt="" coords="510,139,694,197"/>
-<area shape="poly" title=" " alt="" coords="731,149,695,155,694,150,730,144"/>
-<area shape="rect" href="a00976.html#a5327a45f1b3c8a83cf9b074776d24d7e" title="Loads an XML document by parsing a provided memory buffer in&#45;place, with ownership transfer." alt="" coords="510,221,694,280"/>
-<area shape="poly" title=" " alt="" coords="781,163,700,212,676,223,674,219,697,207,778,158"/>
-<area shape="rect" href="a00992.html#ab838302273f869f6d7bd3170c701e200" title="Retrieves the text content of a named child node." alt="" coords="213,5,458,48"/>
-<area shape="poly" title=" " alt="" coords="490,29,459,29,459,24,490,24"/>
-<area shape="rect" href="a00976.html#a0c59b65ecf92ef3a7855d6b7b7cd9925" title="Loads an XML document from a zero&#45;terminated C&#45;style string." alt="" coords="244,72,427,115"/>
-<area shape="poly" title=" " alt="" coords="495,96,427,96,427,91,495,91"/>
-<area shape="rect" href="a00976.html#a6eefd323486f47b20c59e4eaa34c7731" title="DEPRECATED: Loads an XML document from a zero&#45;terminated C&#45;style string. Use load_string instead." alt="" coords="5,72,165,115"/>
-<area shape="poly" title=" " alt="" coords="228,96,165,96,165,91,228,91"/>
-</map>
+<div class="center"><img src="a01080_a64597e2fc10db22592041979937c805f_icgraph.png" border="0" usemap="#aa01080_a64597e2fc10db22592041979937c805f_icgraph" alt=""/></div>
 </div>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00308_source.html">XmlUtils.hpp</a></li>
+<a id="a5532c5462eeb21f48ee8daa2a6fd810a" name="a5532c5462eeb21f48ee8daa2a6fd810a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5532c5462eeb21f48ee8daa2a6fd810a">&#9670;&#160;</a></span>get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::string lumex::applied::settings::json::LumexSettingsJSON::get </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_a5532c5462eeb21f48ee8daa2a6fd810a_cgraph.png" border="0" usemap="#aa01080_a5532c5462eeb21f48ee8daa2a6fd810a_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a49dbc530773789623553b1e43f3c82aa" name="a49dbc530773789623553b1e43f3c82aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49dbc530773789623553b1e43f3c82aa">&#9670;&#160;</a></span>get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::string lumex::applied::settings::json::LumexSettingsJSON::get </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a string value for a given section and key. </p>
+<dl class="section return"><dt>Returns</dt><dd>The value, or an empty string if the section or key is missing. </dd></dl>
+
+<p>Implements <a class="el" href="a01076.html#a4dd441bfa740a2514899dfecceb4dd70">lumex::applied::settings::ILumexSettings</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_a49dbc530773789623553b1e43f3c82aa_icgraph.png" border="0" usemap="#aa01080_a49dbc530773789623553b1e43f3c82aa_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a17a3102bcb1ade77ca7d010be63492e6" name="a17a3102bcb1ade77ca7d010be63492e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a3102bcb1ade77ca7d010be63492e6">&#9670;&#160;</a></span>is_json_valid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::settings::json::LumexSettingsJSON::is_json_valid </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_a17a3102bcb1ade77ca7d010be63492e6_cgraph.png" border="0" usemap="#aa01080_a17a3102bcb1ade77ca7d010be63492e6_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad5148c5331edecced5d045f0288da7d8" name="ad5148c5331edecced5d045f0288da7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5148c5331edecced5d045f0288da7d8">&#9670;&#160;</a></span>is_json_valid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::settings::json::LumexSettingsJSON::is_json_valid </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks that a path is a readable JSON object document. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_ad5148c5331edecced5d045f0288da7d8_icgraph.png" border="0" usemap="#aa01080_ad5148c5331edecced5d045f0288da7d8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a728f61e1dbb0aa6ed5f11403773de67a" name="a728f61e1dbb0aa6ed5f11403773de67a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728f61e1dbb0aa6ed5f11403773de67a">&#9670;&#160;</a></span>load() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::settings::json::LumexSettingsJSON::load </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_a728f61e1dbb0aa6ed5f11403773de67a_cgraph.png" border="0" usemap="#aa01080_a728f61e1dbb0aa6ed5f11403773de67a_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9ff56a8416e53f0ff0ba378ed92d7b0e" name="a9ff56a8416e53f0ff0ba378ed92d7b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff56a8416e53f0ff0ba378ed92d7b0e">&#9670;&#160;</a></span>load() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::settings::json::LumexSettingsJSON::load </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads and parses a JSON file from the given path. </p>
+<p>Validates the file with <code><a class="el" href="#ad5148c5331edecced5d045f0288da7d8" title="Checks that a path is a readable JSON object document.">is_json_valid()</a></code> first. On success the in-memory store is replaced with the parsed sections and keys. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The filesystem path to the JSON file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the file is valid and at least one key was loaded, <code>false</code> otherwise. </dd></dl>
+
+<p>Implements <a class="el" href="a01076.html#a5e8c879f253d759120c2ef9dce35a6fe">lumex::applied::settings::ILumexSettings</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_a9ff56a8416e53f0ff0ba378ed92d7b0e_cgraph.png" border="0" usemap="#aa01080_a9ff56a8416e53f0ff0ba378ed92d7b0e_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_a9ff56a8416e53f0ff0ba378ed92d7b0e_icgraph.png" border="0" usemap="#aa01080_a9ff56a8416e53f0ff0ba378ed92d7b0e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a40a199032dedef6387b627b9f65ef535" name="a40a199032dedef6387b627b9f65ef535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40a199032dedef6387b627b9f65ef535">&#9670;&#160;</a></span>remove() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void lumex::applied::settings::json::LumexSettingsJSON::remove </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_a40a199032dedef6387b627b9f65ef535_cgraph.png" border="0" usemap="#aa01080_a40a199032dedef6387b627b9f65ef535_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a23ec75266d2eb3424989459654c826d3" name="a23ec75266d2eb3424989459654c826d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ec75266d2eb3424989459654c826d3">&#9670;&#160;</a></span>remove() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void lumex::applied::settings::json::LumexSettingsJSON::remove </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes a key-value pair from a section. </p>
+<p>Missing section or key is a no-op. Removing the last key does not remove the section itself. </p>
+
+<p>Implements <a class="el" href="a01076.html#a7dd9c0cca546a7b92b0250f1af966c01">lumex::applied::settings::ILumexSettings</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_a23ec75266d2eb3424989459654c826d3_icgraph.png" border="0" usemap="#aa01080_a23ec75266d2eb3424989459654c826d3_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a97a372d2b47d57aab935158b69df8d6a" name="a97a372d2b47d57aab935158b69df8d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a372d2b47d57aab935158b69df8d6a">&#9670;&#160;</a></span>save() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::settings::json::LumexSettingsJSON::save </td>
+          <td>(</td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_a97a372d2b47d57aab935158b69df8d6a_cgraph.png" border="0" usemap="#aa01080_a97a372d2b47d57aab935158b69df8d6a_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a059aa5cbbf1da0eb690bde60bc210a03" name="a059aa5cbbf1da0eb690bde60bc210a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059aa5cbbf1da0eb690bde60bc210a03">&#9670;&#160;</a></span>save() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00548.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::settings::json::LumexSettingsJSON::save </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves the current settings as an object of objects. </p>
+<p>If the parent directory does not exist, it will be created. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The filesystem path to save the JSON file to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the file is written successfully, <code>false</code> otherwise. </dd></dl>
+
+<p>Implements <a class="el" href="a01076.html#a8c93c820977807fe52ac6dbbf8f3ca4c">lumex::applied::settings::ILumexSettings</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01080_a059aa5cbbf1da0eb690bde60bc210a03_icgraph.png" border="0" usemap="#aa01080_a059aa5cbbf1da0eb690bde60bc210a03_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00119_source.html">LumexSettingsJSON.hpp</a></li>
+<li><a class="el" href="a00116.html">LumexSettingsJSON.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00490.html">Utility</a></li><li class="navelem"><a class="el" href="a01080.html">latin1_decoder</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00775.html">applied</a></li><li class="navelem"><a class="el" href="a00816.html">settings</a></li><li class="navelem"><a class="el" href="a00822.html">json</a></li><li class="navelem"><a class="el" href="a01080.html">LumexSettingsJSON</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['unexpect_0',['unexpect',['../a00122.html#a3a16eea42d207770765961abfb2ddefc',1,'ExpectedTypes.hpp']]],
-  ['unix_5fmax_5ftype_1',['UNIX_MAX_TYPE',['../a00480.html#ad5a293dc535e3f34a69adcd76919966a',1,'DumpTypeUtils::Constants']]],
-  ['unix_5fmin_5ftype_2',['UNIX_MIN_TYPE',['../a00480.html#a3a37b7b4c6222bbff150a8ea464b6012',1,'DumpTypeUtils::Constants']]],
-  ['utf8_5fbom_5f0_3',['UTF8_BOM_0',['../a00454.html#a359823a30831c4c9b8c7ac13a9429f58',1,'Lumex::Applied::Settings::Constants']]],
-  ['utf8_5fbom_5f1_4',['UTF8_BOM_1',['../a00454.html#ad3d7372af7973bc996c802f8f5109498',1,'Lumex::Applied::Settings::Constants']]],
-  ['utf8_5fbom_5f2_5',['UTF8_BOM_2',['../a00454.html#a464e156fb4fdc7e15e9f003726bd24f2',1,'Lumex::Applied::Settings::Constants']]],
-  ['utf8_5fbom_5fsize_6',['UTF8_BOM_SIZE',['../a00454.html#abf61e5b868352c006a2c9c6d0e770285',1,'Lumex::Applied::Settings::Constants']]]
+  ['table_0',['table',['../a02764.html#aa3e56677c7e175627a092d877551ef4c',1,'lumex::xml::xpath::ast::XPathAstNode']]],
+  ['temp_1',['temp',['../a02800.html#a3385766dbed849bf5326b9caa6e6a082',1,'lumex::xml::xpath::memory::XPathStack::temp'],['../a02804.html#a6febd11354132752867f16ebf814e3ea',1,'lumex::xml::xpath::memory::XPathStackData::temp']]],
+  ['text_2',['text',['../a01844.html#a2d3871af0ee57b9c363df347ddcfd405',1,'lumex::core::fmt::runtime_format_string_t::text'],['../a01876.html#aa848a04ca950c9eded82e64124bccff4',1,'lumex::core::fmt::try_format_result_t::text']]],
+  ['ticks_3',['ticks',['../a01880.html#a64b5749d7355f9e21cd7f0857aebd265',1,'lumex::core::fmt::Detail::civil_time_t']]],
+  ['timestamp_4',['timestamp',['../a01012.html#a060e999accc52a8ed7857ac703469085',1,'lumex::applied::logger::logger::log_entry_t']]],
+  ['total_5fmemory_5fmb_5',['total_memory_mb',['../a00980.html#a5951b3c9677bc9491fc08c68e65f085c',1,'lumex::applied::hardware::caps::hardware_info_t::total_memory_mb'],['../a03747.html#a5951b3c9677bc9491fc08c68e65f085c',1,'hardware_info_t::total_memory_mb']]],
+  ['type_6',['type',['../a01752.html#a7d1009ac73d889deece732958843c3cd',1,'lumex::core::fmt::Detail::format_specs_t']]]
 ];

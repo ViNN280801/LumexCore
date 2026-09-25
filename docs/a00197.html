@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexKeywords.hpp File Reference</title>
+<title>LumexLib: LumexStacktrace.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,265 +104,222 @@ $(function(){initNavTree('a00197.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
-  <div class="headertitle"><div class="title">LumexKeywords.hpp File Reference</div></div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">LumexStacktrace.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+
+<p>Defines the LumexBasicStacktrace class and related utilities for capturing and symbolizing call stacks.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00203_source.html">lumex/core/exceptions/stacktrace/LumexStacktraceEntry.hpp</a>&quot;</code><br />
+<code>#include &quot;lumex/core/utility/LumexUtility&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00338_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;cxxabi.h&gt;</code><br />
+<code>#include &lt;dlfcn.h&gt;</code><br />
+<code>#include &lt;execinfo.h&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for LumexStacktrace.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00198.png" border="0" usemap="#a_lumex_stacktrace_8hpp" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00199.png" border="0" usemap="#a_lumex_keywords_8hppdep" alt=""/></div>
-<map name="a_lumex_keywords_8hppdep" id="a_lumex_keywords_8hppdep">
-<area shape="rect" title=" " alt="" coords="276,5,420,32"/>
-<area shape="rect" href="a00116.html" title=" " alt="" coords="5,80,174,107"/>
-<area shape="poly" title=" " alt="" coords="289,39,136,82,134,77,288,34"/>
-<area shape="rect" href="a00068.html" title=" " alt="" coords="198,80,323,107"/>
-<area shape="poly" title=" " alt="" coords="323,44,277,82,274,78,319,40"/>
-<area shape="rect" href="a00185.html" title=" " alt="" coords="347,80,528,107"/>
-<area shape="poly" title=" " alt="" coords="377,40,424,78,420,82,374,44"/>
-<area shape="rect" href="a00209.html" title=" " alt="" coords="553,80,682,107"/>
-<area shape="poly" title=" " alt="" coords="410,34,571,77,570,82,409,39"/>
-<area shape="rect" href="a00119.html" title=" " alt="" coords="39,155,140,181"/>
-<area shape="poly" title=" " alt="" coords="92,122,92,154,87,154,87,122"/>
-<area shape="rect" href="a00125.html" title=" " alt="" coords="26,229,153,256"/>
-<area shape="poly" title=" " alt="" coords="92,197,92,229,87,229,87,197"/>
-<area shape="rect" href="a00074.html" title=" " alt="" coords="384,155,491,181"/>
-<area shape="poly" title=" " alt="" coords="440,122,440,154,435,154,435,122"/>
-<area shape="rect" href="a00071.html" title=" " alt="" coords="384,229,491,256"/>
-<area shape="poly" title=" " alt="" coords="440,197,440,229,435,229,435,197"/>
-</map>
+<div class="center"><img src="a00199.png" border="0" usemap="#a_lumex_stacktrace_8hppdep" alt=""/></div>
 </div>
 </div>
 <p><a href="a00197_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a7efa0880bd62481ba01b90becb04f413" id="r_a7efa0880bd62481ba01b90becb04f413"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7efa0880bd62481ba01b90becb04f413">LUMEX_CONSTINIT</a></td></tr>
-<tr class="separator:a7efa0880bd62481ba01b90becb04f413"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47e6f687e9ccc7895ec20cace7a357d8" id="r_a47e6f687e9ccc7895ec20cace7a357d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47e6f687e9ccc7895ec20cace7a357d8">LUMEX_INLINE_VARIABLE</a></td></tr>
-<tr class="separator:a47e6f687e9ccc7895ec20cace7a357d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42fdd906f59b10053e30b1218cc2a1ac" id="r_a42fdd906f59b10053e30b1218cc2a1ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42fdd906f59b10053e30b1218cc2a1ac">LUMEX_NOEXCEPT_FUNCTION</a></td></tr>
-<tr class="separator:a42fdd906f59b10053e30b1218cc2a1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11d12a3cfd6e87c464786a4ccfba3033" id="r_a11d12a3cfd6e87c464786a4ccfba3033"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11d12a3cfd6e87c464786a4ccfba3033">LUMEX_NOEXCEPT_FUNCTION_CONDITIONAL</a>(cond)</td></tr>
-<tr class="separator:a11d12a3cfd6e87c464786a4ccfba3033"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b5f5ff346254db7b10ff8acfb874e0a" id="r_a6b5f5ff346254db7b10ff8acfb874e0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b5f5ff346254db7b10ff8acfb874e0a">LUMEX_RESTRICT</a></td></tr>
-<tr class="separator:a6b5f5ff346254db7b10ff8acfb874e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81fe93b4daec85db53b06073263b888f" id="r_a81fe93b4daec85db53b06073263b888f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81fe93b4daec85db53b06073263b888f">LUMEX_CONSTEXPR_FUNCTION</a></td></tr>
-<tr class="separator:a81fe93b4daec85db53b06073263b888f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa40239baec57106b1798029a91d87025" id="r_aa40239baec57106b1798029a91d87025"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa40239baec57106b1798029a91d87025">LUMEX_CONSTEXPR_VIRTUAL_FUNCTION</a></td></tr>
-<tr class="separator:aa40239baec57106b1798029a91d87025"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aac503affc067676ceedfe24f4c3357" id="r_a8aac503affc067676ceedfe24f4c3357"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8aac503affc067676ceedfe24f4c3357">LUMEX_CONSTEXPR_CTOR</a></td></tr>
-<tr class="separator:a8aac503affc067676ceedfe24f4c3357"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1301de49ecd91c86b7a61015084dc3fc" id="r_a1301de49ecd91c86b7a61015084dc3fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1301de49ecd91c86b7a61015084dc3fc">LUMEX_CONSTEXPR_DEFAULTED_CTOR</a></td></tr>
-<tr class="separator:a1301de49ecd91c86b7a61015084dc3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01a7d3864d496126e9efae4bd106ffd3" id="r_a01a7d3864d496126e9efae4bd106ffd3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01a7d3864d496126e9efae4bd106ffd3">LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR</a></td></tr>
-<tr class="separator:a01a7d3864d496126e9efae4bd106ffd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6ade2ee3e7399a6546df90d11ec8518" id="r_ac6ade2ee3e7399a6546df90d11ec8518"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6ade2ee3e7399a6546df90d11ec8518">LUMEX_CONSTEXPR_DTOR</a></td></tr>
-<tr class="separator:ac6ade2ee3e7399a6546df90d11ec8518"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82311fbffabf10f9f7d8a089711dae6a" id="r_a82311fbffabf10f9f7d8a089711dae6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82311fbffabf10f9f7d8a089711dae6a">LUMEX_CONSTEXPR_DEFAULTED_DTOR</a></td></tr>
-<tr class="separator:a82311fbffabf10f9f7d8a089711dae6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5623e00fcb6be5c2ab39f71b96fca788" id="r_a5623e00fcb6be5c2ab39f71b96fca788"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5623e00fcb6be5c2ab39f71b96fca788">LUMEX_CONSTEXPR_VIRTUAL_DTOR</a></td></tr>
-<tr class="separator:a5623e00fcb6be5c2ab39f71b96fca788"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01a7d3864d496126e9efae4bd106ffd3" id="r_a01a7d3864d496126e9efae4bd106ffd3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01a7d3864d496126e9efae4bd106ffd3">LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR</a></td></tr>
-<tr class="separator:a01a7d3864d496126e9efae4bd106ffd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01620.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace&lt; Allocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains classes and utilities related to stack trace management and exception handling.  <a href="a01620.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01628.html">lumex::core::exceptions::stacktrace::hash&lt; LumexBasicStacktrace&lt; Allocator &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00774.html">lumex</a></td></tr>
+<tr class="memdesc:a00774"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00826.html">lumex::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00844.html">lumex::core::exceptions</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00850.html">lumex::core::exceptions::stacktrace</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html">lumex::core::exceptions::stacktrace::detail</a></td></tr>
+<tr class="memdesc:a00851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal detail namespace for platform-specific stacktrace functionalities. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aed3df8e98fabb3aad10ed64b9c724c54" id="r_aed3df8e98fabb3aad10ed64b9c724c54"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00850.html#aed3df8e98fabb3aad10ed64b9c724c54">lumex::core::exceptions::stacktrace::LumexStacktrace</a> = <a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt;std::allocator&lt;<a class="el" href="a01632.html">LumexStacktraceEntry</a>&gt;&gt;</td></tr>
+<tr class="memdesc:aed3df8e98fabb3aad10ed64b9c724c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for <code><a class="el" href="a01620.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> using the default <code>std::allocator</code>.  <br /></td></tr>
+<tr class="separator:aed3df8e98fabb3aad10ed64b9c724c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa65ae33a9cb60c0f3fdb50f47f7a425e" id="r_aa65ae33a9cb60c0f3fdb50f47f7a425e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa65ae33a9cb60c0f3fdb50f47f7a425e">LumexStacktrace</a> = <a class="el" href="a00850.html#aed3df8e98fabb3aad10ed64b9c724c54">lumex::core::exceptions::stacktrace::LumexStacktrace</a></td></tr>
+<tr class="memdesc:aa65ae33a9cb60c0f3fdb50f47f7a425e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global alias for <code><a class="el" href="a00850.html#aed3df8e98fabb3aad10ed64b9c724c54" title="Alias for LumexBasicStacktrace using the default std::allocator.">lumex::core::exceptions::stacktrace::LumexStacktrace</a></code>.  <br /></td></tr>
+<tr class="separator:aa65ae33a9cb60c0f3fdb50f47f7a425e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f60ceab597bebfcc580c78610fb5712" id="r_a3f60ceab597bebfcc580c78610fb5712"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f60ceab597bebfcc580c78610fb5712">LumexStacktraceEntry</a> = <a class="el" href="a01632.html">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a></td></tr>
+<tr class="memdesc:a3f60ceab597bebfcc580c78610fb5712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global alias for <code><a class="el" href="a01632.html">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a></code>.  <br /></td></tr>
+<tr class="separator:a3f60ceab597bebfcc580c78610fb5712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a894eb6f8a719b5015744c5a76dc63b0b" id="r_a894eb6f8a719b5015744c5a76dc63b0b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#a894eb6f8a719b5015744c5a76dc63b0b">lumex::core::exceptions::stacktrace::detail::demangle_symbol</a> (char const *mangled)</td></tr>
+<tr class="memdesc:a894eb6f8a719b5015744c5a76dc63b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demangles a C++ mangled symbol name on POSIX systems.  <br /></td></tr>
+<tr class="separator:a894eb6f8a719b5015744c5a76dc63b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a19414115a27f01fec44312379fabc" id="r_a42a19414115a27f01fec44312379fabc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#a42a19414115a27f01fec44312379fabc">lumex::core::exceptions::stacktrace::detail::get_source_info_addr2line</a> (void *address, std::string &amp;file, std::uint32_t &amp;line)</td></tr>
+<tr class="memdesc:a42a19414115a27f01fec44312379fabc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves source file and line number information for a given address using <code>addr2line</code> on POSIX systems.  <br /></td></tr>
+<tr class="separator:a42a19414115a27f01fec44312379fabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa61442020de40e745e7e8fa3ad1d9b0c" id="r_aa61442020de40e745e7e8fa3ad1d9b0c"><td class="memTemplParams" colspan="2">template&lt;typename Allocator&gt; </td></tr>
+<tr class="memitem:aa61442020de40e745e7e8fa3ad1d9b0c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a01620.html">stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00851.html#aa61442020de40e745e7e8fa3ad1d9b0c">lumex::core::exceptions::stacktrace::detail::capture_stacktrace</a> (std::size_t skip, std::size_t max_depth, Allocator const &amp;alloc) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:aa61442020de40e745e7e8fa3ad1d9b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Platform-specific stacktrace capture implementation for POSIX systems.  <br /></td></tr>
+<tr class="separator:aa61442020de40e745e7e8fa3ad1d9b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2cc258aceea6ae26e88ff6a4fde9c17" id="r_aa2cc258aceea6ae26e88ff6a4fde9c17"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#aa2cc258aceea6ae26e88ff6a4fde9c17">lumex::core::exceptions::stacktrace::detail::resolve_symbol_info</a> (void *address, std::string &amp;function_name, std::string &amp;source_file, std::uint32_t &amp;line_number) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:aa2cc258aceea6ae26e88ff6a4fde9c17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves symbol information (function name, source file, line number) for a given address on POSIX systems.  <br /></td></tr>
+<tr class="separator:aa2cc258aceea6ae26e88ff6a4fde9c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a663d9af688ef53182e300c0d12658994" id="r_a663d9af688ef53182e300c0d12658994"><td class="memTemplParams" colspan="2">template&lt;typename Allocator1, typename Allocator2&gt; </td></tr>
+<tr class="memitem:a663d9af688ef53182e300c0d12658994"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00850.html#a663d9af688ef53182e300c0d12658994">lumex::core::exceptions::stacktrace::operator==</a> (<a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator1 &gt; const &amp;lhs, <a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator2 &gt; const &amp;rhs) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a663d9af688ef53182e300c0d12658994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a01620.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> objects for equality.  <br /></td></tr>
+<tr class="separator:a663d9af688ef53182e300c0d12658994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b442a4c2ab34007572c58f5715bb9c" id="r_ac5b442a4c2ab34007572c58f5715bb9c"><td class="memTemplParams" colspan="2">template&lt;typename Allocator1, typename Allocator2&gt; </td></tr>
+<tr class="memitem:ac5b442a4c2ab34007572c58f5715bb9c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00850.html#ac5b442a4c2ab34007572c58f5715bb9c">lumex::core::exceptions::stacktrace::operator!=</a> (<a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator1 &gt; const &amp;lhs, <a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator2 &gt; const &amp;rhs) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:ac5b442a4c2ab34007572c58f5715bb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a01620.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> objects for inequality.  <br /></td></tr>
+<tr class="separator:ac5b442a4c2ab34007572c58f5715bb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918a88de521649f51539a5c6c7a7f579" id="r_a918a88de521649f51539a5c6c7a7f579"><td class="memTemplParams" colspan="2">template&lt;typename Allocator1, typename Allocator2&gt; </td></tr>
+<tr class="memitem:a918a88de521649f51539a5c6c7a7f579"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00850.html#a918a88de521649f51539a5c6c7a7f579">lumex::core::exceptions::stacktrace::operator&lt;</a> (<a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator1 &gt; const &amp;lhs, <a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator2 &gt; const &amp;rhs) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a918a88de521649f51539a5c6c7a7f579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lexicographically compares two <code><a class="el" href="a01620.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> objects.  <br /></td></tr>
+<tr class="separator:a918a88de521649f51539a5c6c7a7f579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc51564fecaa51a938e2fbab7e7110a1" id="r_adc51564fecaa51a938e2fbab7e7110a1"><td class="memTemplParams" colspan="2">template&lt;typename Allocator1, typename Allocator2&gt; </td></tr>
+<tr class="memitem:adc51564fecaa51a938e2fbab7e7110a1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00850.html#adc51564fecaa51a938e2fbab7e7110a1">lumex::core::exceptions::stacktrace::operator&lt;=</a> (<a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator1 &gt; const &amp;lhs, <a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator2 &gt; const &amp;rhs) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:adc51564fecaa51a938e2fbab7e7110a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a01620.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> objects for less than or equal to.  <br /></td></tr>
+<tr class="separator:adc51564fecaa51a938e2fbab7e7110a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a194e5a81d4b2e1b98121b53e4d31d31b" id="r_a194e5a81d4b2e1b98121b53e4d31d31b"><td class="memTemplParams" colspan="2">template&lt;typename Allocator1, typename Allocator2&gt; </td></tr>
+<tr class="memitem:a194e5a81d4b2e1b98121b53e4d31d31b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00850.html#a194e5a81d4b2e1b98121b53e4d31d31b">lumex::core::exceptions::stacktrace::operator&gt;</a> (<a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator1 &gt; const &amp;lhs, <a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator2 &gt; const &amp;rhs) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:a194e5a81d4b2e1b98121b53e4d31d31b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a01620.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> objects for greater than.  <br /></td></tr>
+<tr class="separator:a194e5a81d4b2e1b98121b53e4d31d31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1e24ebf81bec4c9d67be407caf26be5" id="r_af1e24ebf81bec4c9d67be407caf26be5"><td class="memTemplParams" colspan="2">template&lt;typename Allocator1, typename Allocator2&gt; </td></tr>
+<tr class="memitem:af1e24ebf81bec4c9d67be407caf26be5"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00850.html#af1e24ebf81bec4c9d67be407caf26be5">lumex::core::exceptions::stacktrace::operator&gt;=</a> (<a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator1 &gt; const &amp;lhs, <a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator2 &gt; const &amp;rhs) <a class="el" href="a00338.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
+<tr class="memdesc:af1e24ebf81bec4c9d67be407caf26be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a01620.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> objects for greater than or equal to.  <br /></td></tr>
+<tr class="separator:af1e24ebf81bec4c9d67be407caf26be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55989b3d4dcd9608fa423dba21865aec" id="r_a55989b3d4dcd9608fa423dba21865aec"><td class="memTemplParams" colspan="2">template&lt;typename Allocator&gt; </td></tr>
+<tr class="memitem:a55989b3d4dcd9608fa423dba21865aec"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00850.html#a55989b3d4dcd9608fa423dba21865aec">lumex::core::exceptions::stacktrace::swap</a> (<a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator &gt; &amp;lhs, <a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator &gt; &amp;rhs) <a class="el" href="a00338.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a>(noexcept(lhs.swap(rhs)))</td></tr>
+<tr class="memdesc:a55989b3d4dcd9608fa423dba21865aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global <code>swap</code> function for <code><a class="el" href="a01620.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>.  <br /></td></tr>
+<tr class="separator:a55989b3d4dcd9608fa423dba21865aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b962af55f800e2cbb3a49009e6676f1" id="r_a9b962af55f800e2cbb3a49009e6676f1"><td class="memTemplParams" colspan="2">template&lt;typename Allocator&gt; </td></tr>
+<tr class="memitem:a9b962af55f800e2cbb3a49009e6676f1"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00850.html#a9b962af55f800e2cbb3a49009e6676f1">lumex::core::exceptions::stacktrace::to_string</a> (<a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator &gt; const &amp;stacktrace)</td></tr>
+<tr class="memdesc:a9b962af55f800e2cbb3a49009e6676f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a <code><a class="el" href="a01620.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> object to its string representation.  <br /></td></tr>
+<tr class="separator:a9b962af55f800e2cbb3a49009e6676f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ac8080cec6c74dc7759b980a28234b" id="r_ab9ac8080cec6c74dc7759b980a28234b"><td class="memTemplParams" colspan="2">template&lt;typename CharT, typename Traits, typename Allocator&gt; </td></tr>
+<tr class="memitem:ab9ac8080cec6c74dc7759b980a28234b"><td class="memTemplItemLeft" align="right" valign="top">std::basic_ostream&lt; CharT, Traits &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00850.html#ab9ac8080cec6c74dc7759b980a28234b">lumex::core::exceptions::stacktrace::operator&lt;&lt;</a> (std::basic_ostream&lt; CharT, Traits &gt; &amp;ostream, <a class="el" href="a01620.html">LumexBasicStacktrace</a>&lt; Allocator &gt; const &amp;stacktrace)</td></tr>
+<tr class="memdesc:ab9ac8080cec6c74dc7759b980a28234b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads the <code>operator&lt;&lt;</code> for <code>std::basic_ostream</code> to print a <code><a class="el" href="a01620.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>.  <br /></td></tr>
+<tr class="separator:ab9ac8080cec6c74dc7759b980a28234b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b962af55f800e2cbb3a49009e6676f1" id="r_a9b962af55f800e2cbb3a49009e6676f1"><td class="memTemplParams" colspan="2">template&lt;typename Allocator&gt; </td></tr>
+<tr class="memitem:a9b962af55f800e2cbb3a49009e6676f1"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9b962af55f800e2cbb3a49009e6676f1">to_string</a> (LumexBasicStacktrace&lt; Allocator &gt; const &amp;stacktrace)</td></tr>
+<tr class="memdesc:a9b962af55f800e2cbb3a49009e6676f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brings <code><a class="el" href="a00850.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation.">lumex::core::exceptions::stacktrace::to_string</a></code> into the global namespace.  <br /></td></tr>
+<tr class="separator:a9b962af55f800e2cbb3a49009e6676f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab61ea5b9e5601de5e506c84e1e153dff" id="r_ab61ea5b9e5601de5e506c84e1e153dff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> short const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#ab61ea5b9e5601de5e506c84e1e153dff">lumex::core::exceptions::stacktrace::detail::kHashRightShift</a> = 2</td></tr>
+<tr class="memdesc:ab61ea5b9e5601de5e506c84e1e153dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant for right bit shift operation in hash calculation.  <br /></td></tr>
+<tr class="separator:ab61ea5b9e5601de5e506c84e1e153dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b788cbc1fe1ffa4b6ce8aa3f792917" id="r_ab4b788cbc1fe1ffa4b6ce8aa3f792917"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> short const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#ab4b788cbc1fe1ffa4b6ce8aa3f792917">lumex::core::exceptions::stacktrace::detail::kHashLeftShift</a> = 6</td></tr>
+<tr class="memdesc:ab4b788cbc1fe1ffa4b6ce8aa3f792917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant for left bit shift operation in hash calculation.  <br /></td></tr>
+<tr class="separator:ab4b788cbc1fe1ffa4b6ce8aa3f792917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a19298462cc9afc2cfe5a16027218de" id="r_a4a19298462cc9afc2cfe5a16027218de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> short const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#a4a19298462cc9afc2cfe5a16027218de">lumex::core::exceptions::stacktrace::detail::kDefaultAddrStrSize</a> = 32</td></tr>
+<tr class="memdesc:a4a19298462cc9afc2cfe5a16027218de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default buffer size for address string representations.  <br /></td></tr>
+<tr class="separator:a4a19298462cc9afc2cfe5a16027218de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dfa109516137240d61f31f92a23a09d" id="r_a8dfa109516137240d61f31f92a23a09d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> short const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#a8dfa109516137240d61f31f92a23a09d">lumex::core::exceptions::stacktrace::detail::kDefaultMaxFrames</a> = 128</td></tr>
+<tr class="memdesc:a8dfa109516137240d61f31f92a23a09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default maximum number of frames to capture in a stacktrace.  <br /></td></tr>
+<tr class="separator:a8dfa109516137240d61f31f92a23a09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b55f5175ddb4d65f17a56434243574" id="r_a01b55f5175ddb4d65f17a56434243574"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> short const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#a01b55f5175ddb4d65f17a56434243574">lumex::core::exceptions::stacktrace::detail::kDefaultBufferSize</a> = 256</td></tr>
+<tr class="separator:a01b55f5175ddb4d65f17a56434243574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3117a732fece76851211984e400fd63e" id="r_a3117a732fece76851211984e400fd63e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> short const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#a3117a732fece76851211984e400fd63e">lumex::core::exceptions::stacktrace::detail::kDefaultCmdSize</a> = 512</td></tr>
+<tr class="separator:a3117a732fece76851211984e400fd63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab350e5aef16554f78f55daf70a1af0e7" id="r_ab350e5aef16554f78f55daf70a1af0e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00338.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#ab350e5aef16554f78f55daf70a1af0e7">lumex::core::exceptions::stacktrace::detail::kHashGoldenRatio</a> = 0x9e3779b9U</td></tr>
+<tr class="separator:ab350e5aef16554f78f55daf70a1af0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a8aac503affc067676ceedfe24f4c3357" name="a8aac503affc067676ceedfe24f4c3357"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8aac503affc067676ceedfe24f4c3357">&#9670;&#160;</a></span>LUMEX_CONSTEXPR_CTOR</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Defines the LumexBasicStacktrace class and related utilities for capturing and symbolizing call stacks. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span class="obfuscator">.nosp@m.</span>slav<span class="obfuscator">.nosp@m.</span>.semy<span class="obfuscator">.nosp@m.</span>kin@<span class="obfuscator">.nosp@m.</span>gmail<span class="obfuscator">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>This header provides a cross-platform mechanism for generating and manipulating stack traces, which are crucial for debugging, error reporting, and understanding program execution flow. It includes platform-specific implementations for Windows (using DbgHelp) and POSIX systems (using backtrace, dladdr, and addr2line). The core <code>LumexBasicStacktrace</code> template class provides a container for <code><a class="el" href="#a3f60ceab597bebfcc580c78610fb5712" title="Global alias for lumex::core::exceptions::stacktrace::LumexStacktraceEntry.">LumexStacktraceEntry</a></code> objects, representing individual frames in the call stack. It is designed to be allocator-aware and exception-safe. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="aa65ae33a9cb60c0f3fdb50f47f7a425e" name="aa65ae33a9cb60c0f3fdb50f47f7a425e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa65ae33a9cb60c0f3fdb50f47f7a425e">&#9670;&#160;</a></span>LumexStacktrace</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LUMEX_CONSTEXPR_CTOR</td>
+          <td class="memname">using <a class="el" href="#aa65ae33a9cb60c0f3fdb50f47f7a425e">LumexStacktrace</a> = <a class="el" href="a00850.html#aed3df8e98fabb3aad10ed64b9c724c54">lumex::core::exceptions::stacktrace::LumexStacktrace</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Global alias for <code><a class="el" href="a00850.html#aed3df8e98fabb3aad10ed64b9c724c54" title="Alias for LumexBasicStacktrace using the default std::allocator.">lumex::core::exceptions::stacktrace::LumexStacktrace</a></code>. </p>
+<p>This provides a simplified name for the default stacktrace type, making it easier to use without full namespace qualification. </p>
+
 </div>
 </div>
-<a id="a1301de49ecd91c86b7a61015084dc3fc" name="a1301de49ecd91c86b7a61015084dc3fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1301de49ecd91c86b7a61015084dc3fc">&#9670;&#160;</a></span>LUMEX_CONSTEXPR_DEFAULTED_CTOR</h2>
+<a id="a3f60ceab597bebfcc580c78610fb5712" name="a3f60ceab597bebfcc580c78610fb5712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f60ceab597bebfcc580c78610fb5712">&#9670;&#160;</a></span>LumexStacktraceEntry</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LUMEX_CONSTEXPR_DEFAULTED_CTOR</td>
+          <td class="memname">using <a class="el" href="#a3f60ceab597bebfcc580c78610fb5712">LumexStacktraceEntry</a> = <a class="el" href="a01632.html">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Global alias for <code><a class="el" href="a01632.html">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a></code>. </p>
+<p>This provides a simplified name for the stacktrace entry type, making it easier to use without full namespace qualification. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02923.html#a0">D:/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/stacktrace/LumexStacktraceEntry.hpp</a>.</dd>
+</dl>
+
 </div>
 </div>
-<a id="a82311fbffabf10f9f7d8a089711dae6a" name="a82311fbffabf10f9f7d8a089711dae6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82311fbffabf10f9f7d8a089711dae6a">&#9670;&#160;</a></span>LUMEX_CONSTEXPR_DEFAULTED_DTOR</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a9b962af55f800e2cbb3a49009e6676f1" name="a9b962af55f800e2cbb3a49009e6676f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b962af55f800e2cbb3a49009e6676f1">&#9670;&#160;</a></span>to_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Allocator&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">#define LUMEX_CONSTEXPR_DEFAULTED_DTOR</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a01a7d3864d496126e9efae4bd106ffd3" name="a01a7d3864d496126e9efae4bd106ffd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01a7d3864d496126e9efae4bd106ffd3">&#9670;&#160;</a></span>LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a01a7d3864d496126e9efae4bd106ffd3" name="a01a7d3864d496126e9efae4bd106ffd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01a7d3864d496126e9efae4bd106ffd3">&#9670;&#160;</a></span>LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_CONSTEXPR_DEFAULTED_VIRTUAL_DTOR</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac6ade2ee3e7399a6546df90d11ec8518" name="ac6ade2ee3e7399a6546df90d11ec8518"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6ade2ee3e7399a6546df90d11ec8518">&#9670;&#160;</a></span>LUMEX_CONSTEXPR_DTOR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_CONSTEXPR_DTOR</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a81fe93b4daec85db53b06073263b888f" name="a81fe93b4daec85db53b06073263b888f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81fe93b4daec85db53b06073263b888f">&#9670;&#160;</a></span>LUMEX_CONSTEXPR_FUNCTION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_CONSTEXPR_FUNCTION</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5623e00fcb6be5c2ab39f71b96fca788" name="a5623e00fcb6be5c2ab39f71b96fca788"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5623e00fcb6be5c2ab39f71b96fca788">&#9670;&#160;</a></span>LUMEX_CONSTEXPR_VIRTUAL_DTOR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_CONSTEXPR_VIRTUAL_DTOR</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa40239baec57106b1798029a91d87025" name="aa40239baec57106b1798029a91d87025"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa40239baec57106b1798029a91d87025">&#9670;&#160;</a></span>LUMEX_CONSTEXPR_VIRTUAL_FUNCTION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_CONSTEXPR_VIRTUAL_FUNCTION</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7efa0880bd62481ba01b90becb04f413" name="a7efa0880bd62481ba01b90becb04f413"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7efa0880bd62481ba01b90becb04f413">&#9670;&#160;</a></span>LUMEX_CONSTINIT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_CONSTINIT</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a47e6f687e9ccc7895ec20cace7a357d8" name="a47e6f687e9ccc7895ec20cace7a357d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47e6f687e9ccc7895ec20cace7a357d8">&#9670;&#160;</a></span>LUMEX_INLINE_VARIABLE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_INLINE_VARIABLE</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a42fdd906f59b10053e30b1218cc2a1ac" name="a42fdd906f59b10053e30b1218cc2a1ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42fdd906f59b10053e30b1218cc2a1ac">&#9670;&#160;</a></span>LUMEX_NOEXCEPT_FUNCTION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_NOEXCEPT_FUNCTION</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a11d12a3cfd6e87c464786a4ccfba3033" name="a11d12a3cfd6e87c464786a4ccfba3033"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11d12a3cfd6e87c464786a4ccfba3033">&#9670;&#160;</a></span>LUMEX_NOEXCEPT_FUNCTION_CONDITIONAL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_NOEXCEPT_FUNCTION_CONDITIONAL</td>
+          <td class="memname">std::string lumex::core::exceptions::stacktrace::to_string </td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cond</em></span></td><td>)</td>
+          <td class="paramtype">LumexBasicStacktrace&lt; Allocator &gt; const &amp;</td>          <td class="paramname"><span class="paramname"><em>stacktrace</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a6b5f5ff346254db7b10ff8acfb874e0a" name="a6b5f5ff346254db7b10ff8acfb874e0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b5f5ff346254db7b10ff8acfb874e0a">&#9670;&#160;</a></span>LUMEX_RESTRICT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_RESTRICT</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Brings <code><a class="el" href="a00850.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation.">lumex::core::exceptions::stacktrace::to_string</a></code> into the global namespace. </p>
+<p>This allows <code>to_string</code> to be called without full namespace qualification when used with <code><a class="el" href="#aa65ae33a9cb60c0f3fdb50f47f7a425e" title="Global alias for lumex::core::exceptions::stacktrace::LumexStacktrace.">LumexStacktrace</a></code> objects, improving readability. </p>
 
 </div>
 </div>
@@ -371,7 +328,7 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_a126d50ef3969faa001965a2a3290d9d.html">LumexCore</a></li><li class="navelem"><a class="el" href="dir_d9d9c8e943ec867974e68e8617c470c7.html">lumex</a></li><li class="navelem"><a class="el" href="dir_7e8061e0850605f9870ab7462da77f7d.html">core</a></li><li class="navelem"><a class="el" href="dir_89e42b2a70e8a88de526b25cf537eb3f.html">utility</a></li><li class="navelem"><a class="el" href="a00197.html">LumexKeywords.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_0e88182efedc8e88a19257a64dc8c882.html">core</a></li><li class="navelem"><a class="el" href="dir_a3441288cad593ecc41bd2411108526e.html">exceptions</a></li><li class="navelem"><a class="el" href="dir_5e36a95047b068cba52935ea3cf15469.html">stacktrace</a></li><li class="navelem"><a class="el" href="a00197.html">LumexStacktrace.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

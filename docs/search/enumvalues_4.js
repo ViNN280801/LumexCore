@@ -1,15 +1,16 @@
 var searchData=
 [
-  ['encoding_5fauto_0',['encoding_auto',['../a00503.html#a0e420a3442e40eff85fc1300bf31e94faf5761631e0f59a494f5be2fcc2a87dd5',1,'Lumex::Xml::Types']]],
-  ['encoding_5flatin1_1',['encoding_latin1',['../a00503.html#a0e420a3442e40eff85fc1300bf31e94fa9a1e8dd10173fff8458b3e85b4db033a',1,'Lumex::Xml::Types']]],
-  ['encoding_5futf16_2',['encoding_utf16',['../a00503.html#a0e420a3442e40eff85fc1300bf31e94fa4b3e6f9e97fcd334aa704eb806fa0838',1,'Lumex::Xml::Types']]],
-  ['encoding_5futf16_5fbe_3',['encoding_utf16_be',['../a00503.html#a0e420a3442e40eff85fc1300bf31e94fa16e3c9cefc3cfd65c7338e1c506ce3e4',1,'Lumex::Xml::Types']]],
-  ['encoding_5futf16_5fle_4',['encoding_utf16_le',['../a00503.html#a0e420a3442e40eff85fc1300bf31e94fa0db411d38f9538a9859e08373d500529',1,'Lumex::Xml::Types']]],
-  ['encoding_5futf32_5',['encoding_utf32',['../a00503.html#a0e420a3442e40eff85fc1300bf31e94faebf494a7df27534c1f74541b7b5825e0',1,'Lumex::Xml::Types']]],
-  ['encoding_5futf32_5fbe_6',['encoding_utf32_be',['../a00503.html#a0e420a3442e40eff85fc1300bf31e94fab07637418bebed3dac9191887cd19d64',1,'Lumex::Xml::Types']]],
-  ['encoding_5futf32_5fle_7',['encoding_utf32_le',['../a00503.html#a0e420a3442e40eff85fc1300bf31e94fa07932d9402af500911ec152a6e6aa3b4',1,'Lumex::Xml::Types']]],
-  ['encoding_5futf8_8',['encoding_utf8',['../a00503.html#a0e420a3442e40eff85fc1300bf31e94faf47f34f9111497f7024b19b34d07686d',1,'Lumex::Xml::Types']]],
-  ['encoding_5fwchar_9',['encoding_wchar',['../a00503.html#a0e420a3442e40eff85fc1300bf31e94fa7fbe2ca4770ce7a3a6d607d9ff03d155',1,'Lumex::Xml::Types']]],
-  ['error_10',['Error',['../a00451.html#a8e9e6451b4f33ca0135e137538d24cdda902b0d55fddef6f8d651fe1035b7d4bd',1,'Lumex::Applied::Logging']]],
-  ['exponential_11',['EXPONENTIAL',['../a00137.html#aca272ab2bf25bfa410cbbbedfc8aef70adcd5fc33e211f31cef0cd7cb36518d31',1,'LumexNumberGenerator.hpp']]]
+  ['encoding_5fauto_0',['encoding_auto',['../a00954.html#af1767ae022d3845084f92ab0bc3776a0a86500d85e2a14a91063a2f19f14cbf80',1,'lumex::xml::types::Types']]],
+  ['encoding_5flatin1_1',['encoding_latin1',['../a00954.html#af1767ae022d3845084f92ab0bc3776a0a13b7c482cfc74974efbfaa40a0ee1868',1,'lumex::xml::types::Types']]],
+  ['encoding_5futf16_2',['encoding_utf16',['../a00954.html#af1767ae022d3845084f92ab0bc3776a0a292bb1b16cf3a35525d2ecedadc66dcd',1,'lumex::xml::types::Types']]],
+  ['encoding_5futf16_5fbe_3',['encoding_utf16_be',['../a00954.html#af1767ae022d3845084f92ab0bc3776a0acb87e5684a8538e60dd2ecda74ef39e2',1,'lumex::xml::types::Types']]],
+  ['encoding_5futf16_5fle_4',['encoding_utf16_le',['../a00954.html#af1767ae022d3845084f92ab0bc3776a0af24da3643b8c78b51189e17232a70705',1,'lumex::xml::types::Types']]],
+  ['encoding_5futf32_5',['encoding_utf32',['../a00954.html#af1767ae022d3845084f92ab0bc3776a0a76b87fb972f0a5dd51404cd696943884',1,'lumex::xml::types::Types']]],
+  ['encoding_5futf32_5fbe_6',['encoding_utf32_be',['../a00954.html#af1767ae022d3845084f92ab0bc3776a0a4aa858911de924e5322ecce152be848d',1,'lumex::xml::types::Types']]],
+  ['encoding_5futf32_5fle_7',['encoding_utf32_le',['../a00954.html#af1767ae022d3845084f92ab0bc3776a0a2ac806579d476e3e77a3e36d2190cc22',1,'lumex::xml::types::Types']]],
+  ['encoding_5futf8_8',['encoding_utf8',['../a00954.html#af1767ae022d3845084f92ab0bc3776a0a8f73d135c1732dad295e22b2cea1dbd3',1,'lumex::xml::types::Types']]],
+  ['encoding_5fwchar_9',['encoding_wchar',['../a00954.html#af1767ae022d3845084f92ab0bc3776a0a3f71c11b5b44d38b2b604ea78ec0dfaf',1,'lumex::xml::types::Types']]],
+  ['enumeration_10',['enumeration',['../a00860.html#a50865894dbfed15f5472a74f7acbac7ca3f49fe61d5812612c53377049e3c86d6',1,'lumex::core::fmt::Detail']]],
+  ['error_11',['Error',['../a00803.html#ab89470b4db8a7dc224df84237c78270ca902b0d55fddef6f8d651fe1035b7d4bd',1,'lumex::applied::logging::log']]],
+  ['exponential_12',['EXPONENTIAL',['../a00862.html#ac790ad052a54165bc304a20f53f7a502adcd5fc33e211f31cef0cd7cb36518d31',1,'lumex::core::generators::number_generator']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::XPath::Node Namespace Reference</title>
+<title>LumexLib: example_settings_json.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,141 +104,47 @@ $(function(){initNavTree('a00497.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::XPath::Node Namespace Reference</div></div>
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">example_settings_json.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01216.html">XPathNode</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a node in an <a class="el" href="a00496.html">XPath</a> node-set, which can be either an XML element/document node or an XML attribute.  <a href="a01216.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01220.html">XPathNodeSet</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a collection of <a class="el" href="a00496.html">XPath</a> nodes, managing their order and uniqueness.  <a href="a01220.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01224.html">XPathNodeSetRaw</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a raw, mutable node set used primarily during <a class="el" href="a00496.html">XPath</a> evaluation.  <a href="a01224.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;lumex/applied/settings/LumexSettings&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for example_settings_json.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00498.png" border="0" usemap="#aexample__settings__json_8cpp" alt=""/></div>
+</div>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7cdb6ff34e3aa14e6e1164e458559568" id="r_a7cdb6ff34e3aa14e6e1164e458559568"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cdb6ff34e3aa14e6e1164e458559568">operator&amp;&amp;</a> (<a class="el" href="a01216.html">XPathNode</a> const &amp;lhs, bool rhs)</td></tr>
-<tr class="memdesc:a7cdb6ff34e3aa14e6e1164e458559568"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical AND operator for <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> and boolean.  <br /></td></tr>
-<tr class="separator:a7cdb6ff34e3aa14e6e1164e458559568"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a453559741302ea9e9cf459ddb6bf1ffe" id="r_a453559741302ea9e9cf459ddb6bf1ffe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00212.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a453559741302ea9e9cf459ddb6bf1ffe">operator||</a> (<a class="el" href="a01216.html">XPathNode</a> const &amp;lhs, bool rhs)</td></tr>
-<tr class="memdesc:a453559741302ea9e9cf459ddb6bf1ffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical OR operator for <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> and boolean.  <br /></td></tr>
-<tr class="separator:a453559741302ea9e9cf459ddb6bf1ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ad72121805057f14ded767ccd0da24004" id="r_ad72121805057f14ded767ccd0da24004"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01220.html">XPathNodeSet</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad72121805057f14ded767ccd0da24004">dummy_node_set</a></td></tr>
-<tr class="memdesc:ad72121805057f14ded767ccd0da24004"><td class="mdescLeft">&#160;</td><td class="mdescRight">A global, constant empty <code><a class="el" href="a01220.html" title="Represents a collection of XPath nodes, managing their order and uniqueness.">XPathNodeSet</a></code> for convenience.  <br /></td></tr>
-<tr class="separator:ad72121805057f14ded767ccd0da24004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a7cdb6ff34e3aa14e6e1164e458559568" name="a7cdb6ff34e3aa14e6e1164e458559568"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cdb6ff34e3aa14e6e1164e458559568">&#9670;&#160;</a></span>operator&amp;&amp;()</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool Lumex::Xml::XPath::Node::operator&amp;&amp; </td>
+          <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a01216.html">XPathNode</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Logical AND operator for <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> and boolean. </p>
-<p>Enables the use of <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> in logical AND expressions (<code>&amp;&amp;</code>) with a boolean right-hand side, treating the <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> as a boolean. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>The left-hand side <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code>. </td></tr>
-    <tr><td class="paramname">rhs</td><td>The right-hand side boolean value. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The result of the logical AND operation. </dd></dl>
-
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00497_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#aa00497_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
 </div>
-</div>
-<a id="a453559741302ea9e9cf459ddb6bf1ffe" name="a453559741302ea9e9cf459ddb6bf1ffe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a453559741302ea9e9cf459ddb6bf1ffe">&#9670;&#160;</a></span>operator||()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool Lumex::Xml::XPath::Node::operator|| </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01216.html">XPathNode</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Logical OR operator for <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> and boolean. </p>
-<p>Enables the use of <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> in logical OR expressions (<code>||</code>) with a boolean right-hand side, treating the <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> as a boolean. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>The left-hand side <code><a class="el" href="a01216.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code>. </td></tr>
-    <tr><td class="paramname">rhs</td><td>The right-hand side boolean value. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The result of the logical OR operation. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ad72121805057f14ded767ccd0da24004" name="ad72121805057f14ded767ccd0da24004"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad72121805057f14ded767ccd0da24004">&#9670;&#160;</a></span>dummy_node_set</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01220.html">XPathNodeSet</a> const Lumex::Xml::XPath::Node::dummy_node_set</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>A global, constant empty <code><a class="el" href="a01220.html" title="Represents a collection of XPath nodes, managing their order and uniqueness.">XPathNodeSet</a></code> for convenience. </p>
 
 </div>
 </div>
@@ -247,7 +153,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00496.html">XPath</a></li><li class="navelem"><a class="el" href="a00497.html">Node</a></li>
+    <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_1c55e9dab407d39bc63b768b0b6b43e0.html">Develop</a></li><li class="navelem"><a class="el" href="dir_7a83179c6b0c7425dfbb4d6a1832202a.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_c3f62fc02a1a9e59d4b655ab47b60730.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_4bba5eab3ea1de71e7118ef0a0476d04.html">lumex</a></li><li class="navelem"><a class="el" href="dir_f008ed5725cbe146b113f968df2513ab.html">examples</a></li><li class="navelem"><a class="el" href="dir_3513508f9df540e6c119db4d318f4d88.html">settings</a></li><li class="navelem"><a class="el" href="a00497.html">example_settings_json.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

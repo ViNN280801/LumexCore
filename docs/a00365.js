@@ -1,5 +1,4 @@
 var a00365 =
 [
-    [ "Lumex::Xml::XPath::Memory::XPathStack", "a01208.html", "a01208" ],
-    [ "Lumex::Xml::XPath::Memory::XPathStackData", "a01212.html", "a01212" ]
+    [ "main", "a00365.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ]
 ];

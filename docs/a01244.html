@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Lumex::Xml::XPath::Parser::XPathParseResult Struct Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc7_mmc_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">LumexLib<span id="projectnumber">&#160;@PROJECT_VERSION@</span>
+   <div id="projectname">LumexLib<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,171 +104,166 @@ $(function(){initNavTree('a01244.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="a01241.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Lumex::Xml::XPath::Parser::XPathParseResult Struct Reference</div></div>
+  <div class="headertitle"><div class="title">lumex::core::crc::parametric::crc7_mmc_spec_t Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents the result of an <a class="el" href="a00496.html">XPath</a> parsing operation.  
+<p>CRC-7/MMC: width=7 poly=0x09 init=0x00 refin=false refout=false xorout=0x00.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00401_source.html">XPathParseResult.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a22dbdd7bdb8fc0f473399e293d86f264" id="r_a22dbdd7bdb8fc0f473399e293d86f264"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22dbdd7bdb8fc0f473399e293d86f264">XPathParseResult</a> ()</td></tr>
-<tr class="memdesc:a22dbdd7bdb8fc0f473399e293d86f264"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Initializes the object to a failed state.  <br /></td></tr>
-<tr class="separator:a22dbdd7bdb8fc0f473399e293d86f264"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab43f08b252dfb4ed6922503816eb7032" id="r_ab43f08b252dfb4ed6922503816eb7032"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab43f08b252dfb4ed6922503816eb7032">operator bool</a> () const</td></tr>
-<tr class="memdesc:ab43f08b252dfb4ed6922503816eb7032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion operator to <code>bool</code>.  <br /></td></tr>
-<tr class="separator:ab43f08b252dfb4ed6922503816eb7032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac310b7c80bdf794b794b1ef5b4f12688" id="r_ac310b7c80bdf794b794b1ef5b4f12688"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac310b7c80bdf794b794b1ef5b4f12688">description</a> () const</td></tr>
-<tr class="memdesc:ac310b7c80bdf794b794b1ef5b4f12688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the error description.  <br /></td></tr>
-<tr class="separator:ac310b7c80bdf794b794b1ef5b4f12688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a946ce2890a0223c221c0142c3a272326" id="r_a946ce2890a0223c221c0142c3a272326"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a946ce2890a0223c221c0142c3a272326">ValueType</a> = std::uint8_t</td></tr>
+<tr class="separator:a946ce2890a0223c221c0142c3a272326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab35f4db880f9d6211eb5e3709483749a" id="r_ab35f4db880f9d6211eb5e3709483749a"><td class="memItemLeft" align="right" valign="top">char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab35f4db880f9d6211eb5e3709483749a">error</a></td></tr>
-<tr class="memdesc:ab35f4db880f9d6211eb5e3709483749a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A null-terminated C-string containing the error message if parsing failed, or <code>nullptr</code> if successful.  <br /></td></tr>
-<tr class="separator:ab35f4db880f9d6211eb5e3709483749a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a182d824b9215a5a198fd1868b7b6b9cd" id="r_a182d824b9215a5a198fd1868b7b6b9cd"><td class="memItemLeft" align="right" valign="top">ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a182d824b9215a5a198fd1868b7b6b9cd">offset</a></td></tr>
-<tr class="memdesc:a182d824b9215a5a198fd1868b7b6b9cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The offset (in <code><a class="el" href="a00248.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a></code> units) from the beginning of the <a class="el" href="a00496.html">XPath</a> query string where the error occurred.  <br /></td></tr>
-<tr class="separator:a182d824b9215a5a198fd1868b7b6b9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e279aac61506995809e374586ad4e1b" id="r_a6e279aac61506995809e374586ad4e1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e279aac61506995809e374586ad4e1b">kWidth</a> = 7</td></tr>
+<tr class="separator:a6e279aac61506995809e374586ad4e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71387e09496797109bdd00cefc79f994" id="r_a71387e09496797109bdd00cefc79f994"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71387e09496797109bdd00cefc79f994">kPoly</a> = 0x09U</td></tr>
+<tr class="separator:a71387e09496797109bdd00cefc79f994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f67902b1f90b7c986e83a7772834c4" id="r_aa5f67902b1f90b7c986e83a7772834c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5f67902b1f90b7c986e83a7772834c4">kInit</a> = 0x00U</td></tr>
+<tr class="separator:aa5f67902b1f90b7c986e83a7772834c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49f097694fe9f539914013e725abe00" id="r_aa49f097694fe9f539914013e725abe00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa49f097694fe9f539914013e725abe00">kRefIn</a> = false</td></tr>
+<tr class="separator:aa49f097694fe9f539914013e725abe00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a193da6099f27cbe31b802aa7ffe2a330" id="r_a193da6099f27cbe31b802aa7ffe2a330"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a193da6099f27cbe31b802aa7ffe2a330">kRefOut</a> = false</td></tr>
+<tr class="separator:a193da6099f27cbe31b802aa7ffe2a330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6053f4171bc58a28ba961a8b3a9c3315" id="r_a6053f4171bc58a28ba961a8b3a9c3315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6053f4171bc58a28ba961a8b3a9c3315">kXorOut</a> = 0x00U</td></tr>
+<tr class="separator:a6053f4171bc58a28ba961a8b3a9c3315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc6946fab000edb3de518781d00fb07" id="r_a0fc6946fab000edb3de518781d00fb07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fc6946fab000edb3de518781d00fb07">kCatalogCheck</a> = 0x75U</td></tr>
+<tr class="separator:a0fc6946fab000edb3de518781d00fb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents the result of an <a class="el" href="a00496.html">XPath</a> parsing operation. </p>
-<p>This structure encapsulates whether an <a class="el" href="a00496.html">XPath</a> expression was parsed successfully, and if not, provides details about the error, including an error message and the offset in the query string where the error occurred. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a22dbdd7bdb8fc0f473399e293d86f264" name="a22dbdd7bdb8fc0f473399e293d86f264"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22dbdd7bdb8fc0f473399e293d86f264">&#9670;&#160;</a></span>XPathParseResult()</h2>
+<div class="textblock"><p>CRC-7/MMC: width=7 poly=0x09 init=0x00 refin=false refout=false xorout=0x00. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-7/MMC </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a946ce2890a0223c221c0142c3a272326" name="a946ce2890a0223c221c0142c3a272326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a946ce2890a0223c221c0142c3a272326">&#9670;&#160;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> XPathParseResult::XPathParseResult </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">using <a class="el" href="#a946ce2890a0223c221c0142c3a272326">lumex::core::crc::parametric::crc7_mmc_spec_t::ValueType</a> = std::uint8_t</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Default constructor. Initializes the object to a failed state. </p>
-<p>By default, a newly constructed <code><a class="el" href="a01244.html" title="Represents the result of an XPath parsing operation.">XPathParseResult</a></code> indicates an "Internal error" at offset 0, implying an unsuccessful parsing attempt unless explicitly updated. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac310b7c80bdf794b794b1ef5b4f12688" name="ac310b7c80bdf794b794b1ef5b4f12688"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac310b7c80bdf794b794b1ef5b4f12688">&#9670;&#160;</a></span>description()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> char const  * XPathParseResult::description </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the error description. </p>
-<p>Returns the error message if parsing failed, or "No error" if successful. </p><dl class="section return"><dt>Returns</dt><dd>A null-terminated C-string describing the parsing result. </dd></dl>
-
-</div>
-</div>
-<a id="ab43f08b252dfb4ed6922503816eb7032" name="ab43f08b252dfb4ed6922503816eb7032"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab43f08b252dfb4ed6922503816eb7032">&#9670;&#160;</a></span>operator bool()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00212.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> XPathParseResult::operator bool </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Conversion operator to <code>bool</code>. </p>
-<p>Allows <code><a class="el" href="a01244.html" title="Represents the result of an XPath parsing operation.">XPathParseResult</a></code> objects to be used in boolean contexts. It evaluates to <code>true</code> if <code>error</code> is <code>nullptr</code> (no error), and <code>false</code> otherwise. </p><dl class="section return"><dt>Returns</dt><dd><code>true</code> if parsing was successful, <code>false</code> if an error occurred. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ab35f4db880f9d6211eb5e3709483749a" name="ab35f4db880f9d6211eb5e3709483749a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab35f4db880f9d6211eb5e3709483749a">&#9670;&#160;</a></span>error</h2>
+<a id="a0fc6946fab000edb3de518781d00fb07" name="a0fc6946fab000edb3de518781d00fb07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc6946fab000edb3de518781d00fb07">&#9670;&#160;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char const* Lumex::Xml::XPath::Parser::XPathParseResult::error</td>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint8_t lumex::core::crc::parametric::crc7_mmc_spec_t::kCatalogCheck = 0x75U</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>A null-terminated C-string containing the error message if parsing failed, or <code>nullptr</code> if successful. </p>
-
 </div>
 </div>
-<a id="a182d824b9215a5a198fd1868b7b6b9cd" name="a182d824b9215a5a198fd1868b7b6b9cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a182d824b9215a5a198fd1868b7b6b9cd">&#9670;&#160;</a></span>offset</h2>
+<a id="aa5f67902b1f90b7c986e83a7772834c4" name="aa5f67902b1f90b7c986e83a7772834c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f67902b1f90b7c986e83a7772834c4">&#9670;&#160;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ptrdiff_t Lumex::Xml::XPath::Parser::XPathParseResult::offset</td>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc7_mmc_spec_t::kInit = 0x00U</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The offset (in <code><a class="el" href="a00248.html#a4269fd4f829e07f1b1e9a66310b2aed5">char_t</a></code> units) from the beginning of the <a class="el" href="a00496.html">XPath</a> query string where the error occurred. </p>
+</div>
+</div>
+<a id="a71387e09496797109bdd00cefc79f994" name="a71387e09496797109bdd00cefc79f994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71387e09496797109bdd00cefc79f994">&#9670;&#160;</a></span>kPoly</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc7_mmc_spec_t::kPoly = 0x09U</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="a00401_source.html">XPathParseResult.hpp</a></li>
-<li><a class="el" href="a00398.html">XPathParseResult.cpp</a></li>
+<a id="aa49f097694fe9f539914013e725abe00" name="aa49f097694fe9f539914013e725abe00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49f097694fe9f539914013e725abe00">&#9670;&#160;</a></span>kRefIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc7_mmc_spec_t::kRefIn = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a193da6099f27cbe31b802aa7ffe2a330" name="a193da6099f27cbe31b802aa7ffe2a330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a193da6099f27cbe31b802aa7ffe2a330">&#9670;&#160;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc7_mmc_spec_t::kRefOut = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e279aac61506995809e374586ad4e1b" name="a6e279aac61506995809e374586ad4e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e279aac61506995809e374586ad4e1b">&#9670;&#160;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc7_mmc_spec_t::kWidth = 7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6053f4171bc58a28ba961a8b3a9c3315" name="a6053f4171bc58a28ba961a8b3a9c3315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6053f4171bc58a28ba961a8b3a9c3315">&#9670;&#160;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00332.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc7_mmc_spec_t::kXorOut = 0x00U</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00435.html">Lumex</a></li><li class="navelem"><a class="el" href="a00488.html">Xml</a></li><li class="navelem"><a class="el" href="a00496.html">XPath</a></li><li class="navelem"><a class="el" href="a00512.html">Parser</a></li><li class="navelem"><a class="el" href="a01244.html">XPathParseResult</a></li>
+    <li class="navelem"><a class="el" href="a00774.html">lumex</a></li><li class="navelem"><a class="el" href="a00826.html">core</a></li><li class="navelem"><a class="el" href="a00837.html">crc</a></li><li class="navelem"><a class="el" href="a00840.html">parametric</a></li><li class="navelem"><a class="el" href="a01244.html">crc7_mmc_spec_t</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
