@@ -1,4 +1,5 @@
 var a00587 =
 [
-    [ "LUMEX_IMPLEMENTATION", "a00587.html#a07486181f1990291c2a348de8eb4c480", null ]
+    [ "XmlDocumentBase", "a02584.html", "a02584" ],
+    [ "get_document", "a00587.html#a16f81b443974ef949f3101d48f1c142b", null ]
 ];

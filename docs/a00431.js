@@ -1,4 +1,5 @@
 var a00431 =
 [
+    [ "Formatter< area_t >", "a02556.html", "a02556" ],
     [ "main", "a00431.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ]
 ];

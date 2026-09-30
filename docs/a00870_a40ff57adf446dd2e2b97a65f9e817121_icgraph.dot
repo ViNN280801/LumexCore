@@ -1,0 +1,14 @@
+digraph "lumex::core::fmt::Detail::append_seconds"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="lumex::core::fmt::Detail\l::append_seconds",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lumex::core::fmt::Detail\l::write_chrono",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a754034de35d8ea974e37818b711109a8",tooltip="Writes time following the checked chrono-specs [it, end)."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lumex::core::fmt::Formatter\l\< std::chrono::duration\l\< Rep, Period \>, Char, typename\l std::enable_if\< Detail::has\l_formatter\< Char, Rep \>() &&std\l::is_arithmetic\< Rep \>::value \>\l::type \>::format",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01904.html#afa4e3b18a7e20bb3c43ba297a45d34f7",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lumex::core::fmt::Formatter\l\< std::chrono::time_point\l\< std::chrono::system_clock,\l Duration \>, Char, typename\l std::enable_if\<!std::chrono\l::treat_as_floating_point\< typename\l Duration::rep \>::value \>::type \>::format",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01908.html#a9a40bf1ecf001e44a93d8649bf47f9f8",tooltip=" "];
+}

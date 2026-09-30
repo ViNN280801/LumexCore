@@ -1,9 +1,9 @@
 var a01644 =
 [
-    [ "Unexpected", "a01644.html#a075c1367f8574a76ab9e4160d6ed521c", null ],
-    [ "Unexpected", "a01644.html#a79082b8816166114c5ee96b83ee85319", null ],
-    [ "error", "a01644.html#add04e74193f947673a08bc0dda3f6f20", null ],
-    [ "error", "a01644.html#a81f1dd1da8585415f1139c88f9dc58a9", null ],
-    [ "error", "a01644.html#ab2b13d122af5d10b0b9addbf7c70f227", null ],
-    [ "error", "a01644.html#aeaeb174828a6ed9cd56e17462559bacd", null ]
+    [ "BadExpectedAccess", "a01644.html#a00dd6b0e3cdd38f6b48be943bc1829cc", null ],
+    [ "error", "a01644.html#aae1d1c8283c945952ee3db006ab372d5", null ],
+    [ "error", "a01644.html#a9604884c70ead6473a1383e5ef087c94", null ],
+    [ "error", "a01644.html#ae9b644ecb1b55b4d50870ab6e8e3ce50", null ],
+    [ "error", "a01644.html#a5755b73e56bf6ba8a73c1f1459df20dc", null ],
+    [ "what", "a01644.html#a49bba203f8fbe97fec56aa8bc9b254ab", null ]
 ];

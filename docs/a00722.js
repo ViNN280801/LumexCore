@@ -1,4 +1,6 @@
 var a00722 =
 [
-    [ "LUMEX_IMPLEMENTATION", "a00722.html#a07486181f1990291c2a348de8eb4c480", null ]
+    [ "XPathNodeSet", "a02824.html", "a02824" ],
+    [ "XPathNodeSetRaw", "a02828.html", "a02828" ],
+    [ "dummy_node_set", "a00722.html#ae25bb9cdc14472d3df8176c4529130bf", null ]
 ];

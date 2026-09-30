@@ -1,0 +1,48 @@
+digraph "lumex::applied::logging::log::LumexLogging::getLogsDirectory"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="lumex::applied::logging\l::log::LumexLogging::getLogs\lDirectory",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get the path to the logs directory."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lumex::core::filesystem\l::fs::lumex_filesystem\l::create_directories",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01724.html#a5a83bc16354474cda0596dadfc248773",tooltip="Creates all directories in the specified path_arg, including any missing parent directories."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lumex::core::filesystem\l::fs::lumex_filesystem\l::create_directory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01724.html#a4cbd847d0feb72f8f66de69696e0269e",tooltip="Creates a new directory at the specified path."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lumex::core::filesystem\l::fs::path::c_str",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01704.html#a209b04de0c65852694ca4d9a44d4d9bd",tooltip="Returns a pointer to the null-terminated C-style string representation of the path."];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="lumex::core::filesystem\l::fs::filesystem_result::err",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01696.html#a384e25734c6d611b763c77caa77aeafc",tooltip="Factory method for creating an unsuccessful filesystem_result."];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="lumex::core::filesystem\l::fs::lumex_filesystem\l::is_directory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01724.html#af6c42e08c922316deceb3b08f096e4d1",tooltip="Checks if the specified path_arg refers to a directory."];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="lumex::core::filesystem\l::fs::filesystem_result::ok",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01696.html#a16fa37f602e827cf169d0dfb3b952940",tooltip="Factory method for creating a successful filesystem_result."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="lumex::core::filesystem\l::fs::filesystem_result\l::value",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01696.html#ae11d814b4f227302b2e33601f426d421",tooltip="Retrieves the encapsulated value (const version)."];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="lumex::core::filesystem\l::fs::path::empty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01704.html#a6f923676a1ec7e8440b21eca9b6d9312",tooltip="Checks if the path is empty."];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="lumex::core::filesystem\l::fs::filesystem_result\l::error_code",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01696.html#af6c94c3f8a9c0f511aeaa1ea5674a08d",tooltip="Retrieves the error code if the operation was unsuccessful."];
+  Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="lumex::core::filesystem\l::fs::lumex_filesystem\l::exists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01724.html#ada790da65df746d21a6709a9e7de0d5c",tooltip="Checks if a file or directory exists at the specified path."];
+  Node11 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="lumex::core::filesystem\l::fs::path::parent_path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01704.html#a73045c0556f64739ae07add68e64de85",tooltip="Extracts the parent path component from the path."];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="lumex::core::filesystem\l::fs::lumex_filesystem\l::current_path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01724.html#aaa3643c40857d8dde30daf8f341d574c",tooltip="Retrieves the current working directory."];
+  Node13 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="lumex::core::environment\l::env::LumexEnvironment::get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01600.html#a0b15d0d9afe0b5e48e521a6e5a4b1a7d",tooltip=" "];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="lumex::core::environment\l::env::LumexEnvironment\l::get_environment_variable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01600.html#a12668e2ffc789b254a3a7a427ce4e5db",tooltip=" "];
+  Node14 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="lumex::core::environment\l::env::LumexEnvironment\l::instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01600.html#aaca0f8fbe2705f7d70c33997a78eda13",tooltip=" "];
+  Node1 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="lumex::core::filesystem\l::fs::lumex_filesystem\l::get_exe_path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01724.html#a9b0a3008a2ba8bfd54505cdc1c4bb406",tooltip="Retrieve the absolute filesystem path_arg of the running executable."];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="lumex::core::filesystem\l::fs::lumex_filesystem\l::from_wide_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01724.html#aee585ebc3fb5abe4a7060b4c2f622f20",tooltip="Converts a std::wstring to a std::string (UTF-8 encoded)."];
+}

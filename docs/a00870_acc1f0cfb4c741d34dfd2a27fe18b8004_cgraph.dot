@@ -1,0 +1,40 @@
+digraph "lumex::core::fmt::Detail::write_character"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="lumex::core::fmt::Detail\l::write_character",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lumex::core::fmt::Detail\l::escape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a465b2019a72d74b71c5fe3b6f19a0bd2",tooltip="The ? (debug) form of a string or a character."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lumex::core::fmt::Detail\l::decode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a11c0b45ef3e75893d41b9a0674371d7f",tooltip="Decodes one code point at it (UTF-8 for char, UTF-16 or UTF-32 for wchar_t); an invalid sequence yiel..."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lumex::core::string\l::text::quote",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00887.html#a302f1bdf5e442097f85625effbd1294d",tooltip="join with every element wrapped in double quotes (\"element\"), C++11 to C++17."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="lumex::core::string\l::text::Detail::quote_each",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00888.html#a4dcf39e9c9bb3f6990597b1eabd5c690",tooltip="Joins range, wrapping each element (converted to std::string const &) in mark."];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="lumex::core::fmt::Detail\l::to_base",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a9cf9ad2a9a71262b6f6e0f4145a5a3e7",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="lumex::core::fmt::Detail\l::write_padded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#af25c90074007eac988ffb0e1c6904135",tooltip="Writes [first, stop) padded to specs.width."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="lumex::core::fmt::Detail\l::Buffer::append",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01740.html#aed0b262d3e5cdb89373861cbb45d7e1d",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="lumex::core::fmt::Detail\l::Buffer::push_back",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01740.html#a19f2250481f69ee0a7139bdd0ff2b383",tooltip=" "];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="lumex::core::fmt::Detail\l::estimate_width",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#ae289749ee03ac26879cd9b2a2cd34453",tooltip="Estimated display width, as std::format (C++23) defines it."];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="lumex::core::fmt::Detail\l::next_grapheme",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#ad59acf536facd1a3338fa47f0848c4fd",tooltip="Moves it past one extended grapheme cluster and returns its estimated width: the width of its first c..."];
+  Node11 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="lumex::core::fmt::Detail\l::is_extended_pictographic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#af311f1583c1c0ace6e9129b44dbf41c7",tooltip="Extended_Pictographic (approximated by the emoji blocks): a code point that a zero width joiner glues..."];
+  Node11 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="lumex::core::fmt::Detail\l::is_grapheme_extend",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#ac9e7878d05f274930197335a25394d69",tooltip="The code point joins the preceding one in the same extended grapheme cluster: Grapheme_Cluster_Break ..."];
+  Node11 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="lumex::core::fmt::Detail\l::is_regional_indicator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#ac0653720a2893d293e5707bee936247d",tooltip="Regional indicator symbols (two of them form one flag)."];
+  Node11 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="lumex::core::fmt::Detail\l::is_wide_code_point",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a1875222fdcf348bccf4d3ca7cdc5a57a",tooltip=" "];
+  Node7 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="lumex::core::fmt::Detail\l::write_fill",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a93fde2ac5300c83b0c90f7e6bc60c2dc",tooltip=" "];
+  Node16 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

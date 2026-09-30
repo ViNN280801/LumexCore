@@ -1,19 +1,23 @@
 var a00236 =
 [
-    [ "lumex::core::generators::number_generator::NumberGenerator< T >", "a01952.html", "a01952" ],
-    [ "lumex::core::generators::number_generator::DoubleGenerator", "a00862.html#a19a8077fb55bf01f16176c5d18f6dcb0", null ],
-    [ "lumex::core::generators::number_generator::FloatGenerator", "a00862.html#ae6b4d2d797e9c87ed440b95a862fc526", null ],
-    [ "lumex::core::generators::number_generator::IntGenerator", "a00862.html#a11244b539c7e8e4367e95e016b2f0947", null ],
-    [ "lumex::core::generators::number_generator::LongGenerator", "a00862.html#ab4d46a4bde917838bd2697a7ef099521", null ],
-    [ "lumex::core::generators::number_generator::RealNumberGeneratorHost", "a00862.html#a6ac88149259432feb94531fb1307044a", null ],
-    [ "lumex::core::generators::number_generator::DistributionType", "a00862.html#ac790ad052a54165bc304a20f53f7a502", [
-      [ "lumex::core::generators::number_generator::DistributionType::UNIFORM", "a00862.html#ac790ad052a54165bc304a20f53f7a502a891f35a29c3d51d02ffd42dd6dcc69b2", null ],
-      [ "lumex::core::generators::number_generator::DistributionType::NORMAL", "a00862.html#ac790ad052a54165bc304a20f53f7a502a1e23852820b9154316c7c06e2b7ba051", null ],
-      [ "lumex::core::generators::number_generator::DistributionType::EXPONENTIAL", "a00862.html#ac790ad052a54165bc304a20f53f7a502adcd5fc33e211f31cef0cd7cb36518d31", null ],
-      [ "lumex::core::generators::number_generator::DistributionType::GAMMA", "a00862.html#ac790ad052a54165bc304a20f53f7a502a469bb22a9f1f560331b06cd6ef0da944", null ],
-      [ "lumex::core::generators::number_generator::DistributionType::BERNOULLI", "a00862.html#ac790ad052a54165bc304a20f53f7a502aa9674699627bb066f514cd655979ad14", null ],
-      [ "lumex::core::generators::number_generator::DistributionType::BINOMIAL", "a00862.html#ac790ad052a54165bc304a20f53f7a502a8e67f0715695d58f3102fe214b1d29a3", null ],
-      [ "lumex::core::generators::number_generator::DistributionType::GEOMETRIC", "a00862.html#ac790ad052a54165bc304a20f53f7a502a5202c67f624b4ec6ddd60f69394c80b5", null ],
-      [ "lumex::core::generators::number_generator::DistributionType::POISSON", "a00862.html#ac790ad052a54165bc304a20f53f7a502a92a9a9519a6a4f5edd0b2694fe1c9122", null ]
-    ] ]
+    [ "range_element", "a01912.html", "a01912" ],
+    [ "range_element< Range, Char, typename std::enable_if< !has_formatter< Char, typename std::decay< typename lumex::core::utility::traits::range::range_reference< Range >::type >::type >() &&has_formatter< Char, typename Range::value_type >() &&std::is_convertible< typename lumex::core::utility::traits::range::range_reference< Range >::type, typename Range::value_type >::value >::type >", "a01916.html", "a01916" ],
+    [ "is_formattable_range", "a01920.html", null ],
+    [ "is_formattable_range< Range, Char, typename std::enable_if< lumex::core::utility::traits::range::is_iterable< Range >::value >::type >", "a01924.html", null ],
+    [ "all_formattable< Char >", "a01932.html", null ],
+    [ "all_formattable< Char, First, Rest... >", "a01936.html", null ],
+    [ "tuple_each", "a01940.html", "a01940" ],
+    [ "tuple_each< Count, Count >", "a01944.html", "a01944" ],
+    [ "ElementFormatter", "a01948.html", "a01948" ],
+    [ "TupleFormatter", "a01952.html", "a01952" ],
+    [ "Formatter< std::pair< First, Second >, Char, typename std::enable_if< Detail::all_formattable< Char, First, Second >::value >::type >", "a01956.html", null ],
+    [ "Formatter< std::tuple< Types... >, Char, typename std::enable_if< Detail::all_formattable< Char, Types... >::value >::type >", "a01960.html", null ],
+    [ "Formatter< Range, Char, typename std::enable_if< Detail::is_formattable_range< Range, Char >::value >::type >", "a01964.html", "a01964" ],
+    [ "parse_default_element", "a00236.html#a9f50b7954e7a7d96e6c93d2bc753684f", null ],
+    [ "parse_range_fill_align_width", "a00236.html#a36a76be50258b9dbd6c7c7f82f0a078c", null ],
+    [ "use_map_element_style", "a00236.html#a67e803697d6f408fb7a7721a0767a243", null ],
+    [ "use_map_element_style", "a00236.html#a774aff9ef548b86693fdbf7fd19838e5", null ],
+    [ "use_map_element_style", "a00236.html#aa8220038ee5c979ff089cdbeb6ace37e", null ],
+    [ "uses_debug_by_default", "a00236.html#a48373877c8249e84bbae8dd7c9566afa", null ],
+    [ "write_with_width", "a00236.html#a27f800ad7cb71809feecd03f135b410b", null ]
 ];

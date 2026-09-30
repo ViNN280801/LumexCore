@@ -1,8 +1,12 @@
 var a02612 =
 [
-    [ "gap", "a02612.html#a4ae36e370647da0df57eb30d3bbcd32b", null ],
-    [ "flush", "a02612.html#a7d5e84d56dbeef1310977fe1ecec5ded", null ],
-    [ "push", "a02612.html#a1b60601371665958226d443c7db6e099", null ],
-    [ "end", "a02612.html#a1fafd4d9909a3413f723f24e46dfde0e", null ],
-    [ "size", "a02612.html#a4253346048c1f33ebe0926e39a1847d7", null ]
+    [ "XmlNodeBase", "a02612.html#a5ef45a59e5aebef2f3355b742b0a0220", null ],
+    [ "first_attribute", "a02612.html#a03456860c59f5ecea13f2d71817e49b8", null ],
+    [ "first_child", "a02612.html#ae91e65d60502e33aa2b09ae50da5be07", null ],
+    [ "header", "a02612.html#a709848611de7379ded48d868ec2e8927", null ],
+    [ "name", "a02612.html#af9526c7fb8a12bda3a301320c999c694", null ],
+    [ "next_sibling", "a02612.html#ac1a2e86dd7b3a14bdc16593d60d3fb5f", null ],
+    [ "parent", "a02612.html#a7ba6ef8b3cc26dc9fbd56bd612f06b81", null ],
+    [ "prev_sibling_c", "a02612.html#a774b736474760ce41f1f006121a498fa", null ],
+    [ "value", "a02612.html#acc4595e091820c5feaa0c1d6e3de0924", null ]
 ];

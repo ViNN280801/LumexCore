@@ -1,4 +1,5 @@
 var a01096 =
 [
-    [ "is_valid_base64", "a01096.html#a35b2fd6c8fc25b6c663abd97ca5c2357", null ]
+    [ "encode", "a01096.html#ab7a571175032ee53ec380159582a6acc", null ],
+    [ "encode", "a01096.html#a910deef056d8cf6f262a62fe12d0e638", null ]
 ];

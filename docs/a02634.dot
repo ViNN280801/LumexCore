@@ -1,0 +1,13 @@
+digraph "lumex::xml::text::XmlParser"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="lumex::xml::text::XmlParser",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Internal XML parser structure responsible for tokenizing and building the XML document tree."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" alloc" ,fontname="Helvetica"];
+  Node2 [label="lumex::xml::memory\l::XmlAllocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02588.html",tooltip="Manages memory allocation and deallocation for XML nodes, attributes, and strings within a document."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_root" ,fontname="Helvetica"];
+  Node3 [label="lumex::xml::memory\l::XmlMemoryPage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02592.html",tooltip="Represents a single fixed-size memory page used by the XmlAllocator."];
+  Node3 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next\nprev" ,fontname="Helvetica"];
+  Node2 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" allocator" ,fontname="Helvetica"];
+}

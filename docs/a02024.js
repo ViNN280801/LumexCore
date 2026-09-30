@@ -1,5 +1,4 @@
 var a02024 =
 [
-    [ "common", "a02024.html#acb4ffe16e62b909570fd454387113da1", null ],
-    [ "type", "a02024.html#a20d2b558a364ca7c7a0e103872519349", null ]
+    [ "type", "a02024.html#a504b0044ac6b6941f993aba7cfae4c8d", null ]
 ];

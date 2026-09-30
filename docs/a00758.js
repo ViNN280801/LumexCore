@@ -1,4 +1,6 @@
 var a00758 =
 [
-    [ "LUMEX_IMPLEMENTATION", "a00758.html#a07486181f1990291c2a348de8eb4c480", null ]
+    [ "XPathString", "a02860.html", "a02860" ],
+    [ "convert_number_to_string", "a00758.html#a6d8c4c1f4a09bc146d6b04cbed5dfcd9", null ],
+    [ "string_value", "a00758.html#afb689c7a97659d546e44ccd30238a165", null ]
 ];

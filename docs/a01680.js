@@ -1,12 +1,10 @@
 var a01680 =
 [
-    [ "filesystem_result", "a01680.html#ae4093d69a6810df1fdd9ccbea6dc03d8", null ],
-    [ "err", "a01680.html#a8e62863dbaf8db594824d75a69292275", null ],
-    [ "error_code", "a01680.html#af6c94c3f8a9c0f511aeaa1ea5674a08d", null ],
-    [ "ok", "a01680.html#ac69660c0ee13cd2f476412ad5fbbf480", null ],
-    [ "operator bool", "a01680.html#a5bee45657ca553ccbe26b668ffdb6bff", null ],
-    [ "success", "a01680.html#aaae1487eda085cf06bd332015e4969d7", null ],
-    [ "value", "a01680.html#ab73a8f8ee2dc718b92ade3bc7f3bad6c", null ],
-    [ "value", "a01680.html#a804f0603877d3f4b1c02d3aab7a14150", null ],
-    [ "value_or", "a01680.html#af5d33c3c44ac4779caadbaad8cef56c3", null ]
+    [ "success_t", "a01680.html#add7c90048f67864901346d8d3b556789", null ],
+    [ "success_t", "a01680.html#a75c4f2ec6cfb79468983bb7f8e944636", null ],
+    [ "operator Expected< Target, ErrorType >", "a01680.html#a4531338a79bc37b23c8a181997d8734f", null ],
+    [ "operator Expected< Target, ErrorType >", "a01680.html#abf6e80da0ae8bf93c90d618224ce517e", null ],
+    [ "value", "a01680.html#a699fbf99d814afc78589aacc7f80682b", null ],
+    [ "value", "a01680.html#af765ed4bfd426b3828f3eaf8efc4ded7", null ],
+    [ "value", "a01680.html#a6f4984688653edf88f85ffff149f5083", null ]
 ];

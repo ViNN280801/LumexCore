@@ -1,5 +1,5 @@
 var a01804 =
 [
-    [ "index", "a01804.html#a44363811df4ccd77e063fd7a4dac3c05", null ],
-    [ "name", "a01804.html#a3a66c12ab578e2274ecbead2facd7078", null ]
+    [ "data", "a01804.html#ac6df6e75c02401533cb84a7ced86b822", null ],
+    [ "size", "a01804.html#a8fb5d6cd42db86ab5d6966510931aac9", null ]
 ];

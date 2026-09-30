@@ -1,6 +1,8 @@
 var a00944 =
 [
-    [ "XmlDocument", "a02568.html", "a02568" ],
-    [ "XmlDocumentBase", "a02572.html", "a02572" ],
-    [ "get_document", "a00944.html#ac1d27dbbf1791fa0a099ce0ab7c66df6", null ]
+    [ "name_null_sentry", "a02616.html", "a02616" ],
+    [ "XmlNamedNodeIterator", "a02604.html", "a02604" ],
+    [ "XmlNode", "a02596.html", "a02596" ],
+    [ "XmlNodeBase", "a02612.html", "a02612" ],
+    [ "XmlNodeIterator", "a02600.html", "a02600" ]
 ];

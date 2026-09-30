@@ -1,22 +1,7 @@
 var a00308 =
 [
-    [ "LUMEX_ATTRIBUTE_ASSUME", "a00308.html#a455c1889b796fa6817194933e324cfa8", null ],
-    [ "LUMEX_ATTRIBUTE_CARRIES_DEPENDENCY", "a00308.html#ab5a8b21b17b4aa53dc37ef9a085be2bf", null ],
-    [ "LUMEX_ATTRIBUTE_DEPRECATED", "a00308.html#a2aa95e089ea4c648991b10248f06ea1a", null ],
-    [ "LUMEX_ATTRIBUTE_DEPRECATED_MSG", "a00308.html#af679dd83203e8ade198db9282a058881", null ],
-    [ "LUMEX_ATTRIBUTE_FALLTHROUGH", "a00308.html#ad446e8a6f9f2d5d5412efe54912c247b", null ],
-    [ "LUMEX_ATTRIBUTE_INDETERMINATE", "a00308.html#a044c309d4749e2a4091adffb234e0f63", null ],
-    [ "LUMEX_ATTRIBUTE_LIKELY", "a00308.html#aa35d12d81115e566d61c0b267d7b7aa1", null ],
-    [ "LUMEX_ATTRIBUTE_MAYBE_UNUSED", "a00308.html#a06748e501657bea60452820c04a1cb9e", null ],
-    [ "LUMEX_ATTRIBUTE_MAYBE_UNUSED_VAR", "a00308.html#a4f7e1c4a689aff4cf2c75942d17d5ba2", null ],
-    [ "LUMEX_ATTRIBUTE_NO_UNIQUE_ADDRESS", "a00308.html#a9692e2728c8535d41cb0054d3b1ce845", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a00308.html#af6aeadbda428235a14f147ade9783f8f", null ],
-    [ "LUMEX_ATTRIBUTE_NOINLINE", "a00308.html#acb652623305f8803081a68cf664aeeeb", null ],
-    [ "LUMEX_ATTRIBUTE_NORETURN", "a00308.html#adcff7ab97fba8878f8a5526929644ea4", null ],
-    [ "LUMEX_ATTRIBUTE_OPTIMIZE_FOR_SYNCHRONIZED", "a00308.html#af526877eabe3ac0bdd6d8f50d401f20d", null ],
-    [ "LUMEX_ATTRIBUTE_PACKED", "a00308.html#a09d6d70ee6810a522e1ed0e9e0817641", null ],
-    [ "LUMEX_ATTRIBUTE_UNLIKELY", "a00308.html#a9f3e0db2f24a490f5d48348cbfbc6fb9", null ],
-    [ "LUMEX_ATTRIBUTE_UNLIKELY_COND", "a00308.html#a3be58b7cdc675eda56cf33bc9c6d7f5e", null ],
-    [ "LUMEX_PACK_BEGIN", "a00308.html#a7d50ae4f7a924074b52466dc39674f0c", null ],
-    [ "LUMEX_PACK_END", "a00308.html#a40c58590222dce0e19ece1cec79729b3", null ]
+    [ "LUMEX_ASSERT", "a00308.html#abff68c03d1bdde004eb72fe25c9c99c9", null ],
+    [ "LUMEX_STATIC_ASSERT", "a00308.html#a79cf2cecfe4fe4577a5e17138da4612f", null ],
+    [ "LUMEX_STATIC_ASSERT_MSG", "a00308.html#a5216865b2fc83a9979ea50b2172a1dfb", null ],
+    [ "lumex_assert_handler", "a00308.html#a4e04a2969d955bda2704a2812c053c74", null ]
 ];

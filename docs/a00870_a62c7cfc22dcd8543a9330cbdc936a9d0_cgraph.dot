@@ -1,0 +1,16 @@
+digraph "lumex::core::fmt::Detail::shortest_decimal"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="lumex::core::fmt::Detail\l::shortest_decimal",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Shortest decimal text that reads back to value (non-negative, finite), in std::to_chars plain style: ..."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lumex::core::fmt::Detail\l::normalize_decimal_point",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#af34a0e837174fedbea5a781fb348eb59",tooltip="Replaces the C locale's decimal point with .."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lumex::core::fmt::Detail\l::printf_float",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a211ae3ef1ab3a61baa6061f1e9285687",tooltip="snprintf with one * precision, as a std::string."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lumex::core::exceptions\l::stacktrace::to_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00860.html#a9b962af55f800e2cbb3a49009e6676f1",tooltip="Converts a LumexBasicStacktrace object to its string representation."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="lumex::core::exceptions\l::stacktrace::LumexBasicStacktrace::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01624.html#ad518f7d9dca8458bfda553e7eb8d3b01",tooltip="Returns the number of entries in the stacktrace."];
+}

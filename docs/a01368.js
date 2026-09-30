@@ -1,11 +1,11 @@
 var a01368 =
 [
-    [ "ValueType", "a01368.html#ab8fcc3bacaf6e5917a2d8c826486073d", null ],
-    [ "kCatalogCheck", "a01368.html#a639c8a24e2698cf6dae6316c00ead16d", null ],
-    [ "kInit", "a01368.html#a6fcd5bd058ddd921b96f16a63b7ca813", null ],
-    [ "kPoly", "a01368.html#aa3cbd7a290a2ea111e1714196d5c07bf", null ],
-    [ "kRefIn", "a01368.html#ae18b87a48a8ad477ac63da55496a5265", null ],
-    [ "kRefOut", "a01368.html#a7b3e7937a1a484b629763d07a3939970", null ],
-    [ "kWidth", "a01368.html#aa3920568567854dff194bb7ce53f46ae", null ],
-    [ "kXorOut", "a01368.html#aa28bb90528460b017f9c009141498ac1", null ]
+    [ "ValueType", "a01368.html#a8bd96624480ad8acf9081754e1221fb3", null ],
+    [ "kCatalogCheck", "a01368.html#a636d93b4574e8f1c1aec57504001ffe2", null ],
+    [ "kInit", "a01368.html#a13a20009cbd49d91b004c7fec58d50ba", null ],
+    [ "kPoly", "a01368.html#a46304bfd30afc37b0be4aa7842ce620f", null ],
+    [ "kRefIn", "a01368.html#ab5f439cdb276092fe45aeb24d711c019", null ],
+    [ "kRefOut", "a01368.html#a5fd8cddd2e46696a35107fce6d9532fc", null ],
+    [ "kWidth", "a01368.html#afdd742f14407ba8f85522e19aaeaa831", null ],
+    [ "kXorOut", "a01368.html#a66c1923a35c2c05810c0e4f42c752344", null ]
 ];

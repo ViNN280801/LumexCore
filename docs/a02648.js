@@ -1,9 +1,13 @@
 var a02648 =
 [
-    [ "D", "a02648.html#a8caa7b69f3316216d4d663b218c578c7", null ],
-    [ "XmlCleaner", "a02648.html#a1c10030b274c9889f1f70274fda87fdf", null ],
-    [ "~XmlCleaner", "a02648.html#a5bd950cc700caa327dff5d9bf07bc744", null ],
-    [ "release", "a02648.html#a0aa80b59356d59d7e72cf05e99e6aa52", null ],
-    [ "data", "a02648.html#a1d7b92a76885fd307aa47c268d794ed3", null ],
-    [ "deleter", "a02648.html#a2e5e1d091887e2da0ba8e0e8444bde4a", null ]
+    [ "XmlTreeWalker", "a02648.html#aadf87c35c9f2290404a64b2298bbecc4", null ],
+    [ "~XmlTreeWalker", "a02648.html#a2bd74e746ff00500aba68e82592904b3", null ],
+    [ "begin", "a02648.html#a027f8373d047877a61ec15d58e21c653", null ],
+    [ "decrement_depth", "a02648.html#a7fffc928b2799a2a030e9ca0b6fa210e", null ],
+    [ "end", "a02648.html#a8a49ee1ca7fa010621e236ff615a3758", null ],
+    [ "for_each", "a02648.html#a987891e65421a028c29cc0881910dcc7", null ],
+    [ "increment_depth", "a02648.html#aa14c41a2048e26f3a2a67cec7a3e0e58", null ],
+    [ "LUMEX_ATTRIBUTE_NODISCARD", "a02648.html#afdab3701f8b6a75e42dc0451c5630947", null ],
+    [ "set_depth", "a02648.html#aad4866e5fb7a84317a83806d03766333", null ],
+    [ "XmlNode", "a02648.html#a88b009b38305b720f82e3bfc4695b70f", null ]
 ];

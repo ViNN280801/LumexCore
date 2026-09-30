@@ -1,4 +1,4 @@
 var a00731 =
 [
-    [ "lumex::xml::xpath::parser::XPathParser", "a02832.html", "a02832" ]
+    [ "LUMEX_IMPLEMENTATION", "a00731.html#a07486181f1990291c2a348de8eb4c480", null ]
 ];

@@ -1,8 +1,7 @@
 var a01016 =
 [
-    [ "log_buffer_flush_level_configured", "a01016.html#a4e5e115c27378cb2e4e3d5b39ba870be", null ],
-    [ "log_buffer_flush_trigger_level", "a01016.html#ac5e787e56b952ba48ee33450b2f8f86c", null ],
-    [ "show_stack_trace_in_messages", "a01016.html#ac65af752d0d3114636096ad50b4833e3", null ],
-    [ "stack_trace_max_frames", "a01016.html#a8f83bcdb2bd432297d55abe91e9e7d14", null ],
-    [ "use_timestamped_logs", "a01016.html#ae3ba3a6fd3eb320cd02b92d8a587b326", null ]
+    [ "log_entry_t", "a01016.html#a32e5560dc8ed05812437a629b92deb04", null ],
+    [ "level", "a01016.html#aedce3417fed0732d6a765c39dab2b4d7", null ],
+    [ "message", "a01016.html#a728f5d7b7d8997eb17a025a7279ed91a", null ],
+    [ "timestamp", "a01016.html#a060e999accc52a8ed7857ac703469085", null ]
 ];

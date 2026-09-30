@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nominmax_0',['NOMINMAX',['../a00014.html#a9f918755b601cf4bffca775992e6fb90',1,'LumexCPUVectorizationCapabilities.cpp']]]
+  ['set_5fseh_5ftranslator_7774',['SET_SEH_TRANSLATOR',['../a00179.html#a0d7aeb5eed30cf65a5415d7bb1014f5b',1,'WindowsSEHTranslator.hpp']]]
 ];

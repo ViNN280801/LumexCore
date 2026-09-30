@@ -1,10 +1,15 @@
 var a00950 =
 [
-    [ "xml_parse_result_t", "a02628.html", "a02628" ],
-    [ "XmlParser", "a02624.html", "a02624" ],
-    [ "XmlText", "a02632.html", "a02632" ],
-    [ "load_buffer_impl", "a00950.html#aebdd2bfdf685cc521d88af942014a552", null ],
-    [ "make_parse_result", "a00950.html#abf915b6a0b2dabeb7ae74a2442710b8e", null ],
-    [ "operator&&", "a00950.html#ab7ee1b723e4599576fc09a9795495058", null ],
-    [ "operator||", "a00950.html#ad3236ddf506b2e5d1ec567080e9a1943", null ]
+    [ "ast", "a00961.html", "a00961" ],
+    [ "constants", "a00962.html", null ],
+    [ "context", "a00964.html", "a00964" ],
+    [ "document", "a00965.html", "a00965" ],
+    [ "exception", "a00966.html", "a00966" ],
+    [ "memory", "a00967.html", "a00967" ],
+    [ "node", "a00951.html", "a00951" ],
+    [ "parser", "a00968.html", "a00968" ],
+    [ "query", "a00953.html", "a00953" ],
+    [ "string", "a00971.html", "a00971" ],
+    [ "variable", "a00952.html", "a00952" ],
+    [ "XPathQueryImpl", "a02856.html", "a02856" ]
 ];

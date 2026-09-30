@@ -1,0 +1,16 @@
+digraph "lumex::core::fmt::Detail::civil_from_days"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="lumex::core::fmt::Detail\l::civil_from_days",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Fills the date part of time from days since 1970-01-01."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lumex::core::fmt::Detail\l::days_from_civil",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a50e7294b89826c3fdc343a55c806e676",tooltip="Days since 1970-01-01 of a civil date."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lumex::core::fmt::Detail\l::floor_div",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a7e0beee45ed494ac69b7a64197d2b721",tooltip="value / divisor rounded toward negative infinity."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lumex::core::fmt::Detail\l::floor_mod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a37915eeaa20e538769390eed30347e8d",tooltip="value mod divisor in [0, divisor) for a positive divisor."];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

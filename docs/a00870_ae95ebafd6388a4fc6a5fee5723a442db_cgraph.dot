@@ -1,0 +1,24 @@
+digraph "lumex::core::fmt::Detail::parse_dynamic_ref"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="lumex::core::fmt::Detail\l::parse_dynamic_ref",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Parses {} / {3} / {name} used as dynamic width / precision."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lumex::core::fmt::BasicFormat\lParseContext::check_arg_id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01728.html#a9883dd66c36e8387d2d9e3505f2662d0",tooltip="Records manual indexing; throws after automatic indexing."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lumex::core::fmt::BasicFormat\lParseContext::check_dynamic_spec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01728.html#a3d22284ac60526ea27e65e1de8cb621b",tooltip="Compile-time check only: argument id is an integer."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lumex::core::fmt::Detail\l::is_integral_kind",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#addde49dc415bb79f1cdcd7b8668082e4",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="lumex::core::fmt::BasicFormat\lParseContext::check_named_arg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01728.html#a53f7cf28658c15e0b17a38468e0a1bb4",tooltip="Records a reference by name: it counts as manual indexing when no automatic index was used yet (so {a..."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="lumex::core::fmt::BasicFormat\lParseContext::next_arg_id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01728.html#a210b8a0a99e12f3fa54d7b82b22ed39e",tooltip="Next automatic argument index; throws after manual indexing."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="lumex::core::fmt::Detail\l::parse_arg_id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a1f38c56179ad0dd5a018db244e17b24f",tooltip="Parses an arg-id (0, 12, name) at it; leaves it on the character after it."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="lumex::core::fmt::Detail\l::is_digit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#af0ef78c0e8cecf6542aeb1fb2087d37b",tooltip=" "];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="lumex::core::fmt::Detail\l::is_name_start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#ab309f117b5dbb7ed8606e0fc0a722acc",tooltip=" "];
+}

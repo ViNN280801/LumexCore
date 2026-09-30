@@ -1,6 +1,5 @@
 var a01940 =
 [
-    [ "Formatter", "a01716.html#a3bb926e06c11c1b60f59c542c5848716", null ],
-    [ "Formatter", "a01716.html#a82dffd26eed2f9bd718868798089af43", null ],
-    [ "operator=", "a01716.html#a2366f079ad311161cdf7ec77283252d3", null ]
+    [ "format", "a01940.html#ad72e26c9d51de5230e38ab51f2dc0cc4", null ],
+    [ "parse", "a01940.html#ae77798813a173e1484127d9d57f0808a", null ]
 ];

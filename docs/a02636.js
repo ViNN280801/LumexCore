@@ -1,13 +1,16 @@
 var a02636 =
 [
-    [ "XmlTreeWalker", "a02636.html#aadf87c35c9f2290404a64b2298bbecc4", null ],
-    [ "~XmlTreeWalker", "a02636.html#a2bd74e746ff00500aba68e82592904b3", null ],
-    [ "begin", "a02636.html#a027f8373d047877a61ec15d58e21c653", null ],
-    [ "decrement_depth", "a02636.html#a7fffc928b2799a2a030e9ca0b6fa210e", null ],
-    [ "end", "a02636.html#a8a49ee1ca7fa010621e236ff615a3758", null ],
-    [ "for_each", "a02636.html#a987891e65421a028c29cc0881910dcc7", null ],
-    [ "increment_depth", "a02636.html#aa14c41a2048e26f3a2a67cec7a3e0e58", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a02636.html#afdab3701f8b6a75e42dc0451c5630947", null ],
-    [ "set_depth", "a02636.html#aad4866e5fb7a84317a83806d03766333", null ],
-    [ "XmlNode", "a02636.html#a88b009b38305b720f82e3bfc4695b70f", null ]
+    [ "XmlParser", "a02636.html#aaaf6c59d2d8ca4785f16fc897b8ef68b", null ],
+    [ "has_element_node_siblings", "a02636.html#a41609622cdb4f218fd1da05da4877cb6", null ],
+    [ "parse", "a02636.html#ae835a4b1d36fc40be0902ddb0d961913", null ],
+    [ "parse_doctype_group", "a02636.html#a75bdb95c3388639834b0009c27d8c46c", null ],
+    [ "parse_doctype_ignore", "a02636.html#ad6563c0d57e47dfb01792e228239d037", null ],
+    [ "parse_doctype_primitive", "a02636.html#aea2c9916c59c5c908e5cacdf6b51fbc9", null ],
+    [ "parse_exclamation", "a02636.html#abc04fe24605c151713d36faa3f29ab6f", null ],
+    [ "parse_question", "a02636.html#a240af3dd54df35ba0304a326d3210a47", null ],
+    [ "parse_skip_bom", "a02636.html#a7b6fe97ddccf1978354b9535c5d30d37", null ],
+    [ "parse_tree", "a02636.html#aaea40c6d848e6acca45b732a473d2ca4", null ],
+    [ "alloc", "a02636.html#a9cdc248c3f9503e4127e13d6a3eee28b", null ],
+    [ "error_offset", "a02636.html#a873370e5e60f9f27e3d54ab963ca32a7", null ],
+    [ "error_status", "a02636.html#ab62f9c2211741728ef2742ab2ed5d08c", null ]
 ];

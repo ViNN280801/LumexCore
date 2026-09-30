@@ -1,4 +1,5 @@
 var a00737 =
 [
-    [ "lumex::xml::xpath::parser::xpath_parse_result_t", "a02836.html", "a02836" ]
+    [ "binary_op_t", "a02840.html", "a02840" ],
+    [ "LUMEX_IMPLEMENTATION", "a00737.html#a07486181f1990291c2a348de8eb4c480", null ]
 ];

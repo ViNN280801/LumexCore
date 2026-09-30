@@ -1,5 +1,4 @@
 var a02236 =
 [
-    [ "type", "a02232.html#a0725ede73e2025fd0aa0d1a39208711d", null ],
-    [ "type", "a02236.html#a475e4361a969f7407fa141d04b2d5b71", null ]
+    [ "value", "a02236.html#a3f35d983399cca7a570d9adecae513bc", null ]
 ];

@@ -1,12 +1,17 @@
-digraph "lumex::xml::memory::XmlMemoryPage"
+digraph "lumex::xml::document::XmlDocument"
 {
  // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
-  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
-  Node1 [id="Node000001",label="lumex::xml::memory\l::XmlMemoryPage",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Represents a single fixed-size memory page used by the XmlAllocator."];
-  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" allocator",fontcolor="grey" ];
-  Node2 [id="Node000002",label="lumex::xml::memory\l::XmlAllocator",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$a02576.html",tooltip="Manages memory allocation and deallocation for XML nodes, attributes, and strings within a document."];
-  Node1 -> Node2 [id="edge2_Node000002_Node000001",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_root",fontcolor="grey" ];
-  Node1 -> Node1 [id="edge3_Node000001_Node000001",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" next\nprev",fontcolor="grey" ];
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="lumex::xml::document\l::XmlDocument",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Represents an XML document, providing methods for loading, saving, and manipulating XML data."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lumex::xml::node::XmlNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02596.html",tooltip="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani..."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" variables" ,fontname="Helvetica"];
+  Node3 [label="lumex::xml::xpath::\lvariable::XPathVariableSet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02884.html",tooltip="Manages a collection of XPath variables."];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_root" ,fontname="Helvetica"];
+  Node4 [label="lumex::xml::node::XmlNodeBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02612.html",tooltip="Base structure representing an XML node in the document tree."];
+  Node4 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" first_child\nnext_sibling\nparent\nprev_sibling_c" ,fontname="Helvetica"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" first_attribute" ,fontname="Helvetica"];
+  Node5 [label="lumex::xml::attribute\l::XmlAttributeBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02572.html",tooltip="Base structure for representing an XML attribute."];
+  Node5 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next_attribute\nprev_attribute_c" ,fontname="Helvetica"];
 }

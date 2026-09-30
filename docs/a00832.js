@@ -1,4 +1,4 @@
 var a00832 =
 [
-    [ "Decoder", "a01088.html", "a01088" ]
+    [ "LumexSettingsXML", "a01084.html", "a01084" ]
 ];

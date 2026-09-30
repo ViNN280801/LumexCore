@@ -1,5 +1,4 @@
 var a00335 =
 [
-    [ "LUMEX_DEFINE_EXCEPTION", "a00335.html#ac1cf7e477c73144de8304b5a87b250a0", null ],
-    [ "LUMEX_DEFINE_EXCEPTION_WITH_BODY", "a00335.html#a7a9b13ade30769284317ff7b0cc7e19f", null ]
+    [ "LUMEX_IMPLEMENTATION", "a00335.html#a07486181f1990291c2a348de8eb4c480", null ]
 ];

@@ -1,7 +1,6 @@
 var a00683 =
 [
-    [ "lumex::xml::xpath::document::document_order_comparator", "a02776.html", "a02776" ],
-    [ "lumex::xml::xpath::document::document_buffer_order", "a00961.html#acca2a9dffdd72e2993f43c2ea6269348", null ],
-    [ "lumex::xml::xpath::document::node_is_before", "a00961.html#ac52c2fc2f9b9a42082f6668921948caa", null ],
-    [ "lumex::xml::xpath::document::node_is_before_sibling", "a00961.html#ac763febc674d4da35198b8b02137e87d", null ]
+    [ "kxpath_ast_depth_limit", "a00683.html#ac3e65bd9e93bcecc5909cb85d313ff76", null ],
+    [ "kxpath_memory_block_alignment", "a00683.html#a8fa52b0b301895768056ddfa53e730bc", null ],
+    [ "kxpath_memory_page_size", "a00683.html#ab3c5b205d4af232f6794c0173bae0116", null ]
 ];

@@ -1,4 +1,4 @@
 var a00953 =
 [
-    [ "Types", "a00954.html", "a00954" ]
+    [ "XPathQuery", "a02852.html", "a02852" ]
 ];

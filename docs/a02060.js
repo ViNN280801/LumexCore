@@ -1,4 +1,5 @@
 var a02060 =
 [
-    [ "operator()", "a02060.html#aee6af6a076cd6e88c4ef1c7651c01a3c", null ]
+    [ "init_tag", "a02064.html", null ],
+    [ "in_place_t", "a02060.html#ae82261638b5e116dd2b767ced7a85c42", null ]
 ];

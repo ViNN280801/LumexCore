@@ -1,19 +1,14 @@
 var a02588 =
 [
-    [ "difference_type", "a02588.html#a2ee3d2360f620ad9143457bf402a697c", null ],
-    [ "iterator_category", "a02588.html#a9ef55ad663fa3682c75f1ccdb5e61519", null ],
-    [ "pointer", "a02588.html#a4eee78a4624b13e110802aaf1923e8e9", null ],
-    [ "reference", "a02588.html#a2e6054587b9620171de129c8308046ff", null ],
-    [ "value_type", "a02588.html#a7d7ccda33e474b9aa357578d941599e9", null ],
-    [ "XmlNodeIterator", "a02588.html#a9baadc55eaf90ceb5de4326e4a3aa773", null ],
-    [ "XmlNodeIterator", "a02588.html#ac3bd43fea1234236afd742c5193f511e", null ],
-    [ "operator!=", "a02588.html#a345d5423f86434f461d9c58c57dd3d48", null ],
-    [ "operator*", "a02588.html#aea5593228e611856f9418e8be7d56475", null ],
-    [ "operator++", "a02588.html#a5e1763b5e327a01b8fbd13115ca10a99", null ],
-    [ "operator++", "a02588.html#ad9f2871c8cee0ca068a9bed2fc3ea869", null ],
-    [ "operator--", "a02588.html#a544dd74a00f91e2996a7ee86db5c1132", null ],
-    [ "operator--", "a02588.html#a9c6ae878dd271d6f255c17dc8d585835", null ],
-    [ "operator->", "a02588.html#abe3f77510e7bfd7a6741af7d4a5477f7", null ],
-    [ "operator==", "a02588.html#ad16581a59b0f6cb82e501fdadc0da97e", null ],
-    [ "XmlNode", "a02588.html#a88b009b38305b720f82e3bfc4695b70f", null ]
+    [ "XmlAllocator", "a02588.html#aacc78046662790111cee7c3ea5b8b302", null ],
+    [ "allocate_memory", "a02588.html#a73c6df9c7fed7b6ec55b60760acafc5c", null ],
+    [ "allocate_memory_oob", "a02588.html#a8b8d34c4c28c1caf852266ded670da43", null ],
+    [ "allocate_object", "a02588.html#aeec9087b1016600d5786dd81e33ddd37", null ],
+    [ "allocate_page", "a02588.html#aed334387bf6f9581ce8d0bbde257e2b0", null ],
+    [ "allocate_string", "a02588.html#a4b04a0d450d5f66121b307c30ea22660", null ],
+    [ "deallocate_memory", "a02588.html#afcc4f66d51009761e90bce813331ddeb", null ],
+    [ "deallocate_page", "a02588.html#a902eac3224b197760acd21a0b5f4c5c3", null ],
+    [ "deallocate_string", "a02588.html#aa0373f70cced71f6939be0185e8decbe", null ],
+    [ "m_busy_size", "a02588.html#ac78598e7d05ab83e3b8f824a88688b2f", null ],
+    [ "m_root", "a02588.html#a7bf859771f03b28de1e642893949c110", null ]
 ];

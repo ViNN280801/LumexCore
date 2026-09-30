@@ -1,12 +1,19 @@
 var a02600 =
 [
-    [ "XmlNodeBase", "a02600.html#a5ef45a59e5aebef2f3355b742b0a0220", null ],
-    [ "first_attribute", "a02600.html#a03456860c59f5ecea13f2d71817e49b8", null ],
-    [ "first_child", "a02600.html#ae91e65d60502e33aa2b09ae50da5be07", null ],
-    [ "header", "a02600.html#a709848611de7379ded48d868ec2e8927", null ],
-    [ "name", "a02600.html#af9526c7fb8a12bda3a301320c999c694", null ],
-    [ "next_sibling", "a02600.html#ac1a2e86dd7b3a14bdc16593d60d3fb5f", null ],
-    [ "parent", "a02600.html#a7ba6ef8b3cc26dc9fbd56bd612f06b81", null ],
-    [ "prev_sibling_c", "a02600.html#a774b736474760ce41f1f006121a498fa", null ],
-    [ "value", "a02600.html#acc4595e091820c5feaa0c1d6e3de0924", null ]
+    [ "difference_type", "a02600.html#a2ee3d2360f620ad9143457bf402a697c", null ],
+    [ "iterator_category", "a02600.html#a9ef55ad663fa3682c75f1ccdb5e61519", null ],
+    [ "pointer", "a02600.html#a4eee78a4624b13e110802aaf1923e8e9", null ],
+    [ "reference", "a02600.html#a2e6054587b9620171de129c8308046ff", null ],
+    [ "value_type", "a02600.html#a7d7ccda33e474b9aa357578d941599e9", null ],
+    [ "XmlNodeIterator", "a02600.html#a9baadc55eaf90ceb5de4326e4a3aa773", null ],
+    [ "XmlNodeIterator", "a02600.html#ac3bd43fea1234236afd742c5193f511e", null ],
+    [ "operator!=", "a02600.html#a345d5423f86434f461d9c58c57dd3d48", null ],
+    [ "operator*", "a02600.html#aea5593228e611856f9418e8be7d56475", null ],
+    [ "operator++", "a02600.html#a5e1763b5e327a01b8fbd13115ca10a99", null ],
+    [ "operator++", "a02600.html#ad9f2871c8cee0ca068a9bed2fc3ea869", null ],
+    [ "operator--", "a02600.html#a544dd74a00f91e2996a7ee86db5c1132", null ],
+    [ "operator--", "a02600.html#a9c6ae878dd271d6f255c17dc8d585835", null ],
+    [ "operator->", "a02600.html#abe3f77510e7bfd7a6741af7d4a5477f7", null ],
+    [ "operator==", "a02600.html#ad16581a59b0f6cb82e501fdadc0da97e", null ],
+    [ "XmlNode", "a02600.html#a88b009b38305b720f82e3bfc4695b70f", null ]
 ];

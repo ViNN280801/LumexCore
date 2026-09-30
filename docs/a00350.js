@@ -1,15 +1,8 @@
 var a00350 =
 [
-    [ "LUMEX_FUNC_NAME", "a00350.html#a0c4baf3f4f5fd2588a58e82aa96db0a3", null ],
-    [ "LUMEX_OS_DEBUG_INFO", "a00350.html#affdab887f85cba2c61e00d1a0c14dcd7", null ],
-    [ "LUMEX_OS_IS_ANDROID", "a00350.html#ab036e3e330c217c4a51d0bda85eb8323", null ],
-    [ "LUMEX_OS_IS_ANDROID", "a00350.html#ab036e3e330c217c4a51d0bda85eb8323", null ],
-    [ "LUMEX_OS_IS_APPLE", "a00350.html#aec11ccafb07493fbaca1bbb8d60475fd", null ],
-    [ "LUMEX_OS_IS_IOS", "a00350.html#aa2dc0e4fe3a4f9ce9dee60f66c2763d5", null ],
-    [ "LUMEX_OS_IS_LINUX", "a00350.html#abce1e6a2a76e178cfa2fe8f85adc988b", null ],
-    [ "LUMEX_OS_IS_MACOS", "a00350.html#a9d6558a73f5d801a669c0833480b1f59", null ],
-    [ "LUMEX_OS_IS_POSIX", "a00350.html#af2c5ddfdff207ab30c4581c23de41f00", null ],
-    [ "LUMEX_OS_IS_UNIX", "a00350.html#a342144102cd44f85a41d7d2979147184", null ],
-    [ "LUMEX_OS_IS_WINDOWS", "a00350.html#a5a8e809e9ec63e9d2b5fb3f584c816cd", null ],
-    [ "LUMEX_OS_UNKNOWN", "a00350.html#a4af18cec4d9905bb958959c0e91ce349", null ]
+    [ "LUMEX_CONCAT", "a00350.html#ace296af29308b6f8d22b8fac6616869e", null ],
+    [ "LUMEX_CONCAT_DETAIL", "a00350.html#aaf4d476c935300eaa955f76f0aad4db1", null ],
+    [ "LUMEX_FUNCTION_NAME", "a00350.html#aaae5674dd2d0d351d585e646e72118fd", null ],
+    [ "LUMEX_STRINGIZE", "a00350.html#a71aa3eda60310f254574a8539871bbe8", null ],
+    [ "LUMEX_STRINGIZE_DETAIL", "a00350.html#a95e334f9f38e1a11501236e102cd7b9f", null ]
 ];

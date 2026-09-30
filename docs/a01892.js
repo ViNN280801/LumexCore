@@ -1,8 +1,6 @@
 var a01892 =
 [
-    [ "Formatter", "a01716.html#a3bb926e06c11c1b60f59c542c5848716", null ],
-    [ "Formatter", "a01716.html#a82dffd26eed2f9bd718868798089af43", null ],
-    [ "format", "a01892.html#a64f0950cacfb2dae92e04c3bddd111ae", null ],
-    [ "operator=", "a01716.html#a2366f079ad311161cdf7ec77283252d3", null ],
-    [ "parse", "a01892.html#afc0607d2bbc2c301c4ef3ee182b1fce5", null ]
+    [ "error", "a01892.html#a0b6145a66a7db3b22a87737c567e632f", null ],
+    [ "success", "a01892.html#ad8fa7d111533e3d8a916d2e646098886", null ],
+    [ "text", "a01892.html#aa848a04ca950c9eded82e64124bccff4", null ]
 ];

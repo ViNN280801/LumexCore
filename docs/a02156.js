@@ -1,11 +1,12 @@
 var a02156 =
 [
-    [ "createConfiguration", "a02156.html#a072b58b2c33d2828b9e774642600a5e2", null ],
-    [ "createConfiguration", "a02156.html#ae49c36b275a23f4612bab2ec56e01cc1", null ],
-    [ "getDefaultDumpType", "a02156.html#adc5f3a8750c1ed1ae90c3d6b1954d668", null ],
-    [ "getDescription", "a02156.html#aabbd331683cfb5bae298a6c406ba8d79", null ],
-    [ "getEstimatedSize", "a02156.html#ac62bf474c37026dffb6c5f405af39d6a", null ],
-    [ "getSupportedTypes", "a02156.html#aac72e1b06f5abf142e2cb7baa3541c1f", null ],
-    [ "isSupported", "a02156.html#ae1b259c00a2ae9cfa891b7c4ae660d0a", null ],
-    [ "validateConfiguration", "a02156.html#a94ce97c55152f525741d6a3f10362b1a", null ]
+    [ "Scoped", "a02160.html", "a02160" ],
+    [ "function_type", "a02156.html#aefef2384f82063f742b3925977532bb8", null ],
+    [ "LumexCallbackSlot", "a02156.html#a9c1c11e42d768adb7cc233443e1d0b92", null ],
+    [ "exchange", "a02156.html#a3df7a16e9d1333dd643aa1be65e08348", null ],
+    [ "get", "a02156.html#aeb787337498f407ffc614f957135b7a6", null ],
+    [ "invoke_or", "a02156.html#af255fa0efb46d7d08882c8bfb5e74a1b", null ],
+    [ "is_set", "a02156.html#a3a6334ee2e1c96e00dd88e6125815c60", null ],
+    [ "reset", "a02156.html#a3cc3bedee4a95001dfb559ceea773025", null ],
+    [ "set", "a02156.html#a71292adb8699eea0825496725ead0b1e", null ]
 ];

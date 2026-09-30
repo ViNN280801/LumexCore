@@ -1,8 +1,10 @@
 var a00341 =
 [
-    [ "LUMEX_CONCAT", "a00341.html#ace296af29308b6f8d22b8fac6616869e", null ],
-    [ "LUMEX_CONCAT_DETAIL", "a00341.html#aaf4d476c935300eaa955f76f0aad4db1", null ],
-    [ "LUMEX_FUNCTION_NAME", "a00341.html#aaae5674dd2d0d351d585e646e72118fd", null ],
-    [ "LUMEX_STRINGIZE", "a00341.html#a71aa3eda60310f254574a8539871bbe8", null ],
-    [ "LUMEX_STRINGIZE_DETAIL", "a00341.html#a95e334f9f38e1a11501236e102cd7b9f", null ]
+    [ "LUMEX_BASE_CONSTANT", "a00341.html#ab6144301899a06d23751755672c5a3f7", null ],
+    [ "LUMEX_CONST", "a00341.html#aa63e4a30676d4f67d808597f321f416a", null ],
+    [ "LUMEX_CONST_NUM", "a00341.html#a294baa8c8ad4246130f881cd1da7cbe1", null ],
+    [ "LUMEX_CONST_STR", "a00341.html#a79c537c78fd40b18154a50845e28fb61", null ],
+    [ "LUMEX_CONSTEVAL_FUNCTION", "a00341.html#aea059f2206580c771f0e532c0102a708", null ],
+    [ "LUMEX_CONSTINIT_CONSTANT", "a00341.html#ac8388d271f79d02f47b20cfae244900a", null ],
+    [ "LUMEX_STRING_CONSTANT", "a00341.html#a05ab07d7450e90785790f33e19a37763", null ]
 ];

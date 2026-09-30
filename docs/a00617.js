@@ -1,4 +1,4 @@
 var a00617 =
 [
-    [ "lumex::xml::text::XmlParser", "a02624.html", "a02624" ]
+    [ "LUMEX_IMPLEMENTATION", "a00617.html#a07486181f1990291c2a348de8eb4c480", null ]
 ];

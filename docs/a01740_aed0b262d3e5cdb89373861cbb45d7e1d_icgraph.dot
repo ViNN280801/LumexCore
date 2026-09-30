@@ -1,0 +1,56 @@
+digraph "lumex::core::fmt::Detail::Buffer::append"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="lumex::core::fmt::Detail\l::Buffer::append",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lumex::core::fmt::Detail\l::Buffer::append",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01740.html#a6233c7bc4bcf0b27044ad10836154129",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lumex::core::fmt::Detail\l::write_fill",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a93fde2ac5300c83b0c90f7e6bc60c2dc",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lumex::core::fmt::Detail\l::write_padded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#af25c90074007eac988ffb0e1c6904135",tooltip="Writes [first, stop) padded to specs.width."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="lumex::core::fmt::Detail\l::ChronoFormatter::write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01900.html#a09a02864fcaf2991793c318943a17a63",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="lumex::core::fmt::Detail\l::write_bool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a82be6a9fe1141dbfaf5f5e709aa53a56",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="lumex::core::fmt::Detail\l::BuiltinFormatter\< char\l \>::format_arg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01852.html#ac9642063b0f0f6e8ed748e295ff5174c",tooltip=" "];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="lumex::core::fmt::Detail\l::write_character",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#acc1f0cfb4c741d34dfd2a27fe18b8004",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="lumex::core::fmt::Detail\l::write_integer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#ad0334f950a029dfe06bb9eb1fd904f14",tooltip="Writes an integer given as sign + magnitude."];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="lumex::core::fmt::Formatter\l\< Enum, Char, typename std\l::enable_if\< lumex::core::\lutility::traits::enums::is\l_reflected_enum\< Enum \>::value\l \>::type \>::format",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01872.html#a11233bb8904684bc2497addaa68232b4",tooltip=" "];
+  Node9 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="lumex::core::fmt::Detail\l::write_number",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a12a7b7f7061a40178e572269949aa9c9",tooltip="Writes a number: prefix (sign and base prefix) then digits, zero-padded after the prefix when 0 is se..."];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="lumex::core::fmt::Detail\l::write_float",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a6805e940fc8a7ca908fb169f2f308eb9",tooltip=" "];
+  Node12 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="lumex::core::fmt::Detail\l::write_pointer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a9a4ad7ce32856d9f50044e959ca02eb8",tooltip=" "];
+  Node13 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="lumex::core::fmt::Detail\l::write_padded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a0ac1f13994fbcd923d9476d57175b90e",tooltip=" "];
+  Node4 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="lumex::core::fmt::Detail\l::write_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a31ccdb6ecfce000b34dc5e272261271d",tooltip=" "];
+  Node15 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="lumex::core::fmt::Ostream\lFormatter\< char \>::format",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01876.html#aeeecdb02dee27a3a8bd20c6a6526f8ba",tooltip=" "];
+  Node15 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="lumex::core::fmt::Detail\l::write_with_width",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a27f800ad7cb71809feecd03f135b410b",tooltip="Writes with write_body (context) directly, or into a temporary text padded to the resolved width when..."];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="lumex::core::fmt::Formatter\l\< Range, Char, typename\l std::enable_if\< Detail::\lis_formattable_range\< Range,\l Char \>::value \>::type \>::format",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01964.html#a7ac8f8092b17f69b931c285b482ca40a",tooltip=" "];
+  Node17 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="lumex::core::fmt::Detail\l::TupleFormatter\< Char,\l First, Second \>::format",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a01952.html#a808ef5179dd4e022a7b341a7f8dd0241",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

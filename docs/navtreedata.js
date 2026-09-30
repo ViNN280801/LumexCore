@@ -25,7 +25,15 @@
 var NAVTREE =
 [
   [ "LumexLib", "index.html", [
-    [ "Deprecated List", "a00773.html", null ],
+    [ "LumexFormat: std::format-style formatting from C++11", "a03119.html", [
+      [ "Headers", "a03119.html#autotoc_md0", null ],
+      [ "Output API", "a03119.html#autotoc_md1", null ],
+      [ "Behaviour", "a03119.html#autotoc_md2", null ],
+      [ "Examples", "a03119.html#autotoc_md3", null ],
+      [ "How it is verified", "a03119.html#autotoc_md4", null ],
+      [ "Benchmarks", "a03119.html#autotoc_md5", null ]
+    ] ],
+    [ "Deprecated List", "a00782.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -37,7 +45,6 @@ var NAVTREE =
         [ "Enumerator", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
-    [ "Concepts", "concepts.html", "concepts" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -49,7 +56,7 @@ var NAVTREE =
         [ "Typedefs", "functions_type.html", "functions_type" ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Enumerator", "functions_eval.html", null ],
-        [ "Related Symbols", "functions_rela.html", null ]
+        [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -69,48 +76,34 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00014.html",
-"a00206_source.html",
-"a00329.html#a41d4dfa37f2c4d4ed4afcf249998f84f",
-"a00575.html#a07486181f1990291c2a348de8eb4c480",
-"a00788.html#a8357799ee45396d78d82eeb956a7c724",
-"a00840.html#a54540d929c3a9a63a94214ff891e59f8",
-"a00859.html#abb8c5aa4e3f61c8733c165bd28be772f",
-"a00872.html",
-"a00939.html#a3735e853fcfde7b0a1f7f96fe3d23422",
-"a00954.html#a2458aaf725b575899a37e1c4b301af5da58cfb17f86dc747c5371fbbbccdca1c6",
-"a00996.html#ad4e6f91a4cc39ea650825173f0406128",
-"a01064.html",
-"a01108.html#a01982279e6a9a80607034894eaf4cb01",
-"a01168.html#a23dd7157779a072eec1d6a2cce381db4",
-"a01224.html#a42d7b3ddd37f404a3b409d7ea12fea93",
-"a01280.html",
-"a01332.html#afa9e7d3d6cf581b0766b77bf0e08bbdd",
-"a01388.html#ad7f4e728920d4567d0adb5a9eec7240e",
-"a01444.html#ac8393bdf56631e8264aad8aaf5cb25ef",
-"a01500.html#aa834bdb808037aded967b621c1c3e4f1",
-"a01556.html#a4ad35e8a31d1e5a342400a898b319e7c",
-"a01616.html#a245a9afff857e90de514203f826b3abf",
-"a01648.html#a577d9394543c6cba659dea317d208e1f",
-"a01668.html#abadbe5e20772801041045c140f7ca636",
-"a01700.html#a66f9b0e2b984d0a828108f47e6b68045",
-"a01716.html#a3bb926e06c11c1b60f59c542c5848716",
-"a01796.html#af4562a5621d66ef26e847ef8386490a5",
-"a01932.html#adcc5d2f3ddbd0e11c653a4ca958514d7",
-"a02088.html",
-"a02112.html#a52bf2396156eb2b0c6a93bf20b73067b",
-"a02152.html#a0541856f23af535a108037296789604e",
-"a02192.html#aee54455ae4078985a6819e28b253cc04",
-"a02456.html",
-"a02572.html",
-"a02588.html#a4eee78a4624b13e110802aaf1923e8e9",
-"a02632.html#aaedc7da1358d953fd41500f645f9176a",
-"a02724.html#afc851c1109b3bd528d803c126397ad3c",
-"a02820.html#a32fc81bfa1e2d89f1cdf00dbdd9cf10d",
-"a02872.html#a408542de3b608b5acd8f985674d56d4d",
-"a03775.html#a5d76fc7d07d8703fc5835c4b00e92c55",
-"a03807.html#a233cd880a9bc6c7f4c99f1f3b95d8bc2",
-"functions_func_v.html"
+"a00056.html#aec3651aeeffa8686fbb442417c615d96",
+"a00158.html#a7b40504fa6a7bed5e257814a6c5b7c59",
+"a00227.html#abbc1fed953cec690ccc6158ea34ef4aa",
+"a00245.html#a352de153760a43a606fa28f303f057f4",
+"a00302.html#ae20cd4d02c536ec28d605b39d7346579",
+"a00326.html#a433d56bb5d21a289c4960d8210c481c4",
+"a00326.html#a9403189723f4851bbe768e3b8cc899ed",
+"a00326.html#aeb4f097343a9e6b1f97ee9889f464bc8",
+"a00368.html#a691fdcf6cc932436aa3a384b3b82e173",
+"a00605.html#a3781da2446a997aeab30b3a127de9a9d",
+"a00644.html#af1767ae022d3845084f92ab0bc3776a0af24da3643b8c78b51189e17232a70705",
+"a00811.html",
+"a00976.html#a9aaf2e11397fcc4376d4d74e1fd83ce9",
+"a01104.html#a260b81445d1a75d3f00e3e87bd35201f",
+"a01208.html#a48948df07a1f1dde9a12facfb28c9065",
+"a01320.html#a0e6da991e70169ef6b496f7fcb7880b5",
+"a01428.html#af31ba0e5a7371f63625bef84ee172faa",
+"a01540.html#ae411c237ffc32de00a32881dc7dabae6",
+"a01652.html",
+"a01716.html#a848e911a41cdc44dbbdc6aa20d86524a",
+"a01868.html#a1cffdd3f7658a0120a44a95bdb0ec467",
+"a02124.html#a8aae31532895fe158533c8d4ddf96918",
+"a02172.html#a97c53bcad4528f86530aee3c485dac74",
+"a02568.html#aa9dc650fdcfd1872cbee8b720d9e61dd",
+"a02616.html",
+"a02792.html#a0c72a709c957af6c78cab79456c7d704",
+"examples.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronization';
-var SYNCOFFMSG = 'click to enable panel synchronization';
+var SYNCONMSG = 'click to disable panel synchronisation';
+var SYNCOFFMSG = 'click to enable panel synchronisation';

@@ -1,7 +1,5 @@
 var a02684 =
 [
-    [ "value_type", "a02684.html#a22724baa5108295a7ca407ff43337a48", null ],
-    [ "any", "a02684.html#a095cba91af53321f536eb7a6be6788e0", null ],
-    [ "high", "a02684.html#ae0e02707393a529d02f6704ac1577fc4", null ],
-    [ "low", "a02684.html#a734507cb313de563aa21b25bec5bc245", null ]
+    [ "type", "a02684.html#aa042a39a90ff756c1ac0ccf5e8429f4e", null ],
+    [ "process", "a02684.html#aeb6f1c44ae313be99236435e934405af", null ]
 ];

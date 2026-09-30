@@ -1,0 +1,26 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lumex::core::math::\lops::avg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00874.html#ad93d68e5c10c71ddb4e4a107879df69a",tooltip="Arithmetic mean of a range's elements, or ValueType{0} for an empty range."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lumex::core::math::\lops::Detail::adl_begin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00876.html#abdf8ed32a58d7ef1884b0e2eb69e139b",tooltip="begin (range) with std::begin and ADL, as a range-for does."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lumex::core::math::\lops::Detail::adl_end",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00876.html#a39800dfb129ce7e0f3b8520f0e8ce977",tooltip="end (range) with std::end and ADL, as a range-for does."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="lumex::core::math::\lops::distance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00874.html#af20b887f008153d8d467bac972123b5b",tooltip="Absolute difference |a - b| of two integers, computed without an intermediate signed underflow for un..."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="lumex::core::math::\lops::rms",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00874.html#a90e1a67a352767f3d7e6099c9056b030",tooltip="Root Mean Square of a range's elements, or ResultType{0} for an empty range."];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="lumex::core::math::\lops::rmse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00874.html#a229d474c16ac226d2cfce2332550eb4b",tooltip="Root Mean Squared Error of a range against a fixed scalar: sqrt( 1/N * sum (x_i - scalar)^2 )...."];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="lumex::core::math::\lops::squared_difference",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00874.html#a6457e90e7357a4441ff89ec9e0458207",tooltip="(a - b)^2, computed in the common type of a and b (promoted, so two short operands give an int)."];
+}

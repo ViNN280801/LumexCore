@@ -1,4 +1,4 @@
 var a00865 =
 [
-    [ "is_numeric", "a01956.html", null ]
+    [ "fs", "a00866.html", "a00866" ]
 ];

@@ -1,12 +1,9 @@
 var a02140 =
 [
-    [ "Scoped", "a02144.html", "a02144" ],
-    [ "function_type", "a02140.html#aefef2384f82063f742b3925977532bb8", null ],
-    [ "LumexCallbackSlot", "a02140.html#a9c1c11e42d768adb7cc233443e1d0b92", null ],
-    [ "exchange", "a02140.html#a3df7a16e9d1333dd643aa1be65e08348", null ],
-    [ "get", "a02140.html#aeb787337498f407ffc614f957135b7a6", null ],
-    [ "invoke_or", "a02140.html#af255fa0efb46d7d08882c8bfb5e74a1b", null ],
-    [ "is_set", "a02140.html#a3a6334ee2e1c96e00dd88e6125815c60", null ],
-    [ "reset", "a02140.html#a3cc3bedee4a95001dfb559ceea773025", null ],
-    [ "set", "a02140.html#a71292adb8699eea0825496725ead0b1e", null ]
+    [ "create_temp_directory", "a02140.html#abf430b4d0f9007f6656403e55db719e3", null ],
+    [ "create_temp_file", "a02140.html#a8bd2908c92b8bb39a0de068df64054c4", null ],
+    [ "generate_temp_name", "a02140.html#a4ef24cb81629646cd77417cc03ba4c0c", null ],
+    [ "get_temp_directory_path", "a02140.html#a73e260b98cfd6efcb8519b38be1b3d1d", null ],
+    [ "remove_temp_directory", "a02140.html#a4d09cf8155cacee41cc20ca7f6859da4", null ],
+    [ "remove_temp_file", "a02140.html#ad0c6e6102d3834f1f6faf7ee991aa594", null ]
 ];

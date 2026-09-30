@@ -1,6 +1,10 @@
 var a02856 =
 [
-    [ "xpath_variable_boolean", "a02856.html#ae3524c8e765303f40ea718a8914b048a", null ],
-    [ "name", "a02856.html#a585a041ad4a67f58ac2bd534157afc81", null ],
-    [ "value", "a02856.html#a9b57b68a5fe2fd750533034eb610e461", null ]
+    [ "XPathQueryImpl", "a02856.html#aea826e8ae8d0db4e60f2c4bd4fa5bfd3", null ],
+    [ "create", "a02856.html#afaeca35cab95554239b141566710843e", null ],
+    [ "destroy", "a02856.html#a838c9cdc33385026763bb8f7233fa96e", null ],
+    [ "alloc", "a02856.html#ad810384532201331eeed8dbea6cc1add", null ],
+    [ "block", "a02856.html#aaea715d7f732310e092fc248ea823548", null ],
+    [ "oom", "a02856.html#a48c536799c009e5c3fd1a9e28621be68", null ],
+    [ "root", "a02856.html#a7e02fb35e7966ae1447939149f2b6e45", null ]
 ];

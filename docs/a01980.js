@@ -1,4 +1,4 @@
 var a01980 =
 [
-    [ "type", "a01980.html#a3217f4ed95f5ffe936ed903617622a2c", null ]
+    [ "type", "a01980.html#a0c8e1ae34abe7b5e71943461989d9884", null ]
 ];

@@ -1,7 +1,6 @@
 var a02708 =
 [
-    [ "counter", "a02708.html#aa59d55927b60b54ed3795d1d4ceb29c7", null ],
-    [ "decoder", "a02708.html#a2b77f1f3545a56cff5e8756a2cf9daa8", null ],
-    [ "type", "a02708.html#a9fd4af1cdf5b6eb1313066aeef67c6fd", null ],
-    [ "writer", "a02708.html#a40d5c6db9f064a17d2b1499983df2290", null ]
+    [ "value_type", "a02708.html#a76aba69bd8a9e87fd12be97e08f2dc77", null ],
+    [ "high", "a02708.html#ae0c9b024047da3f3488937da7a83b338", null ],
+    [ "low", "a02708.html#af729c0f4b95d35e577215026bedf2060", null ]
 ];

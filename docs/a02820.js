@@ -1,9 +1,10 @@
 var a02820 =
 [
-    [ "XPathLexer", "a02820.html#a748fbcdd04a85985dca01166d4f54f90", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a02820.html#a3995746276a9621b791f6a323a8c8286", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a02820.html#a28cace8bae5ba200755a0db35efc1814", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a02820.html#a35fb5faf1dfc1b422479375c7c39effa", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a02820.html#a32fc81bfa1e2d89f1cdf00dbdd9cf10d", null ],
-    [ "next", "a02820.html#acacfc5680677b1edc3e5d6e431f934ba", null ]
+    [ "unspecified_bool_type", "a02820.html#ac076247c8350904ce65535c63e9db7af", null ],
+    [ "XPathNode", "a02820.html#a6a939a81fbf7abc8fcdf54770dbd3dde", null ],
+    [ "XPathNode", "a02820.html#acedad9274ff4ef01455fbccfa20ce7d9", null ],
+    [ "XPathNode", "a02820.html#a1f0afd93e5b67b3813a86c8252179dca", null ],
+    [ "operator!", "a02820.html#a982a3ee2f2e41d25e17a11c1665e8519", null ],
+    [ "operator!=", "a02820.html#a4ad4339d146c1275da44b9d62f43f682", null ],
+    [ "operator==", "a02820.html#a7ece370d3ba24a84f9e1ded1df15c8a7", null ]
 ];

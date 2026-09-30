@@ -1,0 +1,27 @@
+digraph "lumex::xml::node::XmlNode::remove_child"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="lumex::xml::node::XmlNode\l::remove_child",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="remove_child with a name of size characters at name, which need no terminating NUL (a range of a larg..."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lumex::xml::node::XmlNode\l::remove_child",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02596.html#a2a24688c22c11ef8567fbc146f4bec87",tooltip="Removes a specified child node from the current node."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lumex::xml::node::destroy_node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00944.html#ae84d9b143163ef50d80b4e0d3eae042c",tooltip="Destroys an XmlNodeBase object and recursively deallocates its children and attributes."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lumex::xml::memory\l::XmlAllocator::deallocate\l_memory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02588.html#afcc4f66d51009761e90bce813331ddeb",tooltip="Deallocates a block of memory previously allocated by this allocator."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="lumex::xml::memory\l::XmlAllocator::deallocate_page",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02588.html#a902eac3224b197760acd21a0b5f4c5c3",tooltip="Deallocates a memory page previously allocated by this allocator."];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="lumex::xml::memory\l::XmlAllocator::deallocate\l_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02588.html#aa0373f70cced71f6939be0185e8decbe",tooltip="Deallocates a string previously allocated by allocate_string."];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="lumex::xml::attribute\l::destroy_attribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00942.html#ae49e387259a9f7af9dde64a7e348a52f",tooltip="Destroys and deallocates an XmlAttributeBase object."];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="lumex::xml::memory\l::get_allocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00949.html#a7bc3f6d9cad5365a05342e71d1570a9a",tooltip="Retrieves the XmlAllocator instance that manages the memory for a given object."];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="lumex::xml::node::remove_node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00944.html#a985458b1abf6d759e9adac5c51668a88",tooltip="Removes a node from its parent's child list."];
+}

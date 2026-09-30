@@ -1,4 +1,6 @@
 var a01864 =
 [
-    [ "value", "a01864.html#a368583606d07751f16b4ed5ba7b36f22", null ]
+    [ "BasicFormatString", "a01864.html#ac6b61217698711a49ed9c37e422b05bb", null ],
+    [ "BasicFormatString", "a01864.html#a238d194cd22661fb7f6704393c847ccd", null ],
+    [ "get", "a01864.html#a60433de75f96cb60af4cb04ac30d8cab", null ]
 ];

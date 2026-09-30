@@ -1,0 +1,16 @@
+digraph "lumex::core::fmt::Detail::escape"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="lumex::core::fmt::Detail\l::escape",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The ? (debug) form of a string or a character."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lumex::core::fmt::Detail\l::decode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a11c0b45ef3e75893d41b9a0674371d7f",tooltip="Decodes one code point at it (UTF-8 for char, UTF-16 or UTF-32 for wchar_t); an invalid sequence yiel..."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lumex::core::string\l::text::quote",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00887.html#a302f1bdf5e442097f85625effbd1294d",tooltip="join with every element wrapped in double quotes (\"element\"), C++11 to C++17."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lumex::core::string\l::text::Detail::quote_each",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00888.html#a4dcf39e9c9bb3f6990597b1eabd5c690",tooltip="Joins range, wrapping each element (converted to std::string const &) in mark."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="lumex::core::fmt::Detail\l::to_base",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00870.html#a9cf9ad2a9a71262b6f6e0f4145a5a3e7",tooltip=" "];
+}

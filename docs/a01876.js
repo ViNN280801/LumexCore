@@ -1,6 +1,6 @@
 var a01876 =
 [
-    [ "error", "a01876.html#a0b6145a66a7db3b22a87737c567e632f", null ],
-    [ "success", "a01876.html#ad8fa7d111533e3d8a916d2e646098886", null ],
-    [ "text", "a01876.html#aa848a04ca950c9eded82e64124bccff4", null ]
+    [ "OstreamFormatter", "a01876.html#a2090b05dbac399c9e78eb55b83b93678", null ],
+    [ "format", "a01876.html#aeeecdb02dee27a3a8bd20c6a6526f8ba", null ],
+    [ "parse", "a01876.html#a1291790ffb87625cd788c049e93a2095", null ]
 ];

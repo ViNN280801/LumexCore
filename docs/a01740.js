@@ -1,7 +1,7 @@
 var a01740 =
 [
-    [ "TruncatingBuffer", "a01740.html#ab5e2da9311d0f48d50306e5b07139d49", null ],
-    [ "count", "a01740.html#a182ff78b2567499af55a55dadb7981c5", null ],
-    [ "out", "a01740.html#a59666cefc8f7edf34a6de3b371b8f51e", null ],
-    [ "push_back", "a01740.html#ab02e65605f08dc402008f0e3c4b8a9bc", null ]
+    [ "~Buffer", "a01740.html#a67414e8ad6a9cef6b026f353480ffb56", null ],
+    [ "append", "a01740.html#aed0b262d3e5cdb89373861cbb45d7e1d", null ],
+    [ "append", "a01740.html#a6233c7bc4bcf0b27044ad10836154129", null ],
+    [ "push_back", "a01740.html#a19f2250481f69ee0a7139bdd0ff2b383", null ]
 ];

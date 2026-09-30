@@ -1,5 +1,6 @@
 var a02672 =
 [
-    [ "type", "a02672.html#aa042a39a90ff756c1ac0ccf5e8429f4e", null ],
-    [ "process", "a02672.html#aeb6f1c44ae313be99236435e934405af", null ]
+    [ "value_type", "a02672.html#a572f578a308fb8cb3a66612f8865b28e", null ],
+    [ "high", "a02672.html#a91a3e29187483d9d678e63823163eb62", null ],
+    [ "low", "a02672.html#ad808887b78ac2a8022c8e4dfe7088aba", null ]
 ];

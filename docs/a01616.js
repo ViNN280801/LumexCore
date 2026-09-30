@@ -1,10 +1,9 @@
 var a01616 =
 [
-    [ "LumexBaseException", "a01616.html#a54d06b4c398b8d51b16d07ce6e42e0a9", null ],
-    [ "LumexBaseException", "a01616.html#af6c956b427067ef3cb9b671ebc7e7508", null ],
-    [ "LumexBaseException", "a01616.html#a85c71424b39bcc0635b02e28fa04691d", null ],
-    [ "getStackTrace", "a01616.html#aaa6c89f64a566ac99594f3f62b1d139a", null ],
-    [ "to_crash_report", "a01616.html#a245a9afff857e90de514203f826b3abf", null ],
-    [ "to_stderr", "a01616.html#a4a7b23b7ca37b559a02c5036989682e3", null ],
-    [ "what", "a01616.html#ae5433f6be8c942124a15401d3dd31261", null ]
+    [ "LumexCrashHandler", "a01616.html#add0be61b714a9f54a4ee6deaede9a328", null ],
+    [ "LumexCrashHandler", "a01616.html#a9e169defe2d3ee3ba9f79eda122bfd05", null ],
+    [ "initialize", "a01616.html#a6a62eb137de435a453adb86ab497866a", null ],
+    [ "instance", "a01616.html#a4bda3bde24e82d8ef6207ea99d2b768c", null ],
+    [ "operator=", "a01616.html#af1732d516ab6c6b0dd675af3c2311d39", null ],
+    [ "operator=", "a01616.html#a6a810dcb68d04504cd2793ae512e4374", null ]
 ];

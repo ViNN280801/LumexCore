@@ -1,6 +1,5 @@
 var a01808 =
 [
-    [ "args", "a01808.html#a9f0ac7c3811b7cc4cbd475f032174ee1", null ],
-    [ "named", "a01808.html#a22e5c74e26e4e3300c468e848ec852e8", null ],
-    [ "named_count", "a01808.html#a485837aa9bfefcc233a02e9bf5a13b47", null ]
+    [ "format", "a01808.html#ab3dc69afd0609bc327dadcfb5a3fd142", null ],
+    [ "value", "a01808.html#abc5e0fd9b2299fd164797d1bd0542805", null ]
 ];

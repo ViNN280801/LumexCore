@@ -1,5 +1,6 @@
 var a01824 =
 [
-    [ "max_digits", "a01824.html#aac308bb77e9f47c9cc6dde84c407a098", null ],
-    [ "read", "a01824.html#a3c171c348767ff5f5f1d3e4015a66fc9", null ]
+    [ "args", "a01824.html#a9f0ac7c3811b7cc4cbd475f032174ee1", null ],
+    [ "named", "a01824.html#a22e5c74e26e4e3300c468e848ec852e8", null ],
+    [ "named_count", "a01824.html#a485837aa9bfefcc233a02e9bf5a13b47", null ]
 ];

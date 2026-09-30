@@ -1,9 +1,7 @@
 var a01692 =
 [
-    [ "file_status", "a01692.html#ad286506641ef529c178d811e530f7b82", null ],
-    [ "file_status", "a01692.html#af96980eec047db52291c5b214b63b32c", null ],
-    [ "permissions", "a01692.html#a4a0cf072b16eefcd18ff6a703e31b0d6", null ],
-    [ "permissions", "a01692.html#aaaa18777434167b511b9bc3f17af0d03", null ],
-    [ "type", "a01692.html#a6352838c45be85587fcbae6f579a21fd", null ],
-    [ "type", "a01692.html#a9d72317f3a8a85bbe11a0efe04d477d2", null ]
+    [ "base", "a01692.html#a832f9c77c86b03212ae0711f405a4da2", null ],
+    [ "current", "a01692.html#a8ac0ef996346e98cdfb2151515a6e6ba", null ],
+    [ "dirp", "a01692.html#aefa699b68dc33fbfa53f3fa9b8631be8", null ],
+    [ "entry", "a01692.html#a569ed5a67c969d199a7678c00885c3bf", null ]
 ];

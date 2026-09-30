@@ -1,6 +1,5 @@
 var a01848 =
 [
-    [ "BasicFormatString", "a01848.html#ac6b61217698711a49ed9c37e422b05bb", null ],
-    [ "BasicFormatString", "a01848.html#a238d194cd22661fb7f6704393c847ccd", null ],
-    [ "get", "a01848.html#aa29363b83528f7fb908f35b19b15982c", null ]
+    [ "max_digits", "a01848.html#a78165f485c17f666c487f1cbb70fbceb", null ],
+    [ "read", "a01848.html#a1a14ae66db4bd150bac8eb02db3ec19e", null ]
 ];

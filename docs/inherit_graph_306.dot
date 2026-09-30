@@ -1,9 +1,14 @@
 digraph "Graphical Class Hierarchy"
 {
  // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
-  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [id="Node000000",label="lumex::xml::attribute\l::XmlAttribute",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$a02556.html",tooltip="Represents an XML attribute, providing a safe and convenient interface for accessing and modifying it..."];
+  Node185 [label="is_convertible",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node185 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="lumex::core::utility\l::traits::range::has\l_convertible_indexed_access\l\< T, To, meta::void_t\< decltype\l(std::declval\< T \>()[std::declval\l\< std::size_t \>()])\> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02420.html",tooltip=" "];
+  Node185 -> Node187 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node187 [label="lumex::core::utility\l::traits::range::has\l_convertible_size\< T,\l meta::void_t\< decltype\l(std::declval\< T \>().size())\> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02412.html",tooltip=" "];
+  Node185 -> Node188 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node188 [label="lumex::core::utility\l::traits::range::has\l_elements_convertible\l_to\< Range, To, meta::void\l_t\< typename range_reference\l\< Range \>::type \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a02388.html",tooltip=" "];
 }
