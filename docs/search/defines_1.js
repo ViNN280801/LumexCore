@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nominmax_7772',['NOMINMAX',['../a00014.html#a9f918755b601cf4bffca775992e6fb90',1,'LumexCPUVectorizationCapabilities.cpp']]]
+  ['nominmax_7766',['NOMINMAX',['../a00014.html#a9f918755b601cf4bffca775992e6fb90',1,'LumexCPUVectorizationCapabilities.cpp']]]
 ];

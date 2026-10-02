@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.0</span>
+   &#160;<span id="projectnumber">1.0.1.1</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -104,18 +104,17 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
 <li>Lazy initialization to minimize overhead</li>
 </ul>
 <p>Linux/POSIX (GCC/Clang):</p><ul>
-<li>Uses GNU backtrace() + backtrace_symbols() (not POSIX, but widely available)</li>
-<li>Automatic demangling C++ symbols through __cxa_demangle</li>
-<li>Requires compilation with -g and linking with -rdynamic</li>
-<li>Fallback on dladdr() when backtrace is not available</li>
+<li>Uses GNU backtrace() (not POSIX, but widely available) for the addresses</li>
+<li>Names a frame by its exported symbol (dladdr, demangled through __cxa_demangle); a function the module does not export (most of an executable not linked with -rdynamic) has no name here</li>
+<li>Every frame also carries its module and the address inside it ("libfoo.so.1+0x1A2B", "app+0x401234"), found through dl_iterate_phdr on Linux: the address addr2line, gdb or eu-addr2line take with that module or its separate debug file, so the stack is symbolized offline, with source lines</li>
+<li>Starts no process and reads no debug information</li>
 </ul>
 <p>Performance:</p><ul>
-<li>Debug mode: ~150-400 μs on 10 frames</li>
-<li>Release with symbols: ~100-250 μs</li>
-<li>Release without symbols: ~50-100 μs (only addresses)</li>
+<li>Windows: DbgHelp resolves symbols and lines in-process</li>
+<li>POSIX: a few microseconds per frame, whatever debug information the modules have (the frame needs only dladdr and the loaded module list)</li>
 </ul>
 <p>Graceful Degradation:</p><ul>
-<li>Without debug symbols: returns addresses in hex format</li>
+<li>Without a module for an address: returns the address in hex format</li>
 <li>On errors: returns "Stack trace unavailable: &lt;reason&gt;"</li>
 <li>Thread-safe in all modes</li>
 </ul>
@@ -126,7 +125,7 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::string Formatted stack trace, each frame on a new line. Format: "  #N: function_name (file:line) [0xADDRESS]"</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::string Formatted stack trace, each frame on a new line. Windows: "  #N: function_name (file:line) [0xADDRESS]". POSIX: "  #N: symbol +offset (module+0xOFFSET) [0xADDRESS]" for an exported symbol, "  #N: module+0xOFFSET [0xADDRESS]" otherwise.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd><ul>
 <li>Function noexcept - never throws exceptions</li>
 <li>Can allocate memory inside (NOT async-signal-safe!)</li>
@@ -136,19 +135,18 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
 </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd><ul>
 <li>Windows: Requires DbgHelp.lib in linking</li>
-<li>Linux: Requires -rdynamic for symbol export</li>
+<li>POSIX: names only exported symbols; link with -rdynamic to export more, or symbolize the module offsets offline</li>
 <li>Inline functions may be missing in trace at aggressive optimization</li>
 </ul>
 </dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> setConfigToDefault() {</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> resetConfig() {</div>
 <div class="line">  std::string trace = <a name="a0"></a><a class="code" href="a00900.html#a13925a9e9d73bb6dc4f7cabd67176e9b">lumex::core::utility::debug::captureStackTrace</a>(1, 5);</div>
-<div class="line">  <a name="a1"></a><a class="code" href="a00065.html#a4723a0545868bc1b988b4d2c65386e39">lumWarning</a>(<span class="stringliteral">&quot;Config reset. Call stack:\n&quot;</span>, trace);</div>
-<div class="line">  <span class="comment">// Output:</span></div>
-<div class="line">  <span class="comment">//   #0: initChannelAmqpErrors() at ChromatographicController.cpp:140</span></div>
-<div class="line">[0x7FF6A2B41234]</div>
-<div class="line">  <span class="comment">//   #1: CMChromatographicController::CMChromatographicController()</span></div>
-<div class="line">[0x7FF6A2B3F890]</div>
-<div class="line">  <span class="comment">//   #2: ... etc</span></div>
+<div class="line">  std::cerr &lt;&lt; <span class="stringliteral">&quot;Config reset. Call stack:\n&quot;</span> &lt;&lt; trace;</div>
+<div class="line">  <span class="comment">// Windows:</span></div>
+<div class="line">  <span class="comment">//   #0: loadConfig (config.cpp:140) [0x7FF6A2B41234]</span></div>
+<div class="line">  <span class="comment">// Linux (offsets for addr2line or gdb with app and libc.so.6):</span></div>
+<div class="line">  <span class="comment">//   #0: app+0x4F7250 [0x8F7250]</span></div>
+<div class="line">  <span class="comment">//   #1: __libc_start_main +235 (libc.so.6+0x2409B) [0x7F3E1E8E009B]</span></div>
 <div class="line">}</div>
 </div><!-- fragment --><div class="fragment"><div class="line"> </div>
 <div class="line"><span class="preprocessor">#ifndef LUMEX_CORE_UTILITY_DEBUG_HPP</span></div>
@@ -208,10 +206,12 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
 <div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wfloat-equal&quot;</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;array&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;mutex&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
@@ -224,6 +224,9 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
 <div class="line"><span class="preprocessor">#include &lt;DbgHelp.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#else</span></div>
 <div class="line"><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#if defined(__linux__) &amp;&amp; __has_include(&lt;link.h&gt;)</span></div>
+<div class="line"><span class="preprocessor">#include &lt;link.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#if defined(__GNUC__) || defined(__clang__)</span></div>
@@ -263,99 +266,17 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
 <div class="line"><span class="comment">// avoids relying on it - std::ostringstream + std::hex gives the exact same</span></div>
 <div class="line"><span class="comment">// output without adding a new external dependency.</span></div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> std::string</div>
-<div class="line"><a name="a2"></a><a class="code" href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">formatHex</a> (std::uintptr_t value)</div>
+<div class="line"><a name="a1"></a><a class="code" href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">formatHex</a> (std::uintptr_t value)</div>
 <div class="line">{</div>
 <div class="line">  std::ostringstream oss;</div>
 <div class="line">  oss &lt;&lt; std::hex &lt;&lt; std::uppercase &lt;&lt; value;</div>
 <div class="line">  <span class="keywordflow">return</span> oss.str ();</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#if (defined(__GNUC__) || defined(__clang__)) &amp;&amp; defined(LUMEX_OS_LINUX)      \</span></div>
-<div class="line"><span class="preprocessor">    &amp;&amp; LUMEX_OS_LINUX</span></div>
-<div class="line"><span class="comment">// Resolve address to function name using addr2line (POSIX fallback)</span></div>
-<div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> std::string</div>
-<div class="line">resolveAddressWithAddr2line (<span class="keywordtype">void</span> *addr, <span class="keywordtype">char</span> <span class="keyword">const</span> *exe_path) <a name="a3"></a><a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordflow">try</span></div>
-<div class="line">    {</div>
-<div class="line">      <span class="comment">// Create pipe for addr2line output</span></div>
-<div class="line">      std::array&lt;char, 512&gt; buffer{};</div>
-<div class="line">      std::string result;</div>
-<div class="line"> </div>
-<div class="line">      <span class="comment">// Build command: addr2line -C -f -e &lt;executable&gt; &lt;address&gt;</span></div>
-<div class="line">      std::string cmd = <a name="a4"></a><a class="code" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (</div>
-<div class="line">          <span class="stringliteral">&quot;addr2line -C -f -e &quot;</span>, exe_path, <span class="stringliteral">&quot; 0x&quot;</span>,</div>
-<div class="line">          <a class="code" href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">formatHex</a> (<span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span> (addr)), <span class="stringliteral">&quot; 2&gt;/dev/null&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line">      FILE *pipe = popen (cmd.c_str (),</div>
-<div class="line">                          <span class="stringliteral">&quot;r&quot;</span>); <span class="comment">// NOLINT(cppcoreguidelines-owning-memory)</span></div>
-<div class="line">      <span class="keywordflow">if</span> (!pipe)</div>
-<div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">      <span class="comment">// Read function name (first line)</span></div>
-<div class="line">      <span class="keywordflow">if</span> (fgets (buffer.data (), buffer.size (), pipe) != <span class="keyword">nullptr</span>)</div>
-<div class="line">        {</div>
-<div class="line">          result = buffer.data ();</div>
-<div class="line">          <span class="comment">// Remove newline</span></div>
-<div class="line">          <span class="keywordflow">if</span> (!result.empty () &amp;&amp; result.back () == <span class="charliteral">&#39;\n&#39;</span>)</div>
-<div class="line">            result.pop_back ();</div>
-<div class="line"> </div>
-<div class="line">          <span class="comment">// Read file:line (second line) and append</span></div>
-<div class="line">          <span class="keywordflow">if</span> (fgets (buffer.data (), buffer.size (), pipe) != <span class="keyword">nullptr</span>)</div>
-<div class="line">            {</div>
-<div class="line">              std::string location = buffer.data ();</div>
-<div class="line">              <span class="keywordflow">if</span> (!location.empty () &amp;&amp; location.back () == <span class="charliteral">&#39;\n&#39;</span>)</div>
-<div class="line">                location.pop_back ();</div>
-<div class="line"> </div>
-<div class="line">              <span class="comment">// Filter out &quot;??:0&quot; and &quot;??:?&quot;</span></div>
-<div class="line">              <span class="keywordflow">if</span> (location != <span class="stringliteral">&quot;??:0&quot;</span> &amp;&amp; location != <span class="stringliteral">&quot;??:?&quot;</span>)</div>
-<div class="line">                result += <span class="stringliteral">&quot; at &quot;</span> + location;</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">      pclose (pipe); <span class="comment">// NOLINT(cppcoreguidelines-owning-memory)</span></div>
-<div class="line"> </div>
-<div class="line">      <span class="comment">// Return empty if addr2line failed (contains &quot;?&quot; or &quot;0x&quot;)</span></div>
-<div class="line">      <span class="keywordflow">if</span> (result.find (<span class="stringliteral">&quot;??&quot;</span>) != std::string::npos || result.empty ())</div>
-<div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">      <span class="keywordflow">return</span> result;</div>
-<div class="line">    }</div>
-<div class="line">  <span class="keywordflow">catch</span> (...)</div>
-<div class="line">    {</div>
-<div class="line">      <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Get executable path for addr2line</span></div>
-<div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> std::string</div>
-<div class="line">getExecutablePath () <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordflow">try</span></div>
-<div class="line">    {</div>
-<div class="line"><span class="preprocessor">#if defined(LUMEX_OS_LINUX)</span></div>
-<div class="line">      std::array&lt;char, 4096&gt; buffer{};</div>
-<div class="line">      ssize_t len</div>
-<div class="line">          = readlink (<span class="stringliteral">&quot;/proc/self/exe&quot;</span>, buffer.data (), buffer.size () - 1);</div>
-<div class="line">      <span class="keywordflow">if</span> (len &gt; 0)</div>
-<div class="line">        {</div>
-<div class="line">          buffer[<span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (len)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line">          <span class="keywordflow">return</span> std::string (buffer.data ());</div>
-<div class="line">        }</div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line">      <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line">    }</div>
-<div class="line">  <span class="keywordflow">catch</span> (...)</div>
-<div class="line">    {</div>
-<div class="line">      <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"> </div>
 <div class="line"><span class="preprocessor">#if defined(LUMEX_OS_WINDOWS)</span></div>
 <div class="line"><span class="comment">// Thread-safe DbgHelp mutex (Windows requires external synchronization)</span></div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> std::mutex &amp;</div>
-<div class="line">getDbgHelpMutex () <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line">getDbgHelpMutex () <a name="a2"></a><a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">static</span> std::mutex mtx;</div>
 <div class="line">  <span class="keywordflow">return</span> mtx;</div>
@@ -377,7 +298,7 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
 <div class="line">                                            <span class="keyword">static_cast&lt;</span>DWORD<span class="keyword">&gt;</span> (buf.size ()));</div>
 <div class="line">      <span class="keywordflow">if</span> (len == 0 || len &gt;= buf.size ())</div>
 <div class="line">        <span class="keywordflow">return</span> {};</div>
-<div class="line">      std::string <a name="a5"></a><a class="code" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a> (buf.data (), len);</div>
+<div class="line">      std::string <a name="a3"></a><a class="code" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a> (buf.data (), len);</div>
 <div class="line">      std::size_t <span class="keyword">const</span> lastSlash = <a class="code" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>.find_last_of (<span class="stringliteral">&quot;\\/&quot;</span>);</div>
 <div class="line">      <span class="keywordflow">return</span> (lastSlash != std::string::npos) ? <a class="code" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>.substr (0, lastSlash + 1)</div>
 <div class="line">                                              : std::string{};</div>
@@ -443,12 +364,181 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
 <div class="line">  <span class="keywordflow">return</span> result;</div>
 <div class="line">}</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor">#if !defined(LUMEX_OS_WINDOWS) &amp;&amp; (defined(__GNUC__) || defined(__clang__))</span></div>
+<div class="line"><span class="comment">// Where an address lies: the file name of the module (executable or shared</span></div>
+<div class="line"><span class="comment">// library) that holds it and the address inside that module&#39;s image. The</span></div>
+<div class="line"><span class="comment">// offset is what offline tools take with that file (addr2line -e &lt;module&gt;,</span></div>
+<div class="line"><span class="comment">// gdb &quot;info line *&lt;offset&gt;&quot;), so a stack can be symbolized later from the</span></div>
+<div class="line"><span class="comment">// module and its separate debug file. No process is started and no debug</span></div>
+<div class="line"><span class="comment">// information is read here.</span></div>
+<div class="line"><span class="keyword">struct </span>module_address_t</div>
+<div class="line">{</div>
+<div class="line">  std::string module;        </div>
+<div class="line">  std::uintptr_t offset = 0; </div>
+<div class="line">  <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;        </div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// The file name of the running executable, read once: the loader reports</span></div>
+<div class="line"><span class="comment">// the main program without a name.</span></div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> std::string <span class="keyword">const</span> &amp;</div>
+<div class="line">executable_file_name () <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">static</span> std::string <span class="keyword">const</span> <a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a> = [] () -&gt; std::string</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keywordflow">try</span></div>
+<div class="line">        {</div>
+<div class="line"><span class="preprocessor">#if defined(LUMEX_OS_LINUX)</span></div>
+<div class="line">          std::array&lt;char, 4096&gt; buffer{};</div>
+<div class="line">          ssize_t <span class="keyword">const</span> length = readlink (<span class="stringliteral">&quot;/proc/self/exe&quot;</span>, buffer.data (),</div>
+<div class="line">                                           buffer.size () - 1);</div>
+<div class="line">          <span class="keywordflow">if</span> (length &gt; 0)</div>
+<div class="line">            <span class="keywordflow">return</span> std::string (buffer.data (),</div>
+<div class="line">                                <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (length));</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line">          <span class="keywordflow">return</span> std::string ();</div>
+<div class="line">        }</div>
+<div class="line">      <span class="keywordflow">catch</span> (...)</div>
+<div class="line">        {</div>
+<div class="line">          <span class="keywordflow">return</span> std::string ();</div>
+<div class="line">        }</div>
+<div class="line">    }();</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> std::string</div>
+<div class="line">file_name_of (std::string <span class="keyword">const</span> &amp;<a class="code" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>)</div>
+<div class="line">{</div>
+<div class="line">  std::size_t <span class="keyword">const</span> last_slash = <a class="code" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>.find_last_of (<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line">  <span class="keywordflow">return</span> last_slash == std::string::npos ? <a class="code" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a> : <a class="code" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>.substr (last_slash + 1);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#if defined(LUMEX_OS_LINUX) &amp;&amp; __has_include(&lt;link.h&gt;)</span></div>
+<div class="line"><span class="keyword">struct </span>module_search_t</div>
+<div class="line">{</div>
+<div class="line">  std::uintptr_t address;</div>
+<div class="line">  module_address_t *result;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// dl_iterate_phdr callback: the module whose loadable segment holds the</span></div>
+<div class="line"><span class="comment">// address. dlpi_addr is the load bias, 0 for an executable linked at a fixed</span></div>
+<div class="line"><span class="comment">// address, so address - bias is the address in the ELF file for executables</span></div>
+<div class="line"><span class="comment">// (PIE or not) and shared libraries alike.</span></div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span></div>
+<div class="line">find_module_callback (dl_phdr_info *info, std::size_t,</div>
+<div class="line">                      <span class="keywordtype">void</span> *data) <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">      <span class="keyword">auto</span> *search = <span class="keyword">static_cast&lt;</span>module_search_t *<span class="keyword">&gt;</span> (data);</div>
+<div class="line">      <span class="keywordflow">for</span> (ElfW (Half) i = 0; i &lt; info-&gt;dlpi_phnum; ++i)</div>
+<div class="line">        {</div>
+<div class="line">          ElfW (Phdr) <span class="keyword">const</span> &amp;segment = info-&gt;dlpi_phdr[i];</div>
+<div class="line">          <span class="keywordflow">if</span> (segment.p_type != PT_LOAD)</div>
+<div class="line">            <span class="keywordflow">continue</span>;</div>
+<div class="line">          std::uintptr_t <span class="keyword">const</span> start</div>
+<div class="line">              = <span class="keyword">static_cast&lt;</span>std::uintptr_t<span class="keyword">&gt;</span> (info-&gt;dlpi_addr)</div>
+<div class="line">                + <span class="keyword">static_cast&lt;</span>std::uintptr_t<span class="keyword">&gt;</span> (segment.p_vaddr);</div>
+<div class="line">          <span class="keywordflow">if</span> (search-&gt;address &lt; start</div>
+<div class="line">              || search-&gt;address</div>
+<div class="line">                     &gt;= start + <span class="keyword">static_cast&lt;</span>std::uintptr_t<span class="keyword">&gt;</span> (segment.p_memsz))</div>
+<div class="line">            <span class="keywordflow">continue</span>;</div>
+<div class="line">          search-&gt;result-&gt;found = <span class="keyword">true</span>;</div>
+<div class="line">          search-&gt;result-&gt;offset</div>
+<div class="line">              = search-&gt;address</div>
+<div class="line">                - <span class="keyword">static_cast&lt;</span>std::uintptr_t<span class="keyword">&gt;</span> (info-&gt;dlpi_addr);</div>
+<div class="line">          <span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a> = info-&gt;dlpi_name;</div>
+<div class="line">          search-&gt;result-&gt;module = file_name_of (</div>
+<div class="line">              <a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a> != <span class="keyword">nullptr</span> &amp;&amp; <a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>[0] != <span class="charliteral">&#39;\0&#39;</span> ? std::string (<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>)</div>
+<div class="line">                                                 : executable_file_name ());</div>
+<div class="line">          <span class="keywordflow">return</span> 1;</div>
+<div class="line">        }</div>
+<div class="line">      <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line">  <span class="keywordflow">catch</span> (...)</div>
+<div class="line">    {</div>
+<div class="line">      <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// The module that holds address and the address inside it. Linux walks the</span></div>
+<div class="line"><span class="comment">// loaded modules (dl_iterate_phdr); other systems fall back to dladdr and the</span></div>
+<div class="line"><span class="comment">// module&#39;s base address, which is right for position-independent images.</span></div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> module_address_t</div>
+<div class="line">find_module_address (<span class="keywordtype">void</span> <span class="keyword">const</span> *address) <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line">{</div>
+<div class="line">  module_address_t result;</div>
+<div class="line">  <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line"><span class="preprocessor">#if defined(LUMEX_OS_LINUX) &amp;&amp; __has_include(&lt;link.h&gt;)</span></div>
+<div class="line">      module_search_t search{ <span class="keyword">reinterpret_cast&lt;</span>std::uintptr_t<span class="keyword">&gt;</span> (address),</div>
+<div class="line">                              &amp;result };</div>
+<div class="line">      dl_iterate_phdr (&amp;find_module_callback, &amp;search);</div>
+<div class="line"><span class="preprocessor">#elif __has_include(&lt;dlfcn.h&gt;)</span></div>
+<div class="line">      Dl_info info;</div>
+<div class="line">      <span class="keywordflow">if</span> (dladdr (address, &amp;info) != 0 &amp;&amp; info.dli_fname != <span class="keyword">nullptr</span>)</div>
+<div class="line">        {</div>
+<div class="line">          result.found = <span class="keyword">true</span>;</div>
+<div class="line">          result.offset = <span class="keyword">reinterpret_cast&lt;</span>std::uintptr_t<span class="keyword">&gt;</span> (address)</div>
+<div class="line">                          - <span class="keyword">reinterpret_cast&lt;</span>std::uintptr_t<span class="keyword">&gt;</span> (info.dli_fbase);</div>
+<div class="line">          result.module = file_name_of (info.dli_fname);</div>
+<div class="line">        }</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line">    }</div>
+<div class="line">  <span class="keywordflow">catch</span> (...)</div>
+<div class="line">    {</div>
+<div class="line">      result = module_address_t ();</div>
+<div class="line">    }</div>
+<div class="line">  <span class="keywordflow">return</span> result;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// &quot;&lt;module&gt;+0x&lt;offset&gt;&quot;, or an empty string when no loaded module holds the</span></div>
+<div class="line"><span class="comment">// address.</span></div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> std::string</div>
+<div class="line">describe_module_address (<span class="keywordtype">void</span> <span class="keyword">const</span> *address)</div>
+<div class="line">{</div>
+<div class="line">  module_address_t <span class="keyword">const</span> where = find_module_address (address);</div>
+<div class="line">  <span class="keywordflow">if</span> (!where.found)</div>
+<div class="line">    <span class="keywordflow">return</span> std::string ();</div>
+<div class="line">  <span class="keywordflow">return</span> <a name="a4"></a><a class="code" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (where.module, <span class="stringliteral">&quot;+0x&quot;</span>,</div>
+<div class="line">                                                  <a class="code" href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">formatHex</a> (where.offset));</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// One frame of captureStackTrace: &quot;  #N: &lt;symbol&gt; +&lt;offset&gt;</span></div>
+<div class="line"><span class="comment">// (&lt;module&gt;+0x&lt;offset in module&gt;) [0x&lt;address&gt;]&quot; for an exported symbol, &quot; #N:</span></div>
+<div class="line"><span class="comment">// &lt;module&gt;+0x&lt;offset in module&gt; [0x&lt;address&gt;]&quot; otherwise.</span></div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> std::string</div>
+<div class="line">format_frame (<span class="keywordtype">int</span> index, <span class="keywordtype">void</span> *address)</div>
+<div class="line">{</div>
+<div class="line">  std::string <span class="keyword">const</span> <a class="code" href="a00870.html#a6d0e5ca2289d7692d18fc6fd0b832ef7acfb50e0c020de3d014cb6f975530a73b">hex</a></div>
+<div class="line">      = <a class="code" href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">formatHex</a> (<span class="keyword">reinterpret_cast&lt;</span>std::uintptr_t<span class="keyword">&gt;</span> (address));</div>
+<div class="line">  std::string <span class="keyword">const</span> location = describe_module_address (address);</div>
+<div class="line"><span class="preprocessor">#if __has_include(&lt;dlfcn.h&gt;)</span></div>
+<div class="line">  Dl_info info;</div>
+<div class="line">  <span class="keywordflow">if</span> (dladdr (address, &amp;info) != 0 &amp;&amp; info.dli_sname != <span class="keyword">nullptr</span>)</div>
+<div class="line">    {</div>
+<div class="line">      std::ptrdiff_t <span class="keyword">const</span> offset = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span> (address)</div>
+<div class="line">                                    - <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span> (info.dli_saddr);</div>
+<div class="line">      <span class="keywordflow">return</span> <a class="code" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (</div>
+<div class="line">          <span class="stringliteral">&quot;  #&quot;</span>, index, <span class="stringliteral">&quot;: &quot;</span>, demangleSymbol (info.dli_sname), <span class="stringliteral">&quot; +&quot;</span>, offset,</div>
+<div class="line">          location.empty () ? std::string () : <span class="stringliteral">&quot; (&quot;</span> + location + <span class="stringliteral">&quot;)&quot;</span>, <span class="stringliteral">&quot; [0x&quot;</span>,</div>
+<div class="line">          <a class="code" href="a00870.html#a6d0e5ca2289d7692d18fc6fd0b832ef7acfb50e0c020de3d014cb6f975530a73b">hex</a>, <span class="stringliteral">&quot;]\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!location.empty ())</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (</div>
+<div class="line">        <span class="stringliteral">&quot;  #&quot;</span>, index, <span class="stringliteral">&quot;: &quot;</span>, location, <span class="stringliteral">&quot; [0x&quot;</span>, <a class="code" href="a00870.html#a6d0e5ca2289d7692d18fc6fd0b832ef7acfb50e0c020de3d014cb6f975530a73b">hex</a>, <span class="stringliteral">&quot;]\n&quot;</span>);</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (<span class="stringliteral">&quot;  #&quot;</span>, index, <span class="stringliteral">&quot;: [0x&quot;</span>, <a class="code" href="a00870.html#a6d0e5ca2289d7692d18fc6fd0b832ef7acfb50e0c020de3d014cb6f975530a73b">hex</a>,</div>
+<div class="line">                                                  <span class="stringliteral">&quot;]\n&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
 <div class="line">} <span class="comment">// namespace Detail</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> std::string</div>
 <div class="line"><a class="code" href="a00900.html#a13925a9e9d73bb6dc4f7cabd67176e9b">captureStackTrace</a> (<span class="keywordtype">int</span> skip_frames = 1, <span class="keywordtype">int</span> max_frames = 16) <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
 <div class="line">{</div>
-<div class="line">  <a name="a6"></a><a class="code" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <span class="keywordtype">int</span> kMaxStackFrames = 64;</div>
+<div class="line">  <a name="a5"></a><a class="code" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <span class="keywordtype">int</span> kMaxStackFrames = 64;</div>
 <div class="line">  std::string result;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">try</span></div>
@@ -561,9 +651,13 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
 <div class="line">          symbol_buffer); <span class="comment">// NOLINT(cppcoreguidelines-owning-memory,cppcoreguidelines-no-malloc)</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#elif defined(__GNUC__) || defined(__clang__)</span></div>
-<div class="line">      <span class="comment">// Linux/POSIX: backtrace() + dladdr() for symbols</span></div>
-<div class="line">      <span class="comment">// NOTE: backtrace() - GNU extension, not in POSIX.1-2024, but widely</span></div>
-<div class="line">      <span class="comment">// available</span></div>
+<div class="line">      <span class="comment">// POSIX: backtrace () for the addresses, dladdr () for the exported</span></div>
+<div class="line">      <span class="comment">// symbol names, the module and the address inside it for the rest.</span></div>
+<div class="line">      <span class="comment">// No process is started and no debug information is read: a frame</span></div>
+<div class="line">      <span class="comment">// costs microseconds, and the module offsets are symbolized offline</span></div>
+<div class="line">      <span class="comment">// from the module&#39;s debug file.</span></div>
+<div class="line">      <span class="comment">// NOTE: backtrace () is a GNU extension, not in POSIX.1-2024, but</span></div>
+<div class="line">      <span class="comment">// widely available.</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#if __has_include(&lt;execinfo.h&gt;)</span></div>
 <div class="line">      <span class="keywordtype">void</span> *addresses[kMaxStackFrames];</div>
@@ -575,101 +669,14 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
 <div class="line"> </div>
 <div class="line">      <span class="keywordtype">int</span> actual_frames = std::min (frame_count - skip_frames, max_frames);</div>
 <div class="line"> </div>
-<div class="line">      <span class="comment">// Use backtrace_symbols for quick resolution (allocates memory)</span></div>
-<div class="line">      <span class="keywordtype">char</span> **symbols</div>
-<div class="line">          = backtrace_symbols (addresses + skip_frames, actual_frames);</div>
-<div class="line"> </div>
-<div class="line">      <span class="keywordflow">if</span> (!symbols)</div>
-<div class="line">        {</div>
-<div class="line">          <span class="comment">// Fallback: dladdr() for each address</span></div>
-<div class="line">          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; actual_frames; ++i)</div>
-<div class="line">            {</div>
-<div class="line">              Dl_info info;</div>
-<div class="line">              <span class="keywordflow">if</span> (dladdr (addresses[i + skip_frames], &amp;info))</div>
-<div class="line">                {</div>
-<div class="line">                  std::string demangled</div>
-<div class="line">                      = Detail::demangleSymbol (info.dli_sname);</div>
-<div class="line">                  result += <a class="code" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (</div>
-<div class="line">                      <span class="stringliteral">&quot;  #&quot;</span>, i, <span class="stringliteral">&quot;: &quot;</span>, demangled, <span class="stringliteral">&quot; [0x&quot;</span>,</div>
-<div class="line">                      <a class="code" href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">Detail::formatHex</a> (<span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span> (</div>
-<div class="line">                          addresses[i + skip_frames])),</div>
-<div class="line">                      <span class="stringliteral">&quot;]\n&quot;</span>);</div>
-<div class="line">                }</div>
-<div class="line">              <span class="keywordflow">else</span></div>
-<div class="line">                {</div>
-<div class="line">                  result += <a class="code" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (</div>
-<div class="line">                      <span class="stringliteral">&quot;  #&quot;</span>, i, <span class="stringliteral">&quot;: [0x&quot;</span>,</div>
-<div class="line">                      <a class="code" href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">Detail::formatHex</a> (<span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span> (</div>
-<div class="line">                          addresses[i + skip_frames])),</div>
-<div class="line">                      <span class="stringliteral">&quot;]\n&quot;</span>);</div>
-<div class="line">                }</div>
-<div class="line">            }</div>
-<div class="line">          <span class="keywordflow">return</span> result;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">      <span class="comment">// Get executable path for addr2line fallback</span></div>
-<div class="line">      <span class="keyword">static</span> std::string <span class="keyword">const</span> exe_path = Detail::getExecutablePath ();</div>
-<div class="line">      <span class="keywordtype">bool</span> <span class="keyword">const</span> use_addr2line_fallback = !exe_path.empty ();</div>
-<div class="line"> </div>
-<div class="line">      <span class="comment">// Process each frame with demangling</span></div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; actual_frames; ++i)</div>
-<div class="line">        {</div>
-<div class="line">          Dl_info info;</div>
-<div class="line">          <span class="keywordtype">bool</span> has_symbol</div>
-<div class="line">              = dladdr (addresses[i + skip_frames], &amp;info) &amp;&amp; info.dli_sname;</div>
-<div class="line">          <span class="keywordflow">if</span> (has_symbol)</div>
-<div class="line">            {</div>
-<div class="line">              <span class="comment">// Demangle C++ symbol</span></div>
-<div class="line">              std::string demangled = Detail::demangleSymbol (info.dli_sname);</div>
-<div class="line"> </div>
-<div class="line">              <span class="comment">// Calculate offset within function</span></div>
-<div class="line">              ptrdiff_t offset</div>
-<div class="line">                  = <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span> (addresses[i + skip_frames])</div>
-<div class="line">                    - <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span> (info.dli_saddr);</div>
-<div class="line"> </div>
-<div class="line">              result += <a class="code" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (</div>
-<div class="line">                  <span class="stringliteral">&quot;  #&quot;</span>, i, <span class="stringliteral">&quot;: &quot;</span>, demangled, <span class="stringliteral">&quot; +&quot;</span>, offset, <span class="stringliteral">&quot; [0x&quot;</span>,</div>
-<div class="line">                  <a class="code" href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">Detail::formatHex</a> (<span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span> (</div>
-<div class="line">                      addresses[i + skip_frames])),</div>
-<div class="line">                  <span class="stringliteral">&quot;]\n&quot;</span>);</div>
-<div class="line">            }</div>
-<div class="line">          <span class="keywordflow">else</span></div>
-<div class="line">            {</div>
-<div class="line">              <span class="comment">// Try addr2line fallback if no symbol info available</span></div>
-<div class="line">              std::string addr2line_result;</div>
-<div class="line">              <span class="keywordflow">if</span> (use_addr2line_fallback)</div>
-<div class="line">                addr2line_result = Detail::resolveAddressWithAddr2line (</div>
-<div class="line">                    addresses[i + skip_frames], exe_path.c_str ());</div>
-<div class="line"> </div>
-<div class="line">              <span class="keywordflow">if</span> (!addr2line_result.empty ())</div>
-<div class="line">                {</div>
-<div class="line">                  <span class="comment">// addr2line succeeded - use its output</span></div>
-<div class="line">                  result += <a class="code" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (</div>
-<div class="line">                      <span class="stringliteral">&quot;  #&quot;</span>, i, <span class="stringliteral">&quot;: &quot;</span>, addr2line_result, <span class="stringliteral">&quot; [0x&quot;</span>,</div>
-<div class="line">                      <a class="code" href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">Detail::formatHex</a> (<span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span> (</div>
-<div class="line">                          addresses[i + skip_frames])),</div>
-<div class="line">                      <span class="stringliteral">&quot;]\n&quot;</span>);</div>
-<div class="line">                }</div>
-<div class="line">              <span class="keywordflow">else</span></div>
-<div class="line">                {</div>
-<div class="line">                  <span class="comment">// Complete fallback: raw backtrace_symbols output</span></div>
-<div class="line">                  result += <a class="code" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (</div>
-<div class="line">                      <span class="stringliteral">&quot;  #&quot;</span>, i, <span class="stringliteral">&quot;: &quot;</span>, symbols[i], <span class="stringliteral">&quot; [0x&quot;</span>,</div>
-<div class="line">                      <a class="code" href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">Detail::formatHex</a> (<span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span> (</div>
-<div class="line">                          addresses[i + skip_frames])),</div>
-<div class="line">                      <span class="stringliteral">&quot;]\n&quot;</span>);</div>
-<div class="line">                }</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">      free (</div>
-<div class="line">          symbols); <span class="comment">// NOLINT(cppcoreguidelines-owning-memory,cppcoreguidelines-no-malloc)</span></div>
+<div class="line">        result += Detail::format_frame (i, addresses[i + skip_frames]);</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#else</span></div>
 <div class="line">      <span class="comment">// No backtrace support - return basic info</span></div>
 <div class="line">      result = <span class="stringliteral">&quot;  Stack trace unavailable (&lt;execinfo.h&gt; not available)\n&quot;</span>;</div>
 <div class="line">      result += <a class="code" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (</div>
-<div class="line">          <span class="stringliteral">&quot;  Current function: &quot;</span>, <a name="a7"></a><a class="code" href="a00065.html#aaae5674dd2d0d351d585e646e72118fd">LUMEX_FUNCTION_NAME</a>, <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line">          <span class="stringliteral">&quot;  Current function: &quot;</span>, <a name="a6"></a><a class="code" href="a00065.html#aaae5674dd2d0d351d585e646e72118fd">LUMEX_FUNCTION_NAME</a>, <span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#else</span></div>
@@ -693,7 +700,7 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> std::string</div>
-<div class="line"><a name="a8"></a><a class="code" href="a00900.html#a20f646c83998ef9b2efd79dbe73d0f2f">captureCallerInfoImpl</a> (<span class="keywordtype">char</span> <span class="keyword">const</span> *caller_function, <span class="keywordtype">char</span> <span class="keyword">const</span> *caller_file,</div>
+<div class="line"><a name="a7"></a><a class="code" href="a00900.html#a20f646c83998ef9b2efd79dbe73d0f2f">captureCallerInfoImpl</a> (<span class="keywordtype">char</span> <span class="keyword">const</span> *caller_function, <span class="keywordtype">char</span> <span class="keyword">const</span> *caller_file,</div>
 <div class="line">                       <span class="keywordtype">int</span> caller_line) <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
 <div class="line">{</div>
 <div class="line">  <span class="keywordflow">try</span></div>
@@ -750,16 +757,17 @@ $(document).ready(function(){initNavTree('a02936.html',''); initResizable(); });
 <div class="ttc" id="aa00347_html_a1513006a1992e7dc9cc43b2e081cc33f"><div class="ttname"><a href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a></div><div class="ttdeci">#define LUMEX_CONSTEXPR</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:146</div></div>
 <div class="ttc" id="aa00272_html"><div class="ttname"><a href="a00272.html">LumexStringify.hpp</a></div><div class="ttdoc">Concatenates the operator&lt;&lt; text of any number of arguments into one std::string.</div></div>
 <div class="ttc" id="aa00359_html"><div class="ttname"><a href="a00359.html">LumexCheckOS.hpp</a></div><div class="ttdoc">Cross-platform OS macros.</div></div>
-<div class="ttc" id="aa00065_html_a4723a0545868bc1b988b4d2c65386e39"><div class="ttname"><a href="a00065.html#a4723a0545868bc1b988b4d2c65386e39">lumWarning</a></div><div class="ttdeci">#define lumWarning(moduleName,...)</div><div class="ttdef"><b>Definition:</b> LumexLoggingMacro.hpp:61</div></div>
 <div class="ttc" id="aa00889_html_a644d51beb3d991564cc81242883fd17a"><div class="ttname"><a href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a></div><div class="ttdeci">std::string stringify(Args &amp;&amp;...args)</div><div class="ttdef"><b>Definition:</b> LumexStringify.hpp:148</div></div>
 <div class="ttc" id="aa00783_html"><div class="ttname"><a href="a00783.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
 <div class="ttc" id="aa00347_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:69</div></div>
-<div class="ttc" id="aa00900_html_a20f646c83998ef9b2efd79dbe73d0f2f"><div class="ttname"><a href="a00900.html#a20f646c83998ef9b2efd79dbe73d0f2f">lumex::core::utility::debug::captureCallerInfoImpl</a></div><div class="ttdeci">static std::string captureCallerInfoImpl(char const *caller_function, char const *caller_file, int caller_line) LUMEX_NOEXCEPT</div><div class="ttdoc">Lightweight alternative: captures only the immediate caller.</div><div class="ttdef"><b>Definition:</b> LumexDebug.hpp:648</div></div>
+<div class="ttc" id="aa00900_html_a20f646c83998ef9b2efd79dbe73d0f2f"><div class="ttname"><a href="a00900.html#a20f646c83998ef9b2efd79dbe73d0f2f">lumex::core::utility::debug::captureCallerInfoImpl</a></div><div class="ttdeci">static std::string captureCallerInfoImpl(char const *caller_function, char const *caller_file, int caller_line) LUMEX_NOEXCEPT</div><div class="ttdoc">Lightweight alternative: captures only the immediate caller.</div><div class="ttdef"><b>Definition:</b> LumexDebug.hpp:665</div></div>
 <div class="ttc" id="aa00783_html_ab9f08fe2d8e3f1fea0b6d156eaa1822f"><div class="ttname"><a href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a></div><div class="ttdeci">core::filesystem::fs::path path</div><div class="ttdoc">Global alias for lumex::core::filesystem::fs::lumex_filesystem::path.</div><div class="ttdef"><b>Definition:</b> LumexFilesystem.hpp:2062</div></div>
 <div class="ttc" id="aa00347_html"><div class="ttname"><a href="a00347.html">LumexKeywords.hpp</a></div></div>
-<div class="ttc" id="aa00900_html_a13925a9e9d73bb6dc4f7cabd67176e9b"><div class="ttname"><a href="a00900.html#a13925a9e9d73bb6dc4f7cabd67176e9b">lumex::core::utility::debug::captureStackTrace</a></div><div class="ttdeci">static std::string captureStackTrace(int skip_frames=1, int max_frames=16) LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexDebug.hpp:394</div></div>
-<div class="ttc" id="aa00901_html_a1e4c0bb124b74e381342ae2a32d215c0"><div class="ttname"><a href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">lumex::core::utility::debug::Detail::formatHex</a></div><div class="ttdeci">static std::string formatHex(std::uintptr_t value)</div><div class="ttdef"><b>Definition:</b> LumexDebug.hpp:152</div></div>
+<div class="ttc" id="aa00870_html_a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8"><div class="ttname"><a href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">lumex::core::fmt::Detail::ArgRefKind::none</a></div><div class="ttdeci">@ none</div></div>
+<div class="ttc" id="aa00900_html_a13925a9e9d73bb6dc4f7cabd67176e9b"><div class="ttname"><a href="a00900.html#a13925a9e9d73bb6dc4f7cabd67176e9b">lumex::core::utility::debug::captureStackTrace</a></div><div class="ttdeci">static std::string captureStackTrace(int skip_frames=1, int max_frames=16) LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexDebug.hpp:494</div></div>
+<div class="ttc" id="aa00901_html_a1e4c0bb124b74e381342ae2a32d215c0"><div class="ttname"><a href="a00901.html#a1e4c0bb124b74e381342ae2a32d215c0">lumex::core::utility::debug::Detail::formatHex</a></div><div class="ttdeci">static std::string formatHex(std::uintptr_t value)</div><div class="ttdef"><b>Definition:</b> LumexDebug.hpp:157</div></div>
 <div class="ttc" id="aa00065_html_aaae5674dd2d0d351d585e646e72118fd"><div class="ttname"><a href="a00065.html#aaae5674dd2d0d351d585e646e72118fd">LUMEX_FUNCTION_NAME</a></div><div class="ttdeci">#define LUMEX_FUNCTION_NAME</div><div class="ttdef"><b>Definition:</b> LumexLoggingMacro.hpp:54</div></div>
+<div class="ttc" id="aa00870_html_a6d0e5ca2289d7692d18fc6fd0b832ef7acfb50e0c020de3d014cb6f975530a73b"><div class="ttname"><a href="a00870.html#a6d0e5ca2289d7692d18fc6fd0b832ef7acfb50e0c020de3d014cb6f975530a73b">lumex::core::fmt::Detail::FloatStyle::shortest</a></div><div class="ttdeci">@ shortest</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
