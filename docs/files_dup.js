@@ -1,19 +1,19 @@
 var files_dup =
 [
     [ "BadExpectedAccess.hpp", "a00560.html", [
-      [ "BadExpectedAccess", "a02174.html", "a02174" ]
+      [ "BadExpectedAccess", "a02175.html", "a02175" ]
     ] ],
     [ "Base64.hpp", "a00482.html", "a00482" ],
     [ "CircularBuffer", "a01211.html", null ],
     [ "CircularBuffer.hpp", "a00503.html", "a00503" ],
     [ "Decoder.cpp", "a00485.html", "a00485" ],
     [ "Decoder.hpp", "a00488.html", [
-      [ "Decoder", "a01626.html", "a01626" ]
+      [ "Decoder", "a01627.html", "a01627" ]
     ] ],
     [ "DefaultPaths.hpp", "a00521.html", "a00521" ],
     [ "Encoder.cpp", "a00491.html", "a00491" ],
     [ "Encoder.hpp", "a00494.html", [
-      [ "Encoder", "a01634.html", "a01634" ]
+      [ "Encoder", "a01635.html", "a01635" ]
     ] ],
     [ "example_1.cpp", "a00905.html", "a00905" ],
     [ "example_2.cpp", "a00908.html", "a00908" ],
@@ -82,38 +82,38 @@ var files_dup =
     [ "Expected.hpp", "a00566.html", "a00566" ],
     [ "ExpectedTypes.hpp", "a00569.html", "a00569" ],
     [ "ExpectedVoid.hpp", "a00572.html", [
-      [ "Expected< void, ErrorType >", "a02202.html", "a02202" ]
+      [ "Expected< void, ErrorType >", "a02203.html", "a02203" ]
     ] ],
     [ "ILumexJsonNormalizer.hpp", "a00368.html", [
-      [ "ILumexJsonNormalizer", "a01486.html", "a01486" ]
+      [ "ILumexJsonNormalizer", "a01487.html", "a01487" ]
     ] ],
     [ "ILumexJsonSchemaValidator.hpp", "a00380.html", [
-      [ "ILumexJsonSchemaValidator", "a01494.html", "a01494" ]
+      [ "ILumexJsonSchemaValidator", "a01495.html", "a01495" ]
     ] ],
     [ "ILumexSettings.hpp", "a00449.html", "a00449" ],
     [ "IXmlWriter.hpp", "a01016.html", [
-      [ "IXmlWriter", "a03310.html", "a03310" ]
+      [ "IXmlWriter", "a03311.html", "a03311" ]
     ] ],
     [ "LumexAggregateFields.hpp", "a00605.html", "a00605" ],
     [ "LumexAssert.cpp", "a00659.html", "a00659" ],
     [ "LumexAssert.hpp", "a00662.html", "a00662" ],
     [ "LumexAtomic", "a01205.html", null ],
     [ "LumexAtomicSharedPtr.hpp", "a00464.html", [
-      [ "atomic_shared_ptr", "a01582.html", "a01582" ]
+      [ "atomic_shared_ptr", "a01583.html", "a01583" ]
     ] ],
     [ "LumexAtomicSmartPtrCell.hpp", "a00467.html", "a00467" ],
     [ "LumexAtomicSmartPtrConfig.hpp", "a00470.html", "a00470" ],
     [ "LumexAtomicWait.hpp", "a00476.html", "a00476" ],
     [ "LumexAtomicWeakPtr.hpp", "a00473.html", [
-      [ "atomic_weak_ptr", "a01606.html", "a01606" ]
+      [ "atomic_weak_ptr", "a01607.html", "a01607" ]
     ] ],
     [ "LumexAttributes.hpp", "a00665.html", "a00665" ],
     [ "LumexBase64", "a01208.html", null ],
     [ "LumexBit.hpp", "a00668.html", null ],
     [ "LumexBitLock.hpp", "a00479.html", "a00479" ],
     [ "LumexCallbackSlot.hpp", "a00671.html", [
-      [ "LumexCallbackSlot< Tag, Result(Args...)>", "a02698.html", "a02698" ],
-      [ "Scoped", "a02702.html", "a02702" ]
+      [ "LumexCallbackSlot< Tag, Result(Args...)>", "a02699.html", "a02699" ],
+      [ "Scoped", "a02703.html", "a02703" ]
     ] ],
     [ "LumexCast.hpp", "a00674.html", null ],
     [ "LumexCheckCompiler.hpp", "a00677.html", "a00677" ],
@@ -160,11 +160,11 @@ var files_dup =
     [ "LumexJsonHelper.hpp", "a00365.html", "a00365" ],
     [ "LumexJsonSchemaException.hpp", "a00374.html", "a00374" ],
     [ "LumexJsonSchemaNormalizer.hpp", "a00371.html", [
-      [ "LumexJsonSchemaNormalizer", "a01490.html", "a01490" ]
+      [ "LumexJsonSchemaNormalizer", "a01491.html", "a01491" ]
     ] ],
     [ "LumexJsonSchemaTraverser.hpp", "a00377.html", "a00377" ],
     [ "LumexJsonSchemaValidator.hpp", "a00383.html", [
-      [ "LumexJsonSchemaValidator", "a01498.html", "a01498" ]
+      [ "LumexJsonSchemaValidator", "a01499.html", "a01499" ]
     ] ],
     [ "LumexKeywords.hpp", "a00701.html", "a00701" ],
     [ "LumexLogger", "a01190.html", null ],
@@ -185,10 +185,10 @@ var files_dup =
     [ "LumexOptional.hpp", "a00602.html", "a00602" ],
     [ "LumexPortProcessResolver.cpp", "a00422.html", null ],
     [ "LumexPortProcessResolver.hpp", "a00425.html", [
-      [ "port_holder_info_t", "a01538.html", "a01538" ],
-      [ "system_error_formatter", "a01542.html", "a01542" ],
-      [ "port_holder_resolver", "a01546.html", "a01546" ],
-      [ "port_process_resolver", "a01550.html", "a01550" ]
+      [ "port_holder_info_t", "a01539.html", "a01539" ],
+      [ "system_error_formatter", "a01543.html", "a01543" ],
+      [ "port_holder_resolver", "a01547.html", "a01547" ],
+      [ "port_process_resolver", "a01551.html", "a01551" ]
     ] ],
     [ "LumexProcess.hpp", "a00716.html", "a00716" ],
     [ "LumexQuote.hpp", "a00620.html", "a00620" ],
@@ -243,11 +243,11 @@ var files_dup =
     [ "SuccessFailure.hpp", "a00575.html", "a00575" ],
     [ "SupportedConfigExtensions.hpp", "a00446.html", "a00446" ],
     [ "Unexpected.hpp", "a00563.html", [
-      [ "Unexpected", "a02178.html", "a02178" ]
+      [ "Unexpected", "a02179.html", "a02179" ]
     ] ],
     [ "Validator.cpp", "a00497.html", "a00497" ],
     [ "Validator.hpp", "a00500.html", [
-      [ "Validator", "a01638.html", "a01638" ]
+      [ "Validator", "a01639.html", "a01639" ]
     ] ],
     [ "WindowsSEHTranslator.cpp", "a00530.html", "a00530" ],
     [ "WindowsSEHTranslator.hpp", "a00533.html", "a00533" ],
@@ -260,15 +260,15 @@ var files_dup =
     [ "XmlAttributeIterator.cpp", "a00932.html", "a00932" ],
     [ "XmlBufferedWriter.cpp", "a01019.html", "a01019" ],
     [ "XmlBufferedWriter.hpp", "a01022.html", [
-      [ "XmlBufferedWriter", "a03314.html", "a03314" ]
+      [ "XmlBufferedWriter", "a03315.html", "a03315" ]
     ] ],
     [ "XmlCleaner.hpp", "a01007.html", [
-      [ "XmlCleaner", "a03238.html", "a03238" ]
+      [ "XmlCleaner", "a03239.html", "a03239" ]
     ] ],
     [ "XmlConstants.hpp", "a00935.html", "a00935" ],
     [ "XmlDocument.cpp", "a00938.html", "a00938" ],
     [ "XmlDocument.hpp", "a00941.html", [
-      [ "XmlDocument", "a03158.html", "a03158" ]
+      [ "XmlDocument", "a03159.html", "a03159" ]
     ] ],
     [ "XmlDocumentBase.cpp", "a00944.html", "a00944" ],
     [ "XmlDocumentBase.hpp", "a00947.html", "a00947" ],
@@ -282,58 +282,58 @@ var files_dup =
     [ "XmlNodeBase.hpp", "a00974.html", "a00974" ],
     [ "XmlNodeIterator.cpp", "a00977.html", "a00977" ],
     [ "XmlObjectRange.hpp", "a00980.html", [
-      [ "XmlObjectRange", "a03198.html", "a03198" ]
+      [ "XmlObjectRange", "a03199.html", "a03199" ]
     ] ],
     [ "XmlParser.cpp", "a00983.html", "a00983" ],
     [ "XmlParser.hpp", "a00986.html", [
-      [ "XmlParser", "a03214.html", "a03214" ]
+      [ "XmlParser", "a03215.html", "a03215" ]
     ] ],
     [ "XmlParseResult.cpp", "a00989.html", "a00989" ],
     [ "XmlParseResult.hpp", "a00992.html", "a00992" ],
     [ "XmlText.cpp", "a00995.html", "a00995" ],
     [ "XmlText.hpp", "a00998.html", "a00998" ],
     [ "XmlTreeWalker.hpp", "a01001.html", [
-      [ "XmlTreeWalker", "a03226.html", "a03226" ]
+      [ "XmlTreeWalker", "a03227.html", "a03227" ]
     ] ],
     [ "XmlTypes.hpp", "a01004.html", "a01004" ],
     [ "XmlUtils.hpp", "a01013.html", "a01013" ],
     [ "XmlWriterFile.cpp", "a01025.html", "a01025" ],
     [ "XmlWriterFile.hpp", "a01028.html", [
-      [ "XmlWriterFile", "a03322.html", "a03322" ]
+      [ "XmlWriterFile", "a03323.html", "a03323" ]
     ] ],
     [ "XmlWriterStream.cpp", "a01031.html", "a01031" ],
     [ "XmlWriterStream.hpp", "a01034.html", [
-      [ "XmlWriterStream", "a03326.html", "a03326" ]
+      [ "XmlWriterStream", "a03327.html", "a03327" ]
     ] ],
     [ "XPathAllocator.cpp", "a01058.html", "a01058" ],
     [ "XPathAllocator.hpp", "a01061.html", [
-      [ "XPathAllocator", "a03374.html", "a03374" ],
-      [ "XPathAllocatorCapture", "a03378.html", "a03378" ]
+      [ "XPathAllocator", "a03375.html", "a03375" ],
+      [ "XPathAllocatorCapture", "a03379.html", "a03379" ]
     ] ],
     [ "XPathAstNode.cpp", "a01037.html", "a01037" ],
     [ "XPathAstNode.hpp", "a01040.html", [
-      [ "axis_to_type", "a03350.html", "a03350" ],
-      [ "XPathAstNode", "a03354.html", "a03354" ]
+      [ "axis_to_type", "a03351.html", "a03351" ],
+      [ "XPathAstNode", "a03355.html", "a03355" ]
     ] ],
     [ "XPathConstants.hpp", "a01043.html", "a01043" ],
     [ "XPathContext.hpp", "a01046.html", [
-      [ "XPathContext", "a03362.html", "a03362" ]
+      [ "XPathContext", "a03363.html", "a03363" ]
     ] ],
     [ "XPathDocumentOrderComparator.cpp", "a01049.html", "a01049" ],
     [ "XPathDocumentOrderComparator.hpp", "a01052.html", "a01052" ],
     [ "XPathException.hpp", "a01055.html", [
-      [ "XPathException", "a03370.html", "a03370" ]
+      [ "XPathException", "a03371.html", "a03371" ]
     ] ],
     [ "XPathLexer.cpp", "a01085.html", "a01085" ],
     [ "XPathLexer.hpp", "a01088.html", [
-      [ "XPathLexer", "a03410.html", "a03410" ]
+      [ "XPathLexer", "a03411.html", "a03411" ]
     ] ],
     [ "XPathLexerString.cpp", "a01091.html", "a01091" ],
     [ "XPathLexerString.hpp", "a01094.html", [
-      [ "XPathLexerString", "a03414.html", "a03414" ]
+      [ "XPathLexerString", "a03415.html", "a03415" ]
     ] ],
     [ "XPathMemoryBlock.hpp", "a01064.html", [
-      [ "XPathMemoryBlock", "a03382.html", "a03382" ]
+      [ "XPathMemoryBlock", "a03383.html", "a03383" ]
     ] ],
     [ "XPathNode.cpp", "a01073.html", "a01073" ],
     [ "XPathNode.hpp", "a01076.html", "a01076" ],
@@ -341,21 +341,21 @@ var files_dup =
     [ "XPathNodeSet.hpp", "a01082.html", "a01082" ],
     [ "XPathParser.cpp", "a01097.html", "a01097" ],
     [ "XPathParser.hpp", "a01100.html", [
-      [ "XPathParser", "a03422.html", "a03422" ]
+      [ "XPathParser", "a03423.html", "a03423" ]
     ] ],
     [ "XPathParseResult.cpp", "a01103.html", "a01103" ],
     [ "XPathParseResult.hpp", "a01106.html", [
-      [ "xpath_parse_result_t", "a03426.html", "a03426" ]
+      [ "xpath_parse_result_t", "a03427.html", "a03427" ]
     ] ],
     [ "XPathQuery.cpp", "a01109.html", "a01109" ],
     [ "XPathQuery.hpp", "a01112.html", [
-      [ "XPathQuery", "a03430.html", "a03430" ],
-      [ "XPathQueryImpl", "a03434.html", "a03434" ]
+      [ "XPathQuery", "a03431.html", "a03431" ],
+      [ "XPathQueryImpl", "a03435.html", "a03435" ]
     ] ],
     [ "XPathStack.cpp", "a01067.html", "a01067" ],
     [ "XPathStack.hpp", "a01070.html", [
-      [ "XPathStack", "a03390.html", "a03390" ],
-      [ "XPathStackData", "a03394.html", "a03394" ]
+      [ "XPathStack", "a03391.html", "a03391" ],
+      [ "XPathStackData", "a03395.html", "a03395" ]
     ] ],
     [ "XPathString.cpp", "a01115.html", "a01115" ],
     [ "XPathString.hpp", "a01118.html", "a01118" ],

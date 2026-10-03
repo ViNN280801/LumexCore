@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::utility::traits::value Namespace Reference</title>
+<title>LumexLib: lumex::core::utility::traits::tuple Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,102 +94,28 @@ $(document).ready(function(){initNavTree('a01408.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::utility::traits::value Namespace Reference</div>  </div>
+<div class="title">lumex::core::utility::traits::tuple Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03018.html">is_expected</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> is a <code><a class="el" href="a02182.html">lumex::core::expected::result::Expected</a>&lt;S, E&gt;</code>.  <a href="a03018.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02983.html">is_pair_like</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> is a <code>std::pair</code> or a two-element <code>std::tuple</code>.  <a href="a02983.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03022.html">is_expected&lt; lumex::core::expected::result::Expected&lt; S, E &gt; &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02987.html">is_pair_like&lt; std::pair&lt; First, Second &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02994.html">is_optional</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02991.html">is_pair_like&lt; std::tuple&lt; First, Second &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03010.html">is_optional&lt; lumex::core::optional::opt::optional&lt; T &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03014.html">is_optional&lt; std::optional&lt; T &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02998.html">is_optional&lt; T const &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03006.html">is_optional&lt; T const volatile &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03002.html">is_optional&lt; T volatile &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03026.html">is_optional_like</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> looks like an optional: <code>has_value ()</code> and unary <code>*</code> work on a <code>T const &amp;</code> (std::optional, LumexLib optional, similar wrappers).  <a href="a03026.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03030.html">is_optional_like&lt; T, meta::void_t&lt; decltype(std::declval&lt; T const &amp; &gt;().has_value()), decltype(*std::declval&lt; T const &amp; &gt;())&gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a371a727a74dc477639bc5b8a7f4cfbab"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a371a727a74dc477639bc5b8a7f4cfbab"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01408.html#a371a727a74dc477639bc5b8a7f4cfbab">is_optional_v</a> = <a class="el" href="a02994.html">is_optional</a>&lt;T&gt;::value</td></tr>
-<tr class="separator:a371a727a74dc477639bc5b8a7f4cfbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabc8ff282cd5c605f2162bed73099f9a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aabc8ff282cd5c605f2162bed73099f9a"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01408.html#aabc8ff282cd5c605f2162bed73099f9a">is_expected_v</a> = <a class="el" href="a03018.html">is_expected</a>&lt;T&gt;::value</td></tr>
-<tr class="separator:aabc8ff282cd5c605f2162bed73099f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="aabc8ff282cd5c605f2162bed73099f9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabc8ff282cd5c605f2162bed73099f9a">&#9670;&nbsp;</a></span>is_expected_v</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr bool lumex::core::utility::traits::value::is_expected_v = <a class="el" href="a03018.html">is_expected</a>&lt;T&gt;::value</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a371a727a74dc477639bc5b8a7f4cfbab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a371a727a74dc477639bc5b8a7f4cfbab">&#9670;&nbsp;</a></span>is_optional_v</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr bool lumex::core::utility::traits::value::is_optional_v = <a class="el" href="a02994.html">is_optional</a>&lt;T&gt;::value</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01314.html">core</a></li><li class="navelem"><a class="el" href="a01386.html">utility</a></li><li class="navelem"><a class="el" href="a01399.html">traits</a></li><li class="navelem"><a class="el" href="a01408.html">value</a></li>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01315.html">core</a></li><li class="navelem"><a class="el" href="a01387.html">utility</a></li><li class="navelem"><a class="el" href="a01400.html">traits</a></li><li class="navelem"><a class="el" href="a01408.html">tuple</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

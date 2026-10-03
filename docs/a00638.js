@@ -1,6 +1,6 @@
 var a00638 =
 [
-    [ "LumexWStringView", "a02670.html", "a02670" ],
+    [ "LumexWStringView", "a02671.html", "a02671" ],
     [ "LumexWStringView", "a00638.html#ac9ad2a2a897e312959d7da3970ff89c1", null ],
     [ "operator!=", "a00638.html#a68b420b9ef1ed994f824e6e3f5f57964", null ],
     [ "operator<", "a00638.html#a3264f24755752a33af27efeaf5ba1137", null ],

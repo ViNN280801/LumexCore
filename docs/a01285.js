@@ -1,5 +1,5 @@
 var a01285 =
 [
-    [ "ILumexJsonSchemaValidator", "a01494.html", "a01494" ],
-    [ "LumexJsonSchemaValidator", "a01498.html", "a01498" ]
+    [ "ILumexJsonSchemaValidator", "a01495.html", "a01495" ],
+    [ "LumexJsonSchemaValidator", "a01499.html", "a01499" ]
 ];

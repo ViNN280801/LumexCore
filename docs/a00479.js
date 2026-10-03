@@ -1,7 +1,7 @@
 var a00479 =
 [
-    [ "BitLock", "a01618.html", "a01618" ],
-    [ "BitLockGuard", "a01622.html", "a01622" ],
+    [ "BitLock", "a01619.html", "a01619" ],
+    [ "BitLockGuard", "a01623.html", "a01623" ],
     [ "tsan_mutex_destroy", "a00479.html#af25ffa3720b756fbe30a7e29397ee4bd", null ],
     [ "tsan_mutex_post_lock", "a00479.html#aa411a9b6a91063b2ca57a48b5cda7e38", null ],
     [ "tsan_mutex_post_unlock", "a00479.html#a45138d629081f839e7c275e9ee3a9b8c", null ],

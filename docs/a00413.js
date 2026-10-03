@@ -1,6 +1,6 @@
 var a00413 =
 [
-    [ "serial_port_info_t", "a01526.html", "a01526" ],
+    [ "serial_port_info_t", "a01527.html", "a01527" ],
     [ "serial_port_state", "a00413.html#a2833c2a4c2aca860a7fe8ecce5e59400", [
       [ "free", "a00413.html#a2833c2a4c2aca860a7fe8ecce5e59400aaa2d6e4f578eb0cfaba23beef76c2194", null ],
       [ "busy", "a00413.html#a2833c2a4c2aca860a7fe8ecce5e59400a8bc1b2f84252c3df4edd53e4aad097a7", null ],

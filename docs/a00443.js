@@ -1,6 +1,6 @@
 var a00443 =
 [
-    [ "LumexSettingsINI", "a01566.html", "a01566" ],
+    [ "LumexSettingsINI", "a01567.html", "a01567" ],
     [ "LumexSettingsINI", "a00443.html#aa4b9184a671b4fab21d16ff231591689", null ],
     [ "INI_FILE_EXTENSION", "a00443.html#a36267c2dc5eb27c59e2478f8ef943bc7", null ],
     [ "REGEX_KEY_VALUE", "a00443.html#a587803e5292c8e9eef1e5a2d41bc118c", null ],

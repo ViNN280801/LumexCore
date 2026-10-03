@@ -1,4 +1,4 @@
 var a01344 =
 [
-    [ "detail", "a01346.html", null ]
+    [ "LumexBaseException", "a02151.html", "a02151" ]
 ];

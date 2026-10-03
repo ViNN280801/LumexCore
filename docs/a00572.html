@@ -159,29 +159,24 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02202.html">lumex::core::expected::result::Expected&lt; void, ErrorType &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02203.html">lumex::core::expected::result::Expected&lt; void, ErrorType &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a></code> specialization when the success value is absent (<code>void</code>).  <a href="a02203.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
-<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01314"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01314.html">lumex::core</a></td></tr>
+<tr class="memitem:a01315"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01315.html">lumex::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01350"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01350.html">lumex::core::expected</a></td></tr>
+<tr class="memitem:a01351"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01351.html">lumex::core::expected</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01352"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01352.html">lumex::core::expected::result</a></td></tr>
+<tr class="memitem:a01353"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01353.html">lumex::core::expected::result</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The specialization <code>Expected&lt;void, ErrorType&gt;</code> for operations that succeed without a value; an analogue of C++23 <code>std::expected&lt;void, E&gt;</code>. </p>
-<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
-<p>SPDX-License-Identifier: MIT</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-<p>It keeps the interface of the primary template where it applies to an absent value: <code>has_value()</code>, <code>value()</code> (which only checks the state and throws <code>BadExpectedAccess</code> on an error), <code>error()</code>, <code>error_or()</code>, <code>emplace()</code>, <code>emplace_error()</code>, <code><a class="el" href="a01347.html#aa6c29be7d01b00f05c127675317c265c" title="Global swap function for LumexBasicStacktrace.">swap()</a></code> and the monadic operations. The header includes <code><a class="el" href="a00566.html" title="Expected&lt;SuccessType, ErrorType&gt;, an analogue of C++23 std::expected usable from C++11,...">Expected.hpp</a></code>, so it is enough for both forms. </p>
+<p>It keeps the interface of the primary template where it applies to an absent value: <code>has_value()</code>, <code>value()</code> (which only checks the state and throws <code>BadExpectedAccess</code> on an error), <code>error()</code>, <code>error_or()</code>, <code>emplace()</code>, <code>emplace_error()</code>, <code><a class="el" href="a01348.html#aa6c29be7d01b00f05c127675317c265c" title="Global swap function for LumexBasicStacktrace.">swap()</a></code> and the monadic operations. The header includes <code><a class="el" href="a00566.html" title="Expected&lt;SuccessType, ErrorType&gt;, an analogue of C++23 std::expected usable from C++11,...">Expected.hpp</a></code>, so it is enough for both forms. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

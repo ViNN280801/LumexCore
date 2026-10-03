@@ -1,4 +1,5 @@
 var a01452 =
 [
-    [ "Constants", "a01453.html", null ]
+    [ "axis_to_type", "a03351.html", "a03351" ],
+    [ "XPathAstNode", "a03355.html", "a03355" ]
 ];

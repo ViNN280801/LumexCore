@@ -1,5 +1,5 @@
 var a01351 =
 [
-    [ "BadExpectedAccess", "a02174.html", "a02174" ],
-    [ "Unexpected", "a02178.html", "a02178" ]
+    [ "error", "a01352.html", "a01352" ],
+    [ "result", "a01353.html", "a01353" ]
 ];

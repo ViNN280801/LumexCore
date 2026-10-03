@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::string::utility Namespace Reference</title>
+<title>LumexLib: lumex::core::string::text::Detail Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,48 +96,43 @@ $(document).ready(function(){initNavTree('a01377.html',''); initResizable(); });
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::string::utility Namespace Reference</div>  </div>
+<div class="title">lumex::core::string::text::Detail Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a06b0967c919bc72826472462f03b569f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename D &gt; </td></tr>
-<tr class="memitem:a06b0967c919bc72826472462f03b569f"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01377.html#a06b0967c919bc72826472462f03b569f">operator&lt;&lt;</a> (std::ostream &amp;ostream, std::unique_ptr&lt; T, D &gt; const &amp;ptr)</td></tr>
-<tr class="memdesc:a06b0967c919bc72826472462f03b569f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Streams the raw address held by a <code>std::unique_ptr</code>.  <a href="a01377.html#a06b0967c919bc72826472462f03b569f">More...</a><br /></td></tr>
-<tr class="separator:a06b0967c919bc72826472462f03b569f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d32413c8ec277e4d4c57f2a5cd110cf"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a2d32413c8ec277e4d4c57f2a5cd110cf"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01377.html#a2d32413c8ec277e4d4c57f2a5cd110cf">operator&lt;&lt;</a> (std::ostream &amp;ostream, std::shared_ptr&lt; T &gt; const &amp;ptr)</td></tr>
-<tr class="memdesc:a2d32413c8ec277e4d4c57f2a5cd110cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Streams the raw address held by a <code>std::shared_ptr</code>.  <a href="a01377.html#a2d32413c8ec277e4d4c57f2a5cd110cf">More...</a><br /></td></tr>
-<tr class="separator:a2d32413c8ec277e4d4c57f2a5cd110cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a644d51beb3d991564cc81242883fd17a"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a644d51beb3d991564cc81242883fd17a"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01377.html#a644d51beb3d991564cc81242883fd17a">stringify</a> (Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:a644d51beb3d991564cc81242883fd17a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates the streamed text of <code>args</code>.  <a href="a01377.html#a644d51beb3d991564cc81242883fd17a">More...</a><br /></td></tr>
-<tr class="separator:a644d51beb3d991564cc81242883fd17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6edd6a773e25b016b0dab32f38d58ff9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01377.html#a6edd6a773e25b016b0dab32f38d58ff9">stringify</a> () noexcept</td></tr>
-<tr class="memdesc:a6edd6a773e25b016b0dab32f38d58ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">No arguments: an empty string, without creating a stream.  <a href="a01377.html#a6edd6a773e25b016b0dab32f38d58ff9">More...</a><br /></td></tr>
-<tr class="separator:a6edd6a773e25b016b0dab32f38d58ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dcf39e9c9bb3f6990597b1eabd5c690"><td class="memTemplParams" colspan="2">template&lt;typename Range , typename Separator &gt; </td></tr>
+<tr class="memitem:a4dcf39e9c9bb3f6990597b1eabd5c690"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="a02927.html">lumex::core::utility::traits::range::has_elements_convertible_to</a>&lt; Range, std::string const &amp; &gt;::value &amp;&amp;<a class="el" href="a02887.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt; Separator &gt;::type &gt;::value, std::string &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01377.html#a4dcf39e9c9bb3f6990597b1eabd5c690">quote_each</a> (Range const &amp;range, Separator const &amp;separator, char mark)</td></tr>
+<tr class="memdesc:a4dcf39e9c9bb3f6990597b1eabd5c690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joins <code>range</code>, wrapping each element (converted to <code>std::string const &amp;</code>) in <code>mark</code>.  <a href="a01377.html#a4dcf39e9c9bb3f6990597b1eabd5c690">More...</a><br /></td></tr>
+<tr class="separator:a4dcf39e9c9bb3f6990597b1eabd5c690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a2d32413c8ec277e4d4c57f2a5cd110cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d32413c8ec277e4d4c57f2a5cd110cf">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+<a id="a4dcf39e9c9bb3f6990597b1eabd5c690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dcf39e9c9bb3f6990597b1eabd5c690">&#9670;&nbsp;</a></span>quote_each()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename Range , typename Separator &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream&amp; lumex::core::string::utility::operator&lt;&lt; </td>
+          <td class="memname">std::enable_if&lt; <a class="el" href="a02927.html">lumex::core::utility::traits::range::has_elements_convertible_to</a>&lt; Range, std::string const &amp;&gt;::value &amp;&amp; <a class="el" href="a02887.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt;Separator&gt;::type&gt;::value, std::string&gt;::type lumex::core::string::text::Detail::quote_each </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>ostream</em>, </td>
+          <td class="paramtype">Range const &amp;&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; T &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>ptr</em>&#160;</td>
+          <td class="paramtype">Separator const &amp;&#160;</td>
+          <td class="paramname"><em>separator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>mark</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -147,114 +142,24 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Streams the raw address held by a <code>std::shared_ptr</code>. </p>
-
-</div>
-</div>
-<a id="a06b0967c919bc72826472462f03b569f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06b0967c919bc72826472462f03b569f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename D &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; lumex::core::string::utility::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>ostream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::unique_ptr&lt; T, D &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>ptr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Streams the raw address held by a <code>std::unique_ptr</code>. </p>
-<p>Declared here so <code>stringify</code> finds it by ordinary lookup. The standard library has the same overload only since C++20 and only in newer releases; where it has one, this one is more specialized and prints the same text. </p>
-
-</div>
-</div>
-<a id="a6edd6a773e25b016b0dab32f38d58ff9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6edd6a773e25b016b0dab32f38d58ff9">&#9670;&nbsp;</a></span>stringify() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string lumex::core::string::utility::stringify </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>No arguments: an empty string, without creating a stream. </p>
-
-</div>
-</div>
-<a id="a644d51beb3d991564cc81242883fd17a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a644d51beb3d991564cc81242883fd17a">&#9670;&nbsp;</a></span>stringify() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string lumex::core::string::utility::stringify </td>
-          <td>(</td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Concatenates the streamed text of <code>args</code>. </p>
-<dl class="section return"><dt>Returns</dt><dd>The text, or an empty string for no arguments. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>O(total length of the text). </dd></dl>
+<p>Joins <code>range</code>, wrapping each element (converted to <code>std::string const &amp;</code>) in <code>mark</code>. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01377_a644d51beb3d991564cc81242883fd17a_icgraph.png" border="0" usemap="#aa01377_a644d51beb3d991564cc81242883fd17a_icgraph" alt=""/></div>
-<map name="a01377_a644d51beb3d991564cc81242883fd17a_icgraph" id="aa01377_a644d51beb3d991564cc81242883fd17a_icgraph">
-<area shape="rect" title="Concatenates the streamed text of args." alt="" coords="1216,267,1360,308"/>
-<area shape="rect" href="a01388.html#af8bfbdd7d8a39d3b48d1acb89ec3de14" title="Lightweight alternative: captures only the immediate caller." alt="" coords="949,5,1168,47"/>
-<area shape="rect" href="a01388.html#ae31ee00fe829c08a6e1c94f38b8f3c89" title="Capture current call stack in a formatted string." alt="" coords="960,71,1157,112"/>
-<area shape="rect" href="a01518.html#ab45388c23b278021a8bb9e4a7b435e0c" title="Log a CRITICAL&#45;level message." alt="" coords="956,136,1161,177"/>
-<area shape="rect" href="a01518.html#a44ad22b8a67f4f15a9a574b3d4d5cd74" title="Log a DEBUG&#45;level message." alt="" coords="958,201,1159,243"/>
-<area shape="rect" href="a01518.html#aaeebb797a274ef51607814be5801bcc4" title="Log an ERROR&#45;level message." alt="" coords="963,267,1155,308"/>
-<area shape="rect" href="a01518.html#aafb110cd6feeb2ab91305f27352b9118" title="Log an INFO&#45;level message." alt="" coords="965,397,1152,439"/>
-<area shape="rect" href="a00875.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="1031,554,1086,581"/>
-<area shape="rect" href="a01518.html#a8e7bac7289460386a2e59d59c388d4b6" title="Log a SUCCESS&#45;level message (custom level)." alt="" coords="953,332,1165,373"/>
-<area shape="rect" href="a01518.html#af4fec23e76323ffee4eaf2aaf716eb15" title="Log a WARNING&#45;level message." alt="" coords="952,488,1165,529"/>
-<area shape="rect" href="a00827.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="769,223,823,250"/>
-<area shape="rect" href="a01478.html#a3eaf2f4c04de9dfd7a0692f22f8c0b41" title="Automatically configures optimal rendering settings based on detected hardware." alt="" coords="108,310,359,366"/>
-<area shape="rect" href="a01562.html#af9bac403ac10a4c027b0b3b3e7242dab" title="Copies filename to a sibling &lt;filename&gt;.bak.&lt;YYYYMMDD&#45;HHMMSS&gt; backup file." alt="" coords="691,506,901,562"/>
-<area shape="rect" href="a01478.html#af3c48849b42dbcc0651429190b4a86b9" title="Performs comprehensive system hardware detection and analysis." alt="" coords="692,375,900,431"/>
-<area shape="rect" href="a01478.html#abe50368bd4ba1088c99e329d0fc5deb4" title="Determines whether software rendering should be used instead of hardware acceleration." alt="" coords="407,441,643,497"/>
-<area shape="rect" href="a00803.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,390,60,417"/>
-<area shape="rect" href="a01562.html#a2992a46c96ffd85535ee0aafdf6e2c5d" title="Ensures every key in specs is present and valid, restoring default_value otherwise." alt="" coords="691,637,901,693"/>
-<area shape="rect" href="a00863.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="497,651,552,678"/>
+<div class="center"><img src="a01377_a4dcf39e9c9bb3f6990597b1eabd5c690_icgraph.png" border="0" usemap="#aa01377_a4dcf39e9c9bb3f6990597b1eabd5c690_icgraph" alt=""/></div>
+<map name="a01377_a4dcf39e9c9bb3f6990597b1eabd5c690_icgraph" id="aa01377_a4dcf39e9c9bb3f6990597b1eabd5c690_icgraph">
+<area shape="rect" title="Joins range, wrapping each element (converted to std::string const &amp;) in mark." alt="" coords="1392,154,1579,196"/>
+<area shape="rect" href="a01376.html#a302f1bdf5e442097f85625effbd1294d" title="join with every element wrapped in double quotes (&quot;element&quot;), C++11 to C++17." alt="" coords="1199,121,1343,162"/>
+<area shape="rect" href="a01376.html#a76b867ee109f995de558b6adac3599e0" title="join with every element wrapped in single quotes (‘&#39;element’`), C++11 to C++17." alt="" coords="1197,186,1344,228"/>
+<area shape="rect" href="a01359.html#a465b2019a72d74b71c5fe3b6f19a0bd2" title="The ? (debug) form of a string or a character." alt="" coords="972,88,1149,129"/>
+<area shape="rect" href="a01376.html#a88eef91964b7cfcb0ba9bf926daee537" title="Same as quote; named for symmetry with quote_single." alt="" coords="985,153,1137,194"/>
+<area shape="rect" href="a01359.html#acc1f0cfb4c741d34dfd2a27fe18b8004" title=" " alt="" coords="747,50,924,92"/>
+<area shape="rect" href="a01359.html#a31ccdb6ecfce000b34dc5e272261271d" title=" " alt="" coords="521,189,699,230"/>
+<area shape="rect" href="a02387.html#ac9642063b0f0f6e8ed748e295ff5174c" title=" " alt="" coords="5,14,184,70"/>
+<area shape="rect" href="a01359.html#ad0334f950a029dfe06bb9eb1fd904f14" title="Writes an integer given as sign + magnitude." alt="" coords="521,50,699,92"/>
+<area shape="rect" href="a02407.html#a11233bb8904684bc2497addaa68232b4" title=" " alt="" coords="232,116,473,216"/>
+<area shape="rect" href="a01359.html#a82be6a9fe1141dbfaf5f5e709aa53a56" title=" " alt="" coords="264,50,441,92"/>
+<area shape="rect" href="a02411.html#aeeecdb02dee27a3a8bd20c6a6526f8ba" title=" " alt="" coords="255,292,451,333"/>
 </map>
 </div>
 
@@ -265,7 +170,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01314.html">core</a></li><li class="navelem"><a class="el" href="a01374.html">string</a></li><li class="navelem"><a class="el" href="a01377.html">utility</a></li>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01315.html">core</a></li><li class="navelem"><a class="el" href="a01375.html">string</a></li><li class="navelem"><a class="el" href="a01376.html">text</a></li><li class="navelem"><a class="el" href="a01377.html">Detail</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -1,13 +1,12 @@
 var a01400 =
 [
-    [ "default_return", "a02774.html", "a02774" ],
-    [ "default_return< T * >", "a02782.html", "a02782" ],
-    [ "default_return< void >", "a02778.html", "a02778" ],
-    [ "has_type", "a02762.html", null ],
-    [ "has_type< T, void_t< typename T::type > >", "a02766.html", null ],
-    [ "indirection_of", "a02786.html", "a02786" ],
-    [ "indirection_of< T & >", "a02794.html", "a02794" ],
-    [ "indirection_of< T * >", "a02790.html", "a02790" ],
-    [ "make_void", "a02758.html", "a02758" ],
-    [ "type_identity", "a02770.html", "a02770" ]
+    [ "enums", "a01410.html", "a01410" ],
+    [ "invoke", "a01402.html", "a01402" ],
+    [ "meta", "a01401.html", "a01401" ],
+    [ "numeric", "a01411.html", "a01411" ],
+    [ "range", "a01406.html", "a01406" ],
+    [ "stream", "a01404.html", "a01404" ],
+    [ "string", "a01407.html", "a01407" ],
+    [ "tuple", "a01408.html", "a01408" ],
+    [ "value", "a01409.html", "a01409" ]
 ];

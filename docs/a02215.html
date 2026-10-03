@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Member List</title>
+<title>LumexLib: lumex::core::expected::result::success_t&lt; void &gt; Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a02218.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a02215.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,24 +93,117 @@ $(document).ready(function(){initNavTree('a02218.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a02212.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::expected::result::failure_t&lt; ErrorType &gt; Member List</div>  </div>
+<div class="title">lumex::core::expected::result::success_t&lt; void &gt; Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a02218.html">lumex::core::expected::result::failure_t&lt; ErrorType &gt;</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a02218.html#aa2ceda34d60b35f5b8a54bca07aaa475">error</a>() const &amp;</td><td class="entry"><a class="el" href="a02218.html">lumex::core::expected::result::failure_t&lt; ErrorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a02218.html#aa4dfbccdf62ce0947e48e077ea10ab02">error</a>() &amp;&amp;</td><td class="entry"><a class="el" href="a02218.html">lumex::core::expected::result::failure_t&lt; ErrorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a02218.html#ae16573dc8b699a1940dc29c1c149af38">failure_t</a>(ErrorType const &amp;error)</td><td class="entry"><a class="el" href="a02218.html">lumex::core::expected::result::failure_t&lt; ErrorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a02218.html#a0f1d679ad8c570f4b442991b75be3538">failure_t</a>(ErrorType &amp;&amp;error)</td><td class="entry"><a class="el" href="a02218.html">lumex::core::expected::result::failure_t&lt; ErrorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a02218.html#a410eaa6122a37a5244ec2a086c78a5d2">operator Expected&lt; Target, TargetError &gt;</a>() &amp;&amp;</td><td class="entry"><a class="el" href="a02218.html">lumex::core::expected::result::failure_t&lt; ErrorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a02218.html#aa579007ef62998f55e5ee86798932a52">operator Expected&lt; Target, TargetError &gt;</a>() const &amp;</td><td class="entry"><a class="el" href="a02218.html">lumex::core::expected::result::failure_t&lt; ErrorType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-</table></div><!-- contents -->
+<p>Marker returned by <a class="el" href="a01353.html#aedb3e518171a625ee1b9cad9e0fc1b73" title="Creates a marker for a successful call that carries no value.">success()</a>: a successful call with no value.  
+ <a href="a02215.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00575_source.html">SuccessFailure.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aa983fea4af1c23893276cd9de323ab0a"><td class="memTemplParams" colspan="2">template&lt;typename Target , typename ErrorType , typename  = typename std::enable_if&lt;                std::is_default_constructible&lt;Target&gt;::value&gt;::type&gt; </td></tr>
+<tr class="memitem:aa983fea4af1c23893276cd9de323ab0a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a02215.html#aa983fea4af1c23893276cd9de323ab0a">operator Expected&lt; Target, ErrorType &gt;</a> () const</td></tr>
+<tr class="memdesc:aa983fea4af1c23893276cd9de323ab0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion into a successful <code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a>&lt;Target, ErrorType&gt;</code>.  <a href="a02215.html#aa983fea4af1c23893276cd9de323ab0a">More...</a><br /></td></tr>
+<tr class="separator:aa983fea4af1c23893276cd9de323ab0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4deed81fff2b82c4e57205fd3babe99d"><td class="memTemplParams" colspan="2">template&lt;typename ErrorType &gt; </td></tr>
+<tr class="memitem:a4deed81fff2b82c4e57205fd3babe99d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a02215.html#a4deed81fff2b82c4e57205fd3babe99d">operator Expected&lt; void, ErrorType &gt;</a> () const</td></tr>
+<tr class="memdesc:a4deed81fff2b82c4e57205fd3babe99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion into a successful <code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a>&lt;void, ErrorType&gt;</code>.  <a href="a02215.html#a4deed81fff2b82c4e57205fd3babe99d">More...</a><br /></td></tr>
+<tr class="separator:a4deed81fff2b82c4e57205fd3babe99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Marker returned by <a class="el" href="a01353.html#aedb3e518171a625ee1b9cad9e0fc1b73" title="Creates a marker for a successful call that carries no value.">success()</a>: a successful call with no value. </p>
+<p>Converts into <code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a>&lt;void, ErrorType&gt;</code> (success without a value) or into <code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a>&lt;Target, ErrorType&gt;</code> when <code>Target</code> is default-constructible; the <code>void</code> success type is what keeps the two conversions from competing. </p><dl class="section note"><dt>Note</dt><dd>Stateless: it carries no data. </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa983fea4af1c23893276cd9de323ab0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa983fea4af1c23893276cd9de323ab0a">&#9670;&nbsp;</a></span>operator Expected&lt; Target, ErrorType &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Target , typename ErrorType , typename  = typename std::enable_if&lt;                std::is_default_constructible&lt;Target&gt;::value&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a02211.html">lumex::core::expected::result::success_t</a>&lt; void &gt;::operator <a class="el" href="a02183.html">Expected</a>&lt; Target, ErrorType &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implicit conversion into a successful <code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a>&lt;Target, ErrorType&gt;</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Target</td><td>Success type; must be default-constructible. </td></tr>
+    <tr><td class="paramname">ErrorType</td><td>Error type of the produced <code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a>&lt;Target, ErrorType&gt;</code> in the success state, holding a default-constructed value. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Removed by SFINAE when <code>Target</code> is not default-constructible (<code>void</code> included), which sends <code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a>&lt;void, E&gt;</code> to the overload below. </dd></dl>
+
+</div>
+</div>
+<a id="a4deed81fff2b82c4e57205fd3babe99d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4deed81fff2b82c4e57205fd3babe99d">&#9670;&nbsp;</a></span>operator Expected&lt; void, ErrorType &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ErrorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a02211.html">lumex::core::expected::result::success_t</a>&lt; void &gt;::operator <a class="el" href="a02183.html">Expected</a>&lt; void, ErrorType &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implicit conversion into a successful <code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a>&lt;void, ErrorType&gt;</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ErrorType</td><td>Error type of the produced <code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a>&lt;void, ErrorType&gt;</code> in the success state. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00575_source.html">SuccessFailure.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01315.html">core</a></li><li class="navelem"><a class="el" href="a01351.html">expected</a></li><li class="navelem"><a class="el" href="a01353.html">result</a></li><li class="navelem"><a class="el" href="a02215.html">success_t&lt; void &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

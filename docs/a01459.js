@@ -1,5 +1,6 @@
 var a01459 =
 [
-    [ "XPathLexer", "a03410.html", "a03410" ],
-    [ "XPathLexerString", "a03414.html", "a03414" ]
+    [ "lexer", "a01460.html", "a01460" ],
+    [ "xpath_parse_result_t", "a03427.html", "a03427" ],
+    [ "XPathParser", "a03423.html", "a03423" ]
 ];

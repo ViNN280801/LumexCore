@@ -196,11 +196,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00535.png" border="0" usemap="#aWindowsSEHTranslator_8hppdep" alt=""/></div>
 <map name="WindowsSEHTranslator_8hppdep" id="aWindowsSEHTranslator_8hppdep">
-<area shape="rect" title="The Windows structured exception translator seh_translator() and the SET_SEH_TRANSLATOR macro that in..." alt="" coords="98,5,297,32"/>
+<area shape="rect" title="The Windows structured exception translator seh_translator() and the SET_SEH_TRANSLATOR macro that in..." alt="" coords="207,5,406,32"/>
 <area shape="rect" href="a00530.html" title=" " alt="" coords="5,80,203,107"/>
-<area shape="rect" href="a01220.html" title="Exceptions module: the LumexBaseException hierarchy, stack traces, a crash handler that writes minidu..." alt="" coords="227,80,357,107"/>
-<area shape="rect" href="a00758.html" title=" " alt="" coords="103,162,287,189"/>
-<area shape="rect" href="a00761.html" title=" " alt="" coords="311,155,468,196"/>
+<area shape="rect" href="a00539.html" title="LumexBaseException, the base exception of LumexLib that records the stack where it was constructed,..." alt="" coords="227,80,386,107"/>
+<area shape="rect" href="a01220.html" title="Exceptions module: the LumexBaseException hierarchy, stack traces, a crash handler that writes minidu..." alt="" coords="359,155,489,181"/>
+<area shape="rect" href="a00536.html" title=" " alt="" coords="177,155,335,181"/>
+<area shape="rect" href="a00758.html" title=" " alt="" coords="235,237,419,263"/>
+<area shape="rect" href="a00761.html" title=" " alt="" coords="443,229,600,271"/>
 </map>
 </div>
 </div>
@@ -213,11 +215,6 @@ Macros</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The Windows structured exception translator <code>seh_translator()</code> and the <code>SET_SEH_TRANSLATOR</code> macro that installs it. </p>
-<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
-<p>SPDX-License-Identifier: MIT</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 <p>On Windows <code>SET_SEH_TRANSLATOR</code> calls <code>_set_se_translator(seh_translator)</code>, which applies to the calling thread only. When a structured exception (an access violation, for example) then occurs in that thread, the translator lets <code>LumexCrashHandler</code> write a minidump and terminates the process with the exception code. MSVC expects the code that installs a translator to be compiled with <code>/EHa</code> (warning C4535 otherwise). <code>LUMEX_EXCEPTION_HANDLE_BEGIN</code> of <code><a class="el" href="a00539.html" title="LumexBaseException, the base exception of LumexLib that records the stack where it was constructed,...">LumexException.hpp</a></code> expands to this macro. On other platforms the macro is empty and the function is not declared. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a0d7aeb5eed30cf65a5415d7bb1014f5b"></a>

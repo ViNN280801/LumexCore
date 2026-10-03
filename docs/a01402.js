@@ -1,9 +1,11 @@
 var a01402 =
 [
-    [ "invoke_impl", "a02806.html", "a02806" ],
-    [ "invoke_impl< MT B::* >", "a02810.html", "a02810" ],
-    [ "invoke_result_impl", "a02814.html", null ],
-    [ "invoke_result_impl< meta::void_t< decltype(INVOKE(std::declval< F >(), std::declval< Args >()...))>, F, Args... >", "a02818.html", "a02818" ],
-    [ "is_reference_wrapper", "a02798.html", null ],
-    [ "is_reference_wrapper< std::reference_wrapper< U > >", "a02802.html", null ]
+    [ "detail", "a01403.html", "a01403" ],
+    [ "invoke_result", "a02823.html", null ],
+    [ "is_callable", "a02847.html", null ],
+    [ "is_callable_signature", "a02839.html", null ],
+    [ "is_callable_signature< Func(Args...)>", "a02843.html", null ],
+    [ "is_invocable", "a02835.html", null ],
+    [ "result_of", "a02827.html", null ],
+    [ "result_of< Func(Args...)>", "a02831.html", null ]
 ];

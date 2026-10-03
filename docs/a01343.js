@@ -1,4 +1,4 @@
 var a01343 =
 [
-    [ "LumexBaseException", "a02150.html", "a02150" ]
+    [ "LumexCrashHandler", "a02147.html", "a02147" ]
 ];

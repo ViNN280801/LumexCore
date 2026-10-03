@@ -1,4 +1,4 @@
 var a01360 =
 [
-    [ "NumberGenerator", "a02502.html", "a02502" ]
+    [ "number_generator", "a01361.html", "a01361" ]
 ];

@@ -146,32 +146,26 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03390.html">lumex::xml::xpath::memory::XPathStack</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a pair of XPath allocators for managing expression evaluation memory.  <a href="a03390.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03391.html">lumex::xml::xpath::memory::XPathStack</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a pair of XPath allocators for managing expression evaluation memory.  <a href="a03391.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03394.html">lumex::xml::xpath::memory::XPathStackData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages the memory for XPath evaluation, providing dedicated allocators.  <a href="a03394.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03395.html">lumex::xml::xpath::memory::XPathStackData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages the memory for XPath evaluation, providing dedicated allocators.  <a href="a03395.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
-<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01431"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01431.html">lumex::xml</a></td></tr>
+<tr class="memitem:a01432"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01432.html">lumex::xml</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01440"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01440.html">lumex::xml::xpath</a></td></tr>
+<tr class="memitem:a01441"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01441.html">lumex::xml::xpath</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01457"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01457.html">lumex::xml::xpath::memory</a></td></tr>
+<tr class="memitem:a01458"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01458.html">lumex::xml::xpath::memory</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The memory an XPath evaluation runs on: <code>XPathStack</code>, a pair of allocators, and <code>XPathStackData</code>, which owns them. </p>
-<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
-<p>SPDX-License-Identifier: MIT</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 <p>The <code>result</code> allocator holds the values a subexpression returns to its caller, and the <code>temp</code> allocator holds intermediate data that is dropped when the subexpression finishes. <code>XPathStackData</code> embeds the first block of each, frees the others on destruction and records an allocation failure in <code>oom</code>. Each <code>XPathQuery</code> evaluation creates its own <code>XPathStackData</code> on the stack. The file is internal to the XPath engine. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

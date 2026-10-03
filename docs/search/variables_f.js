@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['offset_6373',['offset',['../a03218.html#a10a08ed832bcc010788978cb1b3d073b',1,'lumex::xml::text::xml_parse_result_t::offset()'],['../a03426.html#ae0e682e73b11250fc7e52667bce1b995',1,'lumex::xml::xpath::parser::xpath_parse_result_t::offset()']]],
-  ['ok_6374',['ok',['../a02638.html#a26c615242e7dc7ffc3fa7b02cdb84208',1,'lumex::core::reflection::field_reflection::detail::count_fields_impl&lt; Aggregate, Lo, Hi, false &gt;']]],
-  ['oom_6375',['oom',['../a03394.html#a4c0a787a0450b3149d1315f2e589b673',1,'lumex::xml::xpath::memory::XPathStackData::oom()'],['../a03434.html#a48c536799c009e5c3fd1a9e28621be68',1,'lumex::xml::xpath::XPathQueryImpl::oom()']]],
-  ['out_6376',['out',['../a02422.html#aedf732781558e4f7ecaee89f17b77b0f',1,'lumex::core::fmt::format_to_n_result_t']]],
-  ['owning_6377',['owning',['../a01279.html#a8a5bcbb4103eaabd0ae9b6e87b331ed1',1,'lumex::applied::json::diagnostics']]]
+  ['offset_6377',['offset',['../a03219.html#a10a08ed832bcc010788978cb1b3d073b',1,'lumex::xml::text::xml_parse_result_t::offset()'],['../a03427.html#ae0e682e73b11250fc7e52667bce1b995',1,'lumex::xml::xpath::parser::xpath_parse_result_t::offset()']]],
+  ['ok_6378',['ok',['../a02639.html#a26c615242e7dc7ffc3fa7b02cdb84208',1,'lumex::core::reflection::field_reflection::detail::count_fields_impl&lt; Aggregate, Lo, Hi, false &gt;']]],
+  ['oom_6379',['oom',['../a03395.html#a4c0a787a0450b3149d1315f2e589b673',1,'lumex::xml::xpath::memory::XPathStackData::oom()'],['../a03435.html#a48c536799c009e5c3fd1a9e28621be68',1,'lumex::xml::xpath::XPathQueryImpl::oom()']]],
+  ['out_6380',['out',['../a02423.html#aedf732781558e4f7ecaee89f17b77b0f',1,'lumex::core::fmt::format_to_n_result_t']]],
+  ['owning_6381',['owning',['../a01279.html#a8a5bcbb4103eaabd0ae9b6e87b331ed1',1,'lumex::applied::json::diagnostics']]]
 ];

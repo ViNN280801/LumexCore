@@ -1,5 +1,5 @@
 var a01350 =
 [
-    [ "error", "a01351.html", "a01351" ],
-    [ "result", "a01352.html", "a01352" ]
+    [ "hash< lumex::core::exceptions::stacktrace::LumexStacktraceEntry >", "a02171.html", "a02171" ],
+    [ "hash<::lumex::core::optional::opt::optional< T > >", "a02615.html", "a02615" ]
 ];

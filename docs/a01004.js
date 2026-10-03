@@ -1,7 +1,7 @@
 var a01004 =
 [
-    [ "xml_mem_str_header_t", "a03230.html", "a03230" ],
-    [ "xml_extra_buffer", "a03234.html", "a03234" ],
+    [ "xml_mem_str_header_t", "a03231.html", "a03231" ],
+    [ "xml_extra_buffer", "a03235.html", "a03235" ],
     [ "char_t", "a01004.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8", null ],
     [ "string_t", "a01004.html#abdd841e1e493515c77366e37f3083de6", null ],
     [ "string_view_t", "a01004.html#a3f1136b222cbcf7b65862656d997ef4b", null ],

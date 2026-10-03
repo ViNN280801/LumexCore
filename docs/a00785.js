@@ -1,14 +1,14 @@
 var a00785 =
 [
-    [ "date_t", "a03074.html", "a03074" ],
-    [ "point_t", "a03078.html", "a03078" ],
-    [ "legacy_t", "a03082.html", "a03082" ],
-    [ "stars_t", "a03086.html", "a03086" ],
-    [ "Formatter< pressure_t >", "a03090.html", "a03090" ],
-    [ "Formatter< pressure_t, wchar_t >", "a03094.html", "a03094" ],
-    [ "Formatter< date_t >", "a03098.html", "a03098" ],
-    [ "Formatter< point_t >", "a03102.html", null ],
-    [ "Formatter< stars_t, Char >", "a03106.html", "a03106" ],
+    [ "date_t", "a03075.html", "a03075" ],
+    [ "point_t", "a03079.html", "a03079" ],
+    [ "legacy_t", "a03083.html", "a03083" ],
+    [ "stars_t", "a03087.html", "a03087" ],
+    [ "Formatter< pressure_t >", "a03091.html", "a03091" ],
+    [ "Formatter< pressure_t, wchar_t >", "a03095.html", "a03095" ],
+    [ "Formatter< date_t >", "a03099.html", "a03099" ],
+    [ "Formatter< point_t >", "a03103.html", null ],
+    [ "Formatter< stars_t, Char >", "a03107.html", "a03107" ],
     [ "PumpState", "a00785.html#ad546a4d1e497933db5d6e8364b0756e9", [
       [ "n", "a00785.html#ad546a4d1e497933db5d6e8364b0756e9a7b8b965ad4bca0e41ab51de7b31363a1", null ]
     ] ],

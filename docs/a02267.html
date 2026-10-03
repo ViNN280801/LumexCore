@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Member List</title>
+<title>LumexLib: lumex::core::fmt::BasicFormatParseContext&lt; Char &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a02270.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a02267.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,21 +93,483 @@ $(document).ready(function(){initNavTree('a02270.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a02264.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::fmt::Formatter&lt; T, Char, Enable &gt; Member List</div>  </div>
+<div class="title">lumex::core::fmt::BasicFormatParseContext&lt; Char &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a02270.html">lumex::core::fmt::Formatter&lt; T, Char, Enable &gt;</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a02270.html#a3bb926e06c11c1b60f59c542c5848716">Formatter</a>()=delete</td><td class="entry"><a class="el" href="a02270.html">lumex::core::fmt::Formatter&lt; T, Char, Enable &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a02270.html#a82dffd26eed2f9bd718868798089af43">Formatter</a>(Formatter const &amp;)=delete</td><td class="entry"><a class="el" href="a02270.html">lumex::core::fmt::Formatter&lt; T, Char, Enable &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a02270.html#a769b5f9e23623f493058499c17a6846b">operator=</a>(Formatter const &amp;)=delete</td><td class="entry"><a class="el" href="a02270.html">lumex::core::fmt::Formatter&lt; T, Char, Enable &gt;</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>The format specification being parsed and the automatic / manual argument numbering state (as <code>std::basic_format_parse_context</code>).  
+ <a href="a02267.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00584_source.html">LumexFormat.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae814a8a0bc07ca8e8ec7707a20474435"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02267.html#ae814a8a0bc07ca8e8ec7707a20474435">char_type</a> = Char</td></tr>
+<tr class="separator:ae814a8a0bc07ca8e8ec7707a20474435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7123a484583e7fbc4fa80993f9189c3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02267.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a> = Char const *</td></tr>
+<tr class="separator:ae7123a484583e7fbc4fa80993f9189c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2218a010355175673443e05b21c87f7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02267.html#af2218a010355175673443e05b21c87f7">const_iterator</a> = Char const *</td></tr>
+<tr class="separator:af2218a010355175673443e05b21c87f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab9da97a30126104416abc98b41b69d38"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02267.html#ab9da97a30126104416abc98b41b69d38">BasicFormatParseContext</a> (<a class="el" href="a02275.html">Detail::BasicStringRef</a>&lt; Char &gt; text, int arg_count=0, <a class="el" href="a01359.html#a152e45e16adb548233bdeade6af687b3">Detail::ArgKind</a> const *kinds=nullptr, bool has_named=false) noexcept</td></tr>
+<tr class="separator:ab9da97a30126104416abc98b41b69d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b76fd026b30a47589aa687e6d31156"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="a02267.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02267.html#a71b76fd026b30a47589aa687e6d31156">begin</a> () const noexcept</td></tr>
+<tr class="separator:a71b76fd026b30a47589aa687e6d31156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a116a66517742b08a644ac74772d9a655"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="a02267.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02267.html#a116a66517742b08a644ac74772d9a655">end</a> () const noexcept</td></tr>
+<tr class="separator:a116a66517742b08a644ac74772d9a655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b7c788775514b48fba41d41302cf77"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02267.html#a65b7c788775514b48fba41d41302cf77">advance_to</a> (<a class="el" href="a02267.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a> it) noexcept</td></tr>
+<tr class="separator:a65b7c788775514b48fba41d41302cf77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a7921ed3adf113facaffe521056d6c"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02267.html#a65a7921ed3adf113facaffe521056d6c">next_arg_id</a> ()</td></tr>
+<tr class="memdesc:a65a7921ed3adf113facaffe521056d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next automatic argument index; throws after manual indexing.  <a href="a02267.html#a65a7921ed3adf113facaffe521056d6c">More...</a><br /></td></tr>
+<tr class="separator:a65a7921ed3adf113facaffe521056d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa087eb0072e9ca932272da083008d4d9"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02267.html#aa087eb0072e9ca932272da083008d4d9">check_arg_id</a> (int id)</td></tr>
+<tr class="memdesc:aa087eb0072e9ca932272da083008d4d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records manual indexing; throws after automatic indexing.  <a href="a02267.html#aa087eb0072e9ca932272da083008d4d9">More...</a><br /></td></tr>
+<tr class="separator:aa087eb0072e9ca932272da083008d4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2650c43e98076343b590374537b51e15"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02267.html#a2650c43e98076343b590374537b51e15">check_named_arg</a> ()</td></tr>
+<tr class="memdesc:a2650c43e98076343b590374537b51e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records a reference by name: it counts as manual indexing when no automatic index was used yet (so <code>{a} {}</code> is an error, <code>{} {a}</code> is not). At compile time, fails when no argument is named.  <a href="a02267.html#a2650c43e98076343b590374537b51e15">More...</a><br /></td></tr>
+<tr class="separator:a2650c43e98076343b590374537b51e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a953379afa628372fff2c45d9a11977ba"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02267.html#a953379afa628372fff2c45d9a11977ba">check_dynamic_spec</a> (int id) const</td></tr>
+<tr class="memdesc:a953379afa628372fff2c45d9a11977ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile-time check only: argument <code>id</code> is an integer.  <a href="a02267.html#a953379afa628372fff2c45d9a11977ba">More...</a><br /></td></tr>
+<tr class="separator:a953379afa628372fff2c45d9a11977ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename Char&gt;<br />
+class lumex::core::fmt::BasicFormatParseContext&lt; Char &gt;</h3>
+
+<p>The format specification being parsed and the automatic / manual argument numbering state (as <code>std::basic_format_parse_context</code>). </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ae814a8a0bc07ca8e8ec7707a20474435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae814a8a0bc07ca8e8ec7707a20474435">&#9670;&nbsp;</a></span>char_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="a02267.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::<a class="el" href="a02267.html#ae814a8a0bc07ca8e8ec7707a20474435">char_type</a> =  Char</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2218a010355175673443e05b21c87f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2218a010355175673443e05b21c87f7">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="a02267.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::<a class="el" href="a02267.html#af2218a010355175673443e05b21c87f7">const_iterator</a> =  Char const *</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7123a484583e7fbc4fa80993f9189c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7123a484583e7fbc4fa80993f9189c3">&#9670;&nbsp;</a></span>iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="a02267.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::<a class="el" href="a02267.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a> =  Char const *</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab9da97a30126104416abc98b41b69d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9da97a30126104416abc98b41b69d38">&#9670;&nbsp;</a></span>BasicFormatParseContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="a02267.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::<a class="el" href="a02267.html">BasicFormatParseContext</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02275.html">Detail::BasicStringRef</a>&lt; Char &gt;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arg_count</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a01359.html#a152e45e16adb548233bdeade6af687b3">Detail::ArgKind</a> const *&#160;</td>
+          <td class="paramname"><em>kinds</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>has_named</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a65b7c788775514b48fba41d41302cf77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b7c788775514b48fba41d41302cf77">&#9670;&nbsp;</a></span>advance_to()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void <a class="el" href="a02267.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::advance_to </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02267.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a>&#160;</td>
+          <td class="paramname"><em>it</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02267_a65b7c788775514b48fba41d41302cf77_icgraph.png" border="0" usemap="#aa02267_a65b7c788775514b48fba41d41302cf77_icgraph" alt=""/></div>
+<map name="a02267_a65b7c788775514b48fba41d41302cf77_icgraph" id="aa02267_a65b7c788775514b48fba41d41302cf77_icgraph">
+<area shape="rect" title=" " alt="" coords="280,49,499,91"/>
+<area shape="rect" href="a01359.html#aa297f4e9e9a491fa189fc58c2b8cda08" title=" " alt="" coords="30,5,207,47"/>
+<area shape="rect" href="a02499.html#a62011a0460dfe8163e0900dea03dbb28" title=" " alt="" coords="5,71,232,157"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a71b76fd026b30a47589aa687e6d31156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71b76fd026b30a47589aa687e6d31156">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="a02267.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a> <a class="el" href="a02267.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02267_a71b76fd026b30a47589aa687e6d31156_icgraph.png" border="0" usemap="#aa02267_a71b76fd026b30a47589aa687e6d31156_icgraph" alt=""/></div>
+<map name="a02267_a71b76fd026b30a47589aa687e6d31156_icgraph" id="aa02267_a71b76fd026b30a47589aa687e6d31156_icgraph">
+<area shape="rect" title=" " alt="" coords="813,104,1032,145"/>
+<area shape="rect" href="a03107.html#acfb9818d4dfd0b41575bb487ec00471c" title=" " alt="" coords="563,5,765,47"/>
+<area shape="rect" href="a03099.html#aea70f6d6e06358cf1d5da8e1ca2efaf4" title=" " alt="" coords="563,71,765,112"/>
+<area shape="rect" href="a01359.html#ac7be1dcb79e02c534d449ef4687a5379" title="Parses [[fill]align][width] from ctx.begin(), the part every specification shares (used by the range ..." alt="" coords="575,136,753,177"/>
+<area shape="rect" href="a01359.html#a6a3f6e88c3cfb971c767232841e0df9d" title="Parses [[fill]align][sign][#][0][width][.precision][L][type] starting at ctx.begin(); returns the pos..." alt="" coords="575,205,753,247"/>
+<area shape="rect" href="a02435.html#a1ac3c01c4524d0808757cd4c73ce9364" title=" " alt="" coords="280,71,515,112"/>
+<area shape="rect" href="a01359.html#a36a76be50258b9dbd6c7c7f82f0a078c" title="[[fill]align][width] of a range / tuple specification: : is never a fill here (it starts the element ..." alt="" coords="290,136,505,177"/>
+<area shape="rect" href="a02487.html#a3ca88c55fb50e35806cf2360ff1770e6" title=" " alt="" coords="30,82,207,138"/>
+<area shape="rect" href="a02499.html#a62011a0460dfe8163e0900dea03dbb28" title=" " alt="" coords="5,162,232,247"/>
+<area shape="rect" href="a02387.html#ae198ad09caf66b1ee0e6aa52311a5d8a" title=" " alt="" coords="308,202,487,258"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa087eb0072e9ca932272da083008d4d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa087eb0072e9ca932272da083008d4d9">&#9670;&nbsp;</a></span>check_arg_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void <a class="el" href="a02267.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::check_arg_id </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Records manual indexing; throws after automatic indexing. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02267_aa087eb0072e9ca932272da083008d4d9_icgraph.png" border="0" usemap="#aa02267_aa087eb0072e9ca932272da083008d4d9_icgraph" alt=""/></div>
+<map name="a02267_aa087eb0072e9ca932272da083008d4d9_icgraph" id="aa02267_aa087eb0072e9ca932272da083008d4d9_icgraph">
+<area shape="rect" title="Records manual indexing; throws after automatic indexing." alt="" coords="1013,69,1232,111"/>
+<area shape="rect" href="a01359.html#a6bc5d0d0e6d629cce5704bc72cf2ac29" title="Parses {} / {3} / {name} used as dynamic width / precision." alt="" coords="788,69,965,111"/>
+<area shape="rect" href="a02435.html#a1ac3c01c4524d0808757cd4c73ce9364" title=" " alt="" coords="280,5,515,47"/>
+<area shape="rect" href="a01359.html#ac7be1dcb79e02c534d449ef4687a5379" title="Parses [[fill]align][width] from ctx.begin(), the part every specification shares (used by the range ..." alt="" coords="563,69,740,111"/>
+<area shape="rect" href="a01359.html#a6a3f6e88c3cfb971c767232841e0df9d" title="Parses [[fill]align][sign][#][0][width][.precision][L][type] starting at ctx.begin(); returns the pos..." alt="" coords="563,139,740,180"/>
+<area shape="rect" href="a01359.html#a36a76be50258b9dbd6c7c7f82f0a078c" title="[[fill]align][width] of a range / tuple specification: : is never a fill here (it starts the element ..." alt="" coords="290,71,505,112"/>
+<area shape="rect" href="a02487.html#a3ca88c55fb50e35806cf2360ff1770e6" title=" " alt="" coords="30,17,207,73"/>
+<area shape="rect" href="a02499.html#a62011a0460dfe8163e0900dea03dbb28" title=" " alt="" coords="5,97,232,182"/>
+<area shape="rect" href="a02387.html#ae198ad09caf66b1ee0e6aa52311a5d8a" title=" " alt="" coords="308,137,487,193"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a953379afa628372fff2c45d9a11977ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a953379afa628372fff2c45d9a11977ba">&#9670;&nbsp;</a></span>check_dynamic_spec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void <a class="el" href="a02267.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::check_dynamic_spec </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile-time check only: argument <code>id</code> is an integer. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02267_a953379afa628372fff2c45d9a11977ba_cgraph.png" border="0" usemap="#aa02267_a953379afa628372fff2c45d9a11977ba_cgraph" alt=""/></div>
+<map name="a02267_a953379afa628372fff2c45d9a11977ba_cgraph" id="aa02267_a953379afa628372fff2c45d9a11977ba_cgraph">
+<area shape="rect" title="Compile&#45;time check only: argument id is an integer." alt="" coords="5,5,260,47"/>
+<area shape="rect" href="a01359.html#ae49c16baeff2cc13d68dd203f039be97" title=" " alt="" coords="308,5,485,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02267_a953379afa628372fff2c45d9a11977ba_icgraph.png" border="0" usemap="#aa02267_a953379afa628372fff2c45d9a11977ba_icgraph" alt=""/></div>
+<map name="a02267_a953379afa628372fff2c45d9a11977ba_icgraph" id="aa02267_a953379afa628372fff2c45d9a11977ba_icgraph">
+<area shape="rect" title="Compile&#45;time check only: argument id is an integer." alt="" coords="1013,69,1268,111"/>
+<area shape="rect" href="a01359.html#a6bc5d0d0e6d629cce5704bc72cf2ac29" title="Parses {} / {3} / {name} used as dynamic width / precision." alt="" coords="788,69,965,111"/>
+<area shape="rect" href="a02435.html#a1ac3c01c4524d0808757cd4c73ce9364" title=" " alt="" coords="280,5,515,47"/>
+<area shape="rect" href="a01359.html#ac7be1dcb79e02c534d449ef4687a5379" title="Parses [[fill]align][width] from ctx.begin(), the part every specification shares (used by the range ..." alt="" coords="563,69,740,111"/>
+<area shape="rect" href="a01359.html#a6a3f6e88c3cfb971c767232841e0df9d" title="Parses [[fill]align][sign][#][0][width][.precision][L][type] starting at ctx.begin(); returns the pos..." alt="" coords="563,139,740,180"/>
+<area shape="rect" href="a01359.html#a36a76be50258b9dbd6c7c7f82f0a078c" title="[[fill]align][width] of a range / tuple specification: : is never a fill here (it starts the element ..." alt="" coords="290,71,505,112"/>
+<area shape="rect" href="a02487.html#a3ca88c55fb50e35806cf2360ff1770e6" title=" " alt="" coords="30,17,207,73"/>
+<area shape="rect" href="a02499.html#a62011a0460dfe8163e0900dea03dbb28" title=" " alt="" coords="5,97,232,182"/>
+<area shape="rect" href="a02387.html#ae198ad09caf66b1ee0e6aa52311a5d8a" title=" " alt="" coords="308,137,487,193"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2650c43e98076343b590374537b51e15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2650c43e98076343b590374537b51e15">&#9670;&nbsp;</a></span>check_named_arg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void <a class="el" href="a02267.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::check_named_arg </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Records a reference by name: it counts as manual indexing when no automatic index was used yet (so <code>{a} {}</code> is an error, <code>{} {a}</code> is not). At compile time, fails when no argument is named. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02267_a2650c43e98076343b590374537b51e15_icgraph.png" border="0" usemap="#aa02267_a2650c43e98076343b590374537b51e15_icgraph" alt=""/></div>
+<map name="a02267_a2650c43e98076343b590374537b51e15_icgraph" id="aa02267_a2650c43e98076343b590374537b51e15_icgraph">
+<area shape="rect" title="Records a reference by name: it counts as manual indexing when no automatic index was used yet (so {a..." alt="" coords="1013,69,1248,111"/>
+<area shape="rect" href="a01359.html#a6bc5d0d0e6d629cce5704bc72cf2ac29" title="Parses {} / {3} / {name} used as dynamic width / precision." alt="" coords="788,69,965,111"/>
+<area shape="rect" href="a02435.html#a1ac3c01c4524d0808757cd4c73ce9364" title=" " alt="" coords="280,5,515,47"/>
+<area shape="rect" href="a01359.html#ac7be1dcb79e02c534d449ef4687a5379" title="Parses [[fill]align][width] from ctx.begin(), the part every specification shares (used by the range ..." alt="" coords="563,69,740,111"/>
+<area shape="rect" href="a01359.html#a6a3f6e88c3cfb971c767232841e0df9d" title="Parses [[fill]align][sign][#][0][width][.precision][L][type] starting at ctx.begin(); returns the pos..." alt="" coords="563,139,740,180"/>
+<area shape="rect" href="a01359.html#a36a76be50258b9dbd6c7c7f82f0a078c" title="[[fill]align][width] of a range / tuple specification: : is never a fill here (it starts the element ..." alt="" coords="290,71,505,112"/>
+<area shape="rect" href="a02487.html#a3ca88c55fb50e35806cf2360ff1770e6" title=" " alt="" coords="30,17,207,73"/>
+<area shape="rect" href="a02499.html#a62011a0460dfe8163e0900dea03dbb28" title=" " alt="" coords="5,97,232,182"/>
+<area shape="rect" href="a02387.html#ae198ad09caf66b1ee0e6aa52311a5d8a" title=" " alt="" coords="308,137,487,193"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a116a66517742b08a644ac74772d9a655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116a66517742b08a644ac74772d9a655">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="a02267.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a> <a class="el" href="a02267.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02267_a116a66517742b08a644ac74772d9a655_icgraph.png" border="0" usemap="#aa02267_a116a66517742b08a644ac74772d9a655_icgraph" alt=""/></div>
+<map name="a02267_a116a66517742b08a644ac74772d9a655_icgraph" id="aa02267_a116a66517742b08a644ac74772d9a655_icgraph">
+<area shape="rect" title=" " alt="" coords="813,155,1032,196"/>
+<area shape="rect" href="a02487.html#a3ca88c55fb50e35806cf2360ff1770e6" title=" " alt="" coords="30,23,207,79"/>
+<area shape="rect" href="a02499.html#a62011a0460dfe8163e0900dea03dbb28" title=" " alt="" coords="5,143,232,229"/>
+<area shape="rect" href="a03099.html#aea70f6d6e06358cf1d5da8e1ca2efaf4" title=" " alt="" coords="563,125,765,167"/>
+<area shape="rect" href="a02435.html#a1ac3c01c4524d0808757cd4c73ce9364" title=" " alt="" coords="280,151,515,192"/>
+<area shape="rect" href="a01359.html#ac7be1dcb79e02c534d449ef4687a5379" title="Parses [[fill]align][width] from ctx.begin(), the part every specification shares (used by the range ..." alt="" coords="575,60,753,101"/>
+<area shape="rect" href="a01359.html#a6a3f6e88c3cfb971c767232841e0df9d" title="Parses [[fill]align][sign][#][0][width][.precision][L][type] starting at ctx.begin(); returns the pos..." alt="" coords="575,296,753,337"/>
+<area shape="rect" href="a01359.html#a36a76be50258b9dbd6c7c7f82f0a078c" title="[[fill]align][width] of a range / tuple specification: : is never a fill here (it starts the element ..." alt="" coords="290,60,505,101"/>
+<area shape="rect" href="a02387.html#ae198ad09caf66b1ee0e6aa52311a5d8a" title=" " alt="" coords="308,293,487,349"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a65a7921ed3adf113facaffe521056d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a7921ed3adf113facaffe521056d6c">&#9670;&nbsp;</a></span>next_arg_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int <a class="el" href="a02267.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::next_arg_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Next automatic argument index; throws after manual indexing. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02267_a65a7921ed3adf113facaffe521056d6c_icgraph.png" border="0" usemap="#aa02267_a65a7921ed3adf113facaffe521056d6c_icgraph" alt=""/></div>
+<map name="a02267_a65a7921ed3adf113facaffe521056d6c_icgraph" id="aa02267_a65a7921ed3adf113facaffe521056d6c_icgraph">
+<area shape="rect" title="Next automatic argument index; throws after manual indexing." alt="" coords="1013,69,1232,111"/>
+<area shape="rect" href="a01359.html#a6bc5d0d0e6d629cce5704bc72cf2ac29" title="Parses {} / {3} / {name} used as dynamic width / precision." alt="" coords="788,69,965,111"/>
+<area shape="rect" href="a02435.html#a1ac3c01c4524d0808757cd4c73ce9364" title=" " alt="" coords="280,5,515,47"/>
+<area shape="rect" href="a01359.html#ac7be1dcb79e02c534d449ef4687a5379" title="Parses [[fill]align][width] from ctx.begin(), the part every specification shares (used by the range ..." alt="" coords="563,69,740,111"/>
+<area shape="rect" href="a01359.html#a6a3f6e88c3cfb971c767232841e0df9d" title="Parses [[fill]align][sign][#][0][width][.precision][L][type] starting at ctx.begin(); returns the pos..." alt="" coords="563,139,740,180"/>
+<area shape="rect" href="a01359.html#a36a76be50258b9dbd6c7c7f82f0a078c" title="[[fill]align][width] of a range / tuple specification: : is never a fill here (it starts the element ..." alt="" coords="290,71,505,112"/>
+<area shape="rect" href="a02487.html#a3ca88c55fb50e35806cf2360ff1770e6" title=" " alt="" coords="30,17,207,73"/>
+<area shape="rect" href="a02499.html#a62011a0460dfe8163e0900dea03dbb28" title=" " alt="" coords="5,97,232,182"/>
+<area shape="rect" href="a02387.html#ae198ad09caf66b1ee0e6aa52311a5d8a" title=" " alt="" coords="308,137,487,193"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00584_source.html">LumexFormat.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01315.html">core</a></li><li class="navelem"><a class="el" href="a01358.html">fmt</a></li><li class="navelem"><a class="el" href="a02267.html">BasicFormatParseContext</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

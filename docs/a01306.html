@@ -103,11 +103,11 @@ $(document).ready(function(){initNavTree('a01306.html',''); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01558.html">lumex_settings_key_spec_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes a single settings key that <code><a class="el" href="a01562.html#a2992a46c96ffd85535ee0aafdf6e2c5d" title="Ensures every key in specs is present and valid, restoring default_value otherwise.">LumexSettingsGuard::ensureKeysWithDefaults</a></code> must keep present and valid.  <a href="a01558.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01559.html">lumex_settings_key_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes a single settings key that <code><a class="el" href="a01563.html#a2992a46c96ffd85535ee0aafdf6e2c5d" title="Ensures every key in specs is present and valid, restoring default_value otherwise.">LumexSettingsGuard::ensureKeysWithDefaults</a></code> must keep present and valid.  <a href="a01559.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01562.html">LumexSettingsGuard</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format-agnostic backup/repair/validation guard for an <code><a class="el" href="a01570.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instance.  <a href="a01562.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01563.html">LumexSettingsGuard</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format-agnostic backup/repair/validation guard for an <code><a class="el" href="a01571.html" title="Interface of a settings store kept in a configuration file.">ILumexSettings</a></code> instance.  <a href="a01563.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -133,7 +133,7 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Callback that (re)creates a settings file's default content from scratch. </p>
-<p>Invoked when the guarded file is missing, unreadable, or fails the underlying <code><a class="el" href="a01570.html#a5e8c879f253d759120c2ef9dce35a6fe" title="Load settings from a configuration file.">ILumexSettings::load()</a></code> call. A typical implementation populates a fresh <code><a class="el" href="a01570.html" title="Factory interface for creating and managing settings objects.">ILumexSettings</a></code> instance with an application's default key/value pairs and persists them via <code>save()</code> to the same path the guard was constructed with. </p><dl class="section return"><dt>Returns</dt><dd><code>true</code> if defaults were written successfully, <code>false</code> otherwise. </dd></dl>
+<p>Invoked when the guarded file is missing, unreadable, or fails the underlying <code><a class="el" href="a01571.html#a5e8c879f253d759120c2ef9dce35a6fe" title="Load settings from a configuration file.">ILumexSettings::load()</a></code> call. A typical implementation populates a fresh <code><a class="el" href="a01571.html" title="Interface of a settings store kept in a configuration file.">ILumexSettings</a></code> instance with an application's default key/value pairs and persists them via <code>save()</code> to the same path the guard was constructed with. </p><dl class="section return"><dt>Returns</dt><dd><code>true</code> if defaults were written successfully, <code>false</code> otherwise. </dd></dl>
 
 </div>
 </div>
@@ -150,7 +150,7 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Validation callback for a single settings key. </p>
-<p>Receives the key's current raw string value, exactly as returned by <code><a class="el" href="a01570.html#a4dd441bfa740a2514899dfecceb4dd70" title="Retrieve a setting value by section and key.">ILumexSettings::get()</a></code>, and returns <code>true</code> if that value is acceptable as-is, <code>false</code> if it must be overwritten with the key's configured default. </p><dl class="section note"><dt>Note</dt><dd>Must not throw; if it does, <code><a class="el" href="a01562.html" title="Format-agnostic backup/repair/validation guard for an ILumexSettings instance.">LumexSettingsGuard</a></code> catches the exception and treats it the same as returning <code>false</code> (value rejected, default restored). </dd></dl>
+<p>Receives the key's current raw string value, exactly as returned by <code><a class="el" href="a01571.html#a4dd441bfa740a2514899dfecceb4dd70" title="Retrieve a setting value by section and key.">ILumexSettings::get()</a></code>, and returns <code>true</code> if that value is acceptable as-is, <code>false</code> if it must be overwritten with the key's configured default. </p><dl class="section note"><dt>Note</dt><dd>Must not throw; if it does, <code><a class="el" href="a01563.html" title="Format-agnostic backup/repair/validation guard for an ILumexSettings instance.">LumexSettingsGuard</a></code> catches the exception and treats it the same as returning <code>false</code> (value rejected, default restored). </dd></dl>
 
 </div>
 </div>

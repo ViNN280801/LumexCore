@@ -1,6 +1,6 @@
 var a00650 =
 [
-    [ "LumexTime", "a02686.html", "a02686" ],
+    [ "LumexTime", "a02687.html", "a02687" ],
     [ "LumexTime", "a00650.html#a024e88e94b38af283e9a316260061ba1", null ],
     [ "K_MICROSECONDS_IN_MILLISECOND", "a00650.html#a92520332f10f7de93c03c8fa00ec3ece", null ],
     [ "KDEFAULT_DATETIME_BUF_SIZE", "a00650.html#a671e67abbc9991b141ccb6ea913b6170", null ],

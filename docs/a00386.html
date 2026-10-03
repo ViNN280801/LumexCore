@@ -134,7 +134,6 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
-<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01264"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01264.html">lumex::applied</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,11 +163,6 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The format of the logger's trigger file, fixed when the logger library is configured. </p>
-<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
-<p>SPDX-License-Identifier: MIT</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 <p>Declares <code>logger_config_format_t</code> and <code><a class="el" href="a01286.html#a4ff8994ab54d107e5c4077786599a415" title="Returns the only logger config format compiled into this target.">configured_logger_config_format()</a></code>, which returns the one format compiled into the target. The CMake cache variable <code>LUMEX_LOGGER_CONFIG_FORMAT</code> (<code>PLAIN_TEXT</code> by default, or <code>INI</code>, <code>JSON</code>, <code>YAML</code>, <code>XML</code>) becomes exactly one public <code>LUMEX_LOGGER_CONFIG_FORMAT_*</code> definition of <code>lumex::logger</code>, so a consumer compiles this header with the same choice; the header stops with <code>#error</code> unless exactly one is defined. The extension of the trigger file name plays no part in choosing the parser, and <code>yaml</code> is reserved: the logger throws for it until a YAML settings reader exists. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

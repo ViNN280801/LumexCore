@@ -167,17 +167,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01474.html">lumex::applied::hardware::caps::hardware_info_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprehensive hardware information structure containing system specifications.  <a href="a01474.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01475.html">lumex::applied::hardware::caps::hardware_info_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprehensive hardware information structure containing system specifications.  <a href="a01475.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01478.html">lumex::applied::hardware::caps::HardwareCapabilities</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hardware detection and capability assessment utility class.  <a href="a01478.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01479.html">lumex::applied::hardware::caps::HardwareCapabilities</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hardware detection and capability assessment utility class.  <a href="a01479.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
-<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01264"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01264.html">lumex::applied</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -501,11 +500,6 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Hardware inventory (processor, memory, graphics adapter) and the decision whether an application should render in software. </p>
-<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
-<p>SPDX-License-Identifier: MIT</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 <p>Declares <code>hardware_info_t</code>, <code>HardwareCapabilities</code> with the thresholds it compares against (namespace <code>Constants</code>), and two free functions: <code><a class="el" href="a01266.html#ab859866b0c575b1a3e396b0b53fe9ed7" title="Get the MAC address of the first active network interface.">get_mac_address()</a></code> for the first active network interface and <code><a class="el" href="a01266.html#a211e7ff7e7de8c55d405628d09595cd6" title="Generates a cryptographically strong seed for unique identification.">generate_cryptographic_seed()</a></code> for a 64-bit seed from the operating system's random source. <code>should_use_software_rendering()</code> recommends software rendering for little memory, few cores, an old or known weak processor, or no discrete graphics adapter together with modest memory or core count. <code>apply_optimal_rendering_settings()</code> acts on that recommendation by setting the Qt Quick environment variables <code>QT_QUICK_BACKEND=software</code> and <code>QSG_RENDER_LOOP=basic</code>; otherwise it changes nothing.</p>
 <p>Detection uses CPUID, the registry, <code>GlobalMemoryStatusEx</code> and DXGI on Windows, and <code>/proc/cpuinfo</code>, <code>/proc/meminfo</code> and the output of <code>lspci</code> on Linux. The implementation is compiled into the <code>lumex::hardware</code> library and reports through <code>LumexLogging</code>. </p>
 </div></div><!-- contents -->

@@ -1,4 +1,4 @@
 var a01429 =
 [
-    [ "temporary_config_file_t", "a03142.html", "a03142" ]
+    [ "logger", "a01430.html", "a01430" ]
 ];

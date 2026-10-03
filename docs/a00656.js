@@ -1,6 +1,6 @@
 var a00656 =
 [
-    [ "LumexTimer", "a02690.html", "a02690" ],
+    [ "LumexTimer", "a02691.html", "a02691" ],
     [ "LUMEX_MEASURE_TIME", "a00656.html#a684f4a04bd86b9e7425fb3ff1ef4bdd1", null ],
     [ "LUMEX_MEASURE_TIME_1", "a00656.html#a2d22c1aced9474b3a47224bf981f94eb", null ],
     [ "LUMEX_MEASURE_TIME_2", "a00656.html#acf30cfd1dcd275170e2bae411ce08642", null ],

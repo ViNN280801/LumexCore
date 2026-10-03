@@ -1,7 +1,5 @@
 var a01449 =
 [
-    [ "IXmlWriter", "a03310.html", "a03310" ],
-    [ "XmlBufferedWriter", "a03314.html", "a03314" ],
-    [ "XmlWriterFile", "a03322.html", "a03322" ],
-    [ "XmlWriterStream", "a03326.html", "a03326" ]
+    [ "xml_extra_buffer", "a03235.html", "a03235" ],
+    [ "xml_mem_str_header_t", "a03231.html", "a03231" ]
 ];

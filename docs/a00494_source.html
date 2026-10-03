@@ -97,7 +97,30 @@ $(document).ready(function(){initNavTree('a00494_source.html',''); initResizable
 <div class="title">Encoder.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00494.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<a href="a00494.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2026 Vladislav Semykin &lt;vladislav.semykin@gmail.com&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * SPDX-License-Identifier: MIT</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * deal in the Software without restriction, including without limitation the</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * sell copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * all copies or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifndef LUMEX_CORE_BASE64_ENCODE_HPP</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define LUMEX_CORE_BASE64_ENCODE_HPP</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
@@ -145,17 +168,17 @@ $(document).ready(function(){initNavTree('a00494_source.html',''); initResizable
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00482.html">lumex/core/base64/codec/Base64.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00680.html">lumex/core/utility/compiler/LumexCheckFeatures.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">using namespace </span><a class="code" href="a01324.html">lumex::core::base64::codec::Types</a>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">namespace </span>core</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">namespace </span>core</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">namespace </span>base64</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">namespace </span>base64</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="a01331.html">   96</a></span>&#160;<span class="keyword">namespace </span>encode</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="a01330.html">   98</a></span>&#160;<span class="keyword">namespace </span>encode</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="a01634.html">  108</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code" href="a01634.html">Encoder</a> final</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">using namespace </span><a class="code" href="a01325.html">lumex::core::base64::codec::Types</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="a01635.html">  108</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code" href="a01635.html">Encoder</a> final</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">static</span> std::string encode (<span class="keywordtype">void</span> <span class="keyword">const</span> *data, std::size_t size);</div>
@@ -165,7 +188,7 @@ $(document).ready(function(){initNavTree('a00494_source.html',''); initResizable
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 201703L</span></div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">static</span> std::string</div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="a01634.html#aac40e65af555a00fb916a0ed0ef33e59">  157</a></span>&#160;  <a class="code" href="a01634.html#aac40e65af555a00fb916a0ed0ef33e59">encode</a> (std::string_view data)</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="a01635.html#aac40e65af555a00fb916a0ed0ef33e59">  157</a></span>&#160;  <a class="code" href="a01635.html#aac40e65af555a00fb916a0ed0ef33e59">encode</a> (std::string_view data)</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  {</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> encode (data.data (), data.size ());</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  }</div>
@@ -193,24 +216,24 @@ $(document).ready(function(){initNavTree('a00494_source.html',''); initResizable
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div><div class="ttdoc">Macros that spell C++ keywords and specifiers only where the compiled standard supports them,...</div></div>
-<div class="ttc" id="aa01323_html"><div class="ttname"><a href="a01323.html">lumex::core::base64::codec</a></div><div class="ttdef"><b>Definition:</b> Base64.hpp:83</div></div>
-<div class="ttc" id="aa01330_html"><div class="ttname"><a href="a01330.html">lumex::core::base64::encode</a></div><div class="ttdef"><b>Definition:</b> Encoder.hpp:99</div></div>
 <div class="ttc" id="aa00680_html"><div class="ttname"><a href="a00680.html">LumexCheckFeatures.hpp</a></div><div class="ttdoc">C++ language, library and attribute feature availability.</div></div>
 <div class="ttc" id="aa00917_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:130</div></div>
-<div class="ttc" id="aa01634_html_ab4a27450b24de1f2b93f9147af8d8688"><div class="ttname"><a href="a01634.html#ab4a27450b24de1f2b93f9147af8d8688">lumex::core::base64::encode::Encoder::encode</a></div><div class="ttdeci">static std::string encode(void const *data, std::size_t size)</div><div class="ttdoc">Encodes raw binary data into a Base64 string.</div><div class="ttdef"><b>Definition:</b> Encoder.cpp:47</div></div>
 <div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div><div class="ttdoc">Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,...</div></div>
-<div class="ttc" id="aa01324_html"><div class="ttname"><a href="a01324.html">lumex::core::base64::codec::Types</a></div><div class="ttdef"><b>Definition:</b> Base64.hpp:85</div></div>
-<div class="ttc" id="aa01326_html_abda97488987b0b151816d6cc1ee24873"><div class="ttname"><a href="a01326.html#abda97488987b0b151816d6cc1ee24873">lumex::core::base64::codec::detail::_encode_impl</a></div><div class="ttdeci">std::string _encode_impl(T const &amp;data_view)</div><div class="ttdoc">Internal helper to encode binary data into a Base64 string from a view-like type.</div><div class="ttdef"><b>Definition:</b> Base64.hpp:170</div></div>
-<div class="ttc" id="aa01325_html"><div class="ttname"><a href="a01325.html">lumex::core::base64::codec::Constants</a></div><div class="ttdef"><b>Definition:</b> Base64.hpp:96</div></div>
-<div class="ttc" id="aa01324_html_a5ce1631da87ffd76dbc11fb072c31a57"><div class="ttname"><a href="a01324.html#a5ce1631da87ffd76dbc11fb072c31a57">lumex::core::base64::codec::Types::byte_type</a></div><div class="ttdeci">unsigned char byte_type</div><div class="ttdef"><b>Definition:</b> Base64.hpp:86</div></div>
-<div class="ttc" id="aa01634_html"><div class="ttname"><a href="a01634.html">lumex::core::base64::encode::Encoder</a></div><div class="ttdoc">Base64 encoder.</div><div class="ttdef"><b>Definition:</b> Encoder.hpp:109</div></div>
+<div class="ttc" id="aa01324_html"><div class="ttname"><a href="a01324.html">lumex::core::base64::codec</a></div><div class="ttdef"><b>Definition:</b> Base64.hpp:83</div></div>
+<div class="ttc" id="aa01331_html"><div class="ttname"><a href="a01331.html">lumex::core::base64::encode</a></div><div class="ttdef"><b>Definition:</b> Encoder.hpp:97</div></div>
+<div class="ttc" id="aa01325_html"><div class="ttname"><a href="a01325.html">lumex::core::base64::codec::Types</a></div><div class="ttdef"><b>Definition:</b> Base64.hpp:85</div></div>
+<div class="ttc" id="aa01635_html_aac40e65af555a00fb916a0ed0ef33e59"><div class="ttname"><a href="a01635.html#aac40e65af555a00fb916a0ed0ef33e59">lumex::core::base64::encode::Encoder::encode</a></div><div class="ttdeci">static std::string encode(std::string_view data)</div><div class="ttdoc">Encodes binary data from a std::string_view into a Base64 string.</div><div class="ttdef"><b>Definition:</b> Encoder.hpp:157</div></div>
 <div class="ttc" id="aa00482_html"><div class="ttname"><a href="a00482.html">Base64.hpp</a></div><div class="ttdoc">Cross-platform Base64 encoding and decoding utilities.</div></div>
-<div class="ttc" id="aa01326_html"><div class="ttname"><a href="a01326.html">lumex::core::base64::codec::detail</a></div><div class="ttdef"><b>Definition:</b> Base64.hpp:110</div></div>
+<div class="ttc" id="aa01326_html"><div class="ttname"><a href="a01326.html">lumex::core::base64::codec::Constants</a></div><div class="ttdef"><b>Definition:</b> Base64.hpp:96</div></div>
 <div class="ttc" id="aa00917_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:90</div></div>
-<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa01635_html_ab4a27450b24de1f2b93f9147af8d8688"><div class="ttname"><a href="a01635.html#ab4a27450b24de1f2b93f9147af8d8688">lumex::core::base64::encode::Encoder::encode</a></div><div class="ttdeci">static std::string encode(void const *data, std::size_t size)</div><div class="ttdoc">Encodes raw binary data into a Base64 string.</div><div class="ttdef"><b>Definition:</b> Encoder.cpp:86</div></div>
+<div class="ttc" id="aa01635_html"><div class="ttname"><a href="a01635.html">lumex::core::base64::encode::Encoder</a></div><div class="ttdoc">Base64 encoder.</div><div class="ttdef"><b>Definition:</b> Encoder.hpp:109</div></div>
+<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:65</div></div>
+<div class="ttc" id="aa01327_html"><div class="ttname"><a href="a01327.html">lumex::core::base64::codec::detail</a></div><div class="ttdef"><b>Definition:</b> Base64.hpp:110</div></div>
 <div class="ttc" id="aa00701_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:84</div></div>
+<div class="ttc" id="aa01327_html_abda97488987b0b151816d6cc1ee24873"><div class="ttname"><a href="a01327.html#abda97488987b0b151816d6cc1ee24873">lumex::core::base64::codec::detail::_encode_impl</a></div><div class="ttdeci">std::string _encode_impl(T const &amp;data_view)</div><div class="ttdoc">Internal helper to encode binary data into a Base64 string from a view-like type.</div><div class="ttdef"><b>Definition:</b> Base64.hpp:170</div></div>
 <div class="ttc" id="aa00494_html"><div class="ttname"><a href="a00494.html">Encoder.hpp</a></div><div class="ttdoc">Base64 encoding: the Encoder class of the lumex::base64 library.</div></div>
-<div class="ttc" id="aa01634_html_aac40e65af555a00fb916a0ed0ef33e59"><div class="ttname"><a href="a01634.html#aac40e65af555a00fb916a0ed0ef33e59">lumex::core::base64::encode::Encoder::encode</a></div><div class="ttdeci">static std::string encode(std::string_view data)</div><div class="ttdoc">Encodes binary data from a std::string_view into a Base64 string.</div><div class="ttdef"><b>Definition:</b> Encoder.hpp:157</div></div>
+<div class="ttc" id="aa01325_html_a5ce1631da87ffd76dbc11fb072c31a57"><div class="ttname"><a href="a01325.html#a5ce1631da87ffd76dbc11fb072c31a57">lumex::core::base64::codec::Types::byte_type</a></div><div class="ttdeci">unsigned char byte_type</div><div class="ttdef"><b>Definition:</b> Base64.hpp:86</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

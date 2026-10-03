@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Member List</title>
+<title>LumexLib: lumex::applied::hardware::caps::CPUVectorizationDetector Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a01474.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a01471.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,25 +93,198 @@ $(document).ready(function(){initNavTree('a01474.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="a01468.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::applied::hardware::caps::hardware_info_t Member List</div>  </div>
+<div class="title">lumex::applied::hardware::caps::CPUVectorizationDetector Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a01474.html">lumex::applied::hardware::caps::hardware_info_t</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a01474.html#a746a33fe428ecc68641d6807292694d2">cpu_core_count</a></td><td class="entry"><a class="el" href="a01474.html">lumex::applied::hardware::caps::hardware_info_t</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01474.html#ab38d984c734feb52892eb580cffbeb13">cpu_frequency_mhz</a></td><td class="entry"><a class="el" href="a01474.html">lumex::applied::hardware::caps::hardware_info_t</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01474.html#a5479f29816446c85b122a6b68bbd8124">cpu_generation</a></td><td class="entry"><a class="el" href="a01474.html">lumex::applied::hardware::caps::hardware_info_t</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01474.html#a4eafec39633f8c3a5e596c13c86aebf3">cpu_name</a></td><td class="entry"><a class="el" href="a01474.html">lumex::applied::hardware::caps::hardware_info_t</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01474.html#ad25f2a59a1dcab8a231ac1169bc3d9ab">gpu_name</a></td><td class="entry"><a class="el" href="a01474.html">lumex::applied::hardware::caps::hardware_info_t</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a01474.html#a7a3f925ce6a4fec8fa3f46b0c4cfdef1">has_discrete_gpu</a></td><td class="entry"><a class="el" href="a01474.html">lumex::applied::hardware::caps::hardware_info_t</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01474.html#a5951b3c9677bc9491fc08c68e65f085c">total_memory_mb</a></td><td class="entry"><a class="el" href="a01474.html">lumex::applied::hardware::caps::hardware_info_t</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>CPU vectorization capabilities detection utility class.  
+ <a href="a01471.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00353_source.html">LumexCPUVectorizationCapabilities.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a0bac2910071d92a77fbc9d06ce64f181"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01467.html">cpu_vectorization_info_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01471.html#a0bac2910071d92a77fbc9d06ce64f181">detect</a> ()</td></tr>
+<tr class="memdesc:a0bac2910071d92a77fbc9d06ce64f181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs comprehensive CPU vectorization capabilities detection.  <a href="a01471.html#a0bac2910071d92a77fbc9d06ce64f181">More...</a><br /></td></tr>
+<tr class="separator:a0bac2910071d92a77fbc9d06ce64f181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6b9c82125308627d435ce6b2474926"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01471.html#a2a6b9c82125308627d435ce6b2474926">get_summary</a> (<a class="el" href="a01467.html">cpu_vectorization_info_t</a> const &amp;capabilities)</td></tr>
+<tr class="memdesc:a2a6b9c82125308627d435ce6b2474926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a human-readable summary of supported vectorization technologies.  <a href="a01471.html#a2a6b9c82125308627d435ce6b2474926">More...</a><br /></td></tr>
+<tr class="separator:a2a6b9c82125308627d435ce6b2474926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>CPU vectorization capabilities detection utility class. </p>
+<p>This static utility class provides comprehensive CPU vectorization detection capabilities across different architectures (x86/x64, ARM, etc.). It uses platform-specific mechanisms to detect supported SIMD instruction sets and provides a unified interface for querying vectorization capabilities.</p>
+<p>The class implements cross-platform detection using:</p><ul>
+<li>CPUID instruction for x86/x64 architectures (Windows, Linux, macOS)</li>
+<li>getauxval() and /proc/cpuinfo for ARM architectures (Linux)</li>
+<li>Architecture-specific feature detection mechanisms</li>
+</ul>
+<p>All detection methods are thread-safe and can be called from any context without external synchronization. Detection results are computed fresh on each call (no caching is implemented).</p>
+<dl class="section note"><dt>Note</dt><dd>All methods are static and thread-safe </dd>
+<dd>
+Detection is performed fresh on each call (no caching) </dd>
+<dd>
+Cross-platform compatibility ensured through conditional compilation </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Detection accuracy depends on OS support for feature reporting</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a01467.html" title="Comprehensive CPU vectorization capabilities structure.">cpu_vectorization_info_t</a> for detailed capability structure</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="comment">// Detect CPU vectorization capabilities</span></div>
+<div class="line"><span class="keyword">auto</span> caps = <a class="code" href="a01471.html#a0bac2910071d92a77fbc9d06ce64f181">CPUVectorizationDetector::detect</a>();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Check for specific instruction set support</span></div>
+<div class="line"><span class="keywordflow">if</span> (caps.supports_avx2) {</div>
+<div class="line">    <span class="comment">// Use AVX2 optimized code path</span></div>
+<div class="line">    useAVX2OptimizedFunction();</div>
+<div class="line">} <span class="keywordflow">else</span> <span class="keywordflow">if</span> (caps.supports_avx) {</div>
+<div class="line">    <span class="comment">// Use AVX optimized code path</span></div>
+<div class="line">    useAVXOptimizedFunction();</div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Fall back to scalar code</span></div>
+<div class="line">    useScalarFunction();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Get summary of supported technologies</span></div>
+<div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Supported: &quot;</span> &lt;&lt; caps.supported_technologies &lt;&lt; std::endl;</div>
+</div><!-- fragment --> </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0bac2910071d92a77fbc9d06ce64f181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bac2910071d92a77fbc9d06ce64f181">&#9670;&nbsp;</a></span>detect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01467.html">cpu_vectorization_info_t</a> lumex::applied::hardware::caps::CPUVectorizationDetector::detect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Performs comprehensive CPU vectorization capabilities detection. </p>
+<p>Executes a complete vectorization detection routine that identifies all supported SIMD instruction sets on the current CPU. This method uses architecture-specific detection mechanisms (CPUID for x86/x64, getauxval for ARM) to determine runtime support for various vectorization technologies.</p>
+<p>The detection process includes:</p><ul>
+<li>x86/x64: CPUID-based detection for SSE, AVX, AVX2, AVX-512 variants</li>
+<li>ARM: getauxval() and /proc/cpuinfo parsing for NEON, SVE support</li>
+<li>Cross-platform: Maximum SIMD width calculation</li>
+<li>Summary generation: Human-readable technology list</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="a01467.html" title="Comprehensive CPU vectorization capabilities structure.">cpu_vectorization_info_t</a> Populated structure containing all detected vectorization capabilities</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Detection is performed fresh on each call - no caching is implemented </dd>
+<dd>
+Some features may require OS support (e.g., AVX requires XSAVE support) </dd>
+<dd>
+Cross-platform compatibility ensured through conditional compilation</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>On some systems, certain features may be disabled by microcode </dd>
+<dd>
+Detection accuracy depends on OS and CPU feature reporting mechanisms</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a01467.html" title="Comprehensive CPU vectorization capabilities structure.">cpu_vectorization_info_t</a> for detailed structure documentation</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="keyword">auto</span> caps = <a class="code" href="a01471.html#a0bac2910071d92a77fbc9d06ce64f181">CPUVectorizationDetector::detect</a>();</div>
+<div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;AVX2: &quot;</span> &lt;&lt; (caps.supports_avx2 ? <span class="stringliteral">&quot;Yes&quot;</span> : <span class="stringliteral">&quot;No&quot;</span>) &lt;&lt;</div>
+<div class="line">std::endl; std::cout &lt;&lt; <span class="stringliteral">&quot;Max SIMD width: &quot;</span> &lt;&lt; caps.max_simd_width_bits &lt;&lt;</div>
+<div class="line"><span class="stringliteral">&quot; bits&quot;</span> &lt;&lt; std::endl; std::cout &lt;&lt; <span class="stringliteral">&quot;Technologies: &quot;</span> &lt;&lt;</div>
+<div class="line">caps.supported_technologies &lt;&lt; std::endl;</div>
+</div><!-- fragment --> </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01471_a0bac2910071d92a77fbc9d06ce64f181_cgraph.png" border="0" usemap="#aa01471_a0bac2910071d92a77fbc9d06ce64f181_cgraph" alt=""/></div>
+<map name="a01471_a0bac2910071d92a77fbc9d06ce64f181_cgraph" id="aa01471_a0bac2910071d92a77fbc9d06ce64f181_cgraph">
+<area shape="rect" title="Performs comprehensive CPU vectorization capabilities detection." alt="" coords="5,43,241,99"/>
+<area shape="rect" href="a01471.html#a2a6b9c82125308627d435ce6b2474926" title="Gets a human&#45;readable summary of supported vectorization technologies." alt="" coords="289,5,525,61"/>
+<area shape="rect" href="a01348.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="318,86,497,127"/>
+<area shape="rect" href="a02155.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="573,86,861,127"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01471_a0bac2910071d92a77fbc9d06ce64f181_icgraph.png" border="0" usemap="#aa01471_a0bac2910071d92a77fbc9d06ce64f181_icgraph" alt=""/></div>
+<map name="a01471_a0bac2910071d92a77fbc9d06ce64f181_icgraph" id="aa01471_a0bac2910071d92a77fbc9d06ce64f181_icgraph">
+<area shape="rect" title="Performs comprehensive CPU vectorization capabilities detection." alt="" coords="108,5,344,61"/>
+<area shape="rect" href="a00800.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2a6b9c82125308627d435ce6b2474926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a6b9c82125308627d435ce6b2474926">&#9670;&nbsp;</a></span>get_summary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::applied::hardware::caps::CPUVectorizationDetector::get_summary </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01467.html">cpu_vectorization_info_t</a> const &amp;&#160;</td>
+          <td class="paramname"><em>capabilities</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a human-readable summary of supported vectorization technologies. </p>
+<p>Generates a comma-separated string listing all supported vectorization instruction sets. This method provides a convenient way to display CPU capabilities in logs, diagnostics, or user interfaces.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">capabilities</td><td>Vectorization capabilities structure to summarize </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::string Comma-separated list of supported technologies</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Empty string is returned if no vectorization support is detected </dd>
+<dd>
+Technologies are listed in order of introduction (SSE -&gt; AVX -&gt; AVX-512)</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="keyword">auto</span> caps = <a class="code" href="a01471.html#a0bac2910071d92a77fbc9d06ce64f181">CPUVectorizationDetector::detect</a>();</div>
+<div class="line">std::string summary = <a class="code" href="a01471.html#a2a6b9c82125308627d435ce6b2474926">CPUVectorizationDetector::get_summary</a>(caps);</div>
+<div class="line"><span class="comment">// Output: &quot;SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2, FMA3&quot;</span></div>
+</div><!-- fragment --> </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01471_a2a6b9c82125308627d435ce6b2474926_icgraph.png" border="0" usemap="#aa01471_a2a6b9c82125308627d435ce6b2474926_icgraph" alt=""/></div>
+<map name="a01471_a2a6b9c82125308627d435ce6b2474926_icgraph" id="aa01471_a2a6b9c82125308627d435ce6b2474926_icgraph">
+<area shape="rect" title="Gets a human&#45;readable summary of supported vectorization technologies." alt="" coords="392,39,628,95"/>
+<area shape="rect" href="a01471.html#a0bac2910071d92a77fbc9d06ce64f181" title="Performs comprehensive CPU vectorization capabilities detection." alt="" coords="108,5,344,61"/>
+<area shape="rect" href="a00800.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,53,60,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00353_source.html">LumexCPUVectorizationCapabilities.hpp</a></li>
+<li><a class="el" href="a00350.html">LumexCPUVectorizationCapabilities.cpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa01471_html_a0bac2910071d92a77fbc9d06ce64f181"><div class="ttname"><a href="a01471.html#a0bac2910071d92a77fbc9d06ce64f181">lumex::applied::hardware::caps::CPUVectorizationDetector::detect</a></div><div class="ttdeci">static cpu_vectorization_info_t detect()</div><div class="ttdoc">Performs comprehensive CPU vectorization capabilities detection.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:447</div></div>
+<div class="ttc" id="aa01471_html_a2a6b9c82125308627d435ce6b2474926"><div class="ttname"><a href="a01471.html#a2a6b9c82125308627d435ce6b2474926">lumex::applied::hardware::caps::CPUVectorizationDetector::get_summary</a></div><div class="ttdeci">static std::string get_summary(cpu_vectorization_info_t const &amp;capabilities)</div><div class="ttdoc">Gets a human-readable summary of supported vectorization technologies.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:496</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01264.html">applied</a></li><li class="navelem"><a class="el" href="a01265.html">hardware</a></li><li class="navelem"><a class="el" href="a01266.html">caps</a></li><li class="navelem"><a class="el" href="a01471.html">CPUVectorizationDetector</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::filesystem::fs::detail Namespace Reference</title>
+<title>LumexLib: lumex::core::filesystem::fs::Detail Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,20 +94,32 @@ $(document).ready(function(){initNavTree('a01356.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::filesystem::fs::detail Namespace Reference</div>  </div>
+<div class="title">lumex::core::filesystem::fs::Detail Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a251f4cb5e96e630e59d402b7830d6067"><td class="memItemLeft" align="right" valign="top">static mode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01356.html#a251f4cb5e96e630e59d402b7830d6067">perms_to_posix_mode</a> (<a class="el" href="a01354.html#ab64132a6feae0925f48c883dd04ce26f">perms</a> prms)</td></tr>
-<tr class="separator:a251f4cb5e96e630e59d402b7830d6067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8098dc2011c744fbb307f4abf4b9f0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01356.html#ade8098dc2011c744fbb307f4abf4b9f0">isForbidden</a> (char chr) noexcept</td></tr>
+<tr class="separator:ade8098dc2011c744fbb307f4abf4b9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16644c082516ac34391cfab602849e17"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01356.html#a16644c082516ac34391cfab602849e17">isReservedName</a> (std::string const &amp;) noexcept</td></tr>
+<tr class="separator:a16644c082516ac34391cfab602849e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14eaddaf4d263a820b318112f5614425"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01356.html#a14eaddaf4d263a820b318112f5614425">hasInvalidEnding</a> (std::string const &amp;name) noexcept</td></tr>
+<tr class="separator:a14eaddaf4d263a820b318112f5614425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aacb8c7eadc169d5650888548ce1e462e"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01356.html#aacb8c7eadc169d5650888548ce1e462e">kForbiddenChars</a> = &quot;/&quot;</td></tr>
+<tr class="separator:aacb8c7eadc169d5650888548ce1e462e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dffbf5ab10ffce11aee291ccf03c717"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01356.html#a9dffbf5ab10ffce11aee291ccf03c717">kProblematicChars</a> = &quot;&amp;;|*?'\&quot;`[]()$&lt;&gt;{}^#\\%!&quot;</td></tr>
+<tr class="separator:a9dffbf5ab10ffce11aee291ccf03c717"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a251f4cb5e96e630e59d402b7830d6067"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a251f4cb5e96e630e59d402b7830d6067">&#9670;&nbsp;</a></span>perms_to_posix_mode()</h2>
+<a id="a14eaddaf4d263a820b318112f5614425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14eaddaf4d263a820b318112f5614425">&#9670;&nbsp;</a></span>hasInvalidEnding()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -116,28 +128,146 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static mode_t lumex::core::filesystem::fs::detail::perms_to_posix_mode </td>
+          <td class="memname">static bool lumex::core::filesystem::fs::Detail::hasInvalidEnding </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a01354.html#ab64132a6feae0925f48c883dd04ce26f">perms</a>&#160;</td>
-          <td class="paramname"><em>prms</em></td><td>)</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01356_a251f4cb5e96e630e59d402b7830d6067_icgraph.png" border="0" usemap="#aa01356_a251f4cb5e96e630e59d402b7830d6067_icgraph" alt=""/></div>
-<map name="a01356_a251f4cb5e96e630e59d402b7830d6067_icgraph" id="aa01356_a251f4cb5e96e630e59d402b7830d6067_icgraph">
-<area shape="rect" title=" " alt="" coords="228,5,403,61"/>
-<area shape="rect" href="a02254.html#a30148367d357472f918c6adc0c71cb9f" title="Sets the permissions of a file or directory." alt="" coords="5,5,180,61"/>
+<div class="center"><img src="a01356_a14eaddaf4d263a820b318112f5614425_icgraph.png" border="0" usemap="#aa01356_a14eaddaf4d263a820b318112f5614425_icgraph" alt=""/></div>
+<map name="a01356_a14eaddaf4d263a820b318112f5614425_icgraph" id="aa01356_a14eaddaf4d263a820b318112f5614425_icgraph">
+<area shape="rect" title=" " alt="" coords="451,5,659,47"/>
+<area shape="rect" href="a01355.html#ad4d22be12b855bec6255dbb4f641d33b" title="Checks if a file or directory name is valid." alt="" coords="228,5,403,47"/>
+<area shape="rect" href="a01355.html#ad620abd69e1b7b23c9590e8222585e66" title="Filters name, replacing invalid characters with &#39;_&#39; (noexcept wrapper)" alt="" coords="5,5,180,47"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ade8098dc2011c744fbb307f4abf4b9f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8098dc2011c744fbb307f4abf4b9f0">&#9670;&nbsp;</a></span>isForbidden()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool lumex::core::filesystem::fs::Detail::isForbidden </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>chr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01356_ade8098dc2011c744fbb307f4abf4b9f0_icgraph.png" border="0" usemap="#aa01356_ade8098dc2011c744fbb307f4abf4b9f0_icgraph" alt=""/></div>
+<map name="a01356_ade8098dc2011c744fbb307f4abf4b9f0_icgraph" id="aa01356_ade8098dc2011c744fbb307f4abf4b9f0_icgraph">
+<area shape="rect" title=" " alt="" coords="451,35,625,76"/>
+<area shape="rect" href="a01355.html#ad4d22be12b855bec6255dbb4f641d33b" title="Checks if a file or directory name is valid." alt="" coords="228,5,403,47"/>
+<area shape="rect" href="a01355.html#ad620abd69e1b7b23c9590e8222585e66" title="Filters name, replacing invalid characters with &#39;_&#39; (noexcept wrapper)" alt="" coords="5,35,180,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a16644c082516ac34391cfab602849e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16644c082516ac34391cfab602849e17">&#9670;&nbsp;</a></span>isReservedName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool lumex::core::filesystem::fs::Detail::isReservedName </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01356_a16644c082516ac34391cfab602849e17_icgraph.png" border="0" usemap="#aa01356_a16644c082516ac34391cfab602849e17_icgraph" alt=""/></div>
+<map name="a01356_a16644c082516ac34391cfab602849e17_icgraph" id="aa01356_a16644c082516ac34391cfab602849e17_icgraph">
+<area shape="rect" title=" " alt="" coords="451,35,657,76"/>
+<area shape="rect" href="a01355.html#ad4d22be12b855bec6255dbb4f641d33b" title="Checks if a file or directory name is valid." alt="" coords="228,5,403,47"/>
+<area shape="rect" href="a01355.html#ad620abd69e1b7b23c9590e8222585e66" title="Filters name, replacing invalid characters with &#39;_&#39; (noexcept wrapper)" alt="" coords="5,35,180,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aacb8c7eadc169d5650888548ce1e462e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacb8c7eadc169d5650888548ce1e462e">&#9670;&nbsp;</a></span>kForbiddenChars</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* const lumex::core::filesystem::fs::Detail::kForbiddenChars = &quot;/&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9dffbf5ab10ffce11aee291ccf03c717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dffbf5ab10ffce11aee291ccf03c717">&#9670;&nbsp;</a></span>kProblematicChars</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* const lumex::core::filesystem::fs::Detail::kProblematicChars = &quot;&amp;;|*?'\&quot;`[]()$&lt;&gt;{}^#\\%!&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -146,7 +276,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01314.html">core</a></li><li class="navelem"><a class="el" href="a01353.html">filesystem</a></li><li class="navelem"><a class="el" href="a01354.html">fs</a></li><li class="navelem"><a class="el" href="a01356.html">detail</a></li>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01315.html">core</a></li><li class="navelem"><a class="el" href="a01354.html">filesystem</a></li><li class="navelem"><a class="el" href="a01355.html">fs</a></li><li class="navelem"><a class="el" href="a01356.html">Detail</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -1,4 +1,4 @@
 var a01291 =
 [
-    [ "LumexLogging", "a01518.html", "a01518" ]
+    [ "LumexLogging", "a01519.html", "a01519" ]
 ];

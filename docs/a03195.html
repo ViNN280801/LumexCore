@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Member List</title>
+<title>LumexLib: lumex::xml::node::name_null_sentry Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a03198.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a03195.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,24 +93,156 @@ $(document).ready(function(){initNavTree('a03198.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a03192.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::range::XmlObjectRange&lt; Iterator &gt; Member List</div>  </div>
+<div class="title">lumex::xml::node::name_null_sentry Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a03198.html">lumex::xml::range::XmlObjectRange&lt; Iterator &gt;</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a03198.html#a9c1f78cd639f85bd8c9016ba1f6f54db">begin</a>() const</td><td class="entry"><a class="el" href="a03198.html">lumex::xml::range::XmlObjectRange&lt; Iterator &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a03198.html#a4370a429f6baa830e299d95ca4ad69d6">const_iterator</a> typedef</td><td class="entry"><a class="el" href="a03198.html">lumex::xml::range::XmlObjectRange&lt; Iterator &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a03198.html#a7dfb153bd90c47aa2602bbe04a9b921f">empty</a>() const</td><td class="entry"><a class="el" href="a03198.html">lumex::xml::range::XmlObjectRange&lt; Iterator &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a03198.html#a1ac3b5edb46916204463448289fe627e">end</a>() const</td><td class="entry"><a class="el" href="a03198.html">lumex::xml::range::XmlObjectRange&lt; Iterator &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a03198.html#aae14566bfaffad6d53b1277350ff629d">iterator</a> typedef</td><td class="entry"><a class="el" href="a03198.html">lumex::xml::range::XmlObjectRange&lt; Iterator &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a03198.html#a7ec1bd627117559e3ace33c9139d6a31">XmlObjectRange</a>(Iterator begin, Iterator end)</td><td class="entry"><a class="el" href="a03198.html">lumex::xml::range::XmlObjectRange&lt; Iterator &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-</table></div><!-- contents -->
+<p>A RAII helper to temporarily set a node's name to <code>nullptr</code> and restore it upon destruction.  
+ <a href="a03195.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00974_source.html">XmlNodeBase.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for lumex::xml::node::name_null_sentry:</div>
+<div class="dyncontent">
+<div class="center"><img src="a03193.png" border="0" usemap="#alumex_1_1xml_1_1node_1_1name__null__sentry_coll__map" alt="Collaboration graph"/></div>
+<map name="lumex_1_1xml_1_1node_1_1name__null__sentry_coll__map" id="alumex_1_1xml_1_1node_1_1name__null__sentry_coll__map">
+<area shape="rect" title="A RAII helper to temporarily set a node&#39;s name to nullptr and restore it upon destruction." alt="" coords="33,231,214,272"/>
+<area shape="rect" href="a03191.html" title="Base structure representing an XML node in the document tree." alt="" coords="5,125,241,152"/>
+<area shape="rect" href="a03151.html" title="Base structure for representing an XML attribute." alt="" coords="43,5,203,47"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9dd1672cb6c9059587afa3b290a59257"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03195.html#a9dd1672cb6c9059587afa3b290a59257">name_null_sentry</a> (<a class="el" href="a03191.html">XmlNodeBase</a> *node_)</td></tr>
+<tr class="memdesc:a9dd1672cb6c9059587afa3b290a59257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <code><a class="el" href="a03195.html" title="A RAII helper to temporarily set a node&#39;s name to nullptr and restore it upon destruction.">name_null_sentry</a></code> and nullifies the node's name.  <a href="a03195.html#a9dd1672cb6c9059587afa3b290a59257">More...</a><br /></td></tr>
+<tr class="separator:a9dd1672cb6c9059587afa3b290a59257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6193a15ba3c63480b66db59acc9581"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03195.html#aff6193a15ba3c63480b66db59acc9581">~name_null_sentry</a> ()</td></tr>
+<tr class="memdesc:aff6193a15ba3c63480b66db59acc9581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor that restores the node's original name.  <a href="a03195.html#aff6193a15ba3c63480b66db59acc9581">More...</a><br /></td></tr>
+<tr class="separator:aff6193a15ba3c63480b66db59acc9581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ac9a5674d6d8bac0f82f304c1cccd6d82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a03191.html">XmlNodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03195.html#ac9a5674d6d8bac0f82f304c1cccd6d82">node</a> {}</td></tr>
+<tr class="memdesc:ac9a5674d6d8bac0f82f304c1cccd6d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the <code><a class="el" href="a03191.html" title="Base structure representing an XML node in the document tree.">XmlNodeBase</a></code> whose name is being managed.  <a href="a03195.html#ac9a5674d6d8bac0f82f304c1cccd6d82">More...</a><br /></td></tr>
+<tr class="separator:ac9a5674d6d8bac0f82f304c1cccd6d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d126e4a233b87fd9054d31b5bf5114e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01449.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03195.html#a8d126e4a233b87fd9054d31b5bf5114e">name</a> {}</td></tr>
+<tr class="memdesc:a8d126e4a233b87fd9054d31b5bf5114e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary storage for the original name pointer.  <a href="a03195.html#a8d126e4a233b87fd9054d31b5bf5114e">More...</a><br /></td></tr>
+<tr class="separator:a8d126e4a233b87fd9054d31b5bf5114e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A RAII helper to temporarily set a node's name to <code>nullptr</code> and restore it upon destruction. </p>
+<p>Used internally during node manipulation to manage string lifetimes and prevent double-frees or incorrect string references during copy operations. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9dd1672cb6c9059587afa3b290a59257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dd1672cb6c9059587afa3b290a59257">&#9670;&nbsp;</a></span>name_null_sentry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::xml::node::name_null_sentry::name_null_sentry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a03191.html">XmlNodeBase</a> *&#160;</td>
+          <td class="paramname"><em>node_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <code><a class="el" href="a03195.html" title="A RAII helper to temporarily set a node&#39;s name to nullptr and restore it upon destruction.">name_null_sentry</a></code> and nullifies the node's name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">node_</td><td>The <code><a class="el" href="a03191.html" title="Base structure representing an XML node in the document tree.">XmlNodeBase</a></code> object whose name will be temporarily set to <code>nullptr</code>.  Stores the original name pointer and sets <code>node_-&gt;name</code> to <code>nullptr</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff6193a15ba3c63480b66db59acc9581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff6193a15ba3c63480b66db59acc9581">&#9670;&nbsp;</a></span>~name_null_sentry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::xml::node::name_null_sentry::~name_null_sentry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor that restores the node's original name. </p>
+<p>Resets <code>node-&gt;name</code> to its value before the sentry was constructed. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8d126e4a233b87fd9054d31b5bf5114e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d126e4a233b87fd9054d31b5bf5114e">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01449.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a>* lumex::xml::node::name_null_sentry::name {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary storage for the original name pointer. </p>
+
+</div>
+</div>
+<a id="ac9a5674d6d8bac0f82f304c1cccd6d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a5674d6d8bac0f82f304c1cccd6d82">&#9670;&nbsp;</a></span>node</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a03191.html">XmlNodeBase</a>* lumex::xml::node::name_null_sentry::node {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pointer to the <code><a class="el" href="a03191.html" title="Base structure representing an XML node in the document tree.">XmlNodeBase</a></code> whose name is being managed. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00974_source.html">XmlNodeBase.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01432.html">xml</a></li><li class="navelem"><a class="el" href="a01435.html">node</a></li><li class="navelem"><a class="el" href="a03195.html">name_null_sentry</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

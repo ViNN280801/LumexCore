@@ -1,4 +1,4 @@
 var a01456 =
 [
-    [ "XPathException", "a03370.html", "a03370" ]
+    [ "document_order_comparator", "a03367.html", "a03367" ]
 ];

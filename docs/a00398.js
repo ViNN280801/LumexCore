@@ -1,6 +1,6 @@
 var a00398 =
 [
-    [ "LumexLogging", "a01518.html", "a01518" ],
+    [ "LumexLogging", "a01519.html", "a01519" ],
     [ "LumexLogging", "a00398.html#a4a6909dcad3d67fe13dede37e3679899", null ],
     [ "LumexLogLevel", "a00398.html#ab89470b4db8a7dc224df84237c78270c", [
       [ "Debug", "a00398.html#ab89470b4db8a7dc224df84237c78270caa603905470e2a5b8c13e96b579ef0dba", null ],

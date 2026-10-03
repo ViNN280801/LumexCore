@@ -152,36 +152,30 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01582.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::atomic_shared_ptr&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic <code>std::shared_ptr&lt;T&gt;</code>, as <code>std::atomic&lt;std::shared_ptr&lt;T&gt;&gt;</code>.  <a href="a01582.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01583.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::atomic_shared_ptr&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic <code>std::shared_ptr&lt;T&gt;</code>, as <code>std::atomic&lt;std::shared_ptr&lt;T&gt;&gt;</code>.  <a href="a01583.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
-<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01314"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01314.html">lumex::core</a></td></tr>
+<tr class="memitem:a01315"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01315.html">lumex::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01315"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01315.html">lumex::core::atomic</a></td></tr>
+<tr class="memitem:a01316"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01316.html">lumex::core::atomic</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01316"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01316.html">lumex::core::atomic::smart_ptr</a></td></tr>
+<tr class="memitem:a01317"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01317.html">lumex::core::atomic::smart_ptr</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01317"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01317.html">lumex::core::atomic::smart_ptr::lock_based_table_wait</a></td></tr>
+<tr class="memitem:a01318"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01318.html">lumex::core::atomic::smart_ptr::lock_based_table_wait</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><code>atomic_shared_ptr&lt;T&gt;</code>: the interface of the C++20 <code>std::atomic&lt;std::shared_ptr&lt;T&gt;&gt;</code> for C++11 and later. </p>
-<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
-<p>SPDX-License-Identifier: MIT</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 <p>The class wraps <code>std::atomic&lt;std::shared_ptr&lt;T&gt;&gt;</code> where the standard library provides it and otherwise keeps an ordinary <code>std::shared_ptr&lt;T&gt;</code> behind a lock (see <code><a class="el" href="a00470.html" title="Chooses between the standard std::atomic&lt;std::shared_ptr&lt;T&gt;&gt; and the lock-based implementation,...">lumex/core/atomic/smart_ptr/LumexAtomicSmartPtrConfig.hpp</a></code>). The lock-based implementation is a port of the lock-based method of the author's own libc++ implementation of P0718R2 (llvm-project pull request 194215). The member functions, their default memory orders, <code>noexcept</code> and return types follow [util.smartptr.atomic.shared], including LWG 3661 (<code>constexpr</code> construction from <code>nullptr</code>, so the object can be <code>constinit</code>) and LWG 3893 (<code>operator= (nullptr_t)</code>).</p>
 <p><code>wait (old)</code> returns once the stored value is not equivalent to <code>old</code> (a different stored pointer, or a different owner) and a <code>notify_one</code> or <code>notify_all</code> has been called after the change. As in the standard, <code>store</code>, <code>exchange</code> and <code>compare_exchange_*</code> do not wake waiting threads by themselves.</p>
 <p>The lock-based implementation is not lock-free (<code>is_always_lock_free</code> and <code>is_lock_free ()</code> are false) and treats every memory order as <code>seq_cst</code>.</p>
-<p>The template is declared only in <code><a class="el" href="a01316.html">lumex::core::atomic::smart_ptr</a></code>; nothing is added to the global namespace.</p>
-<div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="a01582.html">lumex::core::atomic::smart_ptr::atomic_shared_ptr</a>;</div>
+<p>The template is declared only in <code><a class="el" href="a01317.html">lumex::core::atomic::smart_ptr</a></code>; nothing is added to the global namespace.</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="a01583.html">lumex::core::atomic::smart_ptr::atomic_shared_ptr</a>;</div>
 <div class="line"> </div>
 <div class="line">atomic_shared_ptr&lt;Config&gt; current (std::make_shared&lt;Config&gt; ());</div>
 <div class="line">std::shared_ptr&lt;Config&gt; snapshot = current.load ();   <span class="comment">// reader</span></div>
@@ -189,7 +183,7 @@ Namespaces</h2></td></tr>
 <div class="line">current.notify_all ();</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01582_html"><div class="ttname"><a href="a01582.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::atomic_shared_ptr</a></div><div class="ttdoc">Atomic std::shared_ptr&lt;T&gt;, as std::atomic&lt;std::shared_ptr&lt;T&gt;&gt;.</div><div class="ttdef"><b>Definition:</b> LumexAtomicSharedPtr.hpp:121</div></div>
+<div class="ttc" id="aa01583_html"><div class="ttname"><a href="a01583.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::atomic_shared_ptr</a></div><div class="ttdoc">Atomic std::shared_ptr&lt;T&gt;, as std::atomic&lt;std::shared_ptr&lt;T&gt;&gt;.</div><div class="ttdef"><b>Definition:</b> LumexAtomicSharedPtr.hpp:121</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

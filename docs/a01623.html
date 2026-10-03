@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Member List</title>
+<title>LumexLib: lumex::core::atomic::sync::table_wait::Detail::BitLockGuard Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a01626.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a01623.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,22 +93,158 @@ $(document).ready(function(){initNavTree('a01626.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a01620.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::base64::decode::Decoder Member List</div>  </div>
+<div class="title">lumex::core::atomic::sync::table_wait::Detail::BitLockGuard Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a01626.html">lumex::core::base64::decode::Decoder</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a01626.html#a9bb0fe0301536700898cec8624aa7faa">decode</a>(char const *encoded, std::size_t size, std::vector&lt; byte_type &gt; &amp;out)</td><td class="entry"><a class="el" href="a01626.html">lumex::core::base64::decode::Decoder</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01626.html#aadb06150d21908f57ba9f26af92b4800">decode</a>(char const *encoded, std::size_t size)</td><td class="entry"><a class="el" href="a01626.html">lumex::core::base64::decode::Decoder</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01626.html#aaad3b4bd9161881e378092c54ec1fa93">decode</a>(std::string_view encoded, std::vector&lt; byte_type &gt; &amp;out)</td><td class="entry"><a class="el" href="a01626.html">lumex::core::base64::decode::Decoder</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01626.html#a55bd6abb200ad89b6179efe74473f6b6">decode</a>(std::string_view encoded)</td><td class="entry"><a class="el" href="a01626.html">lumex::core::base64::decode::Decoder</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p>Holds a <code><a class="el" href="a01619.html" title="Lock in one 32-bit word that puts contended threads to sleep.">BitLock</a></code> for the lifetime of the guard.  
+ <a href="a01623.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00479_source.html">LumexBitLock.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9168a2d1eab52589a61de179c68c7a56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01623.html#a9168a2d1eab52589a61de179c68c7a56">BitLockGuard</a> (<a class="el" href="a01619.html">BitLock</a> const &amp;lock) noexcept</td></tr>
+<tr class="memdesc:a9168a2d1eab52589a61de179c68c7a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes <code>lock</code>.  <a href="a01623.html#a9168a2d1eab52589a61de179c68c7a56">More...</a><br /></td></tr>
+<tr class="separator:a9168a2d1eab52589a61de179c68c7a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae92dc7f183e3c4c926cb411071686b4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01623.html#ae92dc7f183e3c4c926cb411071686b4f">~BitLockGuard</a> ()</td></tr>
+<tr class="memdesc:ae92dc7f183e3c4c926cb411071686b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the lock.  <a href="a01623.html#ae92dc7f183e3c4c926cb411071686b4f">More...</a><br /></td></tr>
+<tr class="separator:ae92dc7f183e3c4c926cb411071686b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83eea6b4c4a7ea402a6198831382ac96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01623.html#a83eea6b4c4a7ea402a6198831382ac96">BitLockGuard</a> (<a class="el" href="a01623.html">BitLockGuard</a> const &amp;)=delete</td></tr>
+<tr class="separator:a83eea6b4c4a7ea402a6198831382ac96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7992e73f5d22602584c057492014b1e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01623.html">BitLockGuard</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01623.html#a7992e73f5d22602584c057492014b1e0">operator=</a> (<a class="el" href="a01623.html">BitLockGuard</a> const &amp;)=delete</td></tr>
+<tr class="separator:a7992e73f5d22602584c057492014b1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Holds a <code><a class="el" href="a01619.html" title="Lock in one 32-bit word that puts contended threads to sleep.">BitLock</a></code> for the lifetime of the guard. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9168a2d1eab52589a61de179c68c7a56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9168a2d1eab52589a61de179c68c7a56">&#9670;&nbsp;</a></span>BitLockGuard() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::core::atomic::sync::table_wait::Detail::BitLockGuard::BitLockGuard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01619.html">BitLock</a> const &amp;&#160;</td>
+          <td class="paramname"><em>lock</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Takes <code>lock</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lock</td><td>The lock to hold; it must outlive the guard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae92dc7f183e3c4c926cb411071686b4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae92dc7f183e3c4c926cb411071686b4f">&#9670;&nbsp;</a></span>~BitLockGuard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::core::atomic::sync::table_wait::Detail::BitLockGuard::~BitLockGuard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Releases the lock. </p>
+
+</div>
+</div>
+<a id="a83eea6b4c4a7ea402a6198831382ac96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83eea6b4c4a7ea402a6198831382ac96">&#9670;&nbsp;</a></span>BitLockGuard() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::core::atomic::sync::table_wait::Detail::BitLockGuard::BitLockGuard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01623.html">BitLockGuard</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7992e73f5d22602584c057492014b1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7992e73f5d22602584c057492014b1e0">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01623.html">BitLockGuard</a>&amp; lumex::core::atomic::sync::table_wait::Detail::BitLockGuard::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01623.html">BitLockGuard</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00479_source.html">LumexBitLock.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01315.html">core</a></li><li class="navelem"><a class="el" href="a01316.html">atomic</a></li><li class="navelem"><a class="el" href="a01320.html">sync</a></li><li class="navelem"><a class="el" href="a01321.html">table_wait</a></li><li class="navelem"><a class="el" href="a01322.html">Detail</a></li><li class="navelem"><a class="el" href="a01623.html">BitLockGuard</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

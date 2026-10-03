@@ -1,7 +1,7 @@
 var a00359 =
 [
-    [ "hardware_info_t", "a01474.html", "a01474" ],
-    [ "HardwareCapabilities", "a01478.html", "a01478" ],
+    [ "hardware_info_t", "a01475.html", "a01475" ],
+    [ "HardwareCapabilities", "a01479.html", "a01479" ],
     [ "generate_cryptographic_seed", "a00359.html#a211e7ff7e7de8c55d405628d09595cd6", null ],
     [ "get_mac_address", "a00359.html#ab859866b0c575b1a3e396b0b53fe9ed7", null ],
     [ "KAMD_A_SERIES_IDENTIFIER", "a00359.html#a04351dc8b59e1196c8e72b8f63aa7c5d", null ],

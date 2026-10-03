@@ -6,7 +6,6 @@ var a00401 =
     [ "lumDebugFL", "a00401.html#a7d12884a15fa51a1dbaeeffb7c41fdcb", null ],
     [ "lumError", "a00401.html#ae62f979f23f714f5275da9ce1f60435c", null ],
     [ "lumErrorFL", "a00401.html#aae2b6bd2b080f3aefab21e9a0903e6a3", null ],
-    [ "LUMEX_FUNCTION_NAME", "a00401.html#aaae5674dd2d0d351d585e646e72118fd", null ],
     [ "lumInfo", "a00401.html#abf03ac40e82dc22d29bcd7f0591d8efb", null ],
     [ "lumInfoFL", "a00401.html#af93a3415292639c338b18232778703e7", null ],
     [ "lumSuccess", "a00401.html#a7d9790a6ac0afd238f27185519b059e2", null ],

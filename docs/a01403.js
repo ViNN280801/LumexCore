@@ -1,12 +1,9 @@
 var a01403 =
 [
-    [ "detail", "a01404.html", "a01404" ],
-    [ "all_ostreamable", "a02874.html", null ],
-    [ "all_ostreamable< First, Rest... >", "a02882.html", null ],
-    [ "all_ostreamable<>", "a02878.html", null ],
-    [ "all_streamable", "a02890.html", null ],
-    [ "all_streamable< First, Rest... >", "a02898.html", null ],
-    [ "all_streamable<>", "a02894.html", null ],
-    [ "is_ostreamable", "a02870.html", null ],
-    [ "is_streamable", "a02886.html", null ]
+    [ "invoke_impl", "a02807.html", "a02807" ],
+    [ "invoke_impl< MT B::* >", "a02811.html", "a02811" ],
+    [ "invoke_result_impl", "a02815.html", null ],
+    [ "invoke_result_impl< meta::void_t< decltype(INVOKE(std::declval< F >(), std::declval< Args >()...))>, F, Args... >", "a02819.html", "a02819" ],
+    [ "is_reference_wrapper", "a02799.html", null ],
+    [ "is_reference_wrapper< std::reference_wrapper< U > >", "a02803.html", null ]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['validator_4420',['Validator',['../a01638.html',1,'lumex::core::base64::validate']]],
-  ['voider_4421',['voider',['../a02514.html',1,'lumex::core::math::ops::Detail']]]
+  ['validator_4422',['Validator',['../a01639.html',1,'lumex::core::base64::validate']]],
+  ['voider_4423',['voider',['../a02515.html',1,'lumex::core::math::ops::Detail']]]
 ];

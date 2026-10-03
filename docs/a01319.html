@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::atomic::sync Namespace Reference</title>
+<title>LumexLib: lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,25 +94,60 @@ $(document).ready(function(){initNavTree('a01319.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::atomic::sync Namespace Reference</div>  </div>
+<div class="title">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:a01320"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01320.html">table_wait</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01603.html">LockBasedCell</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock-based atomic cell over an ordinary smart pointer.  <a href="a01603.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01321"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01321.html">Detail</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01587.html">smart_ptr_traits_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equivalence of two smart pointers of one kind.  <a href="a01587.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01591.html">smart_ptr_traits_t&lt; std::shared_ptr&lt; T &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equivalence of <code>std::shared_ptr</code>: same stored pointer and same owner (or both empty).  <a href="a01591.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01599.html">smart_ptr_traits_t&lt; std::weak_ptr&lt; T &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equivalence of <code>std::weak_ptr</code>: same owner, and the same stored pointer as far as <code>lock ()</code> can observe it.  <a href="a01599.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a201d37e104497d8bae7f403e3d1b7277"><td class="memTemplParams" colspan="2">template&lt;typename Pointer &gt; </td></tr>
+<tr class="memitem:a201d37e104497d8bae7f403e3d1b7277"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01319.html#a201d37e104497d8bae7f403e3d1b7277">Cell</a> = <a class="el" href="a01603.html">LockBasedCell</a>&lt; Pointer &gt;</td></tr>
+<tr class="memdesc:a201d37e104497d8bae7f403e3d1b7277"><td class="mdescLeft">&#160;</td><td class="mdescRight">The cell selected by <code>LUMEX_ATOMIC_SMART_PTR_USES_STD</code>.  <a href="a01319.html#a201d37e104497d8bae7f403e3d1b7277">More...</a><br /></td></tr>
+<tr class="separator:a201d37e104497d8bae7f403e3d1b7277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a201d37e104497d8bae7f403e3d1b7277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a201d37e104497d8bae7f403e3d1b7277">&#9670;&nbsp;</a></span>Cell</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="a01319.html#a201d37e104497d8bae7f403e3d1b7277">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::Cell</a> = typedef <a class="el" href="a01603.html">LockBasedCell</a>&lt;Pointer&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The cell selected by <code>LUMEX_ATOMIC_SMART_PTR_USES_STD</code>. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01314.html">core</a></li><li class="navelem"><a class="el" href="a01315.html">atomic</a></li><li class="navelem"><a class="el" href="a01319.html">sync</a></li>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01315.html">core</a></li><li class="navelem"><a class="el" href="a01316.html">atomic</a></li><li class="navelem"><a class="el" href="a01317.html">smart_ptr</a></li><li class="navelem"><a class="el" href="a01318.html">lock_based_table_wait</a></li><li class="navelem"><a class="el" href="a01319.html">Detail</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -97,7 +97,30 @@ $(document).ready(function(){initNavTree('a00707_source.html',''); initResizable
 <div class="title">LumexMemRead.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00707.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<a href="a00707.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2026 Vladislav Semykin &lt;vladislav.semykin@gmail.com&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * SPDX-License-Identifier: MIT</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * deal in the Software without restriction, including without limitation the</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * sell copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * all copies or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#ifndef LUMEX_CORE_UTILITY_MEM_HPP</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define LUMEX_CORE_UTILITY_MEM_HPP</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
@@ -176,10 +199,10 @@ $(document).ready(function(){initNavTree('a00707_source.html',''); initResizable
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">template</span> &lt;traits::meta::Extractible T&gt;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<a class="code" href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a> (<span class="stringliteral">&quot;return value must be used&quot;</span>)</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<a class="code" href="a01349.html">std</a>::<a class="code" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt;T&gt; As (<span class="keywordtype">void</span> const *data, <a class="code" href="a01349.html">std</a>::<span class="keywordtype">size_t</span> size) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<a class="code" href="a01350.html">std</a>::<a class="code" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt;T&gt; As (<span class="keywordtype">void</span> const *data, <a class="code" href="a01350.html">std</a>::<span class="keywordtype">size_t</span> size) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">if</span> ((data == <span class="keyword">nullptr</span>) || (size &lt; <span class="keyword">sizeof</span> (T)))</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a01366.html#a2a333622703b36bee2d00ee4a0db592d">std::nullopt</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a01367.html#a2a333622703b36bee2d00ee4a0db592d">std::nullopt</a>;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  T res{};</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  std::memcpy (std::addressof (res), data, <span class="keyword">sizeof</span> (T));</div>
@@ -188,17 +211,17 @@ $(document).ready(function(){initNavTree('a00707_source.html',''); initResizable
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">template</span> &lt;traits::meta::Extractible T, Detail::DataSource TSource&gt;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<a class="code" href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a> (<span class="stringliteral">&quot;return value must be used&quot;</span>)</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<a class="code" href="a01349.html">std</a>::<a class="code" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt;T&gt; As (TSource const &amp;source) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<a class="code" href="a01350.html">std</a>::<a class="code" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt;T&gt; As (TSource const &amp;source) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;{</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordtype">int</span> <span class="keyword">const</span> rawSize{ source.GetDataSize () };</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordflow">if</span> (rawSize &lt; 0)</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a01366.html#a2a333622703b36bee2d00ee4a0db592d">std::nullopt</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a01367.html#a2a333622703b36bee2d00ee4a0db592d">std::nullopt</a>;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordflow">return</span> As&lt;T&gt; (source.GetData (), <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span> (rawSize));</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">template</span> &lt;traits::meta::Extractible T, traits::meta::ByteLike ByteType&gt;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<a class="code" href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a> (<span class="stringliteral">&quot;return value must be used&quot;</span>)</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<a class="code" href="a01349.html">std</a>::<a class="code" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt;T&gt; As (<a class="code" href="a01349.html">std</a>::span&lt;ByteType const&gt; span) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<a class="code" href="a01350.html">std</a>::<a class="code" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt;T&gt; As (<a class="code" href="a01350.html">std</a>::span&lt;ByteType const&gt; span) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;{</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordflow">return</span> As&lt;T&gt; (span.data (), span.size ());</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
@@ -221,11 +244,11 @@ $(document).ready(function(){initNavTree('a00707_source.html',''); initResizable
 <div class="ttc" id="aa00602_html_afbb00d6cc5e9b8ea87e69dfe4629f8ff"><div class="ttname"><a href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a></div><div class="ttdeci">lumex::core::optional::opt::optional&lt; T &gt; optional</div><div class="ttdoc">Global type alias for lumex::core::optional::opt::optional&lt;T&gt;.</div><div class="ttdef"><b>Definition:</b> LumexOptional.hpp:1522</div></div>
 <div class="ttc" id="aa00680_html"><div class="ttname"><a href="a00680.html">LumexCheckFeatures.hpp</a></div><div class="ttdoc">C++ language, library and attribute feature availability.</div></div>
 <div class="ttc" id="aa00665_html_af6aeadbda428235a14f147ade9783f8f"><div class="ttname"><a href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_NODISCARD(msg)</div><div class="ttdef"><b>Definition:</b> LumexAttributes.hpp:77</div></div>
-<div class="ttc" id="aa01349_html"><div class="ttname"><a href="a01349.html">std</a></div><div class="ttdef"><b>Definition:</b> LumexStacktraceEntry.hpp:452</div></div>
-<div class="ttc" id="aa01366_html_a2a333622703b36bee2d00ee4a0db592d"><div class="ttname"><a href="a01366.html#a2a333622703b36bee2d00ee4a0db592d">lumex::core::optional::opt::nullopt</a></div><div class="ttdeci">constexpr nullopt_t nullopt</div><div class="ttdoc">A constant of type nullopt_t used to represent an empty optional.</div><div class="ttdef"><b>Definition:</b> LumexOptional.hpp:142</div></div>
-<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:65</div></div>
+<div class="ttc" id="aa01350_html"><div class="ttname"><a href="a01350.html">std</a></div><div class="ttdef"><b>Definition:</b> LumexStacktraceEntry.hpp:452</div></div>
 <div class="ttc" id="aa00701_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:84</div></div>
 <div class="ttc" id="aa00665_html"><div class="ttname"><a href="a00665.html">LumexAttributes.hpp</a></div><div class="ttdoc">LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P...</div></div>
+<div class="ttc" id="aa01367_html_a2a333622703b36bee2d00ee4a0db592d"><div class="ttname"><a href="a01367.html#a2a333622703b36bee2d00ee4a0db592d">lumex::core::optional::opt::nullopt</a></div><div class="ttdeci">constexpr nullopt_t nullopt</div><div class="ttdoc">A constant of type nullopt_t used to represent an empty optional.</div><div class="ttdef"><b>Definition:</b> LumexOptional.hpp:142</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

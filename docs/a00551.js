@@ -1,7 +1,7 @@
 var a00551 =
 [
-    [ "LumexBasicStacktrace", "a02154.html", "a02154" ],
-    [ "hash< LumexBasicStacktrace< Allocator > >", "a02162.html", "a02162" ],
+    [ "LumexBasicStacktrace", "a02155.html", "a02155" ],
+    [ "hash< LumexBasicStacktrace< Allocator > >", "a02163.html", "a02163" ],
     [ "LumexStacktrace", "a00551.html#a7594d0b7e8cd07a63b7218286cec101f", null ],
     [ "LumexStacktrace", "a00551.html#aa65ae33a9cb60c0f3fdb50f47f7a425e", null ],
     [ "LumexStacktraceEntry", "a00551.html#a3f60ceab597bebfcc580c78610fb5712", null ],

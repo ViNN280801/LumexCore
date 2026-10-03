@@ -97,7 +97,45 @@ $(document).ready(function(){initNavTree('a01064_source.html',''); initResizable
 <div class="title">XPathMemoryBlock.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a01064.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<a href="a01064.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2026 Vladislav Semykin &lt;vladislav.semykin@gmail.com&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * SPDX-License-Identifier: MIT</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Permission is hereby granted, free of</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * charge, to any person obtaining a copy</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * of this software and associated</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * documentation files (the &quot;Software&quot;), to deal</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * in the Software without</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * restriction, including without limitation the rights</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * to use, copy,</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * modify, merge, publish, distribute, sublicense, and/or sell</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * copies of the</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * furnished to do</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * so, subject to the following conditions:</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * The above copyright notice</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * and this permission notice shall be included in</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * all copies or substantial</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * portions of the Software.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> * WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> * NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> * AUTHORS OR COPYRIGHT HOLDERS BE</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> * LIABILITY, WHETHER IN AN ACTION OF</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * OUT OF OR IN CONNECTION WITH</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * SOFTWARE.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#ifndef LUMEX_XML_XPATH_MEMORY_XPATH_MEMORY_BLOCK_HPP</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#define LUMEX_XML_XPATH_MEMORY_XPATH_MEMORY_BLOCK_HPP</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
@@ -135,28 +173,28 @@ $(document).ready(function(){initNavTree('a01064_source.html',''); initResizable
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a01043.html">lumex/xml/xpath/constants/XPathConstants.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">using namespace </span><a class="code" href="a01453.html">lumex::xml::xpath::constants::Constants</a>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01286.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">xml</a></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01286.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">xml</a></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">namespace </span>xpath</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">namespace </span>xpath</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">namespace </span>memory</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">namespace </span>memory</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="a03382.html">  109</a></span>&#160;<span class="keyword">struct </span><a class="code" href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code" href="a03382.html">XPathMemoryBlock</a></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">using namespace </span><a class="code" href="a01454.html">lumex::xml::xpath::constants::Constants</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="a03383.html">  109</a></span>&#160;<span class="keyword">struct </span><a class="code" href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code" href="a03383.html">XPathMemoryBlock</a></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="a03382.html#aeac00b0c5dbaab1cc464d0e6023b7d02">  113</a></span>&#160;  <a class="code" href="a03382.html">XPathMemoryBlock</a> *<a class="code" href="a03382.html#aeac00b0c5dbaab1cc464d0e6023b7d02">next</a>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="a03382.html#a9c4144c951cc2fe95f0f9f2934c514a0">  115</a></span>&#160;  std::size_t <a class="code" href="a03382.html#a9c4144c951cc2fe95f0f9f2934c514a0">capacity</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="a03383.html#aeac00b0c5dbaab1cc464d0e6023b7d02">  113</a></span>&#160;  <a class="code" href="a03383.html">XPathMemoryBlock</a> *<a class="code" href="a03383.html#aeac00b0c5dbaab1cc464d0e6023b7d02">next</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="a03383.html#a9c4144c951cc2fe95f0f9f2934c514a0">  115</a></span>&#160;  std::size_t <a class="code" href="a03383.html#a9c4144c951cc2fe95f0f9f2934c514a0">capacity</a>;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keyword">union</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  {</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// Details, not a brief: Doxygen 1.8 links the brief of an anonymous union</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">// member to a page it does not generate.</span></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="a03382.html#aa848e282072570af57e6c0adc3bb5090">  124</a></span>&#160;    std::array&lt;char, kxpath_memory_page_size&gt; <a class="code" href="a03382.html#aa848e282072570af57e6c0adc3bb5090">data</a>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="a03382.html#a609ddce5b4c11e12f5c5217b66d08b24">  127</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="a03382.html#a609ddce5b4c11e12f5c5217b66d08b24">alignment</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="a03383.html#aa848e282072570af57e6c0adc3bb5090">  124</a></span>&#160;    std::array&lt;char, kxpath_memory_page_size&gt; <a class="code" href="a03383.html#aa848e282072570af57e6c0adc3bb5090">data</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="a03383.html#a609ddce5b4c11e12f5c5217b66d08b24">  127</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="a03383.html#a609ddce5b4c11e12f5c5217b66d08b24">alignment</a>;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  };</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;} <span class="comment">// namespace memory</span></div>
@@ -171,16 +209,16 @@ $(document).ready(function(){initNavTree('a01064_source.html',''); initResizable
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif // !LUMEX_XML_XPATH_MEMORY_XPATH_MEMORY_BLOCK_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01453_html"><div class="ttname"><a href="a01453.html">lumex::xml::xpath::constants::Constants</a></div><div class="ttdef"><b>Definition:</b> XPathConstants.hpp:66</div></div>
+<div class="ttc" id="aa03383_html_aa848e282072570af57e6c0adc3bb5090"><div class="ttname"><a href="a03383.html#aa848e282072570af57e6c0adc3bb5090">lumex::xml::xpath::memory::XPathMemoryBlock::data</a></div><div class="ttdeci">std::array&lt; char, kxpath_memory_page_size &gt; data</div><div class="ttdef"><b>Definition:</b> XPathMemoryBlock.hpp:124</div></div>
+<div class="ttc" id="aa03383_html_a609ddce5b4c11e12f5c5217b66d08b24"><div class="ttname"><a href="a03383.html#a609ddce5b4c11e12f5c5217b66d08b24">lumex::xml::xpath::memory::XPathMemoryBlock::alignment</a></div><div class="ttdeci">double alignment</div><div class="ttdef"><b>Definition:</b> XPathMemoryBlock.hpp:127</div></div>
 <div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div><div class="ttdoc">Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,...</div></div>
+<div class="ttc" id="aa01454_html"><div class="ttname"><a href="a01454.html">lumex::xml::xpath::constants::Constants</a></div><div class="ttdef"><b>Definition:</b> XPathConstants.hpp:66</div></div>
 <div class="ttc" id="aa01286_html_a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55"><div class="ttname"><a href="a01286.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">lumex::applied::logger::logger_config_format_t::plain_text</a></div><div class="ttdeci">@ plain_text</div><div class="ttdoc">Prefixed KEY=value lines (historical enable_logs).</div></div>
-<div class="ttc" id="aa03382_html_aa848e282072570af57e6c0adc3bb5090"><div class="ttname"><a href="a03382.html#aa848e282072570af57e6c0adc3bb5090">lumex::xml::xpath::memory::XPathMemoryBlock::data</a></div><div class="ttdeci">std::array&lt; char, kxpath_memory_page_size &gt; data</div><div class="ttdef"><b>Definition:</b> XPathMemoryBlock.hpp:124</div></div>
-<div class="ttc" id="aa03382_html_a9c4144c951cc2fe95f0f9f2934c514a0"><div class="ttname"><a href="a03382.html#a9c4144c951cc2fe95f0f9f2934c514a0">lumex::xml::xpath::memory::XPathMemoryBlock::capacity</a></div><div class="ttdeci">std::size_t capacity</div><div class="ttdoc">The total usable capacity of the data array in bytes.</div><div class="ttdef"><b>Definition:</b> XPathMemoryBlock.hpp:115</div></div>
-<div class="ttc" id="aa03382_html_aeac00b0c5dbaab1cc464d0e6023b7d02"><div class="ttname"><a href="a03382.html#aeac00b0c5dbaab1cc464d0e6023b7d02">lumex::xml::xpath::memory::XPathMemoryBlock::next</a></div><div class="ttdeci">XPathMemoryBlock * next</div><div class="ttdoc">Pointer to the next memory block in the chain. nullptr if this is the last block.</div><div class="ttdef"><b>Definition:</b> XPathMemoryBlock.hpp:113</div></div>
-<div class="ttc" id="aa03382_html"><div class="ttname"><a href="a03382.html">lumex::xml::xpath::memory::XPathMemoryBlock</a></div><div class="ttdoc">Represents a block of memory used by XPathAllocator.</div><div class="ttdef"><b>Definition:</b> XPathMemoryBlock.hpp:110</div></div>
-<div class="ttc" id="aa03382_html_a609ddce5b4c11e12f5c5217b66d08b24"><div class="ttname"><a href="a03382.html#a609ddce5b4c11e12f5c5217b66d08b24">lumex::xml::xpath::memory::XPathMemoryBlock::alignment</a></div><div class="ttdeci">double alignment</div><div class="ttdef"><b>Definition:</b> XPathMemoryBlock.hpp:127</div></div>
+<div class="ttc" id="aa03383_html"><div class="ttname"><a href="a03383.html">lumex::xml::xpath::memory::XPathMemoryBlock</a></div><div class="ttdoc">Represents a block of memory used by XPathAllocator.</div><div class="ttdef"><b>Definition:</b> XPathMemoryBlock.hpp:110</div></div>
+<div class="ttc" id="aa03383_html_a9c4144c951cc2fe95f0f9f2934c514a0"><div class="ttname"><a href="a03383.html#a9c4144c951cc2fe95f0f9f2934c514a0">lumex::xml::xpath::memory::XPathMemoryBlock::capacity</a></div><div class="ttdeci">std::size_t capacity</div><div class="ttdoc">The total usable capacity of the data array in bytes.</div><div class="ttdef"><b>Definition:</b> XPathMemoryBlock.hpp:115</div></div>
 <div class="ttc" id="aa00917_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:90</div></div>
-<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:65</div></div>
+<div class="ttc" id="aa03383_html_aeac00b0c5dbaab1cc464d0e6023b7d02"><div class="ttname"><a href="a03383.html#aeac00b0c5dbaab1cc464d0e6023b7d02">lumex::xml::xpath::memory::XPathMemoryBlock::next</a></div><div class="ttdeci">XPathMemoryBlock * next</div><div class="ttdoc">Pointer to the next memory block in the chain. nullptr if this is the last block.</div><div class="ttdef"><b>Definition:</b> XPathMemoryBlock.hpp:113</div></div>
 <div class="ttc" id="aa01043_html"><div class="ttname"><a href="a01043.html">XPathConstants.hpp</a></div><div class="ttdoc">Size limits and alignment of the XPath engine.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

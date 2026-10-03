@@ -1,13 +1,13 @@
 var a00581 =
 [
-    [ "filesystem_result", "a02226.html", "a02226" ],
-    [ "filesystem_result< void >", "a02230.html", "a02230" ],
-    [ "path", "a02234.html", "a02234" ],
-    [ "file_status", "a02238.html", "a02238" ],
-    [ "space_info", "a02242.html", "a02242" ],
-    [ "directory_entry", "a02246.html", "a02246" ],
-    [ "directory_iterator", "a02250.html", "a02250" ],
-    [ "lumex_filesystem", "a02254.html", "a02254" ],
+    [ "filesystem_result", "a02227.html", "a02227" ],
+    [ "filesystem_result< void >", "a02231.html", "a02231" ],
+    [ "path", "a02235.html", "a02235" ],
+    [ "file_status", "a02239.html", "a02239" ],
+    [ "space_info", "a02243.html", "a02243" ],
+    [ "directory_entry", "a02247.html", "a02247" ],
+    [ "directory_iterator", "a02251.html", "a02251" ],
+    [ "lumex_filesystem", "a02255.html", "a02255" ],
     [ "directory_entry", "a00581.html#ad9508c65a498b50d9ad8b0b1a4c75314", null ],
     [ "directory_iterator", "a00581.html#a41c4d1c33b0560e1c9fbd44ae2c9630d", null ],
     [ "file_status", "a00581.html#a4fa96571ea1ad2e8f4b74e6644268b84", null ],
@@ -17,6 +17,7 @@ var a00581 =
     [ "path", "a00581.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f", null ],
     [ "perms", "a00581.html#a610775ac8ed8aa90267d387b2123512a", null ],
     [ "space_info", "a00581.html#a69427512147609fe3903730db2235c83", null ],
+    [ "write_mode", "a00581.html#aa70994f859f17985be6c3d83150898b3", null ],
     [ "file_type", "a00581.html#ab64d400fe6c2cab49e4cf4c63a82cc19", [
       [ "not_found", "a00581.html#ab64d400fe6c2cab49e4cf4c63a82cc19a7500611bf7030bc99d25c354e7b64714", null ],
       [ "none", "a00581.html#ab64d400fe6c2cab49e4cf4c63a82cc19a334c4a4c42fdb79d7ebc3e73b517e6f8", null ],
@@ -50,6 +51,10 @@ var a00581 =
       [ "mask", "a00581.html#ab64132a6feae0925f48c883dd04ce26faf2ce11ebf110993621bedd8e747d7b1b", null ],
       [ "unknown", "a00581.html#ab64132a6feae0925f48c883dd04ce26faad921d60486366258809553a3db49a4a", null ]
     ] ],
+    [ "write_mode", "a00581.html#aff3ca2c04a9619a71b70141134fff438", [
+      [ "text", "a00581.html#aff3ca2c04a9619a71b70141134fff438a1cb251ec0d568de6a929b520c4aed8d1", null ],
+      [ "binary", "a00581.html#aff3ca2c04a9619a71b70141134fff438a9d7183f16acce70658f686ae7f1a4d20", null ]
+    ] ],
     [ "checkName", "a00581.html#ad4d22be12b855bec6255dbb4f641d33b", null ],
     [ "isFileExists", "a00581.html#a4d32104113661ba1236b3f0b6f95ac54", null ],
     [ "operator!=", "a00581.html#a1111320e1e6c9eb5d0f18ec9f8f6a5df", null ],
@@ -74,5 +79,6 @@ var a00581 =
     [ "operator~", "a00581.html#abbc1fed953cec690ccc6158ea34ef4aa", null ],
     [ "sanitizeName", "a00581.html#ad620abd69e1b7b23c9590e8222585e66", null ],
     [ "KDEFAULT_HUNDRED_NANOSECONDS_PER_SECOND", "a00581.html#accc2a42364c03e157dc46ce5d69885bd", null ],
-    [ "KDEFAULT_WINDOWS_FILETIME_TO_UNIX_EPOCH_INTERVALS", "a00581.html#a2b2acf798928484250effe218827d8bf", null ]
+    [ "KDEFAULT_WINDOWS_FILETIME_TO_UNIX_EPOCH_INTERVALS", "a00581.html#a2b2acf798928484250effe218827d8bf", null ],
+    [ "KTEMPORARY_FILE_SUFFIX", "a00581.html#ab845924fffc1dea40f97ae6da16622a3", null ]
 ];
