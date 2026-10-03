@@ -322,6 +322,7 @@ class lumex::core::expected::result::Expected&lt; SuccessType, ErrorType &gt;</h
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This implementation is not thread-safe by default. Accessing <code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a></code> from several threads without external synchronization is undefined behavior if <code>SuccessType</code> or <code>ErrorType</code> are not thread-safe. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Using <code><a class="el" href="a02183.html" title="Class that mimics std::expected from C++23.">Expected</a></code> with types that have non-trivial constructors/destructors or allocate memory, may be slower than C++23 <code>std::expected</code>, because object lifetime is managed by hand. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Works from C++11. A member that is not const, or whose body needs more than one statement, is marked <code>LUMEX_CONSTEXPR_CXX14</code>: it is <code>constexpr</code> from C++14 and an ordinary function at C++11, where a <code>constexpr</code> member function is implicitly const (so <code>error () &amp;</code> would collide with <code>error () const &amp;</code>) and its body must be a single return statement. </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="aa3a2c07da94785f166c68655bbad5524"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3a2c07da94785f166c68655bbad5524">&#9670;&nbsp;</a></span>error_type</h2>

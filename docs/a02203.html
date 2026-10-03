@@ -308,7 +308,9 @@ class lumex::core::expected::result::Expected&lt; void, ErrorType &gt;</h3>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Here <code><a class="el" href="a02203.html#a721e692b24d56d47fe4b73bf383ffe71" title="Checks whether Expected&lt;void, ErrorType&gt; is in the success (void) state.">has_value()</a></code> means success without a returned value, and <code>!has_value()</code> means the object holds an error. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Here <code><a class="el" href="a02203.html#a721e692b24d56d47fe4b73bf383ffe71" title="Checks whether Expected&lt;void, ErrorType&gt; is in the success (void) state.">has_value()</a></code> means success without a returned value, and <code>!has_value()</code> means the object holds an error. </dd>
+<dd>
+Works from C++11. As in the primary template, a member that is not const, returns <code>void</code> or needs more than one statement is marked <code>LUMEX_CONSTEXPR_CXX14</code>: <code>constexpr</code> from C++14, an ordinary function at C++11. </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a158f216904bec15785a855e338130093"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a158f216904bec15785a855e338130093">&#9670;&nbsp;</a></span>error_type</h2>

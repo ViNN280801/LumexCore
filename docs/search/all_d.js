@@ -32,7 +32,7 @@ var searchData=
   ['max_5fenv_5fbuffer_5fsize_3021',['MAX_ENV_BUFFER_SIZE',['../a02131.html#abd9cc0fac923889d2c93b89341af54b7',1,'lumex::core::environment::env::LumexEnvironment']]],
   ['max_5fsimd_5fwidth_5fbits_3022',['max_simd_width_bits',['../a01467.html#a8fad520d9fa5c3b59e76b9575ae1cf56',1,'lumex::applied::hardware::caps::cpu_vectorization_info_t']]],
   ['max_5fsize_3023',['max_size',['../a02155.html#af2970d9ce29c75c577517c78238f7695',1,'lumex::core::exceptions::stacktrace::LumexBasicStacktrace::max_size()'],['../a02667.html#a081bd2dbe2129dc391387ed3353c78a9',1,'lumex::core::string_view::view::LumexStringView::max_size()'],['../a02671.html#a08b55fefe0b57de4debd1c60d867a3cd',1,'lumex::core::string_view::view::LumexWStringView::max_size()']]],
-  ['mb_5f1_3024',['MB_1',['../a02715.html#ac4c9793b6d91eef07331331f694a2c9c',1,'lumex::core::utility::dump::CoreDumpGenerator']]],
+  ['mb_5f1_3024',['MB_1',['../a02715.html#a16583e27fc86f0b720391cfeb64e4f4d',1,'lumex::core::utility::dump::CoreDumpGenerator']]],
   ['measure_5fexecution_5ftime_3025',['measure_execution_time',['../a01386.html#a2cc90c92f6a2261ecfb8bc76e3943ed1',1,'lumex::core::time::timer']]],
   ['measure_5ftime_3026',['measure_time',['../a01386.html#a78cd5363784bcb68df9fbe3e0bd5db9f',1,'lumex::core::time::timer']]],
   ['message_3027',['message',['../a01507.html#a728f5d7b7d8997eb17a025a7279ed91a',1,'lumex::applied::logger::logger::log_entry_t']]],

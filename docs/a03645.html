@@ -174,8 +174,8 @@ Examples</h1>
 <h1><a class="anchor" id="autotoc_md9"></a>
 How it is verified</h1>
 <ul>
-<li>Three suites run the same sources at C++11, C++17 and C++20 (<code>LumexFormatTests</code>, <code>LumexFormatCxx17Tests</code>, <code>LumexFormatCxx20Tests</code>; their CTest names start with <code>fmt.</code> and end with <code>.cxx17</code> or <code>.cxx20</code> for the newer suites, so <code>ctest -R "^fmt"</code> selects them all), with the input / output cases of fmt's <code>format-test.cc</code> ported and the expectations checked against <code>std::format</code>.</li>
-<li>Differential fuzzing (<code>LumexFormatDifferential.tests.cpp</code>, C++20): about 120 000 random specifications, valid and invalid, applied to edge-case integers, floating-point values, strings, characters, <code>bool</code> and pointers; LumexFormat must produce exactly <code>std::format</code>'s text or fail exactly when it fails.</li>
+<li>One suite per standard, C++11, C++14, C++17 and C++20 (<code>LumexFormatCxx11Tests</code> to <code>LumexFormatCxx20Tests</code>); each runs the test files of its standard (<code>LumexFormatParse.cxx17.tests.cpp</code> belongs to C++17) and of every lower one. Their CTest names start with <code>fmt.</code> and end with <code>.cxx11</code> to <code>.cxx20</code>, so <code>ctest -R "^fmt"</code> selects them all. The input / output cases of fmt's <code>format-test.cc</code> are ported, and the expectations are checked against <code>std::format</code>.</li>
+<li>Differential fuzzing (<code>LumexFormatDifferential.cxx20.tests.cpp</code>): about 120 000 random specifications, valid and invalid, applied to edge-case integers, floating-point values, strings, characters, <code>bool</code> and pointers; LumexFormat must produce exactly <code>std::format</code>'s text or fail exactly when it fails.</li>
 <li>Compile-fail checks (<code>cmake.format_compile_checks</code>): invalid literal format strings must not compile at C++20.</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md10"></a>
@@ -192,10 +192,10 @@ Benchmarks</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01358_html_a611c24543a8da9a730e833ded83a42de"><div class="ttname"><a href="a01358.html#a611c24543a8da9a730e833ded83a42de">lumex::core::fmt::arg</a></div><div class="ttdeci">Detail::named_arg_t&lt; char, T &gt; arg(char const *name, T const &amp;value) noexcept</div><div class="ttdoc">Names value for a {name} replacement field.</div><div class="ttdef"><b>Definition:</b> LumexFormat.hpp:3222</div></div>
-<div class="ttc" id="aa01358_html"><div class="ttname"><a href="a01358.html">lumex::core::fmt</a></div><div class="ttdef"><b>Definition:</b> LumexFormat.hpp:137</div></div>
+<div class="ttc" id="aa01358_html_a611c24543a8da9a730e833ded83a42de"><div class="ttname"><a href="a01358.html#a611c24543a8da9a730e833ded83a42de">lumex::core::fmt::arg</a></div><div class="ttdeci">Detail::named_arg_t&lt; char, T &gt; arg(char const *name, T const &amp;value) noexcept</div><div class="ttdoc">Names value for a {name} replacement field.</div><div class="ttdef"><b>Definition:</b> LumexFormat.hpp:3227</div></div>
+<div class="ttc" id="aa01358_html"><div class="ttname"><a href="a01358.html">lumex::core::fmt</a></div><div class="ttdef"><b>Definition:</b> LumexFormat.hpp:142</div></div>
 <div class="ttc" id="aa01229_html"><div class="ttname"><a href="a01229.html">LumexFormat</a></div><div class="ttdoc">Format module: std::format-style text formatting from C++11 on, including ranges, tuples and std::chr...</div></div>
-<div class="ttc" id="aa01358_html_a6a63800323204704cefa342dec4cad40"><div class="ttname"><a href="a01358.html#a6a63800323204704cefa342dec4cad40">lumex::core::fmt::format</a></div><div class="ttdeci">std::string format(FormatString&lt; Args... &gt; text, Args &amp;&amp;...args)</div><div class="ttdoc">Formats args into a std::string.</div><div class="ttdef"><b>Definition:</b> LumexFormat.hpp:3493</div></div>
+<div class="ttc" id="aa01358_html_a6a63800323204704cefa342dec4cad40"><div class="ttname"><a href="a01358.html#a6a63800323204704cefa342dec4cad40">lumex::core::fmt::format</a></div><div class="ttdeci">std::string format(FormatString&lt; Args... &gt; text, Args &amp;&amp;...args)</div><div class="ttdoc">Formats args into a std::string.</div><div class="ttdef"><b>Definition:</b> LumexFormat.hpp:3498</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

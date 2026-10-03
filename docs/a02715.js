@@ -28,10 +28,10 @@ var a02715 =
     [ "setAdminGroupName", "a02715.html#a808acb35d185220b2965a498ee1b1415", null ],
     [ "setCorePatternForCrash", "a02715.html#a6ad3f785991fdb37ea2da067c372dc70", null ],
     [ "setDumpType", "a02715.html#aacf87931adc85ff4a1bf3a12968ef030", null ],
-    [ "KB_128", "a02715.html#a5d732f873166322b30ce9d1d0ce33d60", null ],
-    [ "KB_256", "a02715.html#a771e3a2f16d829c99f83caddff8759cb", null ],
-    [ "KB_32", "a02715.html#a94483f2ffd1b322d166ae38adeede8a6", null ],
-    [ "KB_512", "a02715.html#a8c9a2eb38f32474c2ca274e56d404bab", null ],
-    [ "KB_64", "a02715.html#af22834fd33025d775e5c947335e081de", null ],
-    [ "MB_1", "a02715.html#ac4c9793b6d91eef07331331f694a2c9c", null ]
+    [ "KB_128", "a02715.html#a49c2f858e7768dbe39a0cdb8bc967785", null ],
+    [ "KB_256", "a02715.html#a715f781fc0d50b611e97623a99a9573c", null ],
+    [ "KB_32", "a02715.html#a6ae95d5688b9227a21a5b8926d81a2e1", null ],
+    [ "KB_512", "a02715.html#ad4515fe1ae72b4b913b3231c8d44d69a", null ],
+    [ "KB_64", "a02715.html#a81c43992f54e161a1096a7ee38be7b99", null ],
+    [ "MB_1", "a02715.html#a16583e27fc86f0b720391cfeb64e4f4d", null ]
 ];
