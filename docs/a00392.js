@@ -1,9 +1,9 @@
 var a00392 =
 [
-    [ "logger_config_t", "a01424.html", "a01424" ],
-    [ "log_entry_t", "a01428.html", "a01428" ],
-    [ "logger_applied_config_view_t", "a01432.html", "a01432" ],
-    [ "LumexLogger", "a01436.html", "a01436" ],
+    [ "logger_config_t", "a01502.html", "a01502" ],
+    [ "log_entry_t", "a01506.html", "a01506" ],
+    [ "logger_applied_config_view_t", "a01510.html", "a01510" ],
+    [ "LumexLogger", "a01514.html", "a01514" ],
     [ "LOGGER_ADDRESS_TO_STRING", "a00392.html#a0c07d4a02345939326345d2f7d12ec97", null ],
     [ "LOGGER_ALIGNMENT_LOG_ENTRY", "a00392.html#a335046e026041d5774ca5ce318f0ce19", null ],
     [ "LOGGER_ALIGNMENT_LOGGER_CONFIG", "a00392.html#acd7329da93b3b202329758970079d88f", null ],

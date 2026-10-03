@@ -1,8 +1,13 @@
 var a01400 =
 [
-    [ "apply_optimal_rendering_settings", "a01400.html#a3eaf2f4c04de9dfd7a0692f22f8c0b41", null ],
-    [ "detect_hardware", "a01400.html#af3c48849b42dbcc0651429190b4a86b9", null ],
-    [ "estimate_cpu_generation", "a01400.html#ae7ff4b9ce7d8a1f9749c1f01a0e2d182", null ],
-    [ "is_old_cpu", "a01400.html#a2947a856c7b322f8ed0f3135d34b389f", null ],
-    [ "should_use_software_rendering", "a01400.html#abe50368bd4ba1088c99e329d0fc5deb4", null ]
+    [ "default_return", "a02774.html", "a02774" ],
+    [ "default_return< T * >", "a02782.html", "a02782" ],
+    [ "default_return< void >", "a02778.html", "a02778" ],
+    [ "has_type", "a02762.html", null ],
+    [ "has_type< T, void_t< typename T::type > >", "a02766.html", null ],
+    [ "indirection_of", "a02786.html", "a02786" ],
+    [ "indirection_of< T & >", "a02794.html", "a02794" ],
+    [ "indirection_of< T * >", "a02790.html", "a02790" ],
+    [ "make_void", "a02758.html", "a02758" ],
+    [ "type_identity", "a02770.html", "a02770" ]
 ];

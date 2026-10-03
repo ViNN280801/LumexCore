@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::applied::json::diagnostics::Detail Namespace Reference</title>
+<title>LumexLib: LumexSettings File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,232 +93,66 @@ $(document).ready(function(){initNavTree('a01202.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::applied::json::diagnostics::Detail Namespace Reference</div>  </div>
+<div class="title">LumexSettings File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:aca3063965d5431c7f906a0a354f2d4c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01202.html#aca3063965d5431c7f906a0a354f2d4c4">append_parts</a> (std::ostringstream &amp;)</td></tr>
-<tr class="separator:aca3063965d5431c7f906a0a354f2d4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5350d69eada86df796421b3f44453e82"><td class="memTemplParams" colspan="2">template&lt;typename Head , typename... Tail&gt; </td></tr>
-<tr class="memitem:a5350d69eada86df796421b3f44453e82"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01202.html#a5350d69eada86df796421b3f44453e82">append_parts</a> (std::ostringstream &amp;stream, Head const &amp;head, Tail const &amp;...tail)</td></tr>
-<tr class="separator:a5350d69eada86df796421b3f44453e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6f3b82c767e9d70cfc7b4fad75bdf33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01202.html#ab6f3b82c767e9d70cfc7b4fad75bdf33">write_to_stderr</a> (<a class="el" href="a01201.html#acf6c250fe30b33bf20e97c6bc52ad446">LumexJsonDiagnosticLevel</a> level, char const *message) noexcept</td></tr>
-<tr class="memdesc:ab6f3b82c767e9d70cfc7b4fad75bdf33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default sink: writes <code>[level] message</code> to <code>std::cerr</code> for <code>warning</code> and <code>error</code>, drops <code>debug</code> and <code>info</code>. Never throws.  <a href="a01202.html#ab6f3b82c767e9d70cfc7b4fad75bdf33">More...</a><br /></td></tr>
-<tr class="separator:ab6f3b82c767e9d70cfc7b4fad75bdf33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8e38666393a49d562e6873564539189"><td class="memTemplParams" colspan="2">template&lt;typename... Parts&gt; </td></tr>
-<tr class="memitem:ad8e38666393a49d562e6873564539189"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01202.html#ad8e38666393a49d562e6873564539189">report</a> (<a class="el" href="a01201.html#acf6c250fe30b33bf20e97c6bc52ad446">LumexJsonDiagnosticLevel</a> level, Parts const &amp;...parts) noexcept</td></tr>
-<tr class="memdesc:ad8e38666393a49d562e6873564539189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates <code>parts</code> with <code>operator&lt;&lt;</code> and sends the text to the installed sink, or to the default one when the slot is empty or the sink throws. Never throws: a failure while building the text drops the message.  <a href="a01202.html#ad8e38666393a49d562e6873564539189">More...</a><br /></td></tr>
-<tr class="separator:ad8e38666393a49d562e6873564539189"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="aca3063965d5431c7f906a0a354f2d4c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca3063965d5431c7f906a0a354f2d4c4">&#9670;&nbsp;</a></span>append_parts() <span class="overload">[1/2]</span></h2>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lumex::applied::json::diagnostics::Detail::append_parts </td>
-          <td>(</td>
-          <td class="paramtype">std::ostringstream &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
+<p>Settings module: section, key and value configuration files in INI, JSON or XML behind one interface, plus a guard that restores default keys, backs up a corrupted file and validates values.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00449_source.html">interface/ILumexSettings.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00431_source.html">factory/LumexSettingsFactory.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00437_source.html">guard/LumexSettingsGuard.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00443_source.html">ini/LumexSettingsINI.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00446_source.html">ini/SupportedConfigExtensions.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00455_source.html">json/LumexSettingsJSON.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00461_source.html">xml/LumexSettingsXML.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for LumexSettings:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01202_aca3063965d5431c7f906a0a354f2d4c4_icgraph.png" border="0" usemap="#aa01202_aca3063965d5431c7f906a0a354f2d4c4_icgraph" alt=""/></div>
-<map name="a01202_aca3063965d5431c7f906a0a354f2d4c4_icgraph" id="aa01202_aca3063965d5431c7f906a0a354f2d4c4_icgraph">
-<area shape="rect" title=" " alt="" coords="311,45,465,101"/>
-<area shape="rect" href="a01202.html#a5350d69eada86df796421b3f44453e82" title=" " alt="" coords="108,5,263,61"/>
-<area shape="rect" href="a01202.html#ad8e38666393a49d562e6873564539189" title="Concatenates parts with operator&lt;&lt; and sends the text to the installed sink, or to the default one wh..." alt="" coords="108,85,263,141"/>
-<area shape="rect" href="a00893.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,100,60,127"/>
+<div class="center"><img src="a01203.png" border="0" usemap="#aLumexSettings" alt=""/></div>
+<map name="LumexSettings" id="aLumexSettings">
+<area shape="rect" title="Settings module: section, key and value configuration files in INI, JSON or XML behind one interface,..." alt="" coords="921,5,1040,32"/>
+<area shape="rect" href="a00449.html" title="The interface every settings format implements: load, save, and get, add or remove a string value by ..." alt="" coords="874,162,1087,189"/>
+<area shape="rect" href="a00431.html" title="Creates the ILumexSettings implementation for a configuration file format." alt="" coords="701,80,943,107"/>
+<area shape="rect" href="a00446.html" title="The configuration file formats the settings module knows, used to select an implementation from Lumex..." alt="" coords="547,155,799,196"/>
+<area shape="rect" href="a00437.html" title="Format&#45;agnostic backup/repair/validation layer built on top of ILumexSettings." alt="" coords="243,80,470,107"/>
+<area shape="rect" href="a00443.html" title="ILumexSettings over INI files, parsed and written by the library itself." alt="" coords="1019,80,1204,107"/>
+<area shape="rect" href="a00455.html" title="ILumexSettings over JSON files, parsed and written with the vendored nlohmann/json." alt="" coords="1229,80,1439,107"/>
+<area shape="rect" href="a00461.html" title="ILumexSettings over XML files, parsed and written with the library&#39;s own lumex::xml module." alt="" coords="1463,80,1666,107"/>
+<area shape="rect" href="a00917.html" title="Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,..." alt="" coords="962,251,1143,278"/>
+<area shape="rect" title=" " alt="" coords="198,251,257,278"/>
+<area shape="rect" title=" " alt="" coords="445,162,522,189"/>
+<area shape="rect" title=" " alt="" coords="639,251,706,278"/>
+<area shape="rect" title=" " alt="" coords="144,162,231,189"/>
+<area shape="rect" title=" " alt="" coords="255,162,319,189"/>
+<area shape="rect" title=" " alt="" coords="5,162,68,189"/>
+<area shape="rect" href="a00701.html" title="Macros that spell C++ keywords and specifiers only where the compiled standard supports them,..." alt="" coords="326,244,539,285"/>
+<area shape="rect" title=" " alt="" coords="1493,162,1617,189"/>
+<area shape="rect" href="a00695.html" title="Macros that declare static constants in the same way in every C++ standard: LUMEX_CONST_NUM,..." alt="" coords="1163,155,1417,196"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a5350d69eada86df796421b3f44453e82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5350d69eada86df796421b3f44453e82">&#9670;&nbsp;</a></span>append_parts() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Head , typename... Tail&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lumex::applied::json::diagnostics::Detail::append_parts </td>
-          <td>(</td>
-          <td class="paramtype">std::ostringstream &amp;&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Head const &amp;&#160;</td>
-          <td class="paramname"><em>head</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Tail const &amp;...&#160;</td>
-          <td class="paramname"><em>tail</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01202_a5350d69eada86df796421b3f44453e82_cgraph.png" border="0" usemap="#aa01202_a5350d69eada86df796421b3f44453e82_cgraph" alt=""/></div>
-<map name="a01202_a5350d69eada86df796421b3f44453e82_cgraph" id="aa01202_a5350d69eada86df796421b3f44453e82_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,160,61"/>
-<area shape="rect" href="a01202.html#aca3063965d5431c7f906a0a354f2d4c4" title=" " alt="" coords="208,5,363,61"/>
+<div class="center"><img src="a01204.png" border="0" usemap="#aLumexSettingsdep" alt=""/></div>
+<map name="LumexSettingsdep" id="aLumexSettingsdep">
+<area shape="rect" title="Settings module: section, key and value configuration files in INI, JSON or XML behind one interface,..." alt="" coords="354,5,473,32"/>
+<area shape="rect" href="a00863.html" title=" " alt="" coords="5,80,171,107"/>
+<area shape="rect" href="a00866.html" title=" " alt="" coords="195,80,394,107"/>
+<area shape="rect" href="a00869.html" title=" " alt="" coords="418,80,649,107"/>
+<area shape="rect" href="a00872.html" title=" " alt="" coords="673,80,871,107"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="ad8e38666393a49d562e6873564539189"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8e38666393a49d562e6873564539189">&#9670;&nbsp;</a></span>report()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Parts&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lumex::applied::json::diagnostics::Detail::report </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01201.html#acf6c250fe30b33bf20e97c6bc52ad446">LumexJsonDiagnosticLevel</a>&#160;</td>
-          <td class="paramname"><em>level</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Parts const &amp;...&#160;</td>
-          <td class="paramname"><em>parts</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Concatenates <code>parts</code> with <code>operator&lt;&lt;</code> and sends the text to the installed sink, or to the default one when the slot is empty or the sink throws. Never throws: a failure while building the text drops the message. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01202_ad8e38666393a49d562e6873564539189_cgraph.png" border="0" usemap="#aa01202_ad8e38666393a49d562e6873564539189_cgraph" alt=""/></div>
-<map name="a01202_ad8e38666393a49d562e6873564539189_cgraph" id="aa01202_ad8e38666393a49d562e6873564539189_cgraph">
-<area shape="rect" title="Concatenates parts with operator&lt;&lt; and sends the text to the installed sink, or to the default one wh..." alt="" coords="5,45,160,101"/>
-<area shape="rect" href="a01202.html#aca3063965d5431c7f906a0a354f2d4c4" title=" " alt="" coords="208,5,363,61"/>
-<area shape="rect" href="a01202.html#ab6f3b82c767e9d70cfc7b4fad75bdf33" title="Default sink: writes [level] message to std::cerr for warning and error, drops debug and info...." alt="" coords="208,85,363,141"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01202_ad8e38666393a49d562e6873564539189_icgraph.png" border="0" usemap="#aa01202_ad8e38666393a49d562e6873564539189_icgraph" alt=""/></div>
-<map name="a01202_ad8e38666393a49d562e6873564539189_icgraph" id="aa01202_ad8e38666393a49d562e6873564539189_icgraph">
-<area shape="rect" title="Concatenates parts with operator&lt;&lt; and sends the text to the installed sink, or to the default one wh..." alt="" coords="108,5,263,61"/>
-<area shape="rect" href="a00893.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ab6f3b82c767e9d70cfc7b4fad75bdf33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6f3b82c767e9d70cfc7b4fad75bdf33">&#9670;&nbsp;</a></span>write_to_stderr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lumex::applied::json::diagnostics::Detail::write_to_stderr </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01201.html#acf6c250fe30b33bf20e97c6bc52ad446">LumexJsonDiagnosticLevel</a>&#160;</td>
-          <td class="paramname"><em>level</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default sink: writes <code>[level] message</code> to <code>std::cerr</code> for <code>warning</code> and <code>error</code>, drops <code>debug</code> and <code>info</code>. Never throws. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01202_ab6f3b82c767e9d70cfc7b4fad75bdf33_icgraph.png" border="0" usemap="#aa01202_ab6f3b82c767e9d70cfc7b4fad75bdf33_icgraph" alt=""/></div>
-<map name="a01202_ab6f3b82c767e9d70cfc7b4fad75bdf33_icgraph" id="aa01202_ab6f3b82c767e9d70cfc7b4fad75bdf33_icgraph">
-<area shape="rect" title="Default sink: writes [level] message to std::cerr for warning and error, drops debug and info...." alt="" coords="311,5,465,61"/>
-<area shape="rect" href="a01202.html#ad8e38666393a49d562e6873564539189" title="Concatenates parts with operator&lt;&lt; and sends the text to the installed sink, or to the default one wh..." alt="" coords="108,5,263,61"/>
-<area shape="rect" href="a00893.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
-</map>
-</div>
-
-</div>
-</div>
-</div><!-- contents -->
+</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Settings module: section, key and value configuration files in INI, JSON or XML behind one interface, plus a guard that restores default keys, backs up a corrupted file and validates values. </p>
+<p>Link <code>lumex::settings</code> (compiled library). Works from C++11. INI is always available; XML when <code>lumex::xml</code> is part of the build (<code>LUMEX_SETTINGS_WITH_XML</code>), JSON when the vendored nlohmann/json header is present (<code>LUMEX_SETTINGS_WITH_JSON</code>). The umbrella includes the interface (<code><a class="el" href="a00449.html" title="The interface every settings format implements: load, save, and get, add or remove a string value by ...">interface/ILumexSettings.hpp</a></code>), the factory, the guard, and the INI, JSON and XML implementations. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01186.html">applied</a></li><li class="navelem"><a class="el" href="a01200.html">json</a></li><li class="navelem"><a class="el" href="a01201.html">diagnostics</a></li><li class="navelem"><a class="el" href="a01202.html">Detail</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_de45db85bd98abf883bc2bd6c3907fd8.html">applied</a></li><li class="navelem"><a class="el" href="dir_9258c4c02d6a33184acee8f108260d77.html">settings</a></li><li class="navelem"><a class="el" href="a01202.html">LumexSettings</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

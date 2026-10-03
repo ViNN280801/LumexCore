@@ -98,62 +98,62 @@ $(document).ready(function(){initNavTree('a01094_source.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 <a href="a01094.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef LUMEX_XML_XPATH_PARSER_LEXER_XPATH_LEXER_STRING_HPP</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define LUMEX_XML_XPATH_PARSER_LEXER_XPATH_LEXER_STRING_HPP</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00917.html">lumex/LumexExport.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a01004.html">lumex/xml/types/XmlTypes.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">using namespace </span><a class="code" href="a01369.html">lumex::xml::types</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">using namespace </span><a class="code" href="a01370.html">lumex::xml::types::Types</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01185.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">xml</a></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">namespace </span>xpath</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">namespace </span>parser</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">namespace </span>lexer</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="a03336.html">   71</a></span>&#160;<span class="keyword">struct </span><a class="code" href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code" href="a03336.html">XPathLexerString</a></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> <span class="keyword">const</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="a03336.html#acfc06bcd095831e62b7fac6be3f45fcd">   75</a></span>&#160;      *begin{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="a03336.html#acdd4cb5585fcb2b95012ec40283a0dcc">   77</a></span>&#160;<span class="comment"></span>  <a class="code" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> <span class="keyword">const</span> *end{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="a03336.html#a4fa9e69901b798a94896d507608e2b59">   84</a></span>&#160;  <a class="code" href="a03336.html#a4fa9e69901b798a94896d507608e2b59">XPathLexerString</a> () = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="a01255.html#ac96da0807d416d4354f8e227a54404fe">operator== </a>(<a class="code" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> <span class="keyword">const</span> *other) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif // !LUMEX_XML_XPATH_PARSER_LEXER_XPATH_LEXER_STRING_HPP</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#ifndef LUMEX_XML_XPATH_PARSER_LEXER_XPATH_LEXER_STRING_HPP</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define LUMEX_XML_XPATH_PARSER_LEXER_XPATH_LEXER_STRING_HPP</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00917.html">lumex/LumexExport.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a01004.html">lumex/xml/types/XmlTypes.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">using namespace </span><a class="code" href="a01447.html">lumex::xml::types</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">using namespace </span><a class="code" href="a01448.html">lumex::xml::types::Types</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01286.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">xml</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">namespace </span>xpath</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">namespace </span>parser</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">namespace </span>lexer</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="a03414.html">   80</a></span>&#160;<span class="keyword">struct </span><a class="code" href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code" href="a03414.html">XPathLexerString</a></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="a01448.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> <span class="keyword">const</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="a03414.html#acfc06bcd095831e62b7fac6be3f45fcd">   84</a></span>&#160;      *begin{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="a03414.html#acdd4cb5585fcb2b95012ec40283a0dcc">   86</a></span>&#160;<span class="comment"></span>  <a class="code" href="a01448.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> <span class="keyword">const</span> *end{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="a03414.html#a4fa9e69901b798a94896d507608e2b59">   93</a></span>&#160;  <a class="code" href="a03414.html#a4fa9e69901b798a94896d507608e2b59">XPathLexerString</a> () = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="a01333.html#ac96da0807d416d4354f8e227a54404fe">operator== </a>(<a class="code" href="a01448.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> <span class="keyword">const</span> *other) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#endif // !LUMEX_XML_XPATH_PARSER_LEXER_XPATH_LEXER_STRING_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa03336_html_a4fa9e69901b798a94896d507608e2b59"><div class="ttname"><a href="a03336.html#a4fa9e69901b798a94896d507608e2b59">lumex::xml::xpath::parser::lexer::XPathLexerString::XPathLexerString</a></div><div class="ttdeci">XPathLexerString()=default</div><div class="ttdoc">Default constructor. Constructs an empty string view.</div></div>
-<div class="ttc" id="aa01255_html_ac96da0807d416d4354f8e227a54404fe"><div class="ttname"><a href="a01255.html#ac96da0807d416d4354f8e227a54404fe">lumex::core::circular_buffer::operator==</a></div><div class="ttdeci">bool operator==(CircularBuffer&lt; T, Alloc &gt; const &amp;lhs, CircularBuffer&lt; T, Alloc &gt; const &amp;rhs)</div><div class="ttdoc">Equality comparison of two CircularBuffer objects.</div><div class="ttdef"><b>Definition:</b> CircularBuffer.hpp:1707</div></div>
-<div class="ttc" id="aa01094_html"><div class="ttname"><a href="a01094.html">XPathLexerString.hpp</a></div></div>
-<div class="ttc" id="aa00917_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:113</div></div>
-<div class="ttc" id="aa01370_html_a0826d7f05cf3c7528b2eb1a8bd26b2e8"><div class="ttname"><a href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">lumex::xml::types::Types::char_t</a></div><div class="ttdeci">char char_t</div><div class="ttdef"><b>Definition:</b> XmlTypes.hpp:56</div></div>
-<div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div></div>
-<div class="ttc" id="aa01208_html_a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55"><div class="ttname"><a href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">lumex::applied::logger::logger_config_format_t::plain_text</a></div><div class="ttdeci">@ plain_text</div><div class="ttdoc">Prefixed KEY=value lines (historical enable_logs).</div></div>
-<div class="ttc" id="aa01004_html"><div class="ttname"><a href="a01004.html">XmlTypes.hpp</a></div></div>
-<div class="ttc" id="aa01013_html"><div class="ttname"><a href="a01013.html">XmlUtils.hpp</a></div></div>
-<div class="ttc" id="aa01355_html"><div class="ttname"><a href="a01355.html">lumex::xml::utility</a></div><div class="ttdef"><b>Definition:</b> XmlAttribute.hpp:845</div></div>
-<div class="ttc" id="aa01381_html"><div class="ttname"><a href="a01381.html">lumex::xml::xpath::parser::lexer</a></div><div class="ttdef"><b>Definition:</b> XPathLexer.hpp:58</div></div>
-<div class="ttc" id="aa01355_html_aaf464c3947b249327d213a517baf5286"><div class="ttname"><a href="a01355.html#aaf464c3947b249327d213a517baf5286">lumex::xml::utility::strequalrange</a></div><div class="ttdeci">bool strequalrange(char_t const *lhs, char_t const *rhs, std::size_t count)</div><div class="ttdef"><b>Definition:</b> XmlUtils.hpp:853</div></div>
-<div class="ttc" id="aa01370_html"><div class="ttname"><a href="a01370.html">lumex::xml::types::Types</a></div><div class="ttdef"><b>Definition:</b> XmlTypes.hpp:55</div></div>
-<div class="ttc" id="aa00917_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:73</div></div>
-<div class="ttc" id="aa01369_html"><div class="ttname"><a href="a01369.html">lumex::xml::types</a></div><div class="ttdef"><b>Definition:</b> XmlTypes.hpp:53</div></div>
-<div class="ttc" id="aa01185_html"><div class="ttname"><a href="a01185.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
-<div class="ttc" id="aa03336_html"><div class="ttname"><a href="a03336.html">lumex::xml::xpath::parser::lexer::XPathLexerString</a></div><div class="ttdoc">Represents a string view used by the XPath lexer.</div><div class="ttdef"><b>Definition:</b> XPathLexerString.hpp:72</div></div>
+<div class="ttc" id="aa01448_html"><div class="ttname"><a href="a01448.html">lumex::xml::types::Types</a></div><div class="ttdef"><b>Definition:</b> XmlTypes.hpp:72</div></div>
+<div class="ttc" id="aa01094_html"><div class="ttname"><a href="a01094.html">XPathLexerString.hpp</a></div><div class="ttdoc">XPathLexerString, the begin and end of a token inside the text of an XPath expression.</div></div>
+<div class="ttc" id="aa00917_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:130</div></div>
+<div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div><div class="ttdoc">Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,...</div></div>
+<div class="ttc" id="aa01333_html_ac96da0807d416d4354f8e227a54404fe"><div class="ttname"><a href="a01333.html#ac96da0807d416d4354f8e227a54404fe">lumex::core::circular_buffer::operator==</a></div><div class="ttdeci">bool operator==(CircularBuffer&lt; T, Alloc &gt; const &amp;lhs, CircularBuffer&lt; T, Alloc &gt; const &amp;rhs)</div><div class="ttdoc">Equality comparison of two CircularBuffer objects.</div><div class="ttdef"><b>Definition:</b> CircularBuffer.hpp:1718</div></div>
+<div class="ttc" id="aa01004_html"><div class="ttname"><a href="a01004.html">XmlTypes.hpp</a></div><div class="ttdoc">The basic types and enumerations of the XML module: character and string types, node types,...</div></div>
+<div class="ttc" id="aa01286_html_a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55"><div class="ttname"><a href="a01286.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">lumex::applied::logger::logger_config_format_t::plain_text</a></div><div class="ttdeci">@ plain_text</div><div class="ttdoc">Prefixed KEY=value lines (historical enable_logs).</div></div>
+<div class="ttc" id="aa01459_html"><div class="ttname"><a href="a01459.html">lumex::xml::xpath::parser::lexer</a></div><div class="ttdef"><b>Definition:</b> XPathLexer.hpp:70</div></div>
+<div class="ttc" id="aa01433_html"><div class="ttname"><a href="a01433.html">lumex::xml::utility</a></div><div class="ttdef"><b>Definition:</b> XmlAttribute.hpp:864</div></div>
+<div class="ttc" id="aa01013_html"><div class="ttname"><a href="a01013.html">XmlUtils.hpp</a></div><div class="ttdoc">Header-only helpers of the XML implementation: transcoding, encoding detection, conversions between t...</div></div>
+<div class="ttc" id="aa01448_html_a0826d7f05cf3c7528b2eb1a8bd26b2e8"><div class="ttname"><a href="a01448.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">lumex::xml::types::Types::char_t</a></div><div class="ttdeci">char char_t</div><div class="ttdef"><b>Definition:</b> XmlTypes.hpp:73</div></div>
+<div class="ttc" id="aa03414_html"><div class="ttname"><a href="a03414.html">lumex::xml::xpath::parser::lexer::XPathLexerString</a></div><div class="ttdoc">Represents a string view used by the XPath lexer.</div><div class="ttdef"><b>Definition:</b> XPathLexerString.hpp:81</div></div>
+<div class="ttc" id="aa01433_html_aaf464c3947b249327d213a517baf5286"><div class="ttname"><a href="a01433.html#aaf464c3947b249327d213a517baf5286">lumex::xml::utility::strequalrange</a></div><div class="ttdeci">bool strequalrange(char_t const *lhs, char_t const *rhs, std::size_t count)</div><div class="ttdef"><b>Definition:</b> XmlUtils.hpp:874</div></div>
+<div class="ttc" id="aa00917_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:90</div></div>
+<div class="ttc" id="aa01447_html"><div class="ttname"><a href="a01447.html">lumex::xml::types</a></div><div class="ttdef"><b>Definition:</b> XmlTypes.hpp:70</div></div>
+<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa03414_html_a4fa9e69901b798a94896d507608e2b59"><div class="ttname"><a href="a03414.html#a4fa9e69901b798a94896d507608e2b59">lumex::xml::xpath::parser::lexer::XPathLexerString::XPathLexerString</a></div><div class="ttdeci">XPathLexerString()=default</div><div class="ttdoc">Default constructor. Constructs an empty string view.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

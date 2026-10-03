@@ -1,7 +1,7 @@
 var a00476 =
 [
-    [ "waiter_stripe_t", "a01532.html", "a01532" ],
-    [ "waiter_table_t", "a01536.html", "a01536" ],
+    [ "waiter_stripe_t", "a01610.html", "a01610" ],
+    [ "waiter_table_t", "a01614.html", "a01614" ],
     [ "LUMEX_ATOMIC_WAIT_ABI_NAMESPACE", "a00476.html#a0508297ef17d771c69e6f945dd092220", null ],
     [ "LUMEX_ATOMIC_WAIT_TABLE_VISIBILITY", "a00476.html#a0bcecfa7d572df819b4f8c8cdde1e39f", null ],
     [ "LUMEX_ATOMIC_WAIT_USES_STD", "a00476.html#ad9f5e06c72e74b95ce7b40d4f6ec11a0", null ],

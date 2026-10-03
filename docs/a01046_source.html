@@ -98,57 +98,57 @@ $(document).ready(function(){initNavTree('a01046_source.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 <a href="a01046.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef LUMEX_XML_XPATH_CONTEXT_HPP</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define LUMEX_XML_XPATH_CONTEXT_HPP</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00917.html">lumex/LumexExport.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a01076.html">lumex/xml/xpath/node/XPathNode.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">using namespace </span><a class="code" href="a01363.html">lumex::xml::xpath::node</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01185.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">xml</a></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">namespace </span>xpath</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="a01376.html">   55</a></span>&#160;<span class="keyword">namespace </span>context</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="a03284.html">   69</a></span>&#160;<span class="keyword">struct </span><a class="code" href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code" href="a03284.html">XPathContext</a></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="a03320.html">xml::xpath::node::XPathNode</a></div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="a03284.html#ad6b91f3b74d0ef7b6d9b6829dfada689">   73</a></span>&#160;      <a class="code" href="a03284.html#ad6b91f3b74d0ef7b6d9b6829dfada689">node</a>; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span>  std::size_t</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="a03284.html#a3fcf3ec4950b963c75288fbd4c72d7c6">   77</a></span>&#160;      position{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="a03284.html#a45c2b209f1fd395742bb44286fd82f46">   79</a></span>&#160;<span class="comment"></span>  std::size_t size{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="a03284.html#afc656e57d4c7d73b996225e749a0ba2a">   92</a></span>&#160;  <a class="code" href="a03284.html#afc656e57d4c7d73b996225e749a0ba2a">XPathContext</a> (</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="a03320.html">xml::xpath::node::XPathNode</a> <span class="keyword">const</span> &amp;node_,</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      std::size_t position_, <span class="comment">// NOLINT(bugprone-easily-swappable-parameters)</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      std::size_t size_)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      : node (node_), position (position_), size (size_)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;} <span class="comment">// namespace context</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;} <span class="comment">// namespace xpath</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// namespace xml</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">// namespace lumex</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif // !LUMEX_XML_XPATH_CONTEXT_HPP</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#ifndef LUMEX_XML_XPATH_CONTEXT_HPP</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define LUMEX_XML_XPATH_CONTEXT_HPP</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00917.html">lumex/LumexExport.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a01076.html">lumex/xml/xpath/node/XPathNode.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">using namespace </span><a class="code" href="a01441.html">lumex::xml::xpath::node</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01286.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">xml</a></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">namespace </span>xpath</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="a01454.html">   64</a></span>&#160;<span class="keyword">namespace </span>context</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="a03362.html">   78</a></span>&#160;<span class="keyword">struct </span><a class="code" href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code" href="a03362.html">XPathContext</a></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="a03398.html">xml::xpath::node::XPathNode</a></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="a03362.html#ad6b91f3b74d0ef7b6d9b6829dfada689">   82</a></span>&#160;      <a class="code" href="a03362.html#ad6b91f3b74d0ef7b6d9b6829dfada689">node</a>; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span>  std::size_t</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="a03362.html#a3fcf3ec4950b963c75288fbd4c72d7c6">   86</a></span>&#160;      position{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="a03362.html#a45c2b209f1fd395742bb44286fd82f46">   88</a></span>&#160;<span class="comment"></span>  std::size_t size{}; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="a03362.html#afc656e57d4c7d73b996225e749a0ba2a">  101</a></span>&#160;  <a class="code" href="a03362.html#afc656e57d4c7d73b996225e749a0ba2a">XPathContext</a> (</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <a class="code" href="a03398.html">xml::xpath::node::XPathNode</a> <span class="keyword">const</span> &amp;node_,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      std::size_t position_, <span class="comment">// NOLINT(bugprone-easily-swappable-parameters)</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      std::size_t size_)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      : node (node_), position (position_), size (size_)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;} <span class="comment">// namespace context</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;} <span class="comment">// namespace xpath</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;} <span class="comment">// namespace xml</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;} <span class="comment">// namespace lumex</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif // !LUMEX_XML_XPATH_CONTEXT_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa03284_html_ad6b91f3b74d0ef7b6d9b6829dfada689"><div class="ttname"><a href="a03284.html#ad6b91f3b74d0ef7b6d9b6829dfada689">lumex::xml::xpath::context::XPathContext::node</a></div><div class="ttdeci">xml::xpath::node::XPathNode node</div><div class="ttdoc">The current context node.</div><div class="ttdef"><b>Definition:</b> XPathContext.hpp:73</div></div>
-<div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div></div>
-<div class="ttc" id="aa01208_html_a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55"><div class="ttname"><a href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">lumex::applied::logger::logger_config_format_t::plain_text</a></div><div class="ttdeci">@ plain_text</div><div class="ttdoc">Prefixed KEY=value lines (historical enable_logs).</div></div>
-<div class="ttc" id="aa01076_html"><div class="ttname"><a href="a01076.html">XPathNode.hpp</a></div></div>
-<div class="ttc" id="aa03284_html"><div class="ttname"><a href="a03284.html">lumex::xml::xpath::context::XPathContext</a></div><div class="ttdoc">Represents the XPath evaluation context for an expression.</div><div class="ttdef"><b>Definition:</b> XPathContext.hpp:70</div></div>
-<div class="ttc" id="aa00917_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:73</div></div>
-<div class="ttc" id="aa03320_html"><div class="ttname"><a href="a03320.html">lumex::xml::xpath::node::XPathNode</a></div><div class="ttdoc">Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...</div><div class="ttdef"><b>Definition:</b> XPathNode.hpp:105</div></div>
-<div class="ttc" id="aa01363_html"><div class="ttname"><a href="a01363.html">lumex::xml::xpath::node</a></div><div class="ttdef"><b>Definition:</b> XmlNode.hpp:116</div></div>
-<div class="ttc" id="aa03284_html_afc656e57d4c7d73b996225e749a0ba2a"><div class="ttname"><a href="a03284.html#afc656e57d4c7d73b996225e749a0ba2a">lumex::xml::xpath::context::XPathContext::XPathContext</a></div><div class="ttdeci">XPathContext(xml::xpath::node::XPathNode const &amp;node_, std::size_t position_, std::size_t size_)</div><div class="ttdoc">Constructs an XPathContext with the specified node, position, and size.</div><div class="ttdef"><b>Definition:</b> XPathContext.hpp:92</div></div>
-<div class="ttc" id="aa01185_html"><div class="ttname"><a href="a01185.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa03362_html_ad6b91f3b74d0ef7b6d9b6829dfada689"><div class="ttname"><a href="a03362.html#ad6b91f3b74d0ef7b6d9b6829dfada689">lumex::xml::xpath::context::XPathContext::node</a></div><div class="ttdeci">xml::xpath::node::XPathNode node</div><div class="ttdoc">The current context node.</div><div class="ttdef"><b>Definition:</b> XPathContext.hpp:82</div></div>
+<div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div><div class="ttdoc">Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,...</div></div>
+<div class="ttc" id="aa01286_html_a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55"><div class="ttname"><a href="a01286.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">lumex::applied::logger::logger_config_format_t::plain_text</a></div><div class="ttdeci">@ plain_text</div><div class="ttdoc">Prefixed KEY=value lines (historical enable_logs).</div></div>
+<div class="ttc" id="aa01076_html"><div class="ttname"><a href="a01076.html">XPathNode.hpp</a></div><div class="ttdoc">XPathNode, an item of an XPath result: either an XML node or an attribute together with its element.</div></div>
+<div class="ttc" id="aa00917_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:90</div></div>
+<div class="ttc" id="aa03362_html"><div class="ttname"><a href="a03362.html">lumex::xml::xpath::context::XPathContext</a></div><div class="ttdoc">Represents the XPath evaluation context for an expression.</div><div class="ttdef"><b>Definition:</b> XPathContext.hpp:79</div></div>
+<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa03362_html_afc656e57d4c7d73b996225e749a0ba2a"><div class="ttname"><a href="a03362.html#afc656e57d4c7d73b996225e749a0ba2a">lumex::xml::xpath::context::XPathContext::XPathContext</a></div><div class="ttdeci">XPathContext(xml::xpath::node::XPathNode const &amp;node_, std::size_t position_, std::size_t size_)</div><div class="ttdoc">Constructs an XPathContext with the specified node, position, and size.</div><div class="ttdef"><b>Definition:</b> XPathContext.hpp:101</div></div>
+<div class="ttc" id="aa03398_html"><div class="ttname"><a href="a03398.html">lumex::xml::xpath::node::XPathNode</a></div><div class="ttdoc">Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...</div><div class="ttdef"><b>Definition:</b> XPathNode.hpp:119</div></div>
+<div class="ttc" id="aa01441_html"><div class="ttname"><a href="a01441.html">lumex::xml::xpath::node</a></div><div class="ttdef"><b>Definition:</b> XmlNode.hpp:140</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

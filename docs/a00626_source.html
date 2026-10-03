@@ -114,24 +114,24 @@ $(document).ready(function(){initNavTree('a00626_source.html',''); initResizable
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00701.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00722.html">lumex/core/utility/traits/LumexTypeTraits.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01185.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">namespace </span>core</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">namespace </span>string</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="a01299.html">   61</a></span>&#160;<span class="keyword">namespace </span>utility</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="a01377.html">   61</a></span>&#160;<span class="keyword">namespace </span>utility</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> D&gt;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="a01299.html#a06b0967c919bc72826472462f03b569f">   71</a></span>&#160;std::ostream &amp;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<a class="code" href="a01299.html#a06b0967c919bc72826472462f03b569f">operator&lt;&lt; </a>(std::ostream &amp;ostream, std::unique_ptr&lt;T, D&gt; <span class="keyword">const</span> &amp;ptr)</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="a01377.html#a06b0967c919bc72826472462f03b569f">   71</a></span>&#160;std::ostream &amp;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<a class="code" href="a01377.html#a06b0967c919bc72826472462f03b569f">operator&lt;&lt; </a>(std::ostream &amp;ostream, std::unique_ptr&lt;T, D&gt; <span class="keyword">const</span> &amp;ptr)</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">return</span> ostream &lt;&lt; ptr.get ();</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="a01299.html#a2d32413c8ec277e4d4c57f2a5cd110cf">   79</a></span>&#160;std::ostream &amp;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<a class="code" href="a01299.html#a06b0967c919bc72826472462f03b569f">operator&lt;&lt; </a>(std::ostream &amp;ostream, std::shared_ptr&lt;T&gt; <span class="keyword">const</span> &amp;ptr)</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="a01377.html#a2d32413c8ec277e4d4c57f2a5cd110cf">   79</a></span>&#160;std::ostream &amp;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<a class="code" href="a01377.html#a06b0967c919bc72826472462f03b569f">operator&lt;&lt; </a>(std::ostream &amp;ostream, std::shared_ptr&lt;T&gt; <span class="keyword">const</span> &amp;ptr)</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">return</span> ostream &lt;&lt; ptr.get ();</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
@@ -141,7 +141,7 @@ $(document).ready(function(){initNavTree('a00626_source.html',''); initResizable
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">template</span> &lt;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    lumex::core::utility::traits::stream::detail::AllStringifiable... Args&gt;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;std::string</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<a class="code" href="a01299.html#a644d51beb3d991564cc81242883fd17a">stringify</a> (Args &amp;&amp;...args)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<a class="code" href="a01377.html#a644d51beb3d991564cc81242883fd17a">stringify</a> (Args &amp;&amp;...args)</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="a00701.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a> (<span class="keyword">sizeof</span>...(args) == 0) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>; }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">else</span></div>
@@ -156,7 +156,7 @@ $(document).ready(function(){initNavTree('a00626_source.html',''); initResizable
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;std::string</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="a01299.html#a644d51beb3d991564cc81242883fd17a">  110</a></span>&#160;<a class="code" href="a01299.html#a644d51beb3d991564cc81242883fd17a">stringify</a> (Args &amp;&amp;...args)</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="a01377.html#a644d51beb3d991564cc81242883fd17a">  110</a></span>&#160;<a class="code" href="a01377.html#a644d51beb3d991564cc81242883fd17a">stringify</a> (Args &amp;&amp;...args)</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="a00662.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a> (</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      lumex::core::utility::traits::stream::all_streamable_v&lt;Args...&gt;,</div>
@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('a00626_source.html',''); initResizable
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;std::string</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<a class="code" href="a01299.html#a644d51beb3d991564cc81242883fd17a">stringify</a> (Args &amp;&amp;...args)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<a class="code" href="a01377.html#a644d51beb3d991564cc81242883fd17a">stringify</a> (Args &amp;&amp;...args)</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <a class="code" href="a00662.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a> (</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      lumex::core::utility::traits::stream::all_streamable_v&lt;Args...&gt;,</div>
@@ -191,10 +191,10 @@ $(document).ready(function(){initNavTree('a00626_source.html',''); initResizable
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;std::string</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<a class="code" href="a01299.html#a644d51beb3d991564cc81242883fd17a">stringify</a> (Args &amp;&amp;...args)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<a class="code" href="a01377.html#a644d51beb3d991564cc81242883fd17a">stringify</a> (Args &amp;&amp;...args)</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <a class="code" href="a00662.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a> (</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      <a class="code" href="a02812.html">lumex::core::utility::traits::stream::all_streamable&lt;Args...&gt;::value</a>,</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      <a class="code" href="a02890.html">lumex::core::utility::traits::stream::all_streamable&lt;Args...&gt;::value</a>,</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="stringliteral">&quot;All arguments must be streamable&quot;</span>);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  std::ostringstream oss;</div>
@@ -206,7 +206,7 @@ $(document).ready(function(){initNavTree('a00626_source.html',''); initResizable
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">inline</span> std::string</div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="a01299.html#a6edd6a773e25b016b0dab32f38d58ff9">  163</a></span>&#160;<a class="code" href="a01299.html#a644d51beb3d991564cc81242883fd17a">stringify</a> () <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="a01377.html#a6edd6a773e25b016b0dab32f38d58ff9">  163</a></span>&#160;<a class="code" href="a01377.html#a644d51beb3d991564cc81242883fd17a">stringify</a> () <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordflow">return</span> {};</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
@@ -237,19 +237,23 @@ $(document).ready(function(){initNavTree('a00626_source.html',''); initResizable
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#endif // !LUMEX_CORE_STRING_UTILITY_STRINGIFY_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div></div>
+<div class="ttc" id="aa01377_html_a06b0967c919bc72826472462f03b569f"><div class="ttname"><a href="a01377.html#a06b0967c919bc72826472462f03b569f">lumex::core::string::utility::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;ostream, std::unique_ptr&lt; T, D &gt; const &amp;ptr)</div><div class="ttdoc">Streams the raw address held by a std::unique_ptr.</div><div class="ttdef"><b>Definition:</b> LumexStringify.hpp:72</div></div>
+<div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div><div class="ttdoc">Macros that spell C++ keywords and specifiers only where the compiled standard supports them,...</div></div>
 <div class="ttc" id="aa00722_html"><div class="ttname"><a href="a00722.html">LumexTypeTraits.hpp</a></div><div class="ttdoc">Every general-purpose type trait of LumexLib, one sub-namespace of lumex::core::utility::traits per t...</div></div>
 <div class="ttc" id="aa00680_html"><div class="ttname"><a href="a00680.html">LumexCheckFeatures.hpp</a></div><div class="ttdoc">C++ language, library and attribute feature availability.</div></div>
-<div class="ttc" id="aa01299_html_a644d51beb3d991564cc81242883fd17a"><div class="ttname"><a href="a01299.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a></div><div class="ttdeci">std::string stringify(Args &amp;&amp;...args)</div><div class="ttdoc">Concatenates the streamed text of args.</div><div class="ttdef"><b>Definition:</b> LumexStringify.hpp:110</div></div>
-<div class="ttc" id="aa00662_html_a5216865b2fc83a9979ea50b2172a1dfb"><div class="ttname"><a href="a00662.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a></div><div class="ttdeci">#define LUMEX_STATIC_ASSERT_MSG(...)</div><div class="ttdef"><b>Definition:</b> LumexAssert.hpp:94</div></div>
-<div class="ttc" id="aa00665_html_a4f7e1c4a689aff4cf2c75942d17d5ba2"><div class="ttname"><a href="a00665.html#a4f7e1c4a689aff4cf2c75942d17d5ba2">LUMEX_ATTRIBUTE_MAYBE_UNUSED_VAR</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_MAYBE_UNUSED_VAR(...)</div><div class="ttdef"><b>Definition:</b> LumexAttributes.hpp:178</div></div>
-<div class="ttc" id="aa01299_html_a06b0967c919bc72826472462f03b569f"><div class="ttname"><a href="a01299.html#a06b0967c919bc72826472462f03b569f">lumex::core::string::utility::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;ostream, std::unique_ptr&lt; T, D &gt; const &amp;ptr)</div><div class="ttdoc">Streams the raw address held by a std::unique_ptr.</div><div class="ttdef"><b>Definition:</b> LumexStringify.hpp:72</div></div>
-<div class="ttc" id="aa00701_html_a38079da46fca9b9ae17e90b731d6ab0c"><div class="ttname"><a href="a00701.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a></div><div class="ttdeci">#define LUMEX_CONSTEXPR_IF</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:74</div></div>
-<div class="ttc" id="aa00662_html"><div class="ttname"><a href="a00662.html">LumexAssert.hpp</a></div></div>
-<div class="ttc" id="aa02812_html"><div class="ttname"><a href="a02812.html">lumex::core::utility::traits::stream::all_streamable</a></div><div class="ttdoc">value is true when every type in Args (after std::decay) is streamable; true for an empty pack.</div><div class="ttdef"><b>Definition:</b> LumexTypeTraits.hpp:585</div></div>
-<div class="ttc" id="aa00701_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:66</div></div>
-<div class="ttc" id="aa00665_html"><div class="ttname"><a href="a00665.html">LumexAttributes.hpp</a></div></div>
-<div class="ttc" id="aa01185_html"><div class="ttname"><a href="a01185.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa00617_html"><div class="ttname"><a href="a00617.html">LumexJoin.hpp</a></div><div class="ttdoc">Joins the elements of a range into one string.</div></div>
+<div class="ttc" id="aa01377_html_a644d51beb3d991564cc81242883fd17a"><div class="ttname"><a href="a01377.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a></div><div class="ttdeci">std::string stringify(Args &amp;&amp;...args)</div><div class="ttdoc">Concatenates the streamed text of args.</div><div class="ttdef"><b>Definition:</b> LumexStringify.hpp:110</div></div>
+<div class="ttc" id="aa00662_html_a5216865b2fc83a9979ea50b2172a1dfb"><div class="ttname"><a href="a00662.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a></div><div class="ttdeci">#define LUMEX_STATIC_ASSERT_MSG(...)</div><div class="ttdef"><b>Definition:</b> LumexAssert.hpp:108</div></div>
+<div class="ttc" id="aa00665_html_a4f7e1c4a689aff4cf2c75942d17d5ba2"><div class="ttname"><a href="a00665.html#a4f7e1c4a689aff4cf2c75942d17d5ba2">LUMEX_ATTRIBUTE_MAYBE_UNUSED_VAR</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_MAYBE_UNUSED_VAR(...)</div><div class="ttdef"><b>Definition:</b> LumexAttributes.hpp:193</div></div>
+<div class="ttc" id="aa00701_html_a38079da46fca9b9ae17e90b731d6ab0c"><div class="ttname"><a href="a00701.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a></div><div class="ttdeci">#define LUMEX_CONSTEXPR_IF</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:92</div></div>
+<div class="ttc" id="aa00626_html"><div class="ttname"><a href="a00626.html">LumexStringify.hpp</a></div><div class="ttdoc">Concatenates the operator&lt;&lt; text of any number of arguments into one std::string.</div></div>
+<div class="ttc" id="aa02890_html"><div class="ttname"><a href="a02890.html">lumex::core::utility::traits::stream::all_streamable</a></div><div class="ttdoc">value is true when every type in Args (after std::decay) is streamable; true for an empty pack.</div><div class="ttdef"><b>Definition:</b> LumexTypeTraits.hpp:585</div></div>
+<div class="ttc" id="aa00620_html"><div class="ttname"><a href="a00620.html">LumexQuote.hpp</a></div><div class="ttdoc">Joins the elements of a range with each element wrapped in quotes.</div></div>
+<div class="ttc" id="aa00662_html"><div class="ttname"><a href="a00662.html">LumexAssert.hpp</a></div><div class="ttdoc">Assertion macros: LUMEX_ASSERT, checked at run time, and LUMEX_STATIC_ASSERT and LUMEX_STATIC_ASSERT_...</div></div>
+<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa00623_html"><div class="ttname"><a href="a00623.html">LumexTextCase.hpp</a></div><div class="ttdoc">Normalizes text for case-insensitive comparison.</div></div>
+<div class="ttc" id="aa00701_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:84</div></div>
+<div class="ttc" id="aa00665_html"><div class="ttname"><a href="a00665.html">LumexAttributes.hpp</a></div><div class="ttdoc">LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P...</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

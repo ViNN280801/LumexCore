@@ -108,28 +108,28 @@ $(document).ready(function(){initNavTree('a00368_source.html',''); initResizable
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00632.html">lumex/core/string_view/view/LumexStringView.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00665.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01185.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>applied</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">namespace </span>json</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="a01205.html">   45</a></span>&#160;<span class="keyword">namespace </span>normalization</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="a01283.html">   45</a></span>&#160;<span class="keyword">namespace </span>normalization</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="a01408.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01408.html">ILumexJsonNormalizer</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="a01486.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="a01486.html">ILumexJsonNormalizer</a></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="a01408.html#a67d2467937fd7eed290938a31b2b7733">   54</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="a01408.html#a67d2467937fd7eed290938a31b2b7733">~ILumexJsonNormalizer</a> () = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="a01486.html#a67d2467937fd7eed290938a31b2b7733">   54</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="a01486.html#a67d2467937fd7eed290938a31b2b7733">~ILumexJsonNormalizer</a> () = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a> (<span class="stringliteral">&quot;the normalized document is the result&quot;</span>)</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  virtual nlohmann::json</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="a01408.html#a55776e2b94b12a57fd8b1c64e850352c">   65</a></span>&#160;  <a class="code" href="a01408.html#a55776e2b94b12a57fd8b1c64e850352c">normalize</a> (<a class="code" href="a01185.html">lumex</a>::core::string_view::view::<a class="code" href="a02588.html">LumexStringView</a> raw) const</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="a01486.html#a55776e2b94b12a57fd8b1c64e850352c">   65</a></span>&#160;  <a class="code" href="a01486.html#a55776e2b94b12a57fd8b1c64e850352c">normalize</a> (<a class="code" href="a01263.html">lumex</a>::core::string_view::view::<a class="code" href="a02666.html">LumexStringView</a> raw) const</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      = 0;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;the normalized document is the result&quot;)</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  virtual nlohmann::json</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="a01408.html#abcf53bbebdf6b8f9ca547657c0e8f617">   78</a></span>&#160;  <a class="code" href="a01408.html#a55776e2b94b12a57fd8b1c64e850352c">normalize</a> (<a class="code" href="a01185.html">lumex</a>::core::string_view::view::<a class="code" href="a02588.html">LumexStringView</a> raw,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;             <a class="code" href="a01271.html">std</a>::exception_ptr &amp;error) const</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="a01486.html#abcf53bbebdf6b8f9ca547657c0e8f617">   78</a></span>&#160;  <a class="code" href="a01486.html#a55776e2b94b12a57fd8b1c64e850352c">normalize</a> (<a class="code" href="a01263.html">lumex</a>::core::string_view::view::<a class="code" href="a02666.html">LumexStringView</a> raw,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;             <a class="code" href="a01349.html">std</a>::exception_ptr &amp;error) const</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      = 0;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <span class="comment">// namespace normalization</span></div>
@@ -140,15 +140,15 @@ $(document).ready(function(){initNavTree('a00368_source.html',''); initResizable
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif // !LUMEX_APPLIED_JSON_NORMALIZATION_I_JSON_NORMALIZER_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01271_html"><div class="ttname"><a href="a01271.html">std</a></div><div class="ttdef"><b>Definition:</b> LumexStacktraceEntry.hpp:452</div></div>
-<div class="ttc" id="aa01408_html"><div class="ttname"><a href="a01408.html">lumex::applied::json::normalization::ILumexJsonNormalizer</a></div><div class="ttdoc">Parses raw JSON text, checks it and returns the canonical document.</div><div class="ttdef"><b>Definition:</b> ILumexJsonNormalizer.hpp:52</div></div>
-<div class="ttc" id="aa00665_html_af6aeadbda428235a14f147ade9783f8f"><div class="ttname"><a href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_NODISCARD(msg)</div><div class="ttdef"><b>Definition:</b> LumexAttributes.hpp:62</div></div>
+<div class="ttc" id="aa01486_html"><div class="ttname"><a href="a01486.html">lumex::applied::json::normalization::ILumexJsonNormalizer</a></div><div class="ttdoc">Parses raw JSON text, checks it and returns the canonical document.</div><div class="ttdef"><b>Definition:</b> ILumexJsonNormalizer.hpp:52</div></div>
+<div class="ttc" id="aa00665_html_af6aeadbda428235a14f147ade9783f8f"><div class="ttname"><a href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_NODISCARD(msg)</div><div class="ttdef"><b>Definition:</b> LumexAttributes.hpp:77</div></div>
+<div class="ttc" id="aa01349_html"><div class="ttname"><a href="a01349.html">std</a></div><div class="ttdef"><b>Definition:</b> LumexStacktraceEntry.hpp:452</div></div>
+<div class="ttc" id="aa02666_html"><div class="ttname"><a href="a02666.html">lumex::core::string_view::view::LumexStringView</a></div><div class="ttdoc">A lightweight, non-owning view over a contiguous sequence of char characters.</div><div class="ttdef"><b>Definition:</b> LumexStringView.hpp:130</div></div>
+<div class="ttc" id="aa01486_html_a55776e2b94b12a57fd8b1c64e850352c"><div class="ttname"><a href="a01486.html#a55776e2b94b12a57fd8b1c64e850352c">lumex::applied::json::normalization::ILumexJsonNormalizer::normalize</a></div><div class="ttdeci">virtual nlohmann::json normalize(lumex::core::string_view::view::LumexStringView raw) const =0</div><div class="ttdoc">Returns the canonical document. A strict implementation throws on the first violation (including unpa...</div></div>
 <div class="ttc" id="aa00632_html"><div class="ttname"><a href="a00632.html">LumexStringView.hpp</a></div><div class="ttdoc">C++11 lightweight, non-owning view over character sequences.</div></div>
-<div class="ttc" id="aa01408_html_a55776e2b94b12a57fd8b1c64e850352c"><div class="ttname"><a href="a01408.html#a55776e2b94b12a57fd8b1c64e850352c">lumex::applied::json::normalization::ILumexJsonNormalizer::normalize</a></div><div class="ttdeci">virtual nlohmann::json normalize(lumex::core::string_view::view::LumexStringView raw) const =0</div><div class="ttdoc">Returns the canonical document. A strict implementation throws on the first violation (including unpa...</div></div>
-<div class="ttc" id="aa02588_html"><div class="ttname"><a href="a02588.html">lumex::core::string_view::view::LumexStringView</a></div><div class="ttdoc">A lightweight, non-owning view over a contiguous sequence of char characters.</div><div class="ttdef"><b>Definition:</b> LumexStringView.hpp:130</div></div>
-<div class="ttc" id="aa01408_html_a67d2467937fd7eed290938a31b2b7733"><div class="ttname"><a href="a01408.html#a67d2467937fd7eed290938a31b2b7733">lumex::applied::json::normalization::ILumexJsonNormalizer::~ILumexJsonNormalizer</a></div><div class="ttdeci">virtual ~ILumexJsonNormalizer()=default</div></div>
-<div class="ttc" id="aa00665_html"><div class="ttname"><a href="a00665.html">LumexAttributes.hpp</a></div></div>
-<div class="ttc" id="aa01185_html"><div class="ttname"><a href="a01185.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa01486_html_a67d2467937fd7eed290938a31b2b7733"><div class="ttname"><a href="a01486.html#a67d2467937fd7eed290938a31b2b7733">lumex::applied::json::normalization::ILumexJsonNormalizer::~ILumexJsonNormalizer</a></div><div class="ttdeci">virtual ~ILumexJsonNormalizer()=default</div></div>
+<div class="ttc" id="aa00665_html"><div class="ttname"><a href="a00665.html">LumexAttributes.hpp</a></div><div class="ttdoc">LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P...</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

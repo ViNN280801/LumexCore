@@ -1,6 +1,11 @@
 var a01354 =
 [
-    [ "XmlAttribute", "a03068.html", "a03068" ],
-    [ "XmlAttributeBase", "a03072.html", "a03072" ],
-    [ "XmlAttributeIterator", "a03108.html", "a03108" ]
+    [ "directory_entry", "a02246.html", "a02246" ],
+    [ "directory_iterator", "a02250.html", "a02250" ],
+    [ "file_status", "a02238.html", "a02238" ],
+    [ "filesystem_result", "a02226.html", "a02226" ],
+    [ "filesystem_result< void >", "a02230.html", "a02230" ],
+    [ "lumex_filesystem", "a02254.html", "a02254" ],
+    [ "path", "a02234.html", "a02234" ],
+    [ "space_info", "a02242.html", "a02242" ]
 ];

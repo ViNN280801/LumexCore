@@ -1,7 +1,7 @@
 var a00974 =
 [
-    [ "XmlNodeBase", "a03112.html", "a03112" ],
-    [ "name_null_sentry", "a03116.html", "a03116" ],
+    [ "XmlNodeBase", "a03190.html", "a03190" ],
+    [ "name_null_sentry", "a03194.html", "a03194" ],
     [ "allocate_node", "a00974.html#a8a54b20652c8781b21677e83ae9dec6d", null ],
     [ "append_attribute", "a00974.html#ac91d41bf86f0da8b9a45c72c88401962", null ],
     [ "append_new_attribute", "a00974.html#a803330a161b229c5afdd0c16baaade86", null ],

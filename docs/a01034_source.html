@@ -98,54 +98,54 @@ $(document).ready(function(){initNavTree('a01034_source.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 <a href="a01034.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef LUMEX_XML_WRITER_XML_WRITER_STREAM_HPP</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define LUMEX_XML_WRITER_XML_WRITER_STREAM_HPP</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00917.html">lumex/LumexExport.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a01016.html">IXmlWriter.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01185.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">xml</a></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">namespace </span>writer</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="a03248.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code" href="a03248.html">XmlWriterStream</a> : <span class="keyword">public</span> <a class="code" href="a03232.html">IXmlWriter</a></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="a03248.html">XmlWriterStream</a> (std::basic_ostream&lt;char&gt; &amp;stream);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="a03248.html">XmlWriterStream</a> (std::basic_ostream&lt;wchar_t&gt; &amp;stream);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">void</span> write (<span class="keywordtype">void</span> <span class="keyword">const</span> *data, std::size_t size) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  std::basic_ostream&lt;char&gt; *narrow_stream;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  std::basic_ostream&lt;wchar_t&gt; *wide_stream;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <span class="comment">// namespace writer</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;} <span class="comment">// namespace xml</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;} <span class="comment">// namespace lumex</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif // !LUMEX_XML_WRITER_XML_WRITER_STREAM_HPP</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#ifndef LUMEX_XML_WRITER_XML_WRITER_STREAM_HPP</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define LUMEX_XML_WRITER_XML_WRITER_STREAM_HPP</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00917.html">lumex/LumexExport.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a01016.html">IXmlWriter.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01286.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">xml</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">namespace </span>writer</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="a03326.html">   77</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code" href="a03326.html">XmlWriterStream</a> : <span class="keyword">public</span> <a class="code" href="a03310.html">IXmlWriter</a></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <a class="code" href="a03326.html">XmlWriterStream</a> (std::basic_ostream&lt;char&gt; &amp;stream);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="a03326.html">XmlWriterStream</a> (std::basic_ostream&lt;wchar_t&gt; &amp;stream);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">void</span> write (<span class="keywordtype">void</span> <span class="keyword">const</span> *data, std::size_t size) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  std::basic_ostream&lt;char&gt; *narrow_stream;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  std::basic_ostream&lt;wchar_t&gt; *wide_stream;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;} <span class="comment">// namespace writer</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;} <span class="comment">// namespace xml</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;} <span class="comment">// namespace lumex</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif // !LUMEX_XML_WRITER_XML_WRITER_STREAM_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa03248_html_a6c57dcde95729d25b0c1cde06169dac6"><div class="ttname"><a href="a03248.html#a6c57dcde95729d25b0c1cde06169dac6">lumex::xml::writer::XmlWriterStream::write</a></div><div class="ttdeci">void write(void const *data, std::size_t size) override</div><div class="ttdoc">Writes a block of raw data to the associated stream.</div><div class="ttdef"><b>Definition:</b> XmlWriterStream.cpp:23</div></div>
-<div class="ttc" id="aa01016_html"><div class="ttname"><a href="a01016.html">IXmlWriter.hpp</a></div></div>
-<div class="ttc" id="aa00917_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:113</div></div>
-<div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div></div>
-<div class="ttc" id="aa01208_html_a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55"><div class="ttname"><a href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">lumex::applied::logger::logger_config_format_t::plain_text</a></div><div class="ttdeci">@ plain_text</div><div class="ttdoc">Prefixed KEY=value lines (historical enable_logs).</div></div>
-<div class="ttc" id="aa00662_html_abff68c03d1bdde004eb72fe25c9c99c9"><div class="ttname"><a href="a00662.html#abff68c03d1bdde004eb72fe25c9c99c9">LUMEX_ASSERT</a></div><div class="ttdeci">#define LUMEX_ASSERT(cond)</div><div class="ttdef"><b>Definition:</b> LumexAssert.hpp:82</div></div>
-<div class="ttc" id="aa03248_html_a1bf8ccbbd33a483bded1223b48158c9a"><div class="ttname"><a href="a03248.html#a1bf8ccbbd33a483bded1223b48158c9a">lumex::xml::writer::XmlWriterStream::XmlWriterStream</a></div><div class="ttdeci">XmlWriterStream(std::basic_ostream&lt; char &gt; &amp;stream)</div><div class="ttdoc">Constructs an XmlWriterStream for a narrow character stream (std::ostream).</div><div class="ttdef"><b>Definition:</b> XmlWriterStream.cpp:10</div></div>
-<div class="ttc" id="aa03232_html"><div class="ttname"><a href="a03232.html">lumex::xml::writer::IXmlWriter</a></div><div class="ttdoc">Abstract base interface for writing XML data to various destinations.</div><div class="ttdef"><b>Definition:</b> IXmlWriter.hpp:91</div></div>
-<div class="ttc" id="aa01034_html"><div class="ttname"><a href="a01034.html">XmlWriterStream.hpp</a></div></div>
-<div class="ttc" id="aa00662_html"><div class="ttname"><a href="a00662.html">LumexAssert.hpp</a></div></div>
-<div class="ttc" id="aa00917_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:73</div></div>
-<div class="ttc" id="aa01185_html"><div class="ttname"><a href="a01185.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
-<div class="ttc" id="aa03248_html"><div class="ttname"><a href="a03248.html">lumex::xml::writer::XmlWriterStream</a></div><div class="ttdoc">An IXmlWriter implementation that writes XML data to a C++ standard output stream.</div><div class="ttdef"><b>Definition:</b> XmlWriterStream.hpp:68</div></div>
-<div class="ttc" id="aa01371_html"><div class="ttname"><a href="a01371.html">lumex::xml::writer</a></div><div class="ttdef"><b>Definition:</b> IXmlWriter.hpp:77</div></div>
+<div class="ttc" id="aa01016_html"><div class="ttname"><a href="a01016.html">IXmlWriter.hpp</a></div><div class="ttdoc">IXmlWriter, the output interface that XML serialization writes bytes to.</div></div>
+<div class="ttc" id="aa03326_html_a6c57dcde95729d25b0c1cde06169dac6"><div class="ttname"><a href="a03326.html#a6c57dcde95729d25b0c1cde06169dac6">lumex::xml::writer::XmlWriterStream::write</a></div><div class="ttdeci">void write(void const *data, std::size_t size) override</div><div class="ttdoc">Writes a block of raw data to the associated stream.</div><div class="ttdef"><b>Definition:</b> XmlWriterStream.cpp:23</div></div>
+<div class="ttc" id="aa00917_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:130</div></div>
+<div class="ttc" id="aa01449_html"><div class="ttname"><a href="a01449.html">lumex::xml::writer</a></div><div class="ttdef"><b>Definition:</b> IXmlWriter.hpp:87</div></div>
+<div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div><div class="ttdoc">Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,...</div></div>
+<div class="ttc" id="aa03310_html"><div class="ttname"><a href="a03310.html">lumex::xml::writer::IXmlWriter</a></div><div class="ttdoc">Abstract base interface for writing XML data to various destinations.</div><div class="ttdef"><b>Definition:</b> IXmlWriter.hpp:101</div></div>
+<div class="ttc" id="aa01286_html_a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55"><div class="ttname"><a href="a01286.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">lumex::applied::logger::logger_config_format_t::plain_text</a></div><div class="ttdeci">@ plain_text</div><div class="ttdoc">Prefixed KEY=value lines (historical enable_logs).</div></div>
+<div class="ttc" id="aa00662_html_abff68c03d1bdde004eb72fe25c9c99c9"><div class="ttname"><a href="a00662.html#abff68c03d1bdde004eb72fe25c9c99c9">LUMEX_ASSERT</a></div><div class="ttdeci">#define LUMEX_ASSERT(cond)</div><div class="ttdef"><b>Definition:</b> LumexAssert.hpp:96</div></div>
+<div class="ttc" id="aa01034_html"><div class="ttname"><a href="a01034.html">XmlWriterStream.hpp</a></div><div class="ttdoc">XmlWriterStream, an IXmlWriter that writes to a narrow or a wide standard output stream.</div></div>
+<div class="ttc" id="aa03326_html"><div class="ttname"><a href="a03326.html">lumex::xml::writer::XmlWriterStream</a></div><div class="ttdoc">An IXmlWriter implementation that writes XML data to a C++ standard output stream.</div><div class="ttdef"><b>Definition:</b> XmlWriterStream.hpp:78</div></div>
+<div class="ttc" id="aa03326_html_a1bf8ccbbd33a483bded1223b48158c9a"><div class="ttname"><a href="a03326.html#a1bf8ccbbd33a483bded1223b48158c9a">lumex::xml::writer::XmlWriterStream::XmlWriterStream</a></div><div class="ttdeci">XmlWriterStream(std::basic_ostream&lt; char &gt; &amp;stream)</div><div class="ttdoc">Constructs an XmlWriterStream for a narrow character stream (std::ostream).</div><div class="ttdef"><b>Definition:</b> XmlWriterStream.cpp:10</div></div>
+<div class="ttc" id="aa00662_html"><div class="ttname"><a href="a00662.html">LumexAssert.hpp</a></div><div class="ttdoc">Assertion macros: LUMEX_ASSERT, checked at run time, and LUMEX_STATIC_ASSERT and LUMEX_STATIC_ASSERT_...</div></div>
+<div class="ttc" id="aa00917_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:90</div></div>
+<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

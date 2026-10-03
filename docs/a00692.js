@@ -1,8 +1,8 @@
 var a00692 =
 [
-    [ "DumpConfiguration", "a02628.html", "a02628" ],
-    [ "DumpFactory", "a02632.html", "a02632" ],
-    [ "CoreDumpGenerator", "a02636.html", "a02636" ],
+    [ "DumpConfiguration", "a02706.html", "a02706" ],
+    [ "DumpFactory", "a02710.html", "a02710" ],
+    [ "CoreDumpGenerator", "a02714.html", "a02714" ],
     [ "DumpType", "a00692.html#a8ccf1bd2864104aaf2e850d72d393c19", [
       [ "MINI_DUMP_NORMAL", "a00692.html#a8ccf1bd2864104aaf2e850d72d393c19af86553cc5ee5d4c46e196a1d160cea44", null ],
       [ "MINI_DUMP_WITH_DATA_SEGS", "a00692.html#a8ccf1bd2864104aaf2e850d72d393c19a40cc9c713d7282935aed84cae38d69e8", null ],

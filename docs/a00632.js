@@ -1,6 +1,6 @@
 var a00632 =
 [
-    [ "LumexStringView", "a02588.html", "a02588" ],
+    [ "LumexStringView", "a02666.html", "a02666" ],
     [ "LumexStringView", "a00632.html#a27778c0df3cb97e862cd47d3f966ec26", null ],
     [ "operator!=", "a00632.html#ae5d19365f08210c2968ec814a557034d", null ],
     [ "operator<", "a00632.html#ae71fc73bbe8d14776985168ff05a4fc7", null ],

@@ -101,6 +101,9 @@ $(document).ready(function(){initNavTree('a00947.html',''); initResizable(); });
 <div class="title">XmlDocumentBase.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Internal root record of a document: the document node and the allocator of its tree in one object.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="a00917_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00662_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00953_source.html">lumex/xml/memory/XmlAllocator.hpp</a>&quot;</code><br />
@@ -111,22 +114,22 @@ Include dependency graph for XmlDocumentBase.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00948.png" border="0" usemap="#aXmlDocumentBase_8hpp" alt=""/></div>
 <map name="XmlDocumentBase_8hpp" id="aXmlDocumentBase_8hpp">
-<area shape="rect" title=" " alt="" coords="286,5,461,32"/>
-<area shape="rect" href="a00917.html" title=" " alt="" coords="175,408,356,435"/>
-<area shape="rect" href="a00662.html" title=" " alt="" coords="443,319,626,360"/>
-<area shape="rect" href="a00953.html" title=" " alt="" coords="341,244,608,271"/>
-<area shape="rect" href="a00959.html" title=" " alt="" coords="5,326,165,353"/>
-<area shape="rect" href="a00974.html" title=" " alt="" coords="247,80,499,107"/>
-<area shape="rect" href="a00701.html" title=" " alt="" coords="576,572,789,613"/>
-<area shape="rect" href="a00665.html" title=" " alt="" coords="311,483,500,524"/>
-<area shape="rect" href="a01004.html" title=" " alt="" coords="651,326,877,353"/>
+<area shape="rect" title="Internal root record of a document: the document node and the allocator of its tree in one object." alt="" coords="286,5,461,32"/>
+<area shape="rect" href="a00917.html" title="Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,..." alt="" coords="175,408,356,435"/>
+<area shape="rect" href="a00662.html" title="Assertion macros: LUMEX_ASSERT, checked at run time, and LUMEX_STATIC_ASSERT and LUMEX_STATIC_ASSERT_..." alt="" coords="443,319,626,360"/>
+<area shape="rect" href="a00953.html" title="The page allocator that holds the nodes, attributes and strings of one XML document." alt="" coords="341,244,608,271"/>
+<area shape="rect" href="a00959.html" title="The header of a memory page of the XML allocator, and the default page size." alt="" coords="5,326,165,353"/>
+<area shape="rect" href="a00974.html" title="Internal storage of an XML node and the functions that build, link, copy and destroy the tree." alt="" coords="247,80,499,107"/>
+<area shape="rect" href="a00701.html" title="Macros that spell C++ keywords and specifiers only where the compiled standard supports them,..." alt="" coords="576,572,789,613"/>
+<area shape="rect" href="a00665.html" title="LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P..." alt="" coords="311,483,500,524"/>
+<area shape="rect" href="a01004.html" title="The basic types and enumerations of the XML module: character and string types, node types,..." alt="" coords="651,326,877,353"/>
 <area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="278,572,533,613"/>
 <area shape="rect" title=" " alt="" coords="657,408,724,435"/>
 <area shape="rect" title=" " alt="" coords="575,408,633,435"/>
-<area shape="rect" href="a01010.html" title=" " alt="" coords="749,408,987,435"/>
-<area shape="rect" href="a00695.html" title=" " alt="" coords="658,483,913,524"/>
+<area shape="rect" href="a01010.html" title="Preprocessor macros of the XML module: the character mode, the declaration of constants,..." alt="" coords="749,408,987,435"/>
+<area shape="rect" href="a00695.html" title="Macros that declare static constants in the same way in every C++ standard: LUMEX_CONST_NUM,..." alt="" coords="658,483,913,524"/>
 <area shape="rect" title=" " alt="" coords="50,408,121,435"/>
-<area shape="rect" href="a00929.html" title=" " alt="" coords="187,155,357,196"/>
+<area shape="rect" href="a00929.html" title="Internal storage of an XML attribute and the functions that allocate, link, unlink and copy it." alt="" coords="187,155,357,196"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -134,11 +137,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00949.png" border="0" usemap="#aXmlDocumentBase_8hppdep" alt=""/></div>
 <map name="XmlDocumentBase_8hppdep" id="aXmlDocumentBase_8hppdep">
-<area shape="rect" title=" " alt="" coords="407,5,581,32"/>
+<area shape="rect" title="Internal root record of a document: the document node and the allocator of its tree in one object." alt="" coords="407,5,581,32"/>
 <area shape="rect" href="a00938.html" title=" " alt="" coords="5,80,148,107"/>
 <area shape="rect" href="a00944.html" title=" " alt="" coords="172,80,347,107"/>
 <area shape="rect" href="a00965.html" title=" " alt="" coords="371,80,481,107"/>
-<area shape="rect" href="a00986.html" title=" " alt="" coords="505,80,619,107"/>
+<area shape="rect" href="a00986.html" title="The internal XML parser that turns a writable character buffer into a node tree in place." alt="" coords="505,80,619,107"/>
 <area shape="rect" href="a00989.html" title=" " alt="" coords="581,155,732,181"/>
 <area shape="rect" href="a01049.html" title=" " alt="" coords="695,80,960,107"/>
 <area shape="rect" href="a00983.html" title=" " alt="" coords="442,155,557,181"/>
@@ -149,28 +152,37 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03084.html">lumex::xml::document::XmlDocumentBase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base structure representing an XML document, combining node and allocator functionalities.  <a href="a03084.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03162.html">lumex::xml::document::XmlDocumentBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base structure representing an XML document, combining node and allocator functionalities.  <a href="a03162.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
-<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
+<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01353"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01353.html">lumex::xml</a></td></tr>
+<tr class="memitem:a01431"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01431.html">lumex::xml</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01360"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01360.html">lumex::xml::document</a></td></tr>
+<tr class="memitem:a01438"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01438.html">lumex::xml::document</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aabe1caf4ca715814b5701d3c5afa2bcc"><td class="memTemplParams" colspan="2">template&lt;typename Object &gt; </td></tr>
-<tr class="memitem:aabe1caf4ca715814b5701d3c5afa2bcc"><td class="memTemplItemLeft" align="right" valign="top">XmlDocumentBase &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01360.html#aabe1caf4ca715814b5701d3c5afa2bcc">lumex::xml::document::get_document</a> (Object const *object)</td></tr>
-<tr class="memdesc:aabe1caf4ca715814b5701d3c5afa2bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a reference to the <code><a class="el" href="a03084.html" title="Base structure representing an XML document, combining node and allocator functionalities.">XmlDocumentBase</a></code> object that owns a given object (node or attribute).  <a href="a01360.html#aabe1caf4ca715814b5701d3c5afa2bcc">More...</a><br /></td></tr>
+<tr class="memitem:aabe1caf4ca715814b5701d3c5afa2bcc"><td class="memTemplItemLeft" align="right" valign="top">XmlDocumentBase &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01438.html#aabe1caf4ca715814b5701d3c5afa2bcc">lumex::xml::document::get_document</a> (Object const *object)</td></tr>
+<tr class="memdesc:aabe1caf4ca715814b5701d3c5afa2bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a reference to the <code><a class="el" href="a03162.html" title="Base structure representing an XML document, combining node and allocator functionalities.">XmlDocumentBase</a></code> object that owns a given object (node or attribute).  <a href="a01438.html#aabe1caf4ca715814b5701d3c5afa2bcc">More...</a><br /></td></tr>
 <tr class="separator:aabe1caf4ca715814b5701d3c5afa2bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Internal root record of a document: the document node and the allocator of its tree in one object. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p><code>XmlDocumentBase</code> derives from both <code>XmlNodeBase</code> (as a <code>node_document</code> node) and <code>XmlAllocator</code>, so the root of every tree is also the allocator that owns the tree's memory pages. It also keeps the buffers that the document and the fragments appended to it were parsed from, because names and values point into them. <code>get_document</code> finds the document that owns a node or an attribute through the memory page the object lives in.</p>
+<p>The public type is <code>XmlDocument</code>, which holds this record. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

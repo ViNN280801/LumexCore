@@ -1,5 +1,4 @@
 var a01241 =
 [
-    [ "table_wait", "a01242.html", "a01242" ],
-    [ "Detail", "a01243.html", "a01243" ]
+    [ "LUMEX_CORE_REFLECTION_HPP", "a01241.html#af65d769639ebe8caa0f1a62ccbcfbcce", null ]
 ];

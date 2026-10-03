@@ -101,6 +101,9 @@ $(document).ready(function(){initNavTree('a00566.html',''); initResizable(); });
 <div class="title">Expected.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>Expected&lt;SuccessType, ErrorType&gt;</code>, an analogue of C++23 <code>std::expected</code> usable from C++11, with its non-member functions and factories.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &quot;<a class="el" href="a00569_source.html">ExpectedTypes.hpp</a>&quot;</code><br />
@@ -115,16 +118,16 @@ Include dependency graph for Expected.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00567.png" border="0" usemap="#aExpected_8hpp" alt=""/></div>
 <map name="Expected_8hpp" id="aExpected_8hpp">
-<area shape="rect" title=" " alt="" coords="350,5,461,32"/>
+<area shape="rect" title="Expected&lt;SuccessType, ErrorType&gt;, an analogue of C++23 std::expected usable from C++11,..." alt="" coords="350,5,461,32"/>
 <area shape="rect" title=" " alt="" coords="5,87,75,114"/>
 <area shape="rect" title=" " alt="" coords="150,266,210,293"/>
-<area shape="rect" href="a00569.html" title=" " alt="" coords="936,87,1083,114"/>
-<area shape="rect" href="a00701.html" title=" " alt="" coords="616,348,829,389"/>
-<area shape="rect" href="a00662.html" title=" " alt="" coords="1945,259,2127,300"/>
+<area shape="rect" href="a00569.html" title="The tags and the placeholder type that Expected uses: in_place, unexpect and Unit." alt="" coords="936,87,1083,114"/>
+<area shape="rect" href="a00701.html" title="Macros that spell C++ keywords and specifiers only where the compiled standard supports them,..." alt="" coords="616,348,829,389"/>
+<area shape="rect" href="a00662.html" title="Assertion macros: LUMEX_ASSERT, checked at run time, and LUMEX_STATIC_ASSERT and LUMEX_STATIC_ASSERT_..." alt="" coords="1945,259,2127,300"/>
 <area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="2151,259,2406,300"/>
-<area shape="rect" href="a00560.html" title=" " alt="" coords="251,169,469,211"/>
-<area shape="rect" href="a00563.html" title=" " alt="" coords="201,80,367,121"/>
-<area shape="rect" href="a00665.html" title=" " alt="" coords="2159,169,2348,211"/>
+<area shape="rect" href="a00560.html" title="BadExpectedAccess, the exception that Expected throws when its value is read while it holds an error;..." alt="" coords="251,169,469,211"/>
+<area shape="rect" href="a00563.html" title="Unexpected, the wrapper that carries an error into an Expected; an analogue of C++23 std::unexpected." alt="" coords="201,80,367,121"/>
+<area shape="rect" href="a00665.html" title="LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P..." alt="" coords="2159,169,2348,211"/>
 <area shape="rect" title=" " alt="" coords="397,266,489,293"/>
 <area shape="rect" href="a00722.html" title="Every general&#45;purpose type trait of LumexLib, one sub&#45;namespace of lumex::core::utility::traits per t..." alt="" coords="1107,169,1309,211"/>
 <area shape="rect" title=" " alt="" coords="843,266,899,293"/>
@@ -138,8 +141,8 @@ Include dependency graph for Expected.hpp:</div>
 <area shape="rect" title=" " alt="" coords="1593,266,1647,293"/>
 <area shape="rect" title=" " alt="" coords="1672,266,1747,293"/>
 <area shape="rect" title=" " alt="" coords="1771,266,1869,293"/>
-<area shape="rect" href="a00695.html" title=" " alt="" coords="513,259,767,300"/>
-<area shape="rect" href="a00917.html" title=" " alt="" coords="1945,355,2127,382"/>
+<area shape="rect" href="a00695.html" title="Macros that declare static constants in the same way in every C++ standard: LUMEX_CONST_NUM,..." alt="" coords="513,259,767,300"/>
+<area shape="rect" href="a00917.html" title="Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,..." alt="" coords="1945,355,2127,382"/>
 <area shape="rect" title=" " alt="" coords="234,266,321,293"/>
 </map>
 </div>
@@ -148,9 +151,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00568.png" border="0" usemap="#aExpected_8hppdep" alt=""/></div>
 <map name="Expected_8hppdep" id="aExpected_8hppdep">
-<area shape="rect" title=" " alt="" coords="73,5,183,32"/>
-<area shape="rect" href="a00572.html" title=" " alt="" coords="5,80,144,107"/>
-<area shape="rect" href="a00575.html" title=" " alt="" coords="55,155,201,181"/>
+<area shape="rect" title="Expected&lt;SuccessType, ErrorType&gt;, an analogue of C++23 std::expected usable from C++11,..." alt="" coords="121,5,231,32"/>
+<area shape="rect" href="a00572.html" title="The specialization Expected&lt;void, ErrorType&gt; for operations that succeed without a value; an analogue..." alt="" coords="107,80,245,107"/>
+<area shape="rect" href="a00575.html" title="The return markers success() and failure() for functions that return an Expected." alt="" coords="23,155,169,181"/>
+<area shape="rect" href="a01223.html" title="Expected module: Expected&lt;T, E&gt;, a value or an error after the C++23 std::expected,..." alt="" coords="165,229,248,256"/>
+<area shape="rect" href="a00764.html" title=" " alt="" coords="5,304,179,331"/>
+<area shape="rect" href="a00767.html" title=" " alt="" coords="203,304,442,331"/>
 </map>
 </div>
 </div>
@@ -158,61 +164,69 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02104.html">lumex::core::expected::result::Expected&lt; SuccessType, ErrorType &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02182.html">lumex::core::expected::result::Expected&lt; SuccessType, ErrorType &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
-<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
+<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01236"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01236.html">lumex::core</a></td></tr>
+<tr class="memitem:a01314"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01314.html">lumex::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01272"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01272.html">lumex::core::expected</a></td></tr>
+<tr class="memitem:a01350"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01350.html">lumex::core::expected</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01274"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01274.html">lumex::core::expected::result</a></td></tr>
+<tr class="memitem:a01352"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01352.html">lumex::core::expected::result</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7e544fe4c97ff17877fea324122f5e6b"><td class="memTemplParams" colspan="2">template&lt;typename SuccessType , typename ErrorType &gt; </td></tr>
-<tr class="memitem:a7e544fe4c97ff17877fea324122f5e6b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01274.html#a7e544fe4c97ff17877fea324122f5e6b">lumex::core::expected::result::operator==</a> (<a class="el" href="a02104.html">Expected</a>&lt; SuccessType, ErrorType &gt; const &amp;lhs, <a class="el" href="a02104.html">Expected</a>&lt; SuccessType, ErrorType &gt; const &amp;rhs)</td></tr>
-<tr class="memdesc:a7e544fe4c97ff17877fea324122f5e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a02104.html">Expected</a>&lt;SuccessType, ErrorType&gt;</code> objects for equality.  <a href="a01274.html#a7e544fe4c97ff17877fea324122f5e6b">More...</a><br /></td></tr>
+<tr class="memitem:a7e544fe4c97ff17877fea324122f5e6b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01352.html#a7e544fe4c97ff17877fea324122f5e6b">lumex::core::expected::result::operator==</a> (<a class="el" href="a02182.html">Expected</a>&lt; SuccessType, ErrorType &gt; const &amp;lhs, <a class="el" href="a02182.html">Expected</a>&lt; SuccessType, ErrorType &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:a7e544fe4c97ff17877fea324122f5e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a02182.html">Expected</a>&lt;SuccessType, ErrorType&gt;</code> objects for equality.  <a href="a01352.html#a7e544fe4c97ff17877fea324122f5e6b">More...</a><br /></td></tr>
 <tr class="separator:a7e544fe4c97ff17877fea324122f5e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd150afc868eb2217b4edf2abfd6f28c"><td class="memTemplParams" colspan="2">template&lt;typename ErrorType &gt; </td></tr>
-<tr class="memitem:acd150afc868eb2217b4edf2abfd6f28c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01274.html#acd150afc868eb2217b4edf2abfd6f28c">lumex::core::expected::result::operator==</a> (<a class="el" href="a02104.html">Expected</a>&lt; void, ErrorType &gt; const &amp;lhs, <a class="el" href="a02104.html">Expected</a>&lt; void, ErrorType &gt; const &amp;rhs)</td></tr>
-<tr class="memdesc:acd150afc868eb2217b4edf2abfd6f28c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a02104.html">Expected</a>&lt;void, ErrorType&gt;</code> objects for equality.  <a href="a01274.html#acd150afc868eb2217b4edf2abfd6f28c">More...</a><br /></td></tr>
+<tr class="memitem:acd150afc868eb2217b4edf2abfd6f28c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01352.html#acd150afc868eb2217b4edf2abfd6f28c">lumex::core::expected::result::operator==</a> (<a class="el" href="a02182.html">Expected</a>&lt; void, ErrorType &gt; const &amp;lhs, <a class="el" href="a02182.html">Expected</a>&lt; void, ErrorType &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:acd150afc868eb2217b4edf2abfd6f28c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a02182.html">Expected</a>&lt;void, ErrorType&gt;</code> objects for equality.  <a href="a01352.html#acd150afc868eb2217b4edf2abfd6f28c">More...</a><br /></td></tr>
 <tr class="separator:acd150afc868eb2217b4edf2abfd6f28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8ffd99612a1b4a5d43fbce558bf8252"><td class="memTemplParams" colspan="2">template&lt;typename SuccessType , typename ErrorType &gt; </td></tr>
-<tr class="memitem:ab8ffd99612a1b4a5d43fbce558bf8252"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01274.html#ab8ffd99612a1b4a5d43fbce558bf8252">lumex::core::expected::result::swap</a> (<a class="el" href="a02104.html">Expected</a>&lt; SuccessType, ErrorType &gt; &amp;lhs, <a class="el" href="a02104.html">Expected</a>&lt; SuccessType, ErrorType &gt; &amp;rhs) noexcept</td></tr>
-<tr class="memdesc:ab8ffd99612a1b4a5d43fbce558bf8252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exchanges the contents of two <code><a class="el" href="a02104.html">Expected</a>&lt;SuccessType, ErrorType&gt;</code> objects.  <a href="a01274.html#ab8ffd99612a1b4a5d43fbce558bf8252">More...</a><br /></td></tr>
+<tr class="memitem:ab8ffd99612a1b4a5d43fbce558bf8252"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01352.html#ab8ffd99612a1b4a5d43fbce558bf8252">lumex::core::expected::result::swap</a> (<a class="el" href="a02182.html">Expected</a>&lt; SuccessType, ErrorType &gt; &amp;lhs, <a class="el" href="a02182.html">Expected</a>&lt; SuccessType, ErrorType &gt; &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:ab8ffd99612a1b4a5d43fbce558bf8252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exchanges the contents of two <code><a class="el" href="a02182.html">Expected</a>&lt;SuccessType, ErrorType&gt;</code> objects.  <a href="a01352.html#ab8ffd99612a1b4a5d43fbce558bf8252">More...</a><br /></td></tr>
 <tr class="separator:ab8ffd99612a1b4a5d43fbce558bf8252"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adab393ebe9e54e027d4b3138628401b8"><td class="memTemplParams" colspan="2">template&lt;typename ErrorType &gt; </td></tr>
-<tr class="memitem:adab393ebe9e54e027d4b3138628401b8"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01274.html#adab393ebe9e54e027d4b3138628401b8">lumex::core::expected::result::swap</a> (<a class="el" href="a02104.html">Expected</a>&lt; void, ErrorType &gt; &amp;lhs, <a class="el" href="a02104.html">Expected</a>&lt; void, ErrorType &gt; &amp;rhs) noexcept</td></tr>
-<tr class="memdesc:adab393ebe9e54e027d4b3138628401b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exchanges the contents of two <code><a class="el" href="a02104.html">Expected</a>&lt;void, ErrorType&gt;</code> objects.  <a href="a01274.html#adab393ebe9e54e027d4b3138628401b8">More...</a><br /></td></tr>
+<tr class="memitem:adab393ebe9e54e027d4b3138628401b8"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01352.html#adab393ebe9e54e027d4b3138628401b8">lumex::core::expected::result::swap</a> (<a class="el" href="a02182.html">Expected</a>&lt; void, ErrorType &gt; &amp;lhs, <a class="el" href="a02182.html">Expected</a>&lt; void, ErrorType &gt; &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:adab393ebe9e54e027d4b3138628401b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exchanges the contents of two <code><a class="el" href="a02182.html">Expected</a>&lt;void, ErrorType&gt;</code> objects.  <a href="a01352.html#adab393ebe9e54e027d4b3138628401b8">More...</a><br /></td></tr>
 <tr class="separator:adab393ebe9e54e027d4b3138628401b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05865523483781da23bdcb44a8dc099e"><td class="memTemplParams" colspan="2">template&lt;typename ErrorType , typename U_val &gt; </td></tr>
-<tr class="memitem:a05865523483781da23bdcb44a8dc099e"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a02104.html">Expected</a>&lt; typename std::decay&lt; U_val &gt;::type, ErrorType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01274.html#a05865523483781da23bdcb44a8dc099e">lumex::core::expected::result::make_expected</a> (U_val &amp;&amp;val)</td></tr>
-<tr class="memdesc:a05865523483781da23bdcb44a8dc099e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a successful <code><a class="el" href="a02104.html">Expected</a>&lt;T, ErrorType&gt;</code> from a value.  <a href="a01274.html#a05865523483781da23bdcb44a8dc099e">More...</a><br /></td></tr>
+<tr class="memitem:a05865523483781da23bdcb44a8dc099e"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a02182.html">Expected</a>&lt; typename std::decay&lt; U_val &gt;::type, ErrorType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01352.html#a05865523483781da23bdcb44a8dc099e">lumex::core::expected::result::make_expected</a> (U_val &amp;&amp;val)</td></tr>
+<tr class="memdesc:a05865523483781da23bdcb44a8dc099e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a successful <code><a class="el" href="a02182.html">Expected</a>&lt;T, ErrorType&gt;</code> from a value.  <a href="a01352.html#a05865523483781da23bdcb44a8dc099e">More...</a><br /></td></tr>
 <tr class="separator:a05865523483781da23bdcb44a8dc099e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33f829ee4b6df7b6255f9ea08b3dc088"><td class="memTemplParams" colspan="2">template&lt;typename ErrorType &gt; </td></tr>
-<tr class="memitem:a33f829ee4b6df7b6255f9ea08b3dc088"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a02104.html">Expected</a>&lt; void, ErrorType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01274.html#a33f829ee4b6df7b6255f9ea08b3dc088">lumex::core::expected::result::make_expected</a> ()</td></tr>
-<tr class="memdesc:a33f829ee4b6df7b6255f9ea08b3dc088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a successful <code><a class="el" href="a02104.html">Expected</a>&lt;void, ErrorType&gt;</code> specialization.  <a href="a01274.html#a33f829ee4b6df7b6255f9ea08b3dc088">More...</a><br /></td></tr>
+<tr class="memitem:a33f829ee4b6df7b6255f9ea08b3dc088"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a02182.html">Expected</a>&lt; void, ErrorType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01352.html#a33f829ee4b6df7b6255f9ea08b3dc088">lumex::core::expected::result::make_expected</a> ()</td></tr>
+<tr class="memdesc:a33f829ee4b6df7b6255f9ea08b3dc088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a successful <code><a class="el" href="a02182.html">Expected</a>&lt;void, ErrorType&gt;</code> specialization.  <a href="a01352.html#a33f829ee4b6df7b6255f9ea08b3dc088">More...</a><br /></td></tr>
 <tr class="separator:a33f829ee4b6df7b6255f9ea08b3dc088"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d336a50de683f12e00c8cf6db1b8ac6"><td class="memTemplParams" colspan="2">template&lt;typename SuccessType , typename U_err &gt; </td></tr>
-<tr class="memitem:a1d336a50de683f12e00c8cf6db1b8ac6"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a02104.html">Expected</a>&lt; SuccessType, typename std::decay&lt; U_err &gt;::type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01274.html#a1d336a50de683f12e00c8cf6db1b8ac6">lumex::core::expected::result::make_unexpected</a> (U_err &amp;&amp;err)</td></tr>
-<tr class="memdesc:a1d336a50de683f12e00c8cf6db1b8ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an error <code><a class="el" href="a02104.html">Expected</a>&lt;SuccessType, E&gt;</code> from an error value.  <a href="a01274.html#a1d336a50de683f12e00c8cf6db1b8ac6">More...</a><br /></td></tr>
+<tr class="memitem:a1d336a50de683f12e00c8cf6db1b8ac6"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a02182.html">Expected</a>&lt; SuccessType, typename std::decay&lt; U_err &gt;::type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01352.html#a1d336a50de683f12e00c8cf6db1b8ac6">lumex::core::expected::result::make_unexpected</a> (U_err &amp;&amp;err)</td></tr>
+<tr class="memdesc:a1d336a50de683f12e00c8cf6db1b8ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an error <code><a class="el" href="a02182.html">Expected</a>&lt;SuccessType, E&gt;</code> from an error value.  <a href="a01352.html#a1d336a50de683f12e00c8cf6db1b8ac6">More...</a><br /></td></tr>
 <tr class="separator:a1d336a50de683f12e00c8cf6db1b8ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac25f8818c515d8b81aafa561e7cc8cb"><td class="memTemplParams" colspan="2">template&lt;typename ErrorType &gt; </td></tr>
-<tr class="memitem:aac25f8818c515d8b81aafa561e7cc8cb"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a02104.html">Expected</a>&lt; void, ErrorType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01274.html#aac25f8818c515d8b81aafa561e7cc8cb">lumex::core::expected::result::make_unexpected</a> (ErrorType &amp;&amp;err)</td></tr>
-<tr class="memdesc:aac25f8818c515d8b81aafa561e7cc8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an error <code><a class="el" href="a02104.html">Expected</a>&lt;void, ErrorType&gt;</code> from an error value.  <a href="a01274.html#aac25f8818c515d8b81aafa561e7cc8cb">More...</a><br /></td></tr>
+<tr class="memitem:aac25f8818c515d8b81aafa561e7cc8cb"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a02182.html">Expected</a>&lt; void, ErrorType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01352.html#aac25f8818c515d8b81aafa561e7cc8cb">lumex::core::expected::result::make_unexpected</a> (ErrorType &amp;&amp;err)</td></tr>
+<tr class="memdesc:aac25f8818c515d8b81aafa561e7cc8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an error <code><a class="el" href="a02182.html">Expected</a>&lt;void, ErrorType&gt;</code> from an error value.  <a href="a01352.html#aac25f8818c515d8b81aafa561e7cc8cb">More...</a><br /></td></tr>
 <tr class="separator:aac25f8818c515d8b81aafa561e7cc8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee143f03877d25827f90513ffe9730d"><td class="memTemplParams" colspan="2">template&lt;typename E , typename... Args&gt; </td></tr>
-<tr class="memitem:a6ee143f03877d25827f90513ffe9730d"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a02100.html">Unexpected</a>&lt; typename std::decay&lt; E &gt;::type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01274.html#a6ee143f03877d25827f90513ffe9730d">lumex::core::expected::result::make_unexpected</a> (Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:a6ee143f03877d25827f90513ffe9730d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard error factory: creates Unexpected&lt;E&gt; in place.  <a href="a01274.html#a6ee143f03877d25827f90513ffe9730d">More...</a><br /></td></tr>
+<tr class="memitem:a6ee143f03877d25827f90513ffe9730d"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a02178.html">Unexpected</a>&lt; typename std::decay&lt; E &gt;::type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01352.html#a6ee143f03877d25827f90513ffe9730d">lumex::core::expected::result::make_unexpected</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a6ee143f03877d25827f90513ffe9730d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard error factory: creates Unexpected&lt;E&gt; in place.  <a href="a01352.html#a6ee143f03877d25827f90513ffe9730d">More...</a><br /></td></tr>
 <tr class="separator:a6ee143f03877d25827f90513ffe9730d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><code>Expected&lt;SuccessType, ErrorType&gt;</code>, an analogue of C++23 <code>std::expected</code> usable from C++11, with its non-member functions and factories. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>The class holds either a value or an error in a union and manages their lifetimes by hand. It provides the observers of <code>std::expected</code> (<code>has_value()</code>, <code>value()</code>, which throws <code>BadExpectedAccess</code>, <code>error()</code>, <code>value_or()</code>, <code>error_or()</code>, <code>operator*</code>), <code>emplace()</code>, <code><a class="el" href="a01352.html#adab393ebe9e54e027d4b3138628401b8" title="Exchanges the contents of two Expected&lt;void, ErrorType&gt; objects.">swap()</a></code> and the monadic operations <code>and_then()</code>, <code>transform()</code>, <code>or_else()</code> and <code>transform_error()</code>, which are constrained with concepts from C++20 and with SFINAE before. The header also declares the non-member <code>operator==</code> and <code><a class="el" href="a01352.html#adab393ebe9e54e027d4b3138628401b8" title="Exchanges the contents of two Expected&lt;void, ErrorType&gt; objects.">swap()</a></code>, <code><a class="el" href="a01352.html#a33f829ee4b6df7b6255f9ea08b3dc088" title="Creates a successful Expected&lt;void, ErrorType&gt; specialization.">make_expected()</a></code> and <code>make_unexpected&lt;E&gt;()</code>; the overloads of <code><a class="el" href="a01352.html#a6ee143f03877d25827f90513ffe9730d" title="Standard error factory: creates Unexpected&lt;E&gt; in place.">make_unexpected()</a></code> that return an <code>Expected</code> are deprecated. The specialization for a <code>void</code> value is in <code><a class="el" href="a00572.html" title="The specialization Expected&lt;void, ErrorType&gt; for operations that succeed without a value; an analogue...">ExpectedVoid.hpp</a></code>. Header-only, part of <code>lumex::expected</code>; <code>Expected</code> and <code>make_unexpected</code> are also visible at global scope. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

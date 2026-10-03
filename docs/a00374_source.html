@@ -110,33 +110,33 @@ $(document).ready(function(){initNavTree('a00374_source.html',''); initResizable
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00665.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00701.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01185.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">namespace </span>applied</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">namespace </span>json</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="a01206.html">   47</a></span>&#160;<span class="keyword">namespace </span>schema</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="a01284.html">   47</a></span>&#160;<span class="keyword">namespace </span>schema</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="a00611.html#a12a938ac25a11da793255a14b2a8b2f5">LUMEX_DEFINE_REFLECTED_ENUM</a> (<a class="code" href="a01206.html#a2384d12933d21396aa0daa63d43936e1">LumexJsonSchemaFailure</a>, std::uint8_t,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="a00611.html#a12a938ac25a11da793255a14b2a8b2f5">LUMEX_DEFINE_REFLECTED_ENUM</a> (<a class="code" href="a01284.html#a2384d12933d21396aa0daa63d43936e1">LumexJsonSchemaFailure</a>, std::uint8_t,</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                             (parse_error), (missing_required),</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                             (type_mismatch), (const_mismatch),</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="a01206.html#a6392218045c0213a280c3357d9bcd0d5">   60</a></span>&#160;                             (enum_mismatch))</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="a01284.html#a6392218045c0213a280c3357d9bcd0d5">   60</a></span>&#160;                             (enum_mismatch))</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">class </span>LumexJsonSchemaException final : <span class="keyword">public</span> std::runtime_error</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  LumexJsonSchemaException (<a class="code" href="a01206.html#a2384d12933d21396aa0daa63d43936e1">LumexJsonSchemaFailure</a> reason, std::string <a class="code" href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  LumexJsonSchemaException (<a class="code" href="a01284.html#a2384d12933d21396aa0daa63d43936e1">LumexJsonSchemaFailure</a> reason, std::string <a class="code" href="a01263.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>,</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                            std::string detail)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      : std::runtime_error (_format_message (reason, <a class="code" href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>, detail)),</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        _reason (reason), _path (std::move (<a class="code" href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>)),</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      : std::runtime_error (_format_message (reason, <a class="code" href="a01263.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>, detail)),</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        _reason (reason), _path (std::move (<a class="code" href="a01263.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>)),</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        _detail (std::move (detail))</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a> (<span class="stringliteral">&quot;the failure reason is the point of the call&quot;</span>)</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="a01206.html#a2384d12933d21396aa0daa63d43936e1">LumexJsonSchemaFailure</a></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="a01284.html#a2384d12933d21396aa0daa63d43936e1">LumexJsonSchemaFailure</a></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  reason () <span class="keyword">const</span> <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  {</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span> _reason;</div>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('a00374_source.html',''); initResizable
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a> (<span class="stringliteral">&quot;the path is the point of the call&quot;</span>)</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  std::string <span class="keyword">const</span> &amp;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a> () <span class="keyword">const</span> <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="a01263.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a> () <span class="keyword">const</span> <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  {</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> _path;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
@@ -158,19 +158,19 @@ $(document).ready(function(){initNavTree('a00374_source.html',''); initResizable
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">static</span> std::string</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  _format_message (<a class="code" href="a01206.html#a2384d12933d21396aa0daa63d43936e1">LumexJsonSchemaFailure</a> reason, std::string <span class="keyword">const</span> &amp;<a class="code" href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  _format_message (<a class="code" href="a01284.html#a2384d12933d21396aa0daa63d43936e1">LumexJsonSchemaFailure</a> reason, std::string <span class="keyword">const</span> &amp;<a class="code" href="a01263.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>,</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                   std::string <span class="keyword">const</span> &amp;detail)</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  {</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    std::string message (<span class="stringliteral">&quot;[LumexJsonSchemaException] &quot;</span>);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    message += <a class="code" href="a01206.html#a6392218045c0213a280c3357d9bcd0d5">toString</a> (reason);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    message += <a class="code" href="a01284.html#a6392218045c0213a280c3357d9bcd0d5">toString</a> (reason);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    message += <span class="stringliteral">&quot; at &#39;&quot;</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    message += <a class="code" href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    message += <a class="code" href="a01263.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    message += <span class="stringliteral">&quot;&#39;: &quot;</span>;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    message += detail;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> message;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  }</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="a01206.html#a2384d12933d21396aa0daa63d43936e1">LumexJsonSchemaFailure</a> _reason;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="a01284.html#a2384d12933d21396aa0daa63d43936e1">LumexJsonSchemaFailure</a> _reason;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  std::string _path;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  std::string _detail;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
@@ -182,16 +182,16 @@ $(document).ready(function(){initNavTree('a00374_source.html',''); initResizable
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif // !LUMEX_APPLIED_JSON_SCHEMA_JSON_SCHEMA_EXCEPTION_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div></div>
-<div class="ttc" id="aa00665_html_af6aeadbda428235a14f147ade9783f8f"><div class="ttname"><a href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_NODISCARD(msg)</div><div class="ttdef"><b>Definition:</b> LumexAttributes.hpp:62</div></div>
-<div class="ttc" id="aa01206_html_a2384d12933d21396aa0daa63d43936e1"><div class="ttname"><a href="a01206.html#a2384d12933d21396aa0daa63d43936e1">lumex::applied::json::schema::LumexJsonSchemaFailure</a></div><div class="ttdeci">LumexJsonSchemaFailure</div><div class="ttdoc">Why a document failed schema validation.</div><div class="ttdef"><b>Definition:</b> LumexJsonSchemaException.hpp:60</div></div>
+<div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div><div class="ttdoc">Macros that spell C++ keywords and specifiers only where the compiled standard supports them,...</div></div>
+<div class="ttc" id="aa01284_html_a6392218045c0213a280c3357d9bcd0d5"><div class="ttname"><a href="a01284.html#a6392218045c0213a280c3357d9bcd0d5">lumex::applied::json::schema::toString</a></div><div class="ttdeci">static constexpr char const  * toString(LumexJsonSchemaFailure value) noexcept</div><div class="ttdef"><b>Definition:</b> LumexJsonSchemaException.hpp:60</div></div>
+<div class="ttc" id="aa00665_html_af6aeadbda428235a14f147ade9783f8f"><div class="ttname"><a href="a00665.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_NODISCARD(msg)</div><div class="ttdef"><b>Definition:</b> LumexAttributes.hpp:77</div></div>
 <div class="ttc" id="aa00611_html"><div class="ttname"><a href="a00611.html">LumexReflectedEnum.hpp</a></div><div class="ttdoc">X-macro system that generates a scoped enum together with its own compile-time reflection data and a ...</div></div>
+<div class="ttc" id="aa01284_html_a2384d12933d21396aa0daa63d43936e1"><div class="ttname"><a href="a01284.html#a2384d12933d21396aa0daa63d43936e1">lumex::applied::json::schema::LumexJsonSchemaFailure</a></div><div class="ttdeci">LumexJsonSchemaFailure</div><div class="ttdoc">Why a document failed schema validation.</div><div class="ttdef"><b>Definition:</b> LumexJsonSchemaException.hpp:60</div></div>
 <div class="ttc" id="aa00611_html_a12a938ac25a11da793255a14b2a8b2f5"><div class="ttname"><a href="a00611.html#a12a938ac25a11da793255a14b2a8b2f5">LUMEX_DEFINE_REFLECTED_ENUM</a></div><div class="ttdeci">#define LUMEX_DEFINE_REFLECTED_ENUM(EnumName, UnderlyingType,...)</div><div class="ttdef"><b>Definition:</b> LumexReflectedEnum.hpp:288</div></div>
-<div class="ttc" id="aa01185_html_ab9f08fe2d8e3f1fea0b6d156eaa1822f"><div class="ttname"><a href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a></div><div class="ttdeci">core::filesystem::fs::path path</div><div class="ttdoc">Global alias for lumex::core::filesystem::fs::lumex_filesystem::path.</div><div class="ttdef"><b>Definition:</b> LumexFilesystem.hpp:2061</div></div>
-<div class="ttc" id="aa00701_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:66</div></div>
-<div class="ttc" id="aa00665_html"><div class="ttname"><a href="a00665.html">LumexAttributes.hpp</a></div></div>
-<div class="ttc" id="aa01206_html_a6392218045c0213a280c3357d9bcd0d5"><div class="ttname"><a href="a01206.html#a6392218045c0213a280c3357d9bcd0d5">lumex::applied::json::schema::toString</a></div><div class="ttdeci">static constexpr char const  * toString(LumexJsonSchemaFailure value) noexcept</div><div class="ttdef"><b>Definition:</b> LumexJsonSchemaException.hpp:60</div></div>
-<div class="ttc" id="aa01185_html"><div class="ttname"><a href="a01185.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa01263_html_ab9f08fe2d8e3f1fea0b6d156eaa1822f"><div class="ttname"><a href="a01263.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a></div><div class="ttdeci">core::filesystem::fs::path path</div><div class="ttdoc">Global alias for lumex::core::filesystem::fs::lumex_filesystem::path.</div><div class="ttdef"><b>Definition:</b> LumexFilesystem.hpp:2061</div></div>
+<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa00701_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:84</div></div>
+<div class="ttc" id="aa00665_html"><div class="ttname"><a href="a00665.html">LumexAttributes.hpp</a></div><div class="ttdoc">LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P...</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

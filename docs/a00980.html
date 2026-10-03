@@ -100,19 +100,96 @@ $(document).ready(function(){initNavTree('a00980.html',''); initResizable(); });
 <div class="title">XmlObjectRange.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>XmlObjectRange</code>, a pair of iterators that lets range-based for loops walk the children or attributes of a node.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="a00917_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
-<code>#include &quot;lumex/core/utility/LumexUtility&quot;</code><br />
+<code>#include &quot;<a class="el" href="a01256.html">lumex/core/utility/LumexUtility</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for XmlObjectRange.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00981.png" border="0" usemap="#aXmlObjectRange_8hpp" alt=""/></div>
 <map name="XmlObjectRange_8hpp" id="aXmlObjectRange_8hpp">
-<area shape="rect" title=" " alt="" coords="201,5,359,32"/>
-<area shape="rect" href="a00917.html" title=" " alt="" coords="5,87,187,114"/>
-<area shape="rect" title=" " alt="" coords="211,80,349,121"/>
-<area shape="rect" href="a00665.html" title=" " alt="" coords="373,80,563,121"/>
-<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="341,169,595,211"/>
+<area shape="rect" title="XmlObjectRange, a pair of iterators that lets range&#45;based for loops walk the children or attributes o..." alt="" coords="5525,5,5683,32"/>
+<area shape="rect" href="a00917.html" title="Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,..." alt="" coords="421,519,603,546"/>
+<area shape="rect" href="a01256.html" title="Utility module, the foundation of the library: assertion, attribute, keyword and constant macros,..." alt="" coords="5535,80,5673,121"/>
+<area shape="rect" href="a00665.html" title="LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P..." alt="" coords="6909,430,7094,457"/>
+<area shape="rect" href="a00662.html" title="Assertion macros: LUMEX_ASSERT, checked at run time, and LUMEX_STATIC_ASSERT and LUMEX_STATIC_ASSERT_..." alt="" coords="701,430,880,457"/>
+<area shape="rect" href="a00701.html" title="Macros that spell C++ keywords and specifiers only where the compiled standard supports them,..." alt="" coords="5015,512,5228,553"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="6610,512,6865,553"/>
+<area shape="rect" href="a00671.html" title="Process&#45;wide slot for one consumer&#45;installed function pointer." alt="" coords="450,251,683,278"/>
+<area shape="rect" href="a00677.html" title="Compiler identification and version macros." alt="" coords="6447,430,6700,457"/>
+<area shape="rect" href="a00683.html" title="Header&#45;only call stack capture for diagnostics: captureStackTrace() and the LUMEX_CAPTURE_CALLER_INFO..." alt="" coords="1463,169,1643,196"/>
+<area shape="rect" href="a00722.html" title="Every general&#45;purpose type trait of LumexLib, one sub&#45;namespace of lumex::core::utility::traits per t..." alt="" coords="5587,333,5789,375"/>
+<area shape="rect" href="a00695.html" title="Macros that declare static constants in the same way in every C++ standard: LUMEX_CONST_NUM,..." alt="" coords="5127,423,5382,464"/>
+<area shape="rect" href="a00713.html" title="Cross&#45;platform OS macros." alt="" coords="6326,333,6501,375"/>
+<area shape="rect" href="a00686.html" title="Readable C++ type names: the lumDemangle macro for a type or an expression and demangle_type_name() f..." alt="" coords="195,251,426,278"/>
+<area shape="rect" href="a00692.html" title="The crash dump subsystem of lumex::utility: CoreDumpGenerator, the DumpType enumeration,..." alt="" coords="3329,251,3597,278"/>
+<area shape="rect" href="a00704.html" title="General preprocessor helpers: LUMEX_FUNCTION_NAME, LUMEX_STRINGIZE and LUMEX_CONCAT." alt="" coords="1668,169,1860,196"/>
+<area shape="rect" href="a00710.html" title="Universal thread&#45;safe comparator for safe comparison of arithmetic types." alt="" coords="6779,244,6986,285"/>
+<area shape="rect" href="a00716.html" title="get_current_pid(), the operating system&#39;s id of the calling process." alt="" coords="5687,251,5886,278"/>
+<area shape="rect" href="a00725.html" title="fd_to_ptr() and ptr_to_fd(), which store a POSIX file descriptor in a void * handle slot and get it b..." alt="" coords="1363,341,1533,367"/>
+<area shape="rect" href="a00668.html" title="ByteSwap(), which reverses the byte order of any integral value and is usable in constant expressions..." alt="" coords="5864,341,5997,367"/>
+<area shape="rect" href="a00674.html" title="downcast(), a checked dynamic_cast from a polymorphic base to a derived class that throws BadDownCast..." alt="" coords="6059,251,6213,278"/>
+<area shape="rect" href="a00707.html" title="As&lt;T&gt;(), which reads a trivially copyable value out of a raw byte buffer through std::memcpy,..." alt="" coords="5401,251,5597,278"/>
+<area shape="rect" href="a00719.html" title="GetNearestTo(), which finds the element of a sorted range whose value is numerically nearest to a giv..." alt="" coords="7498,169,7689,196"/>
+<area shape="rect" title=" " alt="" coords="1899,341,1965,367"/>
+<area shape="rect" title=" " alt="" coords="246,341,333,367"/>
+<area shape="rect" title=" " alt="" coords="1005,341,1085,367"/>
+<area shape="rect" title=" " alt="" coords="2515,430,2600,457"/>
+<area shape="rect" title=" " alt="" coords="2435,430,2491,457"/>
+<area shape="rect" title=" " alt="" coords="5406,430,5477,457"/>
+<area shape="rect" title=" " alt="" coords="2344,430,2411,457"/>
+<area shape="rect" title=" " alt="" coords="459,341,525,367"/>
+<area shape="rect" title=" " alt="" coords="1811,341,1875,367"/>
+<area shape="rect" title=" " alt="" coords="1499,430,1573,457"/>
+<area shape="rect" title=" " alt="" coords="3503,519,3561,546"/>
+<area shape="rect" title=" " alt="" coords="5141,341,5216,367"/>
+<area shape="rect" href="a00626.html" title="Concatenates the operator&lt;&lt; text of any number of arguments into one std::string." alt="" coords="972,244,1151,285"/>
+<area shape="rect" title=" " alt="" coords="2141,430,2219,457"/>
+<area shape="rect" title=" " alt="" coords="2243,430,2319,457"/>
+<area shape="rect" title=" " alt="" coords="6057,430,6149,457"/>
+<area shape="rect" title=" " alt="" coords="7319,519,7379,546"/>
+<area shape="rect" title=" " alt="" coords="6335,430,6422,457"/>
+<area shape="rect" title=" " alt="" coords="7503,430,7574,457"/>
+<area shape="rect" title=" " alt="" coords="6825,430,6884,457"/>
+<area shape="rect" title=" " alt="" coords="5622,430,5677,457"/>
+<area shape="rect" title=" " alt="" coords="4876,430,4951,457"/>
+<area shape="rect" title=" " alt="" coords="5501,430,5598,457"/>
+<area shape="rect" title=" " alt="" coords="1161,341,1237,367"/>
+<area shape="rect" title=" " alt="" coords="3114,341,3179,367"/>
+<area shape="rect" title=" " alt="" coords="5051,341,5117,367"/>
+<area shape="rect" title=" " alt="" coords="3204,341,3263,367"/>
+<area shape="rect" title=" " alt="" coords="3287,341,3361,367"/>
+<area shape="rect" title=" " alt="" coords="3385,341,3436,367"/>
+<area shape="rect" title=" " alt="" coords="6225,430,6311,457"/>
+<area shape="rect" title=" " alt="" coords="3461,341,3569,367"/>
+<area shape="rect" title=" " alt="" coords="3593,341,3655,367"/>
+<area shape="rect" title=" " alt="" coords="3680,341,3747,367"/>
+<area shape="rect" title=" " alt="" coords="3771,341,3914,367"/>
+<area shape="rect" title=" " alt="" coords="3939,341,4003,367"/>
+<area shape="rect" title=" " alt="" coords="4027,341,4095,367"/>
+<area shape="rect" title=" " alt="" coords="4119,341,4187,367"/>
+<area shape="rect" title=" " alt="" coords="4211,341,4274,367"/>
+<area shape="rect" title=" " alt="" coords="4298,341,4371,367"/>
+<area shape="rect" title=" " alt="" coords="4395,341,4450,367"/>
+<area shape="rect" title=" " alt="" coords="4474,341,4545,367"/>
+<area shape="rect" title=" " alt="" coords="4569,341,4653,367"/>
+<area shape="rect" title=" " alt="" coords="4677,341,4750,367"/>
+<area shape="rect" title=" " alt="" coords="4774,341,4874,367"/>
+<area shape="rect" title=" " alt="" coords="2243,341,2333,367"/>
+<area shape="rect" title=" " alt="" coords="2357,341,2473,367"/>
+<area shape="rect" title=" " alt="" coords="2649,341,2748,367"/>
+<area shape="rect" title=" " alt="" coords="2772,341,2857,367"/>
+<area shape="rect" title=" " alt="" coords="2881,341,2977,367"/>
+<area shape="rect" title=" " alt="" coords="3001,341,3089,367"/>
+<area shape="rect" title=" " alt="" coords="7701,430,7763,457"/>
+<area shape="rect" title=" " alt="" coords="5341,341,5411,367"/>
+<area shape="rect" href="a01235.html" title="Math module: mathematical constants as LUMEX_MATH_CONSTANTS_* macros, and numeric helpers such as NaN..." alt="" coords="7487,251,7700,278"/>
+<area shape="rect" href="a00596.html" title="Mathematical constants as LUMEX_MATH_CONSTANTS_* macros." alt="" coords="7515,341,7773,367"/>
+<area shape="rect" href="a00599.html" title="Numeric helpers: NaN/Inf checks, checked narrowing casts, distance, squared difference,..." alt="" coords="7134,341,7287,367"/>
+<area shape="rect" href="a00698.html" title="Macros that declare an exception class in one line." alt="" coords="7219,423,7479,464"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -120,34 +197,39 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00982.png" border="0" usemap="#aXmlObjectRange_8hppdep" alt=""/></div>
 <map name="XmlObjectRange_8hppdep" id="aXmlObjectRange_8hppdep">
-<area shape="rect" title=" " alt="" coords="542,5,701,32"/>
-<area shape="rect" href="a00968.html" title=" " alt="" coords="566,80,677,107"/>
+<area shape="rect" title="XmlObjectRange, a pair of iterators that lets range&#45;based for loops walk the children or attributes o..." alt="" coords="903,5,1062,32"/>
+<area shape="rect" href="a00968.html" title="XmlNode, the handle to a node of a document tree, with the iterators over its children and attributes..." alt="" coords="927,80,1038,107"/>
 <area shape="rect" href="a00932.html" title=" " alt="" coords="5,155,184,181"/>
-<area shape="rect" href="a00938.html" title=" " alt="" coords="69,229,211,256"/>
-<area shape="rect" href="a00941.html" title=" " alt="" coords="259,155,402,181"/>
-<area shape="rect" href="a00962.html" title=" " alt="" coords="427,155,629,181"/>
-<area shape="rect" href="a00965.html" title=" " alt="" coords="1108,453,1217,480"/>
-<area shape="rect" href="a00977.html" title=" " alt="" coords="799,155,955,181"/>
-<area shape="rect" href="a00995.html" title=" " alt="" coords="979,155,1082,181"/>
-<area shape="rect" href="a01076.html" title=" " alt="" coords="654,155,775,181"/>
-<area shape="rect" href="a01046.html" title=" " alt="" coords="989,304,1128,331"/>
-<area shape="rect" href="a01052.html" title=" " alt="" coords="236,229,503,256"/>
-<area shape="rect" href="a01073.html" title=" " alt="" coords="577,229,697,256"/>
-<area shape="rect" href="a01082.html" title=" " alt="" coords="722,229,865,256"/>
-<area shape="rect" href="a01124.html" title=" " alt="" coords="480,304,597,331"/>
-<area shape="rect" href="a01115.html" title=" " alt="" coords="941,229,1065,256"/>
-<area shape="rect" href="a01040.html" title=" " alt="" coords="934,379,1077,405"/>
-<area shape="rect" href="a01037.html" title=" " alt="" coords="937,453,1079,480"/>
-<area shape="rect" href="a01100.html" title=" " alt="" coords="786,453,913,480"/>
-<area shape="rect" href="a01097.html" title=" " alt="" coords="545,528,671,555"/>
-<area shape="rect" href="a01109.html" title=" " alt="" coords="737,528,860,555"/>
-<area shape="rect" href="a01049.html" title=" " alt="" coords="190,304,455,331"/>
-<area shape="rect" href="a01121.html" title=" " alt="" coords="278,379,394,405"/>
-<area shape="rect" href="a01079.html" title=" " alt="" coords="419,379,560,405"/>
-<area shape="rect" href="a01130.html" title=" " alt="" coords="723,304,863,331"/>
-<area shape="rect" href="a01136.html" title=" " alt="" coords="585,379,746,405"/>
-<area shape="rect" href="a01127.html" title=" " alt="" coords="771,379,909,405"/>
-<area shape="rect" href="a01133.html" title=" " alt="" coords="551,453,711,480"/>
+<area shape="rect" href="a00938.html" title=" " alt="" coords="150,229,293,256"/>
+<area shape="rect" href="a00941.html" title="XmlDocument, the owner of an XML tree: loading from files, streams, strings and memory buffers,..." alt="" coords="259,155,402,181"/>
+<area shape="rect" href="a01259.html" title="XML module: a DOM tree of nodes, attributes and text, loading and saving with writers for files and s..." alt="" coords="395,453,487,480"/>
+<area shape="rect" href="a00962.html" title=" " alt="" coords="1405,155,1608,181"/>
+<area shape="rect" href="a00965.html" title=" " alt="" coords="1316,453,1425,480"/>
+<area shape="rect" href="a00977.html" title=" " alt="" coords="1633,155,1789,181"/>
+<area shape="rect" href="a00995.html" title=" " alt="" coords="1813,155,1915,181"/>
+<area shape="rect" href="a01076.html" title="XPathNode, an item of an XPath result: either an XML node or an attribute together with its element." alt="" coords="922,155,1043,181"/>
+<area shape="rect" href="a00905.html" title=" " alt="" coords="121,528,242,555"/>
+<area shape="rect" href="a00908.html" title=" " alt="" coords="266,528,387,555"/>
+<area shape="rect" href="a00911.html" title=" " alt="" coords="411,528,533,555"/>
+<area shape="rect" href="a00914.html" title=" " alt="" coords="557,528,678,555"/>
+<area shape="rect" href="a01046.html" title="XPathContext, the context node, position and size that XPath evaluation passes to every subexpression..." alt="" coords="469,304,608,331"/>
+<area shape="rect" href="a01052.html" title="Comparison of XPath nodes by document order, used to sort node sets." alt="" coords="1075,229,1341,256"/>
+<area shape="rect" href="a01073.html" title=" " alt="" coords="1365,229,1485,256"/>
+<area shape="rect" href="a01082.html" title="XPathNodeSet, the node set an XPath query returns, and XPathNodeSetRaw, the growable array used while..." alt="" coords="857,229,999,256"/>
+<area shape="rect" href="a01124.html" title="Document order sorting of XPath node ranges, and copying of XPath variable values." alt="" coords="1053,304,1171,331"/>
+<area shape="rect" href="a01115.html" title=" " alt="" coords="657,229,781,256"/>
+<area shape="rect" href="a01040.html" title="XPathAstNode, the node of a compiled XPath expression tree, which evaluates itself against a context." alt="" coords="521,379,663,405"/>
+<area shape="rect" href="a01037.html" title=" " alt="" coords="521,453,663,480"/>
+<area shape="rect" href="a01100.html" title="XPathParser, the recursive descent parser that compiles an XPath 1.0 expression into a tree of XPathA..." alt="" coords="701,453,827,480"/>
+<area shape="rect" href="a01097.html" title=" " alt="" coords="995,528,1120,555"/>
+<area shape="rect" href="a01109.html" title=" " alt="" coords="773,528,896,555"/>
+<area shape="rect" href="a01049.html" title=" " alt="" coords="1246,304,1511,331"/>
+<area shape="rect" href="a01121.html" title=" " alt="" coords="1305,379,1421,405"/>
+<area shape="rect" href="a01079.html" title=" " alt="" coords="1139,379,1280,405"/>
+<area shape="rect" href="a01130.html" title="XPathVariable, a named and typed XPath variable, its four concrete kinds, and the functions that crea..." alt="" coords="737,304,877,331"/>
+<area shape="rect" href="a01136.html" title="XPathVariableSet, the named variables an XPath expression can refer to, and the lookup helper the par..." alt="" coords="902,379,1063,405"/>
+<area shape="rect" href="a01127.html" title=" " alt="" coords="739,379,877,405"/>
+<area shape="rect" href="a01133.html" title=" " alt="" coords="903,453,1063,480"/>
 </map>
 </div>
 </div>
@@ -155,21 +237,29 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03120.html">lumex::xml::range::XmlObjectRange&lt; Iterator &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Range of XML objects, providing iteration over a collection of elements.  <a href="a03120.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03198.html">lumex::xml::range::XmlObjectRange&lt; Iterator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Range of XML objects, providing iteration over a collection of elements.  <a href="a03198.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
-<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
+<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01353"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01353.html">lumex::xml</a></td></tr>
+<tr class="memitem:a01431"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01431.html">lumex::xml</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01368"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01368.html">lumex::xml::range</a></td></tr>
+<tr class="memitem:a01446"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01446.html">lumex::xml::range</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><code>XmlObjectRange</code>, a pair of iterators that lets range-based for loops walk the children or attributes of a node. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>The class template stores a begin and an end iterator and exposes them through <code>begin()</code> and <code>end()</code>. <code>XmlNode::children</code> and <code>XmlNode::attributes</code> return it. The range owns nothing and is valid as long as its iterators are. Header-only. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

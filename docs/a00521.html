@@ -99,15 +99,18 @@ $(document).ready(function(){initNavTree('a00521.html',''); initResizable(); });
 <div class="title">DefaultPaths.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Default names used by the crash handling of <code>lumex::exceptions</code>: the crash directory and the file name prefixes.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="a00695_source.html">lumex/core/utility/macros/LumexConstantMacros.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for DefaultPaths.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00522.png" border="0" usemap="#aDefaultPaths_8hpp" alt=""/></div>
 <map name="DefaultPaths_8hpp" id="aDefaultPaths_8hpp">
-<area shape="rect" title=" " alt="" coords="66,5,199,32"/>
-<area shape="rect" href="a00695.html" title=" " alt="" coords="5,80,260,121"/>
-<area shape="rect" href="a00701.html" title=" " alt="" coords="26,169,239,211"/>
+<area shape="rect" title="Default names used by the crash handling of lumex::exceptions: the crash directory and the file name ..." alt="" coords="66,5,199,32"/>
+<area shape="rect" href="a00695.html" title="Macros that declare static constants in the same way in every C++ standard: LUMEX_CONST_NUM,..." alt="" coords="5,80,260,121"/>
+<area shape="rect" href="a00701.html" title="Macros that spell C++ keywords and specifiers only where the compiled standard supports them,..." alt="" coords="26,169,239,211"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -115,9 +118,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00523.png" border="0" usemap="#aDefaultPaths_8hppdep" alt=""/></div>
 <map name="DefaultPaths_8hppdep" id="aDefaultPaths_8hppdep">
-<area shape="rect" title=" " alt="" coords="125,5,258,32"/>
+<area shape="rect" title="Default names used by the crash handling of lumex::exceptions: the crash directory and the file name ..." alt="" coords="222,5,355,32"/>
 <area shape="rect" href="a00524.html" title=" " alt="" coords="5,80,185,107"/>
 <area shape="rect" href="a00536.html" title=" " alt="" coords="210,80,367,107"/>
+<area shape="rect" href="a01220.html" title="Exceptions module: the LumexBaseException hierarchy, stack traces, a crash handler that writes minidu..." alt="" coords="391,80,522,107"/>
+<area shape="rect" href="a00758.html" title=" " alt="" coords="267,162,451,189"/>
+<area shape="rect" href="a00761.html" title=" " alt="" coords="475,155,633,196"/>
 </map>
 </div>
 </div>
@@ -132,7 +138,15 @@ Variables</h2></td></tr>
 <tr class="memitem:aa0b60ff906cb6ba7ab53a93c4f8f81c1"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00521.html#aa0b60ff906cb6ba7ab53a93c4f8f81c1">KDEFAULT_CRASH_REPORT_PREFIX</a> = &quot;crash_report_&quot;</td></tr>
 <tr class="separator:aa0b60ff906cb6ba7ab53a93c4f8f81c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Default names used by the crash handling of <code>lumex::exceptions</code>: the crash directory and the file name prefixes. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p><code>KDEFAULT_CRASHES_DIR_PATH</code> ("crashes") is the directory next to the executable that <code><a class="el" href="a02150.html#a277f55eeecb20cecca099e0c63bd1559" title="Write a crash report to a file by pattern: &quot;crash_report_{timestamp}.txt&quot;.">LumexBaseException::to_crash_report()</a></code> writes to on every platform and that <code>LumexCrashHandler</code> writes dumps to on Windows. <code>KDEFAULT_MINIDUMP_PREFIX</code> ("dump_") starts the name of a dump file, and <code>KDEFAULT_CRASH_REPORT_PREFIX</code> ("crash_report_") the name of a crash report. The constants are declared at global scope. </p>
+</div><h2 class="groupheader">Variable Documentation</h2>
 <a id="aa0b60ff906cb6ba7ab53a93c4f8f81c1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa0b60ff906cb6ba7ab53a93c4f8f81c1">&#9670;&nbsp;</a></span>KDEFAULT_CRASH_REPORT_PREFIX</h2>
 
@@ -174,11 +188,6 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
-<p>SPDX-License-Identifier: MIT</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
 
 </div>
 </div>

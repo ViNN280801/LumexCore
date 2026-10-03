@@ -1,5 +1,6 @@
 var a01381 =
 [
-    [ "XPathLexer", "a03332.html", "a03332" ],
-    [ "XPathLexerString", "a03336.html", "a03336" ]
+    [ "LumexTemporary", "a02682.html", "a02682" ],
+    [ "TemporaryDirectory", "a02674.html", "a02674" ],
+    [ "TemporaryFile", "a02678.html", "a02678" ]
 ];

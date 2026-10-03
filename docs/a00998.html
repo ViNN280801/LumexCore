@@ -101,6 +101,9 @@ $(document).ready(function(){initNavTree('a00998.html',''); initResizable(); });
 <div class="title">XmlText.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>XmlText</code>, typed access to the text content of a node.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="a00917_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a01004_source.html">lumex/xml/types/XmlTypes.hpp</a>&quot;</code><br />
@@ -109,16 +112,16 @@ Include dependency graph for XmlText.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00999.png" border="0" usemap="#aXmlText_8hpp" alt=""/></div>
 <map name="XmlText_8hpp" id="aXmlText_8hpp">
-<area shape="rect" title=" " alt="" coords="173,5,275,32"/>
-<area shape="rect" href="a00917.html" title=" " alt="" coords="5,80,187,107"/>
-<area shape="rect" href="a00665.html" title=" " alt="" coords="165,229,355,271"/>
-<area shape="rect" href="a01004.html" title=" " alt="" coords="265,80,492,107"/>
+<area shape="rect" title="XmlText, typed access to the text content of a node." alt="" coords="173,5,275,32"/>
+<area shape="rect" href="a00917.html" title="Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,..." alt="" coords="5,80,187,107"/>
+<area shape="rect" href="a00665.html" title="LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P..." alt="" coords="165,229,355,271"/>
+<area shape="rect" href="a01004.html" title="The basic types and enumerations of the XML module: character and string types, node types,..." alt="" coords="265,80,492,107"/>
 <area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="133,319,387,360"/>
 <area shape="rect" title=" " alt="" coords="261,155,328,181"/>
 <area shape="rect" title=" " alt="" coords="352,155,411,181"/>
-<area shape="rect" href="a01010.html" title=" " alt="" coords="435,155,674,181"/>
-<area shape="rect" href="a00695.html" title=" " alt="" coords="427,229,682,271"/>
-<area shape="rect" href="a00701.html" title=" " alt="" coords="448,319,661,360"/>
+<area shape="rect" href="a01010.html" title="Preprocessor macros of the XML module: the character mode, the declaration of constants,..." alt="" coords="435,155,674,181"/>
+<area shape="rect" href="a00695.html" title="Macros that declare static constants in the same way in every C++ standard: LUMEX_CONST_NUM,..." alt="" coords="427,229,682,271"/>
+<area shape="rect" href="a00701.html" title="Macros that spell C++ keywords and specifiers only where the compiled standard supports them,..." alt="" coords="448,319,661,360"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -126,9 +129,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="a01000.png" border="0" usemap="#aXmlText_8hppdep" alt=""/></div>
 <map name="XmlText_8hppdep" id="aXmlText_8hppdep">
-<area shape="rect" title=" " alt="" coords="74,5,177,32"/>
+<area shape="rect" title="XmlText, typed access to the text content of a node." alt="" coords="139,5,242,32"/>
 <area shape="rect" href="a00965.html" title=" " alt="" coords="5,80,115,107"/>
 <area shape="rect" href="a00995.html" title=" " alt="" coords="139,80,242,107"/>
+<area shape="rect" href="a01259.html" title="XML module: a DOM tree of nodes, attributes and text, loading and saving with writers for files and s..." alt="" coords="266,80,358,107"/>
+<area shape="rect" href="a00905.html" title=" " alt="" coords="33,155,154,181"/>
+<area shape="rect" href="a00908.html" title=" " alt="" coords="178,155,299,181"/>
+<area shape="rect" href="a00911.html" title=" " alt="" coords="323,155,445,181"/>
+<area shape="rect" href="a00914.html" title=" " alt="" coords="469,155,590,181"/>
 </map>
 </div>
 </div>
@@ -136,32 +144,41 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03144.html">lumex::xml::text::XmlText</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the text content of an XML node, providing type-safe access and modification.  <a href="a03144.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03222.html">lumex::xml::text::XmlText</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the text content of an XML node, providing type-safe access and modification.  <a href="a03222.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
-<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
+<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01353"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01353.html">lumex::xml</a></td></tr>
+<tr class="memitem:a01431"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01431.html">lumex::xml</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01356"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01356.html">lumex::xml::node</a></td></tr>
+<tr class="memitem:a01434"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01434.html">lumex::xml::node</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01366"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01366.html">lumex::xml::text</a></td></tr>
+<tr class="memitem:a01444"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html">lumex::xml::text</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a98673d4a1b8b431dcfef95e6148547eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01366.html#a98673d4a1b8b431dcfef95e6148547eb">lumex::xml::text::operator&amp;&amp;</a> (<a class="el" href="a03144.html">XmlText</a> const &amp;lhs, bool rhs)</td></tr>
-<tr class="memdesc:a98673d4a1b8b431dcfef95e6148547eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload for logical AND operator with <code><a class="el" href="a03144.html" title="Represents the text content of an XML node, providing type-safe access and modification.">XmlText</a></code> on the left-hand side.  <a href="a01366.html#a98673d4a1b8b431dcfef95e6148547eb">More...</a><br /></td></tr>
+<tr class="memitem:a98673d4a1b8b431dcfef95e6148547eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#a98673d4a1b8b431dcfef95e6148547eb">lumex::xml::text::operator&amp;&amp;</a> (<a class="el" href="a03222.html">XmlText</a> const &amp;lhs, bool rhs)</td></tr>
+<tr class="memdesc:a98673d4a1b8b431dcfef95e6148547eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload for logical AND operator with <code><a class="el" href="a03222.html" title="Represents the text content of an XML node, providing type-safe access and modification.">XmlText</a></code> on the left-hand side.  <a href="a01444.html#a98673d4a1b8b431dcfef95e6148547eb">More...</a><br /></td></tr>
 <tr class="separator:a98673d4a1b8b431dcfef95e6148547eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a637cf8030dca5d7cc1d7a84daa3f1f8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01366.html#a637cf8030dca5d7cc1d7a84daa3f1f8f">lumex::xml::text::operator||</a> (<a class="el" href="a03144.html">XmlText</a> const &amp;lhs, bool rhs)</td></tr>
-<tr class="memdesc:a637cf8030dca5d7cc1d7a84daa3f1f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload for logical OR operator with <code><a class="el" href="a03144.html" title="Represents the text content of an XML node, providing type-safe access and modification.">XmlText</a></code> on the left-hand side.  <a href="a01366.html#a637cf8030dca5d7cc1d7a84daa3f1f8f">More...</a><br /></td></tr>
+<tr class="memitem:a637cf8030dca5d7cc1d7a84daa3f1f8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#a637cf8030dca5d7cc1d7a84daa3f1f8f">lumex::xml::text::operator||</a> (<a class="el" href="a03222.html">XmlText</a> const &amp;lhs, bool rhs)</td></tr>
+<tr class="memdesc:a637cf8030dca5d7cc1d7a84daa3f1f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload for logical OR operator with <code><a class="el" href="a03222.html" title="Represents the text content of an XML node, providing type-safe access and modification.">XmlText</a></code> on the left-hand side.  <a href="a01444.html#a637cf8030dca5d7cc1d7a84daa3f1f8f">More...</a><br /></td></tr>
 <tr class="separator:a637cf8030dca5d7cc1d7a84daa3f1f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><code>XmlText</code>, typed access to the text content of a node. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p><code>XmlNode::text()</code> returns an <code>XmlText</code> for an element or a text node. It reads the node's first PCDATA or CDATA child, or the element's own value when the document was parsed with <code>kparse_embed_pcdata</code>, and converts it to numbers or a boolean; the given default is returned only when there is no text. Setting a value creates a PCDATA child when there is none. The handle does not own the text and is valid as long as the document.</p>
+<p>The <code>std::string_view</code> overloads exist only when the including code is compiled as C++17 or later. The file also declares the logical AND and OR operators with a <code>bool</code>. Consumers include it through <code>lumex/xml/LumexXml</code>. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

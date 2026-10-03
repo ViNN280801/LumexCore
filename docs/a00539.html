@@ -103,6 +103,9 @@ $(document).ready(function(){initNavTree('a00539.html',''); initResizable(); });
 <div class="title">LumexException.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>LumexBaseException</code>, the base exception of LumexLib that records the stack where it was constructed, and the macros that throw and catch it.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="a00917_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
@@ -110,39 +113,101 @@ $(document).ready(function(){initNavTree('a00539.html',''); initResizable(); });
 <code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00698_source.html">lumex/core/utility/macros/LumexExceptionMacros.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
-<code>#include &quot;lumex/core/string/LumexString&quot;</code><br />
+<code>#include &quot;<a class="el" href="a01244.html">lumex/core/string/LumexString</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for LumexException.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00540.png" border="0" usemap="#aLumexException_8hpp" alt=""/></div>
 <map name="LumexException_8hpp" id="aLumexException_8hpp">
-<area shape="rect" title=" " alt="" coords="1429,5,1587,32"/>
-<area shape="rect" href="a00917.html" title=" " alt="" coords="637,281,819,307"/>
-<area shape="rect" title=" " alt="" coords="217,281,276,307"/>
-<area shape="rect" title=" " alt="" coords="1959,87,2057,114"/>
-<area shape="rect" href="a00551.html" title="Defines the LumexBasicStacktrace class and related utilities for capturing and symbolizing call stack..." alt="" coords="1019,80,1258,121"/>
-<area shape="rect" href="a00701.html" title=" " alt="" coords="1367,273,1580,315"/>
-<area shape="rect" href="a00665.html" title=" " alt="" coords="2081,80,2271,121"/>
-<area shape="rect" href="a00698.html" title="Macros that declare an exception class in one line." alt="" coords="33,80,293,121"/>
-<area shape="rect" title=" " alt="" coords="2295,87,2518,114"/>
-<area shape="rect" title=" " alt="" coords="612,184,697,211"/>
-<area shape="rect" title=" " alt="" coords="721,184,783,211"/>
-<area shape="rect" title=" " alt="" coords="807,184,873,211"/>
-<area shape="rect" title=" " alt="" coords="897,184,964,211"/>
-<area shape="rect" title=" " alt="" coords="989,184,1075,211"/>
-<area shape="rect" title=" " alt="" coords="1100,184,1177,211"/>
-<area shape="rect" title=" " alt="" coords="1487,184,1551,211"/>
-<area shape="rect" title=" " alt="" coords="1575,184,1649,211"/>
-<area shape="rect" title=" " alt="" coords="1674,184,1737,211"/>
-<area shape="rect" title=" " alt="" coords="1761,184,1839,211"/>
-<area shape="rect" title=" " alt="" coords="1863,184,1929,211"/>
-<area shape="rect" title=" " alt="" coords="335,184,425,211"/>
-<area shape="rect" href="a00557.html" title="Defines the LumexStacktraceEntry class, representing a single frame in a call stack." alt="" coords="1201,169,1412,225"/>
-<area shape="rect" title=" " alt="" coords="450,177,587,218"/>
-<area shape="rect" title=" " alt="" coords="1271,281,1342,307"/>
-<area shape="rect" title=" " alt="" coords="1180,281,1247,307"/>
-<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="2049,177,2303,218"/>
-<area shape="rect" title=" " alt="" coords="98,184,158,211"/>
+<area shape="rect" title="LumexBaseException, the base exception of LumexLib that records the stack where it was constructed,..." alt="" coords="477,5,635,32"/>
+<area shape="rect" href="a00917.html" title="Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,..." alt="" coords="3751,623,3932,650"/>
+<area shape="rect" title=" " alt="" coords="568,623,627,650"/>
+<area shape="rect" title=" " alt="" coords="555,534,653,561"/>
+<area shape="rect" href="a00551.html" title="Defines the LumexBasicStacktrace class and related utilities for capturing and symbolizing call stack..." alt="" coords="4018,80,4257,121"/>
+<area shape="rect" href="a00701.html" title="Macros that spell C++ keywords and specifiers only where the compiled standard supports them,..." alt="" coords="4365,616,4579,657"/>
+<area shape="rect" href="a00665.html" title="LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P..." alt="" coords="2762,534,2947,561"/>
+<area shape="rect" href="a00698.html" title="Macros that declare an exception class in one line." alt="" coords="677,527,937,568"/>
+<area shape="rect" href="a01244.html" title="String module: stringify, which concatenates the stream output of its arguments, joining and quoting ..." alt="" coords="546,177,769,203"/>
+<area shape="rect" title=" " alt="" coords="5261,437,5347,464"/>
+<area shape="rect" title=" " alt="" coords="8907,177,8968,203"/>
+<area shape="rect" title=" " alt="" coords="4115,437,4181,464"/>
+<area shape="rect" title=" " alt="" coords="4205,437,4272,464"/>
+<area shape="rect" title=" " alt="" coords="1971,534,2058,561"/>
+<area shape="rect" title=" " alt="" coords="1869,534,1947,561"/>
+<area shape="rect" title=" " alt="" coords="8640,437,8704,464"/>
+<area shape="rect" title=" " alt="" coords="1163,534,1237,561"/>
+<area shape="rect" title=" " alt="" coords="5371,437,5434,464"/>
+<area shape="rect" title=" " alt="" coords="1280,177,1357,203"/>
+<area shape="rect" title=" " alt="" coords="1381,177,1448,203"/>
+<area shape="rect" title=" " alt="" coords="1472,177,1563,203"/>
+<area shape="rect" href="a00557.html" title="Defines the LumexStacktraceEntry class, representing a single frame in a call stack." alt="" coords="9075,423,9285,479"/>
+<area shape="rect" href="a01256.html" title="Utility module, the foundation of the library: assertion, attribute, keyword and constant macros,..." alt="" coords="4611,169,4749,211"/>
+<area shape="rect" title=" " alt="" coords="4163,534,4234,561"/>
+<area shape="rect" title=" " alt="" coords="5923,534,5989,561"/>
+<area shape="rect" href="a00662.html" title="Assertion macros: LUMEX_ASSERT, checked at run time, and LUMEX_STATIC_ASSERT and LUMEX_STATIC_ASSERT_..." alt="" coords="1616,534,1795,561"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="2354,616,2609,657"/>
+<area shape="rect" href="a00671.html" title="Process&#45;wide slot for one consumer&#45;installed function pointer." alt="" coords="4291,341,4525,367"/>
+<area shape="rect" href="a00677.html" title="Compiler identification and version macros." alt="" coords="8451,534,8704,561"/>
+<area shape="rect" href="a00683.html" title="Header&#45;only call stack capture for diagnostics: captureStackTrace() and the LUMEX_CAPTURE_CALLER_INFO..." alt="" coords="4929,259,5109,285"/>
+<area shape="rect" href="a00722.html" title="Every general&#45;purpose type trait of LumexLib, one sub&#45;namespace of lumex::core::utility::traits per t..." alt="" coords="2169,430,2370,471"/>
+<area shape="rect" href="a00695.html" title="Macros that declare static constants in the same way in every C++ standard: LUMEX_CONST_NUM,..." alt="" coords="3475,527,3730,568"/>
+<area shape="rect" href="a00713.html" title="Cross&#45;platform OS macros." alt="" coords="5561,430,5735,471"/>
+<area shape="rect" href="a00686.html" title="Readable C++ type names: the lumDemangle macro for a type or an expression and demangle_type_name() f..." alt="" coords="1814,341,2045,367"/>
+<area shape="rect" href="a00692.html" title="The crash dump subsystem of lumex::utility: CoreDumpGenerator, the DumpType enumeration,..." alt="" coords="6393,341,6661,367"/>
+<area shape="rect" href="a00704.html" title="General preprocessor helpers: LUMEX_FUNCTION_NAME, LUMEX_STRINGIZE and LUMEX_CONCAT." alt="" coords="4661,259,4853,285"/>
+<area shape="rect" href="a00710.html" title="Universal thread&#45;safe comparator for safe comparison of arithmetic types." alt="" coords="2569,333,2775,375"/>
+<area shape="rect" href="a00716.html" title="get_current_pid(), the operating system&#39;s id of the calling process." alt="" coords="8243,341,8442,367"/>
+<area shape="rect" href="a00725.html" title="fd_to_ptr() and ptr_to_fd(), which store a POSIX file descriptor in a void * handle slot and get it b..." alt="" coords="8829,437,9000,464"/>
+<area shape="rect" href="a00668.html" title="ByteSwap(), which reverses the byte order of any integral value and is usable in constant expressions..." alt="" coords="4952,341,5085,367"/>
+<area shape="rect" href="a00674.html" title="downcast(), a checked dynamic_cast from a polymorphic base to a derived class that throws BadDownCast..." alt="" coords="2120,341,2275,367"/>
+<area shape="rect" href="a00707.html" title="As&lt;T&gt;(), which reads a trivially copyable value out of a raw byte buffer through std::memcpy,..." alt="" coords="3827,341,4023,367"/>
+<area shape="rect" href="a00719.html" title="GetNearestTo(), which finds the element of a sorted range whose value is numerically nearest to a giv..." alt="" coords="3433,259,3623,285"/>
+<area shape="rect" title=" " alt="" coords="4509,437,4576,464"/>
+<area shape="rect" title=" " alt="" coords="4347,437,4434,464"/>
+<area shape="rect" title=" " alt="" coords="4853,437,4933,464"/>
+<area shape="rect" title=" " alt="" coords="4960,534,5016,561"/>
+<area shape="rect" title=" " alt="" coords="8541,437,8616,464"/>
+<area shape="rect" href="a00626.html" title="Concatenates the operator&lt;&lt; text of any number of arguments into one std::string." alt="" coords="1028,333,1207,375"/>
+<area shape="rect" title=" " alt="" coords="1515,534,1591,561"/>
+<area shape="rect" title=" " alt="" coords="2366,534,2458,561"/>
+<area shape="rect" title=" " alt="" coords="1245,623,1305,650"/>
+<area shape="rect" title=" " alt="" coords="2482,534,2553,561"/>
+<area shape="rect" title=" " alt="" coords="2628,534,2687,561"/>
+<area shape="rect" title=" " alt="" coords="2185,534,2239,561"/>
+<area shape="rect" title=" " alt="" coords="3864,534,3939,561"/>
+<area shape="rect" title=" " alt="" coords="1814,437,1890,464"/>
+<area shape="rect" title=" " alt="" coords="2842,623,2907,650"/>
+<area shape="rect" title=" " alt="" coords="6405,437,6464,464"/>
+<area shape="rect" title=" " alt="" coords="6589,437,6664,464"/>
+<area shape="rect" title=" " alt="" coords="6688,437,6739,464"/>
+<area shape="rect" title=" " alt="" coords="3262,534,3349,561"/>
+<area shape="rect" title=" " alt="" coords="6763,437,6871,464"/>
+<area shape="rect" title=" " alt="" coords="6896,437,6963,464"/>
+<area shape="rect" title=" " alt="" coords="6987,437,7130,464"/>
+<area shape="rect" title=" " alt="" coords="7155,437,7219,464"/>
+<area shape="rect" title=" " alt="" coords="7243,437,7311,464"/>
+<area shape="rect" title=" " alt="" coords="7335,437,7403,464"/>
+<area shape="rect" title=" " alt="" coords="7427,437,7490,464"/>
+<area shape="rect" title=" " alt="" coords="7514,437,7587,464"/>
+<area shape="rect" title=" " alt="" coords="7611,437,7666,464"/>
+<area shape="rect" title=" " alt="" coords="7690,437,7761,464"/>
+<area shape="rect" title=" " alt="" coords="7785,437,7869,464"/>
+<area shape="rect" title=" " alt="" coords="7893,437,7966,464"/>
+<area shape="rect" title=" " alt="" coords="7990,437,8090,464"/>
+<area shape="rect" title=" " alt="" coords="8114,437,8203,464"/>
+<area shape="rect" title=" " alt="" coords="8227,437,8343,464"/>
+<area shape="rect" title=" " alt="" coords="8368,437,8467,464"/>
+<area shape="rect" title=" " alt="" coords="6064,437,6149,464"/>
+<area shape="rect" title=" " alt="" coords="6173,437,6269,464"/>
+<area shape="rect" title=" " alt="" coords="6293,437,6381,464"/>
+<area shape="rect" title=" " alt="" coords="2971,534,3034,561"/>
+<area shape="rect" title=" " alt="" coords="3819,437,3888,464"/>
+<area shape="rect" href="a01235.html" title="Math module: mathematical constants as LUMEX_MATH_CONSTANTS_* macros, and numeric helpers such as NaN..." alt="" coords="3255,341,3468,367"/>
+<area shape="rect" href="a00596.html" title="Mathematical constants as LUMEX_MATH_CONSTANTS_* macros." alt="" coords="3232,437,3491,464"/>
+<area shape="rect" href="a00599.html" title="Numeric helpers: NaN/Inf checks, checked narrowing casts, distance, squared difference,..." alt="" coords="2902,437,3055,464"/>
+<area shape="rect" href="a00617.html" title="Joins the elements of a range into one string." alt="" coords="699,341,847,367"/>
+<area shape="rect" href="a00620.html" title="Joins the elements of a range with each element wrapped in quotes." alt="" coords="576,259,739,285"/>
+<area shape="rect" href="a00623.html" title="Normalizes text for case&#45;insensitive comparison." alt="" coords="297,534,479,561"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -150,8 +215,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="a00541.png" border="0" usemap="#aLumexException_8hppdep" alt=""/></div>
 <map name="LumexException_8hppdep" id="aLumexException_8hppdep">
-<area shape="rect" title=" " alt="" coords="5,5,164,32"/>
-<area shape="rect" href="a00536.html" title=" " alt="" coords="6,80,163,107"/>
+<area shape="rect" title="LumexBaseException, the base exception of LumexLib that records the stack where it was constructed,..." alt="" coords="89,5,247,32"/>
+<area shape="rect" href="a00536.html" title=" " alt="" coords="5,80,163,107"/>
+<area shape="rect" href="a01220.html" title="Exceptions module: the LumexBaseException hierarchy, stack traces, a crash handler that writes minidu..." alt="" coords="187,80,317,107"/>
+<area shape="rect" href="a00758.html" title=" " alt="" coords="63,162,247,189"/>
+<area shape="rect" href="a00761.html" title=" " alt="" coords="271,155,428,196"/>
 </map>
 </div>
 </div>
@@ -159,19 +227,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02072.html">lumex::core::exceptions::exception::LumexBaseException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02150.html">lumex::core::exceptions::exception::LumexBaseException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
-<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
+<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01236"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01236.html">lumex::core</a></td></tr>
+<tr class="memitem:a01314"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01314.html">lumex::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex::core::exceptions</a></td></tr>
+<tr class="memitem:a01341"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01341.html">lumex::core::exceptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01265"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01265.html">lumex::core::exceptions::exception</a></td></tr>
+<tr class="memitem:a01343"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01343.html">lumex::core::exceptions::exception</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -185,15 +253,24 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a14cb3c521ade640b8e5a7bf4aac3c929"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00539.html#a14cb3c521ade640b8e5a7bf4aac3c929">LumexBaseException</a> = <a class="el" href="a02072.html">lumex::core::exceptions::exception::LumexBaseException</a></td></tr>
+<tr class="memitem:a14cb3c521ade640b8e5a7bf4aac3c929"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00539.html#a14cb3c521ade640b8e5a7bf4aac3c929">LumexBaseException</a> = <a class="el" href="a02150.html">lumex::core::exceptions::exception::LumexBaseException</a></td></tr>
 <tr class="separator:a14cb3c521ade640b8e5a7bf4aac3c929"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a31ed01634f7b6bd094769a42fe5f966b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00551.html#aa65ae33a9cb60c0f3fdb50f47f7a425e">LumexStacktrace</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01265.html#a31ed01634f7b6bd094769a42fe5f966b">lumex::core::exceptions::exception::LumexException_GetStackTraceTrampoline</a> (int skip_frames)</td></tr>
+<tr class="memitem:a31ed01634f7b6bd094769a42fe5f966b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00551.html#aa65ae33a9cb60c0f3fdb50f47f7a425e">LumexStacktrace</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01343.html#a31ed01634f7b6bd094769a42fe5f966b">lumex::core::exceptions::exception::LumexException_GetStackTraceTrampoline</a> (int skip_frames)</td></tr>
 <tr class="separator:a31ed01634f7b6bd094769a42fe5f966b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><code>LumexBaseException</code>, the base exception of LumexLib that records the stack where it was constructed, and the macros that throw and catch it. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>The exception keeps its message and a <code>LumexStacktrace</code> captured by the constructor. <code>to_stderr()</code> prints the demangled exception type and the message; <code>to_crash_report()</code> appends the message and the stack to one <code>crash_report_&lt;timestamp&gt;.txt</code> per run in the <code>crashes</code> directory next to the executable. The constructors are compiled into <code>lumex::exceptions</code> and have the same signatures in every C++ standard; the <code>std::string_view</code> constructor (C++17) is an inline wrapper.</p>
+<p><code>LUMEX_THROW_EXCEPTION</code> throws an exception type with its demangled name in front of the message. <code>LUMEX_EXCEPTION_HANDLE_BEGIN</code> and <code>LUMEX_EXCEPTION_HANDLE_END</code> wrap a block in a <code>try</code> that reports a <code>LumexBaseException</code>, any other <code>std::exception</code> and an unknown exception; the opening macro also installs the Windows translator through <code>SET_SEH_TRANSLATOR</code>, which <code><a class="el" href="a00533.html" title="The Windows structured exception translator seh_translator() and the SET_SEH_TRANSLATOR macro that in...">WindowsSEHTranslator.hpp</a></code> defines and this header does not include, so these macros need the <code>LumexException</code> umbrella. <code>LUMEX_DEFINE_EXCEPTION</code>, which declares new exception types, comes from the included <code><a class="el" href="a00698.html" title="Macros that declare an exception class in one line.">LumexExceptionMacros.hpp</a></code>. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aa2c14643747e0675175c89004325e3c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa2c14643747e0675175c89004325e3c4">&#9670;&nbsp;</a></span>LUMEX_EXCEPTION_HANDLE_BEGIN</h2>
 
@@ -223,7 +300,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  }                                                                           \</div>
-<div class="line">  catch (<a class="code" href="a02072.html">LumexBaseException</a> <span class="keyword">const</span> &amp;ex)                                        \</div>
+<div class="line">  catch (<a class="code" href="a02150.html">LumexBaseException</a> <span class="keyword">const</span> &amp;ex)                                        \</div>
 <div class="line">  {                                                                           \</div>
 <div class="line">    ex.to_stderr ();                                                          \</div>
 <div class="line">    ex.to_crash_report ();                                                    \</div>
@@ -263,7 +340,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">throw</span> exception_name (<a class="code" href="a01299.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (             \</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">throw</span> exception_name (<a class="code" href="a01377.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> (             \</div>
 <div class="line">      <a class="code" href="a00686.html#ad6621f383796b8a7a3dc899f94d7c0f4">lumDemangle</a> (exception_name), <span class="stringliteral">&quot;: &quot;</span>, msg));</div>
 </div><!-- fragment -->
 </div>
@@ -276,7 +353,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a00539.html#a14cb3c521ade640b8e5a7bf4aac3c929">LumexBaseException</a> =  <a class="el" href="a02072.html">lumex::core::exceptions::exception::LumexBaseException</a></td>
+          <td class="memname">using <a class="el" href="a00539.html#a14cb3c521ade640b8e5a7bf4aac3c929">LumexBaseException</a> =  <a class="el" href="a02150.html">lumex::core::exceptions::exception::LumexBaseException</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -285,9 +362,9 @@ Functions</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa02072_html"><div class="ttname"><a href="a02072.html">lumex::core::exceptions::exception::LumexBaseException</a></div><div class="ttdef"><b>Definition:</b> LumexException.hpp:74</div></div>
-<div class="ttc" id="aa01299_html_a644d51beb3d991564cc81242883fd17a"><div class="ttname"><a href="a01299.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a></div><div class="ttdeci">std::string stringify(Args &amp;&amp;...args)</div><div class="ttdoc">Concatenates the streamed text of args.</div><div class="ttdef"><b>Definition:</b> LumexStringify.hpp:110</div></div>
-<div class="ttc" id="aa00686_html_ad6621f383796b8a7a3dc899f94d7c0f4"><div class="ttname"><a href="a00686.html#ad6621f383796b8a7a3dc899f94d7c0f4">lumDemangle</a></div><div class="ttdeci">#define lumDemangle(type)</div><div class="ttdoc">Demangles a C++ type name for human-readable output.</div><div class="ttdef"><b>Definition:</b> LumexDemangle.hpp:93</div></div>
+<div class="ttc" id="aa01377_html_a644d51beb3d991564cc81242883fd17a"><div class="ttname"><a href="a01377.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a></div><div class="ttdeci">std::string stringify(Args &amp;&amp;...args)</div><div class="ttdoc">Concatenates the streamed text of args.</div><div class="ttdef"><b>Definition:</b> LumexStringify.hpp:110</div></div>
+<div class="ttc" id="aa00686_html_ad6621f383796b8a7a3dc899f94d7c0f4"><div class="ttname"><a href="a00686.html#ad6621f383796b8a7a3dc899f94d7c0f4">lumDemangle</a></div><div class="ttdeci">#define lumDemangle(type)</div><div class="ttdoc">Demangles a C++ type name for human-readable output.</div><div class="ttdef"><b>Definition:</b> LumexDemangle.hpp:103</div></div>
+<div class="ttc" id="aa02150_html"><div class="ttname"><a href="a02150.html">lumex::core::exceptions::exception::LumexBaseException</a></div><div class="ttdef"><b>Definition:</b> LumexException.hpp:96</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

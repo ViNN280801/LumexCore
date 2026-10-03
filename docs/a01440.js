@@ -1,12 +1,15 @@
 var a01440 =
 [
-    [ "critical", "a01440.html#ab45388c23b278021a8bb9e4a7b435e0c", null ],
-    [ "debug", "a01440.html#a44ad22b8a67f4f15a9a574b3d4d5cd74", null ],
-    [ "error", "a01440.html#aaeebb797a274ef51607814be5801bcc4", null ],
-    [ "getLogsDirectory", "a01440.html#accf4de4dbcf6ed1920c2782a8b1be0fe", null ],
-    [ "info", "a01440.html#aafb110cd6feeb2ab91305f27352b9118", null ],
-    [ "setAppName", "a01440.html#a55018631d613d230284b5f1411b9185e", null ],
-    [ "success", "a01440.html#a8e7bac7289460386a2e59d59c388d4b6", null ],
-    [ "toFile", "a01440.html#a385a6c62d7eee3e396474410c2f4b331", null ],
-    [ "warning", "a01440.html#af4fec23e76323ffee4eaf2aaf716eb15", null ]
+    [ "ast", "a01451.html", "a01451" ],
+    [ "constants", "a01452.html", null ],
+    [ "context", "a01454.html", "a01454" ],
+    [ "document", "a01455.html", "a01455" ],
+    [ "exception", "a01456.html", "a01456" ],
+    [ "memory", "a01457.html", "a01457" ],
+    [ "node", "a01441.html", "a01441" ],
+    [ "parser", "a01458.html", "a01458" ],
+    [ "query", "a01443.html", "a01443" ],
+    [ "string", "a01461.html", "a01461" ],
+    [ "variable", "a01442.html", "a01442" ],
+    [ "XPathQueryImpl", "a03434.html", "a03434" ]
 ];

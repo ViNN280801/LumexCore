@@ -1,4 +1,4 @@
 var a01305 =
 [
-    [ "LumexTime", "a02608.html", "a02608" ]
+    [ "LumexSettingsFactory", "a01554.html", "a01554" ]
 ];

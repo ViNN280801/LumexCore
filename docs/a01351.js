@@ -1,4 +1,5 @@
 var a01351 =
 [
-    [ "temporary_config_file_t", "a03064.html", "a03064" ]
+    [ "BadExpectedAccess", "a02174.html", "a02174" ],
+    [ "Unexpected", "a02178.html", "a02178" ]
 ];

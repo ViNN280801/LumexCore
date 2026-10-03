@@ -1,6 +1,7 @@
 var a01366 =
 [
-    [ "xml_parse_result_t", "a03140.html", "a03140" ],
-    [ "XmlParser", "a03136.html", "a03136" ],
-    [ "XmlText", "a03144.html", "a03144" ]
+    [ "in_place_t", "a02598.html", "a02598" ],
+    [ "LumexBadOptionalAccess", "a02606.html", "a02606" ],
+    [ "nullopt_t", "a02590.html", "a02590" ],
+    [ "optional", "a02610.html", "a02610" ]
 ];

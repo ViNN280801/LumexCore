@@ -1,6 +1,6 @@
 var a00593 =
 [
-    [ "NumberGenerator", "a02424.html", "a02424" ],
+    [ "NumberGenerator", "a02502.html", "a02502" ],
     [ "DoubleGenerator", "a00593.html#a66de299f34d83d69da4662bca4b30e48", null ],
     [ "FloatGenerator", "a00593.html#a1b8e07ea0fc758c4d5c9e49113ef6106", null ],
     [ "IntGenerator", "a00593.html#a24ddb6108f4eaa8af88e38c01d0bd5fb", null ],

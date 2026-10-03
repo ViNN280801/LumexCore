@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Member List</title>
+<title>LumexLib: lumex::core::utility::traits::range Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('a01408.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('a01405.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,21 +93,62 @@ $(document).ready(function(){initNavTree('a01408.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::applied::json::normalization::ILumexJsonNormalizer Member List</div>  </div>
+<div class="title">lumex::core::utility::traits::range Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="a01408.html">lumex::applied::json::normalization::ILumexJsonNormalizer</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a01408.html#a55776e2b94b12a57fd8b1c64e850352c">normalize</a>(lumex::core::string_view::view::LumexStringView raw) const =0</td><td class="entry"><a class="el" href="a01408.html">lumex::applied::json::normalization::ILumexJsonNormalizer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a01408.html#abcf53bbebdf6b8f9ca547657c0e8f617">normalize</a>(lumex::core::string_view::view::LumexStringView raw, std::exception_ptr &amp;error) const =0</td><td class="entry"><a class="el" href="a01408.html">lumex::applied::json::normalization::ILumexJsonNormalizer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a01408.html#a67d2467937fd7eed290938a31b2b7733">~ILumexJsonNormalizer</a>()=default</td><td class="entry"><a class="el" href="a01408.html">lumex::applied::json::normalization::ILumexJsonNormalizer</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-</table></div><!-- contents -->
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02958.html">has_convertible_indexed_access</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>std::declval&lt;T&gt;()[std::size_t]</code> exists and its result converts to <code>To</code> (for example a byte type for a byte buffer).  <a href="a02958.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02962.html">has_convertible_indexed_access&lt; T, To, meta::void_t&lt; decltype(std::declval&lt; T &gt;()[std::declval&lt; std::size_t &gt;()])&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02950.html">has_convertible_size</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>std::declval&lt;T&gt;().size()</code> exists and converts to <code>std::size_t</code>.  <a href="a02950.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02954.html">has_convertible_size&lt; T, meta::void_t&lt; decltype(std::declval&lt; T &gt;().size())&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02926.html">has_elements_convertible_to</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>Range</code> is iterable and its element reference converts to <code>To</code> (for example <code>std::string const &amp;</code>).  <a href="a02926.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02930.html">has_elements_convertible_to&lt; Range, To, meta::void_t&lt; typename range_reference&lt; Range &gt;::type &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02934.html">has_key_type</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> has a nested type <code>key_type</code> (associative containers).  <a href="a02934.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02938.html">has_key_type&lt; T, meta::void_t&lt; typename T::key_type &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02942.html">has_mapped_type</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> has a nested type <code>mapped_type</code> (maps).  <a href="a02942.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02946.html">has_mapped_type&lt; T, meta::void_t&lt; typename T::mapped_type &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02918.html">has_streamable_elements</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>Range</code> is iterable and its elements (after <code>std::decay</code>) are streamable.  <a href="a02918.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02922.html">has_streamable_elements&lt; Range, meta::void_t&lt; typename range_reference&lt; Range &gt;::type &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02910.html">is_iterable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>Range const &amp;</code> can be walked (see <code><a class="el" href="a02902.html" title="type is what *std::begin(range) yields for a Range const &amp; that has std::begin, std::end,...">range_reference</a></code>).  <a href="a02910.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02914.html">is_iterable&lt; Range, meta::void_t&lt; typename range_reference&lt; Range &gt;::type &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02902.html">range_reference</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>type</code> is what <code>*std::begin(range)</code> yields for a <code>Range const &amp;</code> that has <code>std::begin</code>, <code>std::end</code>, <code>!=</code> and <code>++</code>; absent otherwise, so it can drive SFINAE.  <a href="a02902.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02906.html">range_reference&lt; Range, meta::void_t&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;()) !=std::end(std::declval&lt; Range const &amp; &gt;())), decltype(++std::declval&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;())) &amp; &gt;()), decltype(*std::begin(std::declval&lt; Range const &amp; &gt;()))&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01314.html">core</a></li><li class="navelem"><a class="el" href="a01386.html">utility</a></li><li class="navelem"><a class="el" href="a01399.html">traits</a></li><li class="navelem"><a class="el" href="a01405.html">range</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

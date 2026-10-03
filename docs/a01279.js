@@ -1,32 +1,4 @@
 var a01279 =
 [
-    [ "Detail", "a01280.html", "a01280" ],
-    [ "BasicAppender", "a02220.html", "a02220" ],
-    [ "BasicFormatArgs", "a02288.html", "a02288" ],
-    [ "BasicFormatContext", "a02184.html", "a02184" ],
-    [ "BasicFormatParseContext", "a02188.html", "a02188" ],
-    [ "BasicFormatString", "a02320.html", "a02320" ],
-    [ "format_to_n_result_t", "a02344.html", "a02344" ],
-    [ "FormatError", "a02180.html", "a02180" ],
-    [ "Formatter", "a02192.html", "a02192" ],
-    [ "Formatter< area_t >", "a03056.html", "a03056" ],
-    [ "Formatter< date_t >", "a03020.html", "a03020" ],
-    [ "Formatter< Enum, Char, typename std::enable_if< lumex::core::utility::traits::enums::is_reflected_enum< Enum >::value >::type >", "a02328.html", "a02328" ],
-    [ "Formatter< pipe_list_t >", "a03040.html", "a03040" ],
-    [ "Formatter< point_t >", "a03024.html", null ],
-    [ "Formatter< pressure_t >", "a03012.html", "a03012" ],
-    [ "Formatter< pressure_t, wchar_t >", "a03016.html", "a03016" ],
-    [ "Formatter< Range, Char, typename std::enable_if< Detail::is_formattable_range< Range, Char >::value >::type >", "a02420.html", "a02420" ],
-    [ "Formatter< register_dump_t >", "a03044.html", "a03044" ],
-    [ "Formatter< stars_t, Char >", "a03028.html", "a03028" ],
-    [ "Formatter< std::chrono::duration< Rep, Period >, Char, typename std::enable_if< Detail::has_formatter< Char, Rep >() &&std::is_arithmetic< Rep >::value >::type >", "a02360.html", "a02360" ],
-    [ "Formatter< std::chrono::time_point< std::chrono::system_clock, Duration >, Char, typename std::enable_if<!std::chrono::treat_as_floating_point< typename Duration::rep >::value >::type >", "a02364.html", "a02364" ],
-    [ "Formatter< std::pair< First, Second >, Char, typename std::enable_if< Detail::all_formattable< Char, First, Second >::value >::type >", "a02412.html", null ],
-    [ "Formatter< std::tuple< Types... >, Char, typename std::enable_if< Detail::all_formattable< Char, Types... >::value >::type >", "a02416.html", null ],
-    [ "Formatter< streamed_t< T >, Char, void >", "a02340.html", "a02340" ],
-    [ "Formatter< T, Char, typename std::enable_if< Detail::builtin_kind< Char, typename std::decay< T >::type >() !=Detail::ArgKind::none >::type >", "a02324.html", "a02324" ],
-    [ "OstreamFormatter", "a02332.html", "a02332" ],
-    [ "runtime_format_string_t", "a02316.html", "a02316" ],
-    [ "streamed_t", "a02336.html", "a02336" ],
-    [ "try_format_result_t", "a02348.html", "a02348" ]
+    [ "Detail", "a01280.html", null ]
 ];

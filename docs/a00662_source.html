@@ -98,44 +98,44 @@ $(document).ready(function(){initNavTree('a00662_source.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 <a href="a00662.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef LUMEX_CORE_UTILITY_ASSERT_HPP</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define LUMEX_CORE_UTILITY_ASSERT_HPP</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00917.html">lumex/LumexExport.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00701.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<a class="code" href="a00917.html#acaff4c6bbcf06a700c96ca83292c16ac">LUMEX_EXTERN_C_BEGIN</a></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<a class="code" href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00662.html#a5334d5477ed5cb85a010f52c4f534fd4">lumex_assert_handler</a> (<span class="keywordtype">char</span> <span class="keyword">const</span> *assertion, <span class="keywordtype">char</span> <span class="keyword">const</span> *file,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                           <span class="keywordtype">int</span> line) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<a class="code" href="a00917.html#aa5051b73e2d3303e7e2718073a3dd2f4">LUMEX_EXTERN_C_END</a></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="a00662.html#abff68c03d1bdde004eb72fe25c9c99c9">   82</a></span>&#160;<span class="preprocessor">#define LUMEX_ASSERT(cond)                                                    \</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">  ((cond) ? static_cast&lt;void&gt; (0)                                             \</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">          : lumex_assert_handler (#cond, __FILE__, __LINE__))</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 201703L</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="a00662.html#a79cf2cecfe4fe4577a5e17138da4612f">   87</a></span>&#160;<span class="preprocessor">#define LUMEX_STATIC_ASSERT(cond) static_assert (cond)</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#define LUMEX_STATIC_ASSERT(cond) static_assert (cond, #cond)</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">// Variadic so commas in template argument lists remain part of the</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">// static_assert declaration instead of being parsed as macro arguments.</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="a00662.html#a5216865b2fc83a9979ea50b2172a1dfb">   94</a></span>&#160;<span class="preprocessor">#define LUMEX_STATIC_ASSERT_MSG(...) static_assert (__VA_ARGS__)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#ifndef LUMEX_CORE_UTILITY_ASSERT_HPP</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#define LUMEX_CORE_UTILITY_ASSERT_HPP</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00917.html">lumex/LumexExport.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00701.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<a class="code" href="a00917.html#acaff4c6bbcf06a700c96ca83292c16ac">LUMEX_EXTERN_C_BEGIN</a></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<a class="code" href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00662.html#a5334d5477ed5cb85a010f52c4f534fd4">lumex_assert_handler</a> (<span class="keywordtype">char</span> <span class="keyword">const</span> *assertion, <span class="keywordtype">char</span> <span class="keyword">const</span> *file,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                           <span class="keywordtype">int</span> line) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<a class="code" href="a00917.html#aa5051b73e2d3303e7e2718073a3dd2f4">LUMEX_EXTERN_C_END</a></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif // !LUMEX_CORE_UTILITY_ASSERT_HPP</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="a00662.html#abff68c03d1bdde004eb72fe25c9c99c9">   96</a></span>&#160;<span class="preprocessor">#define LUMEX_ASSERT(cond)                                                    \</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">  ((cond) ? static_cast&lt;void&gt; (0)                                             \</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">          : lumex_assert_handler (#cond, __FILE__, __LINE__))</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 201703L</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="a00662.html#a79cf2cecfe4fe4577a5e17138da4612f">  101</a></span>&#160;<span class="preprocessor">#define LUMEX_STATIC_ASSERT(cond) static_assert (cond)</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#define LUMEX_STATIC_ASSERT(cond) static_assert (cond, #cond)</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">// Variadic so commas in template argument lists remain part of the</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">// static_assert declaration instead of being parsed as macro arguments.</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="a00662.html#a5216865b2fc83a9979ea50b2172a1dfb">  108</a></span>&#160;<span class="preprocessor">#define LUMEX_STATIC_ASSERT_MSG(...) static_assert (__VA_ARGS__)</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif // !LUMEX_CORE_UTILITY_ASSERT_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aa00659_html_a5334d5477ed5cb85a010f52c4f534fd4"><div class="ttname"><a href="a00659.html#a5334d5477ed5cb85a010f52c4f534fd4">lumex_assert_handler</a></div><div class="ttdeci">void lumex_assert_handler(char const *assertion, char const *file, int line) noexcept</div><div class="ttdoc">Handles failed assertions within the Lumex codebase.</div><div class="ttdef"><b>Definition:</b> LumexAssert.cpp:10</div></div>
-<div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div></div>
-<div class="ttc" id="aa00917_html_aa5051b73e2d3303e7e2718073a3dd2f4"><div class="ttname"><a href="a00917.html#aa5051b73e2d3303e7e2718073a3dd2f4">LUMEX_EXTERN_C_END</a></div><div class="ttdeci">#define LUMEX_EXTERN_C_END</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:47</div></div>
-<div class="ttc" id="aa00917_html_acaff4c6bbcf06a700c96ca83292c16ac"><div class="ttname"><a href="a00917.html#acaff4c6bbcf06a700c96ca83292c16ac">LUMEX_EXTERN_C_BEGIN</a></div><div class="ttdeci">#define LUMEX_EXTERN_C_BEGIN</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:44</div></div>
-<div class="ttc" id="aa00917_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:113</div></div>
-<div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div></div>
+<div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div><div class="ttdoc">Macros that spell C++ keywords and specifiers only where the compiled standard supports them,...</div></div>
+<div class="ttc" id="aa00917_html_aa5051b73e2d3303e7e2718073a3dd2f4"><div class="ttname"><a href="a00917.html#aa5051b73e2d3303e7e2718073a3dd2f4">LUMEX_EXTERN_C_END</a></div><div class="ttdeci">#define LUMEX_EXTERN_C_END</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:64</div></div>
+<div class="ttc" id="aa00917_html_acaff4c6bbcf06a700c96ca83292c16ac"><div class="ttname"><a href="a00917.html#acaff4c6bbcf06a700c96ca83292c16ac">LUMEX_EXTERN_C_BEGIN</a></div><div class="ttdeci">#define LUMEX_EXTERN_C_BEGIN</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:61</div></div>
+<div class="ttc" id="aa00917_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:130</div></div>
+<div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div><div class="ttdoc">Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,...</div></div>
 <div class="ttc" id="aa00662_html_a5334d5477ed5cb85a010f52c4f534fd4"><div class="ttname"><a href="a00662.html#a5334d5477ed5cb85a010f52c4f534fd4">lumex_assert_handler</a></div><div class="ttdeci">void lumex_assert_handler(char const *assertion, char const *file, int line) noexcept</div><div class="ttdoc">Handles failed assertions within the Lumex codebase.</div><div class="ttdef"><b>Definition:</b> LumexAssert.cpp:10</div></div>
-<div class="ttc" id="aa00662_html"><div class="ttname"><a href="a00662.html">LumexAssert.hpp</a></div></div>
-<div class="ttc" id="aa00701_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:66</div></div>
+<div class="ttc" id="aa00662_html"><div class="ttname"><a href="a00662.html">LumexAssert.hpp</a></div><div class="ttdoc">Assertion macros: LUMEX_ASSERT, checked at run time, and LUMEX_STATIC_ASSERT and LUMEX_STATIC_ASSERT_...</div></div>
+<div class="ttc" id="aa00701_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:84</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

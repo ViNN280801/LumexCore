@@ -100,6 +100,9 @@ $(document).ready(function(){initNavTree('a01001.html',''); initResizable(); });
 <div class="title">XmlTreeWalker.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>XmlTreeWalker</code>, the callback interface of the depth-first traversal performed by <code>XmlNode::traverse</code>.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="a00917_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -107,9 +110,9 @@ Include dependency graph for XmlTreeWalker.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="a01002.png" border="0" usemap="#aXmlTreeWalker_8hpp" alt=""/></div>
 <map name="XmlTreeWalker_8hpp" id="aXmlTreeWalker_8hpp">
-<area shape="rect" title=" " alt="" coords="127,5,273,32"/>
-<area shape="rect" href="a00917.html" title=" " alt="" coords="5,87,187,114"/>
-<area shape="rect" href="a00665.html" title=" " alt="" coords="211,80,400,121"/>
+<area shape="rect" title="XmlTreeWalker, the callback interface of the depth&#45;first traversal performed by XmlNode::traverse." alt="" coords="127,5,273,32"/>
+<area shape="rect" href="a00917.html" title="Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,..." alt="" coords="5,87,187,114"/>
+<area shape="rect" href="a00665.html" title="LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P..." alt="" coords="211,80,400,121"/>
 <area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="178,169,433,211"/>
 </map>
 </div>
@@ -118,7 +121,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="a01003.png" border="0" usemap="#aXmlTreeWalker_8hppdep" alt=""/></div>
 <map name="XmlTreeWalker_8hppdep" id="aXmlTreeWalker_8hppdep">
-<area shape="rect" title=" " alt="" coords="5,5,152,32"/>
+<area shape="rect" title="XmlTreeWalker, the callback interface of the depth&#45;first traversal performed by XmlNode::traverse." alt="" coords="5,5,152,32"/>
 <area shape="rect" href="a00965.html" title=" " alt="" coords="24,80,133,107"/>
 </map>
 </div>
@@ -127,21 +130,29 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03148.html">lumex::xml::tree::XmlTreeWalker</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class for implementing custom XML tree traversal logic.  <a href="a03148.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03226.html">lumex::xml::tree::XmlTreeWalker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class for implementing custom XML tree traversal logic.  <a href="a03226.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
-<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
+<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01353"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01353.html">lumex::xml</a></td></tr>
+<tr class="memitem:a01431"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01431.html">lumex::xml</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01367"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01367.html">lumex::xml::tree</a></td></tr>
+<tr class="memitem:a01445"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01445.html">lumex::xml::tree</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><code>XmlTreeWalker</code>, the callback interface of the depth-first traversal performed by <code>XmlNode::traverse</code>. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>A walker derives from this class and implements <code>for_each</code>, which is called for every descendant of the node being traversed in document order. <code>begin</code> and <code>end</code> are called once with that node, before and after the descendants. Returning <code>false</code> from <code>begin</code> or <code>for_each</code> stops the walk and makes <code>traverse</code> return <code>false</code>; otherwise it returns what <code>end</code> returns. During <code>for_each</code>, <code>depth()</code> is the depth of the visited node below the traversed one, 0 for its children. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

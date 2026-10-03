@@ -120,18 +120,18 @@ $(document).ready(function(){initNavTree('a00617_source.html',''); initResizable
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00680.html">lumex/core/utility/compiler/LumexCheckFeatures.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00722.html">lumex/core/utility/traits/LumexTypeTraits.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01185.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">namespace </span>core</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="a01296.html">   66</a></span>&#160;<span class="keyword">namespace </span>string</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="a01374.html">   66</a></span>&#160;<span class="keyword">namespace </span>string</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="a01297.html">   68</a></span>&#160;<span class="keyword">namespace </span>text</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="a01375.html">   68</a></span>&#160;<span class="keyword">namespace </span>text</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#if LUMEX_HAS_STD_RANGES</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;std::string</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<a class="code" href="a01297.html#a231b10aa30739e8dd0d79760d7bb6529">join</a> (std::ranges::input_range <span class="keyword">auto</span> <span class="keyword">const</span> &amp;range, std::string_view separator)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<a class="code" href="a01375.html#a231b10aa30739e8dd0d79760d7bb6529">join</a> (std::ranges::input_range <span class="keyword">auto</span> <span class="keyword">const</span> &amp;range, std::string_view separator)</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  requires lumex::core::utility::traits::stream::Streamable&lt;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      std::ranges::range_reference_t&lt;decltype (range)&gt;&gt;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
@@ -150,11 +150,11 @@ $(document).ready(function(){initNavTree('a00617_source.html',''); initResizable
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Range, <span class="keyword">typename</span> Separator&gt;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">typename</span> std::enable_if&lt;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="a02840.html">lumex::core::utility::traits::range::has_streamable_elements&lt;Range&gt;::value</a></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        &amp;&amp; <a class="code" href="a02808.html">lumex::core::utility::traits::stream::is_streamable</a>&lt;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="a02918.html">lumex::core::utility::traits::range::has_streamable_elements&lt;Range&gt;::value</a></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        &amp;&amp; <a class="code" href="a02886.html">lumex::core::utility::traits::stream::is_streamable</a>&lt;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keyword">typename</span> std::decay&lt;Separator&gt;::type&gt;::value,</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    std::string&gt;::type</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="a01297.html#a231b10aa30739e8dd0d79760d7bb6529">  122</a></span>&#160;<a class="code" href="a01297.html#a231b10aa30739e8dd0d79760d7bb6529">join</a> (Range <span class="keyword">const</span> &amp;range, Separator <span class="keyword">const</span> &amp;separator)</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="a01375.html#a231b10aa30739e8dd0d79760d7bb6529">  122</a></span>&#160;<a class="code" href="a01375.html#a231b10aa30739e8dd0d79760d7bb6529">join</a> (Range <span class="keyword">const</span> &amp;range, Separator <span class="keyword">const</span> &amp;separator)</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  std::ostringstream oss;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">bool</span> is_first = <span class="keyword">true</span>;</div>
@@ -177,12 +177,12 @@ $(document).ready(function(){initNavTree('a00617_source.html',''); initResizable
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#endif // !LUMEX_CORE_STRING_TEXT_JOIN_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01297_html_a231b10aa30739e8dd0d79760d7bb6529"><div class="ttname"><a href="a01297.html#a231b10aa30739e8dd0d79760d7bb6529">lumex::core::string::text::join</a></div><div class="ttdeci">std::enable_if&lt; lumex::core::utility::traits::range::has_streamable_elements&lt; Range &gt;::value &amp;&amp;lumex::core::utility::traits::stream::is_streamable&lt; typename std::decay&lt; Separator &gt;::type &gt;::value, std::string &gt;::type join(Range const &amp;range, Separator const &amp;separator)</div><div class="ttdoc">Streams every element of range with operator&lt;&lt;, separated by separator (C++11 to C++17).</div><div class="ttdef"><b>Definition:</b> LumexJoin.hpp:122</div></div>
 <div class="ttc" id="aa00722_html"><div class="ttname"><a href="a00722.html">LumexTypeTraits.hpp</a></div><div class="ttdoc">Every general-purpose type trait of LumexLib, one sub-namespace of lumex::core::utility::traits per t...</div></div>
+<div class="ttc" id="aa02886_html"><div class="ttname"><a href="a02886.html">lumex::core::utility::traits::stream::is_streamable</a></div><div class="ttdoc">std::true_type when std::declval&lt;std::ostream &amp;&gt;() &lt;&lt; std::declval&lt;T&gt;() is well-formed (or,...</div><div class="ttdef"><b>Definition:</b> LumexTypeTraits.hpp:516</div></div>
 <div class="ttc" id="aa00680_html"><div class="ttname"><a href="a00680.html">LumexCheckFeatures.hpp</a></div><div class="ttdoc">C++ language, library and attribute feature availability.</div></div>
-<div class="ttc" id="aa02808_html"><div class="ttname"><a href="a02808.html">lumex::core::utility::traits::stream::is_streamable</a></div><div class="ttdoc">std::true_type when std::declval&lt;std::ostream &amp;&gt;() &lt;&lt; std::declval&lt;T&gt;() is well-formed (or,...</div><div class="ttdef"><b>Definition:</b> LumexTypeTraits.hpp:516</div></div>
-<div class="ttc" id="aa02840_html"><div class="ttname"><a href="a02840.html">lumex::core::utility::traits::range::has_streamable_elements</a></div><div class="ttdoc">Range is iterable and its elements (after std::decay) are streamable.</div><div class="ttdef"><b>Definition:</b> LumexTypeTraits.hpp:688</div></div>
-<div class="ttc" id="aa01185_html"><div class="ttname"><a href="a01185.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa01375_html_a231b10aa30739e8dd0d79760d7bb6529"><div class="ttname"><a href="a01375.html#a231b10aa30739e8dd0d79760d7bb6529">lumex::core::string::text::join</a></div><div class="ttdeci">std::enable_if&lt; lumex::core::utility::traits::range::has_streamable_elements&lt; Range &gt;::value &amp;&amp;lumex::core::utility::traits::stream::is_streamable&lt; typename std::decay&lt; Separator &gt;::type &gt;::value, std::string &gt;::type join(Range const &amp;range, Separator const &amp;separator)</div><div class="ttdoc">Streams every element of range with operator&lt;&lt;, separated by separator (C++11 to C++17).</div><div class="ttdef"><b>Definition:</b> LumexJoin.hpp:122</div></div>
+<div class="ttc" id="aa02918_html"><div class="ttname"><a href="a02918.html">lumex::core::utility::traits::range::has_streamable_elements</a></div><div class="ttdoc">Range is iterable and its elements (after std::decay) are streamable.</div><div class="ttdef"><b>Definition:</b> LumexTypeTraits.hpp:688</div></div>
+<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

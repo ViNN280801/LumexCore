@@ -1,6 +1,6 @@
 var a00929 =
 [
-    [ "XmlAttributeBase", "a03072.html", "a03072" ],
+    [ "XmlAttributeBase", "a03150.html", "a03150" ],
     [ "allocate_attribute", "a00929.html#a9574910c1eb199b109e5ef6a75692053", null ],
     [ "destroy_attribute", "a00929.html#a39c4f1cfa1cc6b95363c620f8c07bdea", null ],
     [ "insert_attribute_after", "a00929.html#ac009a781687ac1b076eb5408390597a9", null ],

@@ -98,42 +98,43 @@ $(document).ready(function(){initNavTree('a00533_source.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 <a href="a00533.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef LUMEX_CORE_EXCEPTIONS_CRASH_WINDOWS_SEH_TRANSLATOR_HPP</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define LUMEX_CORE_EXCEPTIONS_CRASH_WINDOWS_SEH_TRANSLATOR_HPP</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00917.html">lumex/LumexExport.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#if defined(_WIN32)</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;eh.h&gt;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &quot;lumex/core/utility/LumexUtility&quot;</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00665.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#if defined(LUMEX_OS_WINDOWS)</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="code" href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> seh_translator (<a class="code" href="a00665.html#a06748e501657bea60452820c04a1cb9e">LUMEX_ATTRIBUTE_MAYBE_UNUSED</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> code,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                            _EXCEPTION_POINTERS *info);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#ifndef LUMEX_CORE_EXCEPTIONS_CRASH_WINDOWS_SEH_TRANSLATOR_HPP</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#define LUMEX_CORE_EXCEPTIONS_CRASH_WINDOWS_SEH_TRANSLATOR_HPP</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00917.html">lumex/LumexExport.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#if defined(_WIN32)</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#include &lt;eh.h&gt;</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#if defined(LUMEX_OS_WINDOWS)</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#define SET_SEH_TRANSLATOR _set_se_translator (seh_translator);</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="a00533.html#a0d7aeb5eed30cf65a5415d7bb1014f5b">   67</a></span>&#160;<span class="preprocessor">#define SET_SEH_TRANSLATOR</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // !LUMEX_CORE_EXCEPTIONS_CRASH_WINDOWS_SEH_TRANSLATOR_HPP</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a01256.html">lumex/core/utility/LumexUtility</a>&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00665.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#if defined(LUMEX_OS_WINDOWS)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<a class="code" href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> seh_translator (<a class="code" href="a00665.html#a06748e501657bea60452820c04a1cb9e">LUMEX_ATTRIBUTE_MAYBE_UNUSED</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> code,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                            _EXCEPTION_POINTERS *info);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#if defined(LUMEX_OS_WINDOWS)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#define SET_SEH_TRANSLATOR _set_se_translator (seh_translator);</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="a00533.html#a0d7aeb5eed30cf65a5415d7bb1014f5b">   81</a></span>&#160;<span class="preprocessor">#define SET_SEH_TRANSLATOR</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif // !LUMEX_CORE_EXCEPTIONS_CRASH_WINDOWS_SEH_TRANSLATOR_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa02068_html_ac7cf277fe57c942e42bc79dd1bdb7750"><div class="ttname"><a href="a02068.html#ac7cf277fe57c942e42bc79dd1bdb7750">lumex::core::exceptions::crash::LumexCrashHandler::instance</a></div><div class="ttdeci">static LumexCrashHandler &amp; instance()</div><div class="ttdoc">Returns the singleton instance of the crash handler.</div><div class="ttdef"><b>Definition:</b> LumexCrashHandler.cpp:28</div></div>
-<div class="ttc" id="aa00665_html_a06748e501657bea60452820c04a1cb9e"><div class="ttname"><a href="a00665.html#a06748e501657bea60452820c04a1cb9e">LUMEX_ATTRIBUTE_MAYBE_UNUSED</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_MAYBE_UNUSED</div><div class="ttdef"><b>Definition:</b> LumexAttributes.hpp:180</div></div>
-<div class="ttc" id="aa00917_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:113</div></div>
-<div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div></div>
-<div class="ttc" id="aa00533_html"><div class="ttname"><a href="a00533.html">WindowsSEHTranslator.hpp</a></div></div>
-<div class="ttc" id="aa00527_html"><div class="ttname"><a href="a00527.html">LumexCrashHandler.hpp</a></div></div>
-<div class="ttc" id="aa00665_html"><div class="ttname"><a href="a00665.html">LumexAttributes.hpp</a></div></div>
+<div class="ttc" id="aa00665_html_a06748e501657bea60452820c04a1cb9e"><div class="ttname"><a href="a00665.html#a06748e501657bea60452820c04a1cb9e">LUMEX_ATTRIBUTE_MAYBE_UNUSED</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_MAYBE_UNUSED</div><div class="ttdef"><b>Definition:</b> LumexAttributes.hpp:195</div></div>
+<div class="ttc" id="aa00917_html_ad1cae46ea7dbf5398bbb2a0bdd2cf917"><div class="ttname"><a href="a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a></div><div class="ttdeci">#define LUMEX_PUBLIC_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:130</div></div>
+<div class="ttc" id="aa00917_html"><div class="ttname"><a href="a00917.html">LumexExport.hpp</a></div><div class="ttdoc">Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,...</div></div>
+<div class="ttc" id="aa00533_html"><div class="ttname"><a href="a00533.html">WindowsSEHTranslator.hpp</a></div><div class="ttdoc">The Windows structured exception translator seh_translator() and the SET_SEH_TRANSLATOR macro that in...</div></div>
+<div class="ttc" id="aa02146_html_ac7cf277fe57c942e42bc79dd1bdb7750"><div class="ttname"><a href="a02146.html#ac7cf277fe57c942e42bc79dd1bdb7750">lumex::core::exceptions::crash::LumexCrashHandler::instance</a></div><div class="ttdeci">static LumexCrashHandler &amp; instance()</div><div class="ttdoc">Returns the singleton instance of the crash handler.</div><div class="ttdef"><b>Definition:</b> LumexCrashHandler.cpp:28</div></div>
+<div class="ttc" id="aa01256_html"><div class="ttname"><a href="a01256.html">LumexUtility</a></div><div class="ttdoc">Utility module, the foundation of the library: assertion, attribute, keyword and constant macros,...</div></div>
+<div class="ttc" id="aa00527_html"><div class="ttname"><a href="a00527.html">LumexCrashHandler.hpp</a></div><div class="ttdoc">LumexCrashHandler, the singleton that writes a dump when the process crashes.</div></div>
+<div class="ttc" id="aa00665_html"><div class="ttname"><a href="a00665.html">LumexAttributes.hpp</a></div><div class="ttdoc">LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P...</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

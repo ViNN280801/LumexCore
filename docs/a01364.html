@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::xpath::variable Namespace Reference</title>
+<title>LumexLib: lumex::core::math::ops::Detail Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,180 +97,204 @@ $(document).ready(function(){initNavTree('a01364.html',''); initResizable(); });
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::xpath::variable Namespace Reference</div>  </div>
+<div class="title">lumex::core::math::ops::Detail Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03368.html">xpath_variable_boolean</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a boolean value.  <a href="a03368.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02550.html">difference_type</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type <code>a - b</code> has in the common type of T and U (promoted, so <code>short - short</code> is <code>int</code>); no <code>type</code> unless both are numeric.  <a href="a02550.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03380.html">xpath_variable_node_set</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a node-set value.  <a href="a03380.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02554.html">difference_type&lt; T, U, true &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03372.html">xpath_variable_number</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a numeric (double) value.  <a href="a03372.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02566.html">floating_distance</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result type of <code>distance</code> with a floating-point operand; no <code>type</code> otherwise.  <a href="a02566.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03376.html">xpath_variable_string</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a string value.  <a href="a03376.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02570.html">floating_distance&lt; T, U, true &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03364.html">XPathVariable</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for all XPath variables.  <a href="a03364.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02558.html">integral_distance</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result type of <code>distance</code> for two integers; no <code>type</code> otherwise. Every trait here stays SFINAE-friendly for any argument type, so an unqualified <code>distance (it1, it2)</code> next to <code>using namespace ops</code> still finds <code>std::distance</code>.  <a href="a02558.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03384.html">XPathVariableSet</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages a collection of XPath variables.  <a href="a03384.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02562.html">integral_distance&lt; T, U, true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02522.html">is_numeric_range</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when <code>Range</code> can be iterated as an lvalue and its elements decay to a numeric type.  <a href="a02522.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02526.html">is_numeric_range&lt; Range, typename voider&lt; decltype(adl_begin(std::declval&lt; typename range_object&lt; Range &gt;::type &amp; &gt;()) !=adl_end(std::declval&lt; typename range_object&lt; Range &gt;::type &amp; &gt;())), decltype(++std::declval&lt; decltype(adl_begin(std::declval&lt; typename range_object&lt; Range &gt;::type &amp; &gt;())) &amp; &gt;()), decltype(*adl_begin(std::declval&lt; typename range_object&lt; Range &gt;::type &amp; &gt;()))&gt;::type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02542.html">numeric_common</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>std::common_type</code> of two numeric types; no <code>type</code> otherwise.  <a href="a02542.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02546.html">numeric_common&lt; T, U, true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02530.html">numeric_range_value</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The element type of a numeric range; no <code>type</code> otherwise, so it can sit in a return type for SFINAE.  <a href="a02530.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02534.html">numeric_range_value&lt; Range, true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02518.html">range_object</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>Range</code> without reference, as the lvalue the functions iterate.  <a href="a02518.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02574.html">range_pair_result</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>sqrt</code> result type of the common element type of two numeric ranges; no <code>type</code> otherwise.  <a href="a02574.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02578.html">range_pair_result&lt; Range1, Range2, true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02582.html">range_scalar_result</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>sqrt</code> result type of a numeric range's elements combined with a numeric scalar; no <code>type</code> otherwise.  <a href="a02582.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02586.html">range_scalar_result&lt; Range, Scalar, true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02538.html">sqrt_result</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>std::sqrt</code>'s result type for <code>T</code> (double for an integral <code>T</code>).  <a href="a02538.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02514.html">voider</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a905d690a81b62f466b0c6e211162580c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a905d690a81b62f466b0c6e211162580c"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a905d690a81b62f466b0c6e211162580c">new_xpath_variable</a> (<a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *name)</td></tr>
-<tr class="memdesc:a905d690a81b62f466b0c6e211162580c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function to create a new XPath variable of a specific type.  <a href="a01364.html#a905d690a81b62f466b0c6e211162580c">More...</a><br /></td></tr>
-<tr class="separator:a905d690a81b62f466b0c6e211162580c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d4e94e4d67f2ca993aa3c9f8c38c148"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a03364.html">XPathVariable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01364.html#a9d4e94e4d67f2ca993aa3c9f8c38c148">new_xpath_variable</a> (<a class="el" href="a01370.html#ab45611a4d899512e32aa65eb48a191a5">xpath_value_type</a> type, <a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *name)</td></tr>
-<tr class="memdesc:a9d4e94e4d67f2ca993aa3c9f8c38c148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function to create a new XPath variable based on its type.  <a href="a01364.html#a9d4e94e4d67f2ca993aa3c9f8c38c148">More...</a><br /></td></tr>
-<tr class="separator:a9d4e94e4d67f2ca993aa3c9f8c38c148"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0be06ec2c3c4e4250c31819d89fce85e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0be06ec2c3c4e4250c31819d89fce85e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a0be06ec2c3c4e4250c31819d89fce85e">delete_xpath_variable</a> (T *var)</td></tr>
-<tr class="memdesc:a0be06ec2c3c4e4250c31819d89fce85e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory associated with a specific XPath variable type.  <a href="a01364.html#a0be06ec2c3c4e4250c31819d89fce85e">More...</a><br /></td></tr>
-<tr class="separator:a0be06ec2c3c4e4250c31819d89fce85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c437efc4cf016b68b63e55b2fe1672"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01364.html#a10c437efc4cf016b68b63e55b2fe1672">delete_xpath_variable</a> (<a class="el" href="a01370.html#ab45611a4d899512e32aa65eb48a191a5">xpath_value_type</a> type, <a class="el" href="a03364.html">XPathVariable</a> *var)</td></tr>
-<tr class="memdesc:a10c437efc4cf016b68b63e55b2fe1672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory associated with an XPath variable based on its type.  <a href="a01364.html#a10c437efc4cf016b68b63e55b2fe1672">More...</a><br /></td></tr>
-<tr class="separator:a10c437efc4cf016b68b63e55b2fe1672"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c614ae14269eea0013728c7722e8f69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01364.html#a8c614ae14269eea0013728c7722e8f69">copy_xpath_variable</a> (<a class="el" href="a03364.html">XPathVariable</a> *lhs, <a class="el" href="a03364.html">XPathVariable</a> const *rhs)</td></tr>
-<tr class="memdesc:a8c614ae14269eea0013728c7722e8f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the value of one XPath variable to another.  <a href="a01364.html#a8c614ae14269eea0013728c7722e8f69">More...</a><br /></td></tr>
-<tr class="separator:a8c614ae14269eea0013728c7722e8f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e440c9a87ed869364c0351b332f26e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01364.html#a2e440c9a87ed869364c0351b332f26e4">get_variable_scratch</a> (<a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a>(&amp;buffer)[32], <a class="el" href="a03384.html">XPathVariableSet</a> *set, <a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *begin, <a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *end, <a class="el" href="a03364.html">XPathVariable</a> **out_result)</td></tr>
-<tr class="memdesc:a2e440c9a87ed869364c0351b332f26e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility function to retrieve a variable from a set, handling scratch buffer for name.  <a href="a01364.html#a2e440c9a87ed869364c0351b332f26e4">More...</a><br /></td></tr>
-<tr class="separator:a2e440c9a87ed869364c0351b332f26e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdf8ed32a58d7ef1884b0e2eb69e139b"><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
+<tr class="memitem:abdf8ed32a58d7ef1884b0e2eb69e139b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#abdf8ed32a58d7ef1884b0e2eb69e139b">adl_begin</a> (Range &amp;range) -&gt; decltype(begin(range))</td></tr>
+<tr class="memdesc:abdf8ed32a58d7ef1884b0e2eb69e139b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>begin (range)</code> with <code>std::begin</code> and ADL, as a range-for does.  <a href="a01364.html#abdf8ed32a58d7ef1884b0e2eb69e139b">More...</a><br /></td></tr>
+<tr class="separator:abdf8ed32a58d7ef1884b0e2eb69e139b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39800dfb129ce7e0f3b8520f0e8ce977"><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
+<tr class="memitem:a39800dfb129ce7e0f3b8520f0e8ce977"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a39800dfb129ce7e0f3b8520f0e8ce977">adl_end</a> (Range &amp;range) -&gt; decltype(end(range))</td></tr>
+<tr class="memdesc:a39800dfb129ce7e0f3b8520f0e8ce977"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>end (range)</code> with <code>std::end</code> and ADL, as a range-for does.  <a href="a01364.html#a39800dfb129ce7e0f3b8520f0e8ce977">More...</a><br /></td></tr>
+<tr class="separator:a39800dfb129ce7e0f3b8520f0e8ce977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02125f45f18a96bf33bfb97c10bc6b6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab02125f45f18a96bf33bfb97c10bc6b6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#ab02125f45f18a96bf33bfb97c10bc6b6">print_number</a> (std::ostream &amp;os, T value)</td></tr>
+<tr class="memdesc:ab02125f45f18a96bf33bfb97c10bc6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a value as a number: the unary plus promotes character types, so they print their code, not a glyph.  <a href="a01364.html#ab02125f45f18a96bf33bfb97c10bc6b6">More...</a><br /></td></tr>
+<tr class="separator:ab02125f45f18a96bf33bfb97c10bc6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a251e77cb9662dd8266b1d6c1ba9589c9"><td class="memTemplParams" colspan="2">template&lt;typename A , typename B &gt; </td></tr>
+<tr class="memitem:a251e77cb9662dd8266b1d6c1ba9589c9"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a251e77cb9662dd8266b1d6c1ba9589c9">cmp_less</a> (A a, B b, std::integral_constant&lt; int, 0 &gt;)</td></tr>
+<tr class="memdesc:a251e77cb9662dd8266b1d6c1ba9589c9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>a &lt; b</code> for two integers of any signedness, without the usual arithmetic conversions turning a negative value into a huge unsigned one (C++20 <code>std::cmp_less</code>).  <a href="a01364.html#a251e77cb9662dd8266b1d6c1ba9589c9">More...</a><br /></td></tr>
+<tr class="separator:a251e77cb9662dd8266b1d6c1ba9589c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5584fe84ef9cc56ae2358c0461ab4a0"><td class="memTemplParams" colspan="2">template&lt;typename A , typename B &gt; </td></tr>
+<tr class="memitem:ad5584fe84ef9cc56ae2358c0461ab4a0"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#ad5584fe84ef9cc56ae2358c0461ab4a0">cmp_less</a> (A a, B b, std::integral_constant&lt; int, 1 &gt;)</td></tr>
+<tr class="separator:ad5584fe84ef9cc56ae2358c0461ab4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae404069b4af30ea78aa85553754f613b"><td class="memTemplParams" colspan="2">template&lt;typename A , typename B &gt; </td></tr>
+<tr class="memitem:ae404069b4af30ea78aa85553754f613b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#ae404069b4af30ea78aa85553754f613b">cmp_less</a> (A a, B b, std::integral_constant&lt; int, 2 &gt;)</td></tr>
+<tr class="separator:ae404069b4af30ea78aa85553754f613b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c65dc1b9f60791429b467d17666bee"><td class="memTemplParams" colspan="2">template&lt;typename A , typename B &gt; </td></tr>
+<tr class="memitem:a58c65dc1b9f60791429b467d17666bee"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a58c65dc1b9f60791429b467d17666bee">cmp_less</a> (A a, B b, std::integral_constant&lt; int, 3 &gt;)</td></tr>
+<tr class="separator:a58c65dc1b9f60791429b467d17666bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d655277fb34121a733a1c0c9fbd42fe"><td class="memTemplParams" colspan="2">template&lt;typename A , typename B &gt; </td></tr>
+<tr class="memitem:a5d655277fb34121a733a1c0c9fbd42fe"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a5d655277fb34121a733a1c0c9fbd42fe">cmp_less</a> (A a, B b)</td></tr>
+<tr class="separator:a5d655277fb34121a733a1c0c9fbd42fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3502a023a6571d1aa9955e571d05724c"><td class="memTemplParams" colspan="2">template&lt;typename Target , typename Source &gt; </td></tr>
+<tr class="memitem:a3502a023a6571d1aa9955e571d05724c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a3502a023a6571d1aa9955e571d05724c">fits</a> (Source value, std::true_type, std::true_type)</td></tr>
+<tr class="memdesc:a3502a023a6571d1aa9955e571d05724c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integral source, integral target: exact comparison.  <a href="a01364.html#a3502a023a6571d1aa9955e571d05724c">More...</a><br /></td></tr>
+<tr class="separator:a3502a023a6571d1aa9955e571d05724c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e6deea417237e89ab691949f9dc9db"><td class="memTemplParams" colspan="2">template&lt;typename Target , typename Source &gt; </td></tr>
+<tr class="memitem:a07e6deea417237e89ab691949f9dc9db"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a07e6deea417237e89ab691949f9dc9db">fits</a> (Source value, std::false_type, std::true_type)</td></tr>
+<tr class="memdesc:a07e6deea417237e89ab691949f9dc9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating-point source, integral target. The bounds are compared in <code>long double</code>, which is only <code>double</code> on MSVC: the maximum of a 64-bit target rounds up to 2^63 / 2^64 there, so the exclusive power-of-two bound <code>2^digits</code> (exact in any binary floating type) is checked as well. The lowest value (0 or -2^digits) is always exact.  <a href="a01364.html#a07e6deea417237e89ab691949f9dc9db">More...</a><br /></td></tr>
+<tr class="separator:a07e6deea417237e89ab691949f9dc9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a139d6b365662614852f1318c6ea5b3"><td class="memTemplParams" colspan="2">template&lt;typename Target , typename Source , typename SourceIsIntegral &gt; </td></tr>
+<tr class="memitem:a2a139d6b365662614852f1318c6ea5b3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a2a139d6b365662614852f1318c6ea5b3">fits</a> (Source value, SourceIsIntegral, std::false_type)</td></tr>
+<tr class="memdesc:a2a139d6b365662614852f1318c6ea5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating-point target: compare against its finite range.  <a href="a01364.html#a2a139d6b365662614852f1318c6ea5b3">More...</a><br /></td></tr>
+<tr class="separator:a2a139d6b365662614852f1318c6ea5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade0e34f98cff83fb7a018f3243ff5195"><td class="memTemplParams" colspan="2">template&lt;typename Source , typename Name &gt; </td></tr>
+<tr class="memitem:ade0e34f98cff83fb7a018f3243ff5195"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#ade0e34f98cff83fb7a018f3243ff5195">throw_if_not_finite</a> (Source value, Name const &amp;fieldName, std::true_type)</td></tr>
+<tr class="separator:ade0e34f98cff83fb7a018f3243ff5195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa37d4508b8891f0fe8bb8de71b0a5829"><td class="memTemplParams" colspan="2">template&lt;typename Source , typename Name &gt; </td></tr>
+<tr class="memitem:aa37d4508b8891f0fe8bb8de71b0a5829"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#aa37d4508b8891f0fe8bb8de71b0a5829">throw_if_not_finite</a> (Source, Name const &amp;, std::false_type)</td></tr>
+<tr class="separator:aa37d4508b8891f0fe8bb8de71b0a5829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a7814d770820120d778770c90575e0"><td class="memTemplParams" colspan="2">template&lt;typename It1 , typename End1 , typename It2 , typename End2 &gt; </td></tr>
+<tr class="memitem:a09a7814d770820120d778770c90575e0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a09a7814d770820120d778770c90575e0">require_same_size</a> (char const *function, It1 &amp;it1, End1 const &amp;last1, It2 &amp;it2, End2 const &amp;last2, std::size_t count)</td></tr>
+<tr class="memdesc:a09a7814d770820120d778770c90575e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after a lockstep pass over two ranges that consumed <code>count</code> elements of each: throws <a class="el" href="a02506.html" title="Thrown by the two-range rms / rmse when the ranges have different lengths, one of them empty included...">LumexMathSizeMismatchException</a> unless both ranges are exhausted. Counts what is left, so the message carries both lengths.  <a href="a01364.html#a09a7814d770820120d778770c90575e0">More...</a><br /></td></tr>
+<tr class="separator:a09a7814d770820120d778770c90575e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8c614ae14269eea0013728c7722e8f69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c614ae14269eea0013728c7722e8f69">&#9670;&nbsp;</a></span>copy_xpath_variable()</h2>
+<a id="abdf8ed32a58d7ef1884b0e2eb69e139b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdf8ed32a58d7ef1884b0e2eb69e139b">&#9670;&nbsp;</a></span>adl_begin()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+<div class="memtemplate">
+template&lt;typename Range &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool lumex::xml::xpath::variable::copy_xpath_variable </td>
+          <td class="memname">auto lumex::core::math::ops::Detail::adl_begin </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a03364.html">XPathVariable</a> *&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a03364.html">XPathVariable</a> const *&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">Range &amp;&#160;</td>
+          <td class="paramname"><em>range</em></td><td>)</td>
+          <td> -&gt; decltype (begin (range))
+</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Copies the value of one XPath variable to another. </p>
-<p>This function performs a type-aware deep copy of the value from <code>rhs</code> to <code>lhs</code>. It handles the different underlying storage mechanisms for boolean, number, string, and node-set types. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>A pointer to the destination <code><a class="el" href="a03364.html" title="Base class for all XPath variables.">XPathVariable</a></code> to which the value will be copied. </td></tr>
-    <tr><td class="paramname">rhs</td><td>A constant pointer to the source <code><a class="el" href="a03364.html" title="Base class for all XPath variables.">XPathVariable</a></code> from which the value will be copied. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the copy was successful, <code>false</code> otherwise (e.g., memory allocation failure for strings/node-sets). </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">&lt;tt&gt;LUMEX_ASSERT&lt;/tt&gt;</td><td>if an invalid variable type is encountered. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p><code>begin (range)</code> with <code>std::begin</code> and ADL, as a range-for does. </p>
 <div class="dynheader">
-Here is the call graph for this function:</div>
+Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01364_a8c614ae14269eea0013728c7722e8f69_cgraph.png" border="0" usemap="#aa01364_a8c614ae14269eea0013728c7722e8f69_cgraph" alt=""/></div>
-<map name="a01364_a8c614ae14269eea0013728c7722e8f69_cgraph" id="aa01364_a8c614ae14269eea0013728c7722e8f69_cgraph">
-<area shape="rect" title="Copies the value of one XPath variable to another." alt="" coords="5,31,164,87"/>
-<area shape="rect" href="a03364.html#a2e73acf1b1853db7738a2c4986d72466" title="Sets the boolean value of the variable." alt="" coords="217,5,418,47"/>
-<area shape="rect" href="a03364.html#af6133c6da37176e91f0b80593dd57140" title="Retrieves the XPath value type of the variable." alt="" coords="212,71,423,112"/>
+<div class="center"><img src="a01364_abdf8ed32a58d7ef1884b0e2eb69e139b_icgraph.png" border="0" usemap="#aa01364_abdf8ed32a58d7ef1884b0e2eb69e139b_icgraph" alt=""/></div>
+<map name="a01364_abdf8ed32a58d7ef1884b0e2eb69e139b_icgraph" id="aa01364_abdf8ed32a58d7ef1884b0e2eb69e139b_icgraph">
+<area shape="rect" title="begin (range) with std::begin and ADL, as a range&#45;for does." alt="" coords="305,71,468,112"/>
+<area shape="rect" href="a01362.html#ad93d68e5c10c71ddb4e4a107879df69a" title="Arithmetic mean of a range&#39;s elements, or ValueType{0} for an empty range." alt="" coords="108,5,257,47"/>
+<area shape="rect" href="a01362.html#a90e1a67a352767f3d7e6099c9056b030" title="Root Mean Square of a range&#39;s elements, or ResultType{0} for an empty range." alt="" coords="108,71,257,112"/>
+<area shape="rect" href="a01362.html#a229d474c16ac226d2cfce2332550eb4b" title="Root Mean Squared Error of a range against a fixed scalar: sqrt( 1/N * sum (x_i &#45; scalar)^2 )...." alt="" coords="108,136,257,177"/>
+<area shape="rect" href="a00833.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,78,60,105"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a0be06ec2c3c4e4250c31819d89fce85e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0be06ec2c3c4e4250c31819d89fce85e">&#9670;&nbsp;</a></span>delete_xpath_variable() <span class="overload">[1/2]</span></h2>
+<a id="a39800dfb129ce7e0f3b8520f0e8ce977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39800dfb129ce7e0f3b8520f0e8ce977">&#9670;&nbsp;</a></span>adl_end()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename Range &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void lumex::xml::xpath::variable::delete_xpath_variable </td>
+          <td class="memname">auto lumex::core::math::ops::Detail::adl_end </td>
           <td>(</td>
-          <td class="paramtype">T *&#160;</td>
-          <td class="paramname"><em>var</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">Range &amp;&#160;</td>
+          <td class="paramname"><em>range</em></td><td>)</td>
+          <td> -&gt; decltype (end (range))
+</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Frees the memory associated with a specific XPath variable type. </p>
-<p>This templated function calls the destructor of the specific variable type <code>T</code> and then deallocates the memory previously allocated by <code>new_xpath_variable</code>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The specific derived <code><a class="el" href="a03364.html" title="Base class for all XPath variables.">XPathVariable</a></code> type to delete. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">var</td><td>A pointer to the variable instance to delete. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function assumes <code>var</code> was allocated via <code>new_xpath_variable&lt;T&gt;</code>. </dd></dl>
+<p><code>end (range)</code> with <code>std::end</code> and ADL, as a range-for does. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01364_a39800dfb129ce7e0f3b8520f0e8ce977_icgraph.png" border="0" usemap="#aa01364_a39800dfb129ce7e0f3b8520f0e8ce977_icgraph" alt=""/></div>
+<map name="a01364_a39800dfb129ce7e0f3b8520f0e8ce977_icgraph" id="aa01364_a39800dfb129ce7e0f3b8520f0e8ce977_icgraph">
+<area shape="rect" title="end (range) with std::end and ADL, as a range&#45;for does." alt="" coords="305,71,456,112"/>
+<area shape="rect" href="a01362.html#ad93d68e5c10c71ddb4e4a107879df69a" title="Arithmetic mean of a range&#39;s elements, or ValueType{0} for an empty range." alt="" coords="108,5,257,47"/>
+<area shape="rect" href="a01362.html#a90e1a67a352767f3d7e6099c9056b030" title="Root Mean Square of a range&#39;s elements, or ResultType{0} for an empty range." alt="" coords="108,71,257,112"/>
+<area shape="rect" href="a01362.html#a229d474c16ac226d2cfce2332550eb4b" title="Root Mean Squared Error of a range against a fixed scalar: sqrt( 1/N * sum (x_i &#45; scalar)^2 )...." alt="" coords="108,136,257,177"/>
+<area shape="rect" href="a00833.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,78,60,105"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a10c437efc4cf016b68b63e55b2fe1672"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10c437efc4cf016b68b63e55b2fe1672">&#9670;&nbsp;</a></span>delete_xpath_variable() <span class="overload">[2/2]</span></h2>
+<a id="a5d655277fb34121a733a1c0c9fbd42fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d655277fb34121a733a1c0c9fbd42fe">&#9670;&nbsp;</a></span>cmp_less() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+<div class="memtemplate">
+template&lt;typename A , typename B &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void lumex::xml::xpath::variable::delete_xpath_variable </td>
+          <td class="memname">bool lumex::core::math::ops::Detail::cmp_less </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a01370.html#ab45611a4d899512e32aa65eb48a191a5">xpath_value_type</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">A&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a03364.html">XPathVariable</a> *&#160;</td>
-          <td class="paramname"><em>var</em>&#160;</td>
+          <td class="paramtype">B&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -278,199 +302,327 @@ template&lt;typename T &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Frees the memory associated with an XPath variable based on its type. </p>
-<p>This overloaded function dispatches to the appropriate templated <code>delete_xpath_variable</code> function based on the <code>xpath_value_type</code>. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>The <code>xpath_value_type</code> of the variable to delete. </td></tr>
-    <tr><td class="paramname">var</td><td>A pointer to the <code><a class="el" href="a03364.html" title="Base class for all XPath variables.">XPathVariable</a></code> instance to delete. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">&lt;tt&gt;LUMEX_ASSERT&lt;/tt&gt;</td><td>if an invalid variable type is encountered. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function assumes <code>var</code> was allocated via <code>new_xpath_variable</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a2e440c9a87ed869364c0351b332f26e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e440c9a87ed869364c0351b332f26e4">&#9670;&nbsp;</a></span>get_variable_scratch()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool lumex::xml::xpath::variable::get_variable_scratch </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a>(&amp;)&#160;</td>
-          <td class="paramname"><em>buffer</em>[32], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a03384.html">XPathVariableSet</a> *&#160;</td>
-          <td class="paramname"><em>set</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>begin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>end</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a03364.html">XPathVariable</a> **&#160;</td>
-          <td class="paramname"><em>out_result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Utility function to retrieve a variable from a set, handling scratch buffer for name. </p>
-<p>This function takes a variable name that might not be null-terminated (given by <code>begin</code> and <code>end</code>), copies it into a scratch buffer (or allocates temporary heap memory if needed), and then looks up the variable in the provided <code><a class="el" href="a03384.html" title="Manages a collection of XPath variables.">XPathVariableSet</a></code>. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">buffer</td><td>A fixed-size character array used as a scratch buffer for the variable name. </td></tr>
-    <tr><td class="paramname">set</td><td>A pointer to the <code><a class="el" href="a03384.html" title="Manages a collection of XPath variables.">XPathVariableSet</a></code> to search in. </td></tr>
-    <tr><td class="paramname">begin</td><td>A pointer to the beginning of the variable name in the query string. </td></tr>
-    <tr><td class="paramname">end</td><td>A pointer to one past the end of the variable name in the query string. </td></tr>
-    <tr><td class="paramname">out_result</td><td>A pointer to an <code>XPathVariable*</code> that will receive the found variable, or <code>nullptr</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the operation was successful (including memory allocation for scratch buffer), <code>false</code> if memory allocation failed. The <code>out_result</code> should be checked to see if the variable was actually found. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd><code>buffer</code> must be large enough to hold <code>(end - begin) + 1</code> characters. If not, a heap allocation occurs. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01364_a2e440c9a87ed869364c0351b332f26e4_cgraph.png" border="0" usemap="#aa01364_a2e440c9a87ed869364c0351b332f26e4_cgraph" alt=""/></div>
-<map name="a01364_a2e440c9a87ed869364c0351b332f26e4_cgraph" id="aa01364_a2e440c9a87ed869364c0351b332f26e4_cgraph">
-<area shape="rect" title="Utility function to retrieve a variable from a set, handling scratch buffer for name." alt="" coords="5,5,169,61"/>
-<area shape="rect" href="a03384.html#aa79b3b1721b77504917e6524e1180be6" title="Gets a mutable pointer to an existing variable by name." alt="" coords="217,13,440,54"/>
+<div class="center"><img src="a01364_a5d655277fb34121a733a1c0c9fbd42fe_cgraph.png" border="0" usemap="#aa01364_a5d655277fb34121a733a1c0c9fbd42fe_cgraph" alt=""/></div>
+<map name="a01364_a5d655277fb34121a733a1c0c9fbd42fe_cgraph" id="aa01364_a5d655277fb34121a733a1c0c9fbd42fe_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,167,47"/>
+<area shape="rect" href="a01364.html#a251e77cb9662dd8266b1d6c1ba9589c9" title="a &lt; b for two integers of any signedness, without the usual arithmetic conversions turning a negative..." alt="" coords="215,5,376,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a251e77cb9662dd8266b1d6c1ba9589c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a251e77cb9662dd8266b1d6c1ba9589c9">&#9670;&nbsp;</a></span>cmp_less() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename A , typename B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::math::ops::Detail::cmp_less </td>
+          <td>(</td>
+          <td class="paramtype">A&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">B&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::integral_constant&lt; int, 0 &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>a &lt; b</code> for two integers of any signedness, without the usual arithmetic conversions turning a negative value into a huge unsigned one (C++20 <code>std::cmp_less</code>). </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01364_a251e77cb9662dd8266b1d6c1ba9589c9_icgraph.png" border="0" usemap="#aa01364_a251e77cb9662dd8266b1d6c1ba9589c9_icgraph" alt=""/></div>
+<map name="a01364_a251e77cb9662dd8266b1d6c1ba9589c9_icgraph" id="aa01364_a251e77cb9662dd8266b1d6c1ba9589c9_icgraph">
+<area shape="rect" title="a &lt; b for two integers of any signedness, without the usual arithmetic conversions turning a negative..." alt="" coords="317,39,479,80"/>
+<area shape="rect" href="a01364.html#a5d655277fb34121a733a1c0c9fbd42fe" title=" " alt="" coords="108,5,269,47"/>
+<area shape="rect" href="a01364.html#a3502a023a6571d1aa9955e571d05724c" title="Integral source, integral target: exact comparison." alt="" coords="114,71,263,112"/>
+<area shape="rect" href="a00833.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,78,60,105"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad5584fe84ef9cc56ae2358c0461ab4a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5584fe84ef9cc56ae2358c0461ab4a0">&#9670;&nbsp;</a></span>cmp_less() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename A , typename B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::math::ops::Detail::cmp_less </td>
+          <td>(</td>
+          <td class="paramtype">A&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">B&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::integral_constant&lt; int, 1 &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae404069b4af30ea78aa85553754f613b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae404069b4af30ea78aa85553754f613b">&#9670;&nbsp;</a></span>cmp_less() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename A , typename B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::math::ops::Detail::cmp_less </td>
+          <td>(</td>
+          <td class="paramtype">A&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">B&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::integral_constant&lt; int, 2 &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58c65dc1b9f60791429b467d17666bee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c65dc1b9f60791429b467d17666bee">&#9670;&nbsp;</a></span>cmp_less() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename A , typename B &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::math::ops::Detail::cmp_less </td>
+          <td>(</td>
+          <td class="paramtype">A&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">B&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::integral_constant&lt; int, 3 &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a139d6b365662614852f1318c6ea5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a139d6b365662614852f1318c6ea5b3">&#9670;&nbsp;</a></span>fits() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Target , typename Source , typename SourceIsIntegral &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::math::ops::Detail::fits </td>
+          <td>(</td>
+          <td class="paramtype">Source&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SourceIsIntegral&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::false_type&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Floating-point target: compare against its finite range. </p>
+
+</div>
+</div>
+<a id="a07e6deea417237e89ab691949f9dc9db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07e6deea417237e89ab691949f9dc9db">&#9670;&nbsp;</a></span>fits() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Target , typename Source &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::math::ops::Detail::fits </td>
+          <td>(</td>
+          <td class="paramtype">Source&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::false_type&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::true_type&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Floating-point source, integral target. The bounds are compared in <code>long double</code>, which is only <code>double</code> on MSVC: the maximum of a 64-bit target rounds up to 2^63 / 2^64 there, so the exclusive power-of-two bound <code>2^digits</code> (exact in any binary floating type) is checked as well. The lowest value (0 or -2^digits) is always exact. </p>
+
+</div>
+</div>
+<a id="a3502a023a6571d1aa9955e571d05724c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3502a023a6571d1aa9955e571d05724c">&#9670;&nbsp;</a></span>fits() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Target , typename Source &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::math::ops::Detail::fits </td>
+          <td>(</td>
+          <td class="paramtype">Source&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::true_type&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::true_type&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Integral source, integral target: exact comparison. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01364_a3502a023a6571d1aa9955e571d05724c_cgraph.png" border="0" usemap="#aa01364_a3502a023a6571d1aa9955e571d05724c_cgraph" alt=""/></div>
+<map name="a01364_a3502a023a6571d1aa9955e571d05724c_cgraph" id="aa01364_a3502a023a6571d1aa9955e571d05724c_cgraph">
+<area shape="rect" title="Integral source, integral target: exact comparison." alt="" coords="5,5,155,47"/>
+<area shape="rect" href="a01364.html#a251e77cb9662dd8266b1d6c1ba9589c9" title="a &lt; b for two integers of any signedness, without the usual arithmetic conversions turning a negative..." alt="" coords="203,5,364,47"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01364_a2e440c9a87ed869364c0351b332f26e4_icgraph.png" border="0" usemap="#aa01364_a2e440c9a87ed869364c0351b332f26e4_icgraph" alt=""/></div>
-<map name="a01364_a2e440c9a87ed869364c0351b332f26e4_icgraph" id="aa01364_a2e440c9a87ed869364c0351b332f26e4_icgraph">
-<area shape="rect" title="Utility function to retrieve a variable from a set, handling scratch buffer for name." alt="" coords="256,5,420,61"/>
-<area shape="rect" href="a03344.html#a94a6d92fbfc6de074d2b4a9dfc706acc" title="Parses a PrimaryExpr production in the XPath grammar." alt="" coords="5,5,208,61"/>
+<div class="center"><img src="a01364_a3502a023a6571d1aa9955e571d05724c_icgraph.png" border="0" usemap="#aa01364_a3502a023a6571d1aa9955e571d05724c_icgraph" alt=""/></div>
+<map name="a01364_a3502a023a6571d1aa9955e571d05724c_icgraph" id="aa01364_a3502a023a6571d1aa9955e571d05724c_icgraph">
+<area shape="rect" title="Integral source, integral target: exact comparison." alt="" coords="108,5,257,47"/>
+<area shape="rect" href="a00833.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,60,39"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a905d690a81b62f466b0c6e211162580c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a905d690a81b62f466b0c6e211162580c">&#9670;&nbsp;</a></span>new_xpath_variable() <span class="overload">[1/2]</span></h2>
+<a id="ab02125f45f18a96bf33bfb97c10bc6b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab02125f45f18a96bf33bfb97c10bc6b6">&#9670;&nbsp;</a></span>print_number()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T* lumex::xml::xpath::variable::new_xpath_variable </td>
+          <td class="memname">void lumex::core::math::ops::Detail::print_number </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Factory function to create a new XPath variable of a specific type. </p>
-<p>This templated function allocates memory for a new <code><a class="el" href="a03364.html" title="Base class for all XPath variables.">XPathVariable</a></code> instance (of a derived type like <code><a class="el" href="a03368.html" title="Represents an XPath variable holding a boolean value.">xpath_variable_boolean</a></code>, <code>_number</code>, <code>_string</code>, or <code>_node_set</code>) and initializes its name. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The specific derived <code><a class="el" href="a03364.html" title="Base class for all XPath variables.">XPathVariable</a></code> type to create. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>The null-terminated C-style string name of the variable. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the newly created variable on success, or <code>nullptr</code> if memory allocation fails or if <code>name</code> is empty. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>The caller is responsible for freeing the allocated memory using <code>delete_xpath_variable</code>. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01364_a905d690a81b62f466b0c6e211162580c_cgraph.png" border="0" usemap="#aa01364_a905d690a81b62f466b0c6e211162580c_cgraph" alt=""/></div>
-<map name="a01364_a905d690a81b62f466b0c6e211162580c_cgraph" id="aa01364_a905d690a81b62f466b0c6e211162580c_cgraph">
-<area shape="rect" title="Factory function to create a new XPath variable of a specific type." alt="" coords="5,5,160,61"/>
-<area shape="rect" href="a01355.html#aef8fee41b36e9987a5b7ed339b83ce42" title=" " alt="" coords="208,13,351,54"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01364_a905d690a81b62f466b0c6e211162580c_icgraph.png" border="0" usemap="#aa01364_a905d690a81b62f466b0c6e211162580c_icgraph" alt=""/></div>
-<map name="a01364_a905d690a81b62f466b0c6e211162580c_icgraph" id="aa01364_a905d690a81b62f466b0c6e211162580c_icgraph">
-<area shape="rect" title="Factory function to create a new XPath variable of a specific type." alt="" coords="280,5,435,61"/>
-<area shape="rect" href="a03384.html#ab37f5ebf628ae27ccad60b41c7286ef9" title="Adds a new variable to the set or retrieves an existing one." alt="" coords="5,13,232,54"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a9d4e94e4d67f2ca993aa3c9f8c38c148"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d4e94e4d67f2ca993aa3c9f8c38c148">&#9670;&nbsp;</a></span>new_xpath_variable() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a03364.html">XPathVariable</a>* lumex::xml::xpath::variable::new_xpath_variable </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01370.html#ab45611a4d899512e32aa65eb48a191a5">xpath_value_type</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -478,23 +630,175 @@ Here is the caller graph for this function:</div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Factory function to create a new XPath variable based on its type. </p>
-<p>This overloaded function dispatches to the appropriate templated <code>new_xpath_variable</code> function based on the <code>xpath_value_type</code>. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type</td><td>The <code>xpath_value_type</code> of the variable to create. </td></tr>
-    <tr><td class="paramname">name</td><td>The null-terminated C-style string name of the variable. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the newly created <code><a class="el" href="a03364.html" title="Base class for all XPath variables.">XPathVariable</a></code> on success, or <code>nullptr</code> on failure. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>The caller is responsible for freeing the allocated memory using <code>delete_xpath_variable</code>. </dd></dl>
+<p>Prints a value as a number: the unary plus promotes character types, so they print their code, not a glyph. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01364_ab02125f45f18a96bf33bfb97c10bc6b6_icgraph.png" border="0" usemap="#aa01364_ab02125f45f18a96bf33bfb97c10bc6b6_icgraph" alt=""/></div>
+<map name="a01364_ab02125f45f18a96bf33bfb97c10bc6b6_icgraph" id="aa01364_ab02125f45f18a96bf33bfb97c10bc6b6_icgraph">
+<area shape="rect" title="Prints a value as a number: the unary plus promotes character types, so they print their code,..." alt="" coords="247,5,433,47"/>
+<area shape="rect" href="a01362.html#a352de153760a43a606fa28f303f057f4" title="Casts sourceValue to TargetType, throwing if the value is non&#45;finite (for a floating&#45;point source) or..." alt="" coords="5,5,199,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a09a7814d770820120d778770c90575e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09a7814d770820120d778770c90575e0">&#9670;&nbsp;</a></span>require_same_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename It1 , typename End1 , typename It2 , typename End2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void lumex::core::math::ops::Detail::require_same_size </td>
+          <td>(</td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">It1 &amp;&#160;</td>
+          <td class="paramname"><em>it1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">End1 const &amp;&#160;</td>
+          <td class="paramname"><em>last1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">It2 &amp;&#160;</td>
+          <td class="paramname"><em>it2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">End2 const &amp;&#160;</td>
+          <td class="paramname"><em>last2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called after a lockstep pass over two ranges that consumed <code>count</code> elements of each: throws <a class="el" href="a02506.html" title="Thrown by the two-range rms / rmse when the ranges have different lengths, one of them empty included...">LumexMathSizeMismatchException</a> unless both ranges are exhausted. Counts what is left, so the message carries both lengths. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01364_a09a7814d770820120d778770c90575e0_cgraph.png" border="0" usemap="#aa01364_a09a7814d770820120d778770c90575e0_cgraph" alt=""/></div>
+<map name="a01364_a09a7814d770820120d778770c90575e0_cgraph" id="aa01364_a09a7814d770820120d778770c90575e0_cgraph">
+<area shape="rect" title="Called after a lockstep pass over two ranges that consumed count elements of each: throws LumexMathSi..." alt="" coords="5,5,155,61"/>
+<area shape="rect" href="a01347.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="203,13,381,54"/>
+<area shape="rect" href="a02154.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="429,13,717,54"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01364_a09a7814d770820120d778770c90575e0_icgraph.png" border="0" usemap="#aa01364_a09a7814d770820120d778770c90575e0_icgraph" alt=""/></div>
+<map name="a01364_a09a7814d770820120d778770c90575e0_icgraph" id="aa01364_a09a7814d770820120d778770c90575e0_icgraph">
+<area shape="rect" title="Called after a lockstep pass over two ranges that consumed count elements of each: throws LumexMathSi..." alt="" coords="203,31,352,87"/>
+<area shape="rect" href="a01362.html#ad9fa554776fb61a72e661118ca2c3b90" title="Root Mean Square of the element&#45;wise product of two equally&#45;sized ranges: sqrt( 1/N * sum (x_i * y_i)..." alt="" coords="5,5,155,47"/>
+<area shape="rect" href="a01362.html#a6e5b667b699fbafa2850ca7d511a3b1e" title="Root Mean Squared Error between two equally&#45;sized ranges: sqrt( 1/N * sum (x_i &#45; y_i)^2 )...." alt="" coords="5,71,155,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ade0e34f98cff83fb7a018f3243ff5195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade0e34f98cff83fb7a018f3243ff5195">&#9670;&nbsp;</a></span>throw_if_not_finite() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Source , typename Name &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void lumex::core::math::ops::Detail::throw_if_not_finite </td>
+          <td>(</td>
+          <td class="paramtype">Source&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Name const &amp;&#160;</td>
+          <td class="paramname"><em>fieldName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::true_type&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01364_ade0e34f98cff83fb7a018f3243ff5195_icgraph.png" border="0" usemap="#aa01364_ade0e34f98cff83fb7a018f3243ff5195_icgraph" alt=""/></div>
+<map name="a01364_ade0e34f98cff83fb7a018f3243ff5195_icgraph" id="aa01364_ade0e34f98cff83fb7a018f3243ff5195_icgraph">
+<area shape="rect" title=" " alt="" coords="247,5,400,61"/>
+<area shape="rect" href="a01362.html#a352de153760a43a606fa28f303f057f4" title="Casts sourceValue to TargetType, throwing if the value is non&#45;finite (for a floating&#45;point source) or..." alt="" coords="5,13,199,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa37d4508b8891f0fe8bb8de71b0a5829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa37d4508b8891f0fe8bb8de71b0a5829">&#9670;&nbsp;</a></span>throw_if_not_finite() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Source , typename Name &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void lumex::core::math::ops::Detail::throw_if_not_finite </td>
+          <td>(</td>
+          <td class="paramtype">Source&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Name const &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::false_type&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -503,7 +807,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01353.html">xml</a></li><li class="navelem"><a class="el" href="a01362.html">xpath</a></li><li class="navelem"><a class="el" href="a01364.html">variable</a></li>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01314.html">core</a></li><li class="navelem"><a class="el" href="a01361.html">math</a></li><li class="navelem"><a class="el" href="a01362.html">ops</a></li><li class="navelem"><a class="el" href="a01364.html">Detail</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

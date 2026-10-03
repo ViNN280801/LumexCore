@@ -101,6 +101,9 @@ $(document).ready(function(){initNavTree('a01130.html',''); initResizable(); });
 <div class="title">XPathVariable.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>XPathVariable</code>, a named and typed XPath variable, its four concrete kinds, and the functions that create, copy and destroy them.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="a00917_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="a01004_source.html">lumex/xml/types/XmlTypes.hpp</a>&quot;</code><br />
@@ -111,46 +114,108 @@ Include dependency graph for XPathVariable.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="a01131.png" border="0" usemap="#aXPathVariable_8hpp" alt=""/></div>
 <map name="XPathVariable_8hpp" id="aXPathVariable_8hpp">
-<area shape="rect" title=" " alt="" coords="1351,5,1491,32"/>
-<area shape="rect" href="a00917.html" title=" " alt="" coords="2153,676,2335,703"/>
-<area shape="rect" href="a00665.html" title=" " alt="" coords="2788,751,2977,792"/>
-<area shape="rect" href="a01004.html" title=" " alt="" coords="1259,594,1485,621"/>
-<area shape="rect" href="a01013.html" title=" " alt="" coords="518,326,741,353"/>
-<area shape="rect" href="a01082.html" title=" " alt="" coords="1214,80,1383,121"/>
-<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="2755,840,3010,881"/>
-<area shape="rect" title=" " alt="" coords="473,676,540,703"/>
-<area shape="rect" title=" " alt="" coords="1343,676,1401,703"/>
-<area shape="rect" href="a01010.html" title=" " alt="" coords="610,676,849,703"/>
-<area shape="rect" href="a00695.html" title=" " alt="" coords="447,751,702,792"/>
-<area shape="rect" href="a00701.html" title=" " alt="" coords="148,840,361,881"/>
-<area shape="rect" title=" " alt="" coords="549,594,605,621"/>
-<area shape="rect" title=" " alt="" coords="389,415,448,442"/>
-<area shape="rect" title=" " alt="" coords="472,415,539,442"/>
-<area shape="rect" title=" " alt="" coords="563,415,626,442"/>
-<area shape="rect" title=" " alt="" coords="1047,676,1118,703"/>
-<area shape="rect" title=" " alt="" coords="701,415,763,442"/>
-<area shape="rect" title=" " alt="" coords="390,505,455,531"/>
-<area shape="rect" title=" " alt="" coords="480,505,547,531"/>
-<area shape="rect" title=" " alt="" coords="195,415,263,442"/>
-<area shape="rect" href="a00662.html" title=" " alt="" coords="1561,587,1743,628"/>
-<area shape="rect" href="a00935.html" title=" " alt="" coords="622,497,781,539"/>
-<area shape="rect" href="a00953.html" title=" " alt="" coords="1712,505,1979,531"/>
-<area shape="rect" href="a01061.html" title=" " alt="" coords="888,408,1080,449"/>
-<area shape="rect" href="a00959.html" title=" " alt="" coords="1819,594,1979,621"/>
-<area shape="rect" href="a01064.html" title=" " alt="" coords="856,505,1032,531"/>
-<area shape="rect" href="a01043.html" title=" " alt="" coords="629,587,829,628"/>
-<area shape="rect" href="a01076.html" title=" " alt="" coords="2193,169,2314,196"/>
-<area shape="rect" href="a00923.html" title=" " alt="" coords="1807,319,1959,360"/>
-<area shape="rect" href="a00968.html" title=" " alt="" coords="2143,244,2363,271"/>
-<area shape="rect" title=" " alt="" coords="1561,415,1658,442"/>
-<area shape="rect" href="a00929.html" title=" " alt="" coords="1933,415,2099,442"/>
-<area shape="rect" title=" " alt="" coords="2291,326,2362,353"/>
-<area shape="rect" href="a00974.html" title=" " alt="" coords="1983,326,2126,353"/>
-<area shape="rect" title=" " alt="" coords="2430,408,2567,449"/>
-<area shape="rect" href="a00980.html" title=" " alt="" coords="2437,319,2643,360"/>
-<area shape="rect" href="a00992.html" title=" " alt="" coords="2257,505,2511,531"/>
-<area shape="rect" href="a01016.html" title=" " alt="" coords="2357,594,2592,621"/>
-<area shape="rect" href="a01022.html" title=" " alt="" coords="1157,497,1376,539"/>
+<area shape="rect" title="XPathVariable, a named and typed XPath variable, its four concrete kinds, and the functions that crea..." alt="" coords="5101,5,5241,32"/>
+<area shape="rect" href="a00917.html" title="Export and linkage macros of LumexLib: LUMEX_API, LUMEX_PUBLIC_API, LUMEX_PUBLIC_C_API,..." alt="" coords="579,862,760,889"/>
+<area shape="rect" href="a00665.html" title="LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P..." alt="" coords="6381,765,6571,807"/>
+<area shape="rect" href="a01004.html" title="The basic types and enumerations of the XML module: character and string types, node types,..." alt="" coords="909,594,1136,621"/>
+<area shape="rect" href="a01013.html" title="Header&#45;only helpers of the XML implementation: transcoding, encoding detection, conversions between t..." alt="" coords="5438,326,5661,353"/>
+<area shape="rect" href="a01082.html" title="XPathNodeSet, the node set an XPath query returns, and XPathNodeSetRaw, the growable array used while..." alt="" coords="5086,80,5255,121"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="6953,855,7207,896"/>
+<area shape="rect" title=" " alt="" coords="1621,773,1688,799"/>
+<area shape="rect" title=" " alt="" coords="6869,862,6928,889"/>
+<area shape="rect" href="a01010.html" title="Preprocessor macros of the XML module: the character mode, the declaration of constants,..." alt="" coords="8431,683,8670,710"/>
+<area shape="rect" href="a00695.html" title="Macros that declare static constants in the same way in every C++ standard: LUMEX_CONST_NUM,..." alt="" coords="10231,765,10486,807"/>
+<area shape="rect" href="a00701.html" title="Macros that spell C++ keywords and specifiers only where the compiled standard supports them,..." alt="" coords="9796,855,10009,896"/>
+<area shape="rect" title=" " alt="" coords="1712,773,1768,799"/>
+<area shape="rect" title=" " alt="" coords="5433,415,5492,442"/>
+<area shape="rect" title=" " alt="" coords="5516,415,5583,442"/>
+<area shape="rect" title=" " alt="" coords="10093,773,10155,799"/>
+<area shape="rect" title=" " alt="" coords="1850,773,1921,799"/>
+<area shape="rect" title=" " alt="" coords="5607,415,5668,442"/>
+<area shape="rect" title=" " alt="" coords="5458,683,5523,710"/>
+<area shape="rect" title=" " alt="" coords="1923,683,1989,710"/>
+<area shape="rect" title=" " alt="" coords="5693,415,5761,442"/>
+<area shape="rect" href="a00662.html" title="Assertion macros: LUMEX_ASSERT, checked at run time, and LUMEX_STATIC_ASSERT and LUMEX_STATIC_ASSERT_..." alt="" coords="9682,765,9865,807"/>
+<area shape="rect" href="a00935.html" title="Constants of the XML module: parse and format option flags, the masks of the node and attribute heade..." alt="" coords="1699,587,1858,628"/>
+<area shape="rect" href="a00953.html" title="The page allocator that holds the nodes, attributes and strings of one XML document." alt="" coords="1483,505,1749,531"/>
+<area shape="rect" href="a01061.html" title="XPathAllocator, the bump allocator of the XPath engine, and XPathAllocatorCapture,..." alt="" coords="2080,408,2272,449"/>
+<area shape="rect" href="a00959.html" title="The header of a memory page of the XML allocator, and the default page size." alt="" coords="1312,594,1472,621"/>
+<area shape="rect" href="a01064.html" title="XPathMemoryBlock, the unit of memory of the XPath allocator." alt="" coords="1976,505,2152,531"/>
+<area shape="rect" href="a01043.html" title="Size limits and alignment of the XPath engine." alt="" coords="5172,587,5372,628"/>
+<area shape="rect" href="a01076.html" title="XPathNode, an item of an XPath result: either an XML node or an attribute together with its element." alt="" coords="5209,169,5330,196"/>
+<area shape="rect" href="a00923.html" title="XmlAttribute, the handle to one attribute of an element: read its name and value, convert the value t..." alt="" coords="5835,319,5987,360"/>
+<area shape="rect" href="a00968.html" title="XmlNode, the handle to a node of a document tree, with the iterators over its children and attributes..." alt="" coords="3343,244,3563,271"/>
+<area shape="rect" title=" " alt="" coords="10510,773,10607,799"/>
+<area shape="rect" href="a00929.html" title="Internal storage of an XML attribute and the functions that allocate, link, unlink and copy it." alt="" coords="1363,415,1528,442"/>
+<area shape="rect" title=" " alt="" coords="7154,773,7225,799"/>
+<area shape="rect" href="a00974.html" title="Internal storage of an XML node and the functions that build, link, copy and destroy the tree." alt="" coords="963,326,1106,353"/>
+<area shape="rect" href="a01256.html" title="Utility module, the foundation of the library: assertion, attribute, keyword and constant macros,..." alt="" coords="6517,408,6654,449"/>
+<area shape="rect" href="a00980.html" title="XmlObjectRange, a pair of iterators that lets range&#45;based for loops walk the children or attributes o..." alt="" coords="5208,319,5413,360"/>
+<area shape="rect" href="a00992.html" title="xml_parse_result_t, the outcome of loading XML or appending a fragment, and the internal entry point ..." alt="" coords="1153,505,1407,531"/>
+<area shape="rect" href="a01016.html" title="IXmlWriter, the output interface that XML serialization writes bytes to." alt="" coords="195,594,429,621"/>
+<area shape="rect" href="a01022.html" title="Internal output buffer of the serializer: it collects characters, converts them to the target encodin..." alt="" coords="757,497,976,539"/>
+<area shape="rect" href="a00671.html" title="Process&#45;wide slot for one consumer&#45;installed function pointer." alt="" coords="8901,594,9134,621"/>
+<area shape="rect" href="a00677.html" title="Compiler identification and version macros." alt="" coords="6597,773,6851,799"/>
+<area shape="rect" href="a00683.html" title="Header&#45;only call stack capture for diagnostics: captureStackTrace() and the LUMEX_CAPTURE_CALLER_INFO..." alt="" coords="5751,505,5931,531"/>
+<area shape="rect" href="a00722.html" title="Every general&#45;purpose type trait of LumexLib, one sub&#45;namespace of lumex::core::utility::traits per t..." alt="" coords="8002,676,8203,717"/>
+<area shape="rect" href="a00713.html" title="Cross&#45;platform OS macros." alt="" coords="6514,676,6689,717"/>
+<area shape="rect" href="a00686.html" title="Readable C++ type names: the lumDemangle macro for a type or an expression and demangle_type_name() f..." alt="" coords="5742,594,5973,621"/>
+<area shape="rect" href="a00692.html" title="The crash dump subsystem of lumex::utility: CoreDumpGenerator, the DumpType enumeration,..." alt="" coords="4027,594,4295,621"/>
+<area shape="rect" href="a00704.html" title="General preprocessor helpers: LUMEX_FUNCTION_NAME, LUMEX_STRINGIZE and LUMEX_CONCAT." alt="" coords="5535,505,5727,531"/>
+<area shape="rect" href="a00710.html" title="Universal thread&#45;safe comparator for safe comparison of arithmetic types." alt="" coords="10042,587,10249,628"/>
+<area shape="rect" href="a00716.html" title="get_current_pid(), the operating system&#39;s id of the calling process." alt="" coords="6563,594,6762,621"/>
+<area shape="rect" href="a00725.html" title="fd_to_ptr() and ptr_to_fd(), which store a POSIX file descriptor in a void * handle slot and get it b..." alt="" coords="6764,683,6935,710"/>
+<area shape="rect" href="a00668.html" title="ByteSwap(), which reverses the byte order of any integral value and is usable in constant expressions..." alt="" coords="5799,683,5932,710"/>
+<area shape="rect" href="a00674.html" title="downcast(), a checked dynamic_cast from a polymorphic base to a derived class that throws BadDownCast..." alt="" coords="9547,594,9701,621"/>
+<area shape="rect" href="a00707.html" title="As&lt;T&gt;(), which reads a trivially copyable value out of a raw byte buffer through std::memcpy,..." alt="" coords="2377,594,2573,621"/>
+<area shape="rect" href="a00719.html" title="GetNearestTo(), which finds the element of a sorted range whose value is numerically nearest to a giv..." alt="" coords="7418,505,7609,531"/>
+<area shape="rect" title=" " alt="" coords="9383,683,9449,710"/>
+<area shape="rect" title=" " alt="" coords="9474,683,9561,710"/>
+<area shape="rect" title=" " alt="" coords="7161,683,7241,710"/>
+<area shape="rect" title=" " alt="" coords="5579,773,5664,799"/>
+<area shape="rect" title=" " alt="" coords="5319,683,5383,710"/>
+<area shape="rect" title=" " alt="" coords="6145,773,6220,799"/>
+<area shape="rect" title=" " alt="" coords="5649,683,5724,710"/>
+<area shape="rect" href="a00626.html" title="Concatenates the operator&lt;&lt; text of any number of arguments into one std::string." alt="" coords="7595,587,7773,628"/>
+<area shape="rect" title=" " alt="" coords="7052,773,7129,799"/>
+<area shape="rect" title=" " alt="" coords="7938,773,8014,799"/>
+<area shape="rect" title=" " alt="" coords="8566,773,8658,799"/>
+<area shape="rect" title=" " alt="" coords="8206,862,8266,889"/>
+<area shape="rect" title=" " alt="" coords="8785,773,8871,799"/>
+<area shape="rect" title=" " alt="" coords="8140,773,8199,799"/>
+<area shape="rect" title=" " alt="" coords="8274,773,8329,799"/>
+<area shape="rect" title=" " alt="" coords="2563,773,2637,799"/>
+<area shape="rect" title=" " alt="" coords="8949,683,9025,710"/>
+<area shape="rect" title=" " alt="" coords="2614,683,2679,710"/>
+<area shape="rect" title=" " alt="" coords="2704,683,2763,710"/>
+<area shape="rect" title=" " alt="" coords="2787,683,2861,710"/>
+<area shape="rect" title=" " alt="" coords="2885,683,2936,710"/>
+<area shape="rect" title=" " alt="" coords="8455,773,8542,799"/>
+<area shape="rect" title=" " alt="" coords="2961,683,3069,710"/>
+<area shape="rect" title=" " alt="" coords="3093,683,3155,710"/>
+<area shape="rect" title=" " alt="" coords="3180,683,3247,710"/>
+<area shape="rect" title=" " alt="" coords="3271,683,3414,710"/>
+<area shape="rect" title=" " alt="" coords="3439,683,3503,710"/>
+<area shape="rect" title=" " alt="" coords="3527,683,3595,710"/>
+<area shape="rect" title=" " alt="" coords="3619,683,3687,710"/>
+<area shape="rect" title=" " alt="" coords="3711,683,3774,710"/>
+<area shape="rect" title=" " alt="" coords="3798,683,3871,710"/>
+<area shape="rect" title=" " alt="" coords="3895,683,3950,710"/>
+<area shape="rect" title=" " alt="" coords="3974,683,4045,710"/>
+<area shape="rect" title=" " alt="" coords="4069,683,4153,710"/>
+<area shape="rect" title=" " alt="" coords="4177,683,4250,710"/>
+<area shape="rect" title=" " alt="" coords="4274,683,4374,710"/>
+<area shape="rect" title=" " alt="" coords="4398,683,4487,710"/>
+<area shape="rect" title=" " alt="" coords="4511,683,4627,710"/>
+<area shape="rect" title=" " alt="" coords="4652,683,4751,710"/>
+<area shape="rect" title=" " alt="" coords="4775,683,4860,710"/>
+<area shape="rect" title=" " alt="" coords="4884,683,4980,710"/>
+<area shape="rect" title=" " alt="" coords="5004,683,5092,710"/>
+<area shape="rect" title=" " alt="" coords="2115,683,2184,710"/>
+<area shape="rect" href="a01235.html" title="Math module: mathematical constants as LUMEX_MATH_CONSTANTS_* macros, and numeric helpers such as NaN..." alt="" coords="7797,594,8011,621"/>
+<area shape="rect" href="a00596.html" title="Mathematical constants as LUMEX_MATH_CONSTANTS_* macros." alt="" coords="9049,683,9308,710"/>
+<area shape="rect" href="a00599.html" title="Numeric helpers: NaN/Inf checks, checked narrowing casts, distance, squared difference,..." alt="" coords="7773,683,7926,710"/>
+<area shape="rect" href="a00698.html" title="Macros that declare an exception class in one line." alt="" coords="7401,765,7661,807"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -158,17 +223,22 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="a01132.png" border="0" usemap="#aXPathVariable_8hppdep" alt=""/></div>
 <map name="XPathVariable_8hppdep" id="aXPathVariable_8hppdep">
-<area shape="rect" title=" " alt="" coords="430,5,570,32"/>
-<area shape="rect" href="a01040.html" title=" " alt="" coords="163,80,306,107"/>
-<area shape="rect" href="a01121.html" title=" " alt="" coords="523,80,639,107"/>
-<area shape="rect" href="a01127.html" title=" " alt="" coords="664,80,803,107"/>
-<area shape="rect" href="a01136.html" title=" " alt="" coords="338,80,499,107"/>
+<area shape="rect" title="XPathVariable, a named and typed XPath variable, its four concrete kinds, and the functions that crea..." alt="" coords="493,5,633,32"/>
+<area shape="rect" href="a01040.html" title="XPathAstNode, the node of a compiled XPath expression tree, which evaluates itself against a context." alt="" coords="163,80,306,107"/>
+<area shape="rect" href="a01121.html" title=" " alt="" coords="601,80,717,107"/>
+<area shape="rect" href="a01127.html" title=" " alt="" coords="741,80,880,107"/>
+<area shape="rect" href="a01136.html" title="XPathVariableSet, the named variables an XPath expression can refer to, and the lookup helper the par..." alt="" coords="363,80,525,107"/>
+<area shape="rect" href="a01259.html" title="XML module: a DOM tree of nodes, attributes and text, loading and saving with writers for files and s..." alt="" coords="742,155,834,181"/>
 <area shape="rect" href="a01037.html" title=" " alt="" coords="5,155,147,181"/>
-<area shape="rect" href="a01100.html" title=" " alt="" coords="171,155,298,181"/>
-<area shape="rect" href="a01097.html" title=" " alt="" coords="223,229,348,256"/>
-<area shape="rect" href="a01109.html" title=" " alt="" coords="415,229,537,256"/>
-<area shape="rect" href="a00965.html" title=" " alt="" coords="373,155,483,181"/>
+<area shape="rect" href="a01100.html" title="XPathParser, the recursive descent parser that compiles an XPath 1.0 expression into a tree of XPathA..." alt="" coords="171,155,298,181"/>
+<area shape="rect" href="a01097.html" title=" " alt="" coords="323,229,448,256"/>
+<area shape="rect" href="a01109.html" title=" " alt="" coords="175,229,297,256"/>
+<area shape="rect" href="a00965.html" title=" " alt="" coords="424,155,533,181"/>
 <area shape="rect" href="a01133.html" title=" " alt="" coords="557,155,717,181"/>
+<area shape="rect" href="a00905.html" title=" " alt="" coords="818,229,939,256"/>
+<area shape="rect" href="a00908.html" title=" " alt="" coords="963,229,1085,256"/>
+<area shape="rect" href="a00911.html" title=" " alt="" coords="527,229,649,256"/>
+<area shape="rect" href="a00914.html" title=" " alt="" coords="673,229,794,256"/>
 </map>
 </div>
 </div>
@@ -176,55 +246,64 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03364.html">lumex::xml::xpath::variable::XPathVariable</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for all XPath variables.  <a href="a03364.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03442.html">lumex::xml::xpath::variable::XPathVariable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for all XPath variables.  <a href="a03442.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03368.html">lumex::xml::xpath::variable::xpath_variable_boolean</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a boolean value.  <a href="a03368.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03446.html">lumex::xml::xpath::variable::xpath_variable_boolean</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a boolean value.  <a href="a03446.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03372.html">lumex::xml::xpath::variable::xpath_variable_number</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a numeric (double) value.  <a href="a03372.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03450.html">lumex::xml::xpath::variable::xpath_variable_number</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a numeric (double) value.  <a href="a03450.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03376.html">lumex::xml::xpath::variable::xpath_variable_string</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a string value.  <a href="a03376.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03454.html">lumex::xml::xpath::variable::xpath_variable_string</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a string value.  <a href="a03454.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03380.html">lumex::xml::xpath::variable::xpath_variable_node_set</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a node-set value.  <a href="a03380.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03458.html">lumex::xml::xpath::variable::xpath_variable_node_set</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a node-set value.  <a href="a03458.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
-<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex</a></td></tr>
+<tr class="memdesc:a01263"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01353"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01353.html">lumex::xml</a></td></tr>
+<tr class="memitem:a01431"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01431.html">lumex::xml</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01362"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01362.html">lumex::xml::xpath</a></td></tr>
+<tr class="memitem:a01440"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01440.html">lumex::xml::xpath</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01364"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01364.html">lumex::xml::xpath::variable</a></td></tr>
+<tr class="memitem:a01442"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01442.html">lumex::xml::xpath::variable</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a905d690a81b62f466b0c6e211162580c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a905d690a81b62f466b0c6e211162580c"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a905d690a81b62f466b0c6e211162580c">lumex::xml::xpath::variable::new_xpath_variable</a> (<a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *name)</td></tr>
-<tr class="memdesc:a905d690a81b62f466b0c6e211162580c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function to create a new XPath variable of a specific type.  <a href="a01364.html#a905d690a81b62f466b0c6e211162580c">More...</a><br /></td></tr>
+<tr class="memitem:a905d690a81b62f466b0c6e211162580c"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01442.html#a905d690a81b62f466b0c6e211162580c">lumex::xml::xpath::variable::new_xpath_variable</a> (<a class="el" href="a01448.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *name)</td></tr>
+<tr class="memdesc:a905d690a81b62f466b0c6e211162580c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function to create a new XPath variable of a specific type.  <a href="a01442.html#a905d690a81b62f466b0c6e211162580c">More...</a><br /></td></tr>
 <tr class="separator:a905d690a81b62f466b0c6e211162580c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d4e94e4d67f2ca993aa3c9f8c38c148"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a03364.html">XPathVariable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01364.html#a9d4e94e4d67f2ca993aa3c9f8c38c148">lumex::xml::xpath::variable::new_xpath_variable</a> (<a class="el" href="a01370.html#ab45611a4d899512e32aa65eb48a191a5">xpath_value_type</a> type, <a class="el" href="a01370.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *name)</td></tr>
-<tr class="memdesc:a9d4e94e4d67f2ca993aa3c9f8c38c148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function to create a new XPath variable based on its type.  <a href="a01364.html#a9d4e94e4d67f2ca993aa3c9f8c38c148">More...</a><br /></td></tr>
+<tr class="memitem:a9d4e94e4d67f2ca993aa3c9f8c38c148"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a03442.html">XPathVariable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01442.html#a9d4e94e4d67f2ca993aa3c9f8c38c148">lumex::xml::xpath::variable::new_xpath_variable</a> (<a class="el" href="a01448.html#ab45611a4d899512e32aa65eb48a191a5">xpath_value_type</a> type, <a class="el" href="a01448.html#a0826d7f05cf3c7528b2eb1a8bd26b2e8">char_t</a> const *name)</td></tr>
+<tr class="memdesc:a9d4e94e4d67f2ca993aa3c9f8c38c148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function to create a new XPath variable based on its type.  <a href="a01442.html#a9d4e94e4d67f2ca993aa3c9f8c38c148">More...</a><br /></td></tr>
 <tr class="separator:a9d4e94e4d67f2ca993aa3c9f8c38c148"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0be06ec2c3c4e4250c31819d89fce85e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0be06ec2c3c4e4250c31819d89fce85e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01364.html#a0be06ec2c3c4e4250c31819d89fce85e">lumex::xml::xpath::variable::delete_xpath_variable</a> (T *var)</td></tr>
-<tr class="memdesc:a0be06ec2c3c4e4250c31819d89fce85e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory associated with a specific XPath variable type.  <a href="a01364.html#a0be06ec2c3c4e4250c31819d89fce85e">More...</a><br /></td></tr>
+<tr class="memitem:a0be06ec2c3c4e4250c31819d89fce85e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01442.html#a0be06ec2c3c4e4250c31819d89fce85e">lumex::xml::xpath::variable::delete_xpath_variable</a> (T *var)</td></tr>
+<tr class="memdesc:a0be06ec2c3c4e4250c31819d89fce85e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory associated with a specific XPath variable type.  <a href="a01442.html#a0be06ec2c3c4e4250c31819d89fce85e">More...</a><br /></td></tr>
 <tr class="separator:a0be06ec2c3c4e4250c31819d89fce85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c437efc4cf016b68b63e55b2fe1672"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01364.html#a10c437efc4cf016b68b63e55b2fe1672">lumex::xml::xpath::variable::delete_xpath_variable</a> (<a class="el" href="a01370.html#ab45611a4d899512e32aa65eb48a191a5">xpath_value_type</a> type, <a class="el" href="a03364.html">XPathVariable</a> *var)</td></tr>
-<tr class="memdesc:a10c437efc4cf016b68b63e55b2fe1672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory associated with an XPath variable based on its type.  <a href="a01364.html#a10c437efc4cf016b68b63e55b2fe1672">More...</a><br /></td></tr>
+<tr class="memitem:a10c437efc4cf016b68b63e55b2fe1672"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01442.html#a10c437efc4cf016b68b63e55b2fe1672">lumex::xml::xpath::variable::delete_xpath_variable</a> (<a class="el" href="a01448.html#ab45611a4d899512e32aa65eb48a191a5">xpath_value_type</a> type, <a class="el" href="a03442.html">XPathVariable</a> *var)</td></tr>
+<tr class="memdesc:a10c437efc4cf016b68b63e55b2fe1672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory associated with an XPath variable based on its type.  <a href="a01442.html#a10c437efc4cf016b68b63e55b2fe1672">More...</a><br /></td></tr>
 <tr class="separator:a10c437efc4cf016b68b63e55b2fe1672"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c614ae14269eea0013728c7722e8f69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01364.html#a8c614ae14269eea0013728c7722e8f69">lumex::xml::xpath::variable::copy_xpath_variable</a> (<a class="el" href="a03364.html">XPathVariable</a> *lhs, <a class="el" href="a03364.html">XPathVariable</a> const *rhs)</td></tr>
-<tr class="memdesc:a8c614ae14269eea0013728c7722e8f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the value of one XPath variable to another.  <a href="a01364.html#a8c614ae14269eea0013728c7722e8f69">More...</a><br /></td></tr>
+<tr class="memitem:a8c614ae14269eea0013728c7722e8f69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01442.html#a8c614ae14269eea0013728c7722e8f69">lumex::xml::xpath::variable::copy_xpath_variable</a> (<a class="el" href="a03442.html">XPathVariable</a> *lhs, <a class="el" href="a03442.html">XPathVariable</a> const *rhs)</td></tr>
+<tr class="memdesc:a8c614ae14269eea0013728c7722e8f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the value of one XPath variable to another.  <a href="a01442.html#a8c614ae14269eea0013728c7722e8f69">More...</a><br /></td></tr>
 <tr class="separator:a8c614ae14269eea0013728c7722e8f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><code>XPathVariable</code>, a named and typed XPath variable, its four concrete kinds, and the functions that create, copy and destroy them. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>A variable has a fixed <code>xpath_value_type</code>: a getter of another type returns a default value, and a setter of another type fails and returns <code>false</code>; nothing is converted. The concrete structs <code>xpath_variable_boolean</code>, <code>xpath_variable_number</code>, <code>xpath_variable_string</code> and <code>xpath_variable_node_set</code> store the name inline after the object, so <code>new_xpath_variable</code> allocates them with <code>malloc</code> and <code>delete_xpath_variable</code> must release them.</p>
+<p>Variables are normally created through <code>XPathVariableSet::add</code>, and an expression refers to a variable as <code>$name</code>. Consumers include the file through <code>lumex/xml/LumexXml</code>. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

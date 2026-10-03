@@ -98,33 +98,33 @@ $(document).ready(function(){initNavTree('a00725_source.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 <a href="a00725.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef LUMEX_CORE_UTILITY_UTIL_HPP</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define LUMEX_CORE_UTILITY_UTIL_HPP</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00701.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> *</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="a00725.html#a478bcfddad48b82cc097c304497e8f38">  115</a></span>&#160;<a class="code" href="a00725.html#a478bcfddad48b82cc097c304497e8f38">fd_to_ptr</a> (<span class="keywordtype">int</span> fileDescriptor) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span> <span class="comment">// NOLINT(performance-no-int-to-ptr)</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordtype">void</span> *<span class="keyword">&gt;</span> (<span class="keyword">static_cast&lt;</span>intptr_t<span class="keyword">&gt;</span> (fileDescriptor));</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">int</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="a00725.html#a7db0bf2ede705527a24f7207479c79b6">  147</a></span>&#160;<a class="code" href="a00725.html#a7db0bf2ede705527a24f7207479c79b6">ptr_to_fd</a> (<span class="keywordtype">void</span> *pointer) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span> (<span class="keyword">reinterpret_cast&lt;</span>intptr_t<span class="keyword">&gt;</span> (pointer));</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#endif // !LUMEX_CORE_UTILITY_UTIL_HPP</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#ifndef LUMEX_CORE_UTILITY_UTIL_HPP</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define LUMEX_CORE_UTILITY_UTIL_HPP</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00701.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> *</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="a00725.html#a478bcfddad48b82cc097c304497e8f38">  125</a></span>&#160;<a class="code" href="a00725.html#a478bcfddad48b82cc097c304497e8f38">fd_to_ptr</a> (<span class="keywordtype">int</span> fileDescriptor) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span> <span class="comment">// NOLINT(performance-no-int-to-ptr)</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordtype">void</span> *<span class="keyword">&gt;</span> (<span class="keyword">static_cast&lt;</span>intptr_t<span class="keyword">&gt;</span> (fileDescriptor));</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">int</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="a00725.html#a7db0bf2ede705527a24f7207479c79b6">  157</a></span>&#160;<a class="code" href="a00725.html#a7db0bf2ede705527a24f7207479c79b6">ptr_to_fd</a> (<span class="keywordtype">void</span> *pointer) <a class="code" href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span> (<span class="keyword">reinterpret_cast&lt;</span>intptr_t<span class="keyword">&gt;</span> (pointer));</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif // !LUMEX_CORE_UTILITY_UTIL_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00725_html_a478bcfddad48b82cc097c304497e8f38"><div class="ttname"><a href="a00725.html#a478bcfddad48b82cc097c304497e8f38">fd_to_ptr</a></div><div class="ttdeci">static void * fd_to_ptr(int fileDescriptor) noexcept</div><div class="ttdoc">Safe cast from POSIX file descriptor (int) to void* for cross-platform storage.</div><div class="ttdef"><b>Definition:</b> LumexUtilities.hpp:115</div></div>
-<div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div></div>
-<div class="ttc" id="aa00725_html_a7db0bf2ede705527a24f7207479c79b6"><div class="ttname"><a href="a00725.html#a7db0bf2ede705527a24f7207479c79b6">ptr_to_fd</a></div><div class="ttdeci">static int ptr_to_fd(void *pointer) noexcept</div><div class="ttdoc">Safe reverse conversion of void* to POSIX file descriptor (int).</div><div class="ttdef"><b>Definition:</b> LumexUtilities.hpp:147</div></div>
-<div class="ttc" id="aa00701_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:66</div></div>
+<div class="ttc" id="aa00725_html_a478bcfddad48b82cc097c304497e8f38"><div class="ttname"><a href="a00725.html#a478bcfddad48b82cc097c304497e8f38">fd_to_ptr</a></div><div class="ttdeci">static void * fd_to_ptr(int fileDescriptor) noexcept</div><div class="ttdoc">Safe cast from POSIX file descriptor (int) to void* for cross-platform storage.</div><div class="ttdef"><b>Definition:</b> LumexUtilities.hpp:125</div></div>
+<div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div><div class="ttdoc">Macros that spell C++ keywords and specifiers only where the compiled standard supports them,...</div></div>
+<div class="ttc" id="aa00725_html_a7db0bf2ede705527a24f7207479c79b6"><div class="ttname"><a href="a00725.html#a7db0bf2ede705527a24f7207479c79b6">ptr_to_fd</a></div><div class="ttdeci">static int ptr_to_fd(void *pointer) noexcept</div><div class="ttdoc">Safe reverse conversion of void* to POSIX file descriptor (int).</div><div class="ttdef"><b>Definition:</b> LumexUtilities.hpp:157</div></div>
+<div class="ttc" id="aa00701_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00701.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:84</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

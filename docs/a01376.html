@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::xpath::context Namespace Reference</title>
+<title>LumexLib: lumex::core::string::text::Detail Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,24 +94,83 @@ $(document).ready(function(){initNavTree('a01376.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::xpath::context Namespace Reference</div>  </div>
+<div class="title">lumex::core::string::text::Detail Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03284.html">XPathContext</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the XPath evaluation context for an expression.  <a href="a03284.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a4dcf39e9c9bb3f6990597b1eabd5c690"><td class="memTemplParams" colspan="2">template&lt;typename Range , typename Separator &gt; </td></tr>
+<tr class="memitem:a4dcf39e9c9bb3f6990597b1eabd5c690"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="a02926.html">lumex::core::utility::traits::range::has_elements_convertible_to</a>&lt; Range, std::string const &amp; &gt;::value &amp;&amp;<a class="el" href="a02886.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt; Separator &gt;::type &gt;::value, std::string &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01376.html#a4dcf39e9c9bb3f6990597b1eabd5c690">quote_each</a> (Range const &amp;range, Separator const &amp;separator, char mark)</td></tr>
+<tr class="memdesc:a4dcf39e9c9bb3f6990597b1eabd5c690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joins <code>range</code>, wrapping each element (converted to <code>std::string const &amp;</code>) in <code>mark</code>.  <a href="a01376.html#a4dcf39e9c9bb3f6990597b1eabd5c690">More...</a><br /></td></tr>
+<tr class="separator:a4dcf39e9c9bb3f6990597b1eabd5c690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a4dcf39e9c9bb3f6990597b1eabd5c690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dcf39e9c9bb3f6990597b1eabd5c690">&#9670;&nbsp;</a></span>quote_each()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Range , typename Separator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt; <a class="el" href="a02926.html">lumex::core::utility::traits::range::has_elements_convertible_to</a>&lt; Range, std::string const &amp;&gt;::value &amp;&amp; <a class="el" href="a02886.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt;Separator&gt;::type&gt;::value, std::string&gt;::type lumex::core::string::text::Detail::quote_each </td>
+          <td>(</td>
+          <td class="paramtype">Range const &amp;&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Separator const &amp;&#160;</td>
+          <td class="paramname"><em>separator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>mark</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Joins <code>range</code>, wrapping each element (converted to <code>std::string const &amp;</code>) in <code>mark</code>. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01376_a4dcf39e9c9bb3f6990597b1eabd5c690_icgraph.png" border="0" usemap="#aa01376_a4dcf39e9c9bb3f6990597b1eabd5c690_icgraph" alt=""/></div>
+<map name="a01376_a4dcf39e9c9bb3f6990597b1eabd5c690_icgraph" id="aa01376_a4dcf39e9c9bb3f6990597b1eabd5c690_icgraph">
+<area shape="rect" title="Joins range, wrapping each element (converted to std::string const &amp;) in mark." alt="" coords="1392,154,1579,196"/>
+<area shape="rect" href="a01375.html#a302f1bdf5e442097f85625effbd1294d" title="join with every element wrapped in double quotes (&quot;element&quot;), C++11 to C++17." alt="" coords="1199,121,1343,162"/>
+<area shape="rect" href="a01375.html#a76b867ee109f995de558b6adac3599e0" title="join with every element wrapped in single quotes (‘&#39;element’`), C++11 to C++17." alt="" coords="1197,186,1344,228"/>
+<area shape="rect" href="a01358.html#a465b2019a72d74b71c5fe3b6f19a0bd2" title="The ? (debug) form of a string or a character." alt="" coords="972,88,1149,129"/>
+<area shape="rect" href="a01375.html#a88eef91964b7cfcb0ba9bf926daee537" title="Same as quote; named for symmetry with quote_single." alt="" coords="985,153,1137,194"/>
+<area shape="rect" href="a01358.html#acc1f0cfb4c741d34dfd2a27fe18b8004" title=" " alt="" coords="747,50,924,92"/>
+<area shape="rect" href="a01358.html#a31ccdb6ecfce000b34dc5e272261271d" title=" " alt="" coords="521,189,699,230"/>
+<area shape="rect" href="a02386.html#ac9642063b0f0f6e8ed748e295ff5174c" title=" " alt="" coords="5,14,184,70"/>
+<area shape="rect" href="a01358.html#ad0334f950a029dfe06bb9eb1fd904f14" title="Writes an integer given as sign + magnitude." alt="" coords="521,50,699,92"/>
+<area shape="rect" href="a02406.html#a11233bb8904684bc2497addaa68232b4" title=" " alt="" coords="232,116,473,216"/>
+<area shape="rect" href="a01358.html#a82be6a9fe1141dbfaf5f5e709aa53a56" title=" " alt="" coords="264,50,441,92"/>
+<area shape="rect" href="a02410.html#aeeecdb02dee27a3a8bd20c6a6526f8ba" title=" " alt="" coords="255,292,451,333"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01353.html">xml</a></li><li class="navelem"><a class="el" href="a01362.html">xpath</a></li><li class="navelem"><a class="el" href="a01376.html">context</a></li>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01314.html">core</a></li><li class="navelem"><a class="el" href="a01374.html">string</a></li><li class="navelem"><a class="el" href="a01375.html">text</a></li><li class="navelem"><a class="el" href="a01376.html">Detail</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

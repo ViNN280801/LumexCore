@@ -118,15 +118,15 @@ $(document).ready(function(){initNavTree('a00614_source.html',''); initResizable
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00701.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00722.html">lumex/core/utility/traits/LumexTypeTraits.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01185.html">lumex</a></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">namespace </span><a class="code" href="a01263.html">lumex</a></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">namespace </span>core</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">namespace </span>reflection</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="a01294.html">   87</a></span>&#160;<span class="keyword">namespace </span>var_info</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="a01372.html">   87</a></span>&#160;<span class="keyword">namespace </span>var_info</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="a01295.html">   89</a></span>&#160;<span class="keyword">namespace </span>VarInfoDetail</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="a01373.html">   89</a></span>&#160;<span class="keyword">namespace </span>VarInfoDetail</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 201703L</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">// C++17+: if constexpr instead of a pair of enable_if overloads - one</span></div>
@@ -134,13 +134,13 @@ $(document).ready(function(){initNavTree('a00614_source.html',''); initResizable
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">// body instead of split across two signatures.</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;std::string</div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="a01295.html#a6e6e131055190b5e44baf4d465cc4837">  130</a></span>&#160;<a class="code" href="a01295.html#a6e6e131055190b5e44baf4d465cc4837">FormatValue</a> (T <span class="keyword">const</span> &amp;value)</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="a01373.html#a6e6e131055190b5e44baf4d465cc4837">  130</a></span>&#160;<a class="code" href="a01373.html#a6e6e131055190b5e44baf4d465cc4837">FormatValue</a> (T <span class="keyword">const</span> &amp;value)</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#if LUMEX_HAS_CONCEPTS</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <a class="code" href="a00701.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a> (lumex::core::utility::traits::stream::Streamable&lt;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                      <span class="keyword">typename</span> std::decay&lt;T&gt;::type <span class="keyword">const</span> &amp;&gt;)</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <a class="code" href="a00701.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a> (<a class="code" href="a02792.html">lumex::core::utility::traits::stream::is_ostreamable</a>&lt;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <a class="code" href="a00701.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a> (<a class="code" href="a02870.html">lumex::core::utility::traits::stream::is_ostreamable</a>&lt;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                      <span class="keyword">typename</span> std::decay&lt;T&gt;::type <span class="keyword">const</span> &amp;&gt;::value)</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  {</div>
@@ -160,10 +160,10 @@ $(document).ready(function(){initNavTree('a00614_source.html',''); initResizable
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">// C++11/14: if constexpr is unavailable (C++17) - classic</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">// enable_if dispatch between two overloads, selected via SFINAE.</span></div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">typename</span> std::enable_if&lt;<a class="code" href="a02792.html">lumex::core::utility::traits::stream::is_ostreamable</a>&lt;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">typename</span> std::enable_if&lt;<a class="code" href="a02870.html">lumex::core::utility::traits::stream::is_ostreamable</a>&lt;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                            <span class="keyword">typename</span> std::decay&lt;T&gt;::type <span class="keyword">const</span> &amp;&gt;::value,</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                        std::string&gt;::type</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<a class="code" href="a01295.html#a6e6e131055190b5e44baf4d465cc4837">FormatValue</a> (T <span class="keyword">const</span> &amp;value)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<a class="code" href="a01373.html#a6e6e131055190b5e44baf4d465cc4837">FormatValue</a> (T <span class="keyword">const</span> &amp;value)</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  std::ostringstream oss;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  oss &lt;&lt; value;</div>
@@ -171,10 +171,10 @@ $(document).ready(function(){initNavTree('a00614_source.html',''); initResizable
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">typename</span> std::enable_if&lt;!<a class="code" href="a02792.html">lumex::core::utility::traits::stream::is_ostreamable</a>&lt;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">typename</span> std::enable_if&lt;!<a class="code" href="a02870.html">lumex::core::utility::traits::stream::is_ostreamable</a>&lt;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                            <span class="keyword">typename</span> std::decay&lt;T&gt;::type <span class="keyword">const</span> &amp;&gt;::value,</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                        std::string&gt;::type</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<a class="code" href="a01295.html#a6e6e131055190b5e44baf4d465cc4837">FormatValue</a> (T <span class="keyword">const</span> &amp;)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<a class="code" href="a01373.html#a6e6e131055190b5e44baf4d465cc4837">FormatValue</a> (T <span class="keyword">const</span> &amp;)</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;&lt;no operator&lt;&lt;&gt;&quot;</span>;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
@@ -183,7 +183,7 @@ $(document).ready(function(){initNavTree('a00614_source.html',''); initResizable
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;std::string</div>
-<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="a01294.html#a20aaee909dd3b3e785c2c7a3e6d76e66">  223</a></span>&#160;<a class="code" href="a01294.html#a20aaee909dd3b3e785c2c7a3e6d76e66">VarInfo</a> (<span class="keywordtype">char</span> <span class="keyword">const</span> *exprText, T &amp;&amp;value, <span class="keywordtype">bool</span> isExprNoexcept,</div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="a01372.html#a20aaee909dd3b3e785c2c7a3e6d76e66">  223</a></span>&#160;<a class="code" href="a01372.html#a20aaee909dd3b3e785c2c7a3e6d76e66">VarInfo</a> (<span class="keywordtype">char</span> <span class="keyword">const</span> *exprText, T &amp;&amp;value, <span class="keywordtype">bool</span> isExprNoexcept,</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;         <span class="keywordtype">char</span> <span class="keyword">const</span> *file, <span class="keywordtype">int</span> line)</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;{</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="comment">// The address reuses exactly the pointer type addressof returned</span></div>
@@ -211,8 +211,8 @@ $(document).ready(function(){initNavTree('a00614_source.html',''); initResizable
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="comment">// pointer&#39;s size (8 bytes), not the array&#39;s real size - sizeof on a</span></div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="comment">// reference parameter transparently gives the size of what it refers to.</span></div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  std::ostringstream oss;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  oss &lt;&lt; exprText &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; <a class="code" href="a01295.html#a6e6e131055190b5e44baf4d465cc4837">VarInfoDetail::FormatValue</a> (value) &lt;&lt; <span class="stringliteral">&quot; [type=&quot;</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      &lt;&lt; <a class="code" href="a01312.html#a5a8a6ca7779e633cf03b6e232ef67775">::lumex::core::utility::demangle::demangle_type_name</a> (</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  oss &lt;&lt; exprText &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; <a class="code" href="a01373.html#a6e6e131055190b5e44baf4d465cc4837">VarInfoDetail::FormatValue</a> (value) &lt;&lt; <span class="stringliteral">&quot; [type=&quot;</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      &lt;&lt; <a class="code" href="a01390.html#a5a8a6ca7779e633cf03b6e232ef67775">::lumex::core::utility::demangle::demangle_type_name</a> (</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;             <span class="keyword">typeid</span> (value).name ())</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      &lt;&lt; (std::is_const&lt;typename std::remove_reference&lt;T&gt;::type&gt;::value</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;              ? <span class="stringliteral">&quot; const&quot;</span></div>
@@ -230,10 +230,10 @@ $(document).ready(function(){initNavTree('a00614_source.html',''); initResizable
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;std::string</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<a class="code" href="a01294.html#a20aaee909dd3b3e785c2c7a3e6d76e66">VarInfo</a> (<span class="keywordtype">char</span> <span class="keyword">const</span> *exprText, T &amp;&amp;value, <span class="keywordtype">bool</span> isExprNoexcept,</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<a class="code" href="a01372.html#a20aaee909dd3b3e785c2c7a3e6d76e66">VarInfo</a> (<span class="keywordtype">char</span> <span class="keyword">const</span> *exprText, T &amp;&amp;value, <span class="keywordtype">bool</span> isExprNoexcept,</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;         std::source_location <span class="keyword">const</span> &amp;loc = std::source_location::current ())</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;{</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="a01294.html#a20aaee909dd3b3e785c2c7a3e6d76e66">VarInfo</a> (exprText, std::forward&lt;T&gt; (value), isExprNoexcept,</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="a01372.html#a20aaee909dd3b3e785c2c7a3e6d76e66">VarInfo</a> (exprText, std::forward&lt;T&gt; (value), isExprNoexcept,</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                  loc.file_name (), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span> (loc.line ()));</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -258,16 +258,32 @@ $(document).ready(function(){initNavTree('a00614_source.html',''); initResizable
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="preprocessor">#endif // !LUMEX_CORE_REFLECTION_VAR_INFO_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div></div>
-<div class="ttc" id="aa00686_html"><div class="ttname"><a href="a00686.html">LumexDemangle.hpp</a></div></div>
-<div class="ttc" id="aa02792_html"><div class="ttname"><a href="a02792.html">lumex::core::utility::traits::stream::is_ostreamable</a></div><div class="ttdoc">std::declval&lt;std::ostream &amp;&gt;() &lt;&lt; std::declval&lt;T&gt;() is well-formed: exactly what the standard library...</div><div class="ttdef"><b>Definition:</b> LumexTypeTraits.hpp:465</div></div>
+<div class="ttc" id="aa00716_html"><div class="ttname"><a href="a00716.html">LumexProcess.hpp</a></div><div class="ttdoc">get_current_pid(), the operating system's id of the calling process.</div></div>
+<div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div><div class="ttdoc">Macros that spell C++ keywords and specifiers only where the compiled standard supports them,...</div></div>
+<div class="ttc" id="aa00686_html"><div class="ttname"><a href="a00686.html">LumexDemangle.hpp</a></div><div class="ttdoc">Readable C++ type names: the lumDemangle macro for a type or an expression and demangle_type_name() f...</div></div>
+<div class="ttc" id="aa00674_html"><div class="ttname"><a href="a00674.html">LumexCast.hpp</a></div><div class="ttdoc">downcast(), a checked dynamic_cast from a polymorphic base to a derived class that throws BadDownCast...</div></div>
 <div class="ttc" id="aa00722_html"><div class="ttname"><a href="a00722.html">LumexTypeTraits.hpp</a></div><div class="ttdoc">Every general-purpose type trait of LumexLib, one sub-namespace of lumex::core::utility::traits per t...</div></div>
+<div class="ttc" id="aa00710_html"><div class="ttname"><a href="a00710.html">LumexSafeNumericComparator.hpp</a></div><div class="ttdoc">Universal thread-safe comparator for safe comparison of arithmetic types.</div></div>
+<div class="ttc" id="aa01373_html_a6e6e131055190b5e44baf4d465cc4837"><div class="ttname"><a href="a01373.html#a6e6e131055190b5e44baf4d465cc4837">lumex::core::reflection::var_info::VarInfoDetail::FormatValue</a></div><div class="ttdeci">std::string FormatValue(T const &amp;value)</div><div class="ttdoc">Detects whether std::ostream::operator&lt;&lt;(T) exists for a type T.</div><div class="ttdef"><b>Definition:</b> LumexVarInfo.hpp:130</div></div>
+<div class="ttc" id="aa00695_html"><div class="ttname"><a href="a00695.html">LumexConstantMacros.hpp</a></div><div class="ttdoc">Macros that declare static constants in the same way in every C++ standard: LUMEX_CONST_NUM,...</div></div>
 <div class="ttc" id="aa00680_html"><div class="ttname"><a href="a00680.html">LumexCheckFeatures.hpp</a></div><div class="ttdoc">C++ language, library and attribute feature availability.</div></div>
-<div class="ttc" id="aa01294_html_a20aaee909dd3b3e785c2c7a3e6d76e66"><div class="ttname"><a href="a01294.html#a20aaee909dd3b3e785c2c7a3e6d76e66">lumex::core::reflection::var_info::VarInfo</a></div><div class="ttdeci">std::string VarInfo(char const *exprText, T &amp;&amp;value, bool isExprNoexcept, char const *file, int line)</div><div class="ttdoc">Builds a diagnostic string about an arbitrary expression: name, value (if the type supports operator&lt;...</div><div class="ttdef"><b>Definition:</b> LumexVarInfo.hpp:223</div></div>
-<div class="ttc" id="aa00701_html_a38079da46fca9b9ae17e90b731d6ab0c"><div class="ttname"><a href="a00701.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a></div><div class="ttdeci">#define LUMEX_CONSTEXPR_IF</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:74</div></div>
-<div class="ttc" id="aa01312_html_a5a8a6ca7779e633cf03b6e232ef67775"><div class="ttname"><a href="a01312.html#a5a8a6ca7779e633cf03b6e232ef67775">lumex::core::utility::demangle::demangle_type_name</a></div><div class="ttdeci">std::string demangle_type_name(char const *mangled)</div><div class="ttdoc">Demangles an already-mangled C++ name (e.g. one captured from a backtrace/stack unwinder),...</div><div class="ttdef"><b>Definition:</b> LumexDemangle.hpp:133</div></div>
-<div class="ttc" id="aa01295_html_a6e6e131055190b5e44baf4d465cc4837"><div class="ttname"><a href="a01295.html#a6e6e131055190b5e44baf4d465cc4837">lumex::core::reflection::var_info::VarInfoDetail::FormatValue</a></div><div class="ttdeci">std::string FormatValue(T const &amp;value)</div><div class="ttdoc">Detects whether std::ostream::operator&lt;&lt;(T) exists for a type T.</div><div class="ttdef"><b>Definition:</b> LumexVarInfo.hpp:130</div></div>
-<div class="ttc" id="aa01185_html"><div class="ttname"><a href="a01185.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa00704_html"><div class="ttname"><a href="a00704.html">LumexMacros.hpp</a></div><div class="ttdoc">General preprocessor helpers: LUMEX_FUNCTION_NAME, LUMEX_STRINGIZE and LUMEX_CONCAT.</div></div>
+<div class="ttc" id="aa00725_html"><div class="ttname"><a href="a00725.html">LumexUtilities.hpp</a></div><div class="ttdoc">fd_to_ptr() and ptr_to_fd(), which store a POSIX file descriptor in a void * handle slot and get it b...</div></div>
+<div class="ttc" id="aa00713_html"><div class="ttname"><a href="a00713.html">LumexCheckOS.hpp</a></div><div class="ttdoc">Cross-platform OS macros.</div></div>
+<div class="ttc" id="aa00683_html"><div class="ttname"><a href="a00683.html">LumexDebug.hpp</a></div><div class="ttdoc">Header-only call stack capture for diagnostics: captureStackTrace() and the LUMEX_CAPTURE_CALLER_INFO...</div></div>
+<div class="ttc" id="aa00701_html_a38079da46fca9b9ae17e90b731d6ab0c"><div class="ttname"><a href="a00701.html#a38079da46fca9b9ae17e90b731d6ab0c">LUMEX_CONSTEXPR_IF</a></div><div class="ttdeci">#define LUMEX_CONSTEXPR_IF</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:92</div></div>
+<div class="ttc" id="aa00668_html"><div class="ttname"><a href="a00668.html">LumexBit.hpp</a></div><div class="ttdoc">ByteSwap(), which reverses the byte order of any integral value and is usable in constant expressions...</div></div>
+<div class="ttc" id="aa00719_html"><div class="ttname"><a href="a00719.html">LumexRanges.hpp</a></div><div class="ttdoc">GetNearestTo(), which finds the element of a sorted range whose value is numerically nearest to a giv...</div></div>
+<div class="ttc" id="aa00677_html"><div class="ttname"><a href="a00677.html">LumexCheckCompiler.hpp</a></div><div class="ttdoc">Compiler identification and version macros.</div></div>
+<div class="ttc" id="aa00662_html"><div class="ttname"><a href="a00662.html">LumexAssert.hpp</a></div><div class="ttdoc">Assertion macros: LUMEX_ASSERT, checked at run time, and LUMEX_STATIC_ASSERT and LUMEX_STATIC_ASSERT_...</div></div>
+<div class="ttc" id="aa02870_html"><div class="ttname"><a href="a02870.html">lumex::core::utility::traits::stream::is_ostreamable</a></div><div class="ttdoc">std::declval&lt;std::ostream &amp;&gt;() &lt;&lt; std::declval&lt;T&gt;() is well-formed: exactly what the standard library...</div><div class="ttdef"><b>Definition:</b> LumexTypeTraits.hpp:465</div></div>
+<div class="ttc" id="aa01263_html"><div class="ttname"><a href="a01263.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
+<div class="ttc" id="aa00671_html"><div class="ttname"><a href="a00671.html">LumexCallbackSlot.hpp</a></div><div class="ttdoc">Process-wide slot for one consumer-installed function pointer.</div></div>
+<div class="ttc" id="aa00707_html"><div class="ttname"><a href="a00707.html">LumexMemRead.hpp</a></div><div class="ttdoc">As&lt;T&gt;(), which reads a trivially copyable value out of a raw byte buffer through std::memcpy,...</div></div>
+<div class="ttc" id="aa01372_html_a20aaee909dd3b3e785c2c7a3e6d76e66"><div class="ttname"><a href="a01372.html#a20aaee909dd3b3e785c2c7a3e6d76e66">lumex::core::reflection::var_info::VarInfo</a></div><div class="ttdeci">std::string VarInfo(char const *exprText, T &amp;&amp;value, bool isExprNoexcept, char const *file, int line)</div><div class="ttdoc">Builds a diagnostic string about an arbitrary expression: name, value (if the type supports operator&lt;...</div><div class="ttdef"><b>Definition:</b> LumexVarInfo.hpp:223</div></div>
+<div class="ttc" id="aa01390_html_a5a8a6ca7779e633cf03b6e232ef67775"><div class="ttname"><a href="a01390.html#a5a8a6ca7779e633cf03b6e232ef67775">lumex::core::utility::demangle::demangle_type_name</a></div><div class="ttdeci">std::string demangle_type_name(char const *mangled)</div><div class="ttdoc">Demangles an already-mangled C++ name (e.g. one captured from a backtrace/stack unwinder),...</div><div class="ttdef"><b>Definition:</b> LumexDemangle.hpp:143</div></div>
+<div class="ttc" id="aa00665_html"><div class="ttname"><a href="a00665.html">LumexAttributes.hpp</a></div><div class="ttdoc">LUMEX_ATTRIBUTE_* macros that spell C++ attributes portably, and the structure packing macros LUMEX_P...</div></div>
+<div class="ttc" id="aa00692_html"><div class="ttname"><a href="a00692.html">LumexCoreDumpGenerator.hpp</a></div><div class="ttdoc">The crash dump subsystem of lumex::utility: CoreDumpGenerator, the DumpType enumeration,...</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

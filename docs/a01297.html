@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::string::text Namespace Reference</title>
+<title>LumexLib: lumex::applied::serial::enumeration Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,248 +94,51 @@ $(document).ready(function(){initNavTree('a01297.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::string::text Namespace Reference</div>  </div>
+<div class="title">lumex::applied::serial::enumeration Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:a01298"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01298.html">Detail</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01526.html">serial_port_info_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structured description of one serial port discovered on this host.  <a href="a01526.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a2833c2a4c2aca860a7fe8ecce5e59400"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01297.html#a2833c2a4c2aca860a7fe8ecce5e59400">serial_port_state</a> { <a class="el" href="a01297.html#a2833c2a4c2aca860a7fe8ecce5e59400aaa2d6e4f578eb0cfaba23beef76c2194">serial_port_state::free</a>, 
+<a class="el" href="a01297.html#a2833c2a4c2aca860a7fe8ecce5e59400a8bc1b2f84252c3df4edd53e4aad097a7">serial_port_state::busy</a>, 
+<a class="el" href="a01297.html#a2833c2a4c2aca860a7fe8ecce5e59400ae4894ca167b08880bfc35862f18575eb">serial_port_state::available</a>
+ }</td></tr>
+<tr class="memdesc:a2833c2a4c2aca860a7fe8ecce5e59400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of an open-probe performed during enumeration.  <a href="a01297.html#a2833c2a4c2aca860a7fe8ecce5e59400">More...</a><br /></td></tr>
+<tr class="separator:a2833c2a4c2aca860a7fe8ecce5e59400"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a231b10aa30739e8dd0d79760d7bb6529"><td class="memTemplParams" colspan="2">template&lt;typename Range , typename Separator &gt; </td></tr>
-<tr class="memitem:a231b10aa30739e8dd0d79760d7bb6529"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="a02840.html">lumex::core::utility::traits::range::has_streamable_elements</a>&lt; Range &gt;::value &amp;&amp;<a class="el" href="a02808.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt; Separator &gt;::type &gt;::value, std::string &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01297.html#a231b10aa30739e8dd0d79760d7bb6529">join</a> (Range const &amp;range, Separator const &amp;separator)</td></tr>
-<tr class="memdesc:a231b10aa30739e8dd0d79760d7bb6529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Streams every element of <code>range</code> with <code>operator&lt;&lt;</code>, separated by <code>separator</code> (C++11 to C++17).  <a href="a01297.html#a231b10aa30739e8dd0d79760d7bb6529">More...</a><br /></td></tr>
-<tr class="separator:a231b10aa30739e8dd0d79760d7bb6529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a302f1bdf5e442097f85625effbd1294d"><td class="memTemplParams" colspan="2">template&lt;typename Range , typename Separator &gt; </td></tr>
-<tr class="memitem:a302f1bdf5e442097f85625effbd1294d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="a02848.html">lumex::core::utility::traits::range::has_elements_convertible_to</a>&lt; Range, std::string const &amp; &gt;::value &amp;&amp;<a class="el" href="a02808.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt; Separator &gt;::type &gt;::value, std::string &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01297.html#a302f1bdf5e442097f85625effbd1294d">quote</a> (Range const &amp;range, Separator const &amp;separator)</td></tr>
-<tr class="memdesc:a302f1bdf5e442097f85625effbd1294d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>join</code> with every element wrapped in double quotes (<code>"element"</code>), C++11 to C++17.  <a href="a01297.html#a302f1bdf5e442097f85625effbd1294d">More...</a><br /></td></tr>
-<tr class="separator:a302f1bdf5e442097f85625effbd1294d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88eef91964b7cfcb0ba9bf926daee537"><td class="memTemplParams" colspan="2">template&lt;typename Range , typename Separator &gt; </td></tr>
-<tr class="memitem:a88eef91964b7cfcb0ba9bf926daee537"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="a02848.html">lumex::core::utility::traits::range::has_elements_convertible_to</a>&lt; Range, std::string const &amp; &gt;::value &amp;&amp;<a class="el" href="a02808.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt; Separator &gt;::type &gt;::value, std::string &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01297.html#a88eef91964b7cfcb0ba9bf926daee537">quote_double</a> (Range const &amp;range, Separator const &amp;separator)</td></tr>
-<tr class="memdesc:a88eef91964b7cfcb0ba9bf926daee537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <code>quote</code>; named for symmetry with <code>quote_single</code>.  <a href="a01297.html#a88eef91964b7cfcb0ba9bf926daee537">More...</a><br /></td></tr>
-<tr class="separator:a88eef91964b7cfcb0ba9bf926daee537"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76b867ee109f995de558b6adac3599e0"><td class="memTemplParams" colspan="2">template&lt;typename Range , typename Separator &gt; </td></tr>
-<tr class="memitem:a76b867ee109f995de558b6adac3599e0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="a02848.html">lumex::core::utility::traits::range::has_elements_convertible_to</a>&lt; Range, std::string const &amp; &gt;::value &amp;&amp;<a class="el" href="a02808.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt; Separator &gt;::type &gt;::value, std::string &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01297.html#a76b867ee109f995de558b6adac3599e0">quote_single</a> (Range const &amp;range, Separator const &amp;separator)</td></tr>
-<tr class="memdesc:a76b867ee109f995de558b6adac3599e0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>join</code> with every element wrapped in single quotes (&lsquo;'element&rsquo;`), C++11 to C++17.  <a href="a01297.html#a76b867ee109f995de558b6adac3599e0">More...</a><br /></td></tr>
-<tr class="separator:a76b867ee109f995de558b6adac3599e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8f7eb93f5a0d72fd633cee8e25bd05a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01297.html#ad8f7eb93f5a0d72fd633cee8e25bd05a">to_case_insensitive</a> (std::string &amp;str, bool need_to_remove_spaces=true)</td></tr>
-<tr class="memdesc:ad8f7eb93f5a0d72fd633cee8e25bd05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lowercases <code>str</code> in place (ASCII <code>std::tolower</code>), so later comparisons are case-insensitive.  <a href="a01297.html#ad8f7eb93f5a0d72fd633cee8e25bd05a">More...</a><br /></td></tr>
-<tr class="separator:ad8f7eb93f5a0d72fd633cee8e25bd05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2d09555090576cec202f328fb11ddbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01297.html#af2d09555090576cec202f328fb11ddbf">to_case_insensitive</a> (std::string const &amp;orig, std::string &amp;out, bool need_to_remove_spaces=true)</td></tr>
-<tr class="memdesc:af2d09555090576cec202f328fb11ddbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-out overload of <code><a class="el" href="a01297.html#ad8f7eb93f5a0d72fd633cee8e25bd05a" title="Lowercases str in place (ASCII std::tolower), so later comparisons are case-insensitive.">to_case_insensitive(std::string &amp;, bool)</a></code>.  <a href="a01297.html#af2d09555090576cec202f328fb11ddbf">More...</a><br /></td></tr>
-<tr class="separator:af2d09555090576cec202f328fb11ddbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acecd7b3c45f11e0b7e71a47a7f84bb5a"><td class="memItemLeft" align="right" valign="top">char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01297.html#acecd7b3c45f11e0b7e71a47a7f84bb5a">serial_port_state_to_string</a> (<a class="el" href="a01297.html#a2833c2a4c2aca860a7fe8ecce5e59400">serial_port_state</a> state) noexcept</td></tr>
+<tr class="memdesc:acecd7b3c45f11e0b7e71a47a7f84bb5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert <code>state</code> to a stable ASCII token.  <a href="a01297.html#acecd7b3c45f11e0b7e71a47a7f84bb5a">More...</a><br /></td></tr>
+<tr class="separator:acecd7b3c45f11e0b7e71a47a7f84bb5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27c22d50630c732a459b88a4f0e4260"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01297.html#ae27c22d50630c732a459b88a4f0e4260">is_bluetooth_enumerated_port</a> (std::string const &amp;port_name) noexcept</td></tr>
+<tr class="memdesc:ae27c22d50630c732a459b88a4f0e4260"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when Windows registered <code>port_name</code> through a Bluetooth enumerator (<code>BTHENUM</code> / <code>BTHLEENUM</code>).  <a href="a01297.html#ae27c22d50630c732a459b88a4f0e4260">More...</a><br /></td></tr>
+<tr class="separator:ae27c22d50630c732a459b88a4f0e4260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf634028bc0cb0ff4024dd920df1602"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="a01526.html">serial_port_info_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01297.html#a4bf634028bc0cb0ff4024dd920df1602">enumerate_serial_ports_detailed</a> (std::string const &amp;connected_port=std::string(), bool need_to_filter_bluetooth=false)</td></tr>
+<tr class="memdesc:a4bf634028bc0cb0ff4024dd920df1602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate serial ports with full <code><a class="el" href="a01526.html" title="Structured description of one serial port discovered on this host.">serial_port_info_t</a></code> records.  <a href="a01297.html#a4bf634028bc0cb0ff4024dd920df1602">More...</a><br /></td></tr>
+<tr class="separator:a4bf634028bc0cb0ff4024dd920df1602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dace1c927ae9cae3eed94de871c9cb1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01297.html#a4dace1c927ae9cae3eed94de871c9cb1">enumerate_serial_port_names</a> (bool need_to_filter_bluetooth=false)</td></tr>
+<tr class="memdesc:a4dace1c927ae9cae3eed94de871c9cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate serial port paths only.  <a href="a01297.html#a4dace1c927ae9cae3eed94de871c9cb1">More...</a><br /></td></tr>
+<tr class="separator:a4dace1c927ae9cae3eed94de871c9cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a94a2885dc60a216e50441898ce62c"><td class="memTemplParams" colspan="2">template&lt;typename CharT , typename Traits &gt; </td></tr>
+<tr class="memitem:a72a94a2885dc60a216e50441898ce62c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01297.html#a72a94a2885dc60a216e50441898ce62c">print_serial_ports_info</a> (std::basic_ostream&lt; CharT, Traits &gt; &amp;os, std::vector&lt; <a class="el" href="a01526.html">serial_port_info_t</a> &gt; const &amp;infos)</td></tr>
+<tr class="memdesc:a72a94a2885dc60a216e50441898ce62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a grouped port table to <code>os</code>.  <a href="a01297.html#a72a94a2885dc60a216e50441898ce62c">More...</a><br /></td></tr>
+<tr class="separator:a72a94a2885dc60a216e50441898ce62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a231b10aa30739e8dd0d79760d7bb6529"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a231b10aa30739e8dd0d79760d7bb6529">&#9670;&nbsp;</a></span>join()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Range , typename Separator &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; <a class="el" href="a02840.html">lumex::core::utility::traits::range::has_streamable_elements</a>&lt;Range&gt;::value &amp;&amp; <a class="el" href="a02808.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt;Separator&gt;::type&gt;::value, std::string&gt;::type lumex::core::string::text::join </td>
-          <td>(</td>
-          <td class="paramtype">Range const &amp;&#160;</td>
-          <td class="paramname"><em>range</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Separator const &amp;&#160;</td>
-          <td class="paramname"><em>separator</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Streams every element of <code>range</code> with <code>operator&lt;&lt;</code>, separated by <code>separator</code> (C++11 to C++17). </p>
-<p>Same contract as the C++20 overload: one pass, no trailing separator, empty text for an empty range. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Range</td><td>Anything a range-based <code>for</code> accepts: a container, a C array, a <code>std::initializer_list</code>. </td></tr>
-    <tr><td class="paramname">Separator</td><td>Anything <code>operator&lt;&lt;</code> can write. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">range</td><td>The elements; each must support <code>operator&lt;&lt;</code>. </td></tr>
-    <tr><td class="paramname">separator</td><td>Written between (not after) elements. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>O(n) time, one pass. Takes part in overload resolution only when <code>Range</code> is iterable with streamable elements and <code>Separator</code> is streamable (<code><a class="el" href="a01321.html">lumex::core::utility::traits</a></code>). </dd></dl>
-
-</div>
-</div>
-<a id="a302f1bdf5e442097f85625effbd1294d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a302f1bdf5e442097f85625effbd1294d">&#9670;&nbsp;</a></span>quote()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Range , typename Separator &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; <a class="el" href="a02848.html">lumex::core::utility::traits::range::has_elements_convertible_to</a>&lt; Range, std::string const &amp;&gt;::value &amp;&amp; <a class="el" href="a02808.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt;Separator&gt;::type&gt;::value, std::string&gt;::type lumex::core::string::text::quote </td>
-          <td>(</td>
-          <td class="paramtype">Range const &amp;&#160;</td>
-          <td class="paramname"><em>range</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Separator const &amp;&#160;</td>
-          <td class="paramname"><em>separator</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>join</code> with every element wrapped in double quotes (<code>"element"</code>), C++11 to C++17. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Range</td><td>Anything a range-based <code>for</code> accepts. </td></tr>
-    <tr><td class="paramname">Separator</td><td>Anything <code>operator&lt;&lt;</code> can write. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">range</td><td>Elements convertible to <code>std::string const &amp;</code>. </td></tr>
-    <tr><td class="paramname">separator</td><td>Written between (not after) elements. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01297_a302f1bdf5e442097f85625effbd1294d_cgraph.png" border="0" usemap="#aa01297_a302f1bdf5e442097f85625effbd1294d_cgraph" alt=""/></div>
-<map name="a01297_a302f1bdf5e442097f85625effbd1294d_cgraph" id="aa01297_a302f1bdf5e442097f85625effbd1294d_cgraph">
-<area shape="rect" title="join with every element wrapped in double quotes (&quot;element&quot;), C++11 to C++17." alt="" coords="5,5,149,47"/>
-<area shape="rect" href="a01298.html#a4dcf39e9c9bb3f6990597b1eabd5c690" title="Joins range, wrapping each element (converted to std::string const &amp;) in mark." alt="" coords="197,5,384,47"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01297_a302f1bdf5e442097f85625effbd1294d_icgraph.png" border="0" usemap="#aa01297_a302f1bdf5e442097f85625effbd1294d_icgraph" alt=""/></div>
-<map name="a01297_a302f1bdf5e442097f85625effbd1294d_icgraph" id="aa01297_a302f1bdf5e442097f85625effbd1294d_icgraph">
-<area shape="rect" title="join with every element wrapped in double quotes (&quot;element&quot;), C++11 to C++17." alt="" coords="1197,122,1341,164"/>
-<area shape="rect" href="a01280.html#a465b2019a72d74b71c5fe3b6f19a0bd2" title="The ? (debug) form of a string or a character." alt="" coords="972,89,1149,130"/>
-<area shape="rect" href="a01297.html#a88eef91964b7cfcb0ba9bf926daee537" title="Same as quote; named for symmetry with quote_single." alt="" coords="985,154,1137,196"/>
-<area shape="rect" href="a01280.html#acc1f0cfb4c741d34dfd2a27fe18b8004" title=" " alt="" coords="747,50,924,92"/>
-<area shape="rect" href="a01280.html#a31ccdb6ecfce000b34dc5e272261271d" title=" " alt="" coords="521,189,699,230"/>
-<area shape="rect" href="a02308.html#ac9642063b0f0f6e8ed748e295ff5174c" title=" " alt="" coords="5,14,184,70"/>
-<area shape="rect" href="a01280.html#ad0334f950a029dfe06bb9eb1fd904f14" title="Writes an integer given as sign + magnitude." alt="" coords="521,50,699,92"/>
-<area shape="rect" href="a02328.html#a11233bb8904684bc2497addaa68232b4" title=" " alt="" coords="232,116,473,216"/>
-<area shape="rect" href="a01280.html#a82be6a9fe1141dbfaf5f5e709aa53a56" title=" " alt="" coords="264,50,441,92"/>
-<area shape="rect" href="a02332.html#aeeecdb02dee27a3a8bd20c6a6526f8ba" title=" " alt="" coords="255,292,451,333"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a88eef91964b7cfcb0ba9bf926daee537"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88eef91964b7cfcb0ba9bf926daee537">&#9670;&nbsp;</a></span>quote_double()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Range , typename Separator &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; <a class="el" href="a02848.html">lumex::core::utility::traits::range::has_elements_convertible_to</a>&lt; Range, std::string const &amp;&gt;::value &amp;&amp; <a class="el" href="a02808.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt;Separator&gt;::type&gt;::value, std::string&gt;::type lumex::core::string::text::quote_double </td>
-          <td>(</td>
-          <td class="paramtype">Range const &amp;&#160;</td>
-          <td class="paramname"><em>range</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Separator const &amp;&#160;</td>
-          <td class="paramname"><em>separator</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Same as <code>quote</code>; named for symmetry with <code>quote_single</code>. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01297_a88eef91964b7cfcb0ba9bf926daee537_cgraph.png" border="0" usemap="#aa01297_a88eef91964b7cfcb0ba9bf926daee537_cgraph" alt=""/></div>
-<map name="a01297_a88eef91964b7cfcb0ba9bf926daee537_cgraph" id="aa01297_a88eef91964b7cfcb0ba9bf926daee537_cgraph">
-<area shape="rect" title="Same as quote; named for symmetry with quote_single." alt="" coords="5,5,157,47"/>
-<area shape="rect" href="a01297.html#a302f1bdf5e442097f85625effbd1294d" title="join with every element wrapped in double quotes (&quot;element&quot;), C++11 to C++17." alt="" coords="205,5,349,47"/>
-<area shape="rect" href="a01298.html#a4dcf39e9c9bb3f6990597b1eabd5c690" title="Joins range, wrapping each element (converted to std::string const &amp;) in mark." alt="" coords="397,5,584,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a76b867ee109f995de558b6adac3599e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76b867ee109f995de558b6adac3599e0">&#9670;&nbsp;</a></span>quote_single()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Range , typename Separator &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; <a class="el" href="a02848.html">lumex::core::utility::traits::range::has_elements_convertible_to</a>&lt; Range, std::string const &amp;&gt;::value &amp;&amp; <a class="el" href="a02808.html">lumex::core::utility::traits::stream::is_streamable</a>&lt; typename std::decay&lt;Separator&gt;::type&gt;::value, std::string&gt;::type lumex::core::string::text::quote_single </td>
-          <td>(</td>
-          <td class="paramtype">Range const &amp;&#160;</td>
-          <td class="paramname"><em>range</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Separator const &amp;&#160;</td>
-          <td class="paramname"><em>separator</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>join</code> with every element wrapped in single quotes (&lsquo;'element&rsquo;`), C++11 to C++17. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01297_a76b867ee109f995de558b6adac3599e0_cgraph.png" border="0" usemap="#aa01297_a76b867ee109f995de558b6adac3599e0_cgraph" alt=""/></div>
-<map name="a01297_a76b867ee109f995de558b6adac3599e0_cgraph" id="aa01297_a76b867ee109f995de558b6adac3599e0_cgraph">
-<area shape="rect" title="join with every element wrapped in single quotes (‘&#39;element’`), C++11 to C++17." alt="" coords="5,5,152,47"/>
-<area shape="rect" href="a01298.html#a4dcf39e9c9bb3f6990597b1eabd5c690" title="Joins range, wrapping each element (converted to std::string const &amp;) in mark." alt="" coords="200,5,387,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ad8f7eb93f5a0d72fd633cee8e25bd05a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8f7eb93f5a0d72fd633cee8e25bd05a">&#9670;&nbsp;</a></span>to_case_insensitive() <span class="overload">[1/2]</span></h2>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a2833c2a4c2aca860a7fe8ecce5e59400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2833c2a4c2aca860a7fe8ecce5e59400">&#9670;&nbsp;</a></span>serial_port_state</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,76 +147,96 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void lumex::core::string::text::to_case_insensitive </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>need_to_remove_spaces</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">enum <a class="el" href="a01297.html#a2833c2a4c2aca860a7fe8ecce5e59400">lumex::applied::serial::enumeration::serial_port_state</a></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Lowercases <code>str</code> in place (ASCII <code>std::tolower</code>), so later comparisons are case-insensitive. </p>
+<p>Result of an open-probe performed during enumeration. </p>
+<ul>
+<li><code>available</code>: open succeeded and the handle was closed immediately.</li>
+<li><code>busy</code>: <code>ERROR_ACCESS_DENIED</code> / <code>ERROR_SHARING_VIOLATION</code> / <code>EBUSY</code> / <code>EACCES</code>.</li>
+<li><code>free</code>: the device is absent or another error occurred. </li>
+</ul>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2833c2a4c2aca860a7fe8ecce5e59400aaa2d6e4f578eb0cfaba23beef76c2194"></a>free&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2833c2a4c2aca860a7fe8ecce5e59400a8bc1b2f84252c3df4edd53e4aad097a7"></a>busy&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2833c2a4c2aca860a7fe8ecce5e59400ae4894ca167b08880bfc35862f18575eb"></a>available&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a4dace1c927ae9cae3eed94de871c9cb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dace1c927ae9cae3eed94de871c9cb1">&#9670;&nbsp;</a></span>enumerate_serial_port_names()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; lumex::applied::serial::enumeration::enumerate_serial_port_names </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>need_to_filter_bluetooth</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumerate serial port paths only. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>The text; the result is written back into it. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">need_to_remove_spaces</td><td>When true (the default), every whitespace character is removed as well. </td></tr>
+    <tr><td class="paramname">need_to_filter_bluetooth</td><td>Forwarded to <code>enumerate_serial_ports_detailed</code>. </td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01297_a4dace1c927ae9cae3eed94de871c9cb1_cgraph.png" border="0" usemap="#aa01297_a4dace1c927ae9cae3eed94de871c9cb1_cgraph" alt=""/></div>
+<map name="a01297_a4dace1c927ae9cae3eed94de871c9cb1_cgraph" id="aa01297_a4dace1c927ae9cae3eed94de871c9cb1_cgraph">
+<area shape="rect" title="Enumerate serial port paths only." alt="" coords="5,79,197,135"/>
+<area shape="rect" href="a01297.html#a4bf634028bc0cb0ff4024dd920df1602" title="Enumerate serial ports with full serial_port_info_t records." alt="" coords="245,79,437,135"/>
+<area shape="rect" href="a01550.html#a87b46d54c13a2ae30c97f22a4e98fc7c" title="Format a system error code." alt="" coords="485,5,712,61"/>
+<area shape="rect" href="a01433.html#a452dc69c516222ebe97ef081534daff6" title=" " alt="" coords="527,86,670,127"/>
+<area shape="rect" href="a01347.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="509,151,688,193"/>
+<area shape="rect" href="a02154.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="760,151,1048,193"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01297_ad8f7eb93f5a0d72fd633cee8e25bd05a_icgraph.png" border="0" usemap="#aa01297_ad8f7eb93f5a0d72fd633cee8e25bd05a_icgraph" alt=""/></div>
-<map name="a01297_ad8f7eb93f5a0d72fd633cee8e25bd05a_icgraph" id="aa01297_ad8f7eb93f5a0d72fd633cee8e25bd05a_icgraph">
-<area shape="rect" title="Lowercases str in place (ASCII std::tolower), so later comparisons are case&#45;insensitive." alt="" coords="245,5,437,47"/>
-<area shape="rect" href="a01297.html#af2d09555090576cec202f328fb11ddbf" title="Copy&#45;out overload of to_case_insensitive(std::string &amp;, bool)." alt="" coords="5,5,197,47"/>
+<div class="center"><img src="a01297_a4dace1c927ae9cae3eed94de871c9cb1_icgraph.png" border="0" usemap="#aa01297_a4dace1c927ae9cae3eed94de871c9cb1_icgraph" alt=""/></div>
+<map name="a01297_a4dace1c927ae9cae3eed94de871c9cb1_icgraph" id="aa01297_a4dace1c927ae9cae3eed94de871c9cb1_icgraph">
+<area shape="rect" title="Enumerate serial port paths only." alt="" coords="108,5,300,61"/>
+<area shape="rect" href="a00857.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="af2d09555090576cec202f328fb11ddbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2d09555090576cec202f328fb11ddbf">&#9670;&nbsp;</a></span>to_case_insensitive() <span class="overload">[2/2]</span></h2>
+<a id="a4bf634028bc0cb0ff4024dd920df1602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf634028bc0cb0ff4024dd920df1602">&#9670;&nbsp;</a></span>enumerate_serial_ports_detailed()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void lumex::core::string::text::to_case_insensitive </td>
+          <td class="memname">std::vector&lt; <a class="el" href="a01526.html">serial_port_info_t</a> &gt; lumex::applied::serial::enumeration::enumerate_serial_ports_detailed </td>
           <td>(</td>
           <td class="paramtype">std::string const &amp;&#160;</td>
-          <td class="paramname"><em>orig</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
+          <td class="paramname"><em>connected_port</em> = <code>std::string()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>need_to_remove_spaces</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>need_to_filter_bluetooth</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -421,31 +244,165 @@ Here is the caller graph for this function:</div>
           <td></td><td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+<p>Enumerate serial ports with full <code><a class="el" href="a01526.html" title="Structured description of one serial port discovered on this host.">serial_port_info_t</a></code> records. </p>
+<p>Windows walks SetupAPI, then falls back to <code>COM1</code>..<code>COM255</code> when that walk is empty. POSIX walks <code>/sys/class/tty</code> (prefixes <code>ttyS</code>, <code>ttyUSB</code>, <code>ttyACM</code>, <code>ttyAMA</code>, <code>ttyXRUSB</code>, <code>ttyO</code>) and falls back to <code>/dev</code>.</p>
+<p>Each non-Bluetooth port is opened to classify <code>state</code>. <code>connected_port</code> is treated as held by this process so Windows does not call <code>NtQuerySystemInformation</code> against a handle this process already owns. Bluetooth ports that remain after the filter are not opened.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connected_port</td><td>Short name or path of a port this process already has open. Empty means none. </td></tr>
+    <tr><td class="paramname">need_to_filter_bluetooth</td><td>When <code>true</code>, Windows drops ports whose SetupAPI enumerator name starts with <code>"BTH"</code> (Bluetooth SPP/LE). Default <code>false</code> keeps those ports in the result. POSIX ignores the flag: BlueZ pairing does not create <code>/dev/rfcommN</code> without an explicit <code>rfcomm bind</code>, and <code>rfcomm</code> is not in the scanned prefix list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Ports sorted by COM number on Windows and by path on POSIX. Empty when nothing was found or the scan failed. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01297_a4bf634028bc0cb0ff4024dd920df1602_cgraph.png" border="0" usemap="#aa01297_a4bf634028bc0cb0ff4024dd920df1602_cgraph" alt=""/></div>
+<map name="a01297_a4bf634028bc0cb0ff4024dd920df1602_cgraph" id="aa01297_a4bf634028bc0cb0ff4024dd920df1602_cgraph">
+<area shape="rect" title="Enumerate serial ports with full serial_port_info_t records." alt="" coords="5,79,197,135"/>
+<area shape="rect" href="a01550.html#a87b46d54c13a2ae30c97f22a4e98fc7c" title="Format a system error code." alt="" coords="245,5,472,61"/>
+<area shape="rect" href="a01433.html#a452dc69c516222ebe97ef081534daff6" title=" " alt="" coords="287,86,430,127"/>
+<area shape="rect" href="a01347.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="269,151,448,193"/>
+<area shape="rect" href="a02154.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="520,151,808,193"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01297_a4bf634028bc0cb0ff4024dd920df1602_icgraph.png" border="0" usemap="#aa01297_a4bf634028bc0cb0ff4024dd920df1602_icgraph" alt=""/></div>
+<map name="a01297_a4bf634028bc0cb0ff4024dd920df1602_icgraph" id="aa01297_a4bf634028bc0cb0ff4024dd920df1602_icgraph">
+<area shape="rect" title="Enumerate serial ports with full serial_port_info_t records." alt="" coords="348,5,540,61"/>
+<area shape="rect" href="a01297.html#a4dace1c927ae9cae3eed94de871c9cb1" title="Enumerate serial port paths only." alt="" coords="108,5,300,61"/>
+<area shape="rect" href="a00857.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae27c22d50630c732a459b88a4f0e4260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae27c22d50630c732a459b88a4f0e4260">&#9670;&nbsp;</a></span>is_bluetooth_enumerated_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::applied::serial::enumeration::is_bluetooth_enumerated_port </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>port_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Copy-out overload of <code><a class="el" href="a01297.html#ad8f7eb93f5a0d72fd633cee8e25bd05a" title="Lowercases str in place (ASCII std::tolower), so later comparisons are case-insensitive.">to_case_insensitive(std::string &amp;, bool)</a></code>. </p>
+<p>True when Windows registered <code>port_name</code> through a Bluetooth enumerator (<code>BTHENUM</code> / <code>BTHLEENUM</code>). </p>
+<p>The check is a SetupAPI walk only; it never opens the port. Safe to call repeatedly while scanning <code>COM1</code>..<code>COM256</code>. Always <code>false</code> on non-Windows.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>The original text; left untouched. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Receives the lowercased (and optionally whitespace-free) text. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">need_to_remove_spaces</td><td>When true (the default), whitespace is removed as well. </td></tr>
+    <tr><td class="paramname">port_name</td><td>Short name (<code>"COM3"</code>) or path (<code>"\\\\.\\COM3"</code>). </td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a01297_af2d09555090576cec202f328fb11ddbf_cgraph.png" border="0" usemap="#aa01297_af2d09555090576cec202f328fb11ddbf_cgraph" alt=""/></div>
-<map name="a01297_af2d09555090576cec202f328fb11ddbf_cgraph" id="aa01297_af2d09555090576cec202f328fb11ddbf_cgraph">
-<area shape="rect" title="Copy&#45;out overload of to_case_insensitive(std::string &amp;, bool)." alt="" coords="5,5,197,47"/>
-<area shape="rect" href="a01297.html#ad8f7eb93f5a0d72fd633cee8e25bd05a" title="Lowercases str in place (ASCII std::tolower), so later comparisons are case&#45;insensitive." alt="" coords="245,5,437,47"/>
+<div class="center"><img src="a01297_ae27c22d50630c732a459b88a4f0e4260_cgraph.png" border="0" usemap="#aa01297_ae27c22d50630c732a459b88a4f0e4260_cgraph" alt=""/></div>
+<map name="a01297_ae27c22d50630c732a459b88a4f0e4260_cgraph" id="aa01297_ae27c22d50630c732a459b88a4f0e4260_cgraph">
+<area shape="rect" title="True when Windows registered port_name through a Bluetooth enumerator (BTHENUM / BTHLEENUM)." alt="" coords="5,5,207,61"/>
+<area shape="rect" href="a01433.html#a452dc69c516222ebe97ef081534daff6" title=" " alt="" coords="255,13,397,54"/>
 </map>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01297_ae27c22d50630c732a459b88a4f0e4260_icgraph.png" border="0" usemap="#aa01297_ae27c22d50630c732a459b88a4f0e4260_icgraph" alt=""/></div>
+<map name="a01297_ae27c22d50630c732a459b88a4f0e4260_icgraph" id="aa01297_ae27c22d50630c732a459b88a4f0e4260_icgraph">
+<area shape="rect" title="True when Windows registered port_name through a Bluetooth enumerator (BTHENUM / BTHLEENUM)." alt="" coords="108,5,309,61"/>
+<area shape="rect" href="a00857.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a72a94a2885dc60a216e50441898ce62c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a94a2885dc60a216e50441898ce62c">&#9670;&nbsp;</a></span>print_serial_ports_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CharT , typename Traits &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void lumex::applied::serial::enumeration::print_serial_ports_info </td>
+          <td>(</td>
+          <td class="paramtype">std::basic_ostream&lt; CharT, Traits &gt; &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="a01526.html">serial_port_info_t</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>infos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write a grouped port table to <code>os</code>. </p>
+<p>Sections: available, busy, free. Busy rows append <code>holder_process_info</code> when it is non-empty. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01297_a72a94a2885dc60a216e50441898ce62c_icgraph.png" border="0" usemap="#aa01297_a72a94a2885dc60a216e50441898ce62c_icgraph" alt=""/></div>
+<map name="a01297_a72a94a2885dc60a216e50441898ce62c_icgraph" id="aa01297_a72a94a2885dc60a216e50441898ce62c_icgraph">
+<area shape="rect" title="Write a grouped port table to os." alt="" coords="108,5,303,61"/>
+<area shape="rect" href="a00857.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acecd7b3c45f11e0b7e71a47a7f84bb5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acecd7b3c45f11e0b7e71a47a7f84bb5a">&#9670;&nbsp;</a></span>serial_port_state_to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char const  * lumex::applied::serial::enumeration::serial_port_state_to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01297.html#a2833c2a4c2aca860a7fe8ecce5e59400">serial_port_state</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert <code>state</code> to a stable ASCII token. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>"Available"</code>, <code>"Busy"</code>, <code>"Free"</code>, or <code>"Unknown"</code>. </dd></dl>
 
 </div>
 </div>
@@ -454,7 +411,7 @@ Here is the call graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01296.html">string</a></li><li class="navelem"><a class="el" href="a01297.html">text</a></li>
+    <li class="navelem"><a class="el" href="a01263.html">lumex</a></li><li class="navelem"><a class="el" href="a01264.html">applied</a></li><li class="navelem"><a class="el" href="a01296.html">serial</a></li><li class="navelem"><a class="el" href="a01297.html">enumeration</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

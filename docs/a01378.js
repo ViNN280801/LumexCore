@@ -1,4 +1,4 @@
 var a01378 =
 [
-    [ "XPathException", "a03292.html", "a03292" ]
+    [ "view", "a01379.html", "a01379" ]
 ];
