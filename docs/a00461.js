@@ -1,4 +1,7 @@
 var a00461 =
 [
-    [ "main", "a00461.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ]
+    [ "LumexSettingsXML", "a01500.html", "a01500" ],
+    [ "LumexSettingsXML", "a00461.html#ab23132a5fc6ee5da8ac4aa3c6f448f27", null ],
+    [ "SETTINGS_ROOT_NAME", "a00461.html#a62c407efa90183298124c64a5602b9ff", null ],
+    [ "XML_FILE_EXTENSION", "a00461.html#abbe15616160cc8d9c3491f7e56e5b5cc", null ]
 ];

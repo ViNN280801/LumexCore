@@ -1,5 +1,4 @@
 var a00899 =
 [
-    [ "LumexCallbackSlot", "a02152.html", null ],
-    [ "LumexCallbackSlot< Tag, Result(Args...)>", "a02156.html", "a02156" ]
+    [ "main", "a00899.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ]
 ];

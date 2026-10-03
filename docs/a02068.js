@@ -1,6 +1,9 @@
 var a02068 =
 [
-    [ "LumexBadOptionalAccess", "a02068.html#aaa62700fc78cae8060225313339a1159", null ],
-    [ "LumexBadOptionalAccess", "a02068.html#aafb00048a343af30fb65765040ceca48", null ],
-    [ "LumexBadOptionalAccess", "a02068.html#a4466bf6cbfb51397a75642e29d25deb1", null ]
+    [ "LumexCrashHandler", "a02068.html#add0be61b714a9f54a4ee6deaede9a328", null ],
+    [ "LumexCrashHandler", "a02068.html#a9e169defe2d3ee3ba9f79eda122bfd05", null ],
+    [ "initialize", "a02068.html#a73b8ef911cb0078f0ee965b8f928135b", null ],
+    [ "instance", "a02068.html#ac7cf277fe57c942e42bc79dd1bdb7750", null ],
+    [ "operator=", "a02068.html#af1732d516ab6c6b0dd675af3c2311d39", null ],
+    [ "operator=", "a02068.html#a6a810dcb68d04504cd2793ae512e4374", null ]
 ];

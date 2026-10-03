@@ -1,24 +1,9 @@
 var searchData=
 [
-  ['safe_5fcall_5freport_5ffn_6288',['safe_call_report_fn',['../a00857.html#aa72d63d417ed76026d05a6cba9ecdd14',1,'lumex::core::exceptions::Wrapper']]],
-  ['safecharcomparator_6289',['SafeCharComparator',['../a00909.html#a3cbda2fc9d8f92b62f7eb215ca82375e',1,'lumex::core::utility::numeric']]],
-  ['safedoublecomparator_6290',['SafeDoubleComparator',['../a00909.html#a8cddd3f9ad1dde701d98446286001c69',1,'lumex::core::utility::numeric']]],
-  ['safefloatcomparator_6291',['SafeFloatComparator',['../a00909.html#a49511c79bf2802ba7c25074896ea6a9a',1,'lumex::core::utility::numeric']]],
-  ['safeintcomparator_6292',['SafeIntComparator',['../a00909.html#abe9f61c39790ab8731a6c742f43dce01',1,'lumex::core::utility::numeric']]],
-  ['safelongcomparator_6293',['SafeLongComparator',['../a00909.html#a90260d8f9f00e308d37b39b9c6a14d55',1,'lumex::core::utility::numeric']]],
-  ['safelongdoublecomparator_6294',['SafeLongDoubleComparator',['../a00909.html#af5853c13a5176db5b06ff52acb608f94',1,'lumex::core::utility::numeric']]],
-  ['safelonglongcomparator_6295',['SafeLongLongComparator',['../a00909.html#a1d44a3020dd9075457676a3b084375ff',1,'lumex::core::utility::numeric']]],
-  ['safeshortcomparator_6296',['SafeShortComparator',['../a00909.html#aa10b991c51bb83501a3c2e9ffacf373f',1,'lumex::core::utility::numeric']]],
-  ['safeucharcomparator_6297',['SafeUCharComparator',['../a00909.html#a27c34c04ddc6691ff51413e673df56c2',1,'lumex::core::utility::numeric']]],
-  ['safeuintcomparator_6298',['SafeUIntComparator',['../a00909.html#aae48e9ea1c9cb011b98b5b63b3805bee',1,'lumex::core::utility::numeric']]],
-  ['safeulongcomparator_6299',['SafeULongComparator',['../a00909.html#a6b31c1afd308059bc7157f59eb363306',1,'lumex::core::utility::numeric']]],
-  ['safeulonglongcomparator_6300',['SafeULongLongComparator',['../a00909.html#abd3f1f5ed4ba8d63aa1122e4cd76c33b',1,'lumex::core::utility::numeric']]],
-  ['safeushortcomparator_6301',['SafeUShortComparator',['../a00909.html#a1abfa42dc8b9e0f4d78cb8ff644c2a0c',1,'lumex::core::utility::numeric']]],
-  ['size_5ftype_6302',['size_type',['../a01104.html#a04b5963bf05b566242464d7dc2c50272',1,'lumex::core::circular_buffer::CircularBuffer::size_type()'],['../a01600.html#aa39eac0cb690d203d033c337d59bbb6a',1,'lumex::core::environment::env::LumexEnvironment::size_type()'],['../a01624.html#ab4adfa5e25b981c53bf4013b75f7216b',1,'lumex::core::exceptions::stacktrace::LumexBasicStacktrace::size_type()'],['../a02124.html#a325d72880bfc3306bcaba8043559b438',1,'lumex::core::string_view::view::LumexStringView::size_type()'],['../a02128.html#a16652142e896f765a96b3813e208f9a0',1,'lumex::core::string_view::view::LumexWStringView::size_type()']]],
-  ['space_5finfo_6303',['space_info',['../a00783.html#a69427512147609fe3903730db2235c83',1,'lumex']]],
-  ['strconv_5fattribute_5ft_6304',['strconv_attribute_t',['../a00623.html#a918eab3cf1ece3dbcc7ab8192f122178',1,'XmlParser.cpp']]],
-  ['strconv_5fpcdata_5ft_6305',['strconv_pcdata_t',['../a00623.html#a45e4452d83197af95daf503c5fdee289',1,'XmlParser.cpp']]],
-  ['string_5ft_6306',['string_t',['../a00958.html#abdd841e1e493515c77366e37f3083de6',1,'lumex::xml::types::Types']]],
-  ['string_5ftype_6307',['string_type',['../a01600.html#a5ec8246f5384f098b278e1c75d009add',1,'lumex::core::environment::env::LumexEnvironment::string_type()'],['../a01704.html#ad3a6b9a9e1edbd1a7e1a657228b6c5ec',1,'lumex::core::filesystem::fs::path::string_type()']]],
-  ['string_5ftype_5ft_6308',['string_type_t',['../a00837.html#a5eb75eefcc1a80408d48a70506ff6f66',1,'lumex::core::base64::codec::Types']]]
+  ['realnumbergeneratorhost_6653',['RealNumberGeneratorHost',['../a01282.html#abbb8b9be0780c9e0775cc4d7ff8facdd',1,'lumex::core::generators::number_generator']]],
+  ['rebind_6654',['rebind',['../a02104.html#a7667d5f3b3fa2976eaea4d8a59ed21c5',1,'lumex::core::expected::result::Expected::rebind()'],['../a02124.html#a80fa0957f9ffa9bc51aa95238561e7b6',1,'lumex::core::expected::result::Expected&lt; void, ErrorType &gt;::rebind()']]],
+  ['reference_6655',['reference',['../a01564.html#aff4e803baba9b2e3c068c8ecae800e44',1,'lumex::core::circular_buffer::CircularBuffer::reference()'],['../a01572.html#a1b191b483cb56626e456e1a721ed8b75',1,'lumex::core::circular_buffer::CircularBuffer::iterator::reference()'],['../a01576.html#a20dffe8f5866e617fa3627d3019475d3',1,'lumex::core::circular_buffer::CircularBuffer::const_iterator::reference()'],['../a02076.html#af0c0c59c11aec6affe5c3840fb9a2d3b',1,'lumex::core::exceptions::stacktrace::LumexBasicStacktrace::reference()'],['../a02172.html#ab1d8076b7306cbe2cae5324707d1eeda',1,'lumex::core::filesystem::fs::directory_iterator::reference()'],['../a02220.html#a25c2ce607d75028eb0a3b7de1d07cac9',1,'lumex::core::fmt::BasicAppender::reference()'],['../a02588.html#ac381aeaf6b2826e1e10d323c088350f3',1,'lumex::core::string_view::view::LumexStringView::reference()'],['../a02592.html#ae96fca1ea0fca86bb164da6affb52000',1,'lumex::core::string_view::view::LumexWStringView::reference()'],['../a03100.html#a2e6054587b9620171de129c8308046ff',1,'lumex::xml::node::XmlNodeIterator::reference()'],['../a03104.html#a95ca17c191dc9aa3d9971afe64e4e9d3',1,'lumex::xml::node::XmlNamedNodeIterator::reference()'],['../a03108.html#aaec60e32e53614604657482a7abc3d81',1,'lumex::xml::attribute::XmlAttributeIterator::reference()']]],
+  ['removeptr_6656',['RemovePtr',['../a01322.html#a51c505bcf68fc822dff25653e10326dc',1,'lumex::core::utility::traits::meta']]],
+  ['result_5fof_5ft_6657',['result_of_t',['../a01323.html#aa006a9fdfe8ba94f29f6769683ac8013',1,'lumex::core::utility::traits::invoke']]],
+  ['reverse_5fiterator_6658',['reverse_iterator',['../a01564.html#afd898cba810060b8b49faefc14407f38',1,'lumex::core::circular_buffer::CircularBuffer::reverse_iterator()'],['../a02076.html#a504f2d12c9fef93cc64e0e9784466ecc',1,'lumex::core::exceptions::stacktrace::LumexBasicStacktrace::reverse_iterator()'],['../a02588.html#a334ab7c6f71d6ae0e38cb74f6296bf3b',1,'lumex::core::string_view::view::LumexStringView::reverse_iterator()'],['../a02592.html#aeba30f99d994e5ab710a2f5fc6f35888',1,'lumex::core::string_view::view::LumexWStringView::reverse_iterator()']]]
 ];

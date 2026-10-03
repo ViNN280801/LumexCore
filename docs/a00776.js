@@ -1,5 +1,4 @@
 var a00776 =
 [
-    [ "XPathVariableSet", "a02884.html", "a02884" ],
-    [ "get_variable_scratch", "a00776.html#a2e440c9a87ed869364c0351b332f26e4", null ]
+    [ "main", "a00776.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ]
 ];

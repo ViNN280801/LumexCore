@@ -1,4 +1,0 @@
-var a00104 =
-[
-    [ "LUMEX_IMPLEMENTATION", "a00104.html#a07486181f1990291c2a348de8eb4c480", null ]
-];

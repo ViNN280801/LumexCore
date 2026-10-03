@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::node::XmlNodeIterator Class Reference</title>
+<title>LumexLib: lumex::core::temporary::tmp::TemporaryFile Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,151 +94,47 @@ $(document).ready(function(){initNavTree('a02600.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="a02597.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::node::XmlNodeIterator Class Reference</div>  </div>
+<div class="title">lumex::core::temporary::tmp::TemporaryFile Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>A bidirectional iterator for traversing direct child nodes of an <code><a class="el" href="a02596.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code>.  
+<p>RAII wrapper for temporary file management.  
  <a href="a02600.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00608_source.html">XmlNode.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00644_source.html">LumexTemporary.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a2ee3d2360f620ad9143457bf402a697c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a2ee3d2360f620ad9143457bf402a697c">difference_type</a> = ptrdiff_t</td></tr>
-<tr class="separator:a2ee3d2360f620ad9143457bf402a697c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d7ccda33e474b9aa357578d941599e9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a7d7ccda33e474b9aa357578d941599e9">value_type</a> = <a class="el" href="a02596.html">XmlNode</a></td></tr>
-<tr class="separator:a7d7ccda33e474b9aa357578d941599e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eee78a4624b13e110802aaf1923e8e9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a4eee78a4624b13e110802aaf1923e8e9">pointer</a> = <a class="el" href="a02596.html">XmlNode</a> *</td></tr>
-<tr class="separator:a4eee78a4624b13e110802aaf1923e8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e6054587b9620171de129c8308046ff"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a2e6054587b9620171de129c8308046ff">reference</a> = <a class="el" href="a02596.html">XmlNode</a> &amp;</td></tr>
-<tr class="separator:a2e6054587b9620171de129c8308046ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ef55ad663fa3682c75f1ccdb5e61519"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a9ef55ad663fa3682c75f1ccdb5e61519">iterator_category</a> = std::bidirectional_iterator_tag</td></tr>
-<tr class="separator:a9ef55ad663fa3682c75f1ccdb5e61519"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9baadc55eaf90ceb5de4326e4a3aa773"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a9baadc55eaf90ceb5de4326e4a3aa773">XmlNodeIterator</a> ()=default</td></tr>
-<tr class="memdesc:a9baadc55eaf90ceb5de4326e4a3aa773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Constructs a singular (invalid) iterator.  <a href="a02600.html#a9baadc55eaf90ceb5de4326e4a3aa773">More...</a><br /></td></tr>
-<tr class="separator:a9baadc55eaf90ceb5de4326e4a3aa773"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3bd43fea1234236afd742c5193f511e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#ac3bd43fea1234236afd742c5193f511e">XmlNodeIterator</a> (<a class="el" href="a02596.html">XmlNode</a> const &amp;node)</td></tr>
-<tr class="memdesc:ac3bd43fea1234236afd742c5193f511e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an iterator which points to the specified node.  <a href="a02600.html#ac3bd43fea1234236afd742c5193f511e">More...</a><br /></td></tr>
-<tr class="separator:ac3bd43fea1234236afd742c5193f511e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad16581a59b0f6cb82e501fdadc0da97e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#ad16581a59b0f6cb82e501fdadc0da97e">operator==</a> (<a class="el" href="a02600.html">XmlNodeIterator</a> const &amp;rhs) const</td></tr>
-<tr class="memdesc:ad16581a59b0f6cb82e501fdadc0da97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a02600.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> objects for equality.  <a href="a02600.html#ad16581a59b0f6cb82e501fdadc0da97e">More...</a><br /></td></tr>
-<tr class="separator:ad16581a59b0f6cb82e501fdadc0da97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a345d5423f86434f461d9c58c57dd3d48"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a345d5423f86434f461d9c58c57dd3d48">operator!=</a> (<a class="el" href="a02600.html">XmlNodeIterator</a> const &amp;rhs) const</td></tr>
-<tr class="memdesc:a345d5423f86434f461d9c58c57dd3d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a02600.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> objects for inequality.  <a href="a02600.html#a345d5423f86434f461d9c58c57dd3d48">More...</a><br /></td></tr>
-<tr class="separator:a345d5423f86434f461d9c58c57dd3d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea5593228e611856f9418e8be7d56475"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02596.html">XmlNode</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#aea5593228e611856f9418e8be7d56475">operator*</a> () const</td></tr>
-<tr class="memdesc:aea5593228e611856f9418e8be7d56475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereferences the iterator to provide access to the current <code><a class="el" href="a02596.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object.  <a href="a02600.html#aea5593228e611856f9418e8be7d56475">More...</a><br /></td></tr>
-<tr class="separator:aea5593228e611856f9418e8be7d56475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe3f77510e7bfd7a6741af7d4a5477f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02596.html">XmlNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#abe3f77510e7bfd7a6741af7d4a5477f7">operator-&gt;</a> () const</td></tr>
-<tr class="memdesc:abe3f77510e7bfd7a6741af7d4a5477f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereferences the iterator to provide pointer-like access to the current <code><a class="el" href="a02596.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object.  <a href="a02600.html#abe3f77510e7bfd7a6741af7d4a5477f7">More...</a><br /></td></tr>
-<tr class="separator:abe3f77510e7bfd7a6741af7d4a5477f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e1763b5e327a01b8fbd13115ca10a99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02600.html">XmlNodeIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a5e1763b5e327a01b8fbd13115ca10a99">operator++</a> ()</td></tr>
-<tr class="memdesc:a5e1763b5e327a01b8fbd13115ca10a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-increments the iterator to move to the next child node.  <a href="a02600.html#a5e1763b5e327a01b8fbd13115ca10a99">More...</a><br /></td></tr>
-<tr class="separator:a5e1763b5e327a01b8fbd13115ca10a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9f2871c8cee0ca068a9bed2fc3ea869"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02600.html">XmlNodeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#ad9f2871c8cee0ca068a9bed2fc3ea869">operator++</a> (int)</td></tr>
-<tr class="memdesc:ad9f2871c8cee0ca068a9bed2fc3ea869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-increments the iterator to move to the next child node.  <a href="a02600.html#ad9f2871c8cee0ca068a9bed2fc3ea869">More...</a><br /></td></tr>
-<tr class="separator:ad9f2871c8cee0ca068a9bed2fc3ea869"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a544dd74a00f91e2996a7ee86db5c1132"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02600.html">XmlNodeIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a544dd74a00f91e2996a7ee86db5c1132">operator--</a> ()</td></tr>
-<tr class="memdesc:a544dd74a00f91e2996a7ee86db5c1132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-decrements the iterator to move to the previous child node.  <a href="a02600.html#a544dd74a00f91e2996a7ee86db5c1132">More...</a><br /></td></tr>
-<tr class="separator:a544dd74a00f91e2996a7ee86db5c1132"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c6ae878dd271d6f255c17dc8d585835"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02600.html">XmlNodeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a9c6ae878dd271d6f255c17dc8d585835">operator--</a> (int)</td></tr>
-<tr class="memdesc:a9c6ae878dd271d6f255c17dc8d585835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-decrements the iterator to move to the previous child node.  <a href="a02600.html#a9c6ae878dd271d6f255c17dc8d585835">More...</a><br /></td></tr>
-<tr class="separator:a9c6ae878dd271d6f255c17dc8d585835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a88b009b38305b720f82e3bfc4695b70f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a88b009b38305b720f82e3bfc4695b70f">XmlNode</a></td></tr>
-<tr class="separator:a88b009b38305b720f82e3bfc4695b70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ab0f81921fc71b8675d6684f4367e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a71ab0f81921fc71b8675d6684f4367e3">TemporaryFile</a> ()</td></tr>
+<tr class="separator:a71ab0f81921fc71b8675d6684f4367e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d9bdd094ee6341674494ba42e56aa3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a12d9bdd094ee6341674494ba42e56aa3">TemporaryFile</a> (<a class="el" href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a> const &amp;<a class="el" href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>)</td></tr>
+<tr class="separator:a12d9bdd094ee6341674494ba42e56aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e18b83729743783db895d77bda797fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a6e18b83729743783db895d77bda797fe">~TemporaryFile</a> ()</td></tr>
+<tr class="separator:a6e18b83729743783db895d77bda797fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bbda4ea602536835f593d39d35682f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a3bbda4ea602536835f593d39d35682f3">TemporaryFile</a> (<a class="el" href="a02600.html">TemporaryFile</a> const &amp;)=delete</td></tr>
+<tr class="separator:a3bbda4ea602536835f593d39d35682f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22f117d3fda8e440c1039e606dacbdb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02600.html">TemporaryFile</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a22f117d3fda8e440c1039e606dacbdb2">operator=</a> (<a class="el" href="a02600.html">TemporaryFile</a> const &amp;)=delete</td></tr>
+<tr class="separator:a22f117d3fda8e440c1039e606dacbdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533c8b7bb2cecb3801187ddfeddcd3a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a533c8b7bb2cecb3801187ddfeddcd3a7">TemporaryFile</a> (<a class="el" href="a02600.html">TemporaryFile</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a533c8b7bb2cecb3801187ddfeddcd3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34b554573d6ec2389a72605702075627"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02600.html">TemporaryFile</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a34b554573d6ec2389a72605702075627">operator=</a> (<a class="el" href="a02600.html">TemporaryFile</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a34b554573d6ec2389a72605702075627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a038ffc292c852e3d73db9e179f885125"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a> const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a038ffc292c852e3d73db9e179f885125">path</a> () const</td></tr>
+<tr class="separator:a038ffc292c852e3d73db9e179f885125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5418e0e0a3300644a869c26225e2c107"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a5418e0e0a3300644a869c26225e2c107">is_valid</a> () const</td></tr>
+<tr class="separator:a5418e0e0a3300644a869c26225e2c107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2026bffd2c978cd3de5a9e48e267906a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02600.html#a2026bffd2c978cd3de5a9e48e267906a">release</a> ()</td></tr>
+<tr class="separator:a2026bffd2c978cd3de5a9e48e267906a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A bidirectional iterator for traversing direct child nodes of an <code><a class="el" href="a02596.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code>. </p>
-<p>This iterator allows standard C++ algorithm usage and range-based for loops over a node's children. It wraps an <code><a class="el" href="a02596.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object (<code>m_wrap</code>) and keeps a reference to its parent for reverse iteration and boundary checks. </p><dl class="section note"><dt>Note</dt><dd>The iterator holds a mutable <code><a class="el" href="a02596.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> to allow its internal pointer to be updated during traversal (<code>operator++</code>, <code>operator--</code>). </dd></dl>
-<dl class="section see"><dt>See also</dt><dd>XmlNode::begin() </dd>
-<dd>
-XmlNode::end() </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a2ee3d2360f620ad9143457bf402a697c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ee3d2360f620ad9143457bf402a697c">&#9670;&nbsp;</a></span>difference_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02600.html#a2ee3d2360f620ad9143457bf402a697c">lumex::xml::node::XmlNodeIterator::difference_type</a> =  ptrdiff_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9ef55ad663fa3682c75f1ccdb5e61519"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ef55ad663fa3682c75f1ccdb5e61519">&#9670;&nbsp;</a></span>iterator_category</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02600.html#a9ef55ad663fa3682c75f1ccdb5e61519">lumex::xml::node::XmlNodeIterator::iterator_category</a> =  std::bidirectional_iterator_tag</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4eee78a4624b13e110802aaf1923e8e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4eee78a4624b13e110802aaf1923e8e9">&#9670;&nbsp;</a></span>pointer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02600.html#a4eee78a4624b13e110802aaf1923e8e9">lumex::xml::node::XmlNodeIterator::pointer</a> =  <a class="el" href="a02596.html">XmlNode</a> *</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2e6054587b9620171de129c8308046ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e6054587b9620171de129c8308046ff">&#9670;&nbsp;</a></span>reference</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02600.html#a2e6054587b9620171de129c8308046ff">lumex::xml::node::XmlNodeIterator::reference</a> =  <a class="el" href="a02596.html">XmlNode</a> &amp;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7d7ccda33e474b9aa357578d941599e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d7ccda33e474b9aa357578d941599e9">&#9670;&nbsp;</a></span>value_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02600.html#a7d7ccda33e474b9aa357578d941599e9">lumex::xml::node::XmlNodeIterator::value_type</a> =  <a class="el" href="a02596.html">XmlNode</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9baadc55eaf90ceb5de4326e4a3aa773"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9baadc55eaf90ceb5de4326e4a3aa773">&#9670;&nbsp;</a></span>XmlNodeIterator() <span class="overload">[1/2]</span></h2>
+<div class="textblock"><p>RAII wrapper for temporary file management. </p>
+<p>Automatically removes temporary file when destroyed </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a71ab0f81921fc71b8675d6684f4367e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ab0f81921fc71b8675d6684f4367e3">&#9670;&nbsp;</a></span>TemporaryFile() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +143,7 @@ XmlNode::end() </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lumex::xml::node::XmlNodeIterator::XmlNodeIterator </td>
+          <td class="memname">lumex::core::temporary::tmp::TemporaryFile::TemporaryFile </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -255,244 +151,120 @@ XmlNode::end() </dd></dl>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Default constructor. Constructs a singular (invalid) iterator. </p>
+</div>
+</div>
+<a id="a12d9bdd094ee6341674494ba42e56aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d9bdd094ee6341674494ba42e56aa3">&#9670;&nbsp;</a></span>TemporaryFile() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::core::temporary::tmp::TemporaryFile::TemporaryFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a> const &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac3bd43fea1234236afd742c5193f511e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3bd43fea1234236afd742c5193f511e">&#9670;&nbsp;</a></span>XmlNodeIterator() <span class="overload">[2/2]</span></h2>
+<a id="a6e18b83729743783db895d77bda797fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e18b83729743783db895d77bda797fe">&#9670;&nbsp;</a></span>~TemporaryFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> XmlNodeIterator::XmlNodeIterator </td>
+          <td class="memname">lumex::core::temporary::tmp::TemporaryFile::~TemporaryFile </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a02596.html">XmlNode</a> const &amp;&#160;</td>
-          <td class="paramname"><em>node</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02600_a6e18b83729743783db895d77bda797fe_cgraph.png" border="0" usemap="#aa02600_a6e18b83729743783db895d77bda797fe_cgraph" alt=""/></div>
+<map name="a02600_a6e18b83729743783db895d77bda797fe_cgraph" id="aa02600_a6e18b83729743783db895d77bda797fe_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,61"/>
+<area shape="rect" href="a02604.html#a8d2101df3adf0115a292376e25b19b33" title="Removes a temporary file." alt="" coords="228,5,405,61"/>
+</map>
+</div>
 
-<p>Constructs an iterator which points to the specified node. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>The <code><a class="el" href="a02596.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object to which the iterator should point.  This constructor initializes the iterator to point to <code>node</code> and stores its parent for bidirectional traversal. </td></tr>
-  </table>
-  </dd>
-</dl>
+</div>
+</div>
+<a id="a3bbda4ea602536835f593d39d35682f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bbda4ea602536835f593d39d35682f3">&#9670;&nbsp;</a></span>TemporaryFile() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::core::temporary::tmp::TemporaryFile::TemporaryFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02600.html">TemporaryFile</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a533c8b7bb2cecb3801187ddfeddcd3a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533c8b7bb2cecb3801187ddfeddcd3a7">&#9670;&nbsp;</a></span>TemporaryFile() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::core::temporary::tmp::TemporaryFile::TemporaryFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02600.html">TemporaryFile</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a345d5423f86434f461d9c58c57dd3d48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a345d5423f86434f461d9c58c57dd3d48">&#9670;&nbsp;</a></span>operator!=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool XmlNodeIterator::operator!= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02600.html">XmlNodeIterator</a> const &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compares two <code><a class="el" href="a02600.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> objects for inequality. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>The <code><a class="el" href="a02600.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> to compare with. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the iterators point to different nodes or belong to different parents, <code>false</code> otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="aea5593228e611856f9418e8be7d56475"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea5593228e611856f9418e8be7d56475">&#9670;&nbsp;</a></span>operator*()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02596.html">XmlNode</a> &amp; XmlNodeIterator::operator* </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Dereferences the iterator to provide access to the current <code><a class="el" href="a02596.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object. </p>
-<dl class="section return"><dt>Returns</dt><dd>A non-const reference to the <code><a class="el" href="a02596.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object the iterator currently points to. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">&lt;tt&gt;LUMEX_ASSERT&lt;/tt&gt;</td><td>if the internal node pointer (<code>m_wrap.m_root</code>) is <code>nullptr</code> (debug builds only). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>Dereferencing a singular (end) or invalid iterator leads to undefined behavior. </dd></dl>
-
-</div>
-</div>
-<a id="a5e1763b5e327a01b8fbd13115ca10a99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e1763b5e327a01b8fbd13115ca10a99">&#9670;&nbsp;</a></span>operator++() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02600.html">XmlNodeIterator</a> &amp; XmlNodeIterator::operator++ </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pre-increments the iterator to move to the next child node. </p>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the incremented <code><a class="el" href="a02600.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> object (<code>*this</code>). </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">&lt;tt&gt;LUMEX_ASSERT&lt;/tt&gt;</td><td>if the internal node pointer (<code>m_wrap.m_root</code>) is <code>nullptr</code> before increment (debug builds only). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>If the iterator is at the last child, it will become a singular (end) iterator after this operation. </dd></dl>
-
-</div>
-</div>
-<a id="ad9f2871c8cee0ca068a9bed2fc3ea869"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9f2871c8cee0ca068a9bed2fc3ea869">&#9670;&nbsp;</a></span>operator++() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02600.html">XmlNodeIterator</a> XmlNodeIterator::operator++ </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Post-increments the iterator to move to the next child node. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the iterator's state BEFORE it was incremented.  Creates a temporary copy of the current iterator, then increments the current iterator, and returns the temporary. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This operation is generally less efficient than pre-increment (<code><a class="el" href="a02600.html#a5e1763b5e327a01b8fbd13115ca10a99" title="Pre-increments the iterator to move to the next child node.">operator++()</a></code>) due to the creation of a temporary object. </dd></dl>
-
-</div>
-</div>
-<a id="a544dd74a00f91e2996a7ee86db5c1132"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a544dd74a00f91e2996a7ee86db5c1132">&#9670;&nbsp;</a></span>operator--() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02600.html">XmlNodeIterator</a> &amp; XmlNodeIterator::operator-- </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pre-decrements the iterator to move to the previous child node. </p>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the decremented <code><a class="el" href="a02600.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> object (<code>*this</code>).  If the iterator is singular (points to <code>nullptr</code>), this operation moves it to the last child of its parent. Otherwise, it moves to the previous sibling. </dd></dl>
-
-</div>
-</div>
-<a id="a9c6ae878dd271d6f255c17dc8d585835"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c6ae878dd271d6f255c17dc8d585835">&#9670;&nbsp;</a></span>operator--() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02600.html">XmlNodeIterator</a> XmlNodeIterator::operator-- </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Post-decrements the iterator to move to the previous child node. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the iterator's state BEFORE it was decremented.  Creates a temporary copy of the current iterator, then decrements the current iterator, and returns the temporary. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This operation is generally less efficient than pre-decrement (<code><a class="el" href="a02600.html#a544dd74a00f91e2996a7ee86db5c1132" title="Pre-decrements the iterator to move to the previous child node.">operator--()</a></code>) due to the creation of a temporary object. </dd></dl>
-
-</div>
-</div>
-<a id="abe3f77510e7bfd7a6741af7d4a5477f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe3f77510e7bfd7a6741af7d4a5477f7">&#9670;&nbsp;</a></span>operator-&gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02596.html">XmlNode</a> * XmlNodeIterator::operator-&gt; </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Dereferences the iterator to provide pointer-like access to the current <code><a class="el" href="a02596.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object. </p>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the <code><a class="el" href="a02596.html" title="Represents a single XML node in the DOM tree, providing a high-level interface for accessing and mani...">XmlNode</a></code> object the iterator currently points to. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">&lt;tt&gt;LUMEX_ASSERT&lt;/tt&gt;</td><td>if the internal node pointer (<code>m_wrap.m_root</code>) is <code>nullptr</code> (debug builds only). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>Dereferencing a singular (end) or invalid iterator leads to undefined behavior. </dd></dl>
-
-</div>
-</div>
-<a id="ad16581a59b0f6cb82e501fdadc0da97e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad16581a59b0f6cb82e501fdadc0da97e">&#9670;&nbsp;</a></span>operator==()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool XmlNodeIterator::operator== </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02600.html">XmlNodeIterator</a> const &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compares two <code><a class="el" href="a02600.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> objects for equality. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>The <code><a class="el" href="a02600.html" title="A bidirectional iterator for traversing direct child nodes of an XmlNode.">XmlNodeIterator</a></code> to compare with. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if both iterators point to the same node within the same parent, <code>false</code> otherwise. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="a88b009b38305b720f82e3bfc4695b70f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88b009b38305b720f82e3bfc4695b70f">&#9670;&nbsp;</a></span>XmlNode</h2>
+<a id="a5418e0e0a3300644a869c26225e2c107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5418e0e0a3300644a869c26225e2c107">&#9670;&nbsp;</a></span>is_valid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -501,28 +273,134 @@ XmlNode::end() </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="a02596.html">XmlNode</a></td>
+          <td class="memname">bool lumex::core::temporary::tmp::TemporaryFile::is_valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34b554573d6ec2389a72605702075627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34b554573d6ec2389a72605702075627">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a02600.html">TemporaryFile</a> &amp; lumex::core::temporary::tmp::TemporaryFile::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02600.html">TemporaryFile</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02600_a34b554573d6ec2389a72605702075627_cgraph.png" border="0" usemap="#aa02600_a34b554573d6ec2389a72605702075627_cgraph" alt=""/></div>
+<map name="a02600_a34b554573d6ec2389a72605702075627_cgraph" id="aa02600_a34b554573d6ec2389a72605702075627_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,180,61"/>
+<area shape="rect" href="a02604.html#a8d2101df3adf0115a292376e25b19b33" title="Removes a temporary file." alt="" coords="228,5,405,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a22f117d3fda8e440c1039e606dacbdb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22f117d3fda8e440c1039e606dacbdb2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a02600.html">TemporaryFile</a>&amp; lumex::core::temporary::tmp::TemporaryFile::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02600.html">TemporaryFile</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a038ffc292c852e3d73db9e179f885125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038ffc292c852e3d73db9e179f885125">&#9670;&nbsp;</a></span>path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01185.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a> const&amp; lumex::core::temporary::tmp::TemporaryFile::path </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2026bffd2c978cd3de5a9e48e267906a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2026bffd2c978cd3de5a9e48e267906a">&#9670;&nbsp;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lumex::core::temporary::tmp::TemporaryFile::release </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00608_source.html">XmlNode.hpp</a></li>
-<li><a class="el" href="a00617.html">XmlNodeIterator.cpp</a></li>
+<li><a class="el" href="a00644_source.html">LumexTemporary.hpp</a></li>
+<li><a class="el" href="a00641.html">LumexTemporary.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00944.html">node</a></li><li class="navelem"><a class="el" href="a02600.html">XmlNodeIterator</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01302.html">temporary</a></li><li class="navelem"><a class="el" href="a01303.html">tmp</a></li><li class="navelem"><a class="el" href="a02600.html">TemporaryFile</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

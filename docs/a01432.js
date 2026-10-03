@@ -1,11 +1,8 @@
 var a01432 =
 [
-    [ "ValueType", "a01432.html#a543650fe62f5f6368d8260db5b39c2a9", null ],
-    [ "kCatalogCheck", "a01432.html#a7435789964126f6b24b540c0a30512e7", null ],
-    [ "kInit", "a01432.html#a39234253663ff35bff0d8879bece3c1f", null ],
-    [ "kPoly", "a01432.html#a9bac3ffbcdb9c7b50e1172112849aaf3", null ],
-    [ "kRefIn", "a01432.html#a5c2fd0077a641ffdd89d057f599fc26f", null ],
-    [ "kRefOut", "a01432.html#ac46a5bffc69789ca50db3acb041df86c", null ],
-    [ "kWidth", "a01432.html#a15cc42c1498c4158260a40d4d8deee61", null ],
-    [ "kXorOut", "a01432.html#ad1659c9a3a156b3b7ecbf2419e2576b7", null ]
+    [ "log_buffer_flush_level_configured", "a01432.html#a4e5e115c27378cb2e4e3d5b39ba870be", null ],
+    [ "log_buffer_flush_trigger_level", "a01432.html#ac5e787e56b952ba48ee33450b2f8f86c", null ],
+    [ "show_stack_trace_in_messages", "a01432.html#ac65af752d0d3114636096ad50b4833e3", null ],
+    [ "stack_trace_max_frames", "a01432.html#a8f83bcdb2bd432297d55abe91e9e7d14", null ],
+    [ "use_timestamped_logs", "a01432.html#ae3ba3a6fd3eb320cd02b92d8a587b326", null ]
 ];

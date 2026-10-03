@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexJsonSchemaTraverser Class Reference</title>
+<title>LumexLib: lumex::core::utility::traits::string::is_string_like&lt; T, Char, meta::void_t&lt; typename T::value_type, decltype(T::npos), decltype(std::declval&lt; T const &amp; &gt;().size()), decltype(std::declval&lt; T const &amp; &gt;().data())&gt; &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,34 +94,38 @@ $(document).ready(function(){initNavTree('a02892.html',''); initResizable(); });
 
 <div class="header">
   <div class="headertitle">
-<div class="title">LumexJsonSchemaTraverser Class Reference</div>  </div>
+<div class="title">lumex::core::utility::traits::string::is_string_like&lt; T, Char, meta::void_t&lt; typename T::value_type, decltype(T::npos), decltype(std::declval&lt; T const &amp; &gt;().size()), decltype(std::declval&lt; T const &amp; &gt;().data())&gt; &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>What one walk produces.  
- <a href="a02892.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00041_source.html">LumexJsonSchemaTraverser.hpp</a>&gt;</code></p>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>What one walk produces. </p>
-<p><code>validate_only</code> runs every type, <code>required</code>, <code>const</code> and <code>enum</code> check and throws on the first violation, but never builds an output tree (the result is <code>null</code>). <code>validate_and_normalize</code> runs the same checks and also returns the canonical, schema-shaped document: unknown keys are dropped, a missing required leaf becomes <code>null</code>, a missing optional field is omitted. One recursive walk serves both modes so they cannot drift.</p>
-<p>Stateless schema walker. All members are static.</p>
-<p>Rules per node:</p><ul>
-<li><code>const</code> present: <code>null</code> input passes; any other value must equal it.</li>
-<li><code>type</code> contains <code>object</code>: the input must be an object. Each property in <code>properties</code> is walked when present and not <code>null</code>. A missing or <code>null</code> required object/array is an error unless its own <code>type</code> allows <code>null</code> (then the result holds <code>null</code>). A missing required leaf becomes <code>null</code>.</li>
-<li><code>type</code> contains <code>array</code>: the input must be an array. With <code>items</code>, every element is walked; without it, the array passes through unchanged.</li>
-<li>Otherwise the node is a leaf: <code>null</code> input passes; any other value must match one of the listed types and, when present, <code>enum</code>. A float with a zero fractional part satisfies <code>integer</code>.</li>
-</ul>
-<p>A schema node without <code>const</code> must have <code>type</code>; a node missing both throws <code>nlohmann::json::out_of_range</code>. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00041_source.html">LumexJsonSchemaTraverser.hpp</a></li>
+<p><code>#include &lt;<a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::core::utility::traits::string::is_string_like&lt; T, Char, meta::void_t&lt; typename T::value_type, decltype(T::npos), decltype(std::declval&lt; T const &amp; &gt;().size()), decltype(std::declval&lt; T const &amp; &gt;().data())&gt; &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02891.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01meta_1_1void__t_3_01typename_01T_1_1value__type_00_01decltype_07T_1_1npos_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8size_07_08_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8data_07_08_08_4_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01meta_1_1void__t_3_01typename_01T_1_1value__type_00_01decltype_07T_1_1npos_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8size_07_08_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8data_07_08_08_4_01_4_inherit__map" id="alumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01meta_1_1void__t_3_01typename_01T_1_1value__type_00_01decltype_07T_1_1npos_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8size_07_08_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8data_07_08_08_4_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="324,5,524,149"/>
+<area shape="rect" title=" " alt="" coords="5,27,276,127"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for lumex::core::utility::traits::string::is_string_like&lt; T, Char, meta::void_t&lt; typename T::value_type, decltype(T::npos), decltype(std::declval&lt; T const &amp; &gt;().size()), decltype(std::declval&lt; T const &amp; &gt;().data())&gt; &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02890.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01meta_1_1void__t_3_01typename_01T_1_1value__type_00_01decltype_07T_1_1npos_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8size_07_08_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8data_07_08_08_4_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01meta_1_1void__t_3_01typename_01T_1_1value__type_00_01decltype_07T_1_1npos_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8size_07_08_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8data_07_08_08_4_01_4_coll__map" id="alumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01meta_1_1void__t_3_01typename_01T_1_1value__type_00_01decltype_07T_1_1npos_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8size_07_08_08_00_01decltype_07std_1_1declval_3_01T_01const_01_6_01_4_07_08_8data_07_08_08_4_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="324,5,524,149"/>
+<area shape="rect" title=" " alt="" coords="5,27,276,127"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a02892.html">LumexJsonSchemaTraverser</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01328.html">string</a></li><li class="navelem"><a class="el" href="a02892.html">is_string_like&lt; T, Char, meta::void_t&lt; typename T::value_type, decltype(T::npos), decltype(std::declval&lt; T const &amp; &gt;().size()), decltype(std::declval&lt; T const &amp; &gt;().data())&gt; &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

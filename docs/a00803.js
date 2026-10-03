@@ -1,5 +1,4 @@
 var a00803 =
 [
-    [ "ILumexJsonNormalizer", "a00996.html", "a00996" ],
-    [ "LumexJsonSchemaNormalizer", "a01000.html", "a01000" ]
+    [ "main", "a00803.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ]
 ];

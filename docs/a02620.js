@@ -1,9 +1,12 @@
 var a02620 =
 [
-    [ "const_iterator", "a02620.html#a4370a429f6baa830e299d95ca4ad69d6", null ],
-    [ "iterator", "a02620.html#aae14566bfaffad6d53b1277350ff629d", null ],
-    [ "XmlObjectRange", "a02620.html#a7ec1bd627117559e3ace33c9139d6a31", null ],
-    [ "begin", "a02620.html#a9c1f78cd639f85bd8c9016ba1f6f54db", null ],
-    [ "end", "a02620.html#a1ac3b5edb46916204463448289fe627e", null ],
-    [ "LUMEX_ATTRIBUTE_NODISCARD", "a02620.html#a825143b8061b854b44974f7fcc49160e", null ]
+    [ "Scoped", "a02624.html", "a02624" ],
+    [ "function_type", "a02620.html#aefef2384f82063f742b3925977532bb8", null ],
+    [ "LumexCallbackSlot", "a02620.html#a9c1c11e42d768adb7cc233443e1d0b92", null ],
+    [ "exchange", "a02620.html#a8134cb126a6751c136d5eecbd1257d6a", null ],
+    [ "get", "a02620.html#a77f42f57c4e3dd33e56eb8be18f15ed0", null ],
+    [ "invoke_or", "a02620.html#af255fa0efb46d7d08882c8bfb5e74a1b", null ],
+    [ "is_set", "a02620.html#a4c5693139b7830ea257387d37f791c76", null ],
+    [ "reset", "a02620.html#a50cde815c49a6e071a744054413428a3", null ],
+    [ "set", "a02620.html#ae5280ced3e7c1e12e96d9f5278c84078", null ]
 ];

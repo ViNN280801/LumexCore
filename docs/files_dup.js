@@ -1,330 +1,338 @@
 var files_dup =
 [
-    [ "BadExpectedAccess.hpp", "a00206.html", [
-      [ "BadExpectedAccess", "a01644.html", "a01644" ]
+    [ "BadExpectedAccess.hpp", "a00560.html", [
+      [ "BadExpectedAccess", "a02096.html", "a02096" ]
     ] ],
-    [ "Base64.hpp", "a00128.html", "a00128" ],
-    [ "CircularBuffer.hpp", "a00149.html", "a00149" ],
-    [ "Decoder.cpp", "a00131.html", "a00131" ],
-    [ "Decoder.hpp", "a00134.html", [
-      [ "Decoder", "a01088.html", "a01088" ]
+    [ "Base64.hpp", "a00482.html", "a00482" ],
+    [ "CircularBuffer.hpp", "a00503.html", "a00503" ],
+    [ "Decoder.cpp", "a00485.html", "a00485" ],
+    [ "Decoder.hpp", "a00488.html", [
+      [ "Decoder", "a01548.html", "a01548" ]
     ] ],
-    [ "DefaultPaths.hpp", "a00167.html", "a00167" ],
-    [ "Encoder.cpp", "a00137.html", "a00137" ],
-    [ "Encoder.hpp", "a00140.html", [
-      [ "Encoder", "a01096.html", "a01096" ]
+    [ "DefaultPaths.hpp", "a00521.html", "a00521" ],
+    [ "Encoder.cpp", "a00491.html", "a00491" ],
+    [ "Encoder.hpp", "a00494.html", [
+      [ "Encoder", "a01556.html", "a01556" ]
     ] ],
-    [ "example_1.cpp", "a00545.html", "a00545" ],
-    [ "example_2.cpp", "a00548.html", "a00548" ],
-    [ "example_3.cpp", "a00551.html", "a00551" ],
-    [ "example_4.cpp", "a00554.html", "a00554" ],
-    [ "example_base64.cpp", "a00374.html", "a00374" ],
-    [ "example_base64_workflow.cpp", "a00377.html", "a00377" ],
-    [ "example_circular_buffer.cpp", "a00380.html", "a00380" ],
-    [ "example_circular_buffer_workflow.cpp", "a00383.html", "a00383" ],
-    [ "example_cpu_vectorization_capabilities.cpp", "a00440.html", "a00440" ],
-    [ "example_crc.cpp", "a00386.html", "a00386" ],
-    [ "example_crc_workflow.cpp", "a00389.html", "a00389" ],
-    [ "example_environment.cpp", "a00392.html", "a00392" ],
-    [ "example_environment_workflow.cpp", "a00395.html", "a00395" ],
-    [ "example_exceptions.cpp", "a00398.html", "a00398" ],
-    [ "example_exceptions_workflow.cpp", "a00401.html", "a00401" ],
-    [ "example_expected.cpp", "a00404.html", "a00404" ],
-    [ "example_expected_workflow.cpp", "a00407.html", "a00407" ],
-    [ "example_filesystem.cpp", "a00410.html", "a00410" ],
-    [ "example_filesystem_workflow.cpp", "a00413.html", "a00413" ],
-    [ "example_format.cpp", "a00416.html", "a00416" ],
-    [ "example_format_api.cpp", "a00419.html", "a00419" ],
-    [ "example_format_chrono.cpp", "a00422.html", "a00422" ],
-    [ "example_format_custom.cpp", "a00425.html", "a00425" ],
-    [ "example_format_ranges.cpp", "a00428.html", "a00428" ],
-    [ "example_format_workflow.cpp", "a00431.html", "a00431" ],
-    [ "example_generators.cpp", "a00434.html", "a00434" ],
-    [ "example_generators_workflow.cpp", "a00437.html", "a00437" ],
-    [ "example_hardware_capabilities.cpp", "a00443.html", "a00443" ],
-    [ "example_hardware_workflow.cpp", "a00446.html", "a00446" ],
-    [ "example_json.cpp", "a00449.html", "a00449" ],
-    [ "example_json_workflow.cpp", "a00452.html", "a00452" ],
-    [ "example_logger.cpp", "a00455.html", "a00455" ],
-    [ "example_logger_config_formats.cpp", "a00458.html", "a00458" ],
-    [ "example_logger_macros.cpp", "a00461.html", "a00461" ],
-    [ "example_logger_workflow.cpp", "a00464.html", "a00464" ],
-    [ "example_logging.cpp", "a00467.html", "a00467" ],
-    [ "example_logging_workflow.cpp", "a00470.html", "a00470" ],
-    [ "example_math.cpp", "a00473.html", "a00473" ],
-    [ "example_math_workflow.cpp", "a00476.html", "a00476" ],
-    [ "example_optional.cpp", "a00479.html", "a00479" ],
-    [ "example_optional_workflow.cpp", "a00482.html", "a00482" ],
-    [ "example_reflection.cpp", "a00485.html", "a00485" ],
-    [ "example_reflection_workflow.cpp", "a00488.html", "a00488" ],
-    [ "example_resource_monitor.cpp", "a00491.html", "a00491" ],
-    [ "example_resource_monitor_workflow.cpp", "a00494.html", "a00494" ],
-    [ "example_serial.cpp", "a00497.html", "a00497" ],
-    [ "example_serial_workflow.cpp", "a00500.html", "a00500" ],
-    [ "example_settings.cpp", "a00503.html", "a00503" ],
-    [ "example_settings_json.cpp", "a00506.html", "a00506" ],
-    [ "example_settings_workflow.cpp", "a00509.html", "a00509" ],
-    [ "example_settings_xml.cpp", "a00512.html", "a00512" ],
-    [ "example_string.cpp", "a00515.html", "a00515" ],
-    [ "example_string_view.cpp", "a00521.html", "a00521" ],
-    [ "example_string_view_workflow.cpp", "a00524.html", "a00524" ],
-    [ "example_string_workflow.cpp", "a00518.html", "a00518" ],
-    [ "example_temporary.cpp", "a00527.html", "a00527" ],
-    [ "example_temporary_workflow.cpp", "a00530.html", "a00530" ],
-    [ "example_time.cpp", "a00533.html", "a00533" ],
-    [ "example_time_workflow.cpp", "a00536.html", "a00536" ],
-    [ "example_utility.cpp", "a00539.html", "a00539" ],
-    [ "example_utility_workflow.cpp", "a00542.html", "a00542" ],
-    [ "Expected.hpp", "a00212.html", "a00212" ],
-    [ "ExpectedTypes.hpp", "a00215.html", "a00215" ],
-    [ "ExpectedVoid.hpp", "a00218.html", [
-      [ "Expected< void, ErrorType >", "a01672.html", "a01672" ]
+    [ "example_1.cpp", "a00905.html", "a00905" ],
+    [ "example_2.cpp", "a00908.html", "a00908" ],
+    [ "example_3.cpp", "a00911.html", "a00911" ],
+    [ "example_4.cpp", "a00914.html", "a00914" ],
+    [ "example_atomic_config_reload.cpp", "a00728.html", "a00728" ],
+    [ "example_atomic_smart_ptr.cpp", "a00731.html", "a00731" ],
+    [ "example_base64.cpp", "a00734.html", "a00734" ],
+    [ "example_base64_workflow.cpp", "a00737.html", "a00737" ],
+    [ "example_circular_buffer.cpp", "a00740.html", "a00740" ],
+    [ "example_circular_buffer_workflow.cpp", "a00743.html", "a00743" ],
+    [ "example_cpu_vectorization_capabilities.cpp", "a00800.html", "a00800" ],
+    [ "example_crc.cpp", "a00746.html", "a00746" ],
+    [ "example_crc_workflow.cpp", "a00749.html", "a00749" ],
+    [ "example_environment.cpp", "a00752.html", "a00752" ],
+    [ "example_environment_workflow.cpp", "a00755.html", "a00755" ],
+    [ "example_exceptions.cpp", "a00758.html", "a00758" ],
+    [ "example_exceptions_workflow.cpp", "a00761.html", "a00761" ],
+    [ "example_expected.cpp", "a00764.html", "a00764" ],
+    [ "example_expected_workflow.cpp", "a00767.html", "a00767" ],
+    [ "example_filesystem.cpp", "a00770.html", "a00770" ],
+    [ "example_filesystem_workflow.cpp", "a00773.html", "a00773" ],
+    [ "example_format.cpp", "a00776.html", "a00776" ],
+    [ "example_format_api.cpp", "a00779.html", "a00779" ],
+    [ "example_format_chrono.cpp", "a00782.html", "a00782" ],
+    [ "example_format_custom.cpp", "a00785.html", "a00785" ],
+    [ "example_format_ranges.cpp", "a00788.html", "a00788" ],
+    [ "example_format_workflow.cpp", "a00791.html", "a00791" ],
+    [ "example_generators.cpp", "a00794.html", "a00794" ],
+    [ "example_generators_workflow.cpp", "a00797.html", "a00797" ],
+    [ "example_hardware_capabilities.cpp", "a00803.html", "a00803" ],
+    [ "example_hardware_workflow.cpp", "a00806.html", "a00806" ],
+    [ "example_json.cpp", "a00809.html", "a00809" ],
+    [ "example_json_workflow.cpp", "a00812.html", "a00812" ],
+    [ "example_logger.cpp", "a00815.html", "a00815" ],
+    [ "example_logger_config_formats.cpp", "a00818.html", "a00818" ],
+    [ "example_logger_macros.cpp", "a00821.html", "a00821" ],
+    [ "example_logger_workflow.cpp", "a00824.html", "a00824" ],
+    [ "example_logging.cpp", "a00827.html", "a00827" ],
+    [ "example_logging_workflow.cpp", "a00830.html", "a00830" ],
+    [ "example_math.cpp", "a00833.html", "a00833" ],
+    [ "example_math_workflow.cpp", "a00836.html", "a00836" ],
+    [ "example_optional.cpp", "a00839.html", "a00839" ],
+    [ "example_optional_workflow.cpp", "a00842.html", "a00842" ],
+    [ "example_reflection.cpp", "a00845.html", "a00845" ],
+    [ "example_reflection_workflow.cpp", "a00848.html", "a00848" ],
+    [ "example_resource_monitor.cpp", "a00851.html", "a00851" ],
+    [ "example_resource_monitor_workflow.cpp", "a00854.html", "a00854" ],
+    [ "example_serial.cpp", "a00857.html", "a00857" ],
+    [ "example_serial_workflow.cpp", "a00860.html", "a00860" ],
+    [ "example_settings.cpp", "a00863.html", "a00863" ],
+    [ "example_settings_json.cpp", "a00866.html", "a00866" ],
+    [ "example_settings_workflow.cpp", "a00869.html", "a00869" ],
+    [ "example_settings_xml.cpp", "a00872.html", "a00872" ],
+    [ "example_string.cpp", "a00875.html", "a00875" ],
+    [ "example_string_view.cpp", "a00881.html", "a00881" ],
+    [ "example_string_view_workflow.cpp", "a00884.html", "a00884" ],
+    [ "example_string_workflow.cpp", "a00878.html", "a00878" ],
+    [ "example_temporary.cpp", "a00887.html", "a00887" ],
+    [ "example_temporary_workflow.cpp", "a00890.html", "a00890" ],
+    [ "example_time.cpp", "a00893.html", "a00893" ],
+    [ "example_time_workflow.cpp", "a00896.html", "a00896" ],
+    [ "example_utility.cpp", "a00899.html", "a00899" ],
+    [ "example_utility_workflow.cpp", "a00902.html", "a00902" ],
+    [ "Expected.hpp", "a00566.html", "a00566" ],
+    [ "ExpectedTypes.hpp", "a00569.html", "a00569" ],
+    [ "ExpectedVoid.hpp", "a00572.html", [
+      [ "Expected< void, ErrorType >", "a02124.html", "a02124" ]
     ] ],
-    [ "ILumexJsonNormalizer.hpp", "a00032.html", [
-      [ "ILumexJsonNormalizer", "a00996.html", "a00996" ]
+    [ "ILumexJsonNormalizer.hpp", "a00368.html", [
+      [ "ILumexJsonNormalizer", "a01408.html", "a01408" ]
     ] ],
-    [ "ILumexJsonSchemaValidator.hpp", "a00044.html", [
-      [ "ILumexJsonSchemaValidator", "a01004.html", "a01004" ]
+    [ "ILumexJsonSchemaValidator.hpp", "a00380.html", [
+      [ "ILumexJsonSchemaValidator", "a01416.html", "a01416" ]
     ] ],
-    [ "ILumexSettings.hpp", "a00113.html", "a00113" ],
-    [ "IXmlWriter.hpp", "a00656.html", [
-      [ "IXmlWriter", "a02732.html", "a02732" ]
+    [ "ILumexSettings.hpp", "a00449.html", "a00449" ],
+    [ "IXmlWriter.hpp", "a01016.html", [
+      [ "IXmlWriter", "a03232.html", "a03232" ]
     ] ],
-    [ "LumexAggregateFields.hpp", "a00251.html", "a00251" ],
-    [ "LumexAssert.cpp", "a00305.html", "a00305" ],
-    [ "LumexAssert.hpp", "a00308.html", "a00308" ],
-    [ "LumexAttributes.hpp", "a00311.html", "a00311" ],
-    [ "LumexBit.hpp", "a00314.html", null ],
-    [ "LumexCallbackSlot.hpp", "a00317.html", [
-      [ "LumexCallbackSlot< Tag, Result(Args...)>", "a02156.html", "a02156" ],
-      [ "Scoped", "a02160.html", "a02160" ]
+    [ "LumexAggregateFields.hpp", "a00605.html", "a00605" ],
+    [ "LumexAssert.cpp", "a00659.html", "a00659" ],
+    [ "LumexAssert.hpp", "a00662.html", "a00662" ],
+    [ "LumexAtomicSharedPtr.hpp", "a00464.html", "a00464" ],
+    [ "LumexAtomicSmartPtrCell.hpp", "a00467.html", "a00467" ],
+    [ "LumexAtomicSmartPtrConfig.hpp", "a00470.html", "a00470" ],
+    [ "LumexAtomicWait.hpp", "a00476.html", "a00476" ],
+    [ "LumexAtomicWeakPtr.hpp", "a00473.html", "a00473" ],
+    [ "LumexAttributes.hpp", "a00665.html", "a00665" ],
+    [ "LumexBit.hpp", "a00668.html", null ],
+    [ "LumexBitLock.hpp", "a00479.html", "a00479" ],
+    [ "LumexCallbackSlot.hpp", "a00671.html", [
+      [ "LumexCallbackSlot< Tag, Result(Args...)>", "a02620.html", "a02620" ],
+      [ "Scoped", "a02624.html", "a02624" ]
     ] ],
-    [ "LumexCast.hpp", "a00320.html", null ],
-    [ "LumexCheckCompiler.hpp", "a00323.html", "a00323" ],
-    [ "LumexCheckFeatures.hpp", "a00326.html", "a00326" ],
-    [ "LumexCheckOS.hpp", "a00359.html", "a00359" ],
-    [ "LumexConstantMacros.hpp", "a00341.html", "a00341" ],
-    [ "LumexCoreDumpGenerator.cpp", "a00335.html", "a00335" ],
-    [ "LumexCoreDumpGenerator.hpp", "a00338.html", "a00338" ],
-    [ "LumexCPUVectorizationCapabilities.cpp", "a00014.html", "a00014" ],
-    [ "LumexCPUVectorizationCapabilities.hpp", "a00017.html", "a00017" ],
-    [ "LumexCrashHandler.cpp", "a00170.html", "a00170" ],
-    [ "LumexCrashHandler.hpp", "a00173.html", "a00173" ],
-    [ "LumexCrcCatalog.cpp", "a00152.html", "a00152" ],
-    [ "LumexCrcCatalog.hpp", "a00155.html", "a00155" ],
-    [ "LumexCrcParametric.hpp", "a00158.html", "a00158" ],
-    [ "LumexDebug.hpp", "a00329.html", "a00329" ],
-    [ "LumexDemangle.hpp", "a00332.html", "a00332" ],
-    [ "LumexEnvironment.cpp", "a00161.html", "a00161" ],
-    [ "LumexEnvironment.hpp", "a00164.html", "a00164" ],
-    [ "LumexException.cpp", "a00182.html", "a00182" ],
-    [ "LumexException.hpp", "a00185.html", "a00185" ],
-    [ "LumexExceptionMacros.hpp", "a00344.html", "a00344" ],
-    [ "LumexExceptionWrapper.cpp", "a00188.html", "a00188" ],
-    [ "LumexExceptionWrapper.hpp", "a00191.html", "a00191" ],
-    [ "LumexExport.hpp", "a00557.html", "a00557" ],
-    [ "LumexFieldReflection.hpp", "a00254.html", "a00254" ],
-    [ "LumexFilesystem.cpp", "a00224.html", "a00224" ],
-    [ "LumexFilesystem.hpp", "a00227.html", "a00227" ],
-    [ "LumexFormat.hpp", "a00230.html", "a00230" ],
-    [ "LumexFormatChrono.hpp", "a00233.html", "a00233" ],
-    [ "LumexFormatRanges.hpp", "a00236.html", "a00236" ],
-    [ "LumexHardwareCapabilities.cpp", "a00020.html", "a00020" ],
-    [ "LumexHardwareCapabilities.hpp", "a00023.html", "a00023" ],
-    [ "LumexJoin.hpp", "a00263.html", "a00263" ],
-    [ "LumexJsonDiagnostics.hpp", "a00026.html", "a00026" ],
-    [ "LumexJsonHelper.hpp", "a00029.html", "a00029" ],
-    [ "LumexJsonSchemaException.hpp", "a00038.html", null ],
-    [ "LumexJsonSchemaNormalizer.hpp", "a00035.html", [
-      [ "LumexJsonSchemaNormalizer", "a01000.html", "a01000" ]
+    [ "LumexCast.hpp", "a00674.html", null ],
+    [ "LumexCheckCompiler.hpp", "a00677.html", "a00677" ],
+    [ "LumexCheckFeatures.hpp", "a00680.html", "a00680" ],
+    [ "LumexCheckOS.hpp", "a00713.html", "a00713" ],
+    [ "LumexConstantMacros.hpp", "a00695.html", "a00695" ],
+    [ "LumexCoreDumpGenerator.cpp", "a00689.html", "a00689" ],
+    [ "LumexCoreDumpGenerator.hpp", "a00692.html", "a00692" ],
+    [ "LumexCPUVectorizationCapabilities.cpp", "a00350.html", "a00350" ],
+    [ "LumexCPUVectorizationCapabilities.hpp", "a00353.html", "a00353" ],
+    [ "LumexCrashHandler.cpp", "a00524.html", "a00524" ],
+    [ "LumexCrashHandler.hpp", "a00527.html", "a00527" ],
+    [ "LumexCrcCatalog.cpp", "a00506.html", "a00506" ],
+    [ "LumexCrcCatalog.hpp", "a00509.html", "a00509" ],
+    [ "LumexCrcParametric.hpp", "a00512.html", "a00512" ],
+    [ "LumexDebug.hpp", "a00683.html", "a00683" ],
+    [ "LumexDemangle.hpp", "a00686.html", "a00686" ],
+    [ "LumexEnvironment.cpp", "a00515.html", "a00515" ],
+    [ "LumexEnvironment.hpp", "a00518.html", "a00518" ],
+    [ "LumexException.cpp", "a00536.html", "a00536" ],
+    [ "LumexException.hpp", "a00539.html", "a00539" ],
+    [ "LumexExceptionMacros.hpp", "a00698.html", "a00698" ],
+    [ "LumexExceptionWrapper.cpp", "a00542.html", "a00542" ],
+    [ "LumexExceptionWrapper.hpp", "a00545.html", "a00545" ],
+    [ "LumexExport.hpp", "a00917.html", "a00917" ],
+    [ "LumexFieldReflection.hpp", "a00608.html", "a00608" ],
+    [ "LumexFilesystem.cpp", "a00578.html", "a00578" ],
+    [ "LumexFilesystem.hpp", "a00581.html", "a00581" ],
+    [ "LumexFormat.hpp", "a00584.html", "a00584" ],
+    [ "LumexFormatChrono.hpp", "a00587.html", "a00587" ],
+    [ "LumexFormatRanges.hpp", "a00590.html", "a00590" ],
+    [ "LumexHardwareCapabilities.cpp", "a00356.html", "a00356" ],
+    [ "LumexHardwareCapabilities.hpp", "a00359.html", "a00359" ],
+    [ "LumexJoin.hpp", "a00617.html", "a00617" ],
+    [ "LumexJsonDiagnostics.hpp", "a00362.html", "a00362" ],
+    [ "LumexJsonHelper.hpp", "a00365.html", "a00365" ],
+    [ "LumexJsonSchemaException.hpp", "a00374.html", "a00374" ],
+    [ "LumexJsonSchemaNormalizer.hpp", "a00371.html", [
+      [ "LumexJsonSchemaNormalizer", "a01412.html", "a01412" ]
     ] ],
-    [ "LumexJsonSchemaTraverser.hpp", "a00041.html", null ],
-    [ "LumexJsonSchemaValidator.hpp", "a00047.html", [
-      [ "LumexJsonSchemaValidator", "a01008.html", "a01008" ]
+    [ "LumexJsonSchemaTraverser.hpp", "a00377.html", "a00377" ],
+    [ "LumexJsonSchemaValidator.hpp", "a00383.html", [
+      [ "LumexJsonSchemaValidator", "a01420.html", "a01420" ]
     ] ],
-    [ "LumexKeywords.hpp", "a00347.html", "a00347" ],
-    [ "LumexLogger.cpp", "a00053.html", "a00053" ],
-    [ "LumexLogger.hpp", "a00056.html", "a00056" ],
-    [ "LumexLoggerConfigFormat.hpp", "a00050.html", "a00050" ],
-    [ "LumexLogging.cpp", "a00059.html", "a00059" ],
-    [ "LumexLogging.hpp", "a00062.html", "a00062" ],
-    [ "LumexLoggingMacro.hpp", "a00065.html", "a00065" ],
-    [ "LumexMacros.hpp", "a00350.html", "a00350" ],
-    [ "LumexMath.hpp", "a00245.html", "a00245" ],
-    [ "LumexMathConstants.hpp", "a00242.html", "a00242" ],
-    [ "LumexMemRead.hpp", "a00353.html", null ],
-    [ "LumexNumberGenerator.hpp", "a00239.html", "a00239" ],
-    [ "LumexOptional.hpp", "a00248.html", "a00248" ],
-    [ "LumexPortProcessResolver.cpp", "a00086.html", null ],
-    [ "LumexPortProcessResolver.hpp", "a00089.html", [
-      [ "port_holder_info_t", "a01048.html", "a01048" ],
-      [ "system_error_formatter", "a01052.html", "a01052" ],
-      [ "port_holder_resolver", "a01056.html", "a01056" ],
-      [ "port_process_resolver", "a01060.html", "a01060" ]
+    [ "LumexKeywords.hpp", "a00701.html", "a00701" ],
+    [ "LumexLogger.cpp", "a00389.html", "a00389" ],
+    [ "LumexLogger.hpp", "a00392.html", "a00392" ],
+    [ "LumexLoggerConfigFormat.hpp", "a00386.html", "a00386" ],
+    [ "LumexLogging.cpp", "a00395.html", "a00395" ],
+    [ "LumexLogging.hpp", "a00398.html", "a00398" ],
+    [ "LumexLoggingMacro.hpp", "a00401.html", "a00401" ],
+    [ "LumexMacros.hpp", "a00704.html", "a00704" ],
+    [ "LumexMath.hpp", "a00599.html", "a00599" ],
+    [ "LumexMathConstants.hpp", "a00596.html", "a00596" ],
+    [ "LumexMemRead.hpp", "a00707.html", null ],
+    [ "LumexNumberGenerator.hpp", "a00593.html", "a00593" ],
+    [ "LumexOptional.hpp", "a00602.html", "a00602" ],
+    [ "LumexPortProcessResolver.cpp", "a00422.html", null ],
+    [ "LumexPortProcessResolver.hpp", "a00425.html", [
+      [ "port_holder_info_t", "a01460.html", "a01460" ],
+      [ "system_error_formatter", "a01464.html", "a01464" ],
+      [ "port_holder_resolver", "a01468.html", "a01468" ],
+      [ "port_process_resolver", "a01472.html", "a01472" ]
     ] ],
-    [ "LumexProcess.hpp", "a00362.html", "a00362" ],
-    [ "LumexQuote.hpp", "a00266.html", "a00266" ],
-    [ "LumexRanges.hpp", "a00365.html", null ],
-    [ "LumexReflectedEnum.hpp", "a00257.html", "a00257" ],
-    [ "LumexResourceMonitor.cpp", "a00068.html", "a00068" ],
-    [ "LumexResourceMonitor.hpp", "a00071.html", "a00071" ],
-    [ "LumexSafeNumericComparator.hpp", "a00356.html", "a00356" ],
-    [ "LumexSerialPort.cpp", "a00080.html", "a00080" ],
-    [ "LumexSerialPort.hpp", "a00083.html", "a00083" ],
-    [ "LumexSerialPortEnumeration.cpp", "a00074.html", "a00074" ],
-    [ "LumexSerialPortEnumeration.hpp", "a00077.html", "a00077" ],
-    [ "LumexSettingsFactory.cpp", "a00092.html", "a00092" ],
-    [ "LumexSettingsFactory.hpp", "a00095.html", "a00095" ],
-    [ "LumexSettingsGuard.cpp", "a00098.html", "a00098" ],
-    [ "LumexSettingsGuard.hpp", "a00101.html", "a00101" ],
-    [ "LumexSettingsINI.cpp", "a00104.html", "a00104" ],
-    [ "LumexSettingsINI.hpp", "a00107.html", null ],
-    [ "LumexSettingsJSON.cpp", "a00116.html", "a00116" ],
-    [ "LumexSettingsJSON.hpp", "a00119.html", "a00119" ],
-    [ "LumexSettingsXML.cpp", "a00122.html", "a00122" ],
-    [ "LumexSettingsXML.hpp", "a00125.html", "a00125" ],
-    [ "LumexStacktrace.cpp", "a00194.html", "a00194" ],
-    [ "LumexStacktrace.hpp", "a00197.html", "a00197" ],
-    [ "LumexStacktraceEntry.cpp", "a00200.html", "a00200" ],
-    [ "LumexStacktraceEntry.hpp", "a00203.html", "a00203" ],
-    [ "LumexStringify.hpp", "a00272.html", "a00272" ],
-    [ "LumexStringView.cpp", "a00275.html", "a00275" ],
-    [ "LumexStringView.hpp", "a00278.html", "a00278" ],
-    [ "LumexTemporary.cpp", "a00287.html", "a00287" ],
-    [ "LumexTemporary.hpp", "a00290.html", "a00290" ],
-    [ "LumexTextCase.hpp", "a00269.html", "a00269" ],
-    [ "LumexTime.cpp", "a00293.html", "a00293" ],
-    [ "LumexTime.hpp", "a00296.html", "a00296" ],
-    [ "LumexTimer.cpp", "a00299.html", "a00299" ],
-    [ "LumexTimer.hpp", "a00302.html", "a00302" ],
-    [ "LumexTypeTraits.hpp", "a00368.html", "a00368" ],
-    [ "LumexUtilities.hpp", "a00371.html", "a00371" ],
-    [ "LumexVarInfo.hpp", "a00260.html", "a00260" ],
-    [ "LumexWStringView.cpp", "a00281.html", "a00281" ],
-    [ "LumexWStringView.hpp", "a00284.html", "a00284" ],
-    [ "SuccessFailure.hpp", "a00221.html", "a00221" ],
-    [ "SupportedConfigExtensions.hpp", "a00110.html", "a00110" ],
-    [ "Unexpected.hpp", "a00209.html", [
-      [ "Unexpected", "a01648.html", "a01648" ]
+    [ "LumexProcess.hpp", "a00716.html", "a00716" ],
+    [ "LumexQuote.hpp", "a00620.html", "a00620" ],
+    [ "LumexRanges.hpp", "a00719.html", null ],
+    [ "LumexReflectedEnum.hpp", "a00611.html", "a00611" ],
+    [ "LumexResourceMonitor.cpp", "a00404.html", "a00404" ],
+    [ "LumexResourceMonitor.hpp", "a00407.html", "a00407" ],
+    [ "LumexSafeNumericComparator.hpp", "a00710.html", "a00710" ],
+    [ "LumexSerialPort.cpp", "a00416.html", "a00416" ],
+    [ "LumexSerialPort.hpp", "a00419.html", "a00419" ],
+    [ "LumexSerialPortEnumeration.cpp", "a00410.html", "a00410" ],
+    [ "LumexSerialPortEnumeration.hpp", "a00413.html", "a00413" ],
+    [ "LumexSettingsFactory.cpp", "a00428.html", "a00428" ],
+    [ "LumexSettingsFactory.hpp", "a00431.html", "a00431" ],
+    [ "LumexSettingsGuard.cpp", "a00434.html", "a00434" ],
+    [ "LumexSettingsGuard.hpp", "a00437.html", "a00437" ],
+    [ "LumexSettingsINI.cpp", "a00440.html", "a00440" ],
+    [ "LumexSettingsINI.hpp", "a00443.html", "a00443" ],
+    [ "LumexSettingsJSON.cpp", "a00452.html", "a00452" ],
+    [ "LumexSettingsJSON.hpp", "a00455.html", "a00455" ],
+    [ "LumexSettingsXML.cpp", "a00458.html", "a00458" ],
+    [ "LumexSettingsXML.hpp", "a00461.html", "a00461" ],
+    [ "LumexStacktrace.cpp", "a00548.html", "a00548" ],
+    [ "LumexStacktrace.hpp", "a00551.html", "a00551" ],
+    [ "LumexStacktraceEntry.cpp", "a00554.html", "a00554" ],
+    [ "LumexStacktraceEntry.hpp", "a00557.html", "a00557" ],
+    [ "LumexStringify.hpp", "a00626.html", "a00626" ],
+    [ "LumexStringView.cpp", "a00629.html", "a00629" ],
+    [ "LumexStringView.hpp", "a00632.html", "a00632" ],
+    [ "LumexTemporary.cpp", "a00641.html", "a00641" ],
+    [ "LumexTemporary.hpp", "a00644.html", "a00644" ],
+    [ "LumexTextCase.hpp", "a00623.html", "a00623" ],
+    [ "LumexTime.cpp", "a00647.html", "a00647" ],
+    [ "LumexTime.hpp", "a00650.html", "a00650" ],
+    [ "LumexTimer.cpp", "a00653.html", "a00653" ],
+    [ "LumexTimer.hpp", "a00656.html", "a00656" ],
+    [ "LumexTypeTraits.hpp", "a00722.html", "a00722" ],
+    [ "LumexUtilities.hpp", "a00725.html", "a00725" ],
+    [ "LumexVarInfo.hpp", "a00614.html", "a00614" ],
+    [ "LumexWStringView.cpp", "a00635.html", "a00635" ],
+    [ "LumexWStringView.hpp", "a00638.html", "a00638" ],
+    [ "SuccessFailure.hpp", "a00575.html", "a00575" ],
+    [ "SupportedConfigExtensions.hpp", "a00446.html", "a00446" ],
+    [ "Unexpected.hpp", "a00563.html", [
+      [ "Unexpected", "a02100.html", "a02100" ]
     ] ],
-    [ "Validator.cpp", "a00143.html", "a00143" ],
-    [ "Validator.hpp", "a00146.html", [
-      [ "Validator", "a01100.html", "a01100" ]
+    [ "Validator.cpp", "a00497.html", "a00497" ],
+    [ "Validator.hpp", "a00500.html", [
+      [ "Validator", "a01560.html", "a01560" ]
     ] ],
-    [ "WindowsSEHTranslator.cpp", "a00176.html", "a00176" ],
-    [ "WindowsSEHTranslator.hpp", "a00179.html", "a00179" ],
-    [ "XmlAllocator.cpp", "a00590.html", "a00590" ],
-    [ "XmlAllocator.hpp", "a00593.html", "a00593" ],
-    [ "XmlAttribute.cpp", "a00560.html", "a00560" ],
-    [ "XmlAttribute.hpp", "a00563.html", "a00563" ],
-    [ "XmlAttributeBase.cpp", "a00566.html", "a00566" ],
-    [ "XmlAttributeBase.hpp", "a00569.html", "a00569" ],
-    [ "XmlAttributeIterator.cpp", "a00572.html", "a00572" ],
-    [ "XmlBufferedWriter.cpp", "a00659.html", "a00659" ],
-    [ "XmlBufferedWriter.hpp", "a00662.html", [
-      [ "XmlBufferedWriter", "a02736.html", "a02736" ]
+    [ "WindowsSEHTranslator.cpp", "a00530.html", "a00530" ],
+    [ "WindowsSEHTranslator.hpp", "a00533.html", "a00533" ],
+    [ "XmlAllocator.cpp", "a00950.html", "a00950" ],
+    [ "XmlAllocator.hpp", "a00953.html", "a00953" ],
+    [ "XmlAttribute.cpp", "a00920.html", "a00920" ],
+    [ "XmlAttribute.hpp", "a00923.html", "a00923" ],
+    [ "XmlAttributeBase.cpp", "a00926.html", "a00926" ],
+    [ "XmlAttributeBase.hpp", "a00929.html", "a00929" ],
+    [ "XmlAttributeIterator.cpp", "a00932.html", "a00932" ],
+    [ "XmlBufferedWriter.cpp", "a01019.html", "a01019" ],
+    [ "XmlBufferedWriter.hpp", "a01022.html", [
+      [ "XmlBufferedWriter", "a03236.html", "a03236" ]
     ] ],
-    [ "XmlCleaner.hpp", "a00647.html", [
-      [ "XmlCleaner", "a02660.html", "a02660" ]
+    [ "XmlCleaner.hpp", "a01007.html", [
+      [ "XmlCleaner", "a03160.html", "a03160" ]
     ] ],
-    [ "XmlConstants.hpp", "a00575.html", "a00575" ],
-    [ "XmlDocument.cpp", "a00578.html", "a00578" ],
-    [ "XmlDocument.hpp", "a00581.html", [
-      [ "XmlDocument", "a02580.html", "a02580" ]
+    [ "XmlConstants.hpp", "a00935.html", "a00935" ],
+    [ "XmlDocument.cpp", "a00938.html", "a00938" ],
+    [ "XmlDocument.hpp", "a00941.html", [
+      [ "XmlDocument", "a03080.html", "a03080" ]
     ] ],
-    [ "XmlDocumentBase.cpp", "a00584.html", "a00584" ],
-    [ "XmlDocumentBase.hpp", "a00587.html", "a00587" ],
-    [ "XmlMacros.hpp", "a00650.html", "a00650" ],
-    [ "XmlMemoryPage.cpp", "a00596.html", "a00596" ],
-    [ "XmlMemoryPage.hpp", "a00599.html", "a00599" ],
-    [ "XmlNamedNodeIterator.cpp", "a00602.html", "a00602" ],
-    [ "XmlNode.cpp", "a00605.html", "a00605" ],
-    [ "XmlNode.hpp", "a00608.html", "a00608" ],
-    [ "XmlNodeBase.cpp", "a00611.html", "a00611" ],
-    [ "XmlNodeBase.hpp", "a00614.html", "a00614" ],
-    [ "XmlNodeIterator.cpp", "a00617.html", "a00617" ],
-    [ "XmlObjectRange.hpp", "a00620.html", [
-      [ "XmlObjectRange", "a02620.html", "a02620" ]
+    [ "XmlDocumentBase.cpp", "a00944.html", "a00944" ],
+    [ "XmlDocumentBase.hpp", "a00947.html", "a00947" ],
+    [ "XmlMacros.hpp", "a01010.html", "a01010" ],
+    [ "XmlMemoryPage.cpp", "a00956.html", "a00956" ],
+    [ "XmlMemoryPage.hpp", "a00959.html", "a00959" ],
+    [ "XmlNamedNodeIterator.cpp", "a00962.html", "a00962" ],
+    [ "XmlNode.cpp", "a00965.html", "a00965" ],
+    [ "XmlNode.hpp", "a00968.html", "a00968" ],
+    [ "XmlNodeBase.cpp", "a00971.html", "a00971" ],
+    [ "XmlNodeBase.hpp", "a00974.html", "a00974" ],
+    [ "XmlNodeIterator.cpp", "a00977.html", "a00977" ],
+    [ "XmlObjectRange.hpp", "a00980.html", [
+      [ "XmlObjectRange", "a03120.html", "a03120" ]
     ] ],
-    [ "XmlParser.cpp", "a00623.html", "a00623" ],
-    [ "XmlParser.hpp", "a00626.html", [
-      [ "XmlParser", "a02636.html", "a02636" ]
+    [ "XmlParser.cpp", "a00983.html", "a00983" ],
+    [ "XmlParser.hpp", "a00986.html", [
+      [ "XmlParser", "a03136.html", "a03136" ]
     ] ],
-    [ "XmlParseResult.cpp", "a00629.html", "a00629" ],
-    [ "XmlParseResult.hpp", "a00632.html", "a00632" ],
-    [ "XmlText.cpp", "a00635.html", "a00635" ],
-    [ "XmlText.hpp", "a00638.html", "a00638" ],
-    [ "XmlTreeWalker.hpp", "a00641.html", [
-      [ "XmlTreeWalker", "a02648.html", "a02648" ]
+    [ "XmlParseResult.cpp", "a00989.html", "a00989" ],
+    [ "XmlParseResult.hpp", "a00992.html", "a00992" ],
+    [ "XmlText.cpp", "a00995.html", "a00995" ],
+    [ "XmlText.hpp", "a00998.html", "a00998" ],
+    [ "XmlTreeWalker.hpp", "a01001.html", [
+      [ "XmlTreeWalker", "a03148.html", "a03148" ]
     ] ],
-    [ "XmlTypes.hpp", "a00644.html", "a00644" ],
-    [ "XmlUtils.hpp", "a00653.html", "a00653" ],
-    [ "XmlWriterFile.cpp", "a00665.html", "a00665" ],
-    [ "XmlWriterFile.hpp", "a00668.html", [
-      [ "XmlWriterFile", "a02744.html", "a02744" ]
+    [ "XmlTypes.hpp", "a01004.html", "a01004" ],
+    [ "XmlUtils.hpp", "a01013.html", "a01013" ],
+    [ "XmlWriterFile.cpp", "a01025.html", "a01025" ],
+    [ "XmlWriterFile.hpp", "a01028.html", [
+      [ "XmlWriterFile", "a03244.html", "a03244" ]
     ] ],
-    [ "XmlWriterStream.cpp", "a00671.html", "a00671" ],
-    [ "XmlWriterStream.hpp", "a00674.html", [
-      [ "XmlWriterStream", "a02748.html", "a02748" ]
+    [ "XmlWriterStream.cpp", "a01031.html", "a01031" ],
+    [ "XmlWriterStream.hpp", "a01034.html", [
+      [ "XmlWriterStream", "a03248.html", "a03248" ]
     ] ],
-    [ "XPathAllocator.cpp", "a00698.html", "a00698" ],
-    [ "XPathAllocator.hpp", "a00701.html", [
-      [ "XPathAllocator", "a02796.html", "a02796" ],
-      [ "XPathAllocatorCapture", "a02800.html", "a02800" ]
+    [ "XPathAllocator.cpp", "a01058.html", "a01058" ],
+    [ "XPathAllocator.hpp", "a01061.html", [
+      [ "XPathAllocator", "a03296.html", "a03296" ],
+      [ "XPathAllocatorCapture", "a03300.html", "a03300" ]
     ] ],
-    [ "XPathAstNode.cpp", "a00677.html", "a00677" ],
-    [ "XPathAstNode.hpp", "a00680.html", [
-      [ "axis_to_type", "a02772.html", "a02772" ],
-      [ "XPathAstNode", "a02776.html", "a02776" ]
+    [ "XPathAstNode.cpp", "a01037.html", "a01037" ],
+    [ "XPathAstNode.hpp", "a01040.html", [
+      [ "axis_to_type", "a03272.html", "a03272" ],
+      [ "XPathAstNode", "a03276.html", "a03276" ]
     ] ],
-    [ "XPathConstants.hpp", "a00683.html", "a00683" ],
-    [ "XPathContext.hpp", "a00686.html", [
-      [ "XPathContext", "a02784.html", "a02784" ]
+    [ "XPathConstants.hpp", "a01043.html", "a01043" ],
+    [ "XPathContext.hpp", "a01046.html", [
+      [ "XPathContext", "a03284.html", "a03284" ]
     ] ],
-    [ "XPathDocumentOrderComparator.cpp", "a00689.html", "a00689" ],
-    [ "XPathDocumentOrderComparator.hpp", "a00692.html", "a00692" ],
-    [ "XPathException.hpp", "a00695.html", [
-      [ "XPathException", "a02792.html", "a02792" ]
+    [ "XPathDocumentOrderComparator.cpp", "a01049.html", "a01049" ],
+    [ "XPathDocumentOrderComparator.hpp", "a01052.html", "a01052" ],
+    [ "XPathException.hpp", "a01055.html", [
+      [ "XPathException", "a03292.html", "a03292" ]
     ] ],
-    [ "XPathLexer.cpp", "a00725.html", "a00725" ],
-    [ "XPathLexer.hpp", "a00728.html", [
-      [ "XPathLexer", "a02832.html", "a02832" ]
+    [ "XPathLexer.cpp", "a01085.html", "a01085" ],
+    [ "XPathLexer.hpp", "a01088.html", [
+      [ "XPathLexer", "a03332.html", "a03332" ]
     ] ],
-    [ "XPathLexerString.cpp", "a00731.html", "a00731" ],
-    [ "XPathLexerString.hpp", "a00734.html", [
-      [ "XPathLexerString", "a02836.html", "a02836" ]
+    [ "XPathLexerString.cpp", "a01091.html", "a01091" ],
+    [ "XPathLexerString.hpp", "a01094.html", [
+      [ "XPathLexerString", "a03336.html", "a03336" ]
     ] ],
-    [ "XPathMemoryBlock.hpp", "a00704.html", [
-      [ "XPathMemoryBlock", "a02804.html", "a02804" ]
+    [ "XPathMemoryBlock.hpp", "a01064.html", [
+      [ "XPathMemoryBlock", "a03304.html", "a03304" ]
     ] ],
-    [ "XPathNode.cpp", "a00713.html", "a00713" ],
-    [ "XPathNode.hpp", "a00716.html", "a00716" ],
-    [ "XPathNodeSet.cpp", "a00719.html", "a00719" ],
-    [ "XPathNodeSet.hpp", "a00722.html", "a00722" ],
-    [ "XPathParser.cpp", "a00737.html", "a00737" ],
-    [ "XPathParser.hpp", "a00740.html", [
-      [ "XPathParser", "a02844.html", "a02844" ]
+    [ "XPathNode.cpp", "a01073.html", "a01073" ],
+    [ "XPathNode.hpp", "a01076.html", "a01076" ],
+    [ "XPathNodeSet.cpp", "a01079.html", "a01079" ],
+    [ "XPathNodeSet.hpp", "a01082.html", "a01082" ],
+    [ "XPathParser.cpp", "a01097.html", "a01097" ],
+    [ "XPathParser.hpp", "a01100.html", [
+      [ "XPathParser", "a03344.html", "a03344" ]
     ] ],
-    [ "XPathParseResult.cpp", "a00743.html", "a00743" ],
-    [ "XPathParseResult.hpp", "a00746.html", [
-      [ "xpath_parse_result_t", "a02848.html", "a02848" ]
+    [ "XPathParseResult.cpp", "a01103.html", "a01103" ],
+    [ "XPathParseResult.hpp", "a01106.html", [
+      [ "xpath_parse_result_t", "a03348.html", "a03348" ]
     ] ],
-    [ "XPathQuery.cpp", "a00749.html", "a00749" ],
-    [ "XPathQuery.hpp", "a00752.html", [
-      [ "XPathQuery", "a02852.html", "a02852" ],
-      [ "XPathQueryImpl", "a02856.html", "a02856" ]
+    [ "XPathQuery.cpp", "a01109.html", "a01109" ],
+    [ "XPathQuery.hpp", "a01112.html", [
+      [ "XPathQuery", "a03352.html", "a03352" ],
+      [ "XPathQueryImpl", "a03356.html", "a03356" ]
     ] ],
-    [ "XPathStack.cpp", "a00707.html", "a00707" ],
-    [ "XPathStack.hpp", "a00710.html", [
-      [ "XPathStack", "a02812.html", "a02812" ],
-      [ "XPathStackData", "a02816.html", "a02816" ]
+    [ "XPathStack.cpp", "a01067.html", "a01067" ],
+    [ "XPathStack.hpp", "a01070.html", [
+      [ "XPathStack", "a03312.html", "a03312" ],
+      [ "XPathStackData", "a03316.html", "a03316" ]
     ] ],
-    [ "XPathString.cpp", "a00755.html", "a00755" ],
-    [ "XPathString.hpp", "a00758.html", "a00758" ],
-    [ "XPathUtils.cpp", "a00761.html", "a00761" ],
-    [ "XPathUtils.hpp", "a00764.html", "a00764" ],
-    [ "XPathVariable.cpp", "a00767.html", "a00767" ],
-    [ "XPathVariable.hpp", "a00770.html", "a00770" ],
-    [ "XPathVariableSet.cpp", "a00773.html", "a00773" ],
-    [ "XPathVariableSet.hpp", "a00776.html", "a00776" ]
+    [ "XPathString.cpp", "a01115.html", "a01115" ],
+    [ "XPathString.hpp", "a01118.html", "a01118" ],
+    [ "XPathUtils.cpp", "a01121.html", "a01121" ],
+    [ "XPathUtils.hpp", "a01124.html", "a01124" ],
+    [ "XPathVariable.cpp", "a01127.html", "a01127" ],
+    [ "XPathVariable.hpp", "a01130.html", "a01130" ],
+    [ "XPathVariableSet.cpp", "a01133.html", "a01133" ],
+    [ "XPathVariableSet.hpp", "a01136.html", "a01136" ]
 ];

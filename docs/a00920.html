@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::utility::traits::value Namespace Reference</title>
+<title>LumexLib: XmlAttribute.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,75 +94,112 @@ $(document).ready(function(){initNavTree('a00920.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::utility::traits::value Namespace Reference</div>  </div>
+<div class="title">XmlAttribute.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02472.html">is_expected</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> is a <code><a class="el" href="a01652.html">lumex::core::expected::result::Expected</a>&lt;S, E&gt;</code>.  <a href="a02472.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02476.html">is_expected&lt; lumex::core::expected::result::Expected&lt; S, E &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02452.html">is_optional</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02468.html">is_optional&lt; lumex::core::optional::opt::optional&lt; T &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02456.html">is_optional&lt; T const &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02464.html">is_optional&lt; T const volatile &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02460.html">is_optional&lt; T volatile &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02480.html">is_optional_like</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> looks like an optional: <code>has_value ()</code> and unary <code>*</code> work on a <code>T const &amp;</code> (std::optional, LumexLib optional, similar wrappers).  <a href="a02480.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02484.html">is_optional_like&lt; T, meta::void_t&lt; decltype(std::declval&lt; T const &amp; &gt;().has_value()), decltype(*std::declval&lt; T const &amp; &gt;())&gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00974_source.html">lumex/xml/node/XmlNodeBase.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a01013_source.html">lumex/xml/utility/XmlUtils.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00923_source.html">XmlAttribute.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for XmlAttribute.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00921.png" border="0" usemap="#aXmlAttribute_8cpp" alt=""/></div>
+<map name="XmlAttribute_8cpp" id="aXmlAttribute_8cpp">
+<area shape="rect" title=" " alt="" coords="1429,5,1561,32"/>
+<area shape="rect" href="a00974.html" title=" " alt="" coords="1369,80,1621,107"/>
+<area shape="rect" href="a01013.html" title=" " alt="" coords="591,162,814,189"/>
+<area shape="rect" href="a00923.html" title=" " alt="" coords="1684,80,1817,107"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="1419,430,1600,457"/>
+<area shape="rect" href="a00929.html" title=" " alt="" coords="1462,155,1631,196"/>
+<area shape="rect" href="a00953.html" title=" " alt="" coords="1264,251,1531,278"/>
+<area shape="rect" href="a01004.html" title=" " alt="" coords="912,341,1139,367"/>
+<area shape="rect" href="a00959.html" title=" " alt="" coords="1371,341,1531,367"/>
+<area shape="rect" href="a00662.html" title=" " alt="" coords="1163,333,1346,375"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="1676,587,1865,628"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="659,676,872,717"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="1643,676,1898,717"/>
+<area shape="rect" title=" " alt="" coords="512,512,579,539"/>
+<area shape="rect" title=" " alt="" coords="963,430,1021,457"/>
+<area shape="rect" href="a01010.html" title=" " alt="" coords="755,512,994,539"/>
+<area shape="rect" href="a00695.html" title=" " alt="" coords="721,587,975,628"/>
+<area shape="rect" title=" " alt="" coords="351,430,422,457"/>
+<area shape="rect" title=" " alt="" coords="271,430,327,457"/>
+<area shape="rect" title=" " alt="" coords="816,251,875,278"/>
+<area shape="rect" title=" " alt="" coords="899,251,965,278"/>
+<area shape="rect" title=" " alt="" coords="990,251,1053,278"/>
+<area shape="rect" title=" " alt="" coords="1077,251,1139,278"/>
+<area shape="rect" title=" " alt="" coords="771,341,837,367"/>
+<area shape="rect" title=" " alt="" coords="379,341,445,367"/>
+<area shape="rect" title=" " alt="" coords="94,251,162,278"/>
+<area shape="rect" href="a00935.html" title=" " alt="" coords="145,333,303,375"/>
+<area shape="rect" href="a01061.html" title=" " alt="" coords="448,244,640,285"/>
+<area shape="rect" href="a01064.html" title=" " alt="" coords="469,341,645,367"/>
+<area shape="rect" href="a01043.html" title=" " alt="" coords="445,423,645,464"/>
+<area shape="rect" title=" " alt="" coords="1821,162,1918,189"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00920.html#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
+<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ac82151cc67bdfd63bf6b255248b9f2c3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac82151cc67bdfd63bf6b255248b9f2c3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00920.html#ac82151cc67bdfd63bf6b255248b9f2c3">is_optional_v</a> = <a class="el" href="a02452.html">is_optional</a>&lt;T&gt;::value</td></tr>
-<tr class="separator:ac82151cc67bdfd63bf6b255248b9f2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a5dcbca474b90c60caa93d6bd3898b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac5a5dcbca474b90c60caa93d6bd3898b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00920.html#ac5a5dcbca474b90c60caa93d6bd3898b">is_expected_v</a> = <a class="el" href="a02472.html">is_expected</a>&lt;T&gt;::value</td></tr>
-<tr class="separator:ac5a5dcbca474b90c60caa93d6bd3898b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5b474d4a12f6ac6b94c90479ea6ac04f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00920.html#a5b474d4a12f6ac6b94c90479ea6ac04f">unspecified_bool_xml_attribute</a> (<a class="el" href="a03068.html">XmlAttribute</a> ***)</td></tr>
+<tr class="separator:a5b474d4a12f6ac6b94c90479ea6ac04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ac5a5dcbca474b90c60caa93d6bd3898b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5a5dcbca474b90c60caa93d6bd3898b">&#9670;&nbsp;</a></span>is_expected_v</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a07486181f1990291c2a348de8eb4c480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&nbsp;</a></span>LUMEX_IMPLEMENTATION</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> bool lumex::core::utility::traits::value::is_expected_v = <a class="el" href="a02472.html">is_expected</a>&lt;T&gt;::value</td>
+          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac82151cc67bdfd63bf6b255248b9f2c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac82151cc67bdfd63bf6b255248b9f2c3">&#9670;&nbsp;</a></span>is_optional_v</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a5b474d4a12f6ac6b94c90479ea6ac04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b474d4a12f6ac6b94c90479ea6ac04f">&#9670;&nbsp;</a></span>unspecified_bool_xml_attribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> bool lumex::core::utility::traits::value::is_optional_v = <a class="el" href="a02452.html">is_optional</a>&lt;T&gt;::value</td>
+          <td class="memname">static void unspecified_bool_xml_attribute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a03068.html">XmlAttribute</a> ***&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00920_a5b474d4a12f6ac6b94c90479ea6ac04f_icgraph.png" border="0" usemap="#aa00920_a5b474d4a12f6ac6b94c90479ea6ac04f_icgraph" alt=""/></div>
+<map name="a00920_a5b474d4a12f6ac6b94c90479ea6ac04f_icgraph" id="aa00920_a5b474d4a12f6ac6b94c90479ea6ac04f_icgraph">
+<area shape="rect" title=" " alt="" coords="229,13,392,54"/>
+<area shape="rect" href="a03068.html#a09a175b2cbbf5919bf4b2c2a92e5d05b" title="Provides safe boolean conversion for XmlAttribute objects." alt="" coords="5,5,181,61"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -171,7 +208,7 @@ template&lt;typename T &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00898.html">utility</a></li><li class="navelem"><a class="el" href="a00911.html">traits</a></li><li class="navelem"><a class="el" href="a00920.html">value</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_50c9cab4d5411a97d8807a2f6b945ebe.html">xml</a></li><li class="navelem"><a class="el" href="dir_67864fa9b126ea0c63c4a33fb4799790.html">attribute</a></li><li class="navelem"><a class="el" href="a00920.html">XmlAttribute.cpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

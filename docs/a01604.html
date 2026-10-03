@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::environment::env::LumexEnvironment::EnvResult Struct Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc5_usb_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,284 +94,223 @@ $(document).ready(function(){initNavTree('a01604.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a01601.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::environment::env::LumexEnvironment::EnvResult Struct Reference</div>  </div>
+<div class="title">lumex::core::crc::parametric::crc5_usb_spec_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00164_source.html">LumexEnvironment.hpp</a>&gt;</code></p>
+<p>CRC-5/USB: width=5 poly=0x05 init=0x1f refin=true refout=true xorout=0x1f.  
+ <a href="a01604.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a0f519e298cc0e307205d47efd85c7866"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#a0f519e298cc0e307205d47efd85c7866">EnvResult</a> ()</td></tr>
-<tr class="memdesc:a0f519e298cc0e307205d47efd85c7866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="a01604.html">EnvResult</a> in a default (unsuccessful) state.  <a href="a01604.html#a0f519e298cc0e307205d47efd85c7866">More...</a><br /></td></tr>
-<tr class="separator:a0f519e298cc0e307205d47efd85c7866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f09c36d3f0f599086edb2057c1ca298"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#a0f09c36d3f0f599086edb2057c1ca298">EnvResult</a> (<a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> val)</td></tr>
-<tr class="memdesc:a0f09c36d3f0f599086edb2057c1ca298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a successful <a class="el" href="a01604.html">EnvResult</a> with a given value.  <a href="a01604.html#a0f09c36d3f0f599086edb2057c1ca298">More...</a><br /></td></tr>
-<tr class="separator:a0f09c36d3f0f599086edb2057c1ca298"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a434c859737ea209ac772420ee3d0ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#a6a434c859737ea209ac772420ee3d0ea">EnvResult</a> (int err_code, <a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> fallback=<a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a>())</td></tr>
-<tr class="memdesc:a6a434c859737ea209ac772420ee3d0ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an unsuccessful <a class="el" href="a01604.html">EnvResult</a> with an error code and an optional fallback value.  <a href="a01604.html#a6a434c859737ea209ac772420ee3d0ea">More...</a><br /></td></tr>
-<tr class="separator:a6a434c859737ea209ac772420ee3d0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac150613ec458adba41b1af131c4c9d69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#ac150613ec458adba41b1af131c4c9d69">get_value_or</a> (<a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;fallback) const</td></tr>
-<tr class="memdesc:ac150613ec458adba41b1af131c4c9d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the variable's value or a specified fallback value if the operation failed.  <a href="a01604.html#ac150613ec458adba41b1af131c4c9d69">More...</a><br /></td></tr>
-<tr class="separator:ac150613ec458adba41b1af131c4c9d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa441aabc21e56a277efcf55816d30cbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#aa441aabc21e56a277efcf55816d30cbb">operator bool</a> () const</td></tr>
-<tr class="memdesc:aa441aabc21e56a277efcf55816d30cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows implicit conversion to bool to easily check the success status.  <a href="a01604.html#aa441aabc21e56a277efcf55816d30cbb">More...</a><br /></td></tr>
-<tr class="separator:aa441aabc21e56a277efcf55816d30cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a2e2f814c4581e355cf54817b88b22aa1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#a2e2f814c4581e355cf54817b88b22aa1">ValueType</a> = std::uint8_t</td></tr>
+<tr class="separator:a2e2f814c4581e355cf54817b88b22aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a76137a4dfe6916f5ac8edc08e9cbd664"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#a76137a4dfe6916f5ac8edc08e9cbd664">value</a></td></tr>
-<tr class="memdesc:a76137a4dfe6916f5ac8edc08e9cbd664"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value of the environment variable. Empty if not found or error.  <a href="a01604.html#a76137a4dfe6916f5ac8edc08e9cbd664">More...</a><br /></td></tr>
-<tr class="separator:a76137a4dfe6916f5ac8edc08e9cbd664"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7385b33818826ec05c94adfb968ca7a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#ab7385b33818826ec05c94adfb968ca7a">success</a></td></tr>
-<tr class="memdesc:ab7385b33818826ec05c94adfb968ca7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the operation was successful, false otherwise.  <a href="a01604.html#ab7385b33818826ec05c94adfb968ca7a">More...</a><br /></td></tr>
-<tr class="separator:ab7385b33818826ec05c94adfb968ca7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe2af0c92ae86337b521d95d12e95e41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#afe2af0c92ae86337b521d95d12e95e41">error_code</a></td></tr>
-<tr class="memdesc:afe2af0c92ae86337b521d95d12e95e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">System-specific error code if <code>success</code> is false.  <a href="a01604.html#afe2af0c92ae86337b521d95d12e95e41">More...</a><br /></td></tr>
-<tr class="separator:afe2af0c92ae86337b521d95d12e95e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a5aeec15b204990fa8a8e311e409586c3"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#a5aeec15b204990fa8a8e311e409586c3">kWidth</a> = 5</td></tr>
+<tr class="separator:a5aeec15b204990fa8a8e311e409586c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb89f92b537ceea2a6fc4e2c1fb55981"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#aeb89f92b537ceea2a6fc4e2c1fb55981">kPoly</a> = 0x05U</td></tr>
+<tr class="separator:aeb89f92b537ceea2a6fc4e2c1fb55981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51434b4ea8f05d63e22986436c1b6576"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#a51434b4ea8f05d63e22986436c1b6576">kInit</a> = 0x1FU</td></tr>
+<tr class="separator:a51434b4ea8f05d63e22986436c1b6576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dabe5cdd5d429d8b8dec950d3b1cdcf"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#a8dabe5cdd5d429d8b8dec950d3b1cdcf">kRefIn</a> = true</td></tr>
+<tr class="separator:a8dabe5cdd5d429d8b8dec950d3b1cdcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5aad58accead1dd4b4cbb2decc46846"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#af5aad58accead1dd4b4cbb2decc46846">kRefOut</a> = true</td></tr>
+<tr class="separator:af5aad58accead1dd4b4cbb2decc46846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f17f1b5d69f142afd750b003a01c898"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#a2f17f1b5d69f142afd750b003a01c898">kXorOut</a> = 0x1FU</td></tr>
+<tr class="separator:a2f17f1b5d69f142afd750b003a01c898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110802487b5f0445f72844aeccaf7ff0"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html#a110802487b5f0445f72844aeccaf7ff0">kCatalogCheck</a> = 0x19U</td></tr>
+<tr class="separator:a110802487b5f0445f72844aeccaf7ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0f519e298cc0e307205d47efd85c7866"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f519e298cc0e307205d47efd85c7866">&#9670;&nbsp;</a></span>EnvResult() <span class="overload">[1/3]</span></h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>CRC-5/USB: width=5 poly=0x05 init=0x1f refin=true refout=true xorout=0x1f. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-5/USB </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a2e2f814c4581e355cf54817b88b22aa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e2f814c4581e355cf54817b88b22aa1">&#9670;&nbsp;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01604.html">lumex::core::environment::env::LumexEnvironment::EnvResult::EnvResult</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">using <a class="el" href="a01604.html#a2e2f814c4581e355cf54817b88b22aa1">lumex::core::crc::parametric::crc5_usb_spec_t::ValueType</a> =  std::uint8_t</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Constructs an <a class="el" href="a01604.html">EnvResult</a> in a default (unsuccessful) state. </p>
-<p>Initializes <code>success</code> to <code>false</code> and <code>error_code</code> to <code>0</code>. </p>
-
-</div>
-</div>
-<a id="a0f09c36d3f0f599086edb2057c1ca298"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f09c36d3f0f599086edb2057c1ca298">&#9670;&nbsp;</a></span>EnvResult() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01604.html">lumex::core::environment::env::LumexEnvironment::EnvResult::EnvResult</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a>&#160;</td>
-          <td class="paramname"><em>val</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs a successful <a class="el" href="a01604.html">EnvResult</a> with a given value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">val</td><td>The successful string value of the environment variable. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>The value is moved to <code>this-&gt;value</code> for efficiency. </dd></dl>
-
-</div>
-</div>
-<a id="a6a434c859737ea209ac772420ee3d0ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a434c859737ea209ac772420ee3d0ea">&#9670;&nbsp;</a></span>EnvResult() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01604.html">lumex::core::environment::env::LumexEnvironment::EnvResult::EnvResult</a> </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>err_code</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a>&#160;</td>
-          <td class="paramname"><em>fallback</em> = <code><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a>&#160;()</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs an unsuccessful <a class="el" href="a01604.html">EnvResult</a> with an error code and an optional fallback value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">err_code</td><td>The error code indicating the reason for failure. </td></tr>
-    <tr><td class="paramname">fallback</td><td>An optional string to use as a fallback value if the operation failed. This value will be stored in <code>this-&gt;value</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>The <code>fallback</code> value is moved to <code>this-&gt;value</code> for efficiency. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac150613ec458adba41b1af131c4c9d69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac150613ec458adba41b1af131c4c9d69">&#9670;&nbsp;</a></span>get_value_or()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> lumex::core::environment::env::LumexEnvironment::EnvResult::get_value_or </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;&#160;</td>
-          <td class="paramname"><em>fallback</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Retrieves the variable's value or a specified fallback value if the operation failed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fallback</td><td>The string to return if the operation was not successful. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The actual value if the <code>success</code> flag is true, otherwise the provided fallback value. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01604_ac150613ec458adba41b1af131c4c9d69_icgraph.png" border="0" usemap="#aa01604_ac150613ec458adba41b1af131c4c9d69_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="aa441aabc21e56a277efcf55816d30cbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa441aabc21e56a277efcf55816d30cbb">&#9670;&nbsp;</a></span>operator bool()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::core::environment::env::LumexEnvironment::EnvResult::operator bool </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Allows implicit conversion to bool to easily check the success status. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if the operation was successful (<code>success</code> is true), false otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This enables convenient usage in conditional statements like <code>if (result)</code>. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="afe2af0c92ae86337b521d95d12e95e41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe2af0c92ae86337b521d95d12e95e41">&#9670;&nbsp;</a></span>error_code</h2>
+<a id="a110802487b5f0445f72844aeccaf7ff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110802487b5f0445f72844aeccaf7ff0">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int lumex::core::environment::env::LumexEnvironment::EnvResult::error_code</td>
+          <td class="memname">const constinit std::uint8_t lumex::core::crc::parametric::crc5_usb_spec_t::kCatalogCheck = 0x19U</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>System-specific error code if <code>success</code> is false. </p>
-
 </div>
 </div>
-<a id="ab7385b33818826ec05c94adfb968ca7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7385b33818826ec05c94adfb968ca7a">&#9670;&nbsp;</a></span>success</h2>
+<a id="a51434b4ea8f05d63e22986436c1b6576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51434b4ea8f05d63e22986436c1b6576">&#9670;&nbsp;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool lumex::core::environment::env::LumexEnvironment::EnvResult::success</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc5_usb_spec_t::kInit = 0x1FU</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>True if the operation was successful, false otherwise. </p>
-
 </div>
 </div>
-<a id="a76137a4dfe6916f5ac8edc08e9cbd664"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76137a4dfe6916f5ac8edc08e9cbd664">&#9670;&nbsp;</a></span>value</h2>
+<a id="aeb89f92b537ceea2a6fc4e2c1fb55981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb89f92b537ceea2a6fc4e2c1fb55981">&#9670;&nbsp;</a></span>kPoly</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> lumex::core::environment::env::LumexEnvironment::EnvResult::value</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc5_usb_spec_t::kPoly = 0x05U</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>The value of the environment variable. Empty if not found or error. </p>
+</div>
+</div>
+<a id="a8dabe5cdd5d429d8b8dec950d3b1cdcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dabe5cdd5d429d8b8dec950d3b1cdcf">&#9670;&nbsp;</a></span>kRefIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc5_usb_spec_t::kRefIn = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5aad58accead1dd4b4cbb2decc46846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5aad58accead1dd4b4cbb2decc46846">&#9670;&nbsp;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc5_usb_spec_t::kRefOut = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5aeec15b204990fa8a8e311e409586c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aeec15b204990fa8a8e311e409586c3">&#9670;&nbsp;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit int lumex::core::crc::parametric::crc5_usb_spec_t::kWidth = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f17f1b5d69f142afd750b003a01c898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f17f1b5d69f142afd750b003a01c898">&#9670;&nbsp;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc5_usb_spec_t::kXorOut = 0x1FU</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00164_source.html">LumexEnvironment.hpp</a></li>
+<li><a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00852.html">environment</a></li><li class="navelem"><a class="el" href="a00853.html">env</a></li><li class="navelem"><a class="el" href="a01600.html">LumexEnvironment</a></li><li class="navelem"><a class="el" href="a01604.html">EnvResult</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01256.html">crc</a></li><li class="navelem"><a class="el" href="a01259.html">parametric</a></li><li class="navelem"><a class="el" href="a01604.html">crc5_usb_spec_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

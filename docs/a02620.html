@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::range::XmlObjectRange&lt; Iterator &gt; Class Template Reference</title>
+<title>LumexLib: lumex::core::utility::callback::LumexCallbackSlot&lt; Tag, Result(Args...)&gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,118 +94,188 @@ $(document).ready(function(){initNavTree('a02620.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a02617.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::range::XmlObjectRange&lt; Iterator &gt; Class Template Reference</div>  </div>
+<div class="title">lumex::core::utility::callback::LumexCallbackSlot&lt; Tag, Result(Args...)&gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Range of XML objects, providing iteration over a collection of elements.  
- <a href="a02620.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00620_source.html">XmlObjectRange.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00671_source.html">LumexCallbackSlot.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02624.html">Scoped</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs a function for the lifetime of the object and restores the previous one on destruction.  <a href="a02624.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4370a429f6baa830e299d95ca4ad69d6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#a4370a429f6baa830e299d95ca4ad69d6">const_iterator</a> = Iterator</td></tr>
-<tr class="memdesc:a4370a429f6baa830e299d95ca4ad69d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for the type of the constant iterator.  <a href="a02620.html#a4370a429f6baa830e299d95ca4ad69d6">More...</a><br /></td></tr>
-<tr class="separator:a4370a429f6baa830e299d95ca4ad69d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae14566bfaffad6d53b1277350ff629d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#aae14566bfaffad6d53b1277350ff629d">iterator</a> = Iterator</td></tr>
-<tr class="memdesc:aae14566bfaffad6d53b1277350ff629d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for the type of the iterator.  <a href="a02620.html#aae14566bfaffad6d53b1277350ff629d">More...</a><br /></td></tr>
-<tr class="separator:aae14566bfaffad6d53b1277350ff629d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefef2384f82063f742b3925977532bb8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#aefef2384f82063f742b3925977532bb8">function_type</a> = Result(*)(Args...)</td></tr>
+<tr class="memdesc:aefef2384f82063f742b3925977532bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stored pointer type.  <a href="a02620.html#aefef2384f82063f742b3925977532bb8">More...</a><br /></td></tr>
+<tr class="separator:aefef2384f82063f742b3925977532bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7ec1bd627117559e3ace33c9139d6a31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#a7ec1bd627117559e3ace33c9139d6a31">XmlObjectRange</a> (Iterator <a class="el" href="a02620.html#a9c1f78cd639f85bd8c9016ba1f6f54db">begin</a>, Iterator <a class="el" href="a02620.html#a1ac3b5edb46916204463448289fe627e">end</a>)</td></tr>
-<tr class="memdesc:a7ec1bd627117559e3ace33c9139d6a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the XML object range.  <a href="a02620.html#a7ec1bd627117559e3ace33c9139d6a31">More...</a><br /></td></tr>
-<tr class="separator:a7ec1bd627117559e3ace33c9139d6a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c1f78cd639f85bd8c9016ba1f6f54db"><td class="memItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#a9c1f78cd639f85bd8c9016ba1f6f54db">begin</a> () const</td></tr>
-<tr class="memdesc:a9c1f78cd639f85bd8c9016ba1f6f54db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the iterator to the beginning of the range.  <a href="a02620.html#a9c1f78cd639f85bd8c9016ba1f6f54db">More...</a><br /></td></tr>
-<tr class="separator:a9c1f78cd639f85bd8c9016ba1f6f54db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ac3b5edb46916204463448289fe627e"><td class="memItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#a1ac3b5edb46916204463448289fe627e">end</a> () const</td></tr>
-<tr class="memdesc:a1ac3b5edb46916204463448289fe627e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the iterator to the end of the range.  <a href="a02620.html#a1ac3b5edb46916204463448289fe627e">More...</a><br /></td></tr>
-<tr class="separator:a1ac3b5edb46916204463448289fe627e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a825143b8061b854b44974f7fcc49160e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#a825143b8061b854b44974f7fcc49160e">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;The returned value is the same as the one &quot; &quot;returned by the <a class="el" href="a02620.html#a9c1f78cd639f85bd8c9016ba1f6f54db">begin</a>() method; discarding it &quot; &quot;negates the purpose of the getter.&quot;) bool empty() const</td></tr>
-<tr class="memdesc:a825143b8061b854b44974f7fcc49160e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the range is empty.  <a href="a02620.html#a825143b8061b854b44974f7fcc49160e">More...</a><br /></td></tr>
-<tr class="separator:a825143b8061b854b44974f7fcc49160e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c1c11e42d768adb7cc233443e1d0b92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#a9c1c11e42d768adb7cc233443e1d0b92">LumexCallbackSlot</a> ()=delete</td></tr>
+<tr class="separator:a9c1c11e42d768adb7cc233443e1d0b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae5280ced3e7c1e12e96d9f5278c84078"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#ae5280ced3e7c1e12e96d9f5278c84078">set</a> (<a class="el" href="a02620.html#aefef2384f82063f742b3925977532bb8">function_type</a> function) noexcept</td></tr>
+<tr class="memdesc:ae5280ced3e7c1e12e96d9f5278c84078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs <code>function</code>; <code>nullptr</code> clears the slot.  <a href="a02620.html#ae5280ced3e7c1e12e96d9f5278c84078">More...</a><br /></td></tr>
+<tr class="separator:ae5280ced3e7c1e12e96d9f5278c84078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f42f57c4e3dd33e56eb8be18f15ed0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a02620.html#aefef2384f82063f742b3925977532bb8">function_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#a77f42f57c4e3dd33e56eb8be18f15ed0">get</a> () noexcept</td></tr>
+<tr class="memdesc:a77f42f57c4e3dd33e56eb8be18f15ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the installed function, or <code>nullptr</code>.  <a href="a02620.html#a77f42f57c4e3dd33e56eb8be18f15ed0">More...</a><br /></td></tr>
+<tr class="separator:a77f42f57c4e3dd33e56eb8be18f15ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8134cb126a6751c136d5eecbd1257d6a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a02620.html#aefef2384f82063f742b3925977532bb8">function_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#a8134cb126a6751c136d5eecbd1257d6a">exchange</a> (<a class="el" href="a02620.html#aefef2384f82063f742b3925977532bb8">function_type</a> function) noexcept</td></tr>
+<tr class="memdesc:a8134cb126a6751c136d5eecbd1257d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs <code>function</code> and returns the previous one.  <a href="a02620.html#a8134cb126a6751c136d5eecbd1257d6a">More...</a><br /></td></tr>
+<tr class="separator:a8134cb126a6751c136d5eecbd1257d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50cde815c49a6e071a744054413428a3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#a50cde815c49a6e071a744054413428a3">reset</a> () noexcept</td></tr>
+<tr class="memdesc:a50cde815c49a6e071a744054413428a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the slot.  <a href="a02620.html#a50cde815c49a6e071a744054413428a3">More...</a><br /></td></tr>
+<tr class="separator:a50cde815c49a6e071a744054413428a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5693139b7830ea257387d37f791c76"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html#a4c5693139b7830ea257387d37f791c76">is_set</a> () noexcept</td></tr>
+<tr class="memdesc:a4c5693139b7830ea257387d37f791c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a function is installed.  <a href="a02620.html#a4c5693139b7830ea257387d37f791c76">More...</a><br /></td></tr>
+<tr class="separator:a4c5693139b7830ea257387d37f791c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af255fa0efb46d7d08882c8bfb5e74a1b"><td class="memTemplParams" colspan="2">template&lt;typename Fallback &gt; </td></tr>
+<tr class="memitem:af255fa0efb46d7d08882c8bfb5e74a1b"><td class="memTemplItemLeft" align="right" valign="top">static Result&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a02620.html#af255fa0efb46d7d08882c8bfb5e74a1b">invoke_or</a> (Fallback &amp;&amp;fallback, Args... args)</td></tr>
+<tr class="memdesc:af255fa0efb46d7d08882c8bfb5e74a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the installed function with <code>args</code>, or <code>fallback</code> with the same <code>args</code> when the slot is empty or the installed function throws.  <a href="a02620.html#af255fa0efb46d7d08882c8bfb5e74a1b">More...</a><br /></td></tr>
+<tr class="separator:af255fa0efb46d7d08882c8bfb5e74a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Iterator&gt;<br />
-class lumex::xml::range::XmlObjectRange&lt; Iterator &gt;</h3>
-
-<p>Range of XML objects, providing iteration over a collection of elements. </p>
-<p>The <code>xml_object_range</code> class provides a lightweight view on a sequence of elements, defined by a pair of iterators <code>begin</code> and <code>end</code>. It is intended for use in scenarios where access to the range of data is required without copying or modifying the underlying collection.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Iterator</td><td>Type of iterator that must conform to the <code>std::forward_iterator</code> (C++20). This ensures that the iterator is copyable, comparable for equality/inequality, and can be dereferenced. For earlier C++ standards (before C++20), similar checks would be implemented using SFINAE and <code>std::iterator_traits</code>, for example, through <code>std::enable_if_t&lt;std::is_base_of_v&lt;std::input_iterator_tag, typename std::iterator_traits&lt;Iterator&gt;::iterator_category&gt;&gt;</code>. Using <code>std::forward_iterator</code> in C++20 is a more explicit and clear way to express these requirements.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>The class does not own the data pointed to by the iterators. The lifecycle of the underlying collection must be managed by the calling code. </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a4370a429f6baa830e299d95ca4ad69d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4370a429f6baa830e299d95ca4ad69d6">&#9670;&nbsp;</a></span>const_iterator</h2>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="aefef2384f82063f742b3925977532bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefef2384f82063f742b3925977532bb8">&#9670;&nbsp;</a></span>function_type</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
+template&lt;typename Tag , typename Result , typename... Args&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a02620.html">lumex::xml::range::XmlObjectRange</a>&lt; Iterator &gt;::<a class="el" href="a02620.html#a4370a429f6baa830e299d95ca4ad69d6">const_iterator</a> =  Iterator</td>
+          <td class="memname">using <a class="el" href="a02616.html">lumex::core::utility::callback::LumexCallbackSlot</a>&lt; Tag, Result(Args...)&gt;::<a class="el" href="a02620.html#aefef2384f82063f742b3925977532bb8">function_type</a> =  Result (*) (Args...)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Alias for the type of the constant iterator. </p>
-<p>Used for uniformity, since the range does not provide methods for non-constant modification. </p>
-
-</div>
-</div>
-<a id="aae14566bfaffad6d53b1277350ff629d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae14566bfaffad6d53b1277350ff629d">&#9670;&nbsp;</a></span>iterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02620.html">lumex::xml::range::XmlObjectRange</a>&lt; Iterator &gt;::<a class="el" href="a02620.html#aae14566bfaffad6d53b1277350ff629d">iterator</a> =  Iterator</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Alias for the type of the iterator. </p>
-<p>Used for uniformity, since the range does not provide methods for non-constant modification. </p>
+<p>The stored pointer type. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7ec1bd627117559e3ace33c9139d6a31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ec1bd627117559e3ace33c9139d6a31">&#9670;&nbsp;</a></span>XmlObjectRange()</h2>
+<a id="a9c1c11e42d768adb7cc233443e1d0b92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c1c11e42d768adb7cc233443e1d0b92">&#9670;&nbsp;</a></span>LumexCallbackSlot()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
+template&lt;typename Tag , typename Result , typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a02620.html">lumex::xml::range::XmlObjectRange</a>&lt; Iterator &gt;::<a class="el" href="a02620.html">XmlObjectRange</a> </td>
+          <td class="memname"><a class="el" href="a02616.html">lumex::core::utility::callback::LumexCallbackSlot</a>&lt; Tag, Result(Args...)&gt;::<a class="el" href="a02616.html">LumexCallbackSlot</a> </td>
           <td>(</td>
-          <td class="paramtype">Iterator&#160;</td>
-          <td class="paramname"><em>begin</em>, </td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8134cb126a6751c136d5eecbd1257d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8134cb126a6751c136d5eecbd1257d6a">&#9670;&nbsp;</a></span>exchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tag , typename Result , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a02620.html#aefef2384f82063f742b3925977532bb8">function_type</a> <a class="el" href="a02616.html">lumex::core::utility::callback::LumexCallbackSlot</a>&lt; Tag, Result(Args...)&gt;::exchange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02620.html#aefef2384f82063f742b3925977532bb8">function_type</a>&#160;</td>
+          <td class="paramname"><em>function</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Installs <code>function</code> and returns the previous one. </p>
+
+</div>
+</div>
+<a id="a77f42f57c4e3dd33e56eb8be18f15ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77f42f57c4e3dd33e56eb8be18f15ed0">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tag , typename Result , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a02620.html#aefef2384f82063f742b3925977532bb8">function_type</a> <a class="el" href="a02616.html">lumex::core::utility::callback::LumexCallbackSlot</a>&lt; Tag, Result(Args...)&gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the installed function, or <code>nullptr</code>. </p>
+
+</div>
+</div>
+<a id="af255fa0efb46d7d08882c8bfb5e74a1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af255fa0efb46d7d08882c8bfb5e74a1b">&#9670;&nbsp;</a></span>invoke_or()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tag , typename Result , typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename Fallback &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Result <a class="el" href="a02616.html">lumex::core::utility::callback::LumexCallbackSlot</a>&lt; Tag, Result(Args...)&gt;::invoke_or </td>
+          <td>(</td>
+          <td class="paramtype">Fallback &amp;&amp;&#160;</td>
+          <td class="paramname"><em>fallback</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Iterator&#160;</td>
-          <td class="paramname"><em>end</em>&#160;</td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -215,125 +285,140 @@ template&lt;typename Iterator &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructor of the XML object range. </p>
-<p>Initializes the range with a pair of iterators pointing to the beginning and end of the collection.</p>
+<p>Calls the installed function with <code>args</code>, or <code>fallback</code> with the same <code>args</code> when the slot is empty or the installed function throws. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">begin</td><td>Iterator pointing to the first element of the range. </td></tr>
-    <tr><td class="paramname">end</td><td>Iterator pointing to the position after the last element of the range. </td></tr>
+    <tr><td class="paramname">fallback</td><td>Any callable taking <code>Args...</code> and returning something convertible to <code>Result</code>. Its exceptions propagate to the caller. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments for the installed function or for <code>fallback</code>. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>What the called function returned. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02620_af255fa0efb46d7d08882c8bfb5e74a1b_cgraph.png" border="0" usemap="#aa02620_af255fa0efb46d7d08882c8bfb5e74a1b_cgraph" alt=""/></div>
+<map name="a02620_af255fa0efb46d7d08882c8bfb5e74a1b_cgraph" id="aa02620_af255fa0efb46d7d08882c8bfb5e74a1b_cgraph">
+<area shape="rect" title="Calls the installed function with args, or fallback with the same args when the slot is empty or the ..." alt="" coords="5,5,247,61"/>
+<area shape="rect" href="a01290.html#affc4125f1c661b62d9a1011d7c589dc9" title=" " alt="" coords="295,13,463,54"/>
+<area shape="rect" href="a01291.html#a4267bbe4c002bf9161d0966b40e2eb6f" title=" " alt="" coords="511,5,681,61"/>
+</map>
+</div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9c1f78cd639f85bd8c9016ba1f6f54db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c1f78cd639f85bd8c9016ba1f6f54db">&#9670;&nbsp;</a></span>begin()</h2>
+<a id="a4c5693139b7830ea257387d37f791c76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c5693139b7830ea257387d37f791c76">&#9670;&nbsp;</a></span>is_set()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
+template&lt;typename Tag , typename Result , typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Iterator <a class="el" href="a02620.html">lumex::xml::range::XmlObjectRange</a>&lt; Iterator &gt;::begin </td>
+          <td class="memname">static bool <a class="el" href="a02616.html">lumex::core::utility::callback::LumexCallbackSlot</a>&lt; Tag, Result(Args...)&gt;::is_set </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the iterator to the beginning of the range. </p>
-<dl class="section return"><dt>Returns</dt><dd>Iterator pointing to the first element of the range. </dd></dl>
+<p>Whether a function is installed. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02620_a4c5693139b7830ea257387d37f791c76_cgraph.png" border="0" usemap="#aa02620_a4c5693139b7830ea257387d37f791c76_cgraph" alt=""/></div>
+<map name="a02620_a4c5693139b7830ea257387d37f791c76_cgraph" id="aa02620_a4c5693139b7830ea257387d37f791c76_cgraph">
+<area shape="rect" title="Whether a function is installed." alt="" coords="5,5,223,61"/>
+<area shape="rect" href="a01290.html#affc4125f1c661b62d9a1011d7c589dc9" title=" " alt="" coords="271,13,439,54"/>
+<area shape="rect" href="a01291.html#a4267bbe4c002bf9161d0966b40e2eb6f" title=" " alt="" coords="487,5,657,61"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a1ac3b5edb46916204463448289fe627e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ac3b5edb46916204463448289fe627e">&#9670;&nbsp;</a></span>end()</h2>
+<a id="a50cde815c49a6e071a744054413428a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50cde815c49a6e071a744054413428a3">&#9670;&nbsp;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
+template&lt;typename Tag , typename Result , typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Iterator <a class="el" href="a02620.html">lumex::xml::range::XmlObjectRange</a>&lt; Iterator &gt;::end </td>
+          <td class="memname">static void <a class="el" href="a02616.html">lumex::core::utility::callback::LumexCallbackSlot</a>&lt; Tag, Result(Args...)&gt;::reset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the iterator to the end of the range. </p>
-<dl class="section return"><dt>Returns</dt><dd>Iterator pointing to the position after the last element of the range. </dd></dl>
+<p>Clears the slot. </p>
 
 </div>
 </div>
-<a id="a825143b8061b854b44974f7fcc49160e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a825143b8061b854b44974f7fcc49160e">&#9670;&nbsp;</a></span>LUMEX_ATTRIBUTE_NODISCARD()</h2>
+<a id="ae5280ced3e7c1e12e96d9f5278c84078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5280ced3e7c1e12e96d9f5278c84078">&#9670;&nbsp;</a></span>set()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
+template&lt;typename Tag , typename Result , typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a02620.html">lumex::xml::range::XmlObjectRange</a>&lt; Iterator &gt;::LUMEX_ATTRIBUTE_NODISCARD </td>
+          <td class="memname">static void <a class="el" href="a02616.html">lumex::core::utility::callback::LumexCallbackSlot</a>&lt; Tag, Result(Args...)&gt;::set </td>
           <td>(</td>
-          <td class="paramtype">&quot;The returned value is the same as the one &quot; &quot;returned by the <a class="el" href="a02620.html#a9c1f78cd639f85bd8c9016ba1f6f54db">begin</a>() method; discarding it &quot; &quot;negates the purpose of the getter.&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype"><a class="el" href="a02620.html#aefef2384f82063f742b3925977532bb8">function_type</a>&#160;</td>
+          <td class="paramname"><em>function</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks if the range is empty. </p>
-<p>The range is considered empty if the beginning iterator is equal to the end iterator.</p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the range is empty; <code>false</code> otherwise. </dd></dl>
+<p>Installs <code>function</code>; <code>nullptr</code> clears the slot. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00620_source.html">XmlObjectRange.hpp</a></li>
+<li><a class="el" href="a00671_source.html">LumexCallbackSlot.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00956.html">range</a></li><li class="navelem"><a class="el" href="a02620.html">XmlObjectRange</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01309.html">callback</a></li><li class="navelem"><a class="el" href="a02620.html">LumexCallbackSlot&lt; Tag, Result(Args...)&gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

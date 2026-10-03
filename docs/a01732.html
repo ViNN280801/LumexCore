@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::fmt::Formatter&lt; T, Char, Enable &gt; Class Template Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc8_gsm_b_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,127 +94,223 @@ $(document).ready(function(){initNavTree('a01732.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a01729.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::fmt::Formatter&lt; T, Char, Enable &gt; Class Template Reference</div>  </div>
+<div class="title">lumex::core::crc::parametric::crc8_gsm_b_spec_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Customization point: specialize <code><a class="el" href="a01732.html" title="Customization point: specialize Formatter&lt;T, Char&gt; with Char const *parse (BasicFormatParseContext&lt;Ch...">Formatter</a>&lt;T, Char&gt;</code> with <code>Char const *parse (<a class="el" href="a01728.html" title="The format specification being parsed and the automatic / manual argument numbering state (as std::ba...">BasicFormatParseContext</a>&lt;Char&gt; &amp;)</code> and <code><a class="el" href="a01760.html" title="Output iterator of BasicFormatContext: every assignment appends one character to the formatting buffe...">BasicAppender</a>&lt;Char&gt; format (T const &amp;, <a class="el" href="a01832.html" title="The output and the arguments of one formatting call (as std::basic_format_context).">BasicFormatContext</a>&lt;Char&gt; &amp;) const</code>.  
+<p>CRC-8/GSM-B: width=8 poly=0x49 init=0x00 refin=false refout=false xorout=0xff.  
  <a href="a01732.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00230_source.html">LumexFormat.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a3bb926e06c11c1b60f59c542c5848716"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html#a3bb926e06c11c1b60f59c542c5848716">Formatter</a> ()=delete</td></tr>
-<tr class="separator:a3bb926e06c11c1b60f59c542c5848716"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82dffd26eed2f9bd718868798089af43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html#a82dffd26eed2f9bd718868798089af43">Formatter</a> (<a class="el" href="a01732.html">Formatter</a> const &amp;)=delete</td></tr>
-<tr class="separator:a82dffd26eed2f9bd718868798089af43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a769b5f9e23623f493058499c17a6846b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01732.html">Formatter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html#a769b5f9e23623f493058499c17a6846b">operator=</a> (<a class="el" href="a01732.html">Formatter</a> const &amp;)=delete</td></tr>
-<tr class="separator:a769b5f9e23623f493058499c17a6846b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a5c8d3226fcdd85d3d8b3846f34d856b5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html#a5c8d3226fcdd85d3d8b3846f34d856b5">ValueType</a> = std::uint8_t</td></tr>
+<tr class="separator:a5c8d3226fcdd85d3d8b3846f34d856b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a13552aee2f144c707b2380813da26d10"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html#a13552aee2f144c707b2380813da26d10">kWidth</a> = 8</td></tr>
+<tr class="separator:a13552aee2f144c707b2380813da26d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc7a8efb4276dcb7f6f363ce295b22d"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html#a1dc7a8efb4276dcb7f6f363ce295b22d">kPoly</a> = 0x49U</td></tr>
+<tr class="separator:a1dc7a8efb4276dcb7f6f363ce295b22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a506dfc23a7d38aca78e9a3c444bdccd1"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html#a506dfc23a7d38aca78e9a3c444bdccd1">kInit</a> = 0x00U</td></tr>
+<tr class="separator:a506dfc23a7d38aca78e9a3c444bdccd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22a62ce8953c481c620e20f142f1bc0"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html#ab22a62ce8953c481c620e20f142f1bc0">kRefIn</a> = false</td></tr>
+<tr class="separator:ab22a62ce8953c481c620e20f142f1bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac366bb19ec9040e548364e1b3db1c84"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html#aac366bb19ec9040e548364e1b3db1c84">kRefOut</a> = false</td></tr>
+<tr class="separator:aac366bb19ec9040e548364e1b3db1c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cfcf2d153e5e1065c5cf7cce192ae29"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html#a9cfcf2d153e5e1065c5cf7cce192ae29">kXorOut</a> = 0xFFU</td></tr>
+<tr class="separator:a9cfcf2d153e5e1065c5cf7cce192ae29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952a568874ebb0e33f803844b7242f27"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html#a952a568874ebb0e33f803844b7242f27">kCatalogCheck</a> = 0x94U</td></tr>
+<tr class="separator:a952a568874ebb0e33f803844b7242f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, typename Char = char, typename Enable = void&gt;<br />
-class lumex::core::fmt::Formatter&lt; T, Char, Enable &gt;</h3>
-
-<p>Customization point: specialize <code><a class="el" href="a01732.html" title="Customization point: specialize Formatter&lt;T, Char&gt; with Char const *parse (BasicFormatParseContext&lt;Ch...">Formatter</a>&lt;T, Char&gt;</code> with <code>Char const *parse (<a class="el" href="a01728.html" title="The format specification being parsed and the automatic / manual argument numbering state (as std::ba...">BasicFormatParseContext</a>&lt;Char&gt; &amp;)</code> and <code><a class="el" href="a01760.html" title="Output iterator of BasicFormatContext: every assignment appends one character to the formatting buffe...">BasicAppender</a>&lt;Char&gt; format (T const &amp;, <a class="el" href="a01832.html" title="The output and the arguments of one formatting call (as std::basic_format_context).">BasicFormatContext</a>&lt;Char&gt; &amp;) const</code>. </p>
-<p>The primary template is disabled (deleted constructor), so <code>std::is_default_constructible&lt;<a class="el" href="a01732.html" title="Customization point: specialize Formatter&lt;T, Char&gt; with Char const *parse (BasicFormatParseContext&lt;Ch...">Formatter</a>&lt;T, Char&gt;&gt;</code> tells whether <code>T</code> is formattable. Built-in types have specializations a user formatter can inherit from to reuse the standard specification. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3bb926e06c11c1b60f59c542c5848716"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bb926e06c11c1b60f59c542c5848716">&#9670;&nbsp;</a></span>Formatter() <span class="overload">[1/2]</span></h2>
+<div class="textblock"><p>CRC-8/GSM-B: width=8 poly=0x49 init=0x00 refin=false refout=false xorout=0xff. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-8/GSM-B </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a5c8d3226fcdd85d3d8b3846f34d856b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c8d3226fcdd85d3d8b3846f34d856b5">&#9670;&nbsp;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename Char  = char, typename Enable  = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="a01732.html#a5c8d3226fcdd85d3d8b3846f34d856b5">lumex::core::crc::parametric::crc8_gsm_b_spec_t::ValueType</a> =  std::uint8_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a952a568874ebb0e33f803844b7242f27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a952a568874ebb0e33f803844b7242f27">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01732.html">lumex::core::fmt::Formatter</a>&lt; T, Char, Enable &gt;::<a class="el" href="a01732.html">Formatter</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit std::uint8_t lumex::core::crc::parametric::crc8_gsm_b_spec_t::kCatalogCheck = 0x94U</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a82dffd26eed2f9bd718868798089af43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82dffd26eed2f9bd718868798089af43">&#9670;&nbsp;</a></span>Formatter() <span class="overload">[2/2]</span></h2>
+<a id="a506dfc23a7d38aca78e9a3c444bdccd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a506dfc23a7d38aca78e9a3c444bdccd1">&#9670;&nbsp;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename Char  = char, typename Enable  = void&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01732.html">lumex::core::fmt::Formatter</a>&lt; T, Char, Enable &gt;::<a class="el" href="a01732.html">Formatter</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01732.html">Formatter</a>&lt; T, Char, Enable &gt; const &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc8_gsm_b_spec_t::kInit = 0x00U</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a769b5f9e23623f493058499c17a6846b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a769b5f9e23623f493058499c17a6846b">&#9670;&nbsp;</a></span>operator=()</h2>
+<a id="a1dc7a8efb4276dcb7f6f363ce295b22d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc7a8efb4276dcb7f6f363ce295b22d">&#9670;&nbsp;</a></span>kPoly</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename Char  = char, typename Enable  = void&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01732.html">Formatter</a>&amp; <a class="el" href="a01732.html">lumex::core::fmt::Formatter</a>&lt; T, Char, Enable &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01732.html">Formatter</a>&lt; T, Char, Enable &gt; const &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc8_gsm_b_spec_t::kPoly = 0x49U</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00230_source.html">LumexFormat.hpp</a></li>
+<a id="ab22a62ce8953c481c620e20f142f1bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22a62ce8953c481c620e20f142f1bc0">&#9670;&nbsp;</a></span>kRefIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc8_gsm_b_spec_t::kRefIn = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac366bb19ec9040e548364e1b3db1c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac366bb19ec9040e548364e1b3db1c84">&#9670;&nbsp;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc8_gsm_b_spec_t::kRefOut = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13552aee2f144c707b2380813da26d10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13552aee2f144c707b2380813da26d10">&#9670;&nbsp;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit int lumex::core::crc::parametric::crc8_gsm_b_spec_t::kWidth = 8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cfcf2d153e5e1065c5cf7cce192ae29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cfcf2d153e5e1065c5cf7cce192ae29">&#9670;&nbsp;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc8_gsm_b_spec_t::kXorOut = 0xFFU</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00869.html">fmt</a></li><li class="navelem"><a class="el" href="a01732.html">Formatter</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01256.html">crc</a></li><li class="navelem"><a class="el" href="a01259.html">parametric</a></li><li class="navelem"><a class="el" href="a01732.html">crc8_gsm_b_spec_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

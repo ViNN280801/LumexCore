@@ -1,4 +1,4 @@
 var a00647 =
 [
-    [ "lumex::xml::writer::IXmlWriter", "a02720.html", "a02720" ]
+    [ "LUMEX_IMPLEMENTATION", "a00647.html#a07486181f1990291c2a348de8eb4c480", null ]
 ];

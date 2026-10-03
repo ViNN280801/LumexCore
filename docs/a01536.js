@@ -1,11 +1,6 @@
 var a01536 =
 [
-    [ "ValueType", "a01536.html#ac70a518ba65949cd4c608cec5de6e737", null ],
-    [ "kCatalogCheck", "a01536.html#a7397db6cf1033f5092e6069579484c11", null ],
-    [ "kInit", "a01536.html#a11fafbdcaf22cd2c5fbf13817ef0e5f8", null ],
-    [ "kPoly", "a01536.html#a487e34e2036678cbec6fc93859dd3dce", null ],
-    [ "kRefIn", "a01536.html#a04c9791222f8dd5fbdbc9a38701e621a", null ],
-    [ "kRefOut", "a01536.html#ab4edaad0d7d48dfc57f17b153899afa8", null ],
-    [ "kWidth", "a01536.html#a8ca0cd48824adbe0796d575b64c89d75", null ],
-    [ "kXorOut", "a01536.html#a9e4c3de5830f3e77eb3d133198af1156", null ]
+    [ "stripe_count", "a01536.html#a02213171bb23356e977f473f939b24b7a09aa016a280f6f90b222ce7c69cf095b", null ],
+    [ "waiter_table_t", "a01536.html#acece4ed37350a81045dd68451b7f676b", null ],
+    [ "stripes", "a01536.html#ac47b8d2c7877fae7fa499f31fa8d1b32", null ]
 ];

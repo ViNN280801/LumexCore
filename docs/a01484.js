@@ -1,11 +1,10 @@
 var a01484 =
 [
-    [ "ValueType", "a01484.html#acf5a5832bbdcb622b0ab33414b9151b8", null ],
-    [ "kCatalogCheck", "a01484.html#a4841e385937fc16b205a363045ea6d5c", null ],
-    [ "kInit", "a01484.html#a4299001df8c9b2ee9a6413b191718cb9", null ],
-    [ "kPoly", "a01484.html#aabf08e9530bed96bb74d9bac7aea9288", null ],
-    [ "kRefIn", "a01484.html#accd5a44c4127979c6da168366f42b70d", null ],
-    [ "kRefOut", "a01484.html#ae84115c621cefcece142910f36fb0ae3", null ],
-    [ "kWidth", "a01484.html#ae966679d83420c0f9337cd40216c714d", null ],
-    [ "kXorOut", "a01484.html#aa4dde9be6ab916e17d332195da281b4c", null ]
+    [ "LumexSettingsGuard", "a01484.html#aeaa4fb6e906161d246cfeeb9271935c6", null ],
+    [ "backup", "a01484.html#af9bac403ac10a4c027b0b3b3e7242dab", null ],
+    [ "ensureExistsWithDefaults", "a01484.html#a98b36bed73ab40adb63a48f08f1df640", null ],
+    [ "ensureKeysWithDefaults", "a01484.html#a2992a46c96ffd85535ee0aafdf6e2c5d", null ],
+    [ "filename", "a01484.html#a512ff7dc866afc343993b24ffea03b78", null ],
+    [ "repairIfCorrupted", "a01484.html#aae22fd9b195098736a14c07ac88ffc49", null ],
+    [ "settings", "a01484.html#ac4eb6432f7486436f83c3b9c8cf4518a", null ]
 ];

@@ -1,8 +1,11 @@
 var a01936 =
 [
-    [ "TupleFormatter", "a01936.html#ab395a88faf822d698b346060aa36e504", null ],
-    [ "format", "a01936.html#a5d48556d18f922b506772b3ee3b10a36", null ],
-    [ "parse", "a01936.html#a9ac1bea3d748915695e3ce908b49aead", null ],
-    [ "set_brackets", "a01936.html#a938202043da2e75c93e95615d278a2ea", null ],
-    [ "set_separator", "a01936.html#a46778fd4e8d81f3ac8887d75396d587a", null ]
+    [ "ValueType", "a01936.html#acf5a5832bbdcb622b0ab33414b9151b8", null ],
+    [ "kCatalogCheck", "a01936.html#a098f6570026a8484405d718eca471598", null ],
+    [ "kInit", "a01936.html#abc080dc496e32ceb8442d680efbaad34", null ],
+    [ "kPoly", "a01936.html#a357bba6ba51d382d234b79007a9c0828", null ],
+    [ "kRefIn", "a01936.html#acb5489013244a485cea5117b672f48ea", null ],
+    [ "kRefOut", "a01936.html#a8d85bfe3b6aceb65b10bb5ab4ec65f80", null ],
+    [ "kWidth", "a01936.html#a1442c1a6f69df87660330df7e4cf03ed", null ],
+    [ "kXorOut", "a01936.html#a4b5f6da17ae7bbebe6ec1a46a5b54776", null ]
 ];

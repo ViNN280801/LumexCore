@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::fmt::try_format_result_t&lt; Char &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc16_nrsc5_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,90 +94,223 @@ $(document).ready(function(){initNavTree('a01892.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a01889.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::fmt::try_format_result_t&lt; Char &gt; Struct Template Reference</div>  </div>
+<div class="title">lumex::core::crc::parametric::crc16_nrsc5_spec_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Result of <code>try_format</code>: the text, or <code>success == false</code> and the error message. Never throws.  
+<p>CRC-16/NRSC-5: width=16 poly=0x080b init=0xffff refin=true refout=true xorout=0x0000.  
  <a href="a01892.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00230_source.html">LumexFormat.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aa848a04ca950c9eded82e64124bccff4"><td class="memItemLeft" align="right" valign="top">std::basic_string&lt; Char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html#aa848a04ca950c9eded82e64124bccff4">text</a></td></tr>
-<tr class="separator:aa848a04ca950c9eded82e64124bccff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8fa7d111533e3d8a916d2e646098886"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html#ad8fa7d111533e3d8a916d2e646098886">success</a></td></tr>
-<tr class="separator:ad8fa7d111533e3d8a916d2e646098886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b6145a66a7db3b22a87737c567e632f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html#a0b6145a66a7db3b22a87737c567e632f">error</a></td></tr>
-<tr class="separator:a0b6145a66a7db3b22a87737c567e632f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a67f8b1cadedf28735ba5065903fe71ff"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html#a67f8b1cadedf28735ba5065903fe71ff">ValueType</a> = std::uint16_t</td></tr>
+<tr class="separator:a67f8b1cadedf28735ba5065903fe71ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a53f5bfbc2a7263e9876ccfd46f8b12a4"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html#a53f5bfbc2a7263e9876ccfd46f8b12a4">kWidth</a> = 16</td></tr>
+<tr class="separator:a53f5bfbc2a7263e9876ccfd46f8b12a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9264880fc2235fe0c04b3a22a4dd0747"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html#a9264880fc2235fe0c04b3a22a4dd0747">kPoly</a> = 0x080BU</td></tr>
+<tr class="separator:a9264880fc2235fe0c04b3a22a4dd0747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f9744fd851bb0cd85cf004f9b7e76a"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html#ac8f9744fd851bb0cd85cf004f9b7e76a">kInit</a> = 0xFFFFU</td></tr>
+<tr class="separator:ac8f9744fd851bb0cd85cf004f9b7e76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97506bd5ca5d33aab838352d114ad60b"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html#a97506bd5ca5d33aab838352d114ad60b">kRefIn</a> = true</td></tr>
+<tr class="separator:a97506bd5ca5d33aab838352d114ad60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee165e96ee78a8828fef3887f1ffab7"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html#a6ee165e96ee78a8828fef3887f1ffab7">kRefOut</a> = true</td></tr>
+<tr class="separator:a6ee165e96ee78a8828fef3887f1ffab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9446637082cab6f2980a70a06847dfd2"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html#a9446637082cab6f2980a70a06847dfd2">kXorOut</a> = 0x0000U</td></tr>
+<tr class="separator:a9446637082cab6f2980a70a06847dfd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a943e7eb86cc013a711f503df851a9976"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html#a943e7eb86cc013a711f503df851a9976">kCatalogCheck</a> = 0xA066U</td></tr>
+<tr class="separator:a943e7eb86cc013a711f503df851a9976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Char&gt;<br />
-struct lumex::core::fmt::try_format_result_t&lt; Char &gt;</h3>
-
-<p>Result of <code>try_format</code>: the text, or <code>success == false</code> and the error message. Never throws. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a0b6145a66a7db3b22a87737c567e632f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b6145a66a7db3b22a87737c567e632f">&#9670;&nbsp;</a></span>error</h2>
+<div class="textblock"><p>CRC-16/NRSC-5: width=16 poly=0x080b init=0xffff refin=true refout=true xorout=0x0000. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-16/NRSC-5 </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a67f8b1cadedf28735ba5065903fe71ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67f8b1cadedf28735ba5065903fe71ff">&#9670;&nbsp;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="a01892.html">lumex::core::fmt::try_format_result_t</a>&lt; Char &gt;::error</td>
+          <td class="memname">using <a class="el" href="a01892.html#a67f8b1cadedf28735ba5065903fe71ff">lumex::core::crc::parametric::crc16_nrsc5_spec_t::ValueType</a> =  std::uint16_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad8fa7d111533e3d8a916d2e646098886"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8fa7d111533e3d8a916d2e646098886">&#9670;&nbsp;</a></span>success</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a943e7eb86cc013a711f503df851a9976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943e7eb86cc013a711f503df851a9976">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="a01892.html">lumex::core::fmt::try_format_result_t</a>&lt; Char &gt;::success</td>
+          <td class="memname">const constinit std::uint16_t lumex::core::crc::parametric::crc16_nrsc5_spec_t::kCatalogCheck = 0xA066U</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aa848a04ca950c9eded82e64124bccff4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa848a04ca950c9eded82e64124bccff4">&#9670;&nbsp;</a></span>text</h2>
+<a id="ac8f9744fd851bb0cd85cf004f9b7e76a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f9744fd851bb0cd85cf004f9b7e76a">&#9670;&nbsp;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::basic_string&lt;Char&gt; <a class="el" href="a01892.html">lumex::core::fmt::try_format_result_t</a>&lt; Char &gt;::text</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc16_nrsc5_spec_t::kInit = 0xFFFFU</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9264880fc2235fe0c04b3a22a4dd0747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9264880fc2235fe0c04b3a22a4dd0747">&#9670;&nbsp;</a></span>kPoly</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc16_nrsc5_spec_t::kPoly = 0x080BU</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97506bd5ca5d33aab838352d114ad60b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97506bd5ca5d33aab838352d114ad60b">&#9670;&nbsp;</a></span>kRefIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc16_nrsc5_spec_t::kRefIn = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ee165e96ee78a8828fef3887f1ffab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ee165e96ee78a8828fef3887f1ffab7">&#9670;&nbsp;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc16_nrsc5_spec_t::kRefOut = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53f5bfbc2a7263e9876ccfd46f8b12a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53f5bfbc2a7263e9876ccfd46f8b12a4">&#9670;&nbsp;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit int lumex::core::crc::parametric::crc16_nrsc5_spec_t::kWidth = 16</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9446637082cab6f2980a70a06847dfd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9446637082cab6f2980a70a06847dfd2">&#9670;&nbsp;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc16_nrsc5_spec_t::kXorOut = 0x0000U</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00230_source.html">LumexFormat.hpp</a></li>
+<li><a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00869.html">fmt</a></li><li class="navelem"><a class="el" href="a01892.html">try_format_result_t</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01256.html">crc</a></li><li class="navelem"><a class="el" href="a01259.html">parametric</a></li><li class="navelem"><a class="el" href="a01892.html">crc16_nrsc5_spec_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -1,11 +1,8 @@
 var a01356 =
 [
-    [ "ValueType", "a01356.html#a46c0c859e62884904ef78893df0818c7", null ],
-    [ "kCatalogCheck", "a01356.html#a31743d74c618401d3cccf60f0c2b5309", null ],
-    [ "kInit", "a01356.html#a799a72eb8d8109ff59f8e692b14837de", null ],
-    [ "kPoly", "a01356.html#adf791a9120dd837bdc7885d119b5a401", null ],
-    [ "kRefIn", "a01356.html#a3fab3cda080f41cb4b9f75f5546eda98", null ],
-    [ "kRefOut", "a01356.html#a9d63f0690ea7c100b7735e7e8a4f35a6", null ],
-    [ "kWidth", "a01356.html#a32a510d26d000d1429ffffaa5c590213", null ],
-    [ "kXorOut", "a01356.html#af194951815d26a533af59f231747c0a8", null ]
+    [ "name_null_sentry", "a03116.html", "a03116" ],
+    [ "XmlNamedNodeIterator", "a03104.html", "a03104" ],
+    [ "XmlNode", "a03096.html", "a03096" ],
+    [ "XmlNodeBase", "a03112.html", "a03112" ],
+    [ "XmlNodeIterator", "a03100.html", "a03100" ]
 ];

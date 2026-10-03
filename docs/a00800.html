@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::applied::json::diagnostics::Detail Namespace Reference</title>
+<title>LumexLib: example_cpu_vectorization_capabilities.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -96,195 +96,55 @@ $(document).ready(function(){initNavTree('a00800.html',''); initResizable(); });
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::applied::json::diagnostics::Detail Namespace Reference</div>  </div>
+<div class="title">example_cpu_vectorization_capabilities.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;lumex/applied/hardware/LumexHardware&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for example_cpu_vectorization_capabilities.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00801.png" border="0" usemap="#aexample__cpu__vectorization__capabilities_8cpp" alt=""/></div>
+<map name="example__cpu__vectorization__capabilities_8cpp" id="aexample__cpu__vectorization__capabilities_8cpp">
+<area shape="rect" title=" " alt="" coords="38,5,239,47"/>
+<area shape="rect" title=" " alt="" coords="5,102,85,129"/>
+<area shape="rect" title=" " alt="" coords="109,102,168,129"/>
+<area shape="rect" title=" " alt="" coords="193,95,373,136"/>
+</map>
+</div>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aca3063965d5431c7f906a0a354f2d4c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00800.html#aca3063965d5431c7f906a0a354f2d4c4">append_parts</a> (std::ostringstream &amp;)</td></tr>
-<tr class="separator:aca3063965d5431c7f906a0a354f2d4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5350d69eada86df796421b3f44453e82"><td class="memTemplParams" colspan="2">template&lt;typename Head , typename... Tail&gt; </td></tr>
-<tr class="memitem:a5350d69eada86df796421b3f44453e82"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00800.html#a5350d69eada86df796421b3f44453e82">append_parts</a> (std::ostringstream &amp;stream, Head const &amp;head, Tail const &amp;...tail)</td></tr>
-<tr class="separator:a5350d69eada86df796421b3f44453e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66ea4e0f564ae5672943eff27f85d531"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00800.html#a66ea4e0f564ae5672943eff27f85d531">write_to_stderr</a> (LumexJsonDiagnosticLevel level, char const *message) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a66ea4e0f564ae5672943eff27f85d531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default sink: writes <code>[level] message</code> to <code>std::cerr</code> for <code>warning</code> and <code>error</code>, drops <code>debug</code> and <code>info</code>. Never throws.  <a href="a00800.html#a66ea4e0f564ae5672943eff27f85d531">More...</a><br /></td></tr>
-<tr class="separator:a66ea4e0f564ae5672943eff27f85d531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e27e157c43da02cb959abf3a8eb8b7f"><td class="memTemplParams" colspan="2">template&lt;typename... Parts&gt; </td></tr>
-<tr class="memitem:a5e27e157c43da02cb959abf3a8eb8b7f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00800.html#a5e27e157c43da02cb959abf3a8eb8b7f">report</a> (LumexJsonDiagnosticLevel level, Parts const &amp;...parts) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a5e27e157c43da02cb959abf3a8eb8b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates <code>parts</code> with <code>operator&lt;&lt;</code> and sends the text to the installed sink, or to the default one when the slot is empty or the sink throws. Never throws: a failure while building the text drops the message.  <a href="a00800.html#a5e27e157c43da02cb959abf3a8eb8b7f">More...</a><br /></td></tr>
-<tr class="separator:a5e27e157c43da02cb959abf3a8eb8b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00800.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aca3063965d5431c7f906a0a354f2d4c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca3063965d5431c7f906a0a354f2d4c4">&#9670;&nbsp;</a></span>append_parts() <span class="overload">[1/2]</span></h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void lumex::applied::json::diagnostics::Detail::append_parts </td>
+          <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramtype">std::ostringstream &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00800_aca3063965d5431c7f906a0a354f2d4c4_icgraph.png" border="0" usemap="#aa00800_aca3063965d5431c7f906a0a354f2d4c4_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a5350d69eada86df796421b3f44453e82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5350d69eada86df796421b3f44453e82">&#9670;&nbsp;</a></span>append_parts() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Head , typename... Tail&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lumex::applied::json::diagnostics::Detail::append_parts </td>
-          <td>(</td>
-          <td class="paramtype">std::ostringstream &amp;&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Head const &amp;&#160;</td>
-          <td class="paramname"><em>head</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Tail const &amp;...&#160;</td>
-          <td class="paramname"><em>tail</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00800_a5350d69eada86df796421b3f44453e82_cgraph.png" border="0" usemap="#aa00800_a5350d69eada86df796421b3f44453e82_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a5e27e157c43da02cb959abf3a8eb8b7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e27e157c43da02cb959abf3a8eb8b7f">&#9670;&nbsp;</a></span>report()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Parts&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lumex::applied::json::diagnostics::Detail::report </td>
-          <td>(</td>
-          <td class="paramtype">LumexJsonDiagnosticLevel&#160;</td>
-          <td class="paramname"><em>level</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Parts const &amp;...&#160;</td>
-          <td class="paramname"><em>parts</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Concatenates <code>parts</code> with <code>operator&lt;&lt;</code> and sends the text to the installed sink, or to the default one when the slot is empty or the sink throws. Never throws: a failure while building the text drops the message. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00800_a5e27e157c43da02cb959abf3a8eb8b7f_cgraph.png" border="0" usemap="#aa00800_a5e27e157c43da02cb959abf3a8eb8b7f_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00800_a5e27e157c43da02cb959abf3a8eb8b7f_icgraph.png" border="0" usemap="#aa00800_a5e27e157c43da02cb959abf3a8eb8b7f_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a66ea4e0f564ae5672943eff27f85d531"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66ea4e0f564ae5672943eff27f85d531">&#9670;&nbsp;</a></span>write_to_stderr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lumex::applied::json::diagnostics::Detail::write_to_stderr </td>
-          <td>(</td>
-          <td class="paramtype">LumexJsonDiagnosticLevel&#160;</td>
-          <td class="paramname"><em>level</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default sink: writes <code>[level] message</code> to <code>std::cerr</code> for <code>warning</code> and <code>error</code>, drops <code>debug</code> and <code>info</code>. Never throws. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00800_a66ea4e0f564ae5672943eff27f85d531_icgraph.png" border="0" usemap="#aa00800_a66ea4e0f564ae5672943eff27f85d531_icgraph" alt=""/></div>
+<div class="center"><img src="a00800_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#aa00800_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="a00800_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="aa00800_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,53,60,80"/>
+<area shape="rect" href="a01392.html#a0bac2910071d92a77fbc9d06ce64f181" title="Performs comprehensive CPU vectorization capabilities detection." alt="" coords="108,71,344,127"/>
+<area shape="rect" href="a01392.html#a2a6b9c82125308627d435ce6b2474926" title="Gets a human&#45;readable summary of supported vectorization technologies." alt="" coords="392,5,628,61"/>
+<area shape="rect" href="a01269.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="421,86,599,127"/>
+<area shape="rect" href="a02076.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="676,86,964,127"/>
+</map>
 </div>
 
 </div>
@@ -294,7 +154,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00784.html">applied</a></li><li class="navelem"><a class="el" href="a00798.html">json</a></li><li class="navelem"><a class="el" href="a00799.html">diagnostics</a></li><li class="navelem"><a class="el" href="a00800.html">Detail</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_e8ae4df8b8335e2a73ecf531ee4a4a97.html">examples</a></li><li class="navelem"><a class="el" href="dir_4dd30098bfbd5f3058c90a2baa527711.html">hardware</a></li><li class="navelem"><a class="el" href="a00800.html">example_cpu_vectorization_capabilities.cpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

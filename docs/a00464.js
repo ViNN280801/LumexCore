@@ -1,4 +1,5 @@
 var a00464 =
 [
-    [ "main", "a00464.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ]
+    [ "atomic_shared_ptr", "a01504.html", "a01504" ],
+    [ "atomic_shared_ptr", "a00464.html#a22d2dc62699ddb8c40d827cc21f44fda", null ]
 ];

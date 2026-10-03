@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::xpath::memory::XPathMemoryBlock Struct Reference</title>
+<title>LumexLib: lumex::core::utility::traits::stream::all_ostreamable&lt; First, Rest... &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -93,134 +93,39 @@ $(document).ready(function(){initNavTree('a02804.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a02801.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::xpath::memory::XPathMemoryBlock Struct Reference</div>  </div>
+<div class="title">lumex::core::utility::traits::stream::all_ostreamable&lt; First, Rest... &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a block of memory used by <a class="el" href="a02796.html" title="Allocator for XPath-related data structures.">XPathAllocator</a>.  
- <a href="a02804.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00704_source.html">XPathMemoryBlock.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for lumex::xml::xpath::memory::XPathMemoryBlock:</div>
+Inheritance diagram for lumex::core::utility::traits::stream::all_ostreamable&lt; First, Rest... &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="a02802.png" border="0" usemap="#alumex_1_1xml_1_1xpath_1_1memory_1_1XPathMemoryBlock_coll__map" alt="Collaboration graph"/></div>
+<div class="center"><img src="a02803.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1stream_1_1all__ostreamable_3_01First_00_01Rest_8_8_8_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1stream_1_1all__ostreamable_3_01First_00_01Rest_8_8_8_01_4_inherit__map" id="alumex_1_1core_1_1utility_1_1traits_1_1stream_1_1all__ostreamable_3_01First_00_01Rest_8_8_8_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="292,20,508,76"/>
+<area shape="rect" title=" " alt="" coords="5,5,244,91"/>
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aeac00b0c5dbaab1cc464d0e6023b7d02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02804.html">XPathMemoryBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02804.html#aeac00b0c5dbaab1cc464d0e6023b7d02">next</a></td></tr>
-<tr class="memdesc:aeac00b0c5dbaab1cc464d0e6023b7d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the next memory block in the chain. <code>nullptr</code> if this is the last block.  <a href="a02804.html#aeac00b0c5dbaab1cc464d0e6023b7d02">More...</a><br /></td></tr>
-<tr class="separator:aeac00b0c5dbaab1cc464d0e6023b7d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c4144c951cc2fe95f0f9f2934c514a0"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02804.html#a9c4144c951cc2fe95f0f9f2934c514a0">capacity</a></td></tr>
-<tr class="memdesc:a9c4144c951cc2fe95f0f9f2934c514a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total usable capacity of the <code>data</code> array in bytes.  <a href="a02804.html#a9c4144c951cc2fe95f0f9f2934c514a0">More...</a><br /></td></tr>
-<tr class="separator:a9c4144c951cc2fe95f0f9f2934c514a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6937a1c0cea79315e90f3a6e6983a87e"><td class="memItemLeft" >union {</td></tr>
-<tr class="memitem:a9384d055707a43aaa1e29b8ac40e493a"><td class="memItemLeft" >&#160;&#160;&#160;std::array&lt; char, kxpath_memory_page_size &gt;&#160;&#160;&#160;<a class="el" href="a02804.html#aa848e282072570af57e6c0adc3bb5090">data</a></td></tr>
-<tr class="memdesc:a9384d055707a43aaa1e29b8ac40e493a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The raw character array used for general-purpose memory allocation.  <a href="a02808.html#a9384d055707a43aaa1e29b8ac40e493a">More...</a><br /></td></tr>
-<tr class="separator:a9384d055707a43aaa1e29b8ac40e493a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ac4704aeab9da6f48b33f47b8e980cd"><td class="memItemLeft" >&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="a02804.html#a609ddce5b4c11e12f5c5217b66d08b24">alignment</a></td></tr>
-<tr class="memdesc:a5ac4704aeab9da6f48b33f47b8e980cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dummy member used to ensure the <code>data</code> array is aligned for <code>double</code>s.  <a href="a02808.html#a5ac4704aeab9da6f48b33f47b8e980cd">More...</a><br /></td></tr>
-<tr class="separator:a5ac4704aeab9da6f48b33f47b8e980cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6937a1c0cea79315e90f3a6e6983a87e"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a6937a1c0cea79315e90f3a6e6983a87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a block of memory used by <a class="el" href="a02796.html" title="Allocator for XPath-related data structures.">XPathAllocator</a>. </p>
-<p>This structure defines a contiguous block of memory that the <code><a class="el" href="a02796.html" title="Allocator for XPath-related data structures.">XPathAllocator</a></code> uses for its allocations. Each block can link to the next, forming a singly linked list of memory pages. The union is used to ensure proper alignment of the data buffer for various data types.</p>
-<dl class="section note"><dt>Note</dt><dd>The <code>kxpath_memory_page_size</code> constant (defined in <code><a class="el" href="a00683.html">XPathConstants.hpp</a></code>) determines the fixed size of the data buffer within each block. </dd></dl>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a6937a1c0cea79315e90f3a6e6983a87e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6937a1c0cea79315e90f3a6e6983a87e">&#9670;&nbsp;</a></span>@8</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">union { ... } </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a609ddce5b4c11e12f5c5217b66d08b24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a609ddce5b4c11e12f5c5217b66d08b24">&#9670;&nbsp;</a></span>alignment</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double lumex::xml::xpath::memory::XPathMemoryBlock::alignment</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A dummy member used to ensure the <code>data</code> array is aligned for <code>double</code>s. </p>
-
-</div>
-</div>
-<a id="a9c4144c951cc2fe95f0f9f2934c514a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c4144c951cc2fe95f0f9f2934c514a0">&#9670;&nbsp;</a></span>capacity</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::size_t lumex::xml::xpath::memory::XPathMemoryBlock::capacity</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The total usable capacity of the <code>data</code> array in bytes. </p>
-
-</div>
-</div>
-<a id="aa848e282072570af57e6c0adc3bb5090"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa848e282072570af57e6c0adc3bb5090">&#9670;&nbsp;</a></span>data</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::array&lt;char, kxpath_memory_page_size&gt; lumex::xml::xpath::memory::XPathMemoryBlock::data</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The raw character array used for general-purpose memory allocation. </p>
-
-</div>
-</div>
-<a id="aeac00b0c5dbaab1cc464d0e6023b7d02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeac00b0c5dbaab1cc464d0e6023b7d02">&#9670;&nbsp;</a></span>next</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a02804.html">XPathMemoryBlock</a>* lumex::xml::xpath::memory::XPathMemoryBlock::next</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pointer to the next memory block in the chain. <code>nullptr</code> if this is the last block. </p>
-
-</div>
-</div>
+<div class="dynheader">
+Collaboration diagram for lumex::core::utility::traits::stream::all_ostreamable&lt; First, Rest... &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02802.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1stream_1_1all__ostreamable_3_01First_00_01Rest_8_8_8_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1stream_1_1all__ostreamable_3_01First_00_01Rest_8_8_8_01_4_coll__map" id="alumex_1_1core_1_1utility_1_1traits_1_1stream_1_1all__ostreamable_3_01First_00_01Rest_8_8_8_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="292,20,508,76"/>
+<area shape="rect" title=" " alt="" coords="5,5,244,91"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00704_source.html">XPathMemoryBlock.hpp</a></li>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00950.html">xpath</a></li><li class="navelem"><a class="el" href="a00967.html">memory</a></li><li class="navelem"><a class="el" href="a02804.html">XPathMemoryBlock</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01325.html">stream</a></li><li class="navelem"><a class="el" href="a02804.html">all_ostreamable&lt; First, Rest... &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

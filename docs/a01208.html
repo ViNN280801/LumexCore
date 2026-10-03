@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::crc::parametric::crc32_iscsi_spec_t Struct Reference</title>
+<title>LumexLib: lumex::applied::logger Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,167 +94,129 @@ $(document).ready(function(){initNavTree('a01208.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01205.html">List of all members</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::crc::parametric::crc32_iscsi_spec_t Struct Reference</div>  </div>
+<div class="title">lumex::applied::logger Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>CRC-32/ISCSI (Castagnoli, CRC-32C).  
- <a href="a01208.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
+<p>Universal file logger, ported and kept up to date from the DChannel project's <a class="el" href="a03388.html" title="Thread-safe singleton logger supporting multiple modules.">Logger</a>.  
+<a href="a01208.html#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:aa9a62769e1c9bda0174c115d5e71468c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01208.html#aa9a62769e1c9bda0174c115d5e71468c">ValueType</a> = std::uint32_t</td></tr>
-<tr class="separator:aa9a62769e1c9bda0174c115d5e71468c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01209"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01209.html">logger</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a48948df07a1f1dde9a12facfb28c9065"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01208.html#a48948df07a1f1dde9a12facfb28c9065">kWidth</a> = 32</td></tr>
-<tr class="separator:a48948df07a1f1dde9a12facfb28c9065"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaee0a9679cd9f1b29fe7fe807d3b483"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01208.html#aaaee0a9679cd9f1b29fe7fe807d3b483">kPoly</a> = 0x1EDC6F41UL</td></tr>
-<tr class="separator:aaaee0a9679cd9f1b29fe7fe807d3b483"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb5af2e271eda89b06a7ea48840bbcf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01208.html#adb5af2e271eda89b06a7ea48840bbcf1">kInit</a> = 0xFFFFFFFFUL</td></tr>
-<tr class="separator:adb5af2e271eda89b06a7ea48840bbcf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70b6c7badef4975b8a1601b61a7533f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01208.html#a70b6c7badef4975b8a1601b61a7533f1">kRefIn</a> = true</td></tr>
-<tr class="separator:a70b6c7badef4975b8a1601b61a7533f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bcbe8cf4817b5bda3c4ff0ea562c8fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01208.html#a0bcbe8cf4817b5bda3c4ff0ea562c8fa">kRefOut</a> = true</td></tr>
-<tr class="separator:a0bcbe8cf4817b5bda3c4ff0ea562c8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ec5100006d68700d5319bea4eac201c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01208.html#a7ec5100006d68700d5319bea4eac201c">kXorOut</a> = 0xFFFFFFFFUL</td></tr>
-<tr class="separator:a7ec5100006d68700d5319bea4eac201c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20ee2d3dd87bada4d293efe231a31585"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01208.html#a20ee2d3dd87bada4d293efe231a31585">kCatalogCheck</a> = 0xE3069283UL</td></tr>
-<tr class="separator:a20ee2d3dd87bada4d293efe231a31585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a50817df5a1c7ef0cc99cfb1a2fd513e9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9">logger_config_format_t</a> : std::uint8_t { <br />
+&#160;&#160;<a class="el" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">logger_config_format_t::plain_text</a> = 0, 
+<a class="el" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a4d90362d661461e558408e982aaa49d3">logger_config_format_t::ini</a>, 
+<a class="el" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a466deec76ecdf5fca6d38571f6324d54">logger_config_format_t::json</a>, 
+<a class="el" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a6eedc03a68a69933c763e674f2d7c42f">logger_config_format_t::yaml</a>, 
+<br />
+&#160;&#160;<a class="el" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a0f635d0e0f3874fff8b581c132e6c7a7">logger_config_format_t::xml</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a50817df5a1c7ef0cc99cfb1a2fd513e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile-time format of the logger enable/config file.  <a href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9">More...</a><br /></td></tr>
+<tr class="separator:a50817df5a1c7ef0cc99cfb1a2fd513e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a4ff8994ab54d107e5c4077786599a415"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9">logger_config_format_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01208.html#a4ff8994ab54d107e5c4077786599a415">configured_logger_config_format</a> () noexcept</td></tr>
+<tr class="memdesc:a4ff8994ab54d107e5c4077786599a415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the only logger config format compiled into this target.  <a href="a01208.html#a4ff8994ab54d107e5c4077786599a415">More...</a><br /></td></tr>
+<tr class="separator:a4ff8994ab54d107e5c4077786599a415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>CRC-32/ISCSI (Castagnoli, CRC-32C). </p>
-<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-32/ISCSI </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="aa9a62769e1c9bda0174c115d5e71468c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9a62769e1c9bda0174c115d5e71468c">&#9670;&nbsp;</a></span>ValueType</h2>
+<div class="textblock"><p>Universal file logger, ported and kept up to date from the DChannel project's <a class="el" href="a03388.html" title="Thread-safe singleton logger supporting multiple modules.">Logger</a>. </p>
+<p>All symbols below live in this namespace instead of the global namespace specifically to avoid name collisions in a shared library consumed by many projects (see e.g. <code>logger_stringify</code>, which would otherwise be a dangerously generic global name). </p>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a50817df5a1c7ef0cc99cfb1a2fd513e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50817df5a1c7ef0cc99cfb1a2fd513e9">&#9670;&nbsp;</a></span>logger_config_format_t</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a01208.html#aa9a62769e1c9bda0174c115d5e71468c">lumex::core::crc::parametric::crc32_iscsi_spec_t::ValueType</a> =  std::uint32_t</td>
+          <td class="memname">enum <a class="el" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9">lumex::applied::logger::logger_config_format_t</a> : std::uint8_t</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Compile-time format of the logger enable/config file. </p>
+<p>Exactly one format is selected by LUMEX_LOGGER_CONFIG_FORMAT when lumex::logger is configured. The path extension does not affect parsing. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55"></a>plain_text&#160;</td><td class="fielddoc"><p>Prefixed KEY=value lines (historical enable_logs). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a50817df5a1c7ef0cc99cfb1a2fd513e9a4d90362d661461e558408e982aaa49d3"></a>ini&#160;</td><td class="fielddoc"><p>INI via LumexSettingsINI ([logger] section). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a50817df5a1c7ef0cc99cfb1a2fd513e9a466deec76ecdf5fca6d38571f6324d54"></a>json&#160;</td><td class="fielddoc"><p>JSON via vendored nlohmann/json. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a50817df5a1c7ef0cc99cfb1a2fd513e9a6eedc03a68a69933c763e674f2d7c42f"></a>yaml&#160;</td><td class="fielddoc"><p>Reserved; throws until LumexSettingsYAML exists. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a50817df5a1c7ef0cc99cfb1a2fd513e9a0f635d0e0f3874fff8b581c132e6c7a7"></a>xml&#160;</td><td class="fielddoc"><p>XML via LumexXml (<code>&lt;logger&gt;</code> child elements). </p>
+</td></tr>
+</table>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a20ee2d3dd87bada4d293efe231a31585"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20ee2d3dd87bada4d293efe231a31585">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a4ff8994ab54d107e5c4077786599a415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff8994ab54d107e5c4077786599a415">&#9670;&nbsp;</a></span>configured_logger_config_format()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t lumex::core::crc::parametric::crc32_iscsi_spec_t::kCatalogCheck = 0xE3069283UL</td>
+          <td class="memname">constexpr <a class="el" href="a01208.html#a50817df5a1c7ef0cc99cfb1a2fd513e9">logger_config_format_t</a> lumex::applied::logger::configured_logger_config_format </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
+<p>Returns the only logger config format compiled into this target. </p>
+<dl class="section return"><dt>Returns</dt><dd>Compile-time logger config format. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The function is constexpr and does not inspect a file name. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01208_a4ff8994ab54d107e5c4077786599a415_icgraph.png" border="0" usemap="#aa01208_a4ff8994ab54d107e5c4077786599a415_icgraph" alt=""/></div>
+<map name="a01208_a4ff8994ab54d107e5c4077786599a415_icgraph" id="aa01208_a4ff8994ab54d107e5c4077786599a415_icgraph">
+<area shape="rect" title="Returns the only logger config format compiled into this target." alt="" coords="340,5,532,61"/>
+<area shape="rect" href="a01351.html#aab14961ea93b42c8867851c5113e6744" title=" " alt="" coords="108,13,292,54"/>
+<area shape="rect" href="a00818.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
+</map>
 </div>
-</div>
-<a id="adb5af2e271eda89b06a7ea48840bbcf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb5af2e271eda89b06a7ea48840bbcf1">&#9670;&nbsp;</a></span>kInit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_iscsi_spec_t::kInit = 0xFFFFFFFFUL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aaaee0a9679cd9f1b29fe7fe807d3b483"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaee0a9679cd9f1b29fe7fe807d3b483">&#9670;&nbsp;</a></span>kPoly</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_iscsi_spec_t::kPoly = 0x1EDC6F41UL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
-<a id="a70b6c7badef4975b8a1601b61a7533f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70b6c7badef4975b8a1601b61a7533f1">&#9670;&nbsp;</a></span>kRefIn</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc32_iscsi_spec_t::kRefIn = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0bcbe8cf4817b5bda3c4ff0ea562c8fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bcbe8cf4817b5bda3c4ff0ea562c8fa">&#9670;&nbsp;</a></span>kRefOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc32_iscsi_spec_t::kRefOut = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a48948df07a1f1dde9a12facfb28c9065"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48948df07a1f1dde9a12facfb28c9065">&#9670;&nbsp;</a></span>kWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc32_iscsi_spec_t::kWidth = 32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7ec5100006d68700d5319bea4eac201c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ec5100006d68700d5319bea4eac201c">&#9670;&nbsp;</a></span>kXorOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_iscsi_spec_t::kXorOut = 0xFFFFFFFFUL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00847.html">crc</a></li><li class="navelem"><a class="el" href="a00850.html">parametric</a></li><li class="navelem"><a class="el" href="a01208.html">crc32_iscsi_spec_t</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01186.html">applied</a></li><li class="navelem"><a class="el" href="a01208.html">logger</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

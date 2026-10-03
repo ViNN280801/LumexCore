@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: /home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/environment/env/LumexEnvironment.hpp</title>
+<title>LumexLib: lumex::core::utility::traits::value::is_optional&lt; T volatile &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,242 +94,40 @@ $(document).ready(function(){initNavTree('a02924.html',''); initResizable(); });
 
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/environment/env/LumexEnvironment.hpp</div>  </div>
+<div class="title">lumex::core::utility::traits::value::is_optional&lt; T volatile &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Provides a cross-platform, and thread-safe way to manage environment variables. This class implements the Singleton pattern to ensure a single, globally accessible instance for environment variable operations. It leverages the Strategy pattern internally to handle OS-specific details (Windows, Linux, macOS) while presenting a unified API. All operations are designed to be exception-safe, returning a dedicated result structure (EnvResult) with status and error codes instead of throwing exceptions. Resource management is handled using RAII principles, particularly for dynamically allocated buffers. This class is non-copyable and non-movable to maintain the integrity of the singleton instance.</p>
-<dl class="section note"><dt>Note</dt><dd>This class adheres to C++11 standard and uses appropriate platform-specific APIs for optimal performance and security (e.g., _dupenv_s on Windows).</dd></dl>
-<p>// Basic usage: LumexEnvironment::EnvResult path_result = <a class="el" href="a01600.html#a0b15d0d9afe0b5e48e521a6e5a4b1a7d">LumexEnvironment::get</a>("PATH"); if (path_result.success) { std::cout &lt;&lt; "PATH: " &lt;&lt; path_result.value &lt;&lt; std::endl; } else { std::cerr &lt;&lt; "Failed to get PATH. Error code: " &lt;&lt; path_result.error_code &lt;&lt; std::endl; }</p>
-<p>// Getting with a default fallback value: std::string home_dir = <a class="el" href="a01600.html#aba57036b137f38e77126dafba5acb08e">LumexEnvironment::get_or</a>("HOME", "/default/home"); std::cout &lt;&lt; "Home directory: " &lt;&lt; home_dir &lt;&lt; std::endl;</p>
-<p>// Setting an environment variable: if (<a class="el" href="a01600.html#a8415f82974f34bd65d70a25322311844">LumexEnvironment::set</a>("MY_APP_VAR", "my_value")) { std::cout &lt;&lt; "MY_APP_VAR set successfully." &lt;&lt; std::endl; } else { std::cerr &lt;&lt; "Failed to set MY_APP_VAR." &lt;&lt; std::endl; }</p>
-<p>// Checking if an environment variable exists: if (<a class="el" href="a01600.html#aa71c31dd7773bc661866f98d7331400e">LumexEnvironment::has</a>("TEMP")) { std::cout &lt;&lt; "TEMP variable exists." &lt;&lt; std::endl; }</p>
-<div class="fragment"><div class="line"> </div>
-<div class="line"><span class="preprocessor">#ifndef LUMEX_CORE_ENVIRONMENT_ENV_HPP</span></div>
-<div class="line"><span class="preprocessor">#define LUMEX_CORE_ENVIRONMENT_ENV_HPP</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic push</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wpadded&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
-<div class="line"><span class="preprocessor">#if __has_warning(&quot;-Wunsafe-buffer-usage-in-libc-call&quot;)</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage-in-libc-call&quot;</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wcovered-switch-default&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wswitch-enum&quot;</span></div>
-<div class="line"><span class="preprocessor">#if __has_warning(&quot;-Wnrvo&quot;)</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wnrvo&quot;</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wheader-hygiene&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wundefined-var-template&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-redundant-constexpr-static-def&quot;</span></div>
-<div class="line"><span class="preprocessor">#if __has_warning(&quot;-Wvariadic-macro-arguments-omitted&quot;)</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wvariadic-macro-arguments-omitted&quot;</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunused-result&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wextra-semi-stmt&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wexpansion-to-defined&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wexit-time-destructors&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wundefined-func-template&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wfloat-equal&quot;</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00557.html">lumex/LumexExport.hpp</a>&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;cstdlib&gt;</span> <span class="comment">// _dupenv_s, free (Windows)</span></div>
-<div class="line"><span class="preprocessor">#include &lt;cstring&gt;</span> <span class="comment">// std::strlen, std::strcpy</span></div>
-<div class="line"><span class="preprocessor">#include &lt;memory&gt;</span>  <span class="comment">// std::unique_ptr, std::addressof</span></div>
-<div class="line"><span class="preprocessor">#include &lt;mutex&gt;</span>   <span class="comment">// std::mutex, std::lock_guard</span></div>
-<div class="line"><span class="preprocessor">#include &lt;string&gt;</span>  <span class="comment">// std::string</span></div>
-<div class="line"><span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#if defined(_WIN32)</span></div>
-<div class="line"><span class="preprocessor">#include &lt;Windows.h&gt;</span> <span class="comment">// GetEnvironmentVariableA/W</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;lumex/core/utility/LumexUtility&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span><a class="code" href="a00783.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
-<div class="line">{</div>
-<div class="line"><span class="keyword">namespace </span>core</div>
-<div class="line">{</div>
-<div class="line"><span class="keyword">namespace </span>environment</div>
-<div class="line">{</div>
-<div class="line"><span class="keyword">namespace </span>env</div>
-<div class="line">{</div>
-<div class="line"><span class="keyword">class </span><a name="a0"></a><a class="code" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a name="_a1"></a><a class="code" href="a01600.html">LumexEnvironment</a></div>
-<div class="line">{</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">  <span class="keyword">using</span> size_type = std::size_t;</div>
-<div class="line">  <span class="keyword">using</span> string_type = std::string;</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">static</span> size_type <span class="keyword">const</span> MAX_ENV_BUFFER_SIZE = 32767; <span class="comment">// Windows MAX_PATH * 16</span></div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">struct </span>EnvResult</div>
-<div class="line">  {</div>
-<div class="line">    string_type value; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> success; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">int</span> error_code; <span class="comment">// NOLINT(misc-non-private-member-variables-in-classes)</span></div>
-<div class="line"> </div>
-<div class="line">    EnvResult () : success (<span class="keyword">false</span>), error_code (0) {}</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">explicit</span> EnvResult (string_type val)</div>
-<div class="line">        : value (std::move (val)), success (<span class="keyword">true</span>), error_code (0)</div>
-<div class="line">    {</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    EnvResult (<span class="keywordtype">int</span> err_code, string_type fallback = string_type ())</div>
-<div class="line">        : value (std::move (fallback)), success (<span class="keyword">false</span>), error_code (err_code)</div>
-<div class="line">    {</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    string_type</div>
-<div class="line">    get_value_or (string_type <span class="keyword">const</span> &amp;fallback)<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword">    </span>{</div>
-<div class="line">      <span class="keywordflow">return</span> success ? value : fallback;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">operator</span> bool ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> success; }</div>
-<div class="line">  };</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">private</span>:</div>
-<div class="line">  <span class="keyword">class </span><a class="code" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div>
-<div class="line">      EnvironmentStrategy <span class="comment">// NOLINT(cppcoreguidelines-special-member-functions)</span></div>
-<div class="line">  {</div>
-<div class="line">  <span class="keyword">public</span>:</div>
-<div class="line">    <span class="keyword">virtual</span> ~EnvironmentStrategy () = <span class="keywordflow">default</span>;</div>
-<div class="line">    <span class="keyword">virtual</span> EnvResult get_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>) <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> set_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>, <span class="keywordtype">char</span> <span class="keyword">const</span> *value) <span class="keyword">const</span> = 0;</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> unset_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>) <span class="keyword">const</span> = 0;</div>
-<div class="line">  };</div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#if defined(LUMEX_OS_WINDOWS)</span></div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">class </span><a class="code" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> WindowsEnvironmentStrategy : <span class="keyword">public</span> EnvironmentStrategy</div>
-<div class="line">  {</div>
-<div class="line">  <span class="keyword">public</span>:</div>
-<div class="line">    EnvResult get_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>) <span class="keyword">const override</span>;</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> set_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>, <span class="keywordtype">char</span> <span class="keyword">const</span> *value) <span class="keyword">const override</span>;</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> unset_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>) <span class="keyword">const override</span>;</div>
-<div class="line">  };</div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#else</span></div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">class </span><a class="code" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> PosixEnvironmentStrategy : <span class="keyword">public</span> EnvironmentStrategy</div>
-<div class="line">  {</div>
-<div class="line">  <span class="keyword">public</span>:</div>
-<div class="line">    EnvResult get_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>) <span class="keyword">const override</span>;</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> set_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>, <span class="keywordtype">char</span> <span class="keyword">const</span> *value) <span class="keyword">const override</span>;</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> unset_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>) <span class="keyword">const override</span>;</div>
-<div class="line">  };</div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><span class="preprocessor">#pragma warning(push)</span></div>
-<div class="line"><span class="preprocessor">#pragma warning(disable : 4251)</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line">  <span class="keyword">mutable</span> std::mutex m_mutex;</div>
-<div class="line">  std::unique_ptr&lt;EnvironmentStrategy&gt; m_strategy;</div>
-<div class="line"><span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><span class="preprocessor">#pragma warning(pop)</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"> </div>
-<div class="line">  <a name="a2"></a><a class="code" href="a00164.html#a6421e7685cc78f63f88346b58e913910">LumexEnvironment</a> () : m_strategy (create_strategy ()) {}</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">static</span> std::unique_ptr&lt;EnvironmentStrategy&gt;</div>
-<div class="line">  create_strategy ()</div>
-<div class="line">  {</div>
-<div class="line"><span class="preprocessor">#if defined(LUMEX_OS_WINDOWS)</span></div>
-<div class="line">    <span class="keywordflow">return</span> std::unique_ptr&lt;EnvironmentStrategy&gt; (</div>
-<div class="line">        <span class="keyword">new</span> WindowsEnvironmentStrategy ());</div>
-<div class="line"><span class="preprocessor">#else</span></div>
-<div class="line">    <span class="keywordflow">return</span> std::unique_ptr&lt;EnvironmentStrategy&gt; (</div>
-<div class="line">        <span class="keyword">new</span> PosixEnvironmentStrategy ());</div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line">  }</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">  <span class="keyword">static</span> <a class="code" href="a01600.html">LumexEnvironment</a> &amp;instance ();</div>
-<div class="line"> </div>
-<div class="line">  <a class="code" href="a00164.html#a6421e7685cc78f63f88346b58e913910">LumexEnvironment</a> (<a class="code" href="a01600.html">LumexEnvironment</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"> </div>
-<div class="line">  <a class="code" href="a01600.html">LumexEnvironment</a> &amp;operator= (<a class="code" href="a01600.html">LumexEnvironment</a> <span class="keyword">const</span> &amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"> </div>
-<div class="line">  ~<a class="code" href="a01600.html">LumexEnvironment</a> () = <span class="keywordflow">default</span>;</div>
-<div class="line"> </div>
-<div class="line">  <a class="code" href="a00164.html#a6421e7685cc78f63f88346b58e913910">LumexEnvironment</a> (<a class="code" href="a01600.html">LumexEnvironment</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"> </div>
-<div class="line">  <a class="code" href="a01600.html">LumexEnvironment</a> &amp;operator= (<a class="code" href="a01600.html">LumexEnvironment</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"> </div>
-<div class="line">  EnvResult get_environment_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>) <span class="keyword">const</span>;</div>
-<div class="line"> </div>
-<div class="line">  EnvResult get_environment_variable (string_type <span class="keyword">const</span> &amp;<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>) <span class="keyword">const</span>;</div>
-<div class="line"> </div>
-<div class="line">  <span class="keywordtype">bool</span> set_environment_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>, <span class="keywordtype">char</span> <span class="keyword">const</span> *value,</div>
-<div class="line">                                 <span class="keywordtype">bool</span> overwrite = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
-<div class="line"> </div>
-<div class="line">  <span class="keywordtype">bool</span> set_environment_variable (string_type <span class="keyword">const</span> &amp;<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>,</div>
-<div class="line">                                 string_type <span class="keyword">const</span> &amp;value,</div>
-<div class="line">                                 <span class="keywordtype">bool</span> overwrite = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
-<div class="line"> </div>
-<div class="line">  <span class="keywordtype">bool</span> unset_environment_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>) <span class="keyword">const</span>;</div>
-<div class="line"> </div>
-<div class="line">  string_type</div>
-<div class="line">  get_environment_variable_or (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>,</div>
-<div class="line">                               string_type <span class="keyword">const</span> &amp;default_value) <span class="keyword">const</span>;</div>
-<div class="line"> </div>
-<div class="line">  <span class="keywordtype">bool</span> has_environment_variable (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>) <span class="keyword">const</span>;</div>
-<div class="line"> </div>
-<div class="line">  <span class="keywordtype">bool</span> is_environment_variable_truthy (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>) <span class="keyword">const</span>;</div>
-<div class="line"> </div>
-<div class="line">  <span class="comment">// Static convenience methods for easier usage</span></div>
-<div class="line"><span class="comment"></span>  <span class="keyword">static</span> EnvResult get (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>);</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">static</span> string_type get_or (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>,</div>
-<div class="line">                             string_type <span class="keyword">const</span> &amp;default_value);</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">static</span> <span class="keywordtype">bool</span> set (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>, <span class="keywordtype">char</span> <span class="keyword">const</span> *value, <span class="keywordtype">bool</span> overwrite = <span class="keyword">true</span>);</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">static</span> <span class="keywordtype">bool</span> has (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>);</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">static</span> <span class="keywordtype">bool</span> is_truthy (<span class="keywordtype">char</span> <span class="keyword">const</span> *<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>);</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><a class="code" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <span class="keywordtype">bool</span> <a name="a3"></a><a class="code" href="a00853.html#a124e7b18c6f898bd1efe69c2361162af">is_env_set</a> (<a class="code" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">LumexEnvironment::string_type</a> <span class="keyword">const</span> &amp;<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>);</div>
-<div class="line"> </div>
-<div class="line"><a class="code" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <span class="keywordtype">bool</span> <a name="a4"></a><a class="code" href="a00853.html#adb018b9e44e87a495596b9fba8268244">is_env_truthy</a> (<a class="code" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">LumexEnvironment::string_type</a> <span class="keyword">const</span> &amp;<a class="code" href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">name</a>);</div>
-<div class="line">} <span class="comment">// namespace env</span></div>
-<div class="line">} <span class="comment">// namespace environment</span></div>
-<div class="line">} <span class="comment">// namespace core</span></div>
-<div class="line">} <span class="comment">// namespace lumex</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">using</span> <a class="code" href="a01600.html">LumexEnvironment</a> = <a class="code" href="a00164.html#a6421e7685cc78f63f88346b58e913910">lumex::core::environment::env::LumexEnvironment</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic pop</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#endif // !LUMEX_CORE_ENVIRONMENT_ENV_HPP</span></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::core::utility::traits::value::is_optional&lt; T volatile &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02923.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01volatile_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01volatile_01_4_inherit__map" id="alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01volatile_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="25,169,211,225"/>
+<area shape="rect" href="a02916.html" title=" " alt="" coords="5,80,231,121"/>
+<area shape="rect" title=" " alt="" coords="73,5,163,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for lumex::core::utility::traits::value::is_optional&lt; T volatile &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02922.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01volatile_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01volatile_01_4_coll__map" id="alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01volatile_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="25,169,211,225"/>
+<area shape="rect" href="a02916.html" title=" " alt="" coords="5,80,231,121"/>
+<area shape="rect" title=" " alt="" coords="73,5,163,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa01600_html_a5ec8246f5384f098b278e1c75d009add"><div class="ttname"><a href="a01600.html#a5ec8246f5384f098b278e1c75d009add">lumex::core::environment::env::LumexEnvironment::string_type</a></div><div class="ttdeci">std::string string_type</div><div class="ttdoc">Type alias for std::string, used for environment variable names and values.</div><div class="ttdef"><b>Definition:</b> LumexEnvironment.hpp:161</div></div>
-<div class="ttc" id="aa00853_html_adb018b9e44e87a495596b9fba8268244"><div class="ttname"><a href="a00853.html#adb018b9e44e87a495596b9fba8268244">lumex::core::environment::env::is_env_truthy</a></div><div class="ttdeci">LUMEX_PUBLIC_API bool is_env_truthy(LumexEnvironment::string_type const &amp;name)</div><div class="ttdoc">Checks whether an environment variable is &quot;truthy&quot; (enabled).</div><div class="ttdef"><b>Definition:</b> LumexEnvironment.cpp:319</div></div>
-<div class="ttc" id="aa00783_html"><div class="ttname"><a href="a00783.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
-<div class="ttc" id="aa00853_html_a124e7b18c6f898bd1efe69c2361162af"><div class="ttname"><a href="a00853.html#a124e7b18c6f898bd1efe69c2361162af">lumex::core::environment::env::is_env_set</a></div><div class="ttdeci">LUMEX_PUBLIC_API bool is_env_set(LumexEnvironment::string_type const &amp;name)</div><div class="ttdoc">Checks whether an environment variable is set to a non-empty value.</div><div class="ttdef"><b>Definition:</b> LumexEnvironment.cpp:310</div></div>
-<div class="ttc" id="aa00164_html_a6421e7685cc78f63f88346b58e913910"><div class="ttname"><a href="a00164.html#a6421e7685cc78f63f88346b58e913910">LumexEnvironment</a></div><div class="ttdeci">lumex::core::environment::env::LumexEnvironment LumexEnvironment</div><div class="ttdoc">Alias for lumex::core::environment::LumexEnvironment.</div><div class="ttdef"><b>Definition:</b> LumexEnvironment.hpp:840</div></div>
-<div class="ttc" id="aa00870_html_a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8"><div class="ttname"><a href="a00870.html#a89d8d3fcb093a9782eeed020d3e7628ba334c4a4c42fdb79d7ebc3e73b517e6f8">lumex::core::fmt::Detail::ArgRefKind::none</a></div><div class="ttdeci">@ none</div></div>
-<div class="ttc" id="aa00557_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:73</div></div>
-<div class="ttc" id="aa00557_html"><div class="ttname"><a href="a00557.html">LumexExport.hpp</a></div></div>
-<div class="ttc" id="aa01600_html"><div class="ttname"><a href="a01600.html">lumex::core::environment::env::LumexEnvironment</a></div><div class="ttdef"><b>Definition:</b> LumexEnvironment.hpp:155</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01330.html">value</a></li><li class="navelem"><a class="el" href="a02924.html">is_optional&lt; T volatile &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

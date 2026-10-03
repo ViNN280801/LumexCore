@@ -1,9 +1,11 @@
 var a02660 =
 [
-    [ "D", "a02660.html#a8caa7b69f3316216d4d663b218c578c7", null ],
-    [ "XmlCleaner", "a02660.html#a1c10030b274c9889f1f70274fda87fdf", null ],
-    [ "~XmlCleaner", "a02660.html#a5bd950cc700caa327dff5d9bf07bc744", null ],
-    [ "release", "a02660.html#abc12ffaeb5899ae36c7a082b4c870d1d", null ],
-    [ "data", "a02660.html#a1d7b92a76885fd307aa47c268d794ed3", null ],
-    [ "deleter", "a02660.html#a2e5e1d091887e2da0ba8e0e8444bde4a", null ]
+    [ "clean_T", "a02660.html#a97acea45513885472c1407fa46582989", null ],
+    [ "compare", "a02660.html#a7b43e1a52335fdea20ef134dd4da7170", null ],
+    [ "equal", "a02660.html#ade8e4b6b463e5f2dbd4cb1097a2c946e", null ],
+    [ "greater", "a02660.html#aa7d6bc2f2f42b8a5e103234aa4ce09ec", null ],
+    [ "greater_equal", "a02660.html#ae039cdec50fe655c13df1f694f84cb32", null ],
+    [ "less", "a02660.html#a41ebae7db511d8283cb5fa79f1015c8f", null ],
+    [ "less_equal", "a02660.html#aa9c0be6a00d3944f0574ebeacc90b5c2", null ],
+    [ "not_equal", "a02660.html#a577ae19bdbe77f5d28588f003c682770", null ]
 ];

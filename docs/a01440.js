@@ -1,11 +1,12 @@
 var a01440 =
 [
-    [ "ValueType", "a01440.html#a67f8b1cadedf28735ba5065903fe71ff", null ],
-    [ "kCatalogCheck", "a01440.html#a37000868d988f2c517060e7a818ccfc4", null ],
-    [ "kInit", "a01440.html#a2f5d2a526fc1ad1ab99a2a5f05cefa89", null ],
-    [ "kPoly", "a01440.html#af61b80ef7f494394142d2558d0699e29", null ],
-    [ "kRefIn", "a01440.html#a5aba6751cd458d6af9ec2c69da8cbda5", null ],
-    [ "kRefOut", "a01440.html#aff8716650131112a47470aa589834304", null ],
-    [ "kWidth", "a01440.html#a5ef091a3a21faa4e0a6f7a9f161ad2dd", null ],
-    [ "kXorOut", "a01440.html#a18cc264992908036f126827a8e79097b", null ]
+    [ "critical", "a01440.html#ab45388c23b278021a8bb9e4a7b435e0c", null ],
+    [ "debug", "a01440.html#a44ad22b8a67f4f15a9a574b3d4d5cd74", null ],
+    [ "error", "a01440.html#aaeebb797a274ef51607814be5801bcc4", null ],
+    [ "getLogsDirectory", "a01440.html#accf4de4dbcf6ed1920c2782a8b1be0fe", null ],
+    [ "info", "a01440.html#aafb110cd6feeb2ab91305f27352b9118", null ],
+    [ "setAppName", "a01440.html#a55018631d613d230284b5f1411b9185e", null ],
+    [ "success", "a01440.html#a8e7bac7289460386a2e59d59c388d4b6", null ],
+    [ "toFile", "a01440.html#a385a6c62d7eee3e396474410c2f4b331", null ],
+    [ "warning", "a01440.html#af4fec23e76323ffee4eaf2aaf716eb15", null ]
 ];

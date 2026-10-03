@@ -1,20 +1,16 @@
 var a02608 =
 [
-    [ "difference_type", "a02608.html#afb38b14f57bcd6f863faf25494d87713", null ],
-    [ "iterator_category", "a02608.html#a577cc058e82bbdd1387d79efceeeab9b", null ],
-    [ "pointer", "a02608.html#a36aae774de22be6fbc9a7931828a2b4a", null ],
-    [ "reference", "a02608.html#aaec60e32e53614604657482a7abc3d81", null ],
-    [ "value_type", "a02608.html#abe3f178d9ae6f748eab8dc33f515e532", null ],
-    [ "XmlAttributeIterator", "a02608.html#a0d320ac5a52d1d4ff16ad608119f328a", null ],
-    [ "XmlAttributeIterator", "a02608.html#a6604d1cf39d53d97d99dc333c068ecf4", null ],
-    [ "XmlAttributeIterator", "a02608.html#a396248c645050f7777cdf698e5865e25", null ],
-    [ "operator!=", "a02608.html#ab260a5a79bf3a168d72b7fbec2c198b3", null ],
-    [ "operator*", "a02608.html#ab74ba620a65e3b8e9e375ed8f37598de", null ],
-    [ "operator++", "a02608.html#a7ffc999732da94834ff4b9c04d6009fa", null ],
-    [ "operator++", "a02608.html#a45845b81f12e954d48a16529e0daa9ac", null ],
-    [ "operator--", "a02608.html#adced785b76c13662152f0aae45842c5d", null ],
-    [ "operator--", "a02608.html#a47cd8d80232bb7196cdbf58a43084a2a", null ],
-    [ "operator->", "a02608.html#abd8a4b262079bfeeb389f8faa8dd4d74", null ],
-    [ "operator==", "a02608.html#ac533ec6a48b9ec55038b87ece2982e3e", null ],
-    [ "node::XmlNode", "a02608.html#a93c80d4442ba4b50bfd4dd7985283928", null ]
+    [ "get_current_datetime", "a02608.html#a113d414febebf7c1d733970164ffba75", null ],
+    [ "get_timestamp_d", "a02608.html#a13caacb06c4736489e2b3b81a2efc288", null ],
+    [ "get_timestamp_h", "a02608.html#afc08904ddc164f29e744f08ff28d8c79", null ],
+    [ "get_timestamp_m", "a02608.html#a70738f9566fd61152180d1d9fa21a5d2", null ],
+    [ "get_timestamp_mcs", "a02608.html#a37a120aff3a2294bdac0446db2a90e5d", null ],
+    [ "get_timestamp_min", "a02608.html#a4b39855693d9e9daf565907c1fbf752c", null ],
+    [ "get_timestamp_ms", "a02608.html#ab1b8dd603822728c1ef65b58fec526bf", null ],
+    [ "get_timestamp_ns", "a02608.html#a2bf93fba614d8f13ac35b08457ed07d1", null ],
+    [ "get_timestamp_s", "a02608.html#aed7b3234ba99f194a8fc31fa1a5d992a", null ],
+    [ "get_timestamp_w", "a02608.html#af0d828c26f339865ffc62279d09bb09c", null ],
+    [ "get_timestamp_y", "a02608.html#a4f8a7283c43e7fc3a131c65d64063e5f", null ],
+    [ "timestamp", "a02608.html#a7bf10aa4f7ec3937d4783ae43494a031", null ],
+    [ "timestamp_ms", "a02608.html#ab5a0ca1367afae776201d218eb7389cd", null ]
 ];

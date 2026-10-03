@@ -1,15 +1,18 @@
 var annotated_dup =
 [
-    [ "lumex", "a00783.html", "a00783" ],
-    [ "std", "a00809.html", "a00809" ],
-    [ "binary_op_t", "a02840.html", "a02840" ],
-    [ "FormatError", "a02900.html", null ],
-    [ "gap", "a02624.html", "a02624" ],
-    [ "Logger", "a02896.html", null ],
-    [ "lumex_enum_traits_t", "a02500.html", null ],
-    [ "LumexJsonSchemaException", "a02888.html", null ],
-    [ "LumexJsonSchemaTraverser", "a02892.html", null ],
-    [ "strconv_attribute_impl", "a02628.html", "a02628" ],
-    [ "strconv_pcdata_impl", "a02632.html", "a02632" ],
-    [ "xml_stream_chunk", "a02576.html", "a02576" ]
+    [ "lumex", "a01185.html", "a01185" ],
+    [ "std", "a01271.html", "a01271" ],
+    [ "binary_op_t", "a03340.html", "a03340" ],
+    [ "date_t", "a02996.html", "a02996" ],
+    [ "ExampleInstrumentError", "a02980.html", "a02980" ],
+    [ "ExampleSequenceAbort", "a02984.html", "a02984" ],
+    [ "gap", "a03124.html", "a03124" ],
+    [ "legacy_t", "a03004.html", "a03004" ],
+    [ "Logger", "a03388.html", null ],
+    [ "lumex_enum_traits_t", "a02968.html", null ],
+    [ "point_t", "a03000.html", "a03000" ],
+    [ "stars_t", "a03008.html", "a03008" ],
+    [ "strconv_attribute_impl", "a03128.html", "a03128" ],
+    [ "strconv_pcdata_impl", "a03132.html", "a03132" ],
+    [ "xml_stream_chunk", "a03076.html", "a03076" ]
 ];

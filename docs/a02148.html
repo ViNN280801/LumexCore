@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::time::timer::LumexTimer Class Reference</title>
+<title>LumexLib: lumex::core::filesystem::fs::filesystem_result&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -95,44 +95,76 @@ $(document).ready(function(){initNavTree('a02148.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a02145.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::time::timer::LumexTimer Class Reference</div>  </div>
+<div class="title">lumex::core::filesystem::fs::filesystem_result&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00302_source.html">LumexTimer.hpp</a>&gt;</code></p>
+<p>A generic result type for filesystem operations that encapsulates a value or an error.  
+ <a href="a02148.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00581_source.html">LumexFilesystem.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a466147261ea1de14f9edb5a5edcac346"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#a466147261ea1de14f9edb5a5edcac346">LumexTimer</a> ()=default</td></tr>
-<tr class="memdesc:a466147261ea1de14f9edb5a5edcac346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaulted constructor; the timer measures zero elapsed time until started/stopped.  <a href="a02148.html#a466147261ea1de14f9edb5a5edcac346">More...</a><br /></td></tr>
-<tr class="separator:a466147261ea1de14f9edb5a5edcac346"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a715bdde044bfb82d4b2b881af9604a18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#a715bdde044bfb82d4b2b881af9604a18">start_timer</a> ()</td></tr>
-<tr class="memdesc:a715bdde044bfb82d4b2b881af9604a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts (or restarts) the timer.  <a href="a02148.html#a715bdde044bfb82d4b2b881af9604a18">More...</a><br /></td></tr>
-<tr class="separator:a715bdde044bfb82d4b2b881af9604a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a767a23c31d699835253cb7fa2d98600a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#a767a23c31d699835253cb7fa2d98600a">stop_timer</a> ()</td></tr>
-<tr class="memdesc:a767a23c31d699835253cb7fa2d98600a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the timer.  <a href="a02148.html#a767a23c31d699835253cb7fa2d98600a">More...</a><br /></td></tr>
-<tr class="separator:a767a23c31d699835253cb7fa2d98600a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98b79505924fe37261b66f8f8c752aba"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#a98b79505924fe37261b66f8f8c752aba">elapsed_time_ms</a> () const</td></tr>
-<tr class="memdesc:a98b79505924fe37261b66f8f8c752aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the elapsed time between the last <code><a class="el" href="a02148.html#a715bdde044bfb82d4b2b881af9604a18" title="Starts (or restarts) the timer.">start_timer()</a></code>/<code><a class="el" href="a02148.html#a767a23c31d699835253cb7fa2d98600a" title="Stops the timer.">stop_timer()</a></code> pair.  <a href="a02148.html#a98b79505924fe37261b66f8f8c752aba">More...</a><br /></td></tr>
-<tr class="separator:a98b79505924fe37261b66f8f8c752aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4093d69a6810df1fdd9ccbea6dc03d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#ae4093d69a6810df1fdd9ccbea6dc03d8">filesystem_result</a> ()</td></tr>
+<tr class="memdesc:ae4093d69a6810df1fdd9ccbea6dc03d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Creates a successful result with a default-constructed value and no error.  <a href="a02148.html#ae4093d69a6810df1fdd9ccbea6dc03d8">More...</a><br /></td></tr>
+<tr class="separator:ae4093d69a6810df1fdd9ccbea6dc03d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11d814b4f227302b2e33601f426d421"><td class="memItemLeft" align="right" valign="top">T const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#ae11d814b4f227302b2e33601f426d421">value</a> () const</td></tr>
+<tr class="memdesc:ae11d814b4f227302b2e33601f426d421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the encapsulated value (const version).  <a href="a02148.html#ae11d814b4f227302b2e33601f426d421">More...</a><br /></td></tr>
+<tr class="separator:ae11d814b4f227302b2e33601f426d421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8098c9ced0a02fb602aa533ec1ace36"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#aa8098c9ced0a02fb602aa533ec1ace36">value</a> ()</td></tr>
+<tr class="memdesc:aa8098c9ced0a02fb602aa533ec1ace36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the encapsulated value (non-const version).  <a href="a02148.html#aa8098c9ced0a02fb602aa533ec1ace36">More...</a><br /></td></tr>
+<tr class="separator:aa8098c9ced0a02fb602aa533ec1ace36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae1487eda085cf06bd332015e4969d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#aaae1487eda085cf06bd332015e4969d7">success</a> () const</td></tr>
+<tr class="memdesc:aaae1487eda085cf06bd332015e4969d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the operation was successful.  <a href="a02148.html#aaae1487eda085cf06bd332015e4969d7">More...</a><br /></td></tr>
+<tr class="separator:aaae1487eda085cf06bd332015e4969d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c94c3f8a9c0f511aeaa1ea5674a08d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#af6c94c3f8a9c0f511aeaa1ea5674a08d">error_code</a> () const</td></tr>
+<tr class="memdesc:af6c94c3f8a9c0f511aeaa1ea5674a08d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the error code if the operation was unsuccessful.  <a href="a02148.html#af6c94c3f8a9c0f511aeaa1ea5674a08d">More...</a><br /></td></tr>
+<tr class="separator:af6c94c3f8a9c0f511aeaa1ea5674a08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bee45657ca553ccbe26b668ffdb6bff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#a5bee45657ca553ccbe26b668ffdb6bff">operator bool</a> () const</td></tr>
+<tr class="memdesc:a5bee45657ca553ccbe26b668ffdb6bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion to <code>bool</code> to easily check success status.  <a href="a02148.html#a5bee45657ca553ccbe26b668ffdb6bff">More...</a><br /></td></tr>
+<tr class="separator:a5bee45657ca553ccbe26b668ffdb6bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d33c3c44ac4779caadbaad8cef56c3"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#af5d33c3c44ac4779caadbaad8cef56c3">value_or</a> (T default_value) const</td></tr>
+<tr class="memdesc:af5d33c3c44ac4779caadbaad8cef56c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the encapsulated value if successful, or a provided default value if unsuccessful.  <a href="a02148.html#af5d33c3c44ac4779caadbaad8cef56c3">More...</a><br /></td></tr>
+<tr class="separator:af5d33c3c44ac4779caadbaad8cef56c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a16fa37f602e827cf169d0dfb3b952940"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a02148.html">filesystem_result</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#a16fa37f602e827cf169d0dfb3b952940">ok</a> (T <a class="el" href="a02148.html#ae11d814b4f227302b2e33601f426d421">value</a>)</td></tr>
+<tr class="memdesc:a16fa37f602e827cf169d0dfb3b952940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method for creating a successful <code><a class="el" href="a02148.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a></code>.  <a href="a02148.html#a16fa37f602e827cf169d0dfb3b952940">More...</a><br /></td></tr>
+<tr class="separator:a16fa37f602e827cf169d0dfb3b952940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a384e25734c6d611b763c77caa77aeafc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a02148.html">filesystem_result</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02148.html#a384e25734c6d611b763c77caa77aeafc">err</a> (int <a class="el" href="a02148.html#af6c94c3f8a9c0f511aeaa1ea5674a08d">error_code</a>, T default_value=T{})</td></tr>
+<tr class="memdesc:a384e25734c6d611b763c77caa77aeafc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method for creating an unsuccessful <code><a class="el" href="a02148.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a></code>.  <a href="a02148.html#a384e25734c6d611b763c77caa77aeafc">More...</a><br /></td></tr>
+<tr class="separator:a384e25734c6d611b763c77caa77aeafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02934.html#_a3">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/timer/LumexTimer.hpp</a>.</dd>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class lumex::core::filesystem::fs::filesystem_result&lt; T &gt;</h3>
+
+<p>A generic result type for filesystem operations that encapsulates a value or an error. </p>
+<p>This class is designed to provide exception-safe error handling for filesystem operations. Instead of throwing exceptions on failure, functions return <code><a class="el" href="a02148.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a>&lt;T&gt;</code> which explicitly indicates success or failure and holds either the successful value or an error code. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the value returned on success. </td></tr>
+  </table>
+  </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a466147261ea1de14f9edb5a5edcac346"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a466147261ea1de14f9edb5a5edcac346">&#9670;&nbsp;</a></span>LumexTimer()</h2>
+<a id="ae4093d69a6810df1fdd9ccbea6dc03d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4093d69a6810df1fdd9ccbea6dc03d8">&#9670;&nbsp;</a></span>filesystem_result()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lumex::core::time::timer::LumexTimer::LumexTimer </td>
+          <td class="memname"><a class="el" href="a02148.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::<a class="el" href="a02148.html">filesystem_result</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -140,108 +172,499 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Defaulted constructor; the timer measures zero elapsed time until started/stopped. </p>
+<p>Default constructor. Creates a successful result with a default-constructed value and no error. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a98b79505924fe37261b66f8f8c752aba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98b79505924fe37261b66f8f8c752aba">&#9670;&nbsp;</a></span>elapsed_time_ms()</h2>
+<a id="a384e25734c6d611b763c77caa77aeafc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384e25734c6d611b763c77caa77aeafc">&#9670;&nbsp;</a></span>err()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> long long lumex::core::time::timer::LumexTimer::elapsed_time_ms </td>
+          <td class="memname">static <a class="el" href="a02148.html">filesystem_result</a>&lt;T&gt; <a class="el" href="a02148.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::err </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>error_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>default_value</em> = <code>T{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Factory method for creating an unsuccessful <code><a class="el" href="a02148.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a></code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error_code</td><td>The system-specific error code indicating the reason for failure. </td></tr>
+    <tr><td class="paramname">default_value</td><td>An optional default-constructed value to hold in case of error. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code><a class="el" href="a02148.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a>&lt;T&gt;</code> object indicating failure. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The default value is moved if provided. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02148_a384e25734c6d611b763c77caa77aeafc_icgraph.png" border="0" usemap="#aa02148_a384e25734c6d611b763c77caa77aeafc_icgraph" alt=""/></div>
+<map name="a02148_a384e25734c6d611b763c77caa77aeafc_icgraph" id="aa02148_a384e25734c6d611b763c77caa77aeafc_icgraph">
+<area shape="rect" title="Factory method for creating an unsuccessful filesystem_result." alt="" coords="1145,814,1333,856"/>
+<area shape="rect" href="a02176.html#a519d0413d9df62c576d83a2107ccbfea" title="Recursively copies a file or a directory (and its contents) from one location to another." alt="" coords="631,214,836,256"/>
+<area shape="rect" href="a02176.html#ac1050fc7fb4e882f6b23a9ad965f9e6c" title="Moves a directory and its contents from one location to another." alt="" coords="371,491,545,547"/>
+<area shape="rect" href="a02176.html#aa23566d108976aeef3349b7fd6d468aa" title="Copies a single file from one location to another." alt="" coords="913,426,1087,482"/>
+<area shape="rect" href="a02176.html#a538ee94b70991213bf07c01bc51b3af4" title="Moves a file from one location to another." alt="" coords="646,571,821,627"/>
+<area shape="rect" href="a02176.html#afd68264e9ecb95fcbafe4077a10a6fe7" title="Creates a new symbolic link to_ that points to from." alt="" coords="913,1007,1087,1063"/>
+<area shape="rect" href="a02176.html#aa72193b43e6c948945b7a5e0d5b075ff" title="Creates all directories in the specified path_arg, including any missing parent directories." alt="" coords="646,280,821,336"/>
+<area shape="rect" href="a02176.html#a1b4564a0b4913cb4f326c18a0b32b68c" title="Creates a new directory at the specified path." alt="" coords="913,207,1087,263"/>
+<area shape="rect" href="a02176.html#a451c36aeed5bc067a0584db11c28311d" title="Creates a new symbolic link link that points to a directory target." alt="" coords="903,1087,1097,1143"/>
+<area shape="rect" href="a02176.html#a44d77156e1e761592fccf370f58b5f01" title="Creates a new symbolic link link that points to target." alt="" coords="913,1167,1087,1223"/>
+<area shape="rect" href="a02176.html#a5b441e7f7be38a0f7dc925a913bd30ed" title="Retrieves the current working directory." alt="" coords="913,847,1087,903"/>
+<area shape="rect" href="a02176.html#aa89d0956ffd5c8092dc0f5145a1f1508" title="Retrieves the size of a regular file in bytes." alt="" coords="913,767,1087,823"/>
+<area shape="rect" href="a02176.html#a8ef9a39791f5a09f71d3914f79850272" title="Retrieves the last write time of a file or directory." alt="" coords="913,1247,1087,1303"/>
+<area shape="rect" href="a02176.html#a30148367d357472f918c6adc0c71cb9f" title="Sets the permissions of a file or directory." alt="" coords="913,1327,1087,1383"/>
+<area shape="rect" href="a02176.html#a2cc4d99add0086904aef1832f76a42d9" title="Reads the target of a symbolic link." alt="" coords="913,1407,1087,1463"/>
+<area shape="rect" href="a02176.html#a07dce5b61b106483c4d12ceabe50eac7" title="Removes a file or an empty directory at the specified path_arg." alt="" coords="913,556,1087,612"/>
+<area shape="rect" href="a02176.html#a82b2a89e33b1d4bb895e689fbb62658e" title="Recursively removes a file or a directory and all its contents." alt="" coords="646,491,821,547"/>
+<area shape="rect" href="a02176.html#afc94576293a350639ea3664c5e2f5177" title="Renames or moves a file or directory." alt="" coords="913,687,1087,743"/>
+<area shape="rect" href="a02176.html#a35b41b189bdec84a437f492dbc5022ad" title="Changes the size of a regular file." alt="" coords="913,1487,1087,1543"/>
+<area shape="rect" href="a02176.html#ab4477a07b15385e2f3247fce8738008c" title="Retrieves information about the free and total space on the filesystem." alt="" coords="913,1567,1087,1623"/>
+<area shape="rect" href="a02176.html#afe6ab80da0b7f0a879eeea45b923d12f" title="Retrieves the path_arg to the system&#39;s temporary directory." alt="" coords="913,927,1087,983"/>
+<area shape="rect" href="a01484.html#af9bac403ac10a4c027b0b3b3e7242dab" title="Copies filename to a sibling &lt;filename&gt;.bak.&lt;YYYYMMDD&#45;HHMMSS&gt; backup file." alt="" coords="628,360,839,416"/>
+<area shape="rect" href="a00770.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="431,887,485,914"/>
+<area shape="rect" href="a01440.html#accf4de4dbcf6ed1920c2782a8b1be0fe" title="Get the path to the logs directory." alt="" coords="352,690,564,746"/>
+<area shape="rect" href="a00827.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,704,60,731"/>
+<area shape="rect" href="a01440.html#a385a6c62d7eee3e396474410c2f4b331" title="Write a log to a file in the logs/ directory." alt="" coords="108,726,304,768"/>
+<area shape="rect" href="a02068.html#a73b8ef911cb0078f0ee965b8f928135b" title="Initializes the crash handler." alt="" coords="631,54,836,110"/>
+<area shape="rect" href="a02072.html#a277f55eeecb20cecca099e0c63bd1559" title="Write a crash report to a file by pattern: &quot;crash_report_{timestamp}.txt&quot;." alt="" coords="612,134,855,190"/>
+<area shape="rect" href="a02176.html#a1655039e828622916c8d6c9063c3b345" title="Converts a path_arg to its absolute form." alt="" coords="646,1195,821,1251"/>
+<area shape="rect" href="a02176.html#a4a90f8fd6dbcb586088fc8a4285d13f0" title="Constructs a relative path_arg from path_arg to base." alt="" coords="371,1115,545,1171"/>
+<area shape="rect" href="a02176.html#a83280c9f37dbfaf4e58c9a7e02b9bb2c" title="Returns the weakly canonical form of a path_arg." alt="" coords="371,1195,545,1251"/>
+<area shape="rect" href="a02176.html#a6be80a0a41fea156b883644706ba1050" title="Constructs a proximate path_arg from path_arg to base." alt="" coords="119,1115,293,1171"/>
+<area shape="rect" href="a02176.html#adc0d38fee5d48d7ce1aa4abcb4dda599" title="Checks if two paths refer to the same file system entity." alt="" coords="646,702,821,758"/>
+<area shape="rect" href="a02168.html#ab8a636cf14f4aa14723fdbb4aef5cf69" title="Retrieves the size of the file represented by this entry." alt="" coords="646,832,821,888"/>
+<area shape="rect" href="a02176.html#ae393a080f3802bbae6871dbb9faff3e4" title="Checks if a file is empty or a directory is empty." alt="" coords="646,912,821,968"/>
+<area shape="rect" href="a02604.html#a071dfa6421d20a315f6bb09daef6c6f3" title="Returns the path to the temporary directory." alt="" coords="637,1307,830,1363"/>
+<area shape="rect" href="a02604.html#a1e1e3010114fc46dece692783035e156" title="Creates a temporary directory with optional name prefix." alt="" coords="369,1406,547,1462"/>
+<area shape="rect" href="a00887.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="179,1355,233,1382"/>
+<area shape="rect" href="a02604.html#a68474b126cb9f245701ee94a470bd4d4" title="Creates a temporary file with optional name prefix." alt="" coords="369,1275,547,1331"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af6c94c3f8a9c0f511aeaa1ea5674a08d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c94c3f8a9c0f511aeaa1ea5674a08d">&#9670;&nbsp;</a></span>error_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="a02148.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::error_code </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Returns the elapsed time between the last <code><a class="el" href="a02148.html#a715bdde044bfb82d4b2b881af9604a18" title="Starts (or restarts) the timer.">start_timer()</a></code>/<code><a class="el" href="a02148.html#a767a23c31d699835253cb7fa2d98600a" title="Stops the timer.">stop_timer()</a></code> pair. </p>
-<dl class="section return"><dt>Returns</dt><dd>Elapsed time in milliseconds. Zero if the timer was never started/stopped. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Call <code><a class="el" href="a02148.html#a767a23c31d699835253cb7fa2d98600a" title="Stops the timer.">stop_timer()</a></code> before calling this function for a stable result; calling it while the timer is still running returns the elapsed time up to the previous <code><a class="el" href="a02148.html#a767a23c31d699835253cb7fa2d98600a" title="Stops the timer.">stop_timer()</a></code> call (or zero, if it was never stopped). </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02934.html#a11">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/timer/LumexTimer.hpp</a>.</dd>
-</dl>
+<p>Retrieves the error code if the operation was unsuccessful. </p>
+<dl class="section return"><dt>Returns</dt><dd>The system-specific error code. Returns 0 if the operation was successful. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a02148_a98b79505924fe37261b66f8f8c752aba_icgraph.png" border="0" usemap="#aa02148_a98b79505924fe37261b66f8f8c752aba_icgraph" alt=""/></div>
+<div class="center"><img src="a02148_af6c94c3f8a9c0f511aeaa1ea5674a08d_icgraph.png" border="0" usemap="#aa02148_af6c94c3f8a9c0f511aeaa1ea5674a08d_icgraph" alt=""/></div>
+<map name="a02148_af6c94c3f8a9c0f511aeaa1ea5674a08d_icgraph" id="aa02148_af6c94c3f8a9c0f511aeaa1ea5674a08d_icgraph">
+<area shape="rect" title="Retrieves the error code if the operation was unsuccessful." alt="" coords="865,122,1040,178"/>
+<area shape="rect" href="a02176.html#a519d0413d9df62c576d83a2107ccbfea" title="Recursively copies a file or a directory (and its contents) from one location to another." alt="" coords="612,5,817,47"/>
+<area shape="rect" href="a02176.html#ac1050fc7fb4e882f6b23a9ad965f9e6c" title="Moves a directory and its contents from one location to another." alt="" coords="371,9,545,65"/>
+<area shape="rect" href="a02176.html#aa72193b43e6c948945b7a5e0d5b075ff" title="Creates all directories in the specified path_arg, including any missing parent directories." alt="" coords="627,122,802,178"/>
+<area shape="rect" href="a02152.html#a5ed2ed4204ad3c28c04e05e91d1d9c85" title="Factory method for creating an unsuccessful filesystem_result&lt;void&gt;." alt="" coords="627,202,802,258"/>
+<area shape="rect" href="a02176.html#a538ee94b70991213bf07c01bc51b3af4" title="Moves a file from one location to another." alt="" coords="627,282,802,338"/>
+<area shape="rect" href="a01440.html#accf4de4dbcf6ed1920c2782a8b1be0fe" title="Get the path to the logs directory." alt="" coords="352,110,564,166"/>
+<area shape="rect" href="a00770.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="431,190,485,217"/>
+<area shape="rect" href="a00827.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,125,60,151"/>
+<area shape="rect" href="a01440.html#a385a6c62d7eee3e396474410c2f4b331" title="Write a log to a file in the logs/ directory." alt="" coords="108,147,304,188"/>
+</map>
 </div>
 
 </div>
 </div>
-<a id="a715bdde044bfb82d4b2b881af9604a18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a715bdde044bfb82d4b2b881af9604a18">&#9670;&nbsp;</a></span>start_timer()</h2>
+<a id="a16fa37f602e827cf169d0dfb3b952940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16fa37f602e827cf169d0dfb3b952940">&#9670;&nbsp;</a></span>ok()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void lumex::core::time::timer::LumexTimer::start_timer </td>
+          <td class="memname">static <a class="el" href="a02148.html">filesystem_result</a>&lt;T&gt; <a class="el" href="a02148.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::ok </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Factory method for creating a successful <code><a class="el" href="a02148.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a></code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to encapsulate in the successful result. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code><a class="el" href="a02148.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a>&lt;T&gt;</code> object indicating success. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The value is moved to prevent unnecessary copies. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02148_a16fa37f602e827cf169d0dfb3b952940_cgraph.png" border="0" usemap="#aa02148_a16fa37f602e827cf169d0dfb3b952940_cgraph" alt=""/></div>
+<map name="a02148_a16fa37f602e827cf169d0dfb3b952940_cgraph" id="aa02148_a16fa37f602e827cf169d0dfb3b952940_cgraph">
+<area shape="rect" title="Factory method for creating a successful filesystem_result." alt="" coords="5,13,192,54"/>
+<area shape="rect" href="a02148.html#ae11d814b4f227302b2e33601f426d421" title="Retrieves the encapsulated value (const version)." alt="" coords="240,5,415,61"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02148_a16fa37f602e827cf169d0dfb3b952940_icgraph.png" border="0" usemap="#aa02148_a16fa37f602e827cf169d0dfb3b952940_icgraph" alt=""/></div>
+<map name="a02148_a16fa37f602e827cf169d0dfb3b952940_icgraph" id="aa02148_a16fa37f602e827cf169d0dfb3b952940_icgraph">
+<area shape="rect" title="Factory method for creating a successful filesystem_result." alt="" coords="1145,814,1332,856"/>
+<area shape="rect" href="a02176.html#a519d0413d9df62c576d83a2107ccbfea" title="Recursively copies a file or a directory (and its contents) from one location to another." alt="" coords="631,214,836,256"/>
+<area shape="rect" href="a02176.html#ac1050fc7fb4e882f6b23a9ad965f9e6c" title="Moves a directory and its contents from one location to another." alt="" coords="371,491,545,547"/>
+<area shape="rect" href="a02176.html#aa23566d108976aeef3349b7fd6d468aa" title="Copies a single file from one location to another." alt="" coords="913,426,1087,482"/>
+<area shape="rect" href="a02176.html#a538ee94b70991213bf07c01bc51b3af4" title="Moves a file from one location to another." alt="" coords="646,571,821,627"/>
+<area shape="rect" href="a02176.html#afd68264e9ecb95fcbafe4077a10a6fe7" title="Creates a new symbolic link to_ that points to from." alt="" coords="913,1007,1087,1063"/>
+<area shape="rect" href="a02176.html#aa72193b43e6c948945b7a5e0d5b075ff" title="Creates all directories in the specified path_arg, including any missing parent directories." alt="" coords="646,280,821,336"/>
+<area shape="rect" href="a02176.html#a1b4564a0b4913cb4f326c18a0b32b68c" title="Creates a new directory at the specified path." alt="" coords="913,207,1087,263"/>
+<area shape="rect" href="a02176.html#a451c36aeed5bc067a0584db11c28311d" title="Creates a new symbolic link link that points to a directory target." alt="" coords="903,1087,1097,1143"/>
+<area shape="rect" href="a02176.html#a44d77156e1e761592fccf370f58b5f01" title="Creates a new symbolic link link that points to target." alt="" coords="913,1167,1087,1223"/>
+<area shape="rect" href="a02176.html#a5b441e7f7be38a0f7dc925a913bd30ed" title="Retrieves the current working directory." alt="" coords="913,847,1087,903"/>
+<area shape="rect" href="a02176.html#aa89d0956ffd5c8092dc0f5145a1f1508" title="Retrieves the size of a regular file in bytes." alt="" coords="913,767,1087,823"/>
+<area shape="rect" href="a02176.html#a8ef9a39791f5a09f71d3914f79850272" title="Retrieves the last write time of a file or directory." alt="" coords="913,1247,1087,1303"/>
+<area shape="rect" href="a02176.html#a30148367d357472f918c6adc0c71cb9f" title="Sets the permissions of a file or directory." alt="" coords="913,1327,1087,1383"/>
+<area shape="rect" href="a02176.html#a2cc4d99add0086904aef1832f76a42d9" title="Reads the target of a symbolic link." alt="" coords="913,1407,1087,1463"/>
+<area shape="rect" href="a02176.html#a07dce5b61b106483c4d12ceabe50eac7" title="Removes a file or an empty directory at the specified path_arg." alt="" coords="913,556,1087,612"/>
+<area shape="rect" href="a02176.html#a82b2a89e33b1d4bb895e689fbb62658e" title="Recursively removes a file or a directory and all its contents." alt="" coords="646,491,821,547"/>
+<area shape="rect" href="a02176.html#afc94576293a350639ea3664c5e2f5177" title="Renames or moves a file or directory." alt="" coords="913,687,1087,743"/>
+<area shape="rect" href="a02176.html#a35b41b189bdec84a437f492dbc5022ad" title="Changes the size of a regular file." alt="" coords="913,1487,1087,1543"/>
+<area shape="rect" href="a02176.html#ab4477a07b15385e2f3247fce8738008c" title="Retrieves information about the free and total space on the filesystem." alt="" coords="913,1567,1087,1623"/>
+<area shape="rect" href="a02176.html#afe6ab80da0b7f0a879eeea45b923d12f" title="Retrieves the path_arg to the system&#39;s temporary directory." alt="" coords="913,927,1087,983"/>
+<area shape="rect" href="a01484.html#af9bac403ac10a4c027b0b3b3e7242dab" title="Copies filename to a sibling &lt;filename&gt;.bak.&lt;YYYYMMDD&#45;HHMMSS&gt; backup file." alt="" coords="628,360,839,416"/>
+<area shape="rect" href="a00770.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="431,887,485,914"/>
+<area shape="rect" href="a01440.html#accf4de4dbcf6ed1920c2782a8b1be0fe" title="Get the path to the logs directory." alt="" coords="352,690,564,746"/>
+<area shape="rect" href="a00827.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,704,60,731"/>
+<area shape="rect" href="a01440.html#a385a6c62d7eee3e396474410c2f4b331" title="Write a log to a file in the logs/ directory." alt="" coords="108,726,304,768"/>
+<area shape="rect" href="a02068.html#a73b8ef911cb0078f0ee965b8f928135b" title="Initializes the crash handler." alt="" coords="631,54,836,110"/>
+<area shape="rect" href="a02072.html#a277f55eeecb20cecca099e0c63bd1559" title="Write a crash report to a file by pattern: &quot;crash_report_{timestamp}.txt&quot;." alt="" coords="612,134,855,190"/>
+<area shape="rect" href="a02176.html#a1655039e828622916c8d6c9063c3b345" title="Converts a path_arg to its absolute form." alt="" coords="646,1195,821,1251"/>
+<area shape="rect" href="a02176.html#a4a90f8fd6dbcb586088fc8a4285d13f0" title="Constructs a relative path_arg from path_arg to base." alt="" coords="371,1115,545,1171"/>
+<area shape="rect" href="a02176.html#a83280c9f37dbfaf4e58c9a7e02b9bb2c" title="Returns the weakly canonical form of a path_arg." alt="" coords="371,1195,545,1251"/>
+<area shape="rect" href="a02176.html#a6be80a0a41fea156b883644706ba1050" title="Constructs a proximate path_arg from path_arg to base." alt="" coords="119,1115,293,1171"/>
+<area shape="rect" href="a02176.html#adc0d38fee5d48d7ce1aa4abcb4dda599" title="Checks if two paths refer to the same file system entity." alt="" coords="646,702,821,758"/>
+<area shape="rect" href="a02168.html#ab8a636cf14f4aa14723fdbb4aef5cf69" title="Retrieves the size of the file represented by this entry." alt="" coords="646,832,821,888"/>
+<area shape="rect" href="a02176.html#ae393a080f3802bbae6871dbb9faff3e4" title="Checks if a file is empty or a directory is empty." alt="" coords="646,912,821,968"/>
+<area shape="rect" href="a02604.html#a071dfa6421d20a315f6bb09daef6c6f3" title="Returns the path to the temporary directory." alt="" coords="637,1307,830,1363"/>
+<area shape="rect" href="a02604.html#a1e1e3010114fc46dece692783035e156" title="Creates a temporary directory with optional name prefix." alt="" coords="369,1406,547,1462"/>
+<area shape="rect" href="a00887.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="179,1355,233,1382"/>
+<area shape="rect" href="a02604.html#a68474b126cb9f245701ee94a470bd4d4" title="Creates a temporary file with optional name prefix." alt="" coords="369,1275,547,1331"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5bee45657ca553ccbe26b668ffdb6bff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bee45657ca553ccbe26b668ffdb6bff">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a02148.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implicit conversion to <code>bool</code> to easily check success status. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the operation was successful, false otherwise. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Enables usage like <code>if (result) { ... }</code>. </dd></dl>
+
+</div>
+</div>
+<a id="aaae1487eda085cf06bd332015e4969d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae1487eda085cf06bd332015e4969d7">&#9670;&nbsp;</a></span>success()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a02148.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::success </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the operation was successful. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the result represents success, false otherwise. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02148_aaae1487eda085cf06bd332015e4969d7_icgraph.png" border="0" usemap="#aa02148_aaae1487eda085cf06bd332015e4969d7_icgraph" alt=""/></div>
+<map name="a02148_aaae1487eda085cf06bd332015e4969d7_icgraph" id="aa02148_aaae1487eda085cf06bd332015e4969d7_icgraph">
+<area shape="rect" title="Checks if the operation was successful." alt="" coords="228,85,403,141"/>
+<area shape="rect" href="a02176.html#ae393a080f3802bbae6871dbb9faff3e4" title="Checks if a file is empty or a directory is empty." alt="" coords="5,5,180,61"/>
+<area shape="rect" href="a02176.html#ac1050fc7fb4e882f6b23a9ad965f9e6c" title="Moves a directory and its contents from one location to another." alt="" coords="5,85,180,141"/>
+<area shape="rect" href="a02176.html#a538ee94b70991213bf07c01bc51b3af4" title="Moves a file from one location to another." alt="" coords="5,165,180,221"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa8098c9ced0a02fb602aa533ec1ace36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8098c9ced0a02fb602aa533ec1ace36">&#9670;&nbsp;</a></span>value() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; <a class="el" href="a02148.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::value </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Starts (or restarts) the timer. </p>
-<p>Records the current high-resolution time as the timer's start point. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02934.html#a9">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/timer/LumexTimer.hpp</a>.</dd>
-</dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02148_a715bdde044bfb82d4b2b881af9604a18_icgraph.png" border="0" usemap="#aa02148_a715bdde044bfb82d4b2b881af9604a18_icgraph" alt=""/></div>
-</div>
+<p>Retrieves the encapsulated value (non-const version). </p>
+<dl class="section return"><dt>Returns</dt><dd>A non-constant reference to the encapsulated value. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Accessing the value of an unsuccessful result leads to undefined behavior. </dd></dl>
 
 </div>
 </div>
-<a id="a767a23c31d699835253cb7fa2d98600a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a767a23c31d699835253cb7fa2d98600a">&#9670;&nbsp;</a></span>stop_timer()</h2>
+<a id="ae11d814b4f227302b2e33601f426d421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae11d814b4f227302b2e33601f426d421">&#9670;&nbsp;</a></span>value() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void lumex::core::time::timer::LumexTimer::stop_timer </td>
+          <td class="memname">T const&amp; <a class="el" href="a02148.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::value </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Stops the timer. </p>
-<p>Records the current high-resolution time as the timer's end point. Call this before <code><a class="el" href="a02148.html#a98b79505924fe37261b66f8f8c752aba" title="Returns the elapsed time between the last start_timer()/stop_timer() pair.">elapsed_time_ms()</a></code> for a meaningful, stable result. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02934.html#a10">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/timer/LumexTimer.hpp</a>.</dd>
-</dl>
+<p>Retrieves the encapsulated value (const version). </p>
+<dl class="section return"><dt>Returns</dt><dd>A constant reference to the encapsulated value. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Accessing the value of an unsuccessful result leads to undefined behavior. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a02148_a767a23c31d699835253cb7fa2d98600a_icgraph.png" border="0" usemap="#aa02148_a767a23c31d699835253cb7fa2d98600a_icgraph" alt=""/></div>
+<div class="center"><img src="a02148_ae11d814b4f227302b2e33601f426d421_icgraph.png" border="0" usemap="#aa02148_ae11d814b4f227302b2e33601f426d421_icgraph" alt=""/></div>
+<map name="a02148_ae11d814b4f227302b2e33601f426d421_icgraph" id="aa02148_ae11d814b4f227302b2e33601f426d421_icgraph">
+<area shape="rect" title="Retrieves the encapsulated value (const version)." alt="" coords="1399,1317,1573,1373"/>
+<area shape="rect" href="a02176.html#ae393a080f3802bbae6871dbb9faff3e4" title="Checks if a file is empty or a directory is empty." alt="" coords="665,315,839,371"/>
+<area shape="rect" href="a02176.html#a1264c37f3d82b70459f4cf3d2160e4b1" title="Check if a file is readable by the current process." alt="" coords="1170,1796,1345,1852"/>
+<area shape="rect" href="a02176.html#abb3dd60af7fc9ce36757396d06988938" title="Check if a file is writable by the current process." alt="" coords="1170,1716,1345,1772"/>
+<area shape="rect" href="a00770.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="440,684,495,711"/>
+<area shape="rect" href="a02148.html#a16fa37f602e827cf169d0dfb3b952940" title="Factory method for creating a successful filesystem_result." alt="" coords="1164,990,1351,1031"/>
+<area shape="rect" href="a02176.html#a82b2a89e33b1d4bb895e689fbb62658e" title="Recursively removes a file or a directory and all its contents." alt="" coords="665,1404,839,1460"/>
+<area shape="rect" href="a02176.html#a0061e0d3d6fd72dddb13d151f253ba5d" title="Check if a file is both readable and writable by the current process." alt="" coords="931,1716,1106,1772"/>
+<area shape="rect" href="a01488.html#ad7d89bb26cb39d1ce799779febe35edb" title="Performs a static check on an INI file for basic validity." alt="" coords="929,1796,1108,1852"/>
+<area shape="rect" href="a01496.html#a90a779e1c36955e97576cb274069e130" title="Checks that a path is a readable JSON object document." alt="" coords="921,1905,1116,1961"/>
+<area shape="rect" href="a01500.html#ae1b637ba55ed87cd379edb2d82afdf23" title="Checks that a path is a readable, well&#45;formed XML file with a document element." alt="" coords="925,2109,1112,2165"/>
+<area shape="rect" href="a01488.html#aa6aaa50b95d5d9c5a1f4ada8259ac040" title=" " alt="" coords="663,1679,841,1735"/>
+<area shape="rect" href="a01488.html#ad8582ddd78b5445e1a56534be5908038" title="Loads and parses an INI file from the given path." alt="" coords="649,1759,855,1801"/>
+<area shape="rect" href="a00863.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="440,1825,495,1852"/>
+<area shape="rect" href="a01488.html#aa305f824caad57d086476758c8625d40" title=" " alt="" coords="365,1759,570,1801"/>
+<area shape="rect" href="a01436.html#a18e6ebf596904b610362cfb2257fd9b4" title="Reads logger configuration from an absolute enable/config path." alt="" coords="378,1679,557,1735"/>
+<area shape="rect" href="a01351.html#aab14961ea93b42c8867851c5113e6744" title=" " alt="" coords="114,1686,298,1727"/>
+<area shape="rect" href="a00818.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,1693,60,1720"/>
+<area shape="rect" href="a01496.html#a1885b809d9fb821b0dbdf09684e507b9" title=" " alt="" coords="655,1876,849,1932"/>
+<area shape="rect" href="a01496.html#a778db1368bf71451852e98009c75cb15" title="Loads and parses a JSON file from the given path." alt="" coords="637,1957,867,1998"/>
+<area shape="rect" href="a00866.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="440,2023,495,2049"/>
+<area shape="rect" href="a01496.html#a5c83aecd16719d36974493a4a6eb4322" title=" " alt="" coords="352,1957,583,1998"/>
+<area shape="rect" href="a01500.html#a8d037cd5f5f2336c9295633a24a5f53c" title=" " alt="" coords="659,2073,845,2129"/>
+<area shape="rect" href="a01500.html#aee36de8debc87784e6a28833736c0f88" title="Loads and parses an XML file from the given path." alt="" coords="641,2154,863,2195"/>
+<area shape="rect" href="a00872.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="440,2220,495,2247"/>
+<area shape="rect" href="a01500.html#a49ecba46ab453277477a0298ca001778" title=" " alt="" coords="356,2154,579,2195"/>
+<area shape="rect" href="a02176.html#a519d0413d9df62c576d83a2107ccbfea" title="Recursively copies a file or a directory (and its contents) from one location to another." alt="" coords="649,1127,855,1169"/>
+<area shape="rect" href="a02176.html#ac1050fc7fb4e882f6b23a9ad965f9e6c" title="Moves a directory and its contents from one location to another." alt="" coords="380,1120,555,1176"/>
+<area shape="rect" href="a02176.html#aa23566d108976aeef3349b7fd6d468aa" title="Copies a single file from one location to another." alt="" coords="931,903,1106,959"/>
+<area shape="rect" href="a02176.html#a538ee94b70991213bf07c01bc51b3af4" title="Moves a file from one location to another." alt="" coords="665,1047,839,1103"/>
+<area shape="rect" href="a02176.html#afd68264e9ecb95fcbafe4077a10a6fe7" title="Creates a new symbolic link to_ that points to from." alt="" coords="931,1585,1106,1641"/>
+<area shape="rect" href="a02176.html#aa72193b43e6c948945b7a5e0d5b075ff" title="Creates all directories in the specified path_arg, including any missing parent directories." alt="" coords="665,448,839,504"/>
+<area shape="rect" href="a02176.html#a1b4564a0b4913cb4f326c18a0b32b68c" title="Creates a new directory at the specified path." alt="" coords="931,1244,1106,1300"/>
+<area shape="rect" href="a02176.html#a451c36aeed5bc067a0584db11c28311d" title="Creates a new symbolic link link that points to a directory target." alt="" coords="921,343,1116,399"/>
+<area shape="rect" href="a02176.html#a44d77156e1e761592fccf370f58b5f01" title="Creates a new symbolic link link that points to target." alt="" coords="931,423,1106,479"/>
+<area shape="rect" href="a02176.html#a5b441e7f7be38a0f7dc925a913bd30ed" title="Retrieves the current working directory." alt="" coords="931,111,1106,167"/>
+<area shape="rect" href="a02176.html#aa89d0956ffd5c8092dc0f5145a1f1508" title="Retrieves the size of a regular file in bytes." alt="" coords="931,823,1106,879"/>
+<area shape="rect" href="a02176.html#a8ef9a39791f5a09f71d3914f79850272" title="Retrieves the last write time of a file or directory." alt="" coords="931,503,1106,559"/>
+<area shape="rect" href="a02176.html#a30148367d357472f918c6adc0c71cb9f" title="Sets the permissions of a file or directory." alt="" coords="931,583,1106,639"/>
+<area shape="rect" href="a02176.html#a2cc4d99add0086904aef1832f76a42d9" title="Reads the target of a symbolic link." alt="" coords="931,663,1106,719"/>
+<area shape="rect" href="a02176.html#a07dce5b61b106483c4d12ceabe50eac7" title="Removes a file or an empty directory at the specified path_arg." alt="" coords="931,1324,1106,1380"/>
+<area shape="rect" href="a02176.html#afc94576293a350639ea3664c5e2f5177" title="Renames or moves a file or directory." alt="" coords="931,1063,1106,1119"/>
+<area shape="rect" href="a02176.html#a35b41b189bdec84a437f492dbc5022ad" title="Changes the size of a regular file." alt="" coords="931,743,1106,799"/>
+<area shape="rect" href="a02176.html#ab4477a07b15385e2f3247fce8738008c" title="Retrieves information about the free and total space on the filesystem." alt="" coords="931,983,1106,1039"/>
+<area shape="rect" href="a02176.html#afe6ab80da0b7f0a879eeea45b923d12f" title="Retrieves the path_arg to the system&#39;s temporary directory." alt="" coords="931,1505,1106,1561"/>
+<area shape="rect" href="a01484.html#af9bac403ac10a4c027b0b3b3e7242dab" title="Copies filename to a sibling &lt;filename&gt;.bak.&lt;YYYYMMDD&#45;HHMMSS&gt; backup file." alt="" coords="647,865,857,921"/>
+<area shape="rect" href="a01440.html#accf4de4dbcf6ed1920c2782a8b1be0fe" title="Get the path to the logs directory." alt="" coords="361,279,573,335"/>
+<area shape="rect" href="a00827.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,293,60,320"/>
+<area shape="rect" href="a01440.html#a385a6c62d7eee3e396474410c2f4b331" title="Write a log to a file in the logs/ directory." alt="" coords="108,315,304,357"/>
+<area shape="rect" href="a02068.html#a73b8ef911cb0078f0ee965b8f928135b" title="Initializes the crash handler." alt="" coords="649,1273,855,1329"/>
+<area shape="rect" href="a02072.html#a277f55eeecb20cecca099e0c63bd1559" title="Write a crash report to a file by pattern: &quot;crash_report_{timestamp}.txt&quot;." alt="" coords="631,1193,873,1249"/>
+<area shape="rect" href="a02176.html#a1655039e828622916c8d6c9063c3b345" title="Converts a path_arg to its absolute form." alt="" coords="665,45,839,101"/>
+<area shape="rect" href="a02176.html#a4a90f8fd6dbcb586088fc8a4285d13f0" title="Constructs a relative path_arg from path_arg to base." alt="" coords="380,5,555,61"/>
+<area shape="rect" href="a02176.html#a83280c9f37dbfaf4e58c9a7e02b9bb2c" title="Returns the weakly canonical form of a path_arg." alt="" coords="380,85,555,141"/>
+<area shape="rect" href="a02176.html#a6be80a0a41fea156b883644706ba1050" title="Constructs a proximate path_arg from path_arg to base." alt="" coords="119,5,293,61"/>
+<area shape="rect" href="a02176.html#adc0d38fee5d48d7ce1aa4abcb4dda599" title="Checks if two paths refer to the same file system entity." alt="" coords="665,735,839,791"/>
+<area shape="rect" href="a02168.html#ab8a636cf14f4aa14723fdbb4aef5cf69" title="Retrieves the size of the file represented by this entry." alt="" coords="665,604,839,660"/>
+<area shape="rect" href="a02604.html#a071dfa6421d20a315f6bb09daef6c6f3" title="Returns the path to the temporary directory." alt="" coords="655,1535,849,1591"/>
+<area shape="rect" href="a02604.html#a1e1e3010114fc46dece692783035e156" title="Creates a temporary directory with optional name prefix." alt="" coords="379,1519,556,1575"/>
+<area shape="rect" href="a00887.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="179,1533,233,1560"/>
+<area shape="rect" href="a02604.html#a68474b126cb9f245701ee94a470bd4d4" title="Creates a temporary file with optional name prefix." alt="" coords="379,1599,556,1655"/>
+</map>
 </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00302_source.html">LumexTimer.hpp</a></li>
-<li><a class="el" href="a00299.html">LumexTimer.cpp</a></li>
+<a id="af5d33c3c44ac4779caadbaad8cef56c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d33c3c44ac4779caadbaad8cef56c3">&#9670;&nbsp;</a></span>value_or()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="a02148.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::value_or </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>default_value</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the encapsulated value if successful, or a provided default value if unsuccessful. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">default_value</td><td>The value to return if the operation failed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The actual value if <code><a class="el" href="a02148.html#aaae1487eda085cf06bd332015e4969d7" title="Checks if the operation was successful.">success()</a></code> is true, otherwise <code>default_value</code>. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00581_source.html">LumexFilesystem.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00894.html">time</a></li><li class="navelem"><a class="el" href="a00897.html">timer</a></li><li class="navelem"><a class="el" href="a02148.html">LumexTimer</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01275.html">filesystem</a></li><li class="navelem"><a class="el" href="a01276.html">fs</a></li><li class="navelem"><a class="el" href="a02148.html">filesystem_result</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

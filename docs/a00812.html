@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::applied::logging::log Namespace Reference</title>
+<title>LumexLib: example_json_workflow.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,63 +94,62 @@ $(document).ready(function(){initNavTree('a00812.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::applied::logging::log Namespace Reference</div>  </div>
+<div class="title">example_json_workflow.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01028.html">LumexLogging</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ab89470b4db8a7dc224df84237c78270c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00812.html#ab89470b4db8a7dc224df84237c78270c">LumexLogLevel</a> : std::uint8_t { <br />
-&#160;&#160;<a class="el" href="a00812.html#ab89470b4db8a7dc224df84237c78270caa603905470e2a5b8c13e96b579ef0dba">LumexLogLevel::Debug</a> = 10, 
-<a class="el" href="a00812.html#ab89470b4db8a7dc224df84237c78270ca4059b0251f66a18cb56f544728796875">LumexLogLevel::Info</a> = 20, 
-<a class="el" href="a00812.html#ab89470b4db8a7dc224df84237c78270ca505a83f220c02df2f85c3810cd9ceb38">LumexLogLevel::Success</a> = 25, 
-<a class="el" href="a00812.html#ab89470b4db8a7dc224df84237c78270ca0eaadb4fcb48a0a0ed7bc9868be9fbaa">LumexLogLevel::Warning</a> = 30, 
-<br />
-&#160;&#160;<a class="el" href="a00812.html#ab89470b4db8a7dc224df84237c78270ca902b0d55fddef6f8d651fe1035b7d4bd">LumexLogLevel::Error</a> = 40, 
-<a class="el" href="a00812.html#ab89470b4db8a7dc224df84237c78270ca278d01e5af56273bae1bb99a98b370cd">LumexLogLevel::Critical</a> = 50
-<br />
- }</td></tr>
-<tr class="memdesc:ab89470b4db8a7dc224df84237c78270c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the severity levels for logging.  <a href="a00812.html#ab89470b4db8a7dc224df84237c78270c">More...</a><br /></td></tr>
-<tr class="separator:ab89470b4db8a7dc224df84237c78270c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<div class="textblock"><code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &quot;lumex/applied/json/LumexJson&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00632_source.html">lumex/core/string_view/view/LumexStringView.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for example_json_workflow.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00813.png" border="0" usemap="#aexample__json__workflow_8cpp" alt=""/></div>
+<map name="example__json__workflow_8cpp" id="aexample__json__workflow_8cpp">
+<area shape="rect" title=" " alt="" coords="186,5,391,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,92,114"/>
+<area shape="rect" title=" " alt="" coords="117,87,197,114"/>
+<area shape="rect" title=" " alt="" coords="205,177,263,203"/>
+<area shape="rect" title=" " alt="" coords="271,87,418,114"/>
+<area shape="rect" title=" " alt="" coords="442,80,589,121"/>
+<area shape="rect" href="a00632.html" title="C++11 lightweight, non&#45;owning view over character sequences." alt="" coords="614,80,817,121"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="287,177,469,203"/>
+<area shape="rect" title=" " alt="" coords="493,177,564,203"/>
+<area shape="rect" title=" " alt="" coords="589,177,655,203"/>
+<area shape="rect" title=" " alt="" coords="680,177,751,203"/>
+<area shape="rect" title=" " alt="" coords="775,177,851,203"/>
+<area shape="rect" title=" " alt="" coords="875,169,1012,211"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="1037,169,1226,211"/>
+<area shape="rect" href="a00695.html" title=" " alt="" coords="1251,169,1505,211"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="1359,259,1573,300"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="1004,259,1259,300"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00812.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="ab89470b4db8a7dc224df84237c78270c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab89470b4db8a7dc224df84237c78270c">&#9670;&nbsp;</a></span>LumexLogLevel</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="a00812.html#ab89470b4db8a7dc224df84237c78270c">lumex::applied::logging::log::LumexLogLevel</a> : std::uint8_t</td>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Defines the severity levels for logging. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab89470b4db8a7dc224df84237c78270caa603905470e2a5b8c13e96b579ef0dba"></a>Debug&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab89470b4db8a7dc224df84237c78270ca4059b0251f66a18cb56f544728796875"></a>Info&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab89470b4db8a7dc224df84237c78270ca505a83f220c02df2f85c3810cd9ceb38"></a>Success&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab89470b4db8a7dc224df84237c78270ca0eaadb4fcb48a0a0ed7bc9868be9fbaa"></a>Warning&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab89470b4db8a7dc224df84237c78270ca902b0d55fddef6f8d651fe1035b7d4bd"></a>Error&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab89470b4db8a7dc224df84237c78270ca278d01e5af56273bae1bb99a98b370cd"></a>Critical&#160;</td><td class="fielddoc"></td></tr>
-</table>
 
 </div>
 </div>
@@ -159,7 +158,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00784.html">applied</a></li><li class="navelem"><a class="el" href="a00811.html">logging</a></li><li class="navelem"><a class="el" href="a00812.html">log</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_e8ae4df8b8335e2a73ecf531ee4a4a97.html">examples</a></li><li class="navelem"><a class="el" href="dir_4071ad1724fa0e77f3bdca2354e6ad35.html">json</a></li><li class="navelem"><a class="el" href="a00812.html">example_json_workflow.cpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -1,11 +1,9 @@
 var a02180 =
 [
-    [ "clean_T", "a02180.html#af1754af1410477a0bfe4c480d8c5bf6b", null ],
-    [ "compare", "a02180.html#a22a3541aae24dd79e70324e62f3cf249", null ],
-    [ "equal", "a02180.html#af4d8303da944e97514389e81d70b8b79", null ],
-    [ "greater", "a02180.html#a757a36d9efe40a4bea58de89d29937c5", null ],
-    [ "greater_equal", "a02180.html#ab87ee33a8c0b3eceadce4a9b323655d0", null ],
-    [ "less", "a02180.html#a7734c0db5703525890bc00f92eafb3dc", null ],
-    [ "less_equal", "a02180.html#abfabb88a306bfdf873851986148f855d", null ],
-    [ "not_equal", "a02180.html#af88877662835ec254ea286c5dacc85d6", null ]
+    [ "FormatError", "a02180.html#a8217cab52197f0e055d8d9f0e214699a", null ],
+    [ "FormatError", "a02180.html#af47ecf1343b981cc719b965886e2a197", null ],
+    [ "FormatError", "a02180.html#a77334fe5041635a8e19a31c8f60d8d3f", null ],
+    [ "FormatError", "a02180.html#a7070a62a67b7806cc3cd1f5c0c75d7a1", null ],
+    [ "no_position", "a02180.html#a72bf698a0ac82563fc26005d076b0734", null ],
+    [ "position", "a02180.html#a2258c2578aab0163aa72cef20849e9e9", null ]
 ];

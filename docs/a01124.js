@@ -1,9 +1,7 @@
 var a01124 =
 [
-    [ "init", "a01124.html#abeb40ff7bcce9217909ef1356d4e083f", null ],
-    [ "poly", "a01124.html#a20ce03300d984746aa9bc6679d90e246", null ],
-    [ "refIn", "a01124.html#a4c28d3d75ce4fcb56fca7875c71c77a2", null ],
-    [ "refOut", "a01124.html#a385fb2d6379507789c485e3b6f3d0a01", null ],
-    [ "widthBits", "a01124.html#a922850c27198d41cfbac66ae0d3ea022", null ],
-    [ "xorOut", "a01124.html#ad274e477a4b1f7269b2bb8d9d736cdfe", null ]
+    [ "copy_xpath_variable", "a01124.html#a5664ce2a10255b6aca45326df60fcb8e", null ],
+    [ "xpath_first", "a01124.html#abb9de3a45c0762f05c942cebbd27e46a", null ],
+    [ "xpath_get_order", "a01124.html#a06d335726027c6477be96cb86f9e56ce", null ],
+    [ "xpath_sort", "a01124.html#a1cda3af8de6ebb42fc0186a350a138e1", null ]
 ];

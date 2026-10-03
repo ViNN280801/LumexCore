@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['serial_5fport_5fstate_6345',['serial_port_state',['../a00818.html#a2833c2a4c2aca860a7fe8ecce5e59400',1,'lumex::applied::serial::enumeration']]],
-  ['sign_6346',['Sign',['../a00870.html#a32e247ced7ccdb9fd9bb448529b4ae4d',1,'lumex::core::fmt::Detail']]],
-  ['speckind_6347',['SpecKind',['../a00870.html#a50865894dbfed15f5472a74f7acbac7c',1,'lumex::core::fmt::Detail']]],
-  ['supportedconfigextensions_6348',['SupportedConfigExtensions',['../a00828.html#a1af005d4f6d6cbc1fe9b8ac0dd312222',1,'lumex::applied::settings::ini']]]
+  ['perms_6720',['perms',['../a01276.html#ab64132a6feae0925f48c883dd04ce26f',1,'lumex::core::filesystem::fs']]],
+  ['predicate_5ft_6721',['predicate_t',['../a01370.html#ae1d1a81a6bf6122f9e81f30d2ed87660',1,'lumex::xml::types::Types']]],
+  ['pumpstate_6722',['PumpState',['../a00785.html#ad546a4d1e497933db5d6e8364b0756e9',1,'example_format_custom.cpp']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XPathVariable.hpp File Reference</title>
+<title>LumexLib: example_filesystem.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,87 +94,98 @@ $(document).ready(function(){initNavTree('a00770.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">XPathVariable.hpp File Reference</div>  </div>
+<div class="title">example_filesystem.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00557_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00311_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00644_source.html">lumex/xml/types/XmlTypes.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00653_source.html">lumex/xml/utility/XmlUtils.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00722_source.html">lumex/xml/xpath/node/XPathNodeSet.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;lumex/core/filesystem/LumexFilesystem&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for XPathVariable.hpp:</div>
+Include dependency graph for example_filesystem.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00771.png" border="0" usemap="#aXPathVariable_8hpp" alt=""/></div>
+<div class="center"><img src="a00771.png" border="0" usemap="#aexample__filesystem_8cpp" alt=""/></div>
+<map name="example__filesystem_8cpp" id="aexample__filesystem_8cpp">
+<area shape="rect" title=" " alt="" coords="99,5,281,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,79,114"/>
+<area shape="rect" title=" " alt="" coords="103,87,183,114"/>
+<area shape="rect" title=" " alt="" coords="207,87,266,114"/>
+<area shape="rect" title=" " alt="" coords="291,80,457,121"/>
+</map>
 </div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00772.png" border="0" usemap="#aXPathVariable_8hppdep" alt=""/></div>
-</div>
-</div>
-<p><a href="a00770_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02864.html">lumex::xml::xpath::variable::XPathVariable</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for all XPath variables.  <a href="a02864.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02868.html">lumex::xml::xpath::variable::xpath_variable_boolean</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a boolean value.  <a href="a02868.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02872.html">lumex::xml::xpath::variable::xpath_variable_number</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a numeric (double) value.  <a href="a02872.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02876.html">lumex::xml::xpath::variable::xpath_variable_string</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a string value.  <a href="a02876.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02880.html">lumex::xml::xpath::variable::xpath_variable_node_set</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an XPath variable holding a node-set value.  <a href="a02880.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:a00783"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00783.html">lumex</a></td></tr>
-<tr class="memdesc:a00783"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00941"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00941.html">lumex::xml</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00950"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00950.html">lumex::xml::xpath</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00952"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00952.html">lumex::xml::xpath::variable</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad3f6563615631e8b0b1aa522b40dfa6a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad3f6563615631e8b0b1aa522b40dfa6a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00952.html#ad3f6563615631e8b0b1aa522b40dfa6a">lumex::xml::xpath::variable::new_xpath_variable</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *name)</td></tr>
-<tr class="memdesc:ad3f6563615631e8b0b1aa522b40dfa6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function to create a new XPath variable of a specific type.  <a href="a00952.html#ad3f6563615631e8b0b1aa522b40dfa6a">More...</a><br /></td></tr>
-<tr class="separator:ad3f6563615631e8b0b1aa522b40dfa6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafa9cd778123074c80c3b612cf200591"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="el" href="a02864.html">XPathVariable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00952.html#aafa9cd778123074c80c3b612cf200591">lumex::xml::xpath::variable::new_xpath_variable</a> (<a class="el" href="a00958.html#ab45611a4d899512e32aa65eb48a191a5">xpath_value_type</a> type, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *name)</td></tr>
-<tr class="memdesc:aafa9cd778123074c80c3b612cf200591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function to create a new XPath variable based on its type.  <a href="a00952.html#aafa9cd778123074c80c3b612cf200591">More...</a><br /></td></tr>
-<tr class="separator:aafa9cd778123074c80c3b612cf200591"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af345a4b10d92a0a1d798884bdec7d81b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:af345a4b10d92a0a1d798884bdec7d81b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00952.html#af345a4b10d92a0a1d798884bdec7d81b">lumex::xml::xpath::variable::delete_xpath_variable</a> (T *var)</td></tr>
-<tr class="memdesc:af345a4b10d92a0a1d798884bdec7d81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory associated with a specific XPath variable type.  <a href="a00952.html#af345a4b10d92a0a1d798884bdec7d81b">More...</a><br /></td></tr>
-<tr class="separator:af345a4b10d92a0a1d798884bdec7d81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34dc809dfa7a09faa5312e722fd1f76b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00952.html#a34dc809dfa7a09faa5312e722fd1f76b">lumex::xml::xpath::variable::delete_xpath_variable</a> (<a class="el" href="a00958.html#ab45611a4d899512e32aa65eb48a191a5">xpath_value_type</a> type, <a class="el" href="a02864.html">XPathVariable</a> *var)</td></tr>
-<tr class="memdesc:a34dc809dfa7a09faa5312e722fd1f76b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory associated with an XPath variable based on its type.  <a href="a00952.html#a34dc809dfa7a09faa5312e722fd1f76b">More...</a><br /></td></tr>
-<tr class="separator:a34dc809dfa7a09faa5312e722fd1f76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac628acae7559a4191ce6021e4d1d1a33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00952.html#ac628acae7559a4191ce6021e4d1d1a33">lumex::xml::xpath::variable::copy_xpath_variable</a> (<a class="el" href="a02864.html">XPathVariable</a> *lhs, <a class="el" href="a02864.html">XPathVariable</a> const *rhs)</td></tr>
-<tr class="memdesc:ac628acae7559a4191ce6021e4d1d1a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the value of one XPath variable to another.  <a href="a00952.html#ac628acae7559a4191ce6021e4d1d1a33">More...</a><br /></td></tr>
-<tr class="separator:ac628acae7559a4191ce6021e4d1d1a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00770.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00770_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#aa00770_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="a00770_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="aa00770_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,1116,60,1142"/>
+<area shape="rect" href="a02176.html#a1655039e828622916c8d6c9063c3b345" title="Converts a path_arg to its absolute form." alt="" coords="113,1278,288,1334"/>
+<area shape="rect" href="a02176.html#a5b441e7f7be38a0f7dc925a913bd30ed" title="Retrieves the current working directory." alt="" coords="341,520,516,576"/>
+<area shape="rect" href="a02148.html#ae11d814b4f227302b2e33601f426d421" title="Retrieves the encapsulated value (const version)." alt="" coords="820,33,995,89"/>
+<area shape="rect" href="a02156.html#a5b47ccd46e0f3a7e8d45973bab171356" title="Checks if the path is an absolute path." alt="" coords="341,1427,516,1468"/>
+<area shape="rect" href="a02176.html#aa23566d108976aeef3349b7fd6d468aa" title="Copies a single file from one location to another." alt="" coords="341,98,516,154"/>
+<area shape="rect" href="a02176.html#aa72193b43e6c948945b7a5e0d5b075ff" title="Creates all directories in the specified path_arg, including any missing parent directories." alt="" coords="113,1068,288,1124"/>
+<area shape="rect" href="a02176.html#a6a05e2ccdc2eb946a869e5573626c73b" title="Checks if a file or directory exists at the specified path." alt="" coords="581,1037,755,1093"/>
+<area shape="rect" href="a02156.html#a73045c0556f64739ae07add68e64de85" title="Extracts the parent path component from the path." alt="" coords="341,1492,516,1534"/>
+<area shape="rect" href="a02168.html#a7c15c56f89f2f03102b92d60f85eb7f2" title="Checks if the file system entry exists." alt="" coords="113,1198,288,1254"/>
+<area shape="rect" href="a02176.html#aa89d0956ffd5c8092dc0f5145a1f1508" title="Retrieves the size of a regular file in bytes." alt="" coords="341,360,516,416"/>
+<area shape="rect" href="a02156.html#a71514665c6051a141be7bee1f16a02d0" title="Extracts the filename component from the path." alt="" coords="341,1558,516,1599"/>
+<area shape="rect" href="a02168.html#a9914915d328c11852c7e8552dfec60a8" title="Checks if the entry represents a directory." alt="" coords="113,984,288,1040"/>
+<area shape="rect" href="a02168.html#a768c98421d02e1312619029c336c5fb9" title="Checks if the entry represents a regular file." alt="" coords="113,1358,288,1414"/>
+<area shape="rect" href="a02168.html#a00b5e86e8f73c914762532d7eca99bce" title="Retrieves the path of this directory entry." alt="" coords="108,1591,293,1632"/>
+<area shape="rect" href="a02176.html#a82b2a89e33b1d4bb895e689fbb62658e" title="Recursively removes a file or a directory and all its contents." alt="" coords="113,792,288,848"/>
+<area shape="rect" href="a02176.html#afc94576293a350639ea3664c5e2f5177" title="Renames or moves a file or directory." alt="" coords="341,440,516,496"/>
+<area shape="rect" href="a02156.html#a54758ce9dd25cab6d714efd2ac1e8ace" title="Returns a copy of the path as a std::string." alt="" coords="113,1656,288,1698"/>
+<area shape="rect" href="a02176.html#afe6ab80da0b7f0a879eeea45b923d12f" title="Retrieves the path_arg to the system&#39;s temporary directory." alt="" coords="341,178,516,234"/>
+<area shape="rect" href="a02148.html#a384e25734c6d611b763c77caa77aeafc" title="Factory method for creating an unsuccessful filesystem_result." alt="" coords="574,527,762,568"/>
+<area shape="rect" href="a02148.html#a16fa37f602e827cf169d0dfb3b952940" title="Factory method for creating a successful filesystem_result." alt="" coords="575,315,761,356"/>
+<area shape="rect" href="a02156.html#a190cfff3cd6b0d076ebbfcc2daf07796" title="Checks if the path has a root directory component." alt="" coords="564,1362,772,1403"/>
+<area shape="rect" href="a02156.html#aa63fa785a22979bf2238c68f73c0d426" title="Checks if the path has a root name component." alt="" coords="575,1427,761,1468"/>
+<area shape="rect" href="a02156.html#a6f923676a1ec7e8440b21eca9b6d9312" title="Checks if the path is empty." alt="" coords="820,1288,995,1330"/>
+<area shape="rect" href="a02156.html#aef30bd7f207328b1373169bdd34a9863" title="Extracts the root name component from the path." alt="" coords="820,1427,995,1468"/>
+<area shape="rect" href="a02156.html#a3b470303c0431f218eeebe77b8acd417" title="Default constructor. Constructs an empty path." alt="" coords="1043,1486,1217,1527"/>
+<area shape="rect" href="a02156.html#a209b04de0c65852694ca4d9a44d4d9bd" title="Returns a pointer to the null&#45;terminated C&#45;style string representation of the path." alt="" coords="820,814,995,855"/>
+<area shape="rect" href="a02176.html#a1b4564a0b4913cb4f326c18a0b32b68c" title="Creates a new directory at the specified path." alt="" coords="341,781,516,837"/>
+<area shape="rect" href="a02148.html#af6c94c3f8a9c0f511aeaa1ea5674a08d" title="Retrieves the error code if the operation was unsuccessful." alt="" coords="341,1093,516,1149"/>
+<area shape="rect" href="a02176.html#a63e895fa3678c466f520c70bac5defe0" title="Checks if the specified path_arg refers to a directory." alt="" coords="581,897,755,953"/>
+<area shape="rect" href="a02156.html#a64215fe6be8d35c058ca8e3df2ca90a6" title=" " alt="" coords="581,1544,755,1586"/>
+<area shape="rect" href="a02176.html#aa73f6a07077bf3ea37c2a71874c52236" title="Checks if the specified path_arg refers to a regular file." alt="" coords="581,1126,755,1182"/>
+<area shape="rect" href="a02176.html#aef7862c7a312f4ad432b73cd67e483d2" title="Retrieves a vector of all directory_entry objects within the specified directory." alt="" coords="341,600,516,656"/>
+<area shape="rect" href="a02176.html#a07dce5b61b106483c4d12ceabe50eac7" title="Removes a file or an empty directory at the specified path_arg." alt="" coords="341,861,516,917"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_82e0585083a36608bf6220a9fbe911e9.html">xml</a></li><li class="navelem"><a class="el" href="dir_abbe27e9c6b4359d81be14afe0d9fa59.html">xpath</a></li><li class="navelem"><a class="el" href="dir_a4a5d367ab9d8f56e3b7650f63b1e7c8.html">variable</a></li><li class="navelem"><a class="el" href="a00770.html">XPathVariable.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_e8ae4df8b8335e2a73ecf531ee4a4a97.html">examples</a></li><li class="navelem"><a class="el" href="dir_8f9db84a35969067db5a8d90d6b26793.html">filesystem</a></li><li class="navelem"><a class="el" href="a00770.html">example_filesystem.cpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

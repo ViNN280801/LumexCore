@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XmlNamedNodeIterator.cpp File Reference</title>
+<title>LumexLib: LumexOptional.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,37 +94,264 @@ $(document).ready(function(){initNavTree('a00602.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">XmlNamedNodeIterator.cpp File Reference</div>  </div>
+<div class="title">LumexOptional.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00608_source.html">XmlNode.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00308_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00653_source.html">lumex/xml/utility/XmlUtils.hpp</a>&quot;</code><br />
+
+<p>C++11 implementation of <code>std::optional</code> (C++17 feature) providing a type-safe nullable value container.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;initializer_list&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for XmlNamedNodeIterator.cpp:</div>
+Include dependency graph for LumexOptional.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00603.png" border="0" usemap="#aXmlNamedNodeIterator_8cpp" alt=""/></div>
+<div class="center"><img src="a00603.png" border="0" usemap="#aLumexOptional_8hpp" alt=""/></div>
+<map name="LumexOptional_8hpp" id="aLumexOptional_8hpp">
+<area shape="rect" title="C++11 implementation of std::optional (C++17 feature) providing a type&#45;safe nullable value container." alt="" coords="275,5,425,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,92,114"/>
+<area shape="rect" title=" " alt="" coords="116,87,227,114"/>
+<area shape="rect" title=" " alt="" coords="251,87,337,114"/>
+<area shape="rect" title=" " alt="" coords="361,87,453,114"/>
+<area shape="rect" title=" " alt="" coords="477,87,537,114"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="562,80,775,121"/>
+</map>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00602.html#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
-<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div>
+<p><a href="a00602_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02512.html">lumex::core::optional::opt::nullopt_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A tag type used to indicate the absence of a value in <code>optional</code>.  <a href="a02512.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02516.html">lumex::core::optional::opt::nullopt_t::init_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal tag for explicit construction.  <a href="a02516.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02520.html">lumex::core::optional::opt::in_place_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A tag type used to indicate in-place construction of the contained value.  <a href="a02520.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02524.html">lumex::core::optional::opt::in_place_t::init_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal tag for explicit construction.  <a href="a02524.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02528.html">lumex::core::optional::opt::LumexBadOptionalAccess</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception thrown when attempting to access the value of an empty <code>optional</code>.  <a href="a02528.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02532.html">lumex::core::optional::opt::optional&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A C++11 implementation of <code>std::optional</code> for type-safe nullable values.  <a href="a02532.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02536.html">std::hash&lt;::lumex::core::optional::opt::optional&lt; T &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <code>std::hash</code> for Lumex <code>optional</code>.  <a href="a02536.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01236"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01236.html">lumex::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01287"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01287.html">lumex::core::optional</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01288"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01288.html">lumex::core::optional::opt</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01271"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01271.html">std</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:afbb00d6cc5e9b8ea87e69dfe4629f8ff"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:afbb00d6cc5e9b8ea87e69dfe4629f8ff"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a> = <a class="el" href="a02532.html">lumex::core::optional::opt::optional</a>&lt; T &gt;</td></tr>
+<tr class="memdesc:afbb00d6cc5e9b8ea87e69dfe4629f8ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global type alias for <code><a class="el" href="a02532.html" title="A C++11 implementation of std::optional for type-safe nullable values.">lumex::core::optional::opt::optional</a>&lt;T&gt;</code>.  <a href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">More...</a><br /></td></tr>
+<tr class="separator:afbb00d6cc5e9b8ea87e69dfe4629f8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a01391f5171de036594c2ad4d151df37a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a01391f5171de036594c2ad4d151df37a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a01391f5171de036594c2ad4d151df37a">lumex::core::optional::opt::operator==</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;lhs, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:a01391f5171de036594c2ad4d151df37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality comparison operator for two <code>optional</code> objects.  <a href="a01288.html#a01391f5171de036594c2ad4d151df37a">More...</a><br /></td></tr>
+<tr class="separator:a01391f5171de036594c2ad4d151df37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71d57489827b2d427dc28ca69be9b7e8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a71d57489827b2d427dc28ca69be9b7e8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a71d57489827b2d427dc28ca69be9b7e8">lumex::core::optional::opt::operator!=</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;lhs, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:a71d57489827b2d427dc28ca69be9b7e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality comparison operator for two <code>optional</code> objects.  <a href="a01288.html#a71d57489827b2d427dc28ca69be9b7e8">More...</a><br /></td></tr>
+<tr class="separator:a71d57489827b2d427dc28ca69be9b7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff230664c0625a29d6480c616fa2b960"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:aff230664c0625a29d6480c616fa2b960"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#aff230664c0625a29d6480c616fa2b960">lumex::core::optional::opt::operator&lt;</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;lhs, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:aff230664c0625a29d6480c616fa2b960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than comparison operator for two <code>optional</code> objects.  <a href="a01288.html#aff230664c0625a29d6480c616fa2b960">More...</a><br /></td></tr>
+<tr class="separator:aff230664c0625a29d6480c616fa2b960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00abdf776f1b30910f52d5c1b27c4f6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:af00abdf776f1b30910f52d5c1b27c4f6"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#af00abdf776f1b30910f52d5c1b27c4f6">lumex::core::optional::opt::operator&lt;=</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;lhs, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:af00abdf776f1b30910f52d5c1b27c4f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than-or-equal-to comparison operator for two <code>optional</code> objects.  <a href="a01288.html#af00abdf776f1b30910f52d5c1b27c4f6">More...</a><br /></td></tr>
+<tr class="separator:af00abdf776f1b30910f52d5c1b27c4f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a85b5a2474f577da30d0435171dab0"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a87a85b5a2474f577da30d0435171dab0"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a87a85b5a2474f577da30d0435171dab0">lumex::core::optional::opt::operator&gt;</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;lhs, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:a87a85b5a2474f577da30d0435171dab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than comparison operator for two <code>optional</code> objects.  <a href="a01288.html#a87a85b5a2474f577da30d0435171dab0">More...</a><br /></td></tr>
+<tr class="separator:a87a85b5a2474f577da30d0435171dab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cc9372713b94cbe936e93fc135285a2"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a0cc9372713b94cbe936e93fc135285a2"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a0cc9372713b94cbe936e93fc135285a2">lumex::core::optional::opt::operator&gt;=</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;lhs, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;rhs)</td></tr>
+<tr class="memdesc:a0cc9372713b94cbe936e93fc135285a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than-or-equal-to comparison operator for two <code>optional</code> objects.  <a href="a01288.html#a0cc9372713b94cbe936e93fc135285a2">More...</a><br /></td></tr>
+<tr class="separator:a0cc9372713b94cbe936e93fc135285a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9243931d776cd905236a8ee353ab9371"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9243931d776cd905236a8ee353ab9371"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a9243931d776cd905236a8ee353ab9371">lumex::core::optional::opt::operator==</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt, nullopt_t) noexcept</td></tr>
+<tr class="memdesc:a9243931d776cd905236a8ee353ab9371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality comparison between a <code>optional</code> and <code>nullopt</code>.  <a href="a01288.html#a9243931d776cd905236a8ee353ab9371">More...</a><br /></td></tr>
+<tr class="separator:a9243931d776cd905236a8ee353ab9371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07d066806c2c1c73412f7acd84c367c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac07d066806c2c1c73412f7acd84c367c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#ac07d066806c2c1c73412f7acd84c367c">lumex::core::optional::opt::operator==</a> (nullopt_t, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt) noexcept</td></tr>
+<tr class="memdesc:ac07d066806c2c1c73412f7acd84c367c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality comparison between <code>nullopt</code> and a <code>optional</code>.  <a href="a01288.html#ac07d066806c2c1c73412f7acd84c367c">More...</a><br /></td></tr>
+<tr class="separator:ac07d066806c2c1c73412f7acd84c367c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534a891fa74d961c004fd481bad43d6e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a534a891fa74d961c004fd481bad43d6e"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a534a891fa74d961c004fd481bad43d6e">lumex::core::optional::opt::operator!=</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt, nullopt_t) noexcept</td></tr>
+<tr class="memdesc:a534a891fa74d961c004fd481bad43d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality comparison between a <code>optional</code> and <code>nullopt</code>.  <a href="a01288.html#a534a891fa74d961c004fd481bad43d6e">More...</a><br /></td></tr>
+<tr class="separator:a534a891fa74d961c004fd481bad43d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7a5abbd7d963e4275f9fb6600f527f9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad7a5abbd7d963e4275f9fb6600f527f9"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#ad7a5abbd7d963e4275f9fb6600f527f9">lumex::core::optional::opt::operator!=</a> (nullopt_t, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt) noexcept</td></tr>
+<tr class="memdesc:ad7a5abbd7d963e4275f9fb6600f527f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality comparison between <code>nullopt</code> and a <code>optional</code>.  <a href="a01288.html#ad7a5abbd7d963e4275f9fb6600f527f9">More...</a><br /></td></tr>
+<tr class="separator:ad7a5abbd7d963e4275f9fb6600f527f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34a869d04942b3b1743d14fc1d0ed6c3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a34a869d04942b3b1743d14fc1d0ed6c3"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a34a869d04942b3b1743d14fc1d0ed6c3">lumex::core::optional::opt::operator&lt;</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;, nullopt_t) noexcept</td></tr>
+<tr class="memdesc:a34a869d04942b3b1743d14fc1d0ed6c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than comparison between a <code>optional</code> and <code>nullopt</code>.  <a href="a01288.html#a34a869d04942b3b1743d14fc1d0ed6c3">More...</a><br /></td></tr>
+<tr class="separator:a34a869d04942b3b1743d14fc1d0ed6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5454e2832f87701d73a62c283d8a87"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6d5454e2832f87701d73a62c283d8a87"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a6d5454e2832f87701d73a62c283d8a87">lumex::core::optional::opt::operator&lt;</a> (nullopt_t, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt) noexcept</td></tr>
+<tr class="memdesc:a6d5454e2832f87701d73a62c283d8a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than comparison between <code>nullopt</code> and a <code>optional</code>.  <a href="a01288.html#a6d5454e2832f87701d73a62c283d8a87">More...</a><br /></td></tr>
+<tr class="separator:a6d5454e2832f87701d73a62c283d8a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d427703fe629c73b2e6abc94c4ff6b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a82d427703fe629c73b2e6abc94c4ff6b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a82d427703fe629c73b2e6abc94c4ff6b">lumex::core::optional::opt::operator&lt;=</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt, nullopt_t) noexcept</td></tr>
+<tr class="memdesc:a82d427703fe629c73b2e6abc94c4ff6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than-or-equal-to comparison between a <code>optional</code> and <code>nullopt</code>.  <a href="a01288.html#a82d427703fe629c73b2e6abc94c4ff6b">More...</a><br /></td></tr>
+<tr class="separator:a82d427703fe629c73b2e6abc94c4ff6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f995f7911a26250d9b2ad9cb797213a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2f995f7911a26250d9b2ad9cb797213a"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a2f995f7911a26250d9b2ad9cb797213a">lumex::core::optional::opt::operator&lt;=</a> (nullopt_t, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;) noexcept</td></tr>
+<tr class="memdesc:a2f995f7911a26250d9b2ad9cb797213a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than-or-equal-to comparison between <code>nullopt</code> and a <code>optional</code>.  <a href="a01288.html#a2f995f7911a26250d9b2ad9cb797213a">More...</a><br /></td></tr>
+<tr class="separator:a2f995f7911a26250d9b2ad9cb797213a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33967b4dbfa02f1381e1e43b443ca60"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af33967b4dbfa02f1381e1e43b443ca60"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#af33967b4dbfa02f1381e1e43b443ca60">lumex::core::optional::opt::operator&gt;</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt, nullopt_t) noexcept</td></tr>
+<tr class="memdesc:af33967b4dbfa02f1381e1e43b443ca60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than comparison between a <code>optional</code> and <code>nullopt</code>.  <a href="a01288.html#af33967b4dbfa02f1381e1e43b443ca60">More...</a><br /></td></tr>
+<tr class="separator:af33967b4dbfa02f1381e1e43b443ca60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f1b147d4cc4cef6c31114cc9b2c8d7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a61f1b147d4cc4cef6c31114cc9b2c8d7"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a61f1b147d4cc4cef6c31114cc9b2c8d7">lumex::core::optional::opt::operator&gt;</a> (nullopt_t, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;) noexcept</td></tr>
+<tr class="memdesc:a61f1b147d4cc4cef6c31114cc9b2c8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than comparison between <code>nullopt</code> and a <code>optional</code>.  <a href="a01288.html#a61f1b147d4cc4cef6c31114cc9b2c8d7">More...</a><br /></td></tr>
+<tr class="separator:a61f1b147d4cc4cef6c31114cc9b2c8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a94ccb4ddb9a3a7cd4b4cd5a99166e5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7a94ccb4ddb9a3a7cd4b4cd5a99166e5"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a7a94ccb4ddb9a3a7cd4b4cd5a99166e5">lumex::core::optional::opt::operator&gt;=</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;, nullopt_t) noexcept</td></tr>
+<tr class="memdesc:a7a94ccb4ddb9a3a7cd4b4cd5a99166e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than-or-equal-to comparison between a <code>optional</code> and <code>nullopt</code>.  <a href="a01288.html#a7a94ccb4ddb9a3a7cd4b4cd5a99166e5">More...</a><br /></td></tr>
+<tr class="separator:a7a94ccb4ddb9a3a7cd4b4cd5a99166e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad158818fcabfcdb36e45acc5cd43a7b1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad158818fcabfcdb36e45acc5cd43a7b1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#ad158818fcabfcdb36e45acc5cd43a7b1">lumex::core::optional::opt::operator&gt;=</a> (nullopt_t, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt) noexcept</td></tr>
+<tr class="memdesc:ad158818fcabfcdb36e45acc5cd43a7b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than-or-equal-to comparison between <code>nullopt</code> and a <code>optional</code>.  <a href="a01288.html#ad158818fcabfcdb36e45acc5cd43a7b1">More...</a><br /></td></tr>
+<tr class="separator:ad158818fcabfcdb36e45acc5cd43a7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16284bd5facae26a60c3b2c58ec0a58"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:af16284bd5facae26a60c3b2c58ec0a58"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#af16284bd5facae26a60c3b2c58ec0a58">lumex::core::optional::opt::operator==</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt, U const &amp;value)</td></tr>
+<tr class="memdesc:af16284bd5facae26a60c3b2c58ec0a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality comparison between a <code>optional</code> and a value.  <a href="a01288.html#af16284bd5facae26a60c3b2c58ec0a58">More...</a><br /></td></tr>
+<tr class="separator:af16284bd5facae26a60c3b2c58ec0a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4683f12646cd1ff0258729d3365ff96"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:ad4683f12646cd1ff0258729d3365ff96"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#ad4683f12646cd1ff0258729d3365ff96">lumex::core::optional::opt::operator==</a> (T const &amp;value, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;opt)</td></tr>
+<tr class="memdesc:ad4683f12646cd1ff0258729d3365ff96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality comparison between a value and a <code>optional</code>.  <a href="a01288.html#ad4683f12646cd1ff0258729d3365ff96">More...</a><br /></td></tr>
+<tr class="separator:ad4683f12646cd1ff0258729d3365ff96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c79f6d034fbbf990b88bf57e64ce64"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a00c79f6d034fbbf990b88bf57e64ce64"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a00c79f6d034fbbf990b88bf57e64ce64">lumex::core::optional::opt::operator!=</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt, U const &amp;value)</td></tr>
+<tr class="memdesc:a00c79f6d034fbbf990b88bf57e64ce64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality comparison between a <code>optional</code> and a value.  <a href="a01288.html#a00c79f6d034fbbf990b88bf57e64ce64">More...</a><br /></td></tr>
+<tr class="separator:a00c79f6d034fbbf990b88bf57e64ce64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3bbf7283aea39faff19efd9052fcef5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:aa3bbf7283aea39faff19efd9052fcef5"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#aa3bbf7283aea39faff19efd9052fcef5">lumex::core::optional::opt::operator!=</a> (T const &amp;value, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;opt)</td></tr>
+<tr class="memdesc:aa3bbf7283aea39faff19efd9052fcef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality comparison between a value and a <code>optional</code>.  <a href="a01288.html#aa3bbf7283aea39faff19efd9052fcef5">More...</a><br /></td></tr>
+<tr class="separator:aa3bbf7283aea39faff19efd9052fcef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3753b841da5f4bcef862dcc61d364ae2"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a3753b841da5f4bcef862dcc61d364ae2"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a3753b841da5f4bcef862dcc61d364ae2">lumex::core::optional::opt::operator&lt;</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt, U const &amp;value)</td></tr>
+<tr class="memdesc:a3753b841da5f4bcef862dcc61d364ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than comparison between a <code>optional</code> and a value.  <a href="a01288.html#a3753b841da5f4bcef862dcc61d364ae2">More...</a><br /></td></tr>
+<tr class="separator:a3753b841da5f4bcef862dcc61d364ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b21c39c3c94e3b3cc25bd933172ae6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a74b21c39c3c94e3b3cc25bd933172ae6"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a74b21c39c3c94e3b3cc25bd933172ae6">lumex::core::optional::opt::operator&lt;</a> (T const &amp;value, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;opt)</td></tr>
+<tr class="memdesc:a74b21c39c3c94e3b3cc25bd933172ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than comparison between a value and a <code>optional</code>.  <a href="a01288.html#a74b21c39c3c94e3b3cc25bd933172ae6">More...</a><br /></td></tr>
+<tr class="separator:a74b21c39c3c94e3b3cc25bd933172ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4857c58f759a410fa02112efb2f51b15"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a4857c58f759a410fa02112efb2f51b15"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a4857c58f759a410fa02112efb2f51b15">lumex::core::optional::opt::operator&lt;=</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt, U const &amp;value)</td></tr>
+<tr class="memdesc:a4857c58f759a410fa02112efb2f51b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than-or-equal-to comparison between a <code>optional</code> and a value.  <a href="a01288.html#a4857c58f759a410fa02112efb2f51b15">More...</a><br /></td></tr>
+<tr class="separator:a4857c58f759a410fa02112efb2f51b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542041cdb17c1ccaddaa929dc8042ef5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a542041cdb17c1ccaddaa929dc8042ef5"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a542041cdb17c1ccaddaa929dc8042ef5">lumex::core::optional::opt::operator&lt;=</a> (T const &amp;value, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;opt)</td></tr>
+<tr class="memdesc:a542041cdb17c1ccaddaa929dc8042ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than-or-equal-to comparison between a value and a <code>optional</code>.  <a href="a01288.html#a542041cdb17c1ccaddaa929dc8042ef5">More...</a><br /></td></tr>
+<tr class="separator:a542041cdb17c1ccaddaa929dc8042ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90ae1611fdc1df6d5522fe832a758b66"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a90ae1611fdc1df6d5522fe832a758b66"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a90ae1611fdc1df6d5522fe832a758b66">lumex::core::optional::opt::operator&gt;</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt, U const &amp;value)</td></tr>
+<tr class="memdesc:a90ae1611fdc1df6d5522fe832a758b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than comparison between a <code>optional</code> and a value.  <a href="a01288.html#a90ae1611fdc1df6d5522fe832a758b66">More...</a><br /></td></tr>
+<tr class="separator:a90ae1611fdc1df6d5522fe832a758b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa518ed536e85e9423cfa1ca74d8a8c94"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:aa518ed536e85e9423cfa1ca74d8a8c94"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#aa518ed536e85e9423cfa1ca74d8a8c94">lumex::core::optional::opt::operator&gt;</a> (T const &amp;value, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;opt)</td></tr>
+<tr class="memdesc:aa518ed536e85e9423cfa1ca74d8a8c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than comparison between a value and a <code>optional</code>.  <a href="a01288.html#aa518ed536e85e9423cfa1ca74d8a8c94">More...</a><br /></td></tr>
+<tr class="separator:aa518ed536e85e9423cfa1ca74d8a8c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f8b6bcb7c3b5b948de018c57ecf6207"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a3f8b6bcb7c3b5b948de018c57ecf6207"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a3f8b6bcb7c3b5b948de018c57ecf6207">lumex::core::optional::opt::operator&gt;=</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; const &amp;opt, U const &amp;value)</td></tr>
+<tr class="memdesc:a3f8b6bcb7c3b5b948de018c57ecf6207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than-or-equal-to comparison between a <code>optional</code> and a value.  <a href="a01288.html#a3f8b6bcb7c3b5b948de018c57ecf6207">More...</a><br /></td></tr>
+<tr class="separator:a3f8b6bcb7c3b5b948de018c57ecf6207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d421d592c3671af72ae8af907d7f1ca"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a8d421d592c3671af72ae8af907d7f1ca"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a8d421d592c3671af72ae8af907d7f1ca">lumex::core::optional::opt::operator&gt;=</a> (T const &amp;value, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; U &gt; const &amp;opt)</td></tr>
+<tr class="memdesc:a8d421d592c3671af72ae8af907d7f1ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than-or-equal-to comparison between a value and a <code>optional</code>.  <a href="a01288.html#a8d421d592c3671af72ae8af907d7f1ca">More...</a><br /></td></tr>
+<tr class="separator:a8d421d592c3671af72ae8af907d7f1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91711f770fb91a024ac472b2820d1c7d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a91711f770fb91a024ac472b2820d1c7d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a91711f770fb91a024ac472b2820d1c7d">lumex::core::optional::opt::swap</a> (<a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; &amp;lhs, <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt; &amp;rhs) noexcept(noexcept(lhs.swap(rhs)))</td></tr>
+<tr class="memdesc:a91711f770fb91a024ac472b2820d1c7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the contents of two <code>optional</code> objects.  <a href="a01288.html#a91711f770fb91a024ac472b2820d1c7d">More...</a><br /></td></tr>
+<tr class="separator:a91711f770fb91a024ac472b2820d1c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f98c7ef3724d664497289fe54e1c254"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4f98c7ef3724d664497289fe54e1c254"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; typename std::decay&lt; T &gt;::type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a4f98c7ef3724d664497289fe54e1c254">lumex::core::optional::opt::make_optional</a> (T &amp;&amp;value)</td></tr>
+<tr class="memdesc:a4f98c7ef3724d664497289fe54e1c254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <code>optional</code> object containing a copy or move of a value.  <a href="a01288.html#a4f98c7ef3724d664497289fe54e1c254">More...</a><br /></td></tr>
+<tr class="separator:a4f98c7ef3724d664497289fe54e1c254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678fa5c8bf2b78048f22c9401507b490"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:a678fa5c8bf2b78048f22c9401507b490"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a678fa5c8bf2b78048f22c9401507b490">lumex::core::optional::opt::make_optional</a> (Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a678fa5c8bf2b78048f22c9401507b490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <code>optional</code> object by in-place construction.  <a href="a01288.html#a678fa5c8bf2b78048f22c9401507b490">More...</a><br /></td></tr>
+<tr class="separator:a678fa5c8bf2b78048f22c9401507b490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79d877dc3cb0858b4da29e33840bf64c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U , typename... Args&gt; </td></tr>
+<tr class="memitem:a79d877dc3cb0858b4da29e33840bf64c"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01288.html#a79d877dc3cb0858b4da29e33840bf64c">lumex::core::optional::opt::make_optional</a> (std::initializer_list&lt; U &gt; ilist, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a79d877dc3cb0858b4da29e33840bf64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <code>optional</code> object by in-place construction with an initializer list.  <a href="a01288.html#a79d877dc3cb0858b4da29e33840bf64c">More...</a><br /></td></tr>
+<tr class="separator:a79d877dc3cb0858b4da29e33840bf64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2a333622703b36bee2d00ee4a0db592d"><td class="memItemLeft" align="right" valign="top">constexpr nullopt_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01288.html#a2a333622703b36bee2d00ee4a0db592d">lumex::core::optional::opt::nullopt</a> { nullopt_t::init_tag{} }</td></tr>
+<tr class="memdesc:a2a333622703b36bee2d00ee4a0db592d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constant of type <code><a class="el" href="a02512.html" title="A tag type used to indicate the absence of a value in optional.">nullopt_t</a></code> used to represent an empty <code>optional</code>.  <a href="a01288.html#a2a333622703b36bee2d00ee4a0db592d">More...</a><br /></td></tr>
+<tr class="separator:a2a333622703b36bee2d00ee4a0db592d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8743f2f5ccde67bb2a2a60518e23cedd"><td class="memItemLeft" align="right" valign="top">constexpr in_place_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01288.html#a8743f2f5ccde67bb2a2a60518e23cedd">lumex::core::optional::opt::in_place</a> { in_place_t::init_tag{} }</td></tr>
+<tr class="memdesc:a8743f2f5ccde67bb2a2a60518e23cedd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constant of type <code><a class="el" href="a02520.html" title="A tag type used to indicate in-place construction of the contained value.">in_place_t</a></code> used for in-place construction.  <a href="a01288.html#a8743f2f5ccde67bb2a2a60518e23cedd">More...</a><br /></td></tr>
+<tr class="separator:a8743f2f5ccde67bb2a2a60518e23cedd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a07486181f1990291c2a348de8eb4c480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&nbsp;</a></span>LUMEX_IMPLEMENTATION</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>C++11 implementation of <code>std::optional</code> (C++17 feature) providing a type-safe nullable value container. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>This header provides a comprehensive, cross-platform implementation of an <code>optional</code> type, mirroring the functionality of <code>std::optional</code> from C++17. It allows for safe encapsulation of a value that may or may not be present, thereby preventing common pitfalls associated with <code>nullptr</code> or sentinel values. The implementation adheres strictly to C++11 standards, utilizing advanced template metaprogramming (SFINAE, <code>std::aligned_storage</code>, <code>std::type_traits</code>) and move semantics for efficiency. It is designed to be exception-safe, providing a custom exception type <code>LumexBadOptionalAccess</code> for invalid access attempts. The class supports various constructors (default, copy, move, in-place, value-based), assignment operators, observers (<code>has_value</code>, <code>value</code>, <code>value_or</code>, <code>operator*</code>, <code>operator-&gt;</code>), and modifiers (<code>swap</code>, <code>reset</code>, <code>emplace</code>). Non-member comparison operators and <code>std::hash</code> specialization are also provided for full compatibility and usability. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="afbb00d6cc5e9b8ea87e69dfe4629f8ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbb00d6cc5e9b8ea87e69dfe4629f8ff">&#9670;&nbsp;</a></span>optional</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
+          <td class="memname">using <a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">optional</a> =  <a class="el" href="a02532.html">lumex::core::optional::opt::optional</a>&lt;T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Global type alias for <code><a class="el" href="a02532.html" title="A C++11 implementation of std::optional for type-safe nullable values.">lumex::core::optional::opt::optional</a>&lt;T&gt;</code>. </p>
+<p>This allows <code>optional</code> to be used without full namespace qualification, improving readability and making it behave more like <code>std::optional</code>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the value to be held. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -133,7 +360,7 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_82e0585083a36608bf6220a9fbe911e9.html">xml</a></li><li class="navelem"><a class="el" href="dir_6da506c1997c1de0e8ca69f6f42e5feb.html">node</a></li><li class="navelem"><a class="el" href="a00602.html">XmlNamedNodeIterator.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2eed78fa94d1e9faad02cb0657b7390b.html">core</a></li><li class="navelem"><a class="el" href="dir_9669aebcb67621c55bde5b6a59fa609b.html">optional</a></li><li class="navelem"><a class="el" href="dir_626d756ae48599a658a004880e86ef23.html">opt</a></li><li class="navelem"><a class="el" href="a00602.html">LumexOptional.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

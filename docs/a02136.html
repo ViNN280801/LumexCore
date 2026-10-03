@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::temporary::tmp::TemporaryFile Class Reference</title>
+<title>LumexLib: lumex::core::expected::result::success_t&lt; void &gt; Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -97,171 +97,43 @@ $(document).ready(function(){initNavTree('a02136.html',''); initResizable(); });
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a02133.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::temporary::tmp::TemporaryFile Class Reference</div>  </div>
+<div class="title">lumex::core::expected::result::success_t&lt; void &gt; Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>RAII wrapper for temporary file management.  
+<p>Marker returned by <a class="el" href="a01274.html#aedb3e518171a625ee1b9cad9e0fc1b73" title="Creates a marker for a successful call that carries no value.">success()</a>: a successful call with no value.  
  <a href="a02136.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00290_source.html">LumexTemporary.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00575_source.html">SuccessFailure.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a71ab0f81921fc71b8675d6684f4367e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02136.html#a71ab0f81921fc71b8675d6684f4367e3">TemporaryFile</a> ()</td></tr>
-<tr class="separator:a71ab0f81921fc71b8675d6684f4367e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa41ee2c55dab4f972aa06cbf256cc335"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02136.html#aa41ee2c55dab4f972aa06cbf256cc335">TemporaryFile</a> (<a class="el" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a> const &amp;<a class="el" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">path</a>)</td></tr>
-<tr class="separator:aa41ee2c55dab4f972aa06cbf256cc335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab427d48d1e6d2b7983cbafefed4d9a7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02136.html#ab427d48d1e6d2b7983cbafefed4d9a7c">~TemporaryFile</a> ()</td></tr>
-<tr class="separator:ab427d48d1e6d2b7983cbafefed4d9a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bbda4ea602536835f593d39d35682f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02136.html#a3bbda4ea602536835f593d39d35682f3">TemporaryFile</a> (<a class="el" href="a02136.html">TemporaryFile</a> const &amp;)=delete</td></tr>
-<tr class="separator:a3bbda4ea602536835f593d39d35682f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22f117d3fda8e440c1039e606dacbdb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02136.html">TemporaryFile</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02136.html#a22f117d3fda8e440c1039e606dacbdb2">operator=</a> (<a class="el" href="a02136.html">TemporaryFile</a> const &amp;)=delete</td></tr>
-<tr class="separator:a22f117d3fda8e440c1039e606dacbdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e7d86c1488b63c866e3c23f3710fa2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02136.html#a3e7d86c1488b63c866e3c23f3710fa2b">TemporaryFile</a> (<a class="el" href="a02136.html">TemporaryFile</a> &amp;&amp;other) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a3e7d86c1488b63c866e3c23f3710fa2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ca3f5c738fa45a1a2d09ae58826c3df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02136.html">TemporaryFile</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02136.html#a3ca3f5c738fa45a1a2d09ae58826c3df">operator=</a> (<a class="el" href="a02136.html">TemporaryFile</a> &amp;&amp;other) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a3ca3f5c738fa45a1a2d09ae58826c3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a038ffc292c852e3d73db9e179f885125"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a> const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02136.html#a038ffc292c852e3d73db9e179f885125">path</a> () const</td></tr>
-<tr class="separator:a038ffc292c852e3d73db9e179f885125"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5418e0e0a3300644a869c26225e2c107"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02136.html#a5418e0e0a3300644a869c26225e2c107">is_valid</a> () const</td></tr>
-<tr class="separator:a5418e0e0a3300644a869c26225e2c107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f54384cf908b20e190be61f5ca3fce9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02136.html#a7f54384cf908b20e190be61f5ca3fce9">release</a> ()</td></tr>
-<tr class="separator:a7f54384cf908b20e190be61f5ca3fce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa983fea4af1c23893276cd9de323ab0a"><td class="memTemplParams" colspan="2">template&lt;typename Target , typename ErrorType , typename  = typename std::enable_if&lt;                std::is_default_constructible&lt;Target&gt;::value&gt;::type&gt; </td></tr>
+<tr class="memitem:aa983fea4af1c23893276cd9de323ab0a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a02136.html#aa983fea4af1c23893276cd9de323ab0a">operator Expected&lt; Target, ErrorType &gt;</a> () const</td></tr>
+<tr class="memdesc:aa983fea4af1c23893276cd9de323ab0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion into a successful <code><a class="el" href="a02104.html">Expected</a>&lt;Target, ErrorType&gt;</code>.  <a href="a02136.html#aa983fea4af1c23893276cd9de323ab0a">More...</a><br /></td></tr>
+<tr class="separator:aa983fea4af1c23893276cd9de323ab0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4deed81fff2b82c4e57205fd3babe99d"><td class="memTemplParams" colspan="2">template&lt;typename ErrorType &gt; </td></tr>
+<tr class="memitem:a4deed81fff2b82c4e57205fd3babe99d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a02136.html#a4deed81fff2b82c4e57205fd3babe99d">operator Expected&lt; void, ErrorType &gt;</a> () const</td></tr>
+<tr class="memdesc:a4deed81fff2b82c4e57205fd3babe99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion into a successful <code><a class="el" href="a02104.html">Expected</a>&lt;void, ErrorType&gt;</code>.  <a href="a02136.html#a4deed81fff2b82c4e57205fd3babe99d">More...</a><br /></td></tr>
+<tr class="separator:a4deed81fff2b82c4e57205fd3babe99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>RAII wrapper for temporary file management. </p>
-<p>Automatically removes temporary file when destroyed </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a71ab0f81921fc71b8675d6684f4367e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71ab0f81921fc71b8675d6684f4367e3">&#9670;&nbsp;</a></span>TemporaryFile() <span class="overload">[1/4]</span></h2>
+<div class="textblock"><p>Marker returned by <a class="el" href="a01274.html#aedb3e518171a625ee1b9cad9e0fc1b73" title="Creates a marker for a successful call that carries no value.">success()</a>: a successful call with no value. </p>
+<p>Converts into <code><a class="el" href="a02104.html">Expected</a>&lt;void, ErrorType&gt;</code> (success without a value) or into <code><a class="el" href="a02104.html">Expected</a>&lt;Target, ErrorType&gt;</code> when <code>Target</code> is default-constructible; the <code>void</code> success type is what keeps the two conversions from competing. </p><dl class="section note"><dt>Note</dt><dd>Stateless: it carries no data. </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa983fea4af1c23893276cd9de323ab0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa983fea4af1c23893276cd9de323ab0a">&#9670;&nbsp;</a></span>operator Expected&lt; Target, ErrorType &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Target , typename ErrorType , typename  = typename std::enable_if&lt;                std::is_default_constructible&lt;Target&gt;::value&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lumex::core::temporary::tmp::TemporaryFile::TemporaryFile </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa41ee2c55dab4f972aa06cbf256cc335"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa41ee2c55dab4f972aa06cbf256cc335">&#9670;&nbsp;</a></span>TemporaryFile() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> lumex::core::temporary::tmp::TemporaryFile::TemporaryFile </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a> const &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab427d48d1e6d2b7983cbafefed4d9a7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab427d48d1e6d2b7983cbafefed4d9a7c">&#9670;&nbsp;</a></span>~TemporaryFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> lumex::core::temporary::tmp::TemporaryFile::~TemporaryFile </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02136_ab427d48d1e6d2b7983cbafefed4d9a7c_cgraph.png" border="0" usemap="#aa02136_ab427d48d1e6d2b7983cbafefed4d9a7c_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a3bbda4ea602536835f593d39d35682f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bbda4ea602536835f593d39d35682f3">&#9670;&nbsp;</a></span>TemporaryFile() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::core::temporary::tmp::TemporaryFile::TemporaryFile </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02136.html">TemporaryFile</a> const &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3e7d86c1488b63c866e3c23f3710fa2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e7d86c1488b63c866e3c23f3710fa2b">&#9670;&nbsp;</a></span>TemporaryFile() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> lumex::core::temporary::tmp::TemporaryFile::TemporaryFile </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02136.html">TemporaryFile</a> &amp;&amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5418e0e0a3300644a869c26225e2c107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5418e0e0a3300644a869c26225e2c107">&#9670;&nbsp;</a></span>is_valid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool lumex::core::temporary::tmp::TemporaryFile::is_valid </td>
+          <td class="memname"><a class="el" href="a02132.html">lumex::core::expected::result::success_t</a>&lt; void &gt;::operator <a class="el" href="a02104.html">Expected</a>&lt; Target, ErrorType &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -274,68 +146,32 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Implicit conversion into a successful <code><a class="el" href="a02104.html">Expected</a>&lt;Target, ErrorType&gt;</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Target</td><td>Success type; must be default-constructible. </td></tr>
+    <tr><td class="paramname">ErrorType</td><td>Error type of the produced <code><a class="el" href="a02104.html">Expected</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="a02104.html">Expected</a>&lt;Target, ErrorType&gt;</code> in the success state, holding a default-constructed value. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Removed by SFINAE when <code>Target</code> is not default-constructible (<code>void</code> included), which sends <code><a class="el" href="a02104.html">Expected</a>&lt;void, E&gt;</code> to the overload below. </dd></dl>
+
 </div>
 </div>
-<a id="a3ca3f5c738fa45a1a2d09ae58826c3df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ca3f5c738fa45a1a2d09ae58826c3df">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a4deed81fff2b82c4e57205fd3babe99d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4deed81fff2b82c4e57205fd3babe99d">&#9670;&nbsp;</a></span>operator Expected&lt; void, ErrorType &gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02136.html">TemporaryFile</a> &amp; lumex::core::temporary::tmp::TemporaryFile::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02136.html">TemporaryFile</a> &amp;&amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02136_a3ca3f5c738fa45a1a2d09ae58826c3df_cgraph.png" border="0" usemap="#aa02136_a3ca3f5c738fa45a1a2d09ae58826c3df_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a22f117d3fda8e440c1039e606dacbdb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22f117d3fda8e440c1039e606dacbdb2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ErrorType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a02136.html">TemporaryFile</a>&amp; lumex::core::temporary::tmp::TemporaryFile::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02136.html">TemporaryFile</a> const &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a038ffc292c852e3d73db9e179f885125"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a038ffc292c852e3d73db9e179f885125">&#9670;&nbsp;</a></span>path()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a> const&amp; lumex::core::temporary::tmp::TemporaryFile::path </td>
+          <td class="memname"><a class="el" href="a02132.html">lumex::core::expected::result::success_t</a>&lt; void &gt;::operator <a class="el" href="a02104.html">Expected</a>&lt; void, ErrorType &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -348,35 +184,26 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a7f54384cf908b20e190be61f5ca3fce9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f54384cf908b20e190be61f5ca3fce9">&#9670;&nbsp;</a></span>release()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void lumex::core::temporary::tmp::TemporaryFile::release </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Implicit conversion into a successful <code><a class="el" href="a02104.html">Expected</a>&lt;void, ErrorType&gt;</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ErrorType</td><td>Error type of the produced <code><a class="el" href="a02104.html">Expected</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="a02104.html">Expected</a>&lt;void, ErrorType&gt;</code> in the success state. </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00290_source.html">LumexTemporary.hpp</a></li>
-<li><a class="el" href="a00287.html">LumexTemporary.cpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00575_source.html">SuccessFailure.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00892.html">temporary</a></li><li class="navelem"><a class="el" href="a00893.html">tmp</a></li><li class="navelem"><a class="el" href="a02136.html">TemporaryFile</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01272.html">expected</a></li><li class="navelem"><a class="el" href="a01274.html">result</a></li><li class="navelem"><a class="el" href="a02136.html">success_t&lt; void &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -1,4 +1,0 @@
-var a00488 =
-[
-    [ "LUMEX_DEFINE_REFLECTED_ENUM", "a00488.html#a20e1d5331a307466afa028b33ec474d8", null ]
-];

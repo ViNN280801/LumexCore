@@ -1,11 +1,10 @@
 var a01396 =
 [
-    [ "ValueType", "a01396.html#a11648ac7ebdb381415f58a101acc274b", null ],
-    [ "kCatalogCheck", "a01396.html#a84b7c750281d3c5a9741fc5de2b07c97", null ],
-    [ "kInit", "a01396.html#a8abbde0525c7a6fb52e6aba19bde7f0c", null ],
-    [ "kPoly", "a01396.html#a1265ab3a1f0fca79730a1b969873ce04", null ],
-    [ "kRefIn", "a01396.html#a64d980088aa74072fbd143a54ef1b119", null ],
-    [ "kRefOut", "a01396.html#aae9cf6e28a86e7af430bc4ab1b12256d", null ],
-    [ "kWidth", "a01396.html#ad423968aaee5a3333534e21d366431a1", null ],
-    [ "kXorOut", "a01396.html#a6a86e37f6546395ab063e3660db070e5", null ]
+    [ "cpu_core_count", "a01396.html#a746a33fe428ecc68641d6807292694d2", null ],
+    [ "cpu_frequency_mhz", "a01396.html#ab38d984c734feb52892eb580cffbeb13", null ],
+    [ "cpu_generation", "a01396.html#a5479f29816446c85b122a6b68bbd8124", null ],
+    [ "cpu_name", "a01396.html#a4eafec39633f8c3a5e596c13c86aebf3", null ],
+    [ "gpu_name", "a01396.html#ad25f2a59a1dcab8a231ac1169bc3d9ab", null ],
+    [ "has_discrete_gpu", "a01396.html#a7a3f925ce6a4fec8fa3f46b0c4cfdef1", null ],
+    [ "total_memory_mb", "a01396.html#a5951b3c9677bc9491fc08c68e65f085c", null ]
 ];

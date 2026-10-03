@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexExport.hpp File Reference</title>
+<title>LumexLib: LumexStacktraceEntry.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,138 +94,97 @@ $(document).ready(function(){initNavTree('a00557.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">LumexExport.hpp File Reference</div>  </div>
+<div class="title">LumexStacktraceEntry.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>Defines the LumexStacktraceEntry class, representing a single frame in a call stack.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00917_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for LumexStacktraceEntry.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00558.png" border="0" usemap="#aLumexStacktraceEntry_8hpp" alt=""/></div>
+<map name="LumexStacktraceEntry_8hpp" id="aLumexStacktraceEntry_8hpp">
+<area shape="rect" title="Defines the LumexStacktraceEntry class, representing a single frame in a call stack." alt="" coords="243,5,437,32"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="5,87,187,114"/>
+<area shape="rect" title=" " alt="" coords="211,87,282,114"/>
+<area shape="rect" title=" " alt="" coords="307,87,373,114"/>
+<area shape="rect" title=" " alt="" coords="397,87,456,114"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="480,80,693,121"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00559.png" border="0" usemap="#aLumexStacktraceEntry_8hppdep" alt=""/></div>
+<map name="LumexStacktraceEntry_8hppdep" id="aLumexStacktraceEntry_8hppdep">
+<area shape="rect" title="Defines the LumexStacktraceEntry class, representing a single frame in a call stack." alt="" coords="181,5,375,32"/>
+<area shape="rect" href="a00551.html" title="Defines the LumexBasicStacktrace class and related utilities for capturing and symbolizing call stack..." alt="" coords="95,80,258,107"/>
+<area shape="rect" href="a00554.html" title=" " alt="" coords="282,80,477,107"/>
+<area shape="rect" href="a00539.html" title=" " alt="" coords="5,155,164,181"/>
+<area shape="rect" href="a00548.html" title=" " alt="" coords="189,155,351,181"/>
+<area shape="rect" href="a00536.html" title=" " alt="" coords="6,229,163,256"/>
+</map>
+</div>
+</div>
 <p><a href="a00557_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:acaff4c6bbcf06a700c96ca83292c16ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00557.html#acaff4c6bbcf06a700c96ca83292c16ac">LUMEX_EXTERN_C_BEGIN</a></td></tr>
-<tr class="separator:acaff4c6bbcf06a700c96ca83292c16ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5051b73e2d3303e7e2718073a3dd2f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00557.html#aa5051b73e2d3303e7e2718073a3dd2f4">LUMEX_EXTERN_C_END</a></td></tr>
-<tr class="separator:aa5051b73e2d3303e7e2718073a3dd2f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa948a1b1a43f6a954fd4c15b01ae4207"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></td></tr>
-<tr class="separator:aa948a1b1a43f6a954fd4c15b01ae4207"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fcdc1371159ad0c9788ea500312a415"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00557.html#a2fcdc1371159ad0c9788ea500312a415">LUMEX_UTILITY_API</a></td></tr>
-<tr class="separator:a2fcdc1371159ad0c9788ea500312a415"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8605dc551b9046fdc3f9627b65fa40b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00557.html#a8605dc551b9046fdc3f9627b65fa40b0">LUMEX_PUBLIC_C_API</a>&#160;&#160;&#160;extern &quot;C&quot; LUMEX_API</td></tr>
-<tr class="memdesc:a8605dc551b9046fdc3f9627b65fa40b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macros for marking functions that should be available from outside.  <a href="a00557.html#a8605dc551b9046fdc3f9627b65fa40b0">More...</a><br /></td></tr>
-<tr class="separator:a8605dc551b9046fdc3f9627b65fa40b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1cae46ea7dbf5398bbb2a0bdd2cf917"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a>&#160;&#160;&#160;<a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></td></tr>
-<tr class="separator:ad1cae46ea7dbf5398bbb2a0bdd2cf917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02088.html">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a single entry (frame) in a stacktrace.  <a href="a02088.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02092.html">std::hash&lt; lumex::core::exceptions::stacktrace::LumexStacktraceEntry &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partial specialization of <code>std::hash</code> for <code><a class="el" href="a02088.html" title="Represents a single entry (frame) in a stacktrace.">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a></code>.  <a href="a02092.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01236"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01236.html">lumex::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01263"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01263.html">lumex::core::exceptions</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01269"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01269.html">lumex::core::exceptions::stacktrace</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01271"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01271.html">std</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac393a64f20f699be5771be27754b7764"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01269.html#ac393a64f20f699be5771be27754b7764">lumex::core::exceptions::stacktrace::to_string</a> (<a class="el" href="a00551.html#a3f60ceab597bebfcc580c78610fb5712">LumexStacktraceEntry</a> const &amp;entry)</td></tr>
+<tr class="memdesc:ac393a64f20f699be5771be27754b7764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a <code><a class="el" href="a02088.html" title="Represents a single entry (frame) in a stacktrace.">LumexStacktraceEntry</a></code> object to its string representation.  <a href="a01269.html#ac393a64f20f699be5771be27754b7764">More...</a><br /></td></tr>
+<tr class="separator:ac393a64f20f699be5771be27754b7764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab297f1645680aca9e9391c289250bb96"><td class="memTemplParams" colspan="2">template&lt;typename CharT , typename Traits &gt; </td></tr>
+<tr class="memitem:ab297f1645680aca9e9391c289250bb96"><td class="memTemplItemLeft" align="right" valign="top">std::basic_ostream&lt; CharT, Traits &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01269.html#ab297f1645680aca9e9391c289250bb96">lumex::core::exceptions::stacktrace::operator&lt;&lt;</a> (std::basic_ostream&lt; CharT, Traits &gt; &amp;oss, <a class="el" href="a00551.html#a3f60ceab597bebfcc580c78610fb5712">LumexStacktraceEntry</a> const &amp;entry)</td></tr>
+<tr class="memdesc:ab297f1645680aca9e9391c289250bb96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads the <code>operator&lt;&lt;</code> for <code>std::basic_ostream</code> to print a <code><a class="el" href="a02088.html" title="Represents a single entry (frame) in a stacktrace.">LumexStacktraceEntry</a></code>.  <a href="a01269.html#ab297f1645680aca9e9391c289250bb96">More...</a><br /></td></tr>
+<tr class="separator:ab297f1645680aca9e9391c289250bb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aa948a1b1a43f6a954fd4c15b01ae4207"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa948a1b1a43f6a954fd4c15b01ae4207">&#9670;&nbsp;</a></span>LUMEX_API</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_API</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02902.html#a0">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/applied/hardware/caps/LumexCPUVectorizationCapabilities.hpp</a>, <a class="el" href="a02918.html#a100">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/applied/hardware/caps/LumexHardwareCapabilities.hpp</a>, <a class="el" href="a02922.html#a7">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/applied/resource_monitor/monitor/LumexResourceMonitor.hpp</a>, <a class="el" href="a02924.html#a0">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/environment/env/LumexEnvironment.hpp</a>, <a class="el" href="a02926.html#a0">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/exception/LumexException.hpp</a>, <a class="el" href="a02928.html#a3">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/LumexExceptionWrapper.hpp</a>, <a class="el" href="a02930.html#a0">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/stacktrace/LumexStacktraceEntry.hpp</a>, <a class="el" href="a02932.html#a13">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>, and <a class="el" href="a02934.html#a2">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/timer/LumexTimer.hpp</a>.</dd>
-</dl>
-
-</div>
-</div>
-<a id="acaff4c6bbcf06a700c96ca83292c16ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaff4c6bbcf06a700c96ca83292c16ac">&#9670;&nbsp;</a></span>LUMEX_EXTERN_C_BEGIN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_EXTERN_C_BEGIN</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Defines the LumexStacktraceEntry class, representing a single frame in a call stack. </p>
 <p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
 <p>SPDX-License-Identifier: MIT</p>
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02932.html#a0">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
-</dl>
-
-</div>
-</div>
-<a id="aa5051b73e2d3303e7e2718073a3dd2f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5051b73e2d3303e7e2718073a3dd2f4">&#9670;&nbsp;</a></span>LUMEX_EXTERN_C_END</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_EXTERN_C_END</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02932.html#a17">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/time/clock/LumexTime.hpp</a>.</dd>
-</dl>
-
-</div>
-</div>
-<a id="ad1cae46ea7dbf5398bbb2a0bdd2cf917"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1cae46ea7dbf5398bbb2a0bdd2cf917">&#9670;&nbsp;</a></span>LUMEX_PUBLIC_API</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_PUBLIC_API&#160;&#160;&#160;<a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02918.html#a103">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/applied/hardware/caps/LumexHardwareCapabilities.hpp</a>, and <a class="el" href="a02926.html#a5">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/exception/LumexException.hpp</a>.</dd>
-</dl>
-
-</div>
-</div>
-<a id="a8605dc551b9046fdc3f9627b65fa40b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8605dc551b9046fdc3f9627b65fa40b0">&#9670;&nbsp;</a></span>LUMEX_PUBLIC_C_API</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_PUBLIC_C_API&#160;&#160;&#160;extern &quot;C&quot; LUMEX_API</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Macros for marking functions that should be available from outside. </p>
-
-</div>
-</div>
-<a id="a2fcdc1371159ad0c9788ea500312a415"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fcdc1371159ad0c9788ea500312a415">&#9670;&nbsp;</a></span>LUMEX_UTILITY_API</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_UTILITY_API</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02940.html#a57">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/utility/dump/LumexCoreDumpGenerator.hpp</a>.</dd>
-</dl>
-
-</div>
-</div>
-</div><!-- contents -->
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>This header provides the declaration for the <code>LumexStacktraceEntry</code> class, which encapsulates information about one function call within a stack trace. This includes the raw memory address, and (lazily resolved) human-readable function name, source file path, and line number. It aims to provide an interface similar to the C++23 <code>std::stacktrace_entry</code>. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="a00557.html">LumexExport.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2eed78fa94d1e9faad02cb0657b7390b.html">core</a></li><li class="navelem"><a class="el" href="dir_c5abfa2a5a0424f8cc91dab0edfcaee4.html">exceptions</a></li><li class="navelem"><a class="el" href="dir_a0b23f6384dc05edfed58978996640ca.html">stacktrace</a></li><li class="navelem"><a class="el" href="a00557.html">LumexStacktraceEntry.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

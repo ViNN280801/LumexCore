@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['optional_6278',['optional',['../a00248.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff',1,'LumexOptional.hpp']]]
+  ['native_5fhandle_5ftype_6647',['native_handle_type',['../a02088.html#a1d4b9a643089a0fba09afb211cd8de41',1,'lumex::core::exceptions::stacktrace::LumexStacktraceEntry']]]
 ];

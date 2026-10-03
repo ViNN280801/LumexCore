@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kind_5ftag_6251',['kind_tag',['../a00870.html#a6be2e1c32b37e0c933e89262c2505e8c',1,'lumex::core::fmt::Detail']]]
+  ['json_5fdiagnostic_5ffn_6619',['json_diagnostic_fn',['../a01201.html#ad83f699ef7ef2a17885afcea22d445c5',1,'lumex::applied::json::diagnostics']]]
 ];

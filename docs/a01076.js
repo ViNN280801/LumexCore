@@ -1,9 +1,6 @@
 var a01076 =
 [
-    [ "~ILumexSettings", "a01076.html#a67340373f009ef86ebf93a8c3bd15104", null ],
-    [ "add", "a01076.html#aa62d2c035f9f5262cc3ff5ed0aa090e6", null ],
-    [ "get", "a01076.html#a4dd441bfa740a2514899dfecceb4dd70", null ],
-    [ "load", "a01076.html#a5e8c879f253d759120c2ef9dce35a6fe", null ],
-    [ "remove", "a01076.html#a7dd9c0cca546a7b92b0250f1af966c01", null ],
-    [ "save", "a01076.html#a8c93c820977807fe52ac6dbbf8f3ca4c", null ]
+    [ "XPathNode", "a03320.html", "a03320" ],
+    [ "operator&&", "a01076.html#a0d908f040c4f8067ec34eacbbb099506", null ],
+    [ "operator||", "a01076.html#a99ec5086ce8edac1d6c4772e3f7c91f2", null ]
 ];

@@ -1,17 +1,17 @@
 var searchData=
 [
-  ['unexpect_5ft_4182',['unexpect_t',['../a01668.html',1,'lumex::core::expected::result']]],
-  ['unexpected_4183',['Unexpected',['../a01648.html',1,'lumex::core::expected::error']]],
-  ['unit_4184',['Unit',['../a01664.html',1,'lumex::core::expected::result']]],
-  ['unwrap_5fnamed_4185',['unwrap_named',['../a01784.html',1,'lumex::core::fmt::Detail']]],
-  ['unwrap_5fnamed_3c_20named_5farg_5ft_3c_20char_2c_20t_20_3e_20_3e_4186',['unwrap_named&lt; named_arg_t&lt; Char, T &gt; &gt;',['../a01788.html',1,'lumex::core::fmt::Detail']]],
-  ['utf16_5fcounter_4187',['utf16_counter',['../a02672.html',1,'lumex::xml::utility']]],
-  ['utf16_5fdecoder_4188',['utf16_decoder',['../a02676.html',1,'lumex::xml::utility']]],
-  ['utf16_5fwriter_4189',['utf16_writer',['../a02696.html',1,'lumex::xml::utility']]],
-  ['utf32_5fcounter_4190',['utf32_counter',['../a02700.html',1,'lumex::xml::utility']]],
-  ['utf32_5fdecoder_4191',['utf32_decoder',['../a02680.html',1,'lumex::xml::utility']]],
-  ['utf32_5fwriter_4192',['utf32_writer',['../a02704.html',1,'lumex::xml::utility']]],
-  ['utf8_5fcounter_4193',['utf8_counter',['../a02688.html',1,'lumex::xml::utility']]],
-  ['utf8_5fdecoder_4194',['utf8_decoder',['../a02728.html',1,'lumex::xml::utility']]],
-  ['utf8_5fwriter_4195',['utf8_writer',['../a02692.html',1,'lumex::xml::utility']]]
+  ['unexpect_5ft_4387',['unexpect_t',['../a02120.html',1,'lumex::core::expected::result']]],
+  ['unexpected_4388',['Unexpected',['../a02100.html',1,'lumex::core::expected::error']]],
+  ['unit_4389',['Unit',['../a02116.html',1,'lumex::core::expected::result']]],
+  ['unwrap_5fnamed_4390',['unwrap_named',['../a02244.html',1,'lumex::core::fmt::Detail']]],
+  ['unwrap_5fnamed_3c_20named_5farg_5ft_3c_20char_2c_20t_20_3e_20_3e_4391',['unwrap_named&lt; named_arg_t&lt; Char, T &gt; &gt;',['../a02248.html',1,'lumex::core::fmt::Detail']]],
+  ['utf16_5fcounter_4392',['utf16_counter',['../a03172.html',1,'lumex::xml::utility']]],
+  ['utf16_5fdecoder_4393',['utf16_decoder',['../a03176.html',1,'lumex::xml::utility']]],
+  ['utf16_5fwriter_4394',['utf16_writer',['../a03196.html',1,'lumex::xml::utility']]],
+  ['utf32_5fcounter_4395',['utf32_counter',['../a03200.html',1,'lumex::xml::utility']]],
+  ['utf32_5fdecoder_4396',['utf32_decoder',['../a03180.html',1,'lumex::xml::utility']]],
+  ['utf32_5fwriter_4397',['utf32_writer',['../a03204.html',1,'lumex::xml::utility']]],
+  ['utf8_5fcounter_4398',['utf8_counter',['../a03188.html',1,'lumex::xml::utility']]],
+  ['utf8_5fdecoder_4399',['utf8_decoder',['../a03228.html',1,'lumex::xml::utility']]],
+  ['utf8_5fwriter_4400',['utf8_writer',['../a03192.html',1,'lumex::xml::utility']]]
 ];

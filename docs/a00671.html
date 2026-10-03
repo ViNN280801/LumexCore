@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XmlWriterStream.cpp File Reference</title>
+<title>LumexLib: LumexCallbackSlot.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,45 +94,93 @@ $(document).ready(function(){initNavTree('a00671.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">XmlWriterStream.cpp File Reference</div>  </div>
+<div class="title">LumexCallbackSlot.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00308_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00674_source.html">XmlWriterStream.hpp</a>&quot;</code><br />
+
+<p>Process-wide slot for one consumer-installed function pointer.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for XmlWriterStream.cpp:</div>
+Include dependency graph for LumexCallbackSlot.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00672.png" border="0" usemap="#aXmlWriterStream_8cpp" alt=""/></div>
+<div class="center"><img src="a00672.png" border="0" usemap="#aLumexCallbackSlot_8hpp" alt=""/></div>
+<map name="LumexCallbackSlot_8hpp" id="aLumexCallbackSlot_8hpp">
+<area shape="rect" title="Process&#45;wide slot for one consumer&#45;installed function pointer." alt="" coords="161,5,335,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,72,114"/>
+<area shape="rect" title=" " alt="" coords="97,87,183,114"/>
+<area shape="rect" title=" " alt="" coords="208,87,288,114"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="312,80,501,121"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="525,80,739,121"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="279,169,534,211"/>
+</map>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00671.html#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
-<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00673.png" border="0" usemap="#aLumexCallbackSlot_8hppdep" alt=""/></div>
+<map name="LumexCallbackSlot_8hppdep" id="aLumexCallbackSlot_8hppdep">
+<area shape="rect" title="Process&#45;wide slot for one consumer&#45;installed function pointer." alt="" coords="130,5,305,32"/>
+<area shape="rect" href="a00362.html" title="Process&#45;wide report sink for the non&#45;throwing JSON helpers." alt="" coords="5,80,203,107"/>
+<area shape="rect" href="a00542.html" title=" " alt="" coords="227,80,437,107"/>
+<area shape="rect" href="a00365.html" title="Non&#45;throwing helpers for JSON configuration files and documents." alt="" coords="23,155,185,181"/>
+</map>
+</div>
+</div>
+<p><a href="a00671_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02620.html">lumex::core::utility::callback::LumexCallbackSlot&lt; Tag, Result(Args...)&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02624.html">lumex::core::utility::callback::LumexCallbackSlot&lt; Tag, Result(Args...)&gt;::Scoped</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs a function for the lifetime of the object and restores the previous one on destruction.  <a href="a02624.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01236"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01236.html">lumex::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01308"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01308.html">lumex::core::utility</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01309"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01309.html">lumex::core::utility::callback</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a07486181f1990291c2a348de8eb4c480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&nbsp;</a></span>LUMEX_IMPLEMENTATION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Process-wide slot for one consumer-installed function pointer. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>A library that must not depend on a logging facility (or on any other consumer policy) exposes a hook instead: the consumer installs a plain function pointer, the library calls it, and falls back to its own default when nothing is installed or the installed function throws. <code>LumexCallbackSlot</code> is that hook, written once:</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>my_reporter_tag_t;</div>
+<div class="line"><span class="keyword">using</span> MyReporterSlot</div>
+<div class="line">    = <a class="code" href="a02616.html">lumex::core::utility::callback::LumexCallbackSlot</a>&lt;</div>
+<div class="line">        my_reporter_tag_t, void (<span class="keywordtype">char</span> <span class="keyword">const</span> *)&gt;;</div>
+<div class="line"> </div>
+<div class="line">MyReporterSlot::set (&amp;write_to_my_log);</div>
+<div class="line">MyReporterSlot::invoke_or (&amp;<a class="code" href="a01202.html#ab6f3b82c767e9d70cfc7b4fad75bdf33">write_to_stderr</a>, <span class="stringliteral">&quot;message&quot;</span>);</div>
+</div><!-- fragment --><p><code>Tag</code> keeps two slots with the same signature apart; it may stay an incomplete type. The stored pointer is a <code>std::atomic</code>, so <code>set</code> and <code>invoke_or</code> may race freely.</p>
+<p>Storage is a static data member of the class template. Each binary (executable or shared library) that instantiates a slot has its own copy on Windows. For one slot shared by an executable and a shared library, touch the slot only from a compiled source file of that library and export plain <code>set</code> / <code>get</code> wrapper functions from it. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa02616_html"><div class="ttname"><a href="a02616.html">lumex::core::utility::callback::LumexCallbackSlot</a></div><div class="ttdoc">Primary template; only the function-type specialization below is defined.</div><div class="ttdef"><b>Definition:</b> LumexCallbackSlot.hpp:79</div></div>
+<div class="ttc" id="aa01202_html_ab6f3b82c767e9d70cfc7b4fad75bdf33"><div class="ttname"><a href="a01202.html#ab6f3b82c767e9d70cfc7b4fad75bdf33">lumex::applied::json::diagnostics::Detail::write_to_stderr</a></div><div class="ttdeci">void write_to_stderr(LumexJsonDiagnosticLevel level, char const *message) noexcept</div><div class="ttdoc">Default sink: writes [level] message to std::cerr for warning and error, drops debug and info....</div><div class="ttdef"><b>Definition:</b> LumexJsonDiagnostics.hpp:124</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_82e0585083a36608bf6220a9fbe911e9.html">xml</a></li><li class="navelem"><a class="el" href="dir_e9e6d518e60e678e827ac9f194165849.html">writer</a></li><li class="navelem"><a class="el" href="a00671.html">XmlWriterStream.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2eed78fa94d1e9faad02cb0657b7390b.html">core</a></li><li class="navelem"><a class="el" href="dir_aaa57aed14d71e316a67f95634c796d3.html">utility</a></li><li class="navelem"><a class="el" href="dir_9ae9aee2db8d9e1997c83480d7d6ec5f.html">callback</a></li><li class="navelem"><a class="el" href="a00671.html">LumexCallbackSlot.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

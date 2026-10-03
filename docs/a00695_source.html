@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XPathException.hpp Source File</title>
+<title>LumexLib: LumexConstantMacros.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,114 +94,38 @@ $(document).ready(function(){initNavTree('a00695_source.html',''); initResizable
 
 <div class="header">
   <div class="headertitle">
-<div class="title">XPathException.hpp</div>  </div>
+<div class="title">LumexConstantMacros.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00695.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef LUMEX_XML_XPATH_EXCEPTION_HPP</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define LUMEX_XML_XPATH_EXCEPTION_HPP</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef LUMEX_CORE_UTILITY_MACROS_CONSTANT_MACROS_HPP</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define LUMEX_CORE_UTILITY_MACROS_CONSTANT_MACROS_HPP</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#pragma clang diagnostic push</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wpadded&quot;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#if __has_warning(&quot;-Wunsafe-buffer-usage-in-libc-call&quot;)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage-in-libc-call&quot;</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wcovered-switch-default&quot;</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wswitch-enum&quot;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#if __has_warning(&quot;-Wnrvo&quot;)</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wnrvo&quot;</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wheader-hygiene&quot;</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wundefined-var-template&quot;</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-redundant-constexpr-static-def&quot;</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#if __has_warning(&quot;-Wvariadic-macro-arguments-omitted&quot;)</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wvariadic-macro-arguments-omitted&quot;</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunused-result&quot;</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wextra-semi-stmt&quot;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wexpansion-to-defined&quot;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wexit-time-destructors&quot;</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wundefined-func-template&quot;</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wfloat-equal&quot;</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00308.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00311.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00347.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00746.html">lumex/xml/xpath/parser/XPathParseResult.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">using namespace </span><a class="code" href="a00968.html">lumex::xml::xpath::parser</a>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00783.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00806.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">xml</a></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">namespace </span>xpath</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="a00966.html">   85</a></span>&#160;<span class="keyword">namespace </span>exception</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="a02792.html">   99</a></span>&#160;<span class="keyword">class </span><a class="code" href="a02792.html">XPathException</a> : <span class="keyword">public</span> std::exception</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="a02792.html#ab3b2436d37e88b4c163818a87845d448">  111</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="a02792.html#ab3b2436d37e88b4c163818a87845d448">XPathException</a> (<a class="code" href="a02848.html">xpath_parse_result_t</a> <span class="keyword">const</span> &amp;result_)</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      : m_result (result_)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="a00308.html#abff68c03d1bdde004eb72fe25c9c99c9">LUMEX_ASSERT</a> (m_result.error);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="comment">// Error message should not be discarded.</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <a class="code" href="a00311.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a> (<span class="stringliteral">&quot;Error message should not be discarded.&quot;</span>)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  char const *</div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="a02792.html#a0c72a709c957af6c78cab79456c7d704">  130</a></span>&#160;  what () const <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a><span class="keyword"> override</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> m_result.error;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="comment">// Parse result should not be discarded.</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <a class="code" href="a00311.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a> (<span class="stringliteral">&quot;Parse result should not be discarded.&quot;</span>)</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <a class="code" href="a02848.html">xpath_parse_result_t</a> const &amp;</div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="a02792.html#a2678703f57f432eac3ff97f547b2bbde">  146</a></span>&#160;  result ()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> m_result;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <a class="code" href="a02848.html">xpath_parse_result_t</a> m_result;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;};</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;} <span class="comment">// namespace exception</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;} <span class="comment">// namespace xpath</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;} <span class="comment">// namespace xml</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;} <span class="comment">// namespace lumex</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#pragma clang diagnostic pop</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#endif // !LUMEX_XML_XPATH_EXCEPTION_HPP</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00701.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="a00695.html#ab6144301899a06d23751755672c5a3f7">   45</a></span>&#160;<span class="preprocessor">#define LUMEX_BASE_CONSTANT static LUMEX_INLINE_VARIABLE const</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="a00695.html#ac8388d271f79d02f47b20cfae244900a">  146</a></span>&#160;<span class="preprocessor">#define LUMEX_CONSTINIT_CONSTANT LUMEX_BASE_CONSTANT LUMEX_CONSTINIT</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="a00695.html#a05ab07d7450e90785790f33e19a37763">  147</a></span>&#160;<span class="preprocessor">#define LUMEX_STRING_CONSTANT LUMEX_BASE_CONSTANT char *LUMEX_RESTRICT const</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 202002L</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="a00695.html#aea059f2206580c771f0e532c0102a708">  150</a></span>&#160;<span class="preprocessor">#define LUMEX_CONSTEVAL_FUNCTION LUMEX_CONSTEVAL</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#define LUMEX_CONSTEVAL_FUNCTION LUMEX_CONSTEXPR_FUNCTION</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="a00695.html#aa63e4a30676d4f67d808597f321f416a">  155</a></span>&#160;<span class="preprocessor">#define LUMEX_CONST LUMEX_BASE_CONSTANT</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="a00695.html#a79c537c78fd40b18154a50845e28fb61">  156</a></span>&#160;<span class="preprocessor">#define LUMEX_CONST_STR LUMEX_STRING_CONSTANT</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="a00695.html#a294baa8c8ad4246130f881cd1da7cbe1">  157</a></span>&#160;<span class="preprocessor">#define LUMEX_CONST_NUM LUMEX_CONSTINIT_CONSTANT</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#endif // !LUMEX_CORE_UTILITY_MACROS_CONSTANT_MACROS_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa02848_html"><div class="ttname"><a href="a02848.html">lumex::xml::xpath::parser::xpath_parse_result_t</a></div><div class="ttdoc">Represents the result of an XPath parsing operation.</div><div class="ttdef"><b>Definition:</b> XPathParseResult.hpp:65</div></div>
-<div class="ttc" id="aa00308_html"><div class="ttname"><a href="a00308.html">LumexAssert.hpp</a></div></div>
-<div class="ttc" id="aa02792_html_ab3b2436d37e88b4c163818a87845d448"><div class="ttname"><a href="a02792.html#ab3b2436d37e88b4c163818a87845d448">lumex::xml::xpath::exception::XPathException::XPathException</a></div><div class="ttdeci">XPathException(xpath_parse_result_t const &amp;result_)</div><div class="ttdoc">Constructs an XPathException from a parse result.</div><div class="ttdef"><b>Definition:</b> XPathException.hpp:111</div></div>
-<div class="ttc" id="aa02792_html"><div class="ttname"><a href="a02792.html">lumex::xml::xpath::exception::XPathException</a></div><div class="ttdoc">Exception class for XPath parsing and evaluation errors.</div><div class="ttdef"><b>Definition:</b> XPathException.hpp:100</div></div>
-<div class="ttc" id="aa00308_html_abff68c03d1bdde004eb72fe25c9c99c9"><div class="ttname"><a href="a00308.html#abff68c03d1bdde004eb72fe25c9c99c9">LUMEX_ASSERT</a></div><div class="ttdeci">#define LUMEX_ASSERT(cond)</div><div class="ttdef"><b>Definition:</b> LumexAssert.hpp:82</div></div>
-<div class="ttc" id="aa00311_html"><div class="ttname"><a href="a00311.html">LumexAttributes.hpp</a></div></div>
-<div class="ttc" id="aa00783_html"><div class="ttname"><a href="a00783.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
-<div class="ttc" id="aa00347_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:69</div></div>
-<div class="ttc" id="aa00311_html_af6aeadbda428235a14f147ade9783f8f"><div class="ttname"><a href="a00311.html#af6aeadbda428235a14f147ade9783f8f">LUMEX_ATTRIBUTE_NODISCARD</a></div><div class="ttdeci">#define LUMEX_ATTRIBUTE_NODISCARD(msg)</div><div class="ttdef"><b>Definition:</b> LumexAttributes.hpp:57</div></div>
-<div class="ttc" id="aa00746_html"><div class="ttname"><a href="a00746.html">XPathParseResult.hpp</a></div></div>
-<div class="ttc" id="aa00806_html_a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55"><div class="ttname"><a href="a00806.html#a50817df5a1c7ef0cc99cfb1a2fd513e9a10504904240f7c7a24587ef9209b3f55">lumex::applied::logger::logger_config_format_t::plain_text</a></div><div class="ttdeci">@ plain_text</div><div class="ttdoc">Prefixed KEY=value lines (historical enable_logs).</div></div>
-<div class="ttc" id="aa00968_html"><div class="ttname"><a href="a00968.html">lumex::xml::xpath::parser</a></div><div class="ttdef"><b>Definition:</b> XPathLexer.hpp:56</div></div>
-<div class="ttc" id="aa00347_html"><div class="ttname"><a href="a00347.html">LumexKeywords.hpp</a></div></div>
+<div class="ttc" id="aa00701_html"><div class="ttname"><a href="a00701.html">LumexKeywords.hpp</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_82e0585083a36608bf6220a9fbe911e9.html">xml</a></li><li class="navelem"><a class="el" href="dir_abbe27e9c6b4359d81be14afe0d9fa59.html">xpath</a></li><li class="navelem"><a class="el" href="dir_baebf3af2a4d3bb4ffa36c4a17587680.html">exception</a></li><li class="navelem"><a class="el" href="a00695.html">XPathException.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2eed78fa94d1e9faad02cb0657b7390b.html">core</a></li><li class="navelem"><a class="el" href="dir_aaa57aed14d71e316a67f95634c796d3.html">utility</a></li><li class="navelem"><a class="el" href="dir_e3f214e8a41a41e150fac712d4956bd2.html">macros</a></li><li class="navelem"><a class="el" href="a00695.html">LumexConstantMacros.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

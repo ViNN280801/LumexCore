@@ -1,5 +1,4 @@
 var a02544 =
 [
-    [ "format", "a02544.html#ab327c68a837feec670944807a836e3c1", null ],
-    [ "parse", "a02544.html#a11e47ca8644adfee06ca46cdc3958998", null ]
+    [ "operator Type", "a02544.html#ade0609e7ef3ab2eba72905d7bb8ed686", null ]
 ];

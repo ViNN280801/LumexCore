@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Usage</title>
+<title>LumexLib: lumex::core::utility::traits::value::is_optional&lt; T const &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,36 +94,40 @@ $(document).ready(function(){initNavTree('a02920.html',''); initResizable(); });
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Usage</div>  </div>
+<div class="title">lumex::core::utility::traits::value::is_optional&lt; T const &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Convenience logging macros with automatic function. These macros provide convenient logging with automatic function-name prefixing and message formatting. The macros check the log level at compile time and do nothing if that level is disabled. </p><pre class="fragment">     The macros use LOGGER_FUNCTION_NAME to obtain the current
-</pre><p> function name for the compiler and platform. </p><pre class="fragment">     The macros accept variadic arguments and automatically
-</pre><p> convert them to a string via <a class="el" href="a00807.html#a90be3101461e4b469e1378742b221339">logger_stringify()</a>.</p>
-<dl class="section note"><dt>Note</dt><dd>Each record is prefixed with the thread id: <code>[TID=...]</code> (or after the function name in SHORT/NORMAL/FULL). NONE mode: only <code>[TID=...]</code> and the message text.</dd>
-<dd>
-<code>LOGGER_LOG_*</code> is a generic macro layer suitable for reuse in another project. <code>LUMEX_LOG_*</code> is the project-specific layer for this project (LumexLib); use it in LumexLib and dependent projects.</dd></dl>
-<p>examples: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> myFunction() {</div>
-<div class="line">  <a name="a0"></a><a class="code" href="a00056.html#abfbea31977d704cb7b4d5f6ae124455a">LUMEX_LOG_TRACE</a>(<span class="stringliteral">&quot;Entering function&quot;</span>);</div>
-<div class="line">  <a name="a1"></a><a class="code" href="a00056.html#ab7b05c57e1d02d1ab0c7b5ec811d4ea9">LUMEX_LOG_DEBUG</a>(<span class="stringliteral">&quot;Processing data:&quot;</span>, value, <span class="stringliteral">&quot;bytes&quot;</span>);</div>
-<div class="line">  <a name="a2"></a><a class="code" href="a00056.html#a62f75dde2eb265fe633936159b2e22e4">LUMEX_LOG_INFO</a>(<span class="stringliteral">&quot;Operation completed successfully&quot;</span>);</div>
-<div class="line">  <a name="a3"></a><a class="code" href="a00056.html#a850d2b95aa6fb8beaf14c533186ebe68">LUMEX_LOG_SUCCESS</a>(<span class="stringliteral">&quot;Operation completed successfully&quot;</span>);</div>
-<div class="line">  <a name="a4"></a><a class="code" href="a00056.html#aba90655973284e265ac571c680798180">LUMEX_LOG_WARNING</a>(<span class="stringliteral">&quot;Deprecated API used, consider using:&quot;</span>, newApiName);</div>
-<div class="line">  <a name="a5"></a><a class="code" href="a00056.html#a42a003fef11a406fc11d41170ed70a22">LUMEX_LOG_ERROR</a>(<span class="stringliteral">&quot;Failed to open file:&quot;</span>, filename, <span class="stringliteral">&quot;error code:&quot;</span>,</div>
-<div class="line">errorCode); <a name="a6"></a><a class="code" href="a00056.html#acd4245bd52e70608a99950c62d691f02">LUMEX_LOG_FATAL</a>(<span class="stringliteral">&quot;Critical system error, shutting down&quot;</span>);</div>
-<div class="line">}</div>
-</div><!-- fragment --><div class="fragment"></div><!-- fragment --> </div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::core::utility::traits::value::is_optional&lt; T const &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02919.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01_4_inherit__map" id="alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="25,169,211,225"/>
+<area shape="rect" href="a02916.html" title=" " alt="" coords="5,80,231,121"/>
+<area shape="rect" title=" " alt="" coords="73,5,163,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for lumex::core::utility::traits::value::is_optional&lt; T const &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02918.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01_4_coll__map" id="alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="25,169,211,225"/>
+<area shape="rect" href="a02916.html" title=" " alt="" coords="5,80,231,121"/>
+<area shape="rect" title=" " alt="" coords="73,5,163,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00056_html_acd4245bd52e70608a99950c62d691f02"><div class="ttname"><a href="a00056.html#acd4245bd52e70608a99950c62d691f02">LUMEX_LOG_FATAL</a></div><div class="ttdeci">#define LUMEX_LOG_FATAL(...)</div><div class="ttdef"><b>Definition:</b> LumexLogger.hpp:1607</div></div>
-<div class="ttc" id="aa00056_html_aba90655973284e265ac571c680798180"><div class="ttname"><a href="a00056.html#aba90655973284e265ac571c680798180">LUMEX_LOG_WARNING</a></div><div class="ttdeci">#define LUMEX_LOG_WARNING(...)</div><div class="ttdef"><b>Definition:</b> LumexLogger.hpp:1605</div></div>
-<div class="ttc" id="aa00056_html_a850d2b95aa6fb8beaf14c533186ebe68"><div class="ttname"><a href="a00056.html#a850d2b95aa6fb8beaf14c533186ebe68">LUMEX_LOG_SUCCESS</a></div><div class="ttdeci">#define LUMEX_LOG_SUCCESS(...)</div><div class="ttdef"><b>Definition:</b> LumexLogger.hpp:1604</div></div>
-<div class="ttc" id="aa00056_html_ab7b05c57e1d02d1ab0c7b5ec811d4ea9"><div class="ttname"><a href="a00056.html#ab7b05c57e1d02d1ab0c7b5ec811d4ea9">LUMEX_LOG_DEBUG</a></div><div class="ttdeci">#define LUMEX_LOG_DEBUG(...)</div><div class="ttdef"><b>Definition:</b> LumexLogger.hpp:1602</div></div>
-<div class="ttc" id="aa00056_html_abfbea31977d704cb7b4d5f6ae124455a"><div class="ttname"><a href="a00056.html#abfbea31977d704cb7b4d5f6ae124455a">LUMEX_LOG_TRACE</a></div><div class="ttdeci">#define LUMEX_LOG_TRACE(...)</div><div class="ttdef"><b>Definition:</b> LumexLogger.hpp:1601</div></div>
-<div class="ttc" id="aa00056_html_a62f75dde2eb265fe633936159b2e22e4"><div class="ttname"><a href="a00056.html#a62f75dde2eb265fe633936159b2e22e4">LUMEX_LOG_INFO</a></div><div class="ttdeci">#define LUMEX_LOG_INFO(...)</div><div class="ttdef"><b>Definition:</b> LumexLogger.hpp:1603</div></div>
-<div class="ttc" id="aa00056_html_a42a003fef11a406fc11d41170ed70a22"><div class="ttname"><a href="a00056.html#a42a003fef11a406fc11d41170ed70a22">LUMEX_LOG_ERROR</a></div><div class="ttdeci">#define LUMEX_LOG_ERROR(...)</div><div class="ttdef"><b>Definition:</b> LumexLogger.hpp:1606</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01330.html">value</a></li><li class="navelem"><a class="el" href="a02920.html">is_optional&lt; T const &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::attribute::XmlAttributeIterator Class Reference</title>
+<title>LumexLib: lumex::core::time::clock::LumexTime Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,154 +94,503 @@ $(document).ready(function(){initNavTree('a02608.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a02605.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::attribute::XmlAttributeIterator Class Reference</div>  </div>
+<div class="title">lumex::core::time::clock::LumexTime Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>A bidirectional iterator for traversing attributes of an <code>XmlNode</code>.  
+<p>Provides static utility methods for time and date handling.  
  <a href="a02608.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00608_source.html">XmlNode.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00650_source.html">LumexTime.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:afb38b14f57bcd6f863faf25494d87713"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#afb38b14f57bcd6f863faf25494d87713">difference_type</a> = ptrdiff_t</td></tr>
-<tr class="separator:afb38b14f57bcd6f863faf25494d87713"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe3f178d9ae6f748eab8dc33f515e532"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#abe3f178d9ae6f748eab8dc33f515e532">value_type</a> = <a class="el" href="a02568.html">XmlAttribute</a></td></tr>
-<tr class="separator:abe3f178d9ae6f748eab8dc33f515e532"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36aae774de22be6fbc9a7931828a2b4a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a36aae774de22be6fbc9a7931828a2b4a">pointer</a> = <a class="el" href="a02568.html">XmlAttribute</a> *</td></tr>
-<tr class="separator:a36aae774de22be6fbc9a7931828a2b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaec60e32e53614604657482a7abc3d81"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#aaec60e32e53614604657482a7abc3d81">reference</a> = <a class="el" href="a02568.html">XmlAttribute</a> &amp;</td></tr>
-<tr class="separator:aaec60e32e53614604657482a7abc3d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a577cc058e82bbdd1387d79efceeeab9b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a577cc058e82bbdd1387d79efceeeab9b">iterator_category</a> = std::bidirectional_iterator_tag</td></tr>
-<tr class="separator:a577cc058e82bbdd1387d79efceeeab9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a0d320ac5a52d1d4ff16ad608119f328a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a0d320ac5a52d1d4ff16ad608119f328a">XmlAttributeIterator</a> ()=default</td></tr>
-<tr class="memdesc:a0d320ac5a52d1d4ff16ad608119f328a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Constructs a singular (invalid) attribute iterator.  <a href="a02608.html#a0d320ac5a52d1d4ff16ad608119f328a">More...</a><br /></td></tr>
-<tr class="separator:a0d320ac5a52d1d4ff16ad608119f328a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6604d1cf39d53d97d99dc333c068ecf4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a6604d1cf39d53d97d99dc333c068ecf4">XmlAttributeIterator</a> (<a class="el" href="a02572.html">XmlAttributeBase</a> *ref, <a class="el" href="a02612.html">node::XmlNodeBase</a> *parent)</td></tr>
-<tr class="memdesc:a6604d1cf39d53d97d99dc333c068ecf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an attribute iterator from a raw <code><a class="el" href="a02572.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code> pointer and its parent <code>XmlNodeBase</code> pointer.  <a href="a02608.html#a6604d1cf39d53d97d99dc333c068ecf4">More...</a><br /></td></tr>
-<tr class="separator:a6604d1cf39d53d97d99dc333c068ecf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a396248c645050f7777cdf698e5865e25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a396248c645050f7777cdf698e5865e25">XmlAttributeIterator</a> (<a class="el" href="a02568.html">XmlAttribute</a> const &amp;attr, <a class="el" href="a02596.html">node::XmlNode</a> const &amp;parent)</td></tr>
-<tr class="memdesc:a396248c645050f7777cdf698e5865e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an iterator which points to the specified attribute and knows its parent node.  <a href="a02608.html#a396248c645050f7777cdf698e5865e25">More...</a><br /></td></tr>
-<tr class="separator:a396248c645050f7777cdf698e5865e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac533ec6a48b9ec55038b87ece2982e3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#ac533ec6a48b9ec55038b87ece2982e3e">operator==</a> (<a class="el" href="a02608.html">XmlAttributeIterator</a> const &amp;rhs) const</td></tr>
-<tr class="memdesc:ac533ec6a48b9ec55038b87ece2982e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a02608.html" title="A bidirectional iterator for traversing attributes of an XmlNode.">XmlAttributeIterator</a></code> objects for equality.  <a href="a02608.html#ac533ec6a48b9ec55038b87ece2982e3e">More...</a><br /></td></tr>
-<tr class="separator:ac533ec6a48b9ec55038b87ece2982e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab260a5a79bf3a168d72b7fbec2c198b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#ab260a5a79bf3a168d72b7fbec2c198b3">operator!=</a> (<a class="el" href="a02608.html">XmlAttributeIterator</a> const &amp;rhs) const</td></tr>
-<tr class="memdesc:ab260a5a79bf3a168d72b7fbec2c198b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two <code><a class="el" href="a02608.html" title="A bidirectional iterator for traversing attributes of an XmlNode.">XmlAttributeIterator</a></code> objects for inequality.  <a href="a02608.html#ab260a5a79bf3a168d72b7fbec2c198b3">More...</a><br /></td></tr>
-<tr class="separator:ab260a5a79bf3a168d72b7fbec2c198b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab74ba620a65e3b8e9e375ed8f37598de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02568.html">XmlAttribute</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#ab74ba620a65e3b8e9e375ed8f37598de">operator*</a> () const</td></tr>
-<tr class="memdesc:ab74ba620a65e3b8e9e375ed8f37598de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereferences the iterator to provide access to the current <code><a class="el" href="a02568.html" title="Represents an XML attribute, providing a safe and convenient interface for accessing and modifying it...">XmlAttribute</a></code> object.  <a href="a02608.html#ab74ba620a65e3b8e9e375ed8f37598de">More...</a><br /></td></tr>
-<tr class="separator:ab74ba620a65e3b8e9e375ed8f37598de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd8a4b262079bfeeb389f8faa8dd4d74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02568.html">XmlAttribute</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#abd8a4b262079bfeeb389f8faa8dd4d74">operator-&gt;</a> () const</td></tr>
-<tr class="memdesc:abd8a4b262079bfeeb389f8faa8dd4d74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereferences the iterator to provide pointer-like access to the current <code><a class="el" href="a02568.html" title="Represents an XML attribute, providing a safe and convenient interface for accessing and modifying it...">XmlAttribute</a></code> object.  <a href="a02608.html#abd8a4b262079bfeeb389f8faa8dd4d74">More...</a><br /></td></tr>
-<tr class="separator:abd8a4b262079bfeeb389f8faa8dd4d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ffc999732da94834ff4b9c04d6009fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02608.html">XmlAttributeIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a7ffc999732da94834ff4b9c04d6009fa">operator++</a> ()</td></tr>
-<tr class="memdesc:a7ffc999732da94834ff4b9c04d6009fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-increments the iterator to move to the next attribute in the list.  <a href="a02608.html#a7ffc999732da94834ff4b9c04d6009fa">More...</a><br /></td></tr>
-<tr class="separator:a7ffc999732da94834ff4b9c04d6009fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45845b81f12e954d48a16529e0daa9ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02608.html">XmlAttributeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a45845b81f12e954d48a16529e0daa9ac">operator++</a> (int)</td></tr>
-<tr class="memdesc:a45845b81f12e954d48a16529e0daa9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-increments the iterator to move to the next attribute in the list.  <a href="a02608.html#a45845b81f12e954d48a16529e0daa9ac">More...</a><br /></td></tr>
-<tr class="separator:a45845b81f12e954d48a16529e0daa9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adced785b76c13662152f0aae45842c5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02608.html">XmlAttributeIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#adced785b76c13662152f0aae45842c5d">operator--</a> ()</td></tr>
-<tr class="memdesc:adced785b76c13662152f0aae45842c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-decrements the iterator to move to the previous attribute in the list.  <a href="a02608.html#adced785b76c13662152f0aae45842c5d">More...</a><br /></td></tr>
-<tr class="separator:adced785b76c13662152f0aae45842c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47cd8d80232bb7196cdbf58a43084a2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02608.html">XmlAttributeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a47cd8d80232bb7196cdbf58a43084a2a">operator--</a> (int)</td></tr>
-<tr class="memdesc:a47cd8d80232bb7196cdbf58a43084a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post-decrements the iterator to move to the previous attribute in the list.  <a href="a02608.html#a47cd8d80232bb7196cdbf58a43084a2a">More...</a><br /></td></tr>
-<tr class="separator:a47cd8d80232bb7196cdbf58a43084a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a93c80d4442ba4b50bfd4dd7985283928"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a93c80d4442ba4b50bfd4dd7985283928">node::XmlNode</a></td></tr>
-<tr class="separator:a93c80d4442ba4b50bfd4dd7985283928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a113d414febebf7c1d733970164ffba75"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a113d414febebf7c1d733970164ffba75">get_current_datetime</a> (char const *format=&quot;%d.%m.%Y_%H:%M:%S&quot;)</td></tr>
+<tr class="memdesc:a113d414febebf7c1d733970164ffba75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current date and time formatted as a string.  <a href="a02608.html#a113d414febebf7c1d733970164ffba75">More...</a><br /></td></tr>
+<tr class="separator:a113d414febebf7c1d733970164ffba75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf93fba614d8f13ac35b08457ed07d1"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a2bf93fba614d8f13ac35b08457ed07d1">get_timestamp_ns</a> ()</td></tr>
+<tr class="memdesc:a2bf93fba614d8f13ac35b08457ed07d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gettters for the time since epoch in different time units.  <a href="a02608.html#a2bf93fba614d8f13ac35b08457ed07d1">More...</a><br /></td></tr>
+<tr class="separator:a2bf93fba614d8f13ac35b08457ed07d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a120aff3a2294bdac0446db2a90e5d"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a37a120aff3a2294bdac0446db2a90e5d">get_timestamp_mcs</a> ()</td></tr>
+<tr class="memdesc:a37a120aff3a2294bdac0446db2a90e5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current timestamp in microseconds since epoch.  <a href="a02608.html#a37a120aff3a2294bdac0446db2a90e5d">More...</a><br /></td></tr>
+<tr class="separator:a37a120aff3a2294bdac0446db2a90e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b8dd603822728c1ef65b58fec526bf"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#ab1b8dd603822728c1ef65b58fec526bf">get_timestamp_ms</a> ()</td></tr>
+<tr class="memdesc:ab1b8dd603822728c1ef65b58fec526bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current timestamp in milliseconds since epoch.  <a href="a02608.html#ab1b8dd603822728c1ef65b58fec526bf">More...</a><br /></td></tr>
+<tr class="separator:ab1b8dd603822728c1ef65b58fec526bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed7b3234ba99f194a8fc31fa1a5d992a"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#aed7b3234ba99f194a8fc31fa1a5d992a">get_timestamp_s</a> ()</td></tr>
+<tr class="memdesc:aed7b3234ba99f194a8fc31fa1a5d992a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current timestamp in seconds since epoch.  <a href="a02608.html#aed7b3234ba99f194a8fc31fa1a5d992a">More...</a><br /></td></tr>
+<tr class="separator:aed7b3234ba99f194a8fc31fa1a5d992a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b39855693d9e9daf565907c1fbf752c"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a4b39855693d9e9daf565907c1fbf752c">get_timestamp_min</a> ()</td></tr>
+<tr class="memdesc:a4b39855693d9e9daf565907c1fbf752c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current timestamp in minutes since epoch.  <a href="a02608.html#a4b39855693d9e9daf565907c1fbf752c">More...</a><br /></td></tr>
+<tr class="separator:a4b39855693d9e9daf565907c1fbf752c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc08904ddc164f29e744f08ff28d8c79"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#afc08904ddc164f29e744f08ff28d8c79">get_timestamp_h</a> ()</td></tr>
+<tr class="memdesc:afc08904ddc164f29e744f08ff28d8c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current timestamp in hours since epoch.  <a href="a02608.html#afc08904ddc164f29e744f08ff28d8c79">More...</a><br /></td></tr>
+<tr class="separator:afc08904ddc164f29e744f08ff28d8c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13caacb06c4736489e2b3b81a2efc288"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a13caacb06c4736489e2b3b81a2efc288">get_timestamp_d</a> ()</td></tr>
+<tr class="memdesc:a13caacb06c4736489e2b3b81a2efc288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current timestamp in days since epoch.  <a href="a02608.html#a13caacb06c4736489e2b3b81a2efc288">More...</a><br /></td></tr>
+<tr class="separator:a13caacb06c4736489e2b3b81a2efc288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0d828c26f339865ffc62279d09bb09c"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#af0d828c26f339865ffc62279d09bb09c">get_timestamp_w</a> ()</td></tr>
+<tr class="memdesc:af0d828c26f339865ffc62279d09bb09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current timestamp in weeks since epoch.  <a href="a02608.html#af0d828c26f339865ffc62279d09bb09c">More...</a><br /></td></tr>
+<tr class="separator:af0d828c26f339865ffc62279d09bb09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70738f9566fd61152180d1d9fa21a5d2"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a70738f9566fd61152180d1d9fa21a5d2">get_timestamp_m</a> ()</td></tr>
+<tr class="memdesc:a70738f9566fd61152180d1d9fa21a5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current timestamp in months (approx.) since epoch.  <a href="a02608.html#a70738f9566fd61152180d1d9fa21a5d2">More...</a><br /></td></tr>
+<tr class="separator:a70738f9566fd61152180d1d9fa21a5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f8a7283c43e7fc3a131c65d64063e5f"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a4f8a7283c43e7fc3a131c65d64063e5f">get_timestamp_y</a> ()</td></tr>
+<tr class="memdesc:a4f8a7283c43e7fc3a131c65d64063e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current timestamp in years (approx.) since epoch.  <a href="a02608.html#a4f8a7283c43e7fc3a131c65d64063e5f">More...</a><br /></td></tr>
+<tr class="separator:a4f8a7283c43e7fc3a131c65d64063e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bf10aa4f7ec3937d4783ae43494a031"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#a7bf10aa4f7ec3937d4783ae43494a031">timestamp</a> (std::time_t time_=std::time(nullptr), std::string const &amp;fmt=&quot;%Y%m%d-%H%M%S&quot;)</td></tr>
+<tr class="memdesc:a7bf10aa4f7ec3937d4783ae43494a031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a point in time as a local-time string, with a robust fallback chain.  <a href="a02608.html#a7bf10aa4f7ec3937d4783ae43494a031">More...</a><br /></td></tr>
+<tr class="separator:a7bf10aa4f7ec3937d4783ae43494a031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a0ca1367afae776201d218eb7389cd"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02608.html#ab5a0ca1367afae776201d218eb7389cd">timestamp_ms</a> (std::chrono::system_clock::time_point tp=std::chrono::system_clock::now(), std::string const &amp;fmt=&quot;%Y-%m-%d %H:%M:%S&quot;)</td></tr>
+<tr class="memdesc:ab5a0ca1367afae776201d218eb7389cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a point in time as a local-time string with a millisecond suffix.  <a href="a02608.html#ab5a0ca1367afae776201d218eb7389cd">More...</a><br /></td></tr>
+<tr class="separator:ab5a0ca1367afae776201d218eb7389cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A bidirectional iterator for traversing attributes of an <code>XmlNode</code>. </p>
-<p>This iterator allows standard C++ algorithm usage and range-based for loops over a node's attributes. It wraps an <code><a class="el" href="a02568.html" title="Represents an XML attribute, providing a safe and convenient interface for accessing and modifying it...">XmlAttribute</a></code> object (<code>m_wrap</code>) and keeps a reference to its parent <code>XmlNode</code> for reverse iteration and boundary checks (e.g., finding the last attribute of the parent from a singular iterator). </p><dl class="section note"><dt>Note</dt><dd>The iterator holds a mutable <code><a class="el" href="a02568.html" title="Represents an XML attribute, providing a safe and convenient interface for accessing and modifying it...">XmlAttribute</a></code> to allow its internal pointer to be updated during traversal. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd>XmlNode::attributes_begin() </dd>
+<div class="textblock"><p>Provides static utility methods for time and date handling. </p>
+<p>The <code><a class="el" href="a02608.html" title="Provides static utility methods for time and date handling.">LumexTime</a></code> class offers a convenient, static interface for common time-related operations. It abstracts away platform-specific details and provides a consistent API for retrieving current date/time strings and timestamps in various granularities. All methods are designed to be thread-safe as they primarily involve reading system time and performing calculations without shared mutable state. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a113d414febebf7c1d733970164ffba75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113d414febebf7c1d733970164ffba75">&#9670;&nbsp;</a></span>get_current_datetime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::get_current_datetime </td>
+          <td>(</td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>format</em> = <code>&quot;%d.%m.%Y_%H:%M:%S&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the current date and time formatted as a string. </p>
+<p>This method captures the current system time and formats it according to the specified format string, similar to <code>strftime</code>. It is useful for logging, UI display, or generating timestamped filenames. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>A C-style string specifying the desired date and time format. Uses <code>strftime</code> format codes (e.g., "%Y-%m-%d %H:%M:%S"). Default is Russian format: "%d.%m.%Y_%H:%M:%S". </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code>std::string</code> containing the current date and time in the specified format. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Ensure the format string is valid for <code>strftime</code> on your target platform. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Complexity: Dependent on the length of the formatted string and underlying system calls. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02608_a113d414febebf7c1d733970164ffba75_cgraph.png" border="0" usemap="#aa02608_a113d414febebf7c1d733970164ffba75_cgraph" alt=""/></div>
+<map name="a02608_a113d414febebf7c1d733970164ffba75_cgraph" id="aa02608_a113d414febebf7c1d733970164ffba75_cgraph">
+<area shape="rect" title="Retrieves the current date and time formatted as a string." alt="" coords="5,103,176,159"/>
+<area shape="rect" href="a01279.html#a6a63800323204704cefa342dec4cad40" title="Formats args into a std::string." alt="" coords="224,118,407,145"/>
+<area shape="rect" href="a02320.html#a35c4945345c8128220fd35547bf30cd4" title=" " alt="" coords="455,45,673,87"/>
+<area shape="rect" href="a01279.html#ad58e4f3fe3e3346524c90bd890eb7274" title="Type&#45;erased arguments for vformat; the result refers to args, so use it within the same full expressi..." alt="" coords="477,111,651,152"/>
+<area shape="rect" href="a01279.html#a6a66ed74007e5df85d77507abc4d678f" title=" " alt="" coords="469,177,659,203"/>
+<area shape="rect" href="a01280.html#a28784f0eea53fe86ebc27478f67cfba7" title="Formats into buffer; adds the field offset to errors." alt="" coords="721,169,899,211"/>
+<area shape="rect" href="a02196.html#a329e05370b86e2b2b4753d913141789e" title=" " alt="" coords="958,5,1135,47"/>
+<area shape="rect" href="a02196.html#aad67606228b0c8edfd4fd99da10015a5" title=" " alt="" coords="958,71,1135,112"/>
+<area shape="rect" href="a02312.html#a3dd713d01536b26bfb5296ed498469e6" title=" " alt="" coords="947,136,1147,177"/>
+<area shape="rect" href="a02180.html#a72bf698a0ac82563fc26005d076b0734" title=" " alt="" coords="955,201,1139,243"/>
+<area shape="rect" href="a01280.html#a9fced4d130ed35de9eb22230b7bd6e56" title="Walks a format string and reports literal text, replacement fields and their specifications to handle..." alt="" coords="958,267,1135,308"/>
+<area shape="rect" href="a02180.html#a2258c2578aab0163aa72cef20849e9e9" title=" " alt="" coords="955,332,1139,373"/>
+<area shape="rect" href="a01280.html#a88982bf465776cb8abb61efccd0764d6" title="Parses an arg&#45;id (0, 12, name) at it; leaves it on the character after it." alt="" coords="1195,267,1372,308"/>
+<area shape="rect" href="a01280.html#adaae5d05b7b1928c889b5c429a0ed1bf" title=" " alt="" coords="1420,233,1597,275"/>
+<area shape="rect" href="a01280.html#a9a0112c6db4da55a5ecdb292c7b4a207" title=" " alt="" coords="1420,299,1597,340"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02608_a113d414febebf7c1d733970164ffba75_icgraph.png" border="0" usemap="#aa02608_a113d414febebf7c1d733970164ffba75_icgraph" alt=""/></div>
+<map name="a02608_a113d414febebf7c1d733970164ffba75_icgraph" id="aa02608_a113d414febebf7c1d733970164ffba75_icgraph">
+<area shape="rect" title="Retrieves the current date and time formatted as a string." alt="" coords="399,104,569,160"/>
+<area shape="rect" href="a01484.html#af9bac403ac10a4c027b0b3b3e7242dab" title="Copies filename to a sibling &lt;filename&gt;.bak.&lt;YYYYMMDD&#45;HHMMSS&gt; backup file." alt="" coords="124,5,335,61"/>
+<area shape="rect" href="a00893.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="202,85,257,112"/>
+<area shape="rect" href="a02072.html#a277f55eeecb20cecca099e0c63bd1559" title="Write a crash report to a file by pattern: &quot;crash_report_{timestamp}.txt&quot;." alt="" coords="108,136,351,192"/>
+<area shape="rect" href="a01440.html#a385a6c62d7eee3e396474410c2f4b331" title="Write a log to a file in the logs/ directory." alt="" coords="131,217,327,258"/>
+<area shape="rect" href="a00827.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,224,60,251"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a13caacb06c4736489e2b3b81a2efc288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13caacb06c4736489e2b3b81a2efc288">&#9670;&nbsp;</a></span>get_timestamp_d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::get_timestamp_d </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current timestamp in days since epoch. </p>
+
+</div>
+</div>
+<a id="afc08904ddc164f29e744f08ff28d8c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc08904ddc164f29e744f08ff28d8c79">&#9670;&nbsp;</a></span>get_timestamp_h()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::get_timestamp_h </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current timestamp in hours since epoch. </p>
+
+</div>
+</div>
+<a id="a70738f9566fd61152180d1d9fa21a5d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70738f9566fd61152180d1d9fa21a5d2">&#9670;&nbsp;</a></span>get_timestamp_m()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::get_timestamp_m </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current timestamp in months (approx.) since epoch. </p>
+
+</div>
+</div>
+<a id="a37a120aff3a2294bdac0446db2a90e5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a120aff3a2294bdac0446db2a90e5d">&#9670;&nbsp;</a></span>get_timestamp_mcs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::get_timestamp_mcs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current timestamp in microseconds since epoch. </p>
+
+</div>
+</div>
+<a id="a4b39855693d9e9daf565907c1fbf752c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b39855693d9e9daf565907c1fbf752c">&#9670;&nbsp;</a></span>get_timestamp_min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::get_timestamp_min </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current timestamp in minutes since epoch. </p>
+
+</div>
+</div>
+<a id="ab1b8dd603822728c1ef65b58fec526bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1b8dd603822728c1ef65b58fec526bf">&#9670;&nbsp;</a></span>get_timestamp_ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::get_timestamp_ms </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current timestamp in milliseconds since epoch. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02608_ab1b8dd603822728c1ef65b58fec526bf_icgraph.png" border="0" usemap="#aa02608_ab1b8dd603822728c1ef65b58fec526bf_icgraph" alt=""/></div>
+<map name="a02608_ab1b8dd603822728c1ef65b58fec526bf_icgraph" id="aa02608_ab1b8dd603822728c1ef65b58fec526bf_icgraph">
+<area shape="rect" title="Gets the current timestamp in milliseconds since epoch." alt="" coords="108,5,279,61"/>
+<area shape="rect" href="a00893.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2bf93fba614d8f13ac35b08457ed07d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf93fba614d8f13ac35b08457ed07d1">&#9670;&nbsp;</a></span>get_timestamp_ns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::get_timestamp_ns </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gettters for the time since epoch in different time units. </p>
+<p>These static methods provide the current system time as a string, representing the duration since the Unix epoch (January 1, 1970, 00:00:00 UTC) in various time granularities. They are suitable for high-resolution timing, unique ID generation, or performance measurement. </p><dl class="section return"><dt>Returns</dt><dd>A <code>std::string</code> representation of the timestamp. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Complexity: O(1) for time acquisition, O(log N) or O(N) for string conversion depending on implementation.</dd></dl>
+<p>Gets the current timestamp in nanoseconds since epoch. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02608_a2bf93fba614d8f13ac35b08457ed07d1_icgraph.png" border="0" usemap="#aa02608_a2bf93fba614d8f13ac35b08457ed07d1_icgraph" alt=""/></div>
+<map name="a02608_a2bf93fba614d8f13ac35b08457ed07d1_icgraph" id="aa02608_a2bf93fba614d8f13ac35b08457ed07d1_icgraph">
+<area shape="rect" title="Gettters for the time since epoch in different time units." alt="" coords="399,56,569,112"/>
+<area shape="rect" href="a00893.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="202,5,257,32"/>
+<area shape="rect" href="a02072.html#a277f55eeecb20cecca099e0c63bd1559" title="Write a crash report to a file by pattern: &quot;crash_report_{timestamp}.txt&quot;." alt="" coords="108,56,351,112"/>
+<area shape="rect" href="a01440.html#a385a6c62d7eee3e396474410c2f4b331" title="Write a log to a file in the logs/ directory." alt="" coords="131,137,327,178"/>
+<area shape="rect" href="a00827.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,144,60,171"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aed7b3234ba99f194a8fc31fa1a5d992a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed7b3234ba99f194a8fc31fa1a5d992a">&#9670;&nbsp;</a></span>get_timestamp_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::get_timestamp_s </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current timestamp in seconds since epoch. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02608_aed7b3234ba99f194a8fc31fa1a5d992a_icgraph.png" border="0" usemap="#aa02608_aed7b3234ba99f194a8fc31fa1a5d992a_icgraph" alt=""/></div>
+<map name="a02608_aed7b3234ba99f194a8fc31fa1a5d992a_icgraph" id="aa02608_aed7b3234ba99f194a8fc31fa1a5d992a_icgraph">
+<area shape="rect" title="Gets the current timestamp in seconds since epoch." alt="" coords="108,5,279,61"/>
+<area shape="rect" href="a00893.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af0d828c26f339865ffc62279d09bb09c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0d828c26f339865ffc62279d09bb09c">&#9670;&nbsp;</a></span>get_timestamp_w()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::get_timestamp_w </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current timestamp in weeks since epoch. </p>
+
+</div>
+</div>
+<a id="a4f8a7283c43e7fc3a131c65d64063e5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f8a7283c43e7fc3a131c65d64063e5f">&#9670;&nbsp;</a></span>get_timestamp_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::get_timestamp_y </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current timestamp in years (approx.) since epoch. </p>
+
+</div>
+</div>
+<a id="a7bf10aa4f7ec3937d4783ae43494a031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bf10aa4f7ec3937d4783ae43494a031">&#9670;&nbsp;</a></span>timestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::timestamp </td>
+          <td>(</td>
+          <td class="paramtype">std::time_t&#160;</td>
+          <td class="paramname"><em>time_</em> = <code>std::time&#160;(nullptr)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>fmt</em> = <code>&quot;%Y%m%d-%H%M%S&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Formats a point in time as a local-time string, with a robust fallback chain. </p>
+<p>Attempts to format <code>time_</code> as local time (<code>localtime_s</code> on Windows, <code>localtime_r</code> on POSIX). If that fails, falls back to UTC (<code>gmtime_s</code>/<code>gmtime_r</code>). If that also fails, returns the raw number of seconds since the Unix epoch as a decimal string, so this method never throws and never returns an empty string. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time_</td><td>The <code>std::time_t</code> value to format. Defaults to the current system time. </td></tr>
+    <tr><td class="paramname">fmt</td><td>A <code>strftime</code>-compatible format string. Defaults to "%Y%m%d-%H%M%S". </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The formatted timestamp string, or a raw epoch-seconds string as a last-resort fallback. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe (uses only thread-safe <code>_r</code>/<code>_s</code> time functions and local state). </dd>
 <dd>
-XmlNode::attributes_end() </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="afb38b14f57bcd6f863faf25494d87713"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb38b14f57bcd6f863faf25494d87713">&#9670;&nbsp;</a></span>difference_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02608.html#afb38b14f57bcd6f863faf25494d87713">lumex::xml::attribute::XmlAttributeIterator::difference_type</a> =  ptrdiff_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
+Does not throw.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line">std::string log_stamp = <a class="code" href="a02608.html#a7bf10aa4f7ec3937d4783ae43494a031">LumexTime::timestamp</a>();</div>
+<div class="line">std::string <a class="code" href="a00506.html#aafd71a76859a7e9063d26ed84bd416eb">custom</a> = <a class="code" href="a02608.html#a7bf10aa4f7ec3937d4783ae43494a031">LumexTime::timestamp</a>(std::time(<span class="keyword">nullptr</span>), <span class="stringliteral">&quot;%Y-%m-%d&quot;</span>);</div>
+</div><!-- fragment --> </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02608_a7bf10aa4f7ec3937d4783ae43494a031_cgraph.png" border="0" usemap="#aa02608_a7bf10aa4f7ec3937d4783ae43494a031_cgraph" alt=""/></div>
+<map name="a02608_a7bf10aa4f7ec3937d4783ae43494a031_cgraph" id="aa02608_a7bf10aa4f7ec3937d4783ae43494a031_cgraph">
+<area shape="rect" title="Formats a point in time as a local&#45;time string, with a robust fallback chain." alt="" coords="5,5,225,47"/>
+<area shape="rect" href="a01269.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="273,5,452,47"/>
+<area shape="rect" href="a02076.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="500,5,788,47"/>
+</map>
 </div>
-</div>
-<a id="a577cc058e82bbdd1387d79efceeeab9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a577cc058e82bbdd1387d79efceeeab9b">&#9670;&nbsp;</a></span>iterator_category</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02608.html#a577cc058e82bbdd1387d79efceeeab9b">lumex::xml::attribute::XmlAttributeIterator::iterator_category</a> =  std::bidirectional_iterator_tag</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
-<a id="a36aae774de22be6fbc9a7931828a2b4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36aae774de22be6fbc9a7931828a2b4a">&#9670;&nbsp;</a></span>pointer</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02608.html#a36aae774de22be6fbc9a7931828a2b4a">lumex::xml::attribute::XmlAttributeIterator::pointer</a> =  <a class="el" href="a02568.html">XmlAttribute</a> *</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aaec60e32e53614604657482a7abc3d81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaec60e32e53614604657482a7abc3d81">&#9670;&nbsp;</a></span>reference</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02608.html#aaec60e32e53614604657482a7abc3d81">lumex::xml::attribute::XmlAttributeIterator::reference</a> =  <a class="el" href="a02568.html">XmlAttribute</a> &amp;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abe3f178d9ae6f748eab8dc33f515e532"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe3f178d9ae6f748eab8dc33f515e532">&#9670;&nbsp;</a></span>value_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02608.html#abe3f178d9ae6f748eab8dc33f515e532">lumex::xml::attribute::XmlAttributeIterator::value_type</a> =  <a class="el" href="a02568.html">XmlAttribute</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0d320ac5a52d1d4ff16ad608119f328a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d320ac5a52d1d4ff16ad608119f328a">&#9670;&nbsp;</a></span>XmlAttributeIterator() <span class="overload">[1/3]</span></h2>
+<a id="ab5a0ca1367afae776201d218eb7389cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a0ca1367afae776201d218eb7389cd">&#9670;&nbsp;</a></span>timestamp_ms()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,40 +599,16 @@ XmlNode::attributes_end() </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lumex::xml::attribute::XmlAttributeIterator::XmlAttributeIterator </td>
+          <td class="memname">std::string lumex::core::time::clock::LumexTime::timestamp_ms </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default constructor. Constructs a singular (invalid) attribute iterator. </p>
-
-</div>
-</div>
-<a id="a6604d1cf39d53d97d99dc333c068ecf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6604d1cf39d53d97d99dc333c068ecf4">&#9670;&nbsp;</a></span>XmlAttributeIterator() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> XmlAttributeIterator::XmlAttributeIterator </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02572.html">XmlAttributeBase</a> *&#160;</td>
-          <td class="paramname"><em>ref</em>, </td>
+          <td class="paramtype">std::chrono::system_clock::time_point&#160;</td>
+          <td class="paramname"><em>tp</em> = <code>std::chrono::system_clock::now&#160;()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a02612.html">node::XmlNodeBase</a> *&#160;</td>
-          <td class="paramname"><em>parent</em>&#160;</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>fmt</em> = <code>&quot;%Y-%m-%d&#160;%H:%M:%S&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -291,290 +616,53 @@ XmlNode::attributes_end() </dd></dl>
           <td></td><td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Constructs an attribute iterator from a raw <code><a class="el" href="a02572.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code> pointer and its parent <code>XmlNodeBase</code> pointer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ref</td><td>A raw pointer to the <code><a class="el" href="a02572.html" title="Base structure for representing an XML attribute.">XmlAttributeBase</a></code> object that this iterator will initially point to. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">parent</td><td>A raw pointer to the <code>XmlNodeBase</code> that owns the attribute list being iterated.  This constructor is primarily for internal use, allowing initialization from low-level pointers. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>The raw pointers are not owned by the iterator. </dd></dl>
-
-</div>
-</div>
-<a id="a396248c645050f7777cdf698e5865e25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a396248c645050f7777cdf698e5865e25">&#9670;&nbsp;</a></span>XmlAttributeIterator() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> XmlAttributeIterator::XmlAttributeIterator </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02568.html">XmlAttribute</a> const &amp;&#160;</td>
-          <td class="paramname"><em>attr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02596.html">node::XmlNode</a> const &amp;&#160;</td>
-          <td class="paramname"><em>parent</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructs an iterator which points to the specified attribute and knows its parent node. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>The <code><a class="el" href="a02568.html" title="Represents an XML attribute, providing a safe and convenient interface for accessing and modifying it...">XmlAttribute</a></code> object that this iterator will initially point to. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">parent</td><td>The <code>XmlNode</code> that owns the attribute list being iterated. This is used for operations like <code>operator--</code> that might need to find the last attribute of the parent.  This constructor initializes the iterator to wrap a specific attribute and keeps a reference to its parent node. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab260a5a79bf3a168d72b7fbec2c198b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab260a5a79bf3a168d72b7fbec2c198b3">&#9670;&nbsp;</a></span>operator!=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool XmlAttributeIterator::operator!= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02608.html">XmlAttributeIterator</a> const &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compares two <code><a class="el" href="a02608.html" title="A bidirectional iterator for traversing attributes of an XmlNode.">XmlAttributeIterator</a></code> objects for inequality. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>The <code><a class="el" href="a02608.html" title="A bidirectional iterator for traversing attributes of an XmlNode.">XmlAttributeIterator</a></code> to compare with. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the iterators point to different attributes or different documents/parents, <code>false</code> otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="ab74ba620a65e3b8e9e375ed8f37598de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab74ba620a65e3b8e9e375ed8f37598de">&#9670;&nbsp;</a></span>operator*()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02568.html">XmlAttribute</a> &amp; XmlAttributeIterator::operator* </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Dereferences the iterator to provide access to the current <code><a class="el" href="a02568.html" title="Represents an XML attribute, providing a safe and convenient interface for accessing and modifying it...">XmlAttribute</a></code> object. </p>
-<dl class="section return"><dt>Returns</dt><dd>A non-const reference to the <code><a class="el" href="a02568.html" title="Represents an XML attribute, providing a safe and convenient interface for accessing and modifying it...">XmlAttribute</a></code> object the iterator currently points to. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">&lt;tt&gt;LUMEX_ASSERT&lt;/tt&gt;</td><td>if the internal attribute pointer (<code>m_wrap.m_attr</code>) is <code>nullptr</code> (debug builds only). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>Dereferencing a singular (end) or invalid iterator leads to undefined behavior. </dd></dl>
-
-</div>
-</div>
-<a id="a7ffc999732da94834ff4b9c04d6009fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ffc999732da94834ff4b9c04d6009fa">&#9670;&nbsp;</a></span>operator++() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02608.html">XmlAttributeIterator</a> &amp; XmlAttributeIterator::operator++ </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pre-increments the iterator to move to the next attribute in the list. </p>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the incremented <code><a class="el" href="a02608.html" title="A bidirectional iterator for traversing attributes of an XmlNode.">XmlAttributeIterator</a></code> object (<code>*this</code>). </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">&lt;tt&gt;LUMEX_ASSERT&lt;/tt&gt;</td><td>if the internal attribute pointer (<code>m_wrap.m_attr</code>) is <code>nullptr</code> before increment (debug builds only). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>If the iterator is at the last attribute, it will become a singular (end) iterator after this operation. </dd></dl>
-
-</div>
-</div>
-<a id="a45845b81f12e954d48a16529e0daa9ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45845b81f12e954d48a16529e0daa9ac">&#9670;&nbsp;</a></span>operator++() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02608.html">XmlAttributeIterator</a> XmlAttributeIterator::operator++ </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Post-increments the iterator to move to the next attribute in the list. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the iterator's state BEFORE it was incremented.  Creates a temporary copy of the current iterator, then increments the current iterator, and returns the temporary. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This operation is generally less efficient than pre-increment (<code><a class="el" href="a02608.html#a7ffc999732da94834ff4b9c04d6009fa" title="Pre-increments the iterator to move to the next attribute in the list.">operator++()</a></code>) due to the creation of a temporary object. </dd></dl>
-
-</div>
-</div>
-<a id="adced785b76c13662152f0aae45842c5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adced785b76c13662152f0aae45842c5d">&#9670;&nbsp;</a></span>operator--() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02608.html">XmlAttributeIterator</a> &amp; XmlAttributeIterator::operator-- </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pre-decrements the iterator to move to the previous attribute in the list. </p>
-<dl class="section return"><dt>Returns</dt><dd>A reference to the decremented <code><a class="el" href="a02608.html" title="A bidirectional iterator for traversing attributes of an XmlNode.">XmlAttributeIterator</a></code> object (<code>*this</code>).  If the iterator is singular (points to <code>nullptr</code>), this operation moves it to the last attribute of its parent. Otherwise, it moves to the previous attribute. </dd></dl>
-
-</div>
-</div>
-<a id="a47cd8d80232bb7196cdbf58a43084a2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47cd8d80232bb7196cdbf58a43084a2a">&#9670;&nbsp;</a></span>operator--() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02608.html">XmlAttributeIterator</a> XmlAttributeIterator::operator-- </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Post-decrements the iterator to move to the previous attribute in the list. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the iterator's state BEFORE it was decremented.  Creates a temporary copy of the current iterator, then decrements the current iterator, and returns the temporary. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This operation is generally less efficient than pre-decrement (<code><a class="el" href="a02608.html#adced785b76c13662152f0aae45842c5d" title="Pre-decrements the iterator to move to the previous attribute in the list.">operator--()</a></code>) due to the creation of a temporary object. </dd></dl>
-
-</div>
-</div>
-<a id="abd8a4b262079bfeeb389f8faa8dd4d74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd8a4b262079bfeeb389f8faa8dd4d74">&#9670;&nbsp;</a></span>operator-&gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02568.html">XmlAttribute</a> * XmlAttributeIterator::operator-&gt; </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Dereferences the iterator to provide pointer-like access to the current <code><a class="el" href="a02568.html" title="Represents an XML attribute, providing a safe and convenient interface for accessing and modifying it...">XmlAttribute</a></code> object. </p>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the <code><a class="el" href="a02568.html" title="Represents an XML attribute, providing a safe and convenient interface for accessing and modifying it...">XmlAttribute</a></code> object the iterator currently points to. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">&lt;tt&gt;LUMEX_ASSERT&lt;/tt&gt;</td><td>if the internal attribute pointer (<code>m_wrap.m_attr</code>) is <code>nullptr</code> (debug builds only). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>Dereferencing a singular (end) or invalid iterator leads to undefined behavior. </dd></dl>
-
-</div>
-</div>
-<a id="ac533ec6a48b9ec55038b87ece2982e3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac533ec6a48b9ec55038b87ece2982e3e">&#9670;&nbsp;</a></span>operator==()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool XmlAttributeIterator::operator== </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02608.html">XmlAttributeIterator</a> const &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compares two <code><a class="el" href="a02608.html" title="A bidirectional iterator for traversing attributes of an XmlNode.">XmlAttributeIterator</a></code> objects for equality. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>The <code><a class="el" href="a02608.html" title="A bidirectional iterator for traversing attributes of an XmlNode.">XmlAttributeIterator</a></code> to compare with. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if both iterators point to the same attribute within the same document root and parent, <code>false</code> otherwise. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="a93c80d4442ba4b50bfd4dd7985283928"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93c80d4442ba4b50bfd4dd7985283928">&#9670;&nbsp;</a></span>node::XmlNode</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class <a class="el" href="a02596.html">node::XmlNode</a></td>
-        </tr>
-      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Formats a point in time as a local-time string with a millisecond suffix. </p>
+<p>Uses the same fallback chain as <code><a class="el" href="a02608.html#a7bf10aa4f7ec3937d4783ae43494a031" title="Formats a point in time as a local-time string, with a robust fallback chain.">timestamp()</a></code> (local time -&gt; UTC -&gt; raw epoch seconds) for the seconds portion of <code>tp</code>, then appends a ".mmm" millisecond suffix derived from <code>tp</code> itself. If the fallback chain has to resort to the raw epoch-seconds string, no millisecond suffix is appended. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tp</td><td>The <code>std::chrono::system_clock::time_point</code> to format. Defaults to the current time. </td></tr>
+    <tr><td class="paramname">fmt</td><td>A <code>strftime</code>-compatible format string, applied to the seconds portion of <code>tp</code>. Defaults to "%Y-%m-%d %H:%M:%S". </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The formatted timestamp string with a millisecond suffix, or a raw epoch-seconds string as a last-resort fallback. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe. </dd>
+<dd>
+Does not throw.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line">std::string log_stamp = <a class="code" href="a02608.html#ab5a0ca1367afae776201d218eb7389cd">LumexTime::timestamp_ms</a>();</div>
+</div><!-- fragment --> </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02608_ab5a0ca1367afae776201d218eb7389cd_cgraph.png" border="0" usemap="#aa02608_ab5a0ca1367afae776201d218eb7389cd_cgraph" alt=""/></div>
+<map name="a02608_ab5a0ca1367afae776201d218eb7389cd_cgraph" id="aa02608_ab5a0ca1367afae776201d218eb7389cd_cgraph">
+<area shape="rect" title="Formats a point in time as a local&#45;time string with a millisecond suffix." alt="" coords="5,5,252,47"/>
+<area shape="rect" href="a01269.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="300,5,479,47"/>
+<area shape="rect" href="a02076.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="527,5,815,47"/>
+</map>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00608_source.html">XmlNode.hpp</a></li>
-<li><a class="el" href="a00572.html">XmlAttributeIterator.cpp</a></li>
+<li><a class="el" href="a00650_source.html">LumexTime.hpp</a></li>
+<li><a class="el" href="a00647.html">LumexTime.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa02608_html_ab5a0ca1367afae776201d218eb7389cd"><div class="ttname"><a href="a02608.html#ab5a0ca1367afae776201d218eb7389cd">lumex::core::time::clock::LumexTime::timestamp_ms</a></div><div class="ttdeci">static std::string timestamp_ms(std::chrono::system_clock::time_point tp=std::chrono::system_clock::now(), std::string const &amp;fmt=&quot;%Y-%m-%d %H:%M:%S&quot;)</div><div class="ttdoc">Formats a point in time as a local-time string with a millisecond suffix.</div><div class="ttdef"><b>Definition:</b> LumexTime.cpp:233</div></div>
+<div class="ttc" id="aa02608_html_a7bf10aa4f7ec3937d4783ae43494a031"><div class="ttname"><a href="a02608.html#a7bf10aa4f7ec3937d4783ae43494a031">lumex::core::time::clock::LumexTime::timestamp</a></div><div class="ttdeci">static std::string timestamp(std::time_t time_=std::time(nullptr), std::string const &amp;fmt=&quot;%Y%m%d-%H%M%S&quot;)</div><div class="ttdoc">Formats a point in time as a local-time string, with a robust fallback chain.</div><div class="ttdef"><b>Definition:</b> LumexTime.cpp:204</div></div>
+<div class="ttc" id="aa00506_html_aafd71a76859a7e9063d26ed84bd416eb"><div class="ttname"><a href="a00506.html#aafd71a76859a7e9063d26ed84bd416eb">custom</a></div><div class="ttdeci">crc_params_t custom</div><div class="ttdef"><b>Definition:</b> LumexCrcCatalog.cpp:131</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00942.html">attribute</a></li><li class="navelem"><a class="el" href="a02608.html">XmlAttributeIterator</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01304.html">time</a></li><li class="navelem"><a class="el" href="a01305.html">clock</a></li><li class="navelem"><a class="el" href="a02608.html">LumexTime</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

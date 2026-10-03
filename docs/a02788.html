@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::xpath::document::document_order_comparator Struct Reference</title>
+<title>LumexLib: lumex::core::utility::traits::stream::detail::is_address_streamed&lt; std::shared_ptr&lt; T &gt; &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -93,82 +93,39 @@ $(document).ready(function(){initNavTree('a02788.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="a02785.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::xpath::document::document_order_comparator Struct Reference</div>  </div>
+<div class="title">lumex::core::utility::traits::stream::detail::is_address_streamed&lt; std::shared_ptr&lt; T &gt; &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Functor for comparing two XPathNode objects based on their document order.  
- <a href="a02788.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00692_source.html">XPathDocumentOrderComparator.hpp</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ab57dfc41d2976c11a2311badd3838395"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02788.html#ab57dfc41d2976c11a2311badd3838395">operator()</a> (<a class="el" href="a02820.html">XPathNode</a> const &amp;lhs, <a class="el" href="a02820.html">XPathNode</a> const &amp;rhs) const</td></tr>
-<tr class="memdesc:ab57dfc41d2976c11a2311badd3838395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two XPathNode objects for their document order.  <a href="a02788.html#ab57dfc41d2976c11a2311badd3838395">More...</a><br /></td></tr>
-<tr class="separator:ab57dfc41d2976c11a2311badd3838395"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Functor for comparing two XPathNode objects based on their document order. </p>
-<p>This comparator provides the logic for sorting or comparing <code>XPathNode</code> objects according to the XML Document Order. It first attempts an optimized comparison using <code>document_buffer_order</code> and falls back to a more robust, recursive comparison using <code>node_is_before</code> if the optimization is not applicable. It correctly handles comparisons between element nodes, attribute nodes, and combinations thereof. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab57dfc41d2976c11a2311badd3838395"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab57dfc41d2976c11a2311badd3838395">&#9670;&nbsp;</a></span>operator()()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::xml::xpath::document::document_order_comparator::operator() </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02820.html">XPathNode</a> const &amp;&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02820.html">XPathNode</a> const &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compares two XPathNode objects for their document order. </p>
-<p>This operator overload defines the comparison logic for <code><a class="el" href="a02788.html" title="Functor for comparing two XPathNode objects based on their document order.">document_order_comparator</a></code>. It prioritizes an optimized buffer order comparison if available, otherwise it performs a full document order traversal. Special handling is included for attribute nodes which always appear after their parent element but before any of their parent's children. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>The left-hand side <code>XPathNode</code> to compare. </td></tr>
-    <tr><td class="paramname">rhs</td><td>The right-hand side <code>XPathNode</code> to compare. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if <code>lhs</code> comes before <code>rhs</code> in document order, <code>false</code> otherwise. </dd></dl>
+<p><code>#include &lt;<a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Here is the call graph for this function:</div>
+Inheritance diagram for lumex::core::utility::traits::stream::detail::is_address_streamed&lt; std::shared_ptr&lt; T &gt; &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="a02788_ab57dfc41d2976c11a2311badd3838395_cgraph.png" border="0" usemap="#aa02788_ab57dfc41d2976c11a2311badd3838395_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="a00692_source.html">XPathDocumentOrderComparator.hpp</a></li>
-<li><a class="el" href="a00689.html">XPathDocumentOrderComparator.cpp</a></li>
+<div class="center"><img src="a02787.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1stream_1_1detail_1_1is__address__streamed_3_01std_1_1shared__ptr_3_01T_01_4_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1stream_1_1detail_1_1is__address__streamed_3_01std_1_1shared__ptr_3_01T_01_4_01_4_inherit__map" id="alumex_1_1core_1_1utility_1_1traits_1_1stream_1_1detail_1_1is__address__streamed_3_01std_1_1shared__ptr_3_01T_01_4_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,208,151"/>
+<area shape="rect" title=" " alt="" coords="65,5,149,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for lumex::core::utility::traits::stream::detail::is_address_streamed&lt; std::shared_ptr&lt; T &gt; &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02786.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1stream_1_1detail_1_1is__address__streamed_3_01std_1_1shared__ptr_3_01T_01_4_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1stream_1_1detail_1_1is__address__streamed_3_01std_1_1shared__ptr_3_01T_01_4_01_4_coll__map" id="alumex_1_1core_1_1utility_1_1traits_1_1stream_1_1detail_1_1is__address__streamed_3_01std_1_1shared__ptr_3_01T_01_4_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,80,208,151"/>
+<area shape="rect" title=" " alt="" coords="65,5,149,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00950.html">xpath</a></li><li class="navelem"><a class="el" href="a00965.html">document</a></li><li class="navelem"><a class="el" href="a02788.html">document_order_comparator</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01325.html">stream</a></li><li class="navelem"><a class="el" href="a01326.html">detail</a></li><li class="navelem"><a class="el" href="a02788.html">is_address_streamed&lt; std::shared_ptr&lt; T &gt; &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

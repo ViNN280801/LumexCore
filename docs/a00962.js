@@ -1,4 +1,4 @@
 var a00962 =
 [
-    [ "Constants", "a00963.html", null ]
+    [ "LUMEX_IMPLEMENTATION", "a00962.html#a07486181f1990291c2a348de8eb4c480", null ]
 ];

@@ -1,16 +1,11 @@
 var a01896 =
 [
-    [ "day", "a01896.html#ad9096255436b39e9e3d35e85b054ce39", null ],
-    [ "days", "a01896.html#ab91e8391da3a9dd63dba48da4c11fb11", null ],
-    [ "digits", "a01896.html#a46041da81d633ca55305df34c61deee5", null ],
-    [ "has_date", "a01896.html#acf1d315fd7f7b9cbd9439f2861382398", null ],
-    [ "hours", "a01896.html#ae153c5c823031a03547b53a02def7d56", null ],
-    [ "minutes", "a01896.html#a0389a3777c83e924fe069985b3dce8b3", null ],
-    [ "month", "a01896.html#ad153dd20992f843f16d39f2a972f0beb", null ],
-    [ "negative", "a01896.html#a70e63ac5c62c076233f1b0a189f7b856", null ],
-    [ "seconds", "a01896.html#a21fb477a56cf61f50d11db17359921a8", null ],
-    [ "ticks", "a01896.html#a64b5749d7355f9e21cd7f0857aebd265", null ],
-    [ "weekday", "a01896.html#a820349a71eaeef591c927d7efa00ba03", null ],
-    [ "year", "a01896.html#abdf00f1e9ec941a79210de8281ddf35c", null ],
-    [ "year_day", "a01896.html#a1123932f47c2aa6859b091164c014d06", null ]
+    [ "ValueType", "a01896.html#afd2ef2c3e26b24ea51d8c0421b4935cc", null ],
+    [ "kCatalogCheck", "a01896.html#aa5fc6e1aa3b530904880a41cceec8adb", null ],
+    [ "kInit", "a01896.html#a45dfb428ee1d9bfe341aba42b0d6c449", null ],
+    [ "kPoly", "a01896.html#a431fd1b5b3ba28bbe0b77c4e2c0bc7ca", null ],
+    [ "kRefIn", "a01896.html#ae2b34475623d25eb97b176c3a7e60a79", null ],
+    [ "kRefOut", "a01896.html#a54c974d4cd62746c5534b0b2f1571008", null ],
+    [ "kWidth", "a01896.html#a96e2e0cd6dc4b7006e973b67319c8280", null ],
+    [ "kXorOut", "a01896.html#aa6c8a17b1bf0302dd3072dd7f32a5971", null ]
 ];

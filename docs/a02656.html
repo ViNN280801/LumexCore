@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::types::Types::xml_extra_buffer Struct Reference</title>
+<title>LumexLib: lumex::core::utility::numeric::safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &gt;::type &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,65 +94,424 @@ $(document).ready(function(){initNavTree('a02656.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a02653.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::types::Types::xml_extra_buffer Struct Reference</div>  </div>
+<div class="title">lumex::core::utility::numeric::safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &gt;::type &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00644_source.html">XmlTypes.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for lumex::xml::types::Types::xml_extra_buffer:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02654.png" border="0" usemap="#alumex_1_1xml_1_1types_1_1Types_1_1xml__extra__buffer_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p>Specialization for identical types (maximum optimization)  
+ <a href="a02656.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00710_source.html">LumexSafeNumericComparator.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a1550070beb22c1110c49fcbc58f71abd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02656.html#a1550070beb22c1110c49fcbc58f71abd">buffer</a></td></tr>
-<tr class="separator:a1550070beb22c1110c49fcbc58f71abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa1b4dc90d28cc56fa80f4a0ab5ee9c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02656.html">xml_extra_buffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02656.html#afa1b4dc90d28cc56fa80f4a0ab5ee9c9">next</a></td></tr>
-<tr class="separator:afa1b4dc90d28cc56fa80f4a0ab5ee9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af1754af1410477a0bfe4c480d8c5bf6b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02656.html#af1754af1410477a0bfe4c480d8c5bf6b">clean_T</a> = <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt;</td></tr>
+<tr class="separator:af1754af1410477a0bfe4c480d8c5bf6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:abf78512ef0c06d3598accd0cd1c500ca"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02656.html#abf78512ef0c06d3598accd0cd1c500ca">compare</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:abf78512ef0c06d3598accd0cd1c500ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison &gt;= for identical types.  <a href="a02656.html#abf78512ef0c06d3598accd0cd1c500ca">More...</a><br /></td></tr>
+<tr class="separator:abf78512ef0c06d3598accd0cd1c500ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821b3021a071809871d8c606d4aa2628"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02656.html#a821b3021a071809871d8c606d4aa2628">greater_equal</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:a821b3021a071809871d8c606d4aa2628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison &gt;= for identical types.  <a href="a02656.html#a821b3021a071809871d8c606d4aa2628">More...</a><br /></td></tr>
+<tr class="separator:a821b3021a071809871d8c606d4aa2628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a938e604fb84b50a4983f4acd6048b736"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02656.html#a938e604fb84b50a4983f4acd6048b736">less_equal</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:a938e604fb84b50a4983f4acd6048b736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison &lt;= for identical types.  <a href="a02656.html#a938e604fb84b50a4983f4acd6048b736">More...</a><br /></td></tr>
+<tr class="separator:a938e604fb84b50a4983f4acd6048b736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fd6713797806ded095a6770cc2b126e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02656.html#a9fd6713797806ded095a6770cc2b126e">less</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:a9fd6713797806ded095a6770cc2b126e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison &lt; for identical types.  <a href="a02656.html#a9fd6713797806ded095a6770cc2b126e">More...</a><br /></td></tr>
+<tr class="separator:a9fd6713797806ded095a6770cc2b126e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35ab0323ecd7e04f40f9db9942dc9792"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02656.html#a35ab0323ecd7e04f40f9db9942dc9792">greater</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:a35ab0323ecd7e04f40f9db9942dc9792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison &gt; for identical types.  <a href="a02656.html#a35ab0323ecd7e04f40f9db9942dc9792">More...</a><br /></td></tr>
+<tr class="separator:a35ab0323ecd7e04f40f9db9942dc9792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ca7d673ff29a91bbdbf4b8e8f691a7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02656.html#a78ca7d673ff29a91bbdbf4b8e8f691a7">equal</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:a78ca7d673ff29a91bbdbf4b8e8f691a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison == for identical types.  <a href="a02656.html#a78ca7d673ff29a91bbdbf4b8e8f691a7">More...</a><br /></td></tr>
+<tr class="separator:a78ca7d673ff29a91bbdbf4b8e8f691a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00e4a4a89e072e71c99329c7037f8d80"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02656.html#a00e4a4a89e072e71c99329c7037f8d80">not_equal</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:a00e4a4a89e072e71c99329c7037f8d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison != for identical types.  <a href="a02656.html#a00e4a4a89e072e71c99329c7037f8d80">More...</a><br /></td></tr>
+<tr class="separator:a00e4a4a89e072e71c99329c7037f8d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1550070beb22c1110c49fcbc58f71abd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1550070beb22c1110c49fcbc58f71abd">&#9670;&nbsp;</a></span>buffer</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+struct lumex::core::utility::numeric::safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &gt;::type &gt;</h3>
+
+<p>Specialization for identical types (maximum optimization) </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type to compare  Direct comparison without conversions for maximum performance. Used when both types are identical, so overflow cannot occur. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>No-throw, maximum performance </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="af1754af1410477a0bfe4c480d8c5bf6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1754af1410477a0bfe4c480d8c5bf6b">&#9670;&nbsp;</a></span>clean_T</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>* lumex::xml::types::Types::xml_extra_buffer::buffer</td>
+          <td class="memname">using <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::<a class="el" href="a02656.html#af1754af1410477a0bfe4c480d8c5bf6b">clean_T</a> =  <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt;T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="afa1b4dc90d28cc56fa80f4a0ab5ee9c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa1b4dc90d28cc56fa80f4a0ab5ee9c9">&#9670;&nbsp;</a></span>next</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="abf78512ef0c06d3598accd0cd1c500ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf78512ef0c06d3598accd0cd1c500ca">&#9670;&nbsp;</a></span>compare()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a02656.html">xml_extra_buffer</a>* lumex::xml::types::Types::xml_extra_buffer::next</td>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::compare </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Safe comparison &gt;= for identical types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current &gt;= other </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Direct comparison without conversions; maximum performance </dd></dl>
+
+</div>
+</div>
+<a id="a78ca7d673ff29a91bbdbf4b8e8f691a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78ca7d673ff29a91bbdbf4b8e8f691a7">&#9670;&nbsp;</a></span>equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::equal </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Safe comparison == for identical types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current == other </dd></dl>
+
+</div>
+</div>
+<a id="a35ab0323ecd7e04f40f9db9942dc9792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ab0323ecd7e04f40f9db9942dc9792">&#9670;&nbsp;</a></span>greater()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::greater </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Safe comparison &gt; for identical types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current &gt; other </dd></dl>
+
+</div>
+</div>
+<a id="a821b3021a071809871d8c606d4aa2628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a821b3021a071809871d8c606d4aa2628">&#9670;&nbsp;</a></span>greater_equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::greater_equal </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Safe comparison &gt;= for identical types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current &gt;= other </dd></dl>
+
+</div>
+</div>
+<a id="a9fd6713797806ded095a6770cc2b126e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fd6713797806ded095a6770cc2b126e">&#9670;&nbsp;</a></span>less()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::less </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Safe comparison &lt; for identical types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current &lt; other </dd></dl>
+
+</div>
+</div>
+<a id="a938e604fb84b50a4983f4acd6048b736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a938e604fb84b50a4983f4acd6048b736">&#9670;&nbsp;</a></span>less_equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::less_equal </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Safe comparison &lt;= for identical types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current &lt;= other </dd></dl>
+
+</div>
+</div>
+<a id="a00e4a4a89e072e71c99329c7037f8d80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e4a4a89e072e71c99329c7037f8d80">&#9670;&nbsp;</a></span>not_equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::not_equal </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Safe comparison != for identical types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current != other </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00644_source.html">XmlTypes.hpp</a></li>
+<li><a class="el" href="a00710_source.html">LumexSafeNumericComparator.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00957.html">types</a></li><li class="navelem"><a class="el" href="a00958.html">Types</a></li><li class="navelem"><a class="el" href="a02656.html">xml_extra_buffer</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01319.html">numeric</a></li><li class="navelem"><a class="el" href="a02656.html">safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &gt;::type &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

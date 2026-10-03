@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: /home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/LumexExceptionWrapper.hpp</title>
+<title>LumexLib: lumex::core::utility::traits::value::is_optional&lt; T const volatile &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,291 +94,40 @@ $(document).ready(function(){initNavTree('a02928.html',''); initResizable(); });
 
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/LumexExceptionWrapper.hpp</div>  </div>
+<div class="title">lumex::core::utility::traits::value::is_optional&lt; T const volatile &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Calls <code>func(args...)</code>, catching and safely reporting any exception it throws instead of letting it propagate. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Function</td><td>Callable type; must be invocable with <code>Args...</code>. </td></tr>
-    <tr><td class="paramname">Args</td><td>Types of the arguments forwarded to <code>func</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">excMessage</td><td>Message reported (to <code>std::cerr</code>) when <code>func</code> throws a <code>std::exception</code>; the exception's own <code>what()</code> is appended after it. </td></tr>
-    <tr><td class="paramname">unknownExcMessage</td><td>Message reported when <code>func</code> throws anything that is not a <code>std::exception</code> (e.g. a plain <code>int</code>, or a type from another ABI). </td></tr>
-    <tr><td class="paramname">func</td><td>The callable to invoke. </td></tr>
-    <tr><td class="paramname">args</td><td>Arguments forwarded to <code>func</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Whatever <code>func(args...)</code> returns on success; a value-initialized default (<code><a class="el" href="a02232.html" title="Helper providing a default value for a type, primarily meant for exception-safe fallbacks.">lumex::core::utility::traits::meta::default_return</a>&lt;ReturnType&gt;::value()</code>) if it throws.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd><code>noexcept</code> is conditional on whether the wrapped call itself is <code>noexcept</code>: reporting a failure is unconditionally <code>noexcept</code> (see <code>detail::write_to_stderr</code>), so it never needs to be part of this check. </dd>
-<dd>
-Invocation intentionally uses plain <code>func(args...)</code>, not <code><a class="el" href="a00914.html#a8ba7e4193163e68cb15bccd03b229d9c">lumex::core::utility::traits::invoke::detail::INVOKE</a></code> - that helper only has a <code>decltype</code>-computed trailing return type (no function body) because it exists solely to drive <code>invoke_result</code>/ <code>is_callable</code> at compile time, not to be called at runtime. <code>invoke_result_t</code>/<code>is_callable_v</code> (built on top of it) remain the right tools for return-type deduction and the Callable-Named-Requirement check below.</dd></dl>
-<div class="fragment"><div class="line"><span class="comment">// Simple usage with default, source-location-based messages.</span></div>
-<div class="line"><span class="keywordtype">int</span> result = <a name="a0"></a><a class="code" href="a00191.html#a03ec1ac9d020fd4f7b12362a94f204e9">LUMEX_SAFE_CALL</a>(someFunction(42));</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Usage with custom messages.</span></div>
-<div class="line"><span class="keywordtype">int</span> result = <a name="a1"></a><a class="code" href="a00191.html#a261fa5b1604d900afd08ec4e0bebacb8">LUMEX_SAFE_CALL_MSG</a>(</div>
-<div class="line">    someFunction(42),</div>
-<div class="line">    <span class="stringliteral">&quot;Failed to execute someFunction&quot;</span>,</div>
-<div class="line">    <span class="stringliteral">&quot;Unknown error in someFunction&quot;</span></div>
-<div class="line">);</div>
-</div><!-- fragment --><div class="fragment"><div class="line"> </div>
-<div class="line"><span class="preprocessor">#ifndef LUMEX_CORE_EXCEPTIONS_HPP</span></div>
-<div class="line"><span class="preprocessor">#define LUMEX_CORE_EXCEPTIONS_HPP</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic push</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wpadded&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage&quot;</span></div>
-<div class="line"><span class="preprocessor">#if __has_warning(&quot;-Wunsafe-buffer-usage-in-libc-call&quot;)</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunsafe-buffer-usage-in-libc-call&quot;</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wcovered-switch-default&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wswitch-enum&quot;</span></div>
-<div class="line"><span class="preprocessor">#if __has_warning(&quot;-Wnrvo&quot;)</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wnrvo&quot;</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wheader-hygiene&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wused-but-marked-unused&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wundefined-var-template&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wdeprecated-redundant-constexpr-static-def&quot;</span></div>
-<div class="line"><span class="preprocessor">#if __has_warning(&quot;-Wvariadic-macro-arguments-omitted&quot;)</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wvariadic-macro-arguments-omitted&quot;</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wunused-result&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wextra-semi-stmt&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wexpansion-to-defined&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wexit-time-destructors&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wundefined-func-template&quot;</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wfloat-equal&quot;</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00557.html">lumex/LumexExport.hpp</a>&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;cstring&gt;</span>     <span class="comment">// std::strlen</span></div>
-<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span>    <span class="comment">// std::cerr</span></div>
-<div class="line"><span class="preprocessor">#include &lt;string&gt;</span>      <span class="comment">// std::string, std::to_string</span></div>
-<div class="line"><span class="preprocessor">#include &lt;type_traits&gt;</span> <span class="comment">// std::is_default_constructible, std::is_void</span></div>
-<div class="line"><span class="preprocessor">#include &lt;utility&gt;</span>     <span class="comment">// std::declval, std::forward</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00308.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00347.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00350.html">lumex/core/utility/macros/LumexMacros.hpp</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="a00368.html">lumex/core/utility/traits/LumexTypeTraits.hpp</a>&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// ================================================================== //</span></div>
-<div class="line"><span class="comment">// ================ Lumex Exception-Safe Call Wrapper =============== //</span></div>
-<div class="line"><span class="comment">// ================================================================== //</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span><a class="code" href="a00783.html">lumex</a> <span class="comment">// NOLINT(modernize-concat-nested-namespaces)</span></div>
-<div class="line">{</div>
-<div class="line"><span class="keyword">namespace </span>core</div>
-<div class="line">{</div>
-<div class="line"><span class="keyword">namespace </span>exceptions</div>
-<div class="line">{</div>
-<div class="line"><span class="keyword">namespace </span>Wrapper</div>
-<div class="line">{</div>
-<div class="line"><span class="keyword">using</span> <a name="a2"></a><a class="code" href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">safe_call_report_fn</a> = void (*) (<span class="keywordtype">char</span> <span class="keyword">const</span> *message);</div>
-<div class="line"> </div>
-<div class="line"><a name="a3"></a><a class="code" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <span class="keywordtype">void</span></div>
-<div class="line"><a name="a4"></a><a class="code" href="a00857.html#a2cbdbf26b85522e6b9132dedb2b99b18">set_safe_call_reporter</a> (<a class="code" href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">safe_call_report_fn</a> reporter) <a name="a5"></a><a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>;</div>
-<div class="line"> </div>
-<div class="line"><a class="code" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="code" href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">safe_call_report_fn</a> <a name="a6"></a><a class="code" href="a00857.html#a810b21f9384bf6219c60f63484e7b983">get_safe_call_reporter</a> () <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span>detail</div>
-<div class="line">{</div>
-<div class="line"><span class="keyword">inline</span> <span class="keywordtype">void</span></div>
-<div class="line"><a name="a7"></a><a class="code" href="a00859.html#a9b81ee8d78509f3b0763092124a09914">write_to_stderr</a> (std::string <span class="keyword">const</span> &amp;prefix, <span class="keywordtype">char</span> <span class="keyword">const</span> *whatMsg) <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
-<div class="line">{</div>
-<div class="line">  std::cerr.write (prefix.data (),</div>
-<div class="line">                   <span class="keyword">static_cast&lt;</span>std::streamsize<span class="keyword">&gt;</span> (prefix.size ()));</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">static</span> <span class="keywordtype">char</span> <span class="keyword">const</span> kReason[] = <span class="stringliteral">&quot;. Reason: &quot;</span>;</div>
-<div class="line">  std::cerr.write (kReason,</div>
-<div class="line">                   <span class="keyword">static_cast&lt;</span>std::streamsize<span class="keyword">&gt;</span> (<span class="keyword">sizeof</span> (kReason) - 1));</div>
-<div class="line"> </div>
-<div class="line">  <span class="keywordflow">if</span> (whatMsg != <span class="keyword">nullptr</span>)</div>
-<div class="line">    {</div>
-<div class="line">      std::cerr.write (whatMsg,</div>
-<div class="line">                       <span class="keyword">static_cast&lt;</span>std::streamsize<span class="keyword">&gt;</span> (std::strlen (whatMsg)));</div>
-<div class="line">    }</div>
-<div class="line">  <span class="keywordflow">else</span></div>
-<div class="line">    {</div>
-<div class="line">      <span class="keyword">static</span> <span class="keywordtype">char</span> <span class="keyword">const</span> kUnknownWhat[] = <span class="stringliteral">&quot;&lt;unknown exception message&gt;&quot;</span>;</div>
-<div class="line">      std::cerr.write (kUnknownWhat, <span class="keyword">static_cast&lt;</span>std::streamsize<span class="keyword">&gt;</span> (</div>
-<div class="line">                                         <span class="keyword">sizeof</span> (kUnknownWhat) - 1));</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">  std::cerr.put (<span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line">  std::cerr.flush ();</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">inline</span> <span class="keywordtype">void</span></div>
-<div class="line"><a class="code" href="a00859.html#a9b81ee8d78509f3b0763092124a09914">write_to_stderr</a> (std::string <span class="keyword">const</span> &amp;line) <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
-<div class="line">{</div>
-<div class="line">  std::cerr.write (line.data (), <span class="keyword">static_cast&lt;</span>std::streamsize<span class="keyword">&gt;</span> (line.size ()));</div>
-<div class="line">  std::cerr.put (<span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line">  std::cerr.flush ();</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">inline</span> <span class="keywordtype">void</span></div>
-<div class="line"><a name="a8"></a><a class="code" href="a00859.html#a287ecc219d5289ba4953c34ee703ad12">report_line</a> (std::string <span class="keyword">const</span> &amp;line) <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
-<div class="line">{</div>
-<div class="line">  <a class="code" href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">safe_call_report_fn</a> <span class="keyword">const</span> reporter = <a class="code" href="a00857.html#a810b21f9384bf6219c60f63484e7b983">get_safe_call_reporter</a> ();</div>
-<div class="line">  <span class="keywordflow">if</span> (reporter != <span class="keyword">nullptr</span>)</div>
-<div class="line">    {</div>
-<div class="line">      <span class="keywordflow">try</span></div>
-<div class="line">        {</div>
-<div class="line">          reporter (line.c_str ());</div>
-<div class="line">          <span class="keywordflow">return</span>;</div>
-<div class="line">        }</div>
-<div class="line">      <span class="keywordflow">catch</span> (...)</div>
-<div class="line">        {</div>
-<div class="line">        }</div>
-<div class="line">    }</div>
-<div class="line">  <a class="code" href="a00859.html#a9b81ee8d78509f3b0763092124a09914">write_to_stderr</a> (line);</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">inline</span> <span class="keywordtype">void</span></div>
-<div class="line"><a name="a9"></a><a class="code" href="a00859.html#a8efd3e3fa6f91fd9d45639b9e4352feb">report_exception</a> (std::string <span class="keyword">const</span> &amp;prefix,</div>
-<div class="line">                  <span class="keywordtype">char</span> <span class="keyword">const</span> *whatMsg) <a class="code" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div>
-<div class="line">{</div>
-<div class="line">  <a class="code" href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">safe_call_report_fn</a> <span class="keyword">const</span> reporter = <a class="code" href="a00857.html#a810b21f9384bf6219c60f63484e7b983">get_safe_call_reporter</a> ();</div>
-<div class="line">  <span class="keywordflow">if</span> (reporter != <span class="keyword">nullptr</span>)</div>
-<div class="line">    {</div>
-<div class="line">      <span class="keywordflow">try</span></div>
-<div class="line">        {</div>
-<div class="line">          std::string line = prefix;</div>
-<div class="line">          line += <span class="stringliteral">&quot;. Reason: &quot;</span>;</div>
-<div class="line">          line += (whatMsg != <span class="keyword">nullptr</span>) ? whatMsg</div>
-<div class="line">                                       : <span class="stringliteral">&quot;&lt;unknown exception message&gt;&quot;</span>;</div>
-<div class="line">          reporter (line.c_str ());</div>
-<div class="line">          <span class="keywordflow">return</span>;</div>
-<div class="line">        }</div>
-<div class="line">      <span class="keywordflow">catch</span> (...)</div>
-<div class="line">        {</div>
-<div class="line">        }</div>
-<div class="line">    }</div>
-<div class="line">  <a class="code" href="a00859.html#a9b81ee8d78509f3b0763092124a09914">write_to_stderr</a> (prefix, whatMsg);</div>
-<div class="line">}</div>
-<div class="line">} <span class="comment">// namespace detail</span></div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// NOLINTBEGIN(cppcoreguidelines-avoid-do-while)</span></div>
-<div class="line"><span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><span class="keyword">auto</span></div>
-<div class="line"><a name="a10"></a><a class="code" href="a00857.html#a7b15b3b36269bfd6b78f9ad3b7ba9f4e">ExceptionWrapper</a> (</div>
-<div class="line">    std::string <span class="keyword">const</span></div>
-<div class="line">        &amp;excMessage, <span class="comment">// NOLINT(bugprone-easily-swappable-parameters)</span></div>
-<div class="line">    std::string <span class="keyword">const</span> &amp;unknownExcMessage, Function &amp;&amp;func, Args &amp;&amp;...args)</div>
-<div class="line">    <span class="comment">// std::declval, not the parameters: GCC 8 evaluates a noexcept operand</span></div>
-<div class="line">    <span class="comment">// that names the function parameters as noexcept even when it throws.</span></div>
-<div class="line">    <a name="a11"></a><a class="code" href="a00347.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a> (</div>
-<div class="line">        noexcept (std::declval&lt;Function&gt; () (std::declval&lt;Args&gt; ()...)))</div>
-<div class="line">        -&gt; <a class="code" href="a00913.html#a70065957d93e7a3955cd082d80203d00">lumex::core::utility::traits::invoke::invoke_result_t</a>&lt;Function,</div>
-<div class="line">                                                                 Args...&gt;</div>
-<div class="line">{</div>
-<div class="line">  <span class="keyword">using</span> ReturnType</div>
-<div class="line">      = <a class="code" href="a00913.html#a70065957d93e7a3955cd082d80203d00">lumex::core::utility::traits::invoke::invoke_result_t</a>&lt;Function,</div>
-<div class="line">                                                              Args...&gt;;</div>
-<div class="line"> </div>
-<div class="line">  <a name="a12"></a><a class="code" href="a00308.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a> (</div>
-<div class="line">      lumex::core::utility::traits::invoke::is_callable_v&lt;Function, Args...&gt;,</div>
-<div class="line">      <span class="stringliteral">&quot;Function must be callable with the supplied arguments. Check:\n&quot;</span></div>
-<div class="line">      <span class="stringliteral">&quot;1) Function type is correct\n&quot;</span></div>
-<div class="line">      <span class="stringliteral">&quot;2) Number of arguments matches\n&quot;</span></div>
-<div class="line">      <span class="stringliteral">&quot;3) Argument types are compatible&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line">  <a class="code" href="a00308.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a> (</div>
-<div class="line">      std::is_default_constructible&lt;ReturnType&gt;::value</div>
-<div class="line">          || std::is_void&lt;ReturnType&gt;::value,</div>
-<div class="line">      <span class="stringliteral">&quot;ReturnType must be default-constructible or void. &quot;</span></div>
-<div class="line">      <span class="stringliteral">&quot;For non-default-constructible types, consider using std::optional.&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line">  <span class="keywordflow">try</span></div>
-<div class="line">    {</div>
-<div class="line">      <span class="keywordflow">return</span> std::forward&lt;Function&gt; (func) (std::forward&lt;Args&gt; (args)...);</div>
-<div class="line">    }</div>
-<div class="line">  <span class="keywordflow">catch</span> (std::exception <span class="keyword">const</span> &amp;exc)</div>
-<div class="line">    {</div>
-<div class="line">      <a class="code" href="a00859.html#a8efd3e3fa6f91fd9d45639b9e4352feb">detail::report_exception</a> (excMessage, exc.what ());</div>
-<div class="line">    }</div>
-<div class="line">  <span class="keywordflow">catch</span> (...)</div>
-<div class="line">    {</div>
-<div class="line">      <a class="code" href="a00859.html#a287ecc219d5289ba4953c34ee703ad12">detail::report_line</a> (unknownExcMessage);</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">  <span class="comment">// static_assert above guarantees ReturnType is default-constructible or</span></div>
-<div class="line">  <span class="comment">// void, so this cannot throw.</span></div>
-<div class="line">  <span class="keywordflow">return</span> <a name="_a13"></a><a class="code" href="a02232.html">lumex::core::utility::traits::meta::default_return</a>&lt;</div>
-<div class="line">      ReturnType&gt;::value ();</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// NOLINTEND(cppcoreguidelines-avoid-do-while)</span></div>
-<div class="line">} <span class="comment">// namespace Wrapper</span></div>
-<div class="line">} <span class="comment">// namespace exceptions</span></div>
-<div class="line">} <span class="comment">// namespace core</span></div>
-<div class="line">} <span class="comment">// namespace lumex</span></div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// ================================================================== //</span></div>
-<div class="line"><span class="comment">// ===================== Lumex Safe-Call Macros ====================== //</span></div>
-<div class="line"><span class="comment">// ================================================================== //</span></div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// NOLINTBEGIN(cppcoreguidelines-macro-usage) - macros are the only way to</span></div>
-<div class="line"><span class="comment">// capture __FILE__/__LINE__ and build a `[&amp;]`-capturing lambda around an</span></div>
-<div class="line"><span class="comment">// arbitrary caller expression.</span></div>
-<div class="line"><span class="preprocessor">#define LUMEX_SAFE_CALL(expr)                                                 \</span></div>
-<div class="line"><span class="preprocessor">  lumex::core::exceptions::Wrapper::ExceptionWrapper (                        \</span></div>
-<div class="line"><span class="preprocessor">      std::string (&quot;Exception in &quot;) + std::string (LUMEX_FUNCTION_NAME)       \</span></div>
-<div class="line"><span class="preprocessor">          + &quot; at &quot; + std::string (__FILE__) + &quot;:&quot;                             \</span></div>
-<div class="line"><span class="preprocessor">          + std::to_string (__LINE__),                                        \</span></div>
-<div class="line"><span class="preprocessor">      std::string (&quot;Unknown exception in &quot;)                                   \</span></div>
-<div class="line"><span class="preprocessor">          + std::string (LUMEX_FUNCTION_NAME) + &quot; at &quot;                        \</span></div>
-<div class="line"><span class="preprocessor">          + std::string (__FILE__) + &quot;:&quot; + std::to_string (__LINE__),         \</span></div>
-<div class="line"><span class="preprocessor">      [&amp;] () -&gt; decltype (expr) { return expr; })</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#define LUMEX_SAFE_CALL_MSG(expr, excMessage, unknExcMessage)                 \</span></div>
-<div class="line"><span class="preprocessor">  lumex::core::exceptions::Wrapper::ExceptionWrapper (                        \</span></div>
-<div class="line"><span class="preprocessor">      excMessage, unknExcMessage, [&amp;] () -&gt; decltype (expr) { return expr; })</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#define LUMEX_SAFE_CALL_LAMBDA_MSG(lambda, excMessage, unknExcMessage)        \</span></div>
-<div class="line"><span class="preprocessor">  lumex::core::exceptions::Wrapper::ExceptionWrapper (excMessage,             \</span></div>
-<div class="line"><span class="preprocessor">                                                      unknExcMessage, lambda)</span></div>
-<div class="line"><span class="comment">// NOLINTEND(cppcoreguidelines-macro-usage)</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><span class="preprocessor">#pragma clang diagnostic pop</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#endif // !LUMEX_CORE_EXCEPTIONS_HPP</span></div>
-</div><!-- fragment --> </div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::core::utility::traits::value::is_optional&lt; T const volatile &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02927.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01volatile_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01volatile_01_4_inherit__map" id="alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01volatile_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="25,169,211,225"/>
+<area shape="rect" href="a02916.html" title=" " alt="" coords="5,80,231,121"/>
+<area shape="rect" title=" " alt="" coords="73,5,163,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for lumex::core::utility::traits::value::is_optional&lt; T const volatile &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02926.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01volatile_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01volatile_01_4_coll__map" id="alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional_3_01T_01const_01volatile_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="25,169,211,225"/>
+<area shape="rect" href="a02916.html" title=" " alt="" coords="5,80,231,121"/>
+<area shape="rect" title=" " alt="" coords="73,5,163,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00308_html_a5216865b2fc83a9979ea50b2172a1dfb"><div class="ttname"><a href="a00308.html#a5216865b2fc83a9979ea50b2172a1dfb">LUMEX_STATIC_ASSERT_MSG</a></div><div class="ttdeci">#define LUMEX_STATIC_ASSERT_MSG(...)</div><div class="ttdef"><b>Definition:</b> LumexAssert.hpp:94</div></div>
-<div class="ttc" id="aa00308_html"><div class="ttname"><a href="a00308.html">LumexAssert.hpp</a></div></div>
-<div class="ttc" id="aa00857_html_a7b15b3b36269bfd6b78f9ad3b7ba9f4e"><div class="ttname"><a href="a00857.html#a7b15b3b36269bfd6b78f9ad3b7ba9f4e">lumex::core::exceptions::Wrapper::ExceptionWrapper</a></div><div class="ttdeci">auto ExceptionWrapper(std::string const &amp;excMessage, std::string const &amp;unknownExcMessage, Function &amp;&amp;func, Args &amp;&amp;...args) LUMEX_NOEXCEPT_IF(noexcept(std::declval&lt; Function &gt;()(std::declval&lt; Args &gt;()...))) -&gt; lumex::core::utility::traits::invoke::invoke_result_t&lt; Function, Args... &gt;</div><div class="ttdef"><b>Definition:</b> LumexExceptionWrapper.hpp:283</div></div>
-<div class="ttc" id="aa00859_html_a9b81ee8d78509f3b0763092124a09914"><div class="ttname"><a href="a00859.html#a9b81ee8d78509f3b0763092124a09914">lumex::core::exceptions::Wrapper::detail::write_to_stderr</a></div><div class="ttdeci">void write_to_stderr(std::string const &amp;prefix, char const *whatMsg) LUMEX_NOEXCEPT</div><div class="ttdoc">Writes &quot;prefix. Reason: &lt;whatMsg&gt;\n&quot; to std::cerr using only noexcept operations.</div><div class="ttdef"><b>Definition:</b> LumexExceptionWrapper.hpp:152</div></div>
-<div class="ttc" id="aa00191_html_a03ec1ac9d020fd4f7b12362a94f204e9"><div class="ttname"><a href="a00191.html#a03ec1ac9d020fd4f7b12362a94f204e9">LUMEX_SAFE_CALL</a></div><div class="ttdeci">#define LUMEX_SAFE_CALL(expr)</div><div class="ttdoc">Safely evaluates expr, with default, source-location-based diagnostic messages.</div><div class="ttdef"><b>Definition:</b> LumexExceptionWrapper.hpp:354</div></div>
-<div class="ttc" id="aa00191_html_a261fa5b1604d900afd08ec4e0bebacb8"><div class="ttname"><a href="a00191.html#a261fa5b1604d900afd08ec4e0bebacb8">LUMEX_SAFE_CALL_MSG</a></div><div class="ttdeci">#define LUMEX_SAFE_CALL_MSG(expr, excMessage, unknExcMessage)</div><div class="ttdoc">Safely evaluates expr, with caller-supplied diagnostic messages.</div><div class="ttdef"><b>Definition:</b> LumexExceptionWrapper.hpp:371</div></div>
-<div class="ttc" id="aa00347_html_a519cca5cda98cc22e4eaf9dea1bcca4b"><div class="ttname"><a href="a00347.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT_IF(...)</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:70</div></div>
-<div class="ttc" id="aa00783_html"><div class="ttname"><a href="a00783.html">lumex</a></div><div class="ttdoc">&lt; For RAII-managed pointers on base interface.</div><div class="ttdef"><b>Definition:</b> LumexCPUVectorizationCapabilities.cpp:26</div></div>
-<div class="ttc" id="aa00347_html_a8932f306494e2abfe9045da20a41e47c"><div class="ttname"><a href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></div><div class="ttdeci">#define LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:69</div></div>
-<div class="ttc" id="aa00857_html_aa72d63d417ed76026d05a6cba9ecdd14"><div class="ttname"><a href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">lumex::core::exceptions::Wrapper::safe_call_report_fn</a></div><div class="ttdeci">void(*)(char const *message) safe_call_report_fn</div><div class="ttdoc">Consumer report sink for a fully built failure line.</div><div class="ttdef"><b>Definition:</b> LumexExceptionWrapper.hpp:123</div></div>
-<div class="ttc" id="aa00859_html_a287ecc219d5289ba4953c34ee703ad12"><div class="ttname"><a href="a00859.html#a287ecc219d5289ba4953c34ee703ad12">lumex::core::exceptions::Wrapper::detail::report_line</a></div><div class="ttdeci">void report_line(std::string const &amp;line) LUMEX_NOEXCEPT</div><div class="ttdoc">Sends line to the installed sink. On a null sink or a throw from the sink, writes line to std::cerr.</div><div class="ttdef"><b>Definition:</b> LumexExceptionWrapper.hpp:194</div></div>
-<div class="ttc" id="aa00913_html_a70065957d93e7a3955cd082d80203d00"><div class="ttname"><a href="a00913.html#a70065957d93e7a3955cd082d80203d00">lumex::core::utility::traits::invoke::invoke_result_t</a></div><div class="ttdeci">typename invoke_result&lt; Func, Args... &gt;::type invoke_result_t</div><div class="ttdef"><b>Definition:</b> LumexTypeTraits.hpp:365</div></div>
-<div class="ttc" id="aa00368_html"><div class="ttname"><a href="a00368.html">LumexTypeTraits.hpp</a></div><div class="ttdoc">Every general-purpose type trait of LumexLib, one sub-namespace of lumex::core::utility::traits per t...</div></div>
-<div class="ttc" id="aa02232_html"><div class="ttname"><a href="a02232.html">lumex::core::utility::traits::meta::default_return</a></div><div class="ttdoc">Helper providing a default value for a type, primarily meant for exception-safe fallbacks.</div><div class="ttdef"><b>Definition:</b> LumexTypeTraits.hpp:175</div></div>
-<div class="ttc" id="aa00347_html"><div class="ttname"><a href="a00347.html">LumexKeywords.hpp</a></div></div>
-<div class="ttc" id="aa00350_html"><div class="ttname"><a href="a00350.html">LumexMacros.hpp</a></div></div>
-<div class="ttc" id="aa00857_html_a810b21f9384bf6219c60f63484e7b983"><div class="ttname"><a href="a00857.html#a810b21f9384bf6219c60f63484e7b983">lumex::core::exceptions::Wrapper::get_safe_call_reporter</a></div><div class="ttdeci">LUMEX_PUBLIC_API safe_call_report_fn get_safe_call_reporter() LUMEX_NOEXCEPT</div><div class="ttdoc">Returns the installed sink, or nullptr when reports go to std::cerr.</div><div class="ttdef"><b>Definition:</b> LumexExceptionWrapper.cpp:32</div></div>
-<div class="ttc" id="aa00557_html_aa948a1b1a43f6a954fd4c15b01ae4207"><div class="ttname"><a href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a></div><div class="ttdeci">#define LUMEX_API</div><div class="ttdef"><b>Definition:</b> LumexExport.hpp:73</div></div>
-<div class="ttc" id="aa00557_html"><div class="ttname"><a href="a00557.html">LumexExport.hpp</a></div></div>
-<div class="ttc" id="aa00859_html_a8efd3e3fa6f91fd9d45639b9e4352feb"><div class="ttname"><a href="a00859.html#a8efd3e3fa6f91fd9d45639b9e4352feb">lumex::core::exceptions::Wrapper::detail::report_exception</a></div><div class="ttdeci">void report_exception(std::string const &amp;prefix, char const *whatMsg) LUMEX_NOEXCEPT</div><div class="ttdoc">Builds &quot;prefix. Reason: what&quot; and reports it.</div><div class="ttdef"><b>Definition:</b> LumexExceptionWrapper.hpp:217</div></div>
-<div class="ttc" id="aa00857_html_a2cbdbf26b85522e6b9132dedb2b99b18"><div class="ttname"><a href="a00857.html#a2cbdbf26b85522e6b9132dedb2b99b18">lumex::core::exceptions::Wrapper::set_safe_call_reporter</a></div><div class="ttdeci">LUMEX_PUBLIC_API void set_safe_call_reporter(safe_call_report_fn reporter) LUMEX_NOEXCEPT</div><div class="ttdoc">Installs the process-wide report sink. nullptr restores std::cerr.</div><div class="ttdef"><b>Definition:</b> LumexExceptionWrapper.cpp:25</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01330.html">value</a></li><li class="navelem"><a class="el" href="a02928.html">is_optional&lt; T const volatile &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

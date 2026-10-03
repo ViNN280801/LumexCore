@@ -1,8 +1,11 @@
 var a01852 =
 [
-    [ "BuiltinFormatter", "a01852.html#a2aa06294bfbc305796c4feeec601dfec", null ],
-    [ "format_arg", "a01852.html#ac9642063b0f0f6e8ed748e295ff5174c", null ],
-    [ "parse", "a01852.html#a3eebdcfffd84609ac079ea6cd23ab82c", null ],
-    [ "resolved_specs", "a01852.html#a0a5114d19e30dd3ed39652935ab925c2", null ],
-    [ "specs", "a01852.html#adcd81b7707d9dc7d939f188645c7aa87", null ]
+    [ "ValueType", "a01852.html#aad9c1039be8ea0ed1e9257eafb69f0d8", null ],
+    [ "kCatalogCheck", "a01852.html#aede25311f51f4b7aeb0303b7fe26ad7c", null ],
+    [ "kInit", "a01852.html#a9d2e3deb0a146184d0e791c0993c87cd", null ],
+    [ "kPoly", "a01852.html#afa7d9d34918520a5d9872db691447ced", null ],
+    [ "kRefIn", "a01852.html#a3860f7979831263bc3ce9cbac6efef9d", null ],
+    [ "kRefOut", "a01852.html#ab9a61871a71285a081afb945486a3538", null ],
+    [ "kWidth", "a01852.html#a279b52ee17e90f41de2a32fb7b37b4d3", null ],
+    [ "kXorOut", "a01852.html#a82da132c4a02dff985e7bd30bbac4e67", null ]
 ];

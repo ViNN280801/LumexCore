@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::exceptions::stacktrace::LumexBasicStacktrace&lt; Allocator &gt; Class Template Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc10_cdma2000_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -95,787 +95,70 @@ $(document).ready(function(){initNavTree('a01624.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a01621.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::exceptions::stacktrace::LumexBasicStacktrace&lt; Allocator &gt; Class Template Reference</div>  </div>
+<div class="title">lumex::core::crc::parametric::crc10_cdma2000_spec_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Contains classes and utilities related to stack trace management and exception handling.  
+<p>CRC-10/CDMA2000.  
  <a href="a01624.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00197_source.html">LumexStacktrace.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4d980972f69d3ba1a82969fcf0885b99"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a4d980972f69d3ba1a82969fcf0885b99">value_type</a> = <a class="el" href="a01636.html">LumexStacktraceEntry</a></td></tr>
-<tr class="memdesc:a4d980972f69d3ba1a82969fcf0885b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of elements stored in the stacktrace, which is <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code>.  <a href="a01624.html#a4d980972f69d3ba1a82969fcf0885b99">More...</a><br /></td></tr>
-<tr class="separator:a4d980972f69d3ba1a82969fcf0885b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3726eebed5297c5fad61038ac5f4b013"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> = Allocator</td></tr>
-<tr class="memdesc:a3726eebed5297c5fad61038ac5f4b013"><td class="mdescLeft">&#160;</td><td class="mdescRight">The allocator type used by this stacktrace container.  <a href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">More...</a><br /></td></tr>
-<tr class="separator:a3726eebed5297c5fad61038ac5f4b013"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4adfa5e25b981c53bf4013b75f7216b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> = typename std::allocator_traits&lt; Allocator &gt;::<a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a></td></tr>
-<tr class="memdesc:ab4adfa5e25b981c53bf4013b75f7216b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unsigned integer type used for sizes and counts.  <a href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">More...</a><br /></td></tr>
-<tr class="separator:ab4adfa5e25b981c53bf4013b75f7216b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a889a64f3287b739a476eb87492d9821a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a889a64f3287b739a476eb87492d9821a">difference_type</a> = typename std::allocator_traits&lt; Allocator &gt;::<a class="el" href="a01624.html#a889a64f3287b739a476eb87492d9821a">difference_type</a></td></tr>
-<tr class="memdesc:a889a64f3287b739a476eb87492d9821a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signed integer type used for differences between iterators.  <a href="a01624.html#a889a64f3287b739a476eb87492d9821a">More...</a><br /></td></tr>
-<tr class="separator:a889a64f3287b739a476eb87492d9821a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0c0c59c11aec6affe5c3840fb9a2d3b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#af0c0c59c11aec6affe5c3840fb9a2d3b">reference</a> = <a class="el" href="a01624.html#a4d980972f69d3ba1a82969fcf0885b99">value_type</a> &amp;</td></tr>
-<tr class="memdesc:af0c0c59c11aec6affe5c3840fb9a2d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reference to an element in the stacktrace.  <a href="a01624.html#af0c0c59c11aec6affe5c3840fb9a2d3b">More...</a><br /></td></tr>
-<tr class="separator:af0c0c59c11aec6affe5c3840fb9a2d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6914a08378f5bcd29235edc1368d033"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#ae6914a08378f5bcd29235edc1368d033">const_reference</a> = <a class="el" href="a01624.html#a4d980972f69d3ba1a82969fcf0885b99">value_type</a> const &amp;</td></tr>
-<tr class="memdesc:ae6914a08378f5bcd29235edc1368d033"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constant reference to an element in the stacktrace.  <a href="a01624.html#ae6914a08378f5bcd29235edc1368d033">More...</a><br /></td></tr>
-<tr class="separator:ae6914a08378f5bcd29235edc1368d033"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cef50f08963046994b0cc569f7c63a8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a1cef50f08963046994b0cc569f7c63a8">pointer</a> = typename std::allocator_traits&lt; Allocator &gt;::<a class="el" href="a01624.html#a1cef50f08963046994b0cc569f7c63a8">pointer</a></td></tr>
-<tr class="memdesc:a1cef50f08963046994b0cc569f7c63a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to an element in the stacktrace.  <a href="a01624.html#a1cef50f08963046994b0cc569f7c63a8">More...</a><br /></td></tr>
-<tr class="separator:a1cef50f08963046994b0cc569f7c63a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c01e95536f34cf4d5b1064a610afbf1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a7c01e95536f34cf4d5b1064a610afbf1">const_pointer</a> = typename std::allocator_traits&lt; Allocator &gt;::<a class="el" href="a01624.html#a7c01e95536f34cf4d5b1064a610afbf1">const_pointer</a></td></tr>
-<tr class="memdesc:a7c01e95536f34cf4d5b1064a610afbf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constant pointer to an element in the stacktrace.  <a href="a01624.html#a7c01e95536f34cf4d5b1064a610afbf1">More...</a><br /></td></tr>
-<tr class="separator:a7c01e95536f34cf4d5b1064a610afbf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7db788a534a5c2f22ba455c7b437d15b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a7db788a534a5c2f22ba455c7b437d15b">container_type</a> = std::vector&lt; <a class="el" href="a01624.html#a4d980972f69d3ba1a82969fcf0885b99">value_type</a>, <a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> &gt;</td></tr>
-<tr class="memdesc:a7db788a534a5c2f22ba455c7b437d15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The underlying container type used to store stacktrace entries, typically <code>std::vector</code>.  <a href="a01624.html#a7db788a534a5c2f22ba455c7b437d15b">More...</a><br /></td></tr>
-<tr class="separator:a7db788a534a5c2f22ba455c7b437d15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a788ff8eebd7cc4ef73f0141dbace81ff"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a788ff8eebd7cc4ef73f0141dbace81ff">iterator</a> = typename container_type::const_iterator</td></tr>
-<tr class="memdesc:a788ff8eebd7cc4ef73f0141dbace81ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator type for traversing the stacktrace entries (constant).  <a href="a01624.html#a788ff8eebd7cc4ef73f0141dbace81ff">More...</a><br /></td></tr>
-<tr class="separator:a788ff8eebd7cc4ef73f0141dbace81ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9afab56a4b7f32b2529b6219ea4c748d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a> = typename container_type::const_iterator</td></tr>
-<tr class="memdesc:a9afab56a4b7f32b2529b6219ea4c748d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator type for traversing the stacktrace entries.  <a href="a01624.html#a9afab56a4b7f32b2529b6219ea4c748d">More...</a><br /></td></tr>
-<tr class="separator:a9afab56a4b7f32b2529b6219ea4c748d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a504f2d12c9fef93cc64e0e9784466ecc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a504f2d12c9fef93cc64e0e9784466ecc">reverse_iterator</a> = typename container_type::const_reverse_iterator</td></tr>
-<tr class="memdesc:a504f2d12c9fef93cc64e0e9784466ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse iterator type for traversing the stacktrace entries in reverse (constant).  <a href="a01624.html#a504f2d12c9fef93cc64e0e9784466ecc">More...</a><br /></td></tr>
-<tr class="separator:a504f2d12c9fef93cc64e0e9784466ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8993d50c8671383b261de063a2f5ed38"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a8993d50c8671383b261de063a2f5ed38">const_reverse_iterator</a> = typename container_type::const_reverse_iterator</td></tr>
-<tr class="memdesc:a8993d50c8671383b261de063a2f5ed38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant reverse iterator type for traversing the stacktrace entries in reverse.  <a href="a01624.html#a8993d50c8671383b261de063a2f5ed38">More...</a><br /></td></tr>
-<tr class="separator:a8993d50c8671383b261de063a2f5ed38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23dd7157779a072eec1d6a2cce381db4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a23dd7157779a072eec1d6a2cce381db4">ValueType</a> = std::uint16_t</td></tr>
+<tr class="separator:a23dd7157779a072eec1d6a2cce381db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:adfbfdd747c3fe31ad0265fb797a6ff14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#adfbfdd747c3fe31ad0265fb797a6ff14">LumexBasicStacktrace</a> () <a class="el" href="a00347.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a>(noexcept(<a class="el" href="a01624.html#a7db788a534a5c2f22ba455c7b437d15b">container_type</a>()))=default</td></tr>
-<tr class="memdesc:adfbfdd747c3fe31ad0265fb797a6ff14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>.  <a href="a01624.html#adfbfdd747c3fe31ad0265fb797a6ff14">More...</a><br /></td></tr>
-<tr class="separator:adfbfdd747c3fe31ad0265fb797a6ff14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44c4f9ccf09a642b6f9f0ca6b21bc751"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a44c4f9ccf09a642b6f9f0ca6b21bc751">LumexBasicStacktrace</a> (<a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> const &amp;alloc) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a44c4f9ccf09a642b6f9f0ca6b21bc751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> with a specific allocator.  <a href="a01624.html#a44c4f9ccf09a642b6f9f0ca6b21bc751">More...</a><br /></td></tr>
-<tr class="separator:a44c4f9ccf09a642b6f9f0ca6b21bc751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e4f253e77f56c6f4ec81d7329e874bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a1e4f253e77f56c6f4ec81d7329e874bc">LumexBasicStacktrace</a> (<a class="el" href="a01624.html">LumexBasicStacktrace</a> const &amp;)=default</td></tr>
-<tr class="memdesc:a1e4f253e77f56c6f4ec81d7329e874bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>.  <a href="a01624.html#a1e4f253e77f56c6f4ec81d7329e874bc">More...</a><br /></td></tr>
-<tr class="separator:a1e4f253e77f56c6f4ec81d7329e874bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a535f07320679bcabcec683c4a42a6d6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a535f07320679bcabcec683c4a42a6d6e">LumexBasicStacktrace</a> (<a class="el" href="a01624.html">LumexBasicStacktrace</a> &amp;&amp;) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>=default</td></tr>
-<tr class="memdesc:a535f07320679bcabcec683c4a42a6d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>.  <a href="a01624.html#a535f07320679bcabcec683c4a42a6d6e">More...</a><br /></td></tr>
-<tr class="separator:a535f07320679bcabcec683c4a42a6d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae110474fdda0455c291e627b42ac5770"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html">LumexBasicStacktrace</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#ae110474fdda0455c291e627b42ac5770">operator=</a> (<a class="el" href="a01624.html">LumexBasicStacktrace</a> const &amp;)=default</td></tr>
-<tr class="memdesc:ae110474fdda0455c291e627b42ac5770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>.  <a href="a01624.html#ae110474fdda0455c291e627b42ac5770">More...</a><br /></td></tr>
-<tr class="separator:ae110474fdda0455c291e627b42ac5770"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa01d2d49d140fe64d4d1a57123f784f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html">LumexBasicStacktrace</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#aa01d2d49d140fe64d4d1a57123f784f8">operator=</a> (<a class="el" href="a01624.html">LumexBasicStacktrace</a> &amp;&amp;) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>=default</td></tr>
-<tr class="memdesc:aa01d2d49d140fe64d4d1a57123f784f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>.  <a href="a01624.html#aa01d2d49d140fe64d4d1a57123f784f8">More...</a><br /></td></tr>
-<tr class="separator:aa01d2d49d140fe64d4d1a57123f784f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfd0980dcd82e6ea1c893dde4f1d9fdf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#acfd0980dcd82e6ea1c893dde4f1d9fdf">~LumexBasicStacktrace</a> ()=default</td></tr>
-<tr class="memdesc:acfd0980dcd82e6ea1c893dde4f1d9fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>.  <a href="a01624.html#acfd0980dcd82e6ea1c893dde4f1d9fdf">More...</a><br /></td></tr>
-<tr class="separator:acfd0980dcd82e6ea1c893dde4f1d9fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa4c12c3e5cedcbd7bae9ebb8219db27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#afa4c12c3e5cedcbd7bae9ebb8219db27">get_allocator</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:afa4c12c3e5cedcbd7bae9ebb8219db27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the allocator used by the internal container.  <a href="a01624.html#afa4c12c3e5cedcbd7bae9ebb8219db27">More...</a><br /></td></tr>
-<tr class="separator:afa4c12c3e5cedcbd7bae9ebb8219db27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa28519df59a40e281d53859bf91b19a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#aa28519df59a40e281d53859bf91b19a9">begin</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:aa28519df59a40e281d53859bf91b19a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant iterator to the beginning of the stacktrace.  <a href="a01624.html#aa28519df59a40e281d53859bf91b19a9">More...</a><br /></td></tr>
-<tr class="separator:aa28519df59a40e281d53859bf91b19a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a947f0e68cddbb62370daa9d25d5bc69d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a947f0e68cddbb62370daa9d25d5bc69d">end</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a947f0e68cddbb62370daa9d25d5bc69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant iterator to the end of the stacktrace.  <a href="a01624.html#a947f0e68cddbb62370daa9d25d5bc69d">More...</a><br /></td></tr>
-<tr class="separator:a947f0e68cddbb62370daa9d25d5bc69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b4f0b265d99433c3b5be1534baffeb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a3b4f0b265d99433c3b5be1534baffeb9">cbegin</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a3b4f0b265d99433c3b5be1534baffeb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant iterator to the beginning of the stacktrace (C++11 alias).  <a href="a01624.html#a3b4f0b265d99433c3b5be1534baffeb9">More...</a><br /></td></tr>
-<tr class="separator:a3b4f0b265d99433c3b5be1534baffeb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedb0ef1673f70f442b3d980eb85715d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#aedb0ef1673f70f442b3d980eb85715d5">cend</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:aedb0ef1673f70f442b3d980eb85715d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant iterator to the end of the stacktrace (C++11 alias).  <a href="a01624.html#aedb0ef1673f70f442b3d980eb85715d5">More...</a><br /></td></tr>
-<tr class="separator:aedb0ef1673f70f442b3d980eb85715d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27cb119db17b8020ac5316b512ba18d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#a8993d50c8671383b261de063a2f5ed38">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a27cb119db17b8020ac5316b512ba18d5">rbegin</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a27cb119db17b8020ac5316b512ba18d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reverse iterator to the reverse beginning of the stacktrace.  <a href="a01624.html#a27cb119db17b8020ac5316b512ba18d5">More...</a><br /></td></tr>
-<tr class="separator:a27cb119db17b8020ac5316b512ba18d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a471b0ee6c7c7c47988e6c0b2cdc6d5f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#a8993d50c8671383b261de063a2f5ed38">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a471b0ee6c7c7c47988e6c0b2cdc6d5f8">rend</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a471b0ee6c7c7c47988e6c0b2cdc6d5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reverse iterator to the reverse end of the stacktrace.  <a href="a01624.html#a471b0ee6c7c7c47988e6c0b2cdc6d5f8">More...</a><br /></td></tr>
-<tr class="separator:a471b0ee6c7c7c47988e6c0b2cdc6d5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a420892ecb69ae49d192c6e71db0af522"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#a8993d50c8671383b261de063a2f5ed38">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a420892ecb69ae49d192c6e71db0af522">crbegin</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a420892ecb69ae49d192c6e71db0af522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reverse iterator to the reverse beginning of the stacktrace (C++11 alias).  <a href="a01624.html#a420892ecb69ae49d192c6e71db0af522">More...</a><br /></td></tr>
-<tr class="separator:a420892ecb69ae49d192c6e71db0af522"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06e189fc96f2426d4d1b79f45cbfd8ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#a8993d50c8671383b261de063a2f5ed38">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a06e189fc96f2426d4d1b79f45cbfd8ca">crend</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a06e189fc96f2426d4d1b79f45cbfd8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reverse iterator to the reverse end of the stacktrace (C++11 alias).  <a href="a01624.html#a06e189fc96f2426d4d1b79f45cbfd8ca">More...</a><br /></td></tr>
-<tr class="separator:a06e189fc96f2426d4d1b79f45cbfd8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad44911a9804d02acec1a2779c0f78bcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#ad44911a9804d02acec1a2779c0f78bcb">empty</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:ad44911a9804d02acec1a2779c0f78bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the stacktrace contains no entries.  <a href="a01624.html#ad44911a9804d02acec1a2779c0f78bcb">More...</a><br /></td></tr>
-<tr class="separator:ad44911a9804d02acec1a2779c0f78bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad518f7d9dca8458bfda553e7eb8d3b01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#ad518f7d9dca8458bfda553e7eb8d3b01">size</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:ad518f7d9dca8458bfda553e7eb8d3b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of entries in the stacktrace.  <a href="a01624.html#ad518f7d9dca8458bfda553e7eb8d3b01">More...</a><br /></td></tr>
-<tr class="separator:ad518f7d9dca8458bfda553e7eb8d3b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa967915c557780a3c181eb1820fe1d35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#aa967915c557780a3c181eb1820fe1d35">max_size</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:aa967915c557780a3c181eb1820fe1d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum possible number of entries that can be stored in the stacktrace.  <a href="a01624.html#aa967915c557780a3c181eb1820fe1d35">More...</a><br /></td></tr>
-<tr class="separator:aa967915c557780a3c181eb1820fe1d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a523dd13065114d9c8a43bcd514d29cd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#ae6914a08378f5bcd29235edc1368d033">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a523dd13065114d9c8a43bcd514d29cd2">operator[]</a> (<a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> pos) const</td></tr>
-<tr class="memdesc:a523dd13065114d9c8a43bcd514d29cd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides constant access to the element at the specified position.  <a href="a01624.html#a523dd13065114d9c8a43bcd514d29cd2">More...</a><br /></td></tr>
-<tr class="separator:a523dd13065114d9c8a43bcd514d29cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36a9819a837e3e9f6e0785ba628e560d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01624.html#ae6914a08378f5bcd29235edc1368d033">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a36a9819a837e3e9f6e0785ba628e560d">at</a> (<a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> pos) const</td></tr>
-<tr class="memdesc:a36a9819a837e3e9f6e0785ba628e560d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides constant access to the element at the specified position with bounds checking.  <a href="a01624.html#a36a9819a837e3e9f6e0785ba628e560d">More...</a><br /></td></tr>
-<tr class="separator:a36a9819a837e3e9f6e0785ba628e560d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a109ca23aa5843e05a1075115a6776498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a109ca23aa5843e05a1075115a6776498">swap</a> (<a class="el" href="a01624.html">LumexBasicStacktrace</a> &amp;other) <a class="el" href="a00347.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a>(noexcept(m_entries.swap(other.m_entries)))</td></tr>
-<tr class="memdesc:a109ca23aa5843e05a1075115a6776498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exchanges the contents of the stacktrace with another stacktrace.  <a href="a01624.html#a109ca23aa5843e05a1075115a6776498">More...</a><br /></td></tr>
-<tr class="separator:a109ca23aa5843e05a1075115a6776498"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6538898d6f9c3caba59b0a79144617ff"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01624.html">LumexBasicStacktrace</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a6538898d6f9c3caba59b0a79144617ff">current</a> (<a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> skip=1, <a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> max_depth=static_cast&lt; <a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> &gt;(-1), <a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> const &amp;alloc=<a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a>()) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a6538898d6f9c3caba59b0a79144617ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Captures the current call stack.  <a href="a01624.html#a6538898d6f9c3caba59b0a79144617ff">More...</a><br /></td></tr>
-<tr class="separator:a6538898d6f9c3caba59b0a79144617ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a26613644c994c88cda0315c0c57634e1"><td class="memTemplParams" colspan="2">template&lt;typename A &gt; </td></tr>
-<tr class="memitem:a26613644c994c88cda0315c0c57634e1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a01624.html">LumexBasicStacktrace</a>&lt; A &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01624.html#a26613644c994c88cda0315c0c57634e1">detail::capture_stacktrace</a> (std::size_t, std::size_t, A const &amp;) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a26613644c994c88cda0315c0c57634e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Friend declaration for the <code><a class="el" href="a00861.html#ae512bb913ecd0eae852ac22e4b337ab8" title="Platform-specific stacktrace capture implementation for POSIX systems.">detail::capture_stacktrace</a></code> function.  <a href="a01624.html#a26613644c994c88cda0315c0c57634e1">More...</a><br /></td></tr>
-<tr class="separator:a26613644c994c88cda0315c0c57634e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a9826e4c04e6417c9b8d785690ee3eb40"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a9826e4c04e6417c9b8d785690ee3eb40">kWidth</a> = 10</td></tr>
+<tr class="separator:a9826e4c04e6417c9b8d785690ee3eb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a014b1b4c8dfe7288e4cb176dca697c41"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a014b1b4c8dfe7288e4cb176dca697c41">kPoly</a> = 0x3D9U</td></tr>
+<tr class="separator:a014b1b4c8dfe7288e4cb176dca697c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f7270c6623e1bcda17822c758b02a0"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a62f7270c6623e1bcda17822c758b02a0">kInit</a> = 0x3FFU</td></tr>
+<tr class="separator:a62f7270c6623e1bcda17822c758b02a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e3c6d420d2ffb9697add80b1f7cc05"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#ae1e3c6d420d2ffb9697add80b1f7cc05">kRefIn</a> = false</td></tr>
+<tr class="separator:ae1e3c6d420d2ffb9697add80b1f7cc05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb3f376d845c53729f46aef310801b2"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#abfb3f376d845c53729f46aef310801b2">kRefOut</a> = false</td></tr>
+<tr class="separator:abfb3f376d845c53729f46aef310801b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a2c931a62d3d2db572f4e6ec60a7ef"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#a48a2c931a62d3d2db572f4e6ec60a7ef">kXorOut</a> = 0x000U</td></tr>
+<tr class="separator:a48a2c931a62d3d2db572f4e6ec60a7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6af4ab3c34339a606faf348b50c64cc"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html#af6af4ab3c34339a606faf348b50c64cc">kCatalogCheck</a> = 0x0233U</td></tr>
+<tr class="separator:af6af4ab3c34339a606faf348b50c64cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Allocator = std::allocator&lt;LumexStacktraceEntry&gt;&gt;<br />
-class lumex::core::exceptions::stacktrace::LumexBasicStacktrace&lt; Allocator &gt;</h3>
-
-<p>Contains classes and utilities related to stack trace management and exception handling. </p>
-<p>A basic, allocator-aware class for representing a call stack (stacktrace).</p>
-<p>This namespace groups all components for capturing, symbolizing, and representing call stacks within the LumexCore library, providing tools essential for diagnostics and error reporting.</p>
-<p>This template class provides a collection of <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code> objects, each representing a single frame in a call stack. It supports custom allocators and provides standard container-like accessors (iterators, size, element access). The actual stack capture is delegated to platform-specific helper functions. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Allocator</td><td>The allocator type to use for managing the underlying container of <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code> objects. Defaults to <code>std::allocator&lt;<a class="el" href="a01636.html">LumexStacktraceEntry</a>&gt;</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This class is non-copyable if the allocator is not copyable, but standard allocators are typically copyable. Move semantics are fully supported. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02926.html#_a4">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/exception/LumexException.hpp</a>.</dd>
-</dl>
+<div class="textblock"><p>CRC-10/CDMA2000. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-10/CDMA2000 </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a3726eebed5297c5fad61038ac5f4b013"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3726eebed5297c5fad61038ac5f4b013">&#9670;&nbsp;</a></span>allocator_type</h2>
+<a id="a23dd7157779a072eec1d6a2cce381db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23dd7157779a072eec1d6a2cce381db4">&#9670;&nbsp;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> =  Allocator</td>
+          <td class="memname">using <a class="el" href="a01624.html#a23dd7157779a072eec1d6a2cce381db4">lumex::core::crc::parametric::crc10_cdma2000_spec_t::ValueType</a> =  std::uint16_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The allocator type used by this stacktrace container. </p>
-
 </div>
 </div>
-<a id="a9afab56a4b7f32b2529b6219ea4c748d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9afab56a4b7f32b2529b6219ea4c748d">&#9670;&nbsp;</a></span>const_iterator</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af6af4ab3c34339a606faf348b50c64cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6af4ab3c34339a606faf348b50c64cc">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a> =  typename container_type::const_iterator</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constant iterator type for traversing the stacktrace entries. </p>
-
-</div>
-</div>
-<a id="a7c01e95536f34cf4d5b1064a610afbf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c01e95536f34cf4d5b1064a610afbf1">&#9670;&nbsp;</a></span>const_pointer</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#a7c01e95536f34cf4d5b1064a610afbf1">const_pointer</a> =  typename std::allocator_traits&lt;Allocator&gt;::<a class="el" href="a01624.html#a7c01e95536f34cf4d5b1064a610afbf1">const_pointer</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A constant pointer to an element in the stacktrace. </p>
-
-</div>
-</div>
-<a id="ae6914a08378f5bcd29235edc1368d033"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6914a08378f5bcd29235edc1368d033">&#9670;&nbsp;</a></span>const_reference</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#ae6914a08378f5bcd29235edc1368d033">const_reference</a> =  <a class="el" href="a01624.html#a4d980972f69d3ba1a82969fcf0885b99">value_type</a> const &amp;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A constant reference to an element in the stacktrace. </p>
-
-</div>
-</div>
-<a id="a8993d50c8671383b261de063a2f5ed38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8993d50c8671383b261de063a2f5ed38">&#9670;&nbsp;</a></span>const_reverse_iterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#a8993d50c8671383b261de063a2f5ed38">const_reverse_iterator</a> =  typename container_type::const_reverse_iterator</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constant reverse iterator type for traversing the stacktrace entries in reverse. </p>
-
-</div>
-</div>
-<a id="a7db788a534a5c2f22ba455c7b437d15b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7db788a534a5c2f22ba455c7b437d15b">&#9670;&nbsp;</a></span>container_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#a7db788a534a5c2f22ba455c7b437d15b">container_type</a> =  std::vector&lt;<a class="el" href="a01624.html#a4d980972f69d3ba1a82969fcf0885b99">value_type</a>, <a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The underlying container type used to store stacktrace entries, typically <code>std::vector</code>. </p>
-
-</div>
-</div>
-<a id="a889a64f3287b739a476eb87492d9821a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a889a64f3287b739a476eb87492d9821a">&#9670;&nbsp;</a></span>difference_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#a889a64f3287b739a476eb87492d9821a">difference_type</a> =  typename std::allocator_traits&lt;Allocator&gt;::<a class="el" href="a01624.html#a889a64f3287b739a476eb87492d9821a">difference_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The signed integer type used for differences between iterators. </p>
-
-</div>
-</div>
-<a id="a788ff8eebd7cc4ef73f0141dbace81ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a788ff8eebd7cc4ef73f0141dbace81ff">&#9670;&nbsp;</a></span>iterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#a788ff8eebd7cc4ef73f0141dbace81ff">iterator</a> =  typename container_type::const_iterator</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Iterator type for traversing the stacktrace entries (constant). </p>
-
-</div>
-</div>
-<a id="a1cef50f08963046994b0cc569f7c63a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cef50f08963046994b0cc569f7c63a8">&#9670;&nbsp;</a></span>pointer</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#a1cef50f08963046994b0cc569f7c63a8">pointer</a> =  typename std::allocator_traits&lt;Allocator&gt;::<a class="el" href="a01624.html#a1cef50f08963046994b0cc569f7c63a8">pointer</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A pointer to an element in the stacktrace. </p>
-
-</div>
-</div>
-<a id="af0c0c59c11aec6affe5c3840fb9a2d3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0c0c59c11aec6affe5c3840fb9a2d3b">&#9670;&nbsp;</a></span>reference</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#af0c0c59c11aec6affe5c3840fb9a2d3b">reference</a> =  <a class="el" href="a01624.html#a4d980972f69d3ba1a82969fcf0885b99">value_type</a> &amp;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A reference to an element in the stacktrace. </p>
-
-</div>
-</div>
-<a id="a504f2d12c9fef93cc64e0e9784466ecc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a504f2d12c9fef93cc64e0e9784466ecc">&#9670;&nbsp;</a></span>reverse_iterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#a504f2d12c9fef93cc64e0e9784466ecc">reverse_iterator</a> =  typename container_type::const_reverse_iterator</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reverse iterator type for traversing the stacktrace entries in reverse (constant). </p>
-
-</div>
-</div>
-<a id="ab4adfa5e25b981c53bf4013b75f7216b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4adfa5e25b981c53bf4013b75f7216b">&#9670;&nbsp;</a></span>size_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> =  typename std::allocator_traits&lt;Allocator&gt;::<a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The unsigned integer type used for sizes and counts. </p>
-
-</div>
-</div>
-<a id="a4d980972f69d3ba1a82969fcf0885b99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d980972f69d3ba1a82969fcf0885b99">&#9670;&nbsp;</a></span>value_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html#a4d980972f69d3ba1a82969fcf0885b99">value_type</a> =  <a class="el" href="a01636.html">LumexStacktraceEntry</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The type of elements stored in the stacktrace, which is <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code>. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adfbfdd747c3fe31ad0265fb797a6ff14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfbfdd747c3fe31ad0265fb797a6ff14">&#9670;&nbsp;</a></span>LumexBasicStacktrace() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html">LumexBasicStacktrace</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default constructor for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>. </p>
-<p>Constructs an empty stacktrace. The <code>noexcept</code> specification depends on the <code>container_type</code>'s default constructor. </p>
-
-</div>
-</div>
-<a id="a44c4f9ccf09a642b6f9f0ca6b21bc751"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44c4f9ccf09a642b6f9f0ca6b21bc751">&#9670;&nbsp;</a></span>LumexBasicStacktrace() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html">LumexBasicStacktrace</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> const &amp;&#160;</td>
-          <td class="paramname"><em>alloc</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs a <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> with a specific allocator. </p>
-<p>Constructs an empty stacktrace using the provided allocator. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">alloc</td><td>The allocator to use for the internal container. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This constructor is <code>noexcept</code> because <code>std::vector</code>'s allocator-aware constructor is <code>noexcept</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a1e4f253e77f56c6f4ec81d7329e874bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e4f253e77f56c6f4ec81d7329e874bc">&#9670;&nbsp;</a></span>LumexBasicStacktrace() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html">LumexBasicStacktrace</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01624.html">LumexBasicStacktrace</a>&lt; Allocator &gt; const &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Copy constructor for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>. </p>
-<p>Performs a deep copy of the <code>m_entries</code> container. </p>
-
-</div>
-</div>
-<a id="a535f07320679bcabcec683c4a42a6d6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a535f07320679bcabcec683c4a42a6d6e">&#9670;&nbsp;</a></span>LumexBasicStacktrace() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::<a class="el" href="a01624.html">LumexBasicStacktrace</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01624.html">LumexBasicStacktrace</a>&lt; Allocator &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Move constructor for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>. </p>
-<p>Efficiently moves the resources from another <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> object. </p><dl class="section note"><dt>Note</dt><dd>This constructor is <code>noexcept</code> because <code>std::vector</code>'s move constructor is <code>noexcept</code>. </dd></dl>
-
-</div>
-</div>
-<a id="acfd0980dcd82e6ea1c893dde4f1d9fdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfd0980dcd82e6ea1c893dde4f1d9fdf">&#9670;&nbsp;</a></span>~LumexBasicStacktrace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::~<a class="el" href="a01624.html">LumexBasicStacktrace</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default destructor for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>. </p>
-<p>Destroys the internal <code>m_entries</code> container, releasing all allocated resources. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a36a9819a837e3e9f6e0785ba628e560d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36a9819a837e3e9f6e0785ba628e560d">&#9670;&nbsp;</a></span>at()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html#ae6914a08378f5bcd29235edc1368d033">const_reference</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::at </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a>&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Provides constant access to the element at the specified position with bounds checking. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos</td><td>The zero-based index of the element to access. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A constant reference to the <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code> at <code>pos</code>. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::out_of_range</td><td>If <code>pos</code> is greater than or equal to <code><a class="el" href="a01624.html#ad518f7d9dca8458bfda553e7eb8d3b01" title="Returns the number of entries in the stacktrace.">size()</a></code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aa28519df59a40e281d53859bf91b19a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa28519df59a40e281d53859bf91b19a9">&#9670;&nbsp;</a></span>begin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::begin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a constant iterator to the beginning of the stacktrace. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>const_iterator</code> pointing to the first <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a3b4f0b265d99433c3b5be1534baffeb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b4f0b265d99433c3b5be1534baffeb9">&#9670;&nbsp;</a></span>cbegin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::cbegin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a constant iterator to the beginning of the stacktrace (C++11 alias). </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>const_iterator</code> pointing to the first <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-
-</div>
-</div>
-<a id="aedb0ef1673f70f442b3d980eb85715d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedb0ef1673f70f442b3d980eb85715d5">&#9670;&nbsp;</a></span>cend()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::cend </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a constant iterator to the end of the stacktrace (C++11 alias). </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>const_iterator</code> pointing one past the last <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a420892ecb69ae49d192c6e71db0af522"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a420892ecb69ae49d192c6e71db0af522">&#9670;&nbsp;</a></span>crbegin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html#a8993d50c8671383b261de063a2f5ed38">const_reverse_iterator</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::crbegin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a constant reverse iterator to the reverse beginning of the stacktrace (C++11 alias). </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>const_reverse_iterator</code> pointing to the last <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a06e189fc96f2426d4d1b79f45cbfd8ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06e189fc96f2426d4d1b79f45cbfd8ca">&#9670;&nbsp;</a></span>crend()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html#a8993d50c8671383b261de063a2f5ed38">const_reverse_iterator</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::crend </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a constant reverse iterator to the reverse end of the stacktrace (C++11 alias). </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>const_reverse_iterator</code> pointing one before the first <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a6538898d6f9c3caba59b0a79144617ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6538898d6f9c3caba59b0a79144617ff">&#9670;&nbsp;</a></span>current()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a01624.html">LumexBasicStacktrace</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::current </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a>&#160;</td>
-          <td class="paramname"><em>skip</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a>&#160;</td>
-          <td class="paramname"><em>max_depth</em> = <code>static_cast&lt;<a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a>&gt;&#160;(-1)</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> const &amp;&#160;</td>
-          <td class="paramname"><em>alloc</em> = <code><a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a>&#160;()</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">const constinit std::uint16_t lumex::core::crc::parametric::crc10_cdma2000_spec_t::kCatalogCheck = 0x0233U</td>
         </tr>
       </table>
   </td>
@@ -885,453 +168,149 @@ template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt;
 </table>
 </div><div class="memdoc">
 
-<p>Captures the current call stack. </p>
-<p>This static factory method creates a <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> object representing the current call stack. It delegates the actual capture to the platform-specific <code><a class="el" href="a00861.html#ae512bb913ecd0eae852ac22e4b337ab8" title="Platform-specific stacktrace capture implementation for POSIX systems.">detail::capture_stacktrace</a></code> function, automatically skipping the <code>current</code> function itself and potentially one more frame from <code>LumexBasicstacktrace::current</code>'s caller. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">skip</td><td>The number of frames to skip from the top of the call stack, in addition to the <code>current</code> function itself. Defaults to 1. </td></tr>
-    <tr><td class="paramname">max_depth</td><td>The maximum number of frames to capture. Defaults to all available frames. </td></tr>
-    <tr><td class="paramname">alloc</td><td>The allocator to use for the new stacktrace object. Defaults to <code>std::allocator&lt;<a class="el" href="a01636.html">LumexStacktraceEntry</a>&gt;()</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> object containing the captured frames. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code> as <code><a class="el" href="a00861.html#ae512bb913ecd0eae852ac22e4b337ab8" title="Platform-specific stacktrace capture implementation for POSIX systems.">detail::capture_stacktrace</a></code> is <code>noexcept</code>. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01624_a6538898d6f9c3caba59b0a79144617ff_icgraph.png" border="0" usemap="#aa01624_a6538898d6f9c3caba59b0a79144617ff_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="ad44911a9804d02acec1a2779c0f78bcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad44911a9804d02acec1a2779c0f78bcb">&#9670;&nbsp;</a></span>empty()</h2>
+<a id="a62f7270c6623e1bcda17822c758b02a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62f7270c6623e1bcda17822c758b02a0">&#9670;&nbsp;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::empty </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc10_cdma2000_spec_t::kInit = 0x3FFU</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks if the stacktrace contains no entries. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if the stacktrace is empty, false otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01624_ad44911a9804d02acec1a2779c0f78bcb_icgraph.png" border="0" usemap="#aa01624_ad44911a9804d02acec1a2779c0f78bcb_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="a947f0e68cddbb62370daa9d25d5bc69d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a947f0e68cddbb62370daa9d25d5bc69d">&#9670;&nbsp;</a></span>end()</h2>
+<a id="a014b1b4c8dfe7288e4cb176dca697c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a014b1b4c8dfe7288e4cb176dca697c41">&#9670;&nbsp;</a></span>kPoly</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01624.html#a9afab56a4b7f32b2529b6219ea4c748d">const_iterator</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::end </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc10_cdma2000_spec_t::kPoly = 0x3D9U</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a constant iterator to the end of the stacktrace. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>const_iterator</code> pointing one past the last <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-
 </div>
 </div>
-<a id="afa4c12c3e5cedcbd7bae9ebb8219db27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa4c12c3e5cedcbd7bae9ebb8219db27">&#9670;&nbsp;</a></span>get_allocator()</h2>
+<a id="ae1e3c6d420d2ffb9697add80b1f7cc05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e3c6d420d2ffb9697add80b1f7cc05">&#9670;&nbsp;</a></span>kRefIn</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01624.html#a3726eebed5297c5fad61038ac5f4b013">allocator_type</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::get_allocator </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc10_cdma2000_spec_t::kRefIn = false</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a copy of the allocator used by the internal container. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the <code>allocator_type</code> object. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-
 </div>
 </div>
-<a id="aa967915c557780a3c181eb1820fe1d35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa967915c557780a3c181eb1820fe1d35">&#9670;&nbsp;</a></span>max_size()</h2>
+<a id="abfb3f376d845c53729f46aef310801b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb3f376d845c53729f46aef310801b2">&#9670;&nbsp;</a></span>kRefOut</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::max_size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc10_cdma2000_spec_t::kRefOut = false</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the maximum possible number of entries that can be stored in the stacktrace. </p>
-<dl class="section return"><dt>Returns</dt><dd>The maximum size of the underlying container. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-
 </div>
 </div>
-<a id="aa01d2d49d140fe64d4d1a57123f784f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa01d2d49d140fe64d4d1a57123f784f8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a9826e4c04e6417c9b8d785690ee3eb40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9826e4c04e6417c9b8d785690ee3eb40">&#9670;&nbsp;</a></span>kWidth</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01624.html">LumexBasicStacktrace</a>&amp; <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01624.html">LumexBasicStacktrace</a>&lt; Allocator &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit int lumex::core::crc::parametric::crc10_cdma2000_spec_t::kWidth = 10</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Move assignment operator for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>. </p>
-<p>Efficiently moves the resources from another <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> object. </p><dl class="section note"><dt>Note</dt><dd>This operator is <code>noexcept</code> because <code>std::vector</code>'s move assignment operator is <code>noexcept</code>. </dd></dl>
-
 </div>
 </div>
-<a id="ae110474fdda0455c291e627b42ac5770"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae110474fdda0455c291e627b42ac5770">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a48a2c931a62d3d2db572f4e6ec60a7ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48a2c931a62d3d2db572f4e6ec60a7ef">&#9670;&nbsp;</a></span>kXorOut</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01624.html">LumexBasicStacktrace</a>&amp; <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01624.html">LumexBasicStacktrace</a>&lt; Allocator &gt; const &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc10_cdma2000_spec_t::kXorOut = 0x000U</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Copy assignment operator for <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code>. </p>
-<p>Assigns the contents of another <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> via deep copy. </p>
-
 </div>
 </div>
-<a id="a523dd13065114d9c8a43bcd514d29cd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a523dd13065114d9c8a43bcd514d29cd2">&#9670;&nbsp;</a></span>operator[]()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html#ae6914a08378f5bcd29235edc1368d033">const_reference</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::operator[] </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a>&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Provides constant access to the element at the specified position. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos</td><td>The zero-based index of the element to access. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A constant reference to the <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code> at <code>pos</code>. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>No bounds checking is performed; accessing elements out of range results in undefined behavior. </dd></dl>
-
-</div>
-</div>
-<a id="a27cb119db17b8020ac5316b512ba18d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27cb119db17b8020ac5316b512ba18d5">&#9670;&nbsp;</a></span>rbegin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html#a8993d50c8671383b261de063a2f5ed38">const_reverse_iterator</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::rbegin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a constant reverse iterator to the reverse beginning of the stacktrace. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>const_reverse_iterator</code> pointing to the last <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a471b0ee6c7c7c47988e6c0b2cdc6d5f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a471b0ee6c7c7c47988e6c0b2cdc6d5f8">&#9670;&nbsp;</a></span>rend()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html#a8993d50c8671383b261de063a2f5ed38">const_reverse_iterator</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::rend </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a constant reverse iterator to the reverse end of the stacktrace. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>const_reverse_iterator</code> pointing one before the first <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-
-</div>
-</div>
-<a id="ad518f7d9dca8458bfda553e7eb8d3b01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad518f7d9dca8458bfda553e7eb8d3b01">&#9670;&nbsp;</a></span>size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html#ab4adfa5e25b981c53bf4013b75f7216b">size_type</a> <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the number of entries in the stacktrace. </p>
-<dl class="section return"><dt>Returns</dt><dd>The number of <code><a class="el" href="a01636.html">LumexStacktraceEntry</a></code> objects in the stacktrace. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is <code>noexcept</code>. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01624_ad518f7d9dca8458bfda553e7eb8d3b01_icgraph.png" border="0" usemap="#aa01624_ad518f7d9dca8458bfda553e7eb8d3b01_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a109ca23aa5843e05a1075115a6776498"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a109ca23aa5843e05a1075115a6776498">&#9670;&nbsp;</a></span>swap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a01624.html">lumex::core::exceptions::stacktrace::LumexBasicStacktrace</a>&lt; Allocator &gt;::swap </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01624.html">LumexBasicStacktrace</a>&lt; Allocator &gt; &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Exchanges the contents of the stacktrace with another stacktrace. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>The other <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> object to swap contents with. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This operation is <code>noexcept</code> if the <code>container_type</code>'s <code>swap</code> method is <code>noexcept</code>. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="a26613644c994c88cda0315c0c57634e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26613644c994c88cda0315c0c57634e1">&#9670;&nbsp;</a></span>detail::capture_stacktrace</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Allocator  = std::allocator&lt;LumexStacktraceEntry&gt;&gt; </div>
-<div class="memtemplate">
-template&lt;typename A &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01624.html">LumexBasicStacktrace</a>&lt;A&gt; <a class="el" href="a00861.html#ae512bb913ecd0eae852ac22e4b337ab8">detail::capture_stacktrace</a> </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">A const &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Friend declaration for the <code><a class="el" href="a00861.html#ae512bb913ecd0eae852ac22e4b337ab8" title="Platform-specific stacktrace capture implementation for POSIX systems.">detail::capture_stacktrace</a></code> function. </p>
-<p>This allows the <code>capture_stacktrace</code> function to access the private constructor <code>LumexBasicStacktrace(container_type &amp;&amp;entries)</code> to efficiently construct a <code><a class="el" href="a01624.html" title="Contains classes and utilities related to stack trace management and exception handling.">LumexBasicStacktrace</a></code> object from a rvalue reference to its internal container. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">A</td><td>The allocator type used by the friendly function. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00197_source.html">LumexStacktrace.hpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00854.html">exceptions</a></li><li class="navelem"><a class="el" href="a00860.html">stacktrace</a></li><li class="navelem"><a class="el" href="a01624.html">LumexBasicStacktrace</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01256.html">crc</a></li><li class="navelem"><a class="el" href="a01259.html">parametric</a></li><li class="navelem"><a class="el" href="a01624.html">crc10_cdma2000_spec_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

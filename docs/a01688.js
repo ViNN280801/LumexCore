@@ -1,9 +1,11 @@
 var a01688 =
 [
-    [ "failure_t", "a01688.html#ae16573dc8b699a1940dc29c1c149af38", null ],
-    [ "failure_t", "a01688.html#a0f1d679ad8c570f4b442991b75be3538", null ],
-    [ "error", "a01688.html#aa4dfbccdf62ce0947e48e077ea10ab02", null ],
-    [ "error", "a01688.html#aa2ceda34d60b35f5b8a54bca07aaa475", null ],
-    [ "operator Expected< Target, TargetError >", "a01688.html#a410eaa6122a37a5244ec2a086c78a5d2", null ],
-    [ "operator Expected< Target, TargetError >", "a01688.html#aa579007ef62998f55e5ee86798932a52", null ]
+    [ "ValueType", "a01688.html#adfc8bfe84163f5d96b71e6c6c091d03e", null ],
+    [ "kCatalogCheck", "a01688.html#a7dcd7cbba2b52aea563afb89e9b42971", null ],
+    [ "kInit", "a01688.html#a178a8a989257f515ba5790174e3d022b", null ],
+    [ "kPoly", "a01688.html#af31de5008c7f3bfd1c5eff01468cf67e", null ],
+    [ "kRefIn", "a01688.html#a95ebaf9359ca988725f046a77ccf51ad", null ],
+    [ "kRefOut", "a01688.html#a30c468ac079c5bdca6b1dd1e0a76bc24", null ],
+    [ "kWidth", "a01688.html#a56c5eba1ed994ec803565d98d9017126", null ],
+    [ "kXorOut", "a01688.html#a59aadeba909c21cecce34dca49f9b5f5", null ]
 ];

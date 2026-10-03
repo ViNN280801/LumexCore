@@ -1,7 +1,5 @@
 var a00959 =
 [
-    [ "IXmlWriter", "a02732.html", "a02732" ],
-    [ "XmlBufferedWriter", "a02736.html", "a02736" ],
-    [ "XmlWriterFile", "a02744.html", "a02744" ],
-    [ "XmlWriterStream", "a02748.html", "a02748" ]
+    [ "XmlMemoryPage", "a03092.html", "a03092" ],
+    [ "kdefault_xml_memory_page_size", "a00959.html#ac84ecf0eca5d2db3249e4552c2a861a4", null ]
 ];

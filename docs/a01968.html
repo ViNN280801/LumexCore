@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::generators::number_generator::NumberGenerator&lt; T &gt; Class Template Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc24_lte_b_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,852 +94,223 @@ $(document).ready(function(){initNavTree('a01968.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a01965.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::generators::number_generator::NumberGenerator&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+<div class="title">lumex::core::crc::parametric::crc24_lte_b_spec_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Universal template-based number generator supporting multiple probability distributions.  
+<p>CRC-24/LTE-B: width=24 poly=0x800063 init=0x000000 refin=false refout=false xorout=0x000000.  
  <a href="a01968.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00239_source.html">LumexNumberGenerator.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:acf2cb20318e3d760207b05e000c64b82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#acf2cb20318e3d760207b05e000c64b82">NumberGenerator</a> ()</td></tr>
-<tr class="memdesc:acf2cb20318e3d760207b05e000c64b82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <code><a class="el" href="a01968.html" title="Universal template-based number generator supporting multiple probability distributions.">NumberGenerator</a></code> with default bounds and uniform distribution.  <a href="a01968.html#acf2cb20318e3d760207b05e000c64b82">More...</a><br /></td></tr>
-<tr class="separator:acf2cb20318e3d760207b05e000c64b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab93ae3cc471926df370a8e4bfeba43d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#ab93ae3cc471926df370a8e4bfeba43d7">NumberGenerator</a> (T from_val, T to_val, <a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a> dist_type=DistributionType::UNIFORM)</td></tr>
-<tr class="memdesc:ab93ae3cc471926df370a8e4bfeba43d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <code><a class="el" href="a01968.html" title="Universal template-based number generator supporting multiple probability distributions.">NumberGenerator</a></code> with specified bounds and an optional distribution type.  <a href="a01968.html#ab93ae3cc471926df370a8e4bfeba43d7">More...</a><br /></td></tr>
-<tr class="separator:ab93ae3cc471926df370a8e4bfeba43d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ff73b66eaf0e3282626ab41703037cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a8ff73b66eaf0e3282626ab41703037cc">~NumberGenerator</a> ()=default</td></tr>
-<tr class="memdesc:a8ff73b66eaf0e3282626ab41703037cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="a01968.html#a8ff73b66eaf0e3282626ab41703037cc">More...</a><br /></td></tr>
-<tr class="separator:a8ff73b66eaf0e3282626ab41703037cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad83a7d70b322cb34674b1433c04a3548"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#ad83a7d70b322cb34674b1433c04a3548">NumberGenerator</a> (<a class="el" href="a01968.html">NumberGenerator</a> const &amp;)=delete</td></tr>
-<tr class="separator:ad83a7d70b322cb34674b1433c04a3548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a861bae69854fefa3c51329de155cf338"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01968.html">NumberGenerator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a861bae69854fefa3c51329de155cf338">operator=</a> (<a class="el" href="a01968.html">NumberGenerator</a> const &amp;)=delete</td></tr>
-<tr class="separator:a861bae69854fefa3c51329de155cf338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d1f516958cac84ba34700f232440133"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a1d1f516958cac84ba34700f232440133">NumberGenerator</a> (<a class="el" href="a01968.html">NumberGenerator</a> &amp;&amp;) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>=delete</td></tr>
-<tr class="separator:a1d1f516958cac84ba34700f232440133"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3da8317996c542dcec46b22dd393b4e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01968.html">NumberGenerator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a3da8317996c542dcec46b22dd393b4e1">operator=</a> (<a class="el" href="a01968.html">NumberGenerator</a> &amp;&amp;) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a>=delete</td></tr>
-<tr class="separator:a3da8317996c542dcec46b22dd393b4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99f9a792214266f9785ea698737c5ae1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a99f9a792214266f9785ea698737c5ae1">operator()</a> () const</td></tr>
-<tr class="memdesc:a99f9a792214266f9785ea698737c5ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function call operator to generate a random number using configured bounds and distribution.  <a href="a01968.html#a99f9a792214266f9785ea698737c5ae1">More...</a><br /></td></tr>
-<tr class="separator:a99f9a792214266f9785ea698737c5ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accca4dcc069cd8fed1ef21b7b77baf1d"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#accca4dcc069cd8fed1ef21b7b77baf1d">operator()</a> (T from_val, T to_val) const</td></tr>
-<tr class="memdesc:accca4dcc069cd8fed1ef21b7b77baf1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function call operator to generate a random number with specified bounds.  <a href="a01968.html#accca4dcc069cd8fed1ef21b7b77baf1d">More...</a><br /></td></tr>
-<tr class="separator:accca4dcc069cd8fed1ef21b7b77baf1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4615e84142657779f92026e852fdcb33"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a4615e84142657779f92026e852fdcb33">operator()</a> (T from_val, T to_val, <a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a> dist_type) const</td></tr>
-<tr class="memdesc:a4615e84142657779f92026e852fdcb33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function call operator to generate a random number with specified bounds and distribution.  <a href="a01968.html#a4615e84142657779f92026e852fdcb33">More...</a><br /></td></tr>
-<tr class="separator:a4615e84142657779f92026e852fdcb33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aede99d86546c89a1fc8d25ab0bd08740"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#aede99d86546c89a1fc8d25ab0bd08740">get_number</a> (T from_val=get_default_min(), T to_val=get_default_max(), <a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a> dist_type=DistributionType::UNIFORM) const</td></tr>
-<tr class="memdesc:aede99d86546c89a1fc8d25ab0bd08740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random number with explicitly specified parameters.  <a href="a01968.html#aede99d86546c89a1fc8d25ab0bd08740">More...</a><br /></td></tr>
-<tr class="separator:aede99d86546c89a1fc8d25ab0bd08740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e04148ecf99307d40b98755a904025c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a0e04148ecf99307d40b98755a904025c">set_lower_bound</a> (T val) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a0e04148ecf99307d40b98755a904025c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the lower bound for subsequent random number generations.  <a href="a01968.html#a0e04148ecf99307d40b98755a904025c">More...</a><br /></td></tr>
-<tr class="separator:a0e04148ecf99307d40b98755a904025c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06b037a9528b607208a619e660d3dbff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a06b037a9528b607208a619e660d3dbff">set_upper_bound</a> (T val) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a06b037a9528b607208a619e660d3dbff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the upper bound for subsequent random number generations.  <a href="a01968.html#a06b037a9528b607208a619e660d3dbff">More...</a><br /></td></tr>
-<tr class="separator:a06b037a9528b607208a619e660d3dbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4019d7be071a691600cf554affa55d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#af4019d7be071a691600cf554affa55d9">set_bounds</a> (T from_val, T to_val) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:af4019d7be071a691600cf554affa55d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets both the lower and upper bounds for subsequent random number generations.  <a href="a01968.html#af4019d7be071a691600cf554affa55d9">More...</a><br /></td></tr>
-<tr class="separator:af4019d7be071a691600cf554affa55d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad65553acc8151bb7db08a70343e5007e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#ad65553acc8151bb7db08a70343e5007e">set_distribution</a> (<a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a> dist_type) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:ad65553acc8151bb7db08a70343e5007e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the probability distribution type for subsequent random number generations.  <a href="a01968.html#ad65553acc8151bb7db08a70343e5007e">More...</a><br /></td></tr>
-<tr class="separator:ad65553acc8151bb7db08a70343e5007e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a802b7f69f2229f25a46546a9652f1d3c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a802b7f69f2229f25a46546a9652f1d3c">get_sequence</a> (std::size_t count, T from_val=get_default_min(), T to_val=get_default_max(), <a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a> dist_type=DistributionType::UNIFORM) const</td></tr>
-<tr class="memdesc:a802b7f69f2229f25a46546a9652f1d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a sequence (vector) of random numbers.  <a href="a01968.html#a802b7f69f2229f25a46546a9652f1d3c">More...</a><br /></td></tr>
-<tr class="separator:a802b7f69f2229f25a46546a9652f1d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fc91afb7c4e9c323e63ad441d79b7ad"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a3fc91afb7c4e9c323e63ad441d79b7ad">get_lower_bound</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a3fc91afb7c4e9c323e63ad441d79b7ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current lower bound configured in the generator.  <a href="a01968.html#a3fc91afb7c4e9c323e63ad441d79b7ad">More...</a><br /></td></tr>
-<tr class="separator:a3fc91afb7c4e9c323e63ad441d79b7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6f7f9cfc62dec7cb9077efb56bc3762"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#aa6f7f9cfc62dec7cb9077efb56bc3762">get_upper_bound</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:aa6f7f9cfc62dec7cb9077efb56bc3762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current upper bound configured in the generator.  <a href="a01968.html#aa6f7f9cfc62dec7cb9077efb56bc3762">More...</a><br /></td></tr>
-<tr class="separator:aa6f7f9cfc62dec7cb9077efb56bc3762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a127540978c94c032e97da7e48b88268a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a127540978c94c032e97da7e48b88268a">get_distribution</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a127540978c94c032e97da7e48b88268a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current probability distribution type configured in the generator.  <a href="a01968.html#a127540978c94c032e97da7e48b88268a">More...</a><br /></td></tr>
-<tr class="separator:a127540978c94c032e97da7e48b88268a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a33112c8f64c01ea8984abfe8975b8b6d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a33112c8f64c01ea8984abfe8975b8b6d">ValueType</a> = std::uint32_t</td></tr>
+<tr class="separator:a33112c8f64c01ea8984abfe8975b8b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a4ba86204a7a8f26befa270c31ae7bf8a"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a4ba86204a7a8f26befa270c31ae7bf8a">kWidth</a> = 24</td></tr>
+<tr class="separator:a4ba86204a7a8f26befa270c31ae7bf8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f0768c27e4ce4fcdb119dcff5bdc25c"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a1f0768c27e4ce4fcdb119dcff5bdc25c">kPoly</a> = 0x800063UL</td></tr>
+<tr class="separator:a1f0768c27e4ce4fcdb119dcff5bdc25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b19e60ad0173cea36e7901299652bc"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a55b19e60ad0173cea36e7901299652bc">kInit</a> = 0x000000UL</td></tr>
+<tr class="separator:a55b19e60ad0173cea36e7901299652bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ed8c58db966636f9e172b245174515"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a36ed8c58db966636f9e172b245174515">kRefIn</a> = false</td></tr>
+<tr class="separator:a36ed8c58db966636f9e172b245174515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb17ff05c70a546b88d856a7b10ce3ea"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#afb17ff05c70a546b88d856a7b10ce3ea">kRefOut</a> = false</td></tr>
+<tr class="separator:afb17ff05c70a546b88d856a7b10ce3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c99a5dd8aafb69372ba33ae2bdf09c6"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#a2c99a5dd8aafb69372ba33ae2bdf09c6">kXorOut</a> = 0x000000UL</td></tr>
+<tr class="separator:a2c99a5dd8aafb69372ba33ae2bdf09c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e9017ee291d80cac50eb57ba84bd88"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html#aa9e9017ee291d80cac50eb57ba84bd88">kCatalogCheck</a> = 0x23EF52UL</td></tr>
+<tr class="separator:aa9e9017ee291d80cac50eb57ba84bd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-class lumex::core::generators::number_generator::NumberGenerator&lt; T &gt;</h3>
-
-<p>Universal template-based number generator supporting multiple probability distributions. </p>
-<p>This class provides a high-level, type-agnostic interface for generating pseudo-random numbers. It supports both integral and floating-point types (<code>T</code>) and can generate numbers according to uniform, normal, exponential, gamma, Bernoulli, binomial, geometric, and Poisson distributions. The internal random engine (<code>std::mt19937</code>) is seeded non-deterministically using <code>std::random_device</code> if available, otherwise deterministically with the current time. The class is <code>final</code> to prevent inheritance and ensures thread-safety by deleting copy operations.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Numeric type (integral or floating-point) for the generated numbers. <code>static_assert</code> ensures <code>T</code> is an arithmetic type but not <code>bool</code>, <code>char</code>, or <code>wchar_t</code>.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>This class deletes copy constructor and copy assignment operator to ensure proper behavior and thread safety when dealing with random number engines. Instances should be moved or passed by reference. </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="acf2cb20318e3d760207b05e000c64b82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf2cb20318e3d760207b05e000c64b82">&#9670;&nbsp;</a></span>NumberGenerator() <span class="overload">[1/4]</span></h2>
+<div class="textblock"><p>CRC-24/LTE-B: width=24 poly=0x800063 init=0x000000 refin=false refout=false xorout=0x000000. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-24/LTE-B </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a33112c8f64c01ea8984abfe8975b8b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33112c8f64c01ea8984abfe8975b8b6d">&#9670;&nbsp;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::<a class="el" href="a01968.html">NumberGenerator</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">using <a class="el" href="a01968.html#a33112c8f64c01ea8984abfe8975b8b6d">lumex::core::crc::parametric::crc24_lte_b_spec_t::ValueType</a> =  std::uint32_t</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Constructs a <code><a class="el" href="a01968.html" title="Universal template-based number generator supporting multiple probability distributions.">NumberGenerator</a></code> with default bounds and uniform distribution. </p>
-<p>Initializes the generator to produce numbers within default bounds (0 to <code>m_default_count</code> for integral types, 0.0 to 1.0 for floating-point types) using a uniform distribution. The internal random engine (<code>m_engine</code>) is seeded using <code>std::random_device</code> for non-determinism; if <code>std::random_device</code> does not provide entropy, it falls back to seeding with the current time. </p>
-
 </div>
 </div>
-<a id="ab93ae3cc471926df370a8e4bfeba43d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab93ae3cc471926df370a8e4bfeba43d7">&#9670;&nbsp;</a></span>NumberGenerator() <span class="overload">[2/4]</span></h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa9e9017ee291d80cac50eb57ba84bd88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9e9017ee291d80cac50eb57ba84bd88">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::<a class="el" href="a01968.html">NumberGenerator</a> </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>from_val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>to_val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a>&#160;</td>
-          <td class="paramname"><em>dist_type</em> = <code>DistributionType::UNIFORM</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">const constinit std::uint32_t lumex::core::crc::parametric::crc24_lte_b_spec_t::kCatalogCheck = 0x23EF52UL</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs a <code><a class="el" href="a01968.html" title="Universal template-based number generator supporting multiple probability distributions.">NumberGenerator</a></code> with specified bounds and an optional distribution type. </p>
-<p>Initializes the generator with custom lower (<code>from_val</code>) and upper (<code>to_val</code>) bounds. For <code>UNIFORM</code> only, if <code>from_val</code> is greater than <code>to_val</code>, they are swapped so the stored range is ordered. Other distributions treat <code>from_val</code> as a parameter (lambda, probability, mean), so those arguments are stored as given. The distribution type defaults to <code>UNIFORM</code>. The internal random engine (<code>m_engine</code>) is seeded using <code>std::random_device</code> for non-determinism; if <code>std::random_device</code> does not provide entropy, it falls back to seeding with the current time.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">from_val</td><td>The lower bound of the range for <code>UNIFORM</code> distribution, or the primary parameter (e.g., probability <code>p</code>, mean <code>µ</code>, lambda <code>λ</code>) for other distributions. </td></tr>
-    <tr><td class="paramname">to_val</td><td>The upper bound of the range for <code>UNIFORM</code> distribution, or the secondary parameter (e.g., standard deviation <code>σ</code>, number of trials <code>n</code>) for other distributions. </td></tr>
-    <tr><td class="paramname">dist_type</td><td>The desired <code>DistributionType</code> to use. Defaults to <code>DistributionType::UNIFORM</code>.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>The interpretation of <code>from_val</code> and <code>to_val</code> changes significantly depending on the <code>dist_type</code>. For non-uniform distributions, these parameters correspond to the distribution's specific parameters. Refer to the <code><a class="el" href="a01968.html#aede99d86546c89a1fc8d25ab0bd08740" title="Gets a random number with explicitly specified parameters.">get_number()</a></code> overloads or individual <code>generate_</code> methods for explicit parameter meanings for each distribution. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01968_ab93ae3cc471926df370a8e4bfeba43d7_cgraph.png" border="0" usemap="#aa01968_ab93ae3cc471926df370a8e4bfeba43d7_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a8ff73b66eaf0e3282626ab41703037cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ff73b66eaf0e3282626ab41703037cc">&#9670;&nbsp;</a></span>~NumberGenerator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::~<a class="el" href="a01968.html">NumberGenerator</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default destructor. </p>
-<p>Cleans up any resources held by the <code><a class="el" href="a01968.html" title="Universal template-based number generator supporting multiple probability distributions.">NumberGenerator</a></code> instance. </p>
-
-</div>
-</div>
-<a id="ad83a7d70b322cb34674b1433c04a3548"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad83a7d70b322cb34674b1433c04a3548">&#9670;&nbsp;</a></span>NumberGenerator() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::<a class="el" href="a01968.html">NumberGenerator</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01968.html">NumberGenerator</a>&lt; T &gt; const &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1d1f516958cac84ba34700f232440133"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d1f516958cac84ba34700f232440133">&#9670;&nbsp;</a></span>NumberGenerator() <span class="overload">[4/4]</span></h2>
+<a id="a55b19e60ad0173cea36e7901299652bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55b19e60ad0173cea36e7901299652bc">&#9670;&nbsp;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::<a class="el" href="a01968.html">NumberGenerator</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01968.html">NumberGenerator</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc24_lte_b_spec_t::kInit = 0x000000UL</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a127540978c94c032e97da7e48b88268a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a127540978c94c032e97da7e48b88268a">&#9670;&nbsp;</a></span>get_distribution()</h2>
+<a id="a1f0768c27e4ce4fcdb119dcff5bdc25c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f0768c27e4ce4fcdb119dcff5bdc25c">&#9670;&nbsp;</a></span>kPoly</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a> <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::get_distribution </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc24_lte_b_spec_t::kPoly = 0x800063UL</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Retrieves the current probability distribution type configured in the generator. </p>
-<p>This method provides read-only access to the <code>m_distribution_type</code> member. </p><dl class="section return"><dt>Returns</dt><dd>The current <code>DistributionType</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a3fc91afb7c4e9c323e63ad441d79b7ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fc91afb7c4e9c323e63ad441d79b7ad">&#9670;&nbsp;</a></span>get_lower_bound()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::get_lower_bound </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Retrieves the current lower bound configured in the generator. </p>
-<p>This method provides read-only access to the <code>m_from</code> member. </p><dl class="section return"><dt>Returns</dt><dd>The current lower bound of type <code>T</code>. </dd></dl>
-
-</div>
-</div>
-<a id="aede99d86546c89a1fc8d25ab0bd08740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aede99d86546c89a1fc8d25ab0bd08740">&#9670;&nbsp;</a></span>get_number()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::get_number </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>from_val</em> = <code>get_default_min&#160;()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>to_val</em> = <code>get_default_max&#160;()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a>&#160;</td>
-          <td class="paramname"><em>dist_type</em> = <code>DistributionType::UNIFORM</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets a random number with explicitly specified parameters. </p>
-<p>This method provides a clear interface for generating a single random number with full control over the range and distribution type. Parameters default to the generator's current settings or predefined defaults if not provided. This is the most explicit way to request a random number. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">from_val</td><td>The 'from' parameter for the chosen distribution. Defaults to <code>get_default_min()</code>. </td></tr>
-    <tr><td class="paramname">to_val</td><td>The 'to' parameter for the chosen distribution. Defaults to <code>get_default_max()</code>. </td></tr>
-    <tr><td class="paramname">dist_type</td><td>The <code>DistributionType</code> to use for generation. Defaults to <code>DistributionType::UNIFORM</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A randomly generated number of type <code>T</code>. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01968_aede99d86546c89a1fc8d25ab0bd08740_icgraph.png" border="0" usemap="#aa01968_aede99d86546c89a1fc8d25ab0bd08740_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a802b7f69f2229f25a46546a9652f1d3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a802b7f69f2229f25a46546a9652f1d3c">&#9670;&nbsp;</a></span>get_sequence()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;T&gt; <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::get_sequence </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>count</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>from_val</em> = <code>get_default_min&#160;()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>to_val</em> = <code>get_default_max&#160;()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a>&#160;</td>
-          <td class="paramname"><em>dist_type</em> = <code>DistributionType::UNIFORM</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Generates a sequence (vector) of random numbers. </p>
-<p>This method generates a <code>std::vector</code> containing <code>count</code> random numbers. It allows for optional specification of bounds and distribution type, which will override the generator's internal settings for this sequence. It includes exception handling to catch potential errors during sequence generation. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">count</td><td>The number of random numbers to generate in the sequence. If 0, an empty vector is returned. </td></tr>
-    <tr><td class="paramname">from_val</td><td>The 'from' parameter for the chosen distribution for this sequence. Defaults to <code>get_default_min()</code>. </td></tr>
-    <tr><td class="paramname">to_val</td><td>The 'to' parameter for the chosen distribution for this sequence. Defaults to <code>get_default_max()</code>. </td></tr>
-    <tr><td class="paramname">dist_type</td><td>The <code>DistributionType</code> to use for this specific sequence generation. Defaults to <code>DistributionType::UNIFORM</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <code>std::vector&lt;T&gt;</code> containing the generated random numbers. Returns an empty vector if <code>count</code> is 0 or an exception occurs. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If <code>count</code> is large, consider potential memory usage. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01968_a802b7f69f2229f25a46546a9652f1d3c_icgraph.png" border="0" usemap="#aa01968_a802b7f69f2229f25a46546a9652f1d3c_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="aa6f7f9cfc62dec7cb9077efb56bc3762"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6f7f9cfc62dec7cb9077efb56bc3762">&#9670;&nbsp;</a></span>get_upper_bound()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::get_upper_bound </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Retrieves the current upper bound configured in the generator. </p>
-<p>This method provides read-only access to the <code>m_to</code> member. </p><dl class="section return"><dt>Returns</dt><dd>The current upper bound of type <code>T</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a99f9a792214266f9785ea698737c5ae1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99f9a792214266f9785ea698737c5ae1">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::operator() </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Function call operator to generate a random number using configured bounds and distribution. </p>
-<p>This operator allows the <code><a class="el" href="a01968.html" title="Universal template-based number generator supporting multiple probability distributions.">NumberGenerator</a></code> object to be called like a function. It generates a single random number using the bounds (<code>m_from</code>, <code>m_to</code>) and <code>m_distribution_type</code> currently configured in the generator. </p><dl class="section return"><dt>Returns</dt><dd>A randomly generated number of type <code>T</code>. </dd></dl>
-
-</div>
-</div>
-<a id="accca4dcc069cd8fed1ef21b7b77baf1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accca4dcc069cd8fed1ef21b7b77baf1d">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::operator() </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>from_val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>to_val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Function call operator to generate a random number with specified bounds. </p>
-<p>Generates a single random number using the provided <code>from_val</code> and <code>to_val</code> as bounds, and the <code>m_distribution_type</code> currently configured in the generator. This allows for on-the-fly range adjustments without changing the default settings. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">from_val</td><td>The lower bound for the number generation. </td></tr>
-    <tr><td class="paramname">to_val</td><td>The upper bound for the number generation. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A randomly generated number of type <code>T</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a4615e84142657779f92026e852fdcb33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4615e84142657779f92026e852fdcb33">&#9670;&nbsp;</a></span>operator()() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::operator() </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>from_val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>to_val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a>&#160;</td>
-          <td class="paramname"><em>dist_type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Function call operator to generate a random number with specified bounds and distribution. </p>
-<p>Generates a single random number using the provided <code>from_val</code>, <code>to_val</code>, and <code>dist_type</code>. This offers full control over the generation parameters for a single call, overriding the generator's default settings temporarily. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">from_val</td><td>The 'from' parameter for the chosen distribution. </td></tr>
-    <tr><td class="paramname">to_val</td><td>The 'to' parameter for the chosen distribution. </td></tr>
-    <tr><td class="paramname">dist_type</td><td>The <code>DistributionType</code> to use for this specific generation. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A randomly generated number of type <code>T</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a3da8317996c542dcec46b22dd393b4e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3da8317996c542dcec46b22dd393b4e1">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01968.html">NumberGenerator</a>&amp; <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01968.html">NumberGenerator</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a861bae69854fefa3c51329de155cf338"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a861bae69854fefa3c51329de155cf338">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a36ed8c58db966636f9e172b245174515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36ed8c58db966636f9e172b245174515">&#9670;&nbsp;</a></span>kRefIn</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01968.html">NumberGenerator</a>&amp; <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01968.html">NumberGenerator</a>&lt; T &gt; const &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc24_lte_b_spec_t::kRefIn = false</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af4019d7be071a691600cf554affa55d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4019d7be071a691600cf554affa55d9">&#9670;&nbsp;</a></span>set_bounds()</h2>
+<a id="afb17ff05c70a546b88d856a7b10ce3ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb17ff05c70a546b88d856a7b10ce3ea">&#9670;&nbsp;</a></span>kRefOut</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::set_bounds </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>from_val</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>to_val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc24_lte_b_spec_t::kRefOut = false</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets both the lower and upper bounds for subsequent random number generations. </p>
-<p>This method updates both <code>m_from</code> and <code>m_to</code>. It automatically swaps <code>from_val</code> and <code>to_val</code> if <code>from_val</code> is initially greater than <code>to_val</code> to ensure <code>m_from</code> is always less than or equal to <code>m_to</code>. This affects all future calls to <code><a class="el" href="a01968.html#a99f9a792214266f9785ea698737c5ae1" title="Function call operator to generate a random number using configured bounds and distribution.">operator()()</a></code> or <code><a class="el" href="a01968.html#aede99d86546c89a1fc8d25ab0bd08740" title="Gets a random number with explicitly specified parameters.">get_number()</a></code> that do not explicitly specify bounds. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">from_val</td><td>The new lower bound. </td></tr>
-    <tr><td class="paramname">to_val</td><td>The new upper bound. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01968_af4019d7be071a691600cf554affa55d9_cgraph.png" border="0" usemap="#aa01968_af4019d7be071a691600cf554affa55d9_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01968_af4019d7be071a691600cf554affa55d9_icgraph.png" border="0" usemap="#aa01968_af4019d7be071a691600cf554affa55d9_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="ad65553acc8151bb7db08a70343e5007e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad65553acc8151bb7db08a70343e5007e">&#9670;&nbsp;</a></span>set_distribution()</h2>
+<a id="a4ba86204a7a8f26befa270c31ae7bf8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ba86204a7a8f26befa270c31ae7bf8a">&#9670;&nbsp;</a></span>kWidth</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::set_distribution </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00872.html#ac790ad052a54165bc304a20f53f7a502">DistributionType</a>&#160;</td>
-          <td class="paramname"><em>dist_type</em></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit int lumex::core::crc::parametric::crc24_lte_b_spec_t::kWidth = 24</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the probability distribution type for subsequent random number generations. </p>
-<p>This method updates the internal <code>m_distribution_type</code> member, affecting all future calls to <code><a class="el" href="a01968.html#a99f9a792214266f9785ea698737c5ae1" title="Function call operator to generate a random number using configured bounds and distribution.">operator()()</a></code> or <code><a class="el" href="a01968.html#aede99d86546c89a1fc8d25ab0bd08740" title="Gets a random number with explicitly specified parameters.">get_number()</a></code> that do not explicitly specify a <code>dist_type</code>. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dist_type</td><td>The new <code>DistributionType</code> to use. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01968_ad65553acc8151bb7db08a70343e5007e_icgraph.png" border="0" usemap="#aa01968_ad65553acc8151bb7db08a70343e5007e_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="a0e04148ecf99307d40b98755a904025c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e04148ecf99307d40b98755a904025c">&#9670;&nbsp;</a></span>set_lower_bound()</h2>
+<a id="a2c99a5dd8aafb69372ba33ae2bdf09c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c99a5dd8aafb69372ba33ae2bdf09c6">&#9670;&nbsp;</a></span>kXorOut</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::set_lower_bound </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>val</em></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc24_lte_b_spec_t::kXorOut = 0x000000UL</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets the lower bound for subsequent random number generations. </p>
-<p>This method updates the internal <code>m_from</code> member, affecting all future calls to <code><a class="el" href="a01968.html#a99f9a792214266f9785ea698737c5ae1" title="Function call operator to generate a random number using configured bounds and distribution.">operator()()</a></code> or <code><a class="el" href="a01968.html#aede99d86546c89a1fc8d25ab0bd08740" title="Gets a random number with explicitly specified parameters.">get_number()</a></code> that do not explicitly specify a <code>from_val</code>. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">val</td><td>The new lower bound value. </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a id="a06b037a9528b607208a619e660d3dbff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06b037a9528b607208a619e660d3dbff">&#9670;&nbsp;</a></span>set_upper_bound()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a01968.html">lumex::core::generators::number_generator::NumberGenerator</a>&lt; T &gt;::set_upper_bound </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>val</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets the upper bound for subsequent random number generations. </p>
-<p>This method updates the internal <code>m_to</code> member, affecting all future calls to <code><a class="el" href="a01968.html#a99f9a792214266f9785ea698737c5ae1" title="Function call operator to generate a random number using configured bounds and distribution.">operator()()</a></code> or <code><a class="el" href="a01968.html#aede99d86546c89a1fc8d25ab0bd08740" title="Gets a random number with explicitly specified parameters.">get_number()</a></code> that do not explicitly specify a <code>to_val</code>. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">val</td><td>The new upper bound value. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00239_source.html">LumexNumberGenerator.hpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00871.html">generators</a></li><li class="navelem"><a class="el" href="a00872.html">number_generator</a></li><li class="navelem"><a class="el" href="a01968.html">NumberGenerator</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01256.html">crc</a></li><li class="navelem"><a class="el" href="a01259.html">parametric</a></li><li class="navelem"><a class="el" href="a01968.html">crc24_lte_b_spec_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

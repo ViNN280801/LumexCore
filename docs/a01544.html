@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::crc::parametric::crc32_cd_rom_edc_spec_t Struct Reference</title>
+<title>LumexLib: lumex::core::atomic::sync::table_wait::Detail::BitLockGuard Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,167 +94,157 @@ $(document).ready(function(){initNavTree('a01544.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a01541.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::crc::parametric::crc32_cd_rom_edc_spec_t Struct Reference</div>  </div>
+<div class="title">lumex::core::atomic::sync::table_wait::Detail::BitLockGuard Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>CRC-32/CD-ROM-EDC: width=32 poly=0x8001801b init=0x00000000 refin=true refout=true xorout=0x00000000.  
+<p>Holds a <code><a class="el" href="a01540.html" title="Lock in one 32-bit word that puts contended threads to sleep.">BitLock</a></code> for the lifetime of the guard.  
  <a href="a01544.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00479_source.html">LumexBitLock.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:aecb9f67c06564f71d68a1d86212a0ea6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#aecb9f67c06564f71d68a1d86212a0ea6">ValueType</a> = std::uint32_t</td></tr>
-<tr class="separator:aecb9f67c06564f71d68a1d86212a0ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a74c01fdd38293a039b241174ffd1b4dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#a74c01fdd38293a039b241174ffd1b4dc">kWidth</a> = 32</td></tr>
-<tr class="separator:a74c01fdd38293a039b241174ffd1b4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99a33deb00a10103d52ce6f63894adaf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#a99a33deb00a10103d52ce6f63894adaf">kPoly</a> = 0x8001801BUL</td></tr>
-<tr class="separator:a99a33deb00a10103d52ce6f63894adaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d5b94b675cbd1028d2f6b107a778fcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#a9d5b94b675cbd1028d2f6b107a778fcb">kInit</a> = 0x00000000UL</td></tr>
-<tr class="separator:a9d5b94b675cbd1028d2f6b107a778fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1096aa09c02aa0e8183491c4ababde7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#a1096aa09c02aa0e8183491c4ababde7b">kRefIn</a> = true</td></tr>
-<tr class="separator:a1096aa09c02aa0e8183491c4ababde7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16b14f5ff6d1b9b0b2db15f9afb4259c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#a16b14f5ff6d1b9b0b2db15f9afb4259c">kRefOut</a> = true</td></tr>
-<tr class="separator:a16b14f5ff6d1b9b0b2db15f9afb4259c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4307f37e4ddac0510adb135ea46164d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#ae4307f37e4ddac0510adb135ea46164d">kXorOut</a> = 0x00000000UL</td></tr>
-<tr class="separator:ae4307f37e4ddac0510adb135ea46164d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63f8ea763269ca1274d886badc5e7454"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#a63f8ea763269ca1274d886badc5e7454">kCatalogCheck</a> = 0x6EC2EDC4UL</td></tr>
-<tr class="separator:a63f8ea763269ca1274d886badc5e7454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9168a2d1eab52589a61de179c68c7a56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#a9168a2d1eab52589a61de179c68c7a56">BitLockGuard</a> (<a class="el" href="a01540.html">BitLock</a> const &amp;lock) noexcept</td></tr>
+<tr class="memdesc:a9168a2d1eab52589a61de179c68c7a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes <code>lock</code>.  <a href="a01544.html#a9168a2d1eab52589a61de179c68c7a56">More...</a><br /></td></tr>
+<tr class="separator:a9168a2d1eab52589a61de179c68c7a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae92dc7f183e3c4c926cb411071686b4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#ae92dc7f183e3c4c926cb411071686b4f">~BitLockGuard</a> ()</td></tr>
+<tr class="memdesc:ae92dc7f183e3c4c926cb411071686b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the lock.  <a href="a01544.html#ae92dc7f183e3c4c926cb411071686b4f">More...</a><br /></td></tr>
+<tr class="separator:ae92dc7f183e3c4c926cb411071686b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83eea6b4c4a7ea402a6198831382ac96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#a83eea6b4c4a7ea402a6198831382ac96">BitLockGuard</a> (<a class="el" href="a01544.html">BitLockGuard</a> const &amp;)=delete</td></tr>
+<tr class="separator:a83eea6b4c4a7ea402a6198831382ac96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7992e73f5d22602584c057492014b1e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01544.html">BitLockGuard</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01544.html#a7992e73f5d22602584c057492014b1e0">operator=</a> (<a class="el" href="a01544.html">BitLockGuard</a> const &amp;)=delete</td></tr>
+<tr class="separator:a7992e73f5d22602584c057492014b1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>CRC-32/CD-ROM-EDC: width=32 poly=0x8001801b init=0x00000000 refin=true refout=true xorout=0x00000000. </p>
-<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-32/CD-ROM-EDC </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="aecb9f67c06564f71d68a1d86212a0ea6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecb9f67c06564f71d68a1d86212a0ea6">&#9670;&nbsp;</a></span>ValueType</h2>
+<div class="textblock"><p>Holds a <code><a class="el" href="a01540.html" title="Lock in one 32-bit word that puts contended threads to sleep.">BitLock</a></code> for the lifetime of the guard. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9168a2d1eab52589a61de179c68c7a56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9168a2d1eab52589a61de179c68c7a56">&#9670;&nbsp;</a></span>BitLockGuard() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a01544.html#aecb9f67c06564f71d68a1d86212a0ea6">lumex::core::crc::parametric::crc32_cd_rom_edc_spec_t::ValueType</a> =  std::uint32_t</td>
+          <td class="memname">lumex::core::atomic::sync::table_wait::Detail::BitLockGuard::BitLockGuard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01540.html">BitLock</a> const &amp;&#160;</td>
+          <td class="paramname"><em>lock</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Takes <code>lock</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lock</td><td>The lock to hold; it must outlive the guard. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae92dc7f183e3c4c926cb411071686b4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae92dc7f183e3c4c926cb411071686b4f">&#9670;&nbsp;</a></span>~BitLockGuard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::core::atomic::sync::table_wait::Detail::BitLockGuard::~BitLockGuard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Releases the lock. </p>
+
+</div>
+</div>
+<a id="a83eea6b4c4a7ea402a6198831382ac96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83eea6b4c4a7ea402a6198831382ac96">&#9670;&nbsp;</a></span>BitLockGuard() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::core::atomic::sync::table_wait::Detail::BitLockGuard::BitLockGuard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01544.html">BitLockGuard</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a63f8ea763269ca1274d886badc5e7454"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63f8ea763269ca1274d886badc5e7454">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7992e73f5d22602584c057492014b1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7992e73f5d22602584c057492014b1e0">&#9670;&nbsp;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t lumex::core::crc::parametric::crc32_cd_rom_edc_spec_t::kCatalogCheck = 0x6EC2EDC4UL</td>
+          <td class="memname"><a class="el" href="a01544.html">BitLockGuard</a>&amp; lumex::core::atomic::sync::table_wait::Detail::BitLockGuard::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01544.html">BitLockGuard</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a9d5b94b675cbd1028d2f6b107a778fcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d5b94b675cbd1028d2f6b107a778fcb">&#9670;&nbsp;</a></span>kInit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_cd_rom_edc_spec_t::kInit = 0x00000000UL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a99a33deb00a10103d52ce6f63894adaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99a33deb00a10103d52ce6f63894adaf">&#9670;&nbsp;</a></span>kPoly</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_cd_rom_edc_spec_t::kPoly = 0x8001801BUL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1096aa09c02aa0e8183491c4ababde7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1096aa09c02aa0e8183491c4ababde7b">&#9670;&nbsp;</a></span>kRefIn</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc32_cd_rom_edc_spec_t::kRefIn = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a16b14f5ff6d1b9b0b2db15f9afb4259c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16b14f5ff6d1b9b0b2db15f9afb4259c">&#9670;&nbsp;</a></span>kRefOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc32_cd_rom_edc_spec_t::kRefOut = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a74c01fdd38293a039b241174ffd1b4dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74c01fdd38293a039b241174ffd1b4dc">&#9670;&nbsp;</a></span>kWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc32_cd_rom_edc_spec_t::kWidth = 32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae4307f37e4ddac0510adb135ea46164d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4307f37e4ddac0510adb135ea46164d">&#9670;&nbsp;</a></span>kXorOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_cd_rom_edc_spec_t::kXorOut = 0x00000000UL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00479_source.html">LumexBitLock.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00847.html">crc</a></li><li class="navelem"><a class="el" href="a00850.html">parametric</a></li><li class="navelem"><a class="el" href="a01544.html">crc32_cd_rom_edc_spec_t</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01237.html">atomic</a></li><li class="navelem"><a class="el" href="a01241.html">sync</a></li><li class="navelem"><a class="el" href="a01242.html">table_wait</a></li><li class="navelem"><a class="el" href="a01243.html">Detail</a></li><li class="navelem"><a class="el" href="a01544.html">BitLockGuard</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

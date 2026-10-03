@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::crc::parametric::crc16_genibus_spec_t Struct Reference</title>
+<title>LumexLib: lumex::applied::json::normalization::ILumexJsonNormalizer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,167 +94,155 @@ $(document).ready(function(){initNavTree('a01408.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a01405.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::crc::parametric::crc16_genibus_spec_t Struct Reference</div>  </div>
+<div class="title">lumex::applied::json::normalization::ILumexJsonNormalizer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>CRC-16/GENIBUS: width=16 poly=0x1021 init=0xffff refin=false refout=false xorout=0xffff.  
+<p>Parses raw JSON text, checks it and returns the canonical document.  
  <a href="a01408.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00368_source.html">ILumexJsonNormalizer.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::applied::json::normalization::ILumexJsonNormalizer:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01407.png" border="0" usemap="#alumex_1_1applied_1_1json_1_1normalization_1_1ILumexJsonNormalizer_inherit__map" alt="Inheritance graph"/></div>
+<map name="lumex_1_1applied_1_1json_1_1normalization_1_1ILumexJsonNormalizer_inherit__map" id="alumex_1_1applied_1_1json_1_1normalization_1_1ILumexJsonNormalizer_inherit__map">
+<area shape="rect" title="Parses raw JSON text, checks it and returns the canonical document." alt="" coords="29,5,232,61"/>
+<area shape="rect" href="a01412.html" title="Shares the schema walker and the strict/non&#45;strict error policy between concrete normalizers." alt="" coords="5,109,256,165"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:af578164bd18f512ff7f9dac2afae3b2b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html#af578164bd18f512ff7f9dac2afae3b2b">ValueType</a> = std::uint16_t</td></tr>
-<tr class="separator:af578164bd18f512ff7f9dac2afae3b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ab406ca8e31a92c1463a10f797b6f8e37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html#ab406ca8e31a92c1463a10f797b6f8e37">kWidth</a> = 16</td></tr>
-<tr class="separator:ab406ca8e31a92c1463a10f797b6f8e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad57a9dd711eddfa2a1db65f579bd907"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html#aad57a9dd711eddfa2a1db65f579bd907">kPoly</a> = 0x1021U</td></tr>
-<tr class="separator:aad57a9dd711eddfa2a1db65f579bd907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27995082c0a9d1022f4fd9eeef149ee3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html#a27995082c0a9d1022f4fd9eeef149ee3">kInit</a> = 0xFFFFU</td></tr>
-<tr class="separator:a27995082c0a9d1022f4fd9eeef149ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92b6ffc51af223613598507b3527a7fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html#a92b6ffc51af223613598507b3527a7fb">kRefIn</a> = false</td></tr>
-<tr class="separator:a92b6ffc51af223613598507b3527a7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82678144a2a922206c74a7d40b23bcd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html#a82678144a2a922206c74a7d40b23bcd5">kRefOut</a> = false</td></tr>
-<tr class="separator:a82678144a2a922206c74a7d40b23bcd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad546ddbebf80d225f7c1f8570e23d1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html#aad546ddbebf80d225f7c1f8570e23d1a">kXorOut</a> = 0xFFFFU</td></tr>
-<tr class="separator:aad546ddbebf80d225f7c1f8570e23d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7af8b4282c0fa48757dc97373149767b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html#a7af8b4282c0fa48757dc97373149767b">kCatalogCheck</a> = 0xD64EU</td></tr>
-<tr class="separator:a7af8b4282c0fa48757dc97373149767b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a67d2467937fd7eed290938a31b2b7733"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html#a67d2467937fd7eed290938a31b2b7733">~ILumexJsonNormalizer</a> ()=default</td></tr>
+<tr class="separator:a67d2467937fd7eed290938a31b2b7733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55776e2b94b12a57fd8b1c64e850352c"><td class="memItemLeft" align="right" valign="top">virtual nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html#a55776e2b94b12a57fd8b1c64e850352c">normalize</a> (<a class="el" href="a02588.html">lumex::core::string_view::view::LumexStringView</a> raw) const =0</td></tr>
+<tr class="memdesc:a55776e2b94b12a57fd8b1c64e850352c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the canonical document. A strict implementation throws on the first violation (including unparsable text); a non-strict one returns a <code>null</code> document instead of throwing.  <a href="a01408.html#a55776e2b94b12a57fd8b1c64e850352c">More...</a><br /></td></tr>
+<tr class="separator:a55776e2b94b12a57fd8b1c64e850352c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf53bbebdf6b8f9ca547657c0e8f617"><td class="memItemLeft" align="right" valign="top">virtual nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html#abcf53bbebdf6b8f9ca547657c0e8f617">normalize</a> (<a class="el" href="a02588.html">lumex::core::string_view::view::LumexStringView</a> raw, std::exception_ptr &amp;error) const =0</td></tr>
+<tr class="memdesc:abcf53bbebdf6b8f9ca547657c0e8f617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <code>normalize(raw)</code> with a non-throwing option.  <a href="a01408.html#abcf53bbebdf6b8f9ca547657c0e8f617">More...</a><br /></td></tr>
+<tr class="separator:abcf53bbebdf6b8f9ca547657c0e8f617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>CRC-16/GENIBUS: width=16 poly=0x1021 init=0xffff refin=false refout=false xorout=0xffff. </p>
-<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-16/GENIBUS </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="af578164bd18f512ff7f9dac2afae3b2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af578164bd18f512ff7f9dac2afae3b2b">&#9670;&nbsp;</a></span>ValueType</h2>
+<div class="textblock"><p>Parses raw JSON text, checks it and returns the canonical document. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a67d2467937fd7eed290938a31b2b7733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d2467937fd7eed290938a31b2b7733">&#9670;&nbsp;</a></span>~ILumexJsonNormalizer()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a01408.html#af578164bd18f512ff7f9dac2afae3b2b">lumex::core::crc::parametric::crc16_genibus_spec_t::ValueType</a> =  std::uint16_t</td>
+          <td class="memname">virtual lumex::applied::json::normalization::ILumexJsonNormalizer::~ILumexJsonNormalizer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a7af8b4282c0fa48757dc97373149767b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7af8b4282c0fa48757dc97373149767b">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a55776e2b94b12a57fd8b1c64e850352c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55776e2b94b12a57fd8b1c64e850352c">&#9670;&nbsp;</a></span>normalize() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint16_t lumex::core::crc::parametric::crc16_genibus_spec_t::kCatalogCheck = 0xD64EU</td>
+          <td class="memname">virtual nlohmann::json lumex::applied::json::normalization::ILumexJsonNormalizer::normalize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02588.html">lumex::core::string_view::view::LumexStringView</a>&#160;</td>
+          <td class="paramname"><em>raw</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Returns the canonical document. A strict implementation throws on the first violation (including unparsable text); a non-strict one returns a <code>null</code> document instead of throwing. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">lumex::applied::json::schema::LumexJsonSchemaException</td><td>Strict implementations only. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a27995082c0a9d1022f4fd9eeef149ee3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27995082c0a9d1022f4fd9eeef149ee3">&#9670;&nbsp;</a></span>kInit</h2>
+<a id="abcf53bbebdf6b8f9ca547657c0e8f617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcf53bbebdf6b8f9ca547657c0e8f617">&#9670;&nbsp;</a></span>normalize() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_genibus_spec_t::kInit = 0xFFFFU</td>
+          <td class="memname">virtual nlohmann::json lumex::applied::json::normalization::ILumexJsonNormalizer::normalize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02588.html">lumex::core::string_view::view::LumexStringView</a>&#160;</td>
+          <td class="paramname"><em>raw</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aad57a9dd711eddfa2a1db65f579bd907"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad57a9dd711eddfa2a1db65f579bd907">&#9670;&nbsp;</a></span>kPoly</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_genibus_spec_t::kPoly = 0x1021U</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::exception_ptr &amp;&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a92b6ffc51af223613598507b3527a7fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92b6ffc51af223613598507b3527a7fb">&#9670;&nbsp;</a></span>kRefIn</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc16_genibus_spec_t::kRefIn = false</td>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a82678144a2a922206c74a7d40b23bcd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82678144a2a922206c74a7d40b23bcd5">&#9670;&nbsp;</a></span>kRefOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc16_genibus_spec_t::kRefOut = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Same as <code>normalize(raw)</code> with a non-throwing option. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">raw</td><td>The JSON text. </td></tr>
+    <tr><td class="paramname">error</td><td>Reset to <code>nullptr</code> first. A non-strict implementation stores the violation here and returns a default-constructed (<code>null</code>) document that must not be used. A strict implementation ignores it and throws. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="ab406ca8e31a92c1463a10f797b6f8e37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab406ca8e31a92c1463a10f797b6f8e37">&#9670;&nbsp;</a></span>kWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc16_genibus_spec_t::kWidth = 16</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aad546ddbebf80d225f7c1f8570e23d1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad546ddbebf80d225f7c1f8570e23d1a">&#9670;&nbsp;</a></span>kXorOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_genibus_spec_t::kXorOut = 0xFFFFU</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00368_source.html">ILumexJsonNormalizer.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00847.html">crc</a></li><li class="navelem"><a class="el" href="a00850.html">parametric</a></li><li class="navelem"><a class="el" href="a01408.html">crc16_genibus_spec_t</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01186.html">applied</a></li><li class="navelem"><a class="el" href="a01200.html">json</a></li><li class="navelem"><a class="el" href="a01205.html">normalization</a></li><li class="navelem"><a class="el" href="a01408.html">ILumexJsonNormalizer</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

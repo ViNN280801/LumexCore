@@ -1,11 +1,6 @@
 var a02192 =
 [
-    [ "clean_T", "a02192.html#af1754af1410477a0bfe4c480d8c5bf6b", null ],
-    [ "compare", "a02192.html#a22a3541aae24dd79e70324e62f3cf249", null ],
-    [ "equal", "a02192.html#af4d8303da944e97514389e81d70b8b79", null ],
-    [ "greater", "a02192.html#a757a36d9efe40a4bea58de89d29937c5", null ],
-    [ "greater_equal", "a02192.html#ab87ee33a8c0b3eceadce4a9b323655d0", null ],
-    [ "less", "a02192.html#a7734c0db5703525890bc00f92eafb3dc", null ],
-    [ "less_equal", "a02192.html#abfabb88a306bfdf873851986148f855d", null ],
-    [ "not_equal", "a02192.html#af88877662835ec254ea286c5dacc85d6", null ]
+    [ "Formatter", "a02192.html#a3bb926e06c11c1b60f59c542c5848716", null ],
+    [ "Formatter", "a02192.html#a82dffd26eed2f9bd718868798089af43", null ],
+    [ "operator=", "a02192.html#a769b5f9e23623f493058499c17a6846b", null ]
 ];

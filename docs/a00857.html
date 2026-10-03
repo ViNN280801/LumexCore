@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::exceptions::Wrapper Namespace Reference</title>
+<title>LumexLib: example_serial.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,168 +94,64 @@ $(document).ready(function(){initNavTree('a00857.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::exceptions::Wrapper Namespace Reference</div>  </div>
+<div class="title">example_serial.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:a00859"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00859.html">detail</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:aa72d63d417ed76026d05a6cba9ecdd14"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">safe_call_report_fn</a> = void(*)(char const *message)</td></tr>
-<tr class="memdesc:aa72d63d417ed76026d05a6cba9ecdd14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consumer report sink for a fully built failure line.  <a href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">More...</a><br /></td></tr>
-<tr class="separator:aa72d63d417ed76026d05a6cba9ecdd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;lumex/applied/serial/LumexSerialPort&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for example_serial.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00858.png" border="0" usemap="#aexample__serial_8cpp" alt=""/></div>
+<map name="example__serial_8cpp" id="aexample__serial_8cpp">
+<area shape="rect" title=" " alt="" coords="107,5,256,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,85,114"/>
+<area shape="rect" title=" " alt="" coords="109,87,168,114"/>
+<area shape="rect" title=" " alt="" coords="193,87,255,114"/>
+<area shape="rect" title=" " alt="" coords="280,80,435,121"/>
+</map>
+</div>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2cbdbf26b85522e6b9132dedb2b99b18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00857.html#a2cbdbf26b85522e6b9132dedb2b99b18">set_safe_call_reporter</a> (<a class="el" href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">safe_call_report_fn</a> reporter) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a2cbdbf26b85522e6b9132dedb2b99b18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs the process-wide report sink. <code>nullptr</code> restores <code>std::cerr</code>.  <a href="a00857.html#a2cbdbf26b85522e6b9132dedb2b99b18">More...</a><br /></td></tr>
-<tr class="separator:a2cbdbf26b85522e6b9132dedb2b99b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a810b21f9384bf6219c60f63484e7b983"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">safe_call_report_fn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00857.html#a810b21f9384bf6219c60f63484e7b983">get_safe_call_reporter</a> () <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a810b21f9384bf6219c60f63484e7b983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the installed sink, or <code>nullptr</code> when reports go to <code>std::cerr</code>.  <a href="a00857.html#a810b21f9384bf6219c60f63484e7b983">More...</a><br /></td></tr>
-<tr class="separator:a810b21f9384bf6219c60f63484e7b983"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b15b3b36269bfd6b78f9ad3b7ba9f4e"><td class="memTemplParams" colspan="2">template&lt;typename Function , typename... Args&gt; </td></tr>
-<tr class="memitem:a7b15b3b36269bfd6b78f9ad3b7ba9f4e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00857.html#a7b15b3b36269bfd6b78f9ad3b7ba9f4e">ExceptionWrapper</a> (std::string const &amp;excMessage, std::string const &amp;unknownExcMessage, Function &amp;&amp;func, Args &amp;&amp;...args) <a class="el" href="a00347.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a>(noexcept(std::declval&lt; Function &gt;()(std::declval&lt; Args &gt;()...))) -&gt; <a class="el" href="a00913.html#a70065957d93e7a3955cd082d80203d00">lumex::core::utility::traits::invoke::invoke_result_t</a>&lt; Function, Args... &gt;</td></tr>
-<tr class="separator:a7b15b3b36269bfd6b78f9ad3b7ba9f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00857.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="aa72d63d417ed76026d05a6cba9ecdd14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa72d63d417ed76026d05a6cba9ecdd14">&#9670;&nbsp;</a></span>safe_call_report_fn</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">lumex::core::exceptions::Wrapper::safe_call_report_fn</a> = typedef void (*) (char const *message)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Consumer report sink for a fully built failure line. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">message</td><td>Non-owning, null-terminated text. Valid only for the call. The function may throw; <code>ExceptionWrapper</code> then writes the same line to <code>std::cerr</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02928.html#a2">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/LumexExceptionWrapper.hpp</a>.</dd>
-</dl>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a7b15b3b36269bfd6b78f9ad3b7ba9f4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b15b3b36269bfd6b78f9ad3b7ba9f4e">&#9670;&nbsp;</a></span>ExceptionWrapper()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Function , typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto lumex::core::exceptions::Wrapper::ExceptionWrapper </td>
-          <td>(</td>
-          <td class="paramtype">std::string const &amp;&#160;</td>
-          <td class="paramname"><em>excMessage</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string const &amp;&#160;</td>
-          <td class="paramname"><em>unknownExcMessage</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Function &amp;&amp;&#160;</td>
-          <td class="paramname"><em>func</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="a00913.html#a70065957d93e7a3955cd082d80203d00">lumex::core::utility::traits::invoke::invoke_result_t</a>&lt;Function,
-                                                                 Args...&gt;
-</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02928.html#a10">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/LumexExceptionWrapper.hpp</a>.</dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00857_a7b15b3b36269bfd6b78f9ad3b7ba9f4e_cgraph.png" border="0" usemap="#aa00857_a7b15b3b36269bfd6b78f9ad3b7ba9f4e_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a810b21f9384bf6219c60f63484e7b983"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a810b21f9384bf6219c60f63484e7b983">&#9670;&nbsp;</a></span>get_safe_call_reporter()</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> <a class="el" href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">safe_call_report_fn</a> lumex::core::exceptions::Wrapper::get_safe_call_reporter </td>
+          <td class="memname">int main </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Returns the installed sink, or <code>nullptr</code> when reports go to <code>std::cerr</code>. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02928.html#a6">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/LumexExceptionWrapper.hpp</a>.</dd>
-</dl>
 <div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00857_a810b21f9384bf6219c60f63484e7b983_icgraph.png" border="0" usemap="#aa00857_a810b21f9384bf6219c60f63484e7b983_icgraph" alt=""/></div>
+<div class="center"><img src="a00857_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#aa00857_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="a00857_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="aa00857_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,165,60,192"/>
+<area shape="rect" href="a01219.html#a4dace1c927ae9cae3eed94de871c9cb1" title="Enumerate serial port paths only." alt="" coords="109,79,301,135"/>
+<area shape="rect" href="a01219.html#ae27c22d50630c732a459b88a4f0e4260" title="True when Windows registered port_name through a Bluetooth enumerator (BTHENUM / BTHLEENUM)." alt="" coords="351,155,552,211"/>
+<area shape="rect" href="a01219.html#a72a94a2885dc60a216e50441898ce62c" title="Write a grouped port table to os." alt="" coords="108,216,303,272"/>
+<area shape="rect" href="a01219.html#a4bf634028bc0cb0ff4024dd920df1602" title="Enumerate serial ports with full serial_port_info_t records." alt="" coords="355,75,547,131"/>
+<area shape="rect" href="a01472.html#a87b46d54c13a2ae30c97f22a4e98fc7c" title="Format a system error code." alt="" coords="600,5,827,61"/>
+<area shape="rect" href="a01355.html#a452dc69c516222ebe97ef081534daff6" title=" " alt="" coords="642,155,785,197"/>
+<area shape="rect" href="a01269.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="624,86,803,127"/>
+<area shape="rect" href="a02076.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="875,86,1163,127"/>
+</map>
 </div>
-
-</div>
-</div>
-<a id="a2cbdbf26b85522e6b9132dedb2b99b18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cbdbf26b85522e6b9132dedb2b99b18">&#9670;&nbsp;</a></span>set_safe_call_reporter()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> void lumex::core::exceptions::Wrapper::set_safe_call_reporter </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00857.html#aa72d63d417ed76026d05a6cba9ecdd14">safe_call_report_fn</a>&#160;</td>
-          <td class="paramname"><em>reporter</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Installs the process-wide report sink. <code>nullptr</code> restores <code>std::cerr</code>. </p>
-<dl class="section note"><dt>Note</dt><dd>The pointer is stored in this library's binary, so the executable and the exceptions DLL share one sink. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02928.html#a4">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/LumexExceptionWrapper.hpp</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -264,7 +160,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00854.html">exceptions</a></li><li class="navelem"><a class="el" href="a00857.html">Wrapper</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_e8ae4df8b8335e2a73ecf531ee4a4a97.html">examples</a></li><li class="navelem"><a class="el" href="dir_17cee27abc1c3519861fbb803c40e452.html">serial</a></li><li class="navelem"><a class="el" href="a00857.html">example_serial.cpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

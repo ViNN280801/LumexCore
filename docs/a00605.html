@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XmlNode.cpp File Reference</title>
+<title>LumexLib: LumexAggregateFields.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,123 +94,272 @@ $(document).ready(function(){initNavTree('a00605.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">XmlNode.cpp File Reference</div>  </div>
+<div class="title">LumexAggregateFields.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00587_source.html">lumex/xml/document/XmlDocumentBase.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00593_source.html">lumex/xml/memory/XmlAllocator.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00632_source.html">lumex/xml/text/XmlParseResult.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00638_source.html">lumex/xml/text/XmlText.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00641_source.html">lumex/xml/tree/XmlTreeWalker.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00644_source.html">lumex/xml/types/XmlTypes.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00653_source.html">lumex/xml/utility/XmlUtils.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00656_source.html">lumex/xml/writer/IXmlWriter.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00662_source.html">lumex/xml/writer/XmlBufferedWriter.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00674_source.html">lumex/xml/writer/XmlWriterStream.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00716_source.html">lumex/xml/xpath/node/XPathNode.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00722_source.html">lumex/xml/xpath/node/XPathNodeSet.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00752_source.html">lumex/xml/xpath/query/XPathQuery.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00776_source.html">lumex/xml/xpath/variable/XPathVariableSet.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00608_source.html">XmlNode.hpp</a>&quot;</code><br />
+
+<p>Non-intrusive field count, indexed access, and (from C++20) field names for simple aggregates.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00662_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00704_source.html">lumex/core/utility/macros/LumexMacros.hpp</a>&quot;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for XmlNode.cpp:</div>
+Include dependency graph for LumexAggregateFields.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00606.png" border="0" usemap="#aXmlNode_8cpp" alt=""/></div>
+<div class="center"><img src="a00606.png" border="0" usemap="#aLumexAggregateFields_8hpp" alt=""/></div>
+<map name="LumexAggregateFields_8hpp" id="aLumexAggregateFields_8hpp">
+<area shape="rect" title="Non&#45;intrusive field count, indexed access, and (from C++20) field names for simple aggregates." alt="" coords="391,5,590,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,61,114"/>
+<area shape="rect" title=" " alt="" coords="86,87,157,114"/>
+<area shape="rect" title=" " alt="" coords="181,87,259,114"/>
+<area shape="rect" title=" " alt="" coords="283,87,375,114"/>
+<area shape="rect" href="a00662.html" title=" " alt="" coords="399,80,582,121"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="449,169,663,211"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="657,80,847,121"/>
+<area shape="rect" href="a00704.html" title=" " alt="" coords="871,80,1067,121"/>
+<area shape="rect" title=" " alt="" coords="1091,87,1146,114"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="244,177,425,203"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="687,169,942,211"/>
+</map>
 </div>
-</div><table class="memberdecls">
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00607.png" border="0" usemap="#aLumexAggregateFields_8hppdep" alt=""/></div>
+<map name="LumexAggregateFields_8hppdep" id="aLumexAggregateFields_8hppdep">
+<area shape="rect" title="Non&#45;intrusive field count, indexed access, and (from C++20) field names for simple aggregates." alt="" coords="5,5,204,32"/>
+<area shape="rect" href="a00608.html" title="Serializes a simple aggregate (no constructors, no private members, no base classes) to JSON by walki..." alt="" coords="11,80,199,107"/>
+</map>
+</div>
+</div>
+<p><a href="a00605_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02540.html">lumex::core::reflection::field_reflection::detail::index_sequence&lt; I &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02544.html">lumex::core::reflection::field_reflection::detail::any_field&lt; I &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02548.html">lumex::core::reflection::field_reflection::detail::can_construct_n&lt; Aggregate, N &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02556.html">lumex::core::reflection::field_reflection::detail::count_fields_impl&lt; Aggregate, Lo, Hi, true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02560.html">lumex::core::reflection::field_reflection::detail::count_fields_impl&lt; Aggregate, Lo, Hi, false &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02564.html">lumex::core::reflection::field_reflection::detail::aggregate_traits&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02568.html">lumex::core::reflection::field_reflection::detail::fake_object_wrapper_t&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02576.html">lumex::core::reflection::field_reflection::detail::names_builder&lt; Agg, index_sequence&lt; I... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02580.html">lumex::core::reflection::field_reflection::detail::names_builder&lt; Agg, index_sequence&lt;&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02584.html">lumex::core::reflection::field_reflection::tuple_size&lt; Aggregate &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01236"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01236.html">lumex::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01289"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01289.html">lumex::core::reflection</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01290"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01290.html">lumex::core::reflection::field_reflection</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01291"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html">lumex::core::reflection::field_reflection::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
-<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89770ba9e5eec4affabea691368b7a3c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#a89770ba9e5eec4affabea691368b7a3c">LUMEX_AGGREGATE_FIELDS_USE_SB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a89770ba9e5eec4affabea691368b7a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad16692a7a8afa476f07b2bd8e8aa2f30"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#ad16692a7a8afa476f07b2bd8e8aa2f30">LUMEX_AF_TIE</a>(N, ...)</td></tr>
+<tr class="separator:ad16692a7a8afa476f07b2bd8e8aa2f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7f14902237d6fd53b62ea287105d1c31"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#a7f14902237d6fd53b62ea287105d1c31">unspecified_bool_xml_node</a> (<a class="el" href="a02596.html">XmlNode</a> ***)</td></tr>
-<tr class="separator:a7f14902237d6fd53b62ea287105d1c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a647665f2ca21227b6053327ad22ae43a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#a647665f2ca21227b6053327ad22ae43a">text_output_escaped</a> (<a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;writer, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *str, <a class="el" href="a00958.html#a355198379230c3f88efbc231a9f617b3">chartypex_t</a> type, unsigned int flags)</td></tr>
-<tr class="separator:a647665f2ca21227b6053327ad22ae43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf60e317ab315b5cb3eb74f99c1c7818"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#adf60e317ab315b5cb3eb74f99c1c7818">text_output</a> (<a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;writer, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *str, <a class="el" href="a00958.html#a355198379230c3f88efbc231a9f617b3">chartypex_t</a> type, unsigned int flags)</td></tr>
-<tr class="separator:adf60e317ab315b5cb3eb74f99c1c7818"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e97a025d5f0d5027445d44145586231"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#a9e97a025d5f0d5027445d44145586231">text_output_cdata</a> (<a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;writer, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *str)</td></tr>
-<tr class="separator:a9e97a025d5f0d5027445d44145586231"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c50f986d8e0bd24c89594197a5dc0e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#a1c50f986d8e0bd24c89594197a5dc0e9">text_output_indent</a> (<a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;writer, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *indent, std::size_t indent_length, unsigned int depth)</td></tr>
-<tr class="separator:a1c50f986d8e0bd24c89594197a5dc0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdf88c166fbef8feba73a11656d1a2a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#afdf88c166fbef8feba73a11656d1a2a5">node_output_comment</a> (<a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;writer, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *str)</td></tr>
-<tr class="separator:afdf88c166fbef8feba73a11656d1a2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a759553362006542d7aa6079a39a24bf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#a759553362006542d7aa6079a39a24bf4">node_output_pi_value</a> (<a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;writer, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *str)</td></tr>
-<tr class="separator:a759553362006542d7aa6079a39a24bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aec0d3f33d23989698e84beb2403d60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#a1aec0d3f33d23989698e84beb2403d60">node_output_attributes</a> (<a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;writer, <a class="el" href="a02612.html">XmlNodeBase</a> *node, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *indent, std::size_t indent_length, unsigned int flags, unsigned int depth)</td></tr>
-<tr class="separator:a1aec0d3f33d23989698e84beb2403d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3781da2446a997aeab30b3a127de9a9d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#a3781da2446a997aeab30b3a127de9a9d">node_output_start</a> (<a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;writer, <a class="el" href="a02612.html">XmlNodeBase</a> *node, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *indent, std::size_t indent_length, unsigned int flags, unsigned int depth)</td></tr>
-<tr class="separator:a3781da2446a997aeab30b3a127de9a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08731803b31fe1bac86107d608100f94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#a08731803b31fe1bac86107d608100f94">node_output_end</a> (<a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;writer, <a class="el" href="a02612.html">XmlNodeBase</a> *node)</td></tr>
-<tr class="separator:a08731803b31fe1bac86107d608100f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cf6a87493cf624f41e7e716ca14c5b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00605.html#a9cf6a87493cf624f41e7e716ca14c5b5">node_output_simple</a> (<a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;writer, <a class="el" href="a02612.html">XmlNodeBase</a> *node, unsigned int flags)</td></tr>
-<tr class="separator:a9cf6a87493cf624f41e7e716ca14c5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab33309783d3a2950f302e4f51703e8"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate , std::size_t... I&gt; </td></tr>
+<tr class="memitem:aeab33309783d3a2950f302e4f51703e8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#aeab33309783d3a2950f302e4f51703e8">lumex::core::reflection::field_reflection::detail::can_construct_fn</a> (index_sequence&lt; I... &gt;) -&gt; decltype(Aggregate</td></tr>
+<tr class="separator:aeab33309783d3a2950f302e4f51703e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4ad9c78afee19bb51090917267383f5"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:ae4ad9c78afee19bb51090917267383f5"><td class="memTemplItemLeft" align="right" valign="top">std::false_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#ae4ad9c78afee19bb51090917267383f5">lumex::core::reflection::field_reflection::detail::can_construct_fn</a> (...)</td></tr>
+<tr class="separator:ae4ad9c78afee19bb51090917267383f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f3e456deefe393955ca7ecdd2bc14bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html#a4f3e456deefe393955ca7ecdd2bc14bd">lumex::core::reflection::field_reflection::detail::is_ident_char</a> (char ch) noexcept</td></tr>
+<tr class="separator:a4f3e456deefe393955ca7ecdd2bc14bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af95c622ddb01303f143c861215726cf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html#af95c622ddb01303f143c861215726cf2">lumex::core::reflection::field_reflection::detail::copy_parsed_name</a> (char *dest, std::size_t dest_size, char const *pretty) noexcept</td></tr>
+<tr class="separator:af95c622ddb01303f143c861215726cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4267bbe4c002bf9161d0966b40e2eb6f"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a4267bbe4c002bf9161d0966b40e2eb6f"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::tuple&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a4267bbe4c002bf9161d0966b40e2eb6f">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;, std::integral_constant&lt; std::size_t, 0 &gt;) noexcept</td></tr>
+<tr class="separator:a4267bbe4c002bf9161d0966b40e2eb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded523a605caa6cfe8d50b58a1a0f11c"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:aded523a605caa6cfe8d50b58a1a0f11c"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#aded523a605caa6cfe8d50b58a1a0f11c">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 1 &gt;) noexcept</td></tr>
+<tr class="separator:aded523a605caa6cfe8d50b58a1a0f11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912eba9f95e61654c8b933985baa3dc3"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a912eba9f95e61654c8b933985baa3dc3"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a912eba9f95e61654c8b933985baa3dc3">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 2 &gt;) noexcept</td></tr>
+<tr class="separator:a912eba9f95e61654c8b933985baa3dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11a5438edefb2a0bb2d9925c83b3b02"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:ad11a5438edefb2a0bb2d9925c83b3b02"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#ad11a5438edefb2a0bb2d9925c83b3b02">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 3 &gt;) noexcept</td></tr>
+<tr class="separator:ad11a5438edefb2a0bb2d9925c83b3b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acad575146ddc07f284dde57c0b9109c9"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:acad575146ddc07f284dde57c0b9109c9"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#acad575146ddc07f284dde57c0b9109c9">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 4 &gt;) noexcept</td></tr>
+<tr class="separator:acad575146ddc07f284dde57c0b9109c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385505884887f9eb655569e19e56ff4f"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a385505884887f9eb655569e19e56ff4f"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a385505884887f9eb655569e19e56ff4f">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 5 &gt;) noexcept</td></tr>
+<tr class="separator:a385505884887f9eb655569e19e56ff4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab95ef2fa6d12aa7cb29350878be69aa8"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:ab95ef2fa6d12aa7cb29350878be69aa8"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#ab95ef2fa6d12aa7cb29350878be69aa8">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 6 &gt;) noexcept</td></tr>
+<tr class="separator:ab95ef2fa6d12aa7cb29350878be69aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4db1b12c528a5049bbb5a943ce5953e"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:ae4db1b12c528a5049bbb5a943ce5953e"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#ae4db1b12c528a5049bbb5a943ce5953e">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 7 &gt;) noexcept</td></tr>
+<tr class="separator:ae4db1b12c528a5049bbb5a943ce5953e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47d46b4d49e708f6de92811f3fb5e830"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a47d46b4d49e708f6de92811f3fb5e830"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a47d46b4d49e708f6de92811f3fb5e830">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 8 &gt;) noexcept</td></tr>
+<tr class="separator:a47d46b4d49e708f6de92811f3fb5e830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82728cefdf5c455716dc20652d5f3943"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a82728cefdf5c455716dc20652d5f3943"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a82728cefdf5c455716dc20652d5f3943">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 9 &gt;) noexcept</td></tr>
+<tr class="separator:a82728cefdf5c455716dc20652d5f3943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6e73dbebb61b103857b7ddf8490d4f"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a3e6e73dbebb61b103857b7ddf8490d4f"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a3e6e73dbebb61b103857b7ddf8490d4f">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 10 &gt;) noexcept</td></tr>
+<tr class="separator:a3e6e73dbebb61b103857b7ddf8490d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8e02960255c1e37fd0b8333eefae5ef"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:ab8e02960255c1e37fd0b8333eefae5ef"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#ab8e02960255c1e37fd0b8333eefae5ef">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 11 &gt;) noexcept</td></tr>
+<tr class="separator:ab8e02960255c1e37fd0b8333eefae5ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc355207dd559f31b72b36539965e46"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a0fc355207dd559f31b72b36539965e46"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a0fc355207dd559f31b72b36539965e46">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 12 &gt;) noexcept</td></tr>
+<tr class="separator:a0fc355207dd559f31b72b36539965e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125412c6679b87475afdcd39ee146320"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a125412c6679b87475afdcd39ee146320"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a125412c6679b87475afdcd39ee146320">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 13 &gt;) noexcept</td></tr>
+<tr class="separator:a125412c6679b87475afdcd39ee146320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf63cffdfbe4d7419721d35f8d1ae201"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:aaf63cffdfbe4d7419721d35f8d1ae201"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#aaf63cffdfbe4d7419721d35f8d1ae201">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 14 &gt;) noexcept</td></tr>
+<tr class="separator:aaf63cffdfbe4d7419721d35f8d1ae201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f2859533a14448e2b1f034426272d5"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:ac7f2859533a14448e2b1f034426272d5"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#ac7f2859533a14448e2b1f034426272d5">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 15 &gt;) noexcept</td></tr>
+<tr class="separator:ac7f2859533a14448e2b1f034426272d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e3964179dc73c8e3ad39448c554ae4c"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a1e3964179dc73c8e3ad39448c554ae4c"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a1e3964179dc73c8e3ad39448c554ae4c">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 16 &gt;) noexcept</td></tr>
+<tr class="separator:a1e3964179dc73c8e3ad39448c554ae4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a17d9f5e7eb688c36136acac1cff24"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a10a17d9f5e7eb688c36136acac1cff24"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a10a17d9f5e7eb688c36136acac1cff24">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 17 &gt;) noexcept</td></tr>
+<tr class="separator:a10a17d9f5e7eb688c36136acac1cff24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f222c162a6cfe9f67c91b61ae14efb"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a64f222c162a6cfe9f67c91b61ae14efb"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a64f222c162a6cfe9f67c91b61ae14efb">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 18 &gt;) noexcept</td></tr>
+<tr class="separator:a64f222c162a6cfe9f67c91b61ae14efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2244df144c0daef5938e73d8d240433d"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a2244df144c0daef5938e73d8d240433d"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a2244df144c0daef5938e73d8d240433d">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 19 &gt;) noexcept</td></tr>
+<tr class="separator:a2244df144c0daef5938e73d8d240433d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17e21437a765edfd55b8ad1f00b2c76"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:aa17e21437a765edfd55b8ad1f00b2c76"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#aa17e21437a765edfd55b8ad1f00b2c76">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 20 &gt;) noexcept</td></tr>
+<tr class="separator:aa17e21437a765edfd55b8ad1f00b2c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22b38dd653cb880c753508e4491fc363"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a22b38dd653cb880c753508e4491fc363"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a22b38dd653cb880c753508e4491fc363">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 21 &gt;) noexcept</td></tr>
+<tr class="separator:a22b38dd653cb880c753508e4491fc363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b5e81a3cb103132463ff12c0df95bf"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a27b5e81a3cb103132463ff12c0df95bf"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a27b5e81a3cb103132463ff12c0df95bf">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 22 &gt;) noexcept</td></tr>
+<tr class="separator:a27b5e81a3cb103132463ff12c0df95bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c02610ccb480c165f066d095fcf23b"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a51c02610ccb480c165f066d095fcf23b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a51c02610ccb480c165f066d095fcf23b">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 23 &gt;) noexcept</td></tr>
+<tr class="separator:a51c02610ccb480c165f066d095fcf23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a4300d36d120d6c2d90f338f71fdb2"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a48a4300d36d120d6c2d90f338f71fdb2"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a48a4300d36d120d6c2d90f338f71fdb2">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 24 &gt;) noexcept</td></tr>
+<tr class="separator:a48a4300d36d120d6c2d90f338f71fdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2440e77d71df4498c398f9d5c792fe18"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a2440e77d71df4498c398f9d5c792fe18"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a2440e77d71df4498c398f9d5c792fe18">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 25 &gt;) noexcept</td></tr>
+<tr class="separator:a2440e77d71df4498c398f9d5c792fe18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aaadcbed462d14db431d2803840971a"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a8aaadcbed462d14db431d2803840971a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a8aaadcbed462d14db431d2803840971a">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 26 &gt;) noexcept</td></tr>
+<tr class="separator:a8aaadcbed462d14db431d2803840971a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0756d6a05c6dff5124151c29b3f2ec0b"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a0756d6a05c6dff5124151c29b3f2ec0b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a0756d6a05c6dff5124151c29b3f2ec0b">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 27 &gt;) noexcept</td></tr>
+<tr class="separator:a0756d6a05c6dff5124151c29b3f2ec0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5d2dba687cacb9dd2f72f10500f51b"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a2d5d2dba687cacb9dd2f72f10500f51b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a2d5d2dba687cacb9dd2f72f10500f51b">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 28 &gt;) noexcept</td></tr>
+<tr class="separator:a2d5d2dba687cacb9dd2f72f10500f51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e9775a18d15a731bfab5807259c09f"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a12e9775a18d15a731bfab5807259c09f"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a12e9775a18d15a731bfab5807259c09f">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 29 &gt;) noexcept</td></tr>
+<tr class="separator:a12e9775a18d15a731bfab5807259c09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf7a26adc5d167e43dbeb8a7fa4e971"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a2cf7a26adc5d167e43dbeb8a7fa4e971"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a2cf7a26adc5d167e43dbeb8a7fa4e971">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 30 &gt;) noexcept</td></tr>
+<tr class="separator:a2cf7a26adc5d167e43dbeb8a7fa4e971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e86feeeb022466c719ff90ccb0028c9"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a9e86feeeb022466c719ff90ccb0028c9"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a9e86feeeb022466c719ff90ccb0028c9">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 31 &gt;) noexcept</td></tr>
+<tr class="separator:a9e86feeeb022466c719ff90ccb0028c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d88b75c54f534ea6b01d58c4b59dd5"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:af1d88b75c54f534ea6b01d58c4b59dd5"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#af1d88b75c54f534ea6b01d58c4b59dd5">lumex::core::reflection::field_reflection::detail::as_tied</a> (Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 32 &gt;) noexcept</td></tr>
+<tr class="separator:af1d88b75c54f534ea6b01d58c4b59dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01d32a84bb229906d7b6bc6fca6b27e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae01d32a84bb229906d7b6bc6fca6b27e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T const  &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#ae01d32a84bb229906d7b6bc6fca6b27e">lumex::core::reflection::field_reflection::detail::fake_object</a> () noexcept</td></tr>
+<tr class="separator:ae01d32a84bb229906d7b6bc6fca6b27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a611cf069f0088e3817b11774efd804fd"><td class="memTemplParams" colspan="2">template&lt;typename Agg , auto Pointer&gt; </td></tr>
+<tr class="memitem:a611cf069f0088e3817b11774efd804fd"><td class="memTemplItemLeft" align="right" valign="top">char const  *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a611cf069f0088e3817b11774efd804fd">lumex::core::reflection::field_reflection::detail::nttp_pretty</a> () noexcept</td></tr>
+<tr class="separator:a611cf069f0088e3817b11774efd804fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a838ec332c1dec501fed6bf63f9419380"><td class="memTemplParams" colspan="2">template&lt;typename Agg , std::size_t I&gt; </td></tr>
+<tr class="memitem:a838ec332c1dec501fed6bf63f9419380"><td class="memTemplItemLeft" align="right" valign="top">char const  *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#a838ec332c1dec501fed6bf63f9419380">lumex::core::reflection::field_reflection::detail::field_name</a> () noexcept</td></tr>
+<tr class="separator:a838ec332c1dec501fed6bf63f9419380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc4125f1c661b62d9a1011d7c589dc9"><td class="memTemplParams" colspan="2">template&lt;std::size_t Index, typename Aggregate &gt; </td></tr>
+<tr class="memitem:affc4125f1c661b62d9a1011d7c589dc9"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01290.html#affc4125f1c661b62d9a1011d7c589dc9">lumex::core::reflection::field_reflection::get</a> (Aggregate &amp;value) noexcept</td></tr>
+<tr class="separator:affc4125f1c661b62d9a1011d7c589dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af734b0fe3e627e210ec21f71e86e7d5f"><td class="memTemplParams" colspan="2">template&lt;std::size_t Index, typename Aggregate &gt; </td></tr>
+<tr class="memitem:af734b0fe3e627e210ec21f71e86e7d5f"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01290.html#af734b0fe3e627e210ec21f71e86e7d5f">lumex::core::reflection::field_reflection::get</a> (Aggregate const &amp;value) noexcept</td></tr>
+<tr class="separator:af734b0fe3e627e210ec21f71e86e7d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55f977bf06b50003c3326e8b015be3b6"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a55f977bf06b50003c3326e8b015be3b6"><td class="memTemplItemLeft" align="right" valign="top">std::array&lt; char const *, tuple_size&lt; Aggregate &gt;::value &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01290.html#a55f977bf06b50003c3326e8b015be3b6">lumex::core::reflection::field_reflection::names_as_array</a> () noexcept</td></tr>
+<tr class="separator:a55f977bf06b50003c3326e8b015be3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a75d3fb078865f1adb49edd60c7e02fb8"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01291.html#a75d3fb078865f1adb49edd60c7e02fb8">lumex::core::reflection::field_reflection::detail::k_max_aggregate_fields</a> = 32</td></tr>
+<tr class="separator:a75d3fb078865f1adb49edd60c7e02fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2df78cf2b0b28d9e1cbcb717591f276"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac2df78cf2b0b28d9e1cbcb717591f276"><td class="memTemplItemLeft" align="right" valign="top">fake_object_wrapper_t&lt; T &gt; const&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01291.html#ac2df78cf2b0b28d9e1cbcb717591f276">lumex::core::reflection::field_reflection::detail::fake_object_storage</a></td></tr>
+<tr class="separator:ac2df78cf2b0b28d9e1cbcb717591f276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce0ada95e71ecd52eaedeff52d0a902"><td class="memTemplParams" colspan="2">template&lt;typename Aggregate &gt; </td></tr>
+<tr class="memitem:a3ce0ada95e71ecd52eaedeff52d0a902"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01290.html#a3ce0ada95e71ecd52eaedeff52d0a902">lumex::core::reflection::field_reflection::tuple_size_v</a> = tuple_size&lt;Aggregate&gt;::value</td></tr>
+<tr class="separator:a3ce0ada95e71ecd52eaedeff52d0a902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a07486181f1990291c2a348de8eb4c480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&nbsp;</a></span>LUMEX_IMPLEMENTATION</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Non-intrusive field count, indexed access, and (from C++20) field names for simple aggregates. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<p>Replaces the three Boost.PFR calls FieldReflection used (<code>tuple_size</code>, <code>get</code>, <code>names_as_array</code>). This header is original Lumex code (MIT), not a relicensed Boost dump.</p>
+<p>Field count is C++11: aggregate initialization against a converting placeholder, binary-searched up to 32 members. Indexed <code>get</code> is C++14: friend-injected field types (ADL <code>friend auto</code> on the tag, Boost.PFR shape) plus sequential layout offsets. Structured bindings are not used for access. C++11 has count only: a friend return type cannot be deduced without <code>auto</code>.</p>
+<p>Field names need C++20. <code>LUMEX_FUNCTION_NAME</code> embeds an identifier only when that identifier is a template argument. C++11 pointer NTTPs accept <code>&amp;Class::member</code> (the name is already known) or the address of a complete object, not a pointer to the I-th member of a static instance. C++20 <code>template&lt;auto&gt;</code> plus a structured binding into a declared- but-undefined phantom aggregate (<code>fake_object</code>) is what puts the real member name into the pretty string. A defined <code>inline T</code> instance fails on MSVC: a local reference into it is not a constant expression for the NTTP.</p>
+<p>Limit: 32 public data members. No base classes, no bit-fields, no reference members. From C++17, indexed <code>get</code> uses structured bindings (Boost.PFR core17 shape) so optional-only aggregates never hit the CWG 2118 loophole. The loophole remains for C++14 only: once-only friend body + <code>operator U&amp;() const&amp;&amp;</code> (plain <code>operator U()</code> redefines the friend for both the wrapper and the contained type -&gt; C2084; locking the contained type first then fails the layout sizeof check). </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad16692a7a8afa476f07b2bd8e8aa2f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad16692a7a8afa476f07b2bd8e8aa2f30">&#9670;&nbsp;</a></span>LUMEX_AF_TIE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a1aec0d3f33d23989698e84beb2403d60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1aec0d3f33d23989698e84beb2403d60">&#9670;&nbsp;</a></span>node_output_attributes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void node_output_attributes </td>
+          <td class="memname">#define LUMEX_AF_TIE</td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;&#160;</td>
-          <td class="paramname"><em>writer</em>, </td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">N, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a02612.html">XmlNodeBase</a> *&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>indent</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>indent_length</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>flags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>depth</em>&#160;</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -218,542 +367,39 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a1aec0d3f33d23989698e84beb2403d60_cgraph.png" border="0" usemap="#aa00605_a1aec0d3f33d23989698e84beb2403d60_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a1aec0d3f33d23989698e84beb2403d60_icgraph.png" border="0" usemap="#aa00605_a1aec0d3f33d23989698e84beb2403d60_icgraph" alt=""/></div>
-</div>
-
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Aggregate&gt;                                               \</div>
+<div class="line">  LUMEX_CONSTEXPR <span class="keyword">auto</span> <a class="code" href="a01291.html#af1d88b75c54f534ea6b01d58c4b59dd5">as_tied</a> (Aggregate &amp;&amp;value,                            \</div>
+<div class="line">                                std::integral_constant&lt;std::size_t, N&gt;)       \</div>
+<div class="line">      LUMEX_NOEXCEPT                                                          \</div>
+<div class="line">  {                                                                           \</div>
+<div class="line">    auto &amp;&amp;[__VA_ARGS__] = value;                                             \</div>
+<div class="line">    return std::tie (__VA_ARGS__);                                            \</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="afdf88c166fbef8feba73a11656d1a2a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdf88c166fbef8feba73a11656d1a2a5">&#9670;&nbsp;</a></span>node_output_comment()</h2>
+<a id="a89770ba9e5eec4affabea691368b7a3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89770ba9e5eec4affabea691368b7a3c">&#9670;&nbsp;</a></span>LUMEX_AGGREGATE_FIELDS_USE_SB</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void node_output_comment </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;&#160;</td>
-          <td class="paramname"><em>writer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>str</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">#define LUMEX_AGGREGATE_FIELDS_USE_SB&#160;&#160;&#160;1</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_afdf88c166fbef8feba73a11656d1a2a5_cgraph.png" border="0" usemap="#aa00605_afdf88c166fbef8feba73a11656d1a2a5_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_afdf88c166fbef8feba73a11656d1a2a5_icgraph.png" border="0" usemap="#aa00605_afdf88c166fbef8feba73a11656d1a2a5_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a08731803b31fe1bac86107d608100f94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08731803b31fe1bac86107d608100f94">&#9670;&nbsp;</a></span>node_output_end()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void node_output_end </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;&#160;</td>
-          <td class="paramname"><em>writer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02612.html">XmlNodeBase</a> *&#160;</td>
-          <td class="paramname"><em>node</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a08731803b31fe1bac86107d608100f94_cgraph.png" border="0" usemap="#aa00605_a08731803b31fe1bac86107d608100f94_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a08731803b31fe1bac86107d608100f94_icgraph.png" border="0" usemap="#aa00605_a08731803b31fe1bac86107d608100f94_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a759553362006542d7aa6079a39a24bf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a759553362006542d7aa6079a39a24bf4">&#9670;&nbsp;</a></span>node_output_pi_value()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void node_output_pi_value </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;&#160;</td>
-          <td class="paramname"><em>writer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>str</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a759553362006542d7aa6079a39a24bf4_cgraph.png" border="0" usemap="#aa00605_a759553362006542d7aa6079a39a24bf4_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a759553362006542d7aa6079a39a24bf4_icgraph.png" border="0" usemap="#aa00605_a759553362006542d7aa6079a39a24bf4_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a9cf6a87493cf624f41e7e716ca14c5b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cf6a87493cf624f41e7e716ca14c5b5">&#9670;&nbsp;</a></span>node_output_simple()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void node_output_simple </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;&#160;</td>
-          <td class="paramname"><em>writer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02612.html">XmlNodeBase</a> *&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>flags</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a9cf6a87493cf624f41e7e716ca14c5b5_cgraph.png" border="0" usemap="#aa00605_a9cf6a87493cf624f41e7e716ca14c5b5_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a9cf6a87493cf624f41e7e716ca14c5b5_icgraph.png" border="0" usemap="#aa00605_a9cf6a87493cf624f41e7e716ca14c5b5_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a3781da2446a997aeab30b3a127de9a9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3781da2446a997aeab30b3a127de9a9d">&#9670;&nbsp;</a></span>node_output_start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool node_output_start </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;&#160;</td>
-          <td class="paramname"><em>writer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02612.html">XmlNodeBase</a> *&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>indent</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>indent_length</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>flags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>depth</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a3781da2446a997aeab30b3a127de9a9d_cgraph.png" border="0" usemap="#aa00605_a3781da2446a997aeab30b3a127de9a9d_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a3781da2446a997aeab30b3a127de9a9d_icgraph.png" border="0" usemap="#aa00605_a3781da2446a997aeab30b3a127de9a9d_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="adf60e317ab315b5cb3eb74f99c1c7818"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf60e317ab315b5cb3eb74f99c1c7818">&#9670;&nbsp;</a></span>text_output()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void text_output </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;&#160;</td>
-          <td class="paramname"><em>writer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a355198379230c3f88efbc231a9f617b3">chartypex_t</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>flags</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_adf60e317ab315b5cb3eb74f99c1c7818_cgraph.png" border="0" usemap="#aa00605_adf60e317ab315b5cb3eb74f99c1c7818_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_adf60e317ab315b5cb3eb74f99c1c7818_icgraph.png" border="0" usemap="#aa00605_adf60e317ab315b5cb3eb74f99c1c7818_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a9e97a025d5f0d5027445d44145586231"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e97a025d5f0d5027445d44145586231">&#9670;&nbsp;</a></span>text_output_cdata()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void text_output_cdata </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;&#160;</td>
-          <td class="paramname"><em>writer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>str</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a9e97a025d5f0d5027445d44145586231_cgraph.png" border="0" usemap="#aa00605_a9e97a025d5f0d5027445d44145586231_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a9e97a025d5f0d5027445d44145586231_icgraph.png" border="0" usemap="#aa00605_a9e97a025d5f0d5027445d44145586231_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a647665f2ca21227b6053327ad22ae43a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a647665f2ca21227b6053327ad22ae43a">&#9670;&nbsp;</a></span>text_output_escaped()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void text_output_escaped </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;&#160;</td>
-          <td class="paramname"><em>writer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a355198379230c3f88efbc231a9f617b3">chartypex_t</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>flags</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a647665f2ca21227b6053327ad22ae43a_cgraph.png" border="0" usemap="#aa00605_a647665f2ca21227b6053327ad22ae43a_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a647665f2ca21227b6053327ad22ae43a_icgraph.png" border="0" usemap="#aa00605_a647665f2ca21227b6053327ad22ae43a_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a1c50f986d8e0bd24c89594197a5dc0e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c50f986d8e0bd24c89594197a5dc0e9">&#9670;&nbsp;</a></span>text_output_indent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void text_output_indent </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02736.html">XmlBufferedWriter</a> &amp;&#160;</td>
-          <td class="paramname"><em>writer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>indent</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>indent_length</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>depth</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a1c50f986d8e0bd24c89594197a5dc0e9_cgraph.png" border="0" usemap="#aa00605_a1c50f986d8e0bd24c89594197a5dc0e9_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a1c50f986d8e0bd24c89594197a5dc0e9_icgraph.png" border="0" usemap="#aa00605_a1c50f986d8e0bd24c89594197a5dc0e9_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a7f14902237d6fd53b62ea287105d1c31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f14902237d6fd53b62ea287105d1c31">&#9670;&nbsp;</a></span>unspecified_bool_xml_node()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void unspecified_bool_xml_node </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02596.html">XmlNode</a> ***&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00605_a7f14902237d6fd53b62ea287105d1c31_icgraph.png" border="0" usemap="#aa00605_a7f14902237d6fd53b62ea287105d1c31_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa01291_html_af1d88b75c54f534ea6b01d58c4b59dd5"><div class="ttname"><a href="a01291.html#af1d88b75c54f534ea6b01d58c4b59dd5">lumex::core::reflection::field_reflection::detail::as_tied</a></div><div class="ttdeci">constexpr auto as_tied(Aggregate &amp;&amp;value, std::integral_constant&lt; std::size_t, 32 &gt;) noexcept</div><div class="ttdef"><b>Definition:</b> LumexAggregateFields.hpp:438</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_82e0585083a36608bf6220a9fbe911e9.html">xml</a></li><li class="navelem"><a class="el" href="dir_6da506c1997c1de0e8ca69f6f42e5feb.html">node</a></li><li class="navelem"><a class="el" href="a00605.html">XmlNode.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2eed78fa94d1e9faad02cb0657b7390b.html">core</a></li><li class="navelem"><a class="el" href="dir_9f19d952725811a71a1277575cb881df.html">reflection</a></li><li class="navelem"><a class="el" href="dir_4183182a33530d5b48cdb15290070151.html">field_reflection</a></li><li class="navelem"><a class="el" href="a00605.html">LumexAggregateFields.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

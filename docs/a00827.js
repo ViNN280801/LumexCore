@@ -1,5 +1,4 @@
 var a00827 =
 [
-    [ "lumex_settings_key_spec_t", "a01068.html", "a01068" ],
-    [ "LumexSettingsGuard", "a01072.html", "a01072" ]
+    [ "main", "a00827.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ]
 ];

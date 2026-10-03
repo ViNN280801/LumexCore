@@ -1,9 +1,11 @@
 var a01612 =
 [
-    [ "LumexCrashHandler", "a01612.html#add0be61b714a9f54a4ee6deaede9a328", null ],
-    [ "LumexCrashHandler", "a01612.html#a9e169defe2d3ee3ba9f79eda122bfd05", null ],
-    [ "initialize", "a01612.html#a6a62eb137de435a453adb86ab497866a", null ],
-    [ "instance", "a01612.html#a4bda3bde24e82d8ef6207ea99d2b768c", null ],
-    [ "operator=", "a01612.html#af1f0dede4fd39eec64049154ae361501", null ],
-    [ "operator=", "a01612.html#a8e0243b8e1e3ebcfdac0a869e62fc0c2", null ]
+    [ "ValueType", "a01612.html#afd8b68ee4c2e4dd109b1887f177009bd", null ],
+    [ "kCatalogCheck", "a01612.html#ada699c78ea904f74c63bfef0bb7bf275", null ],
+    [ "kInit", "a01612.html#acf61bc0f4e7e73d2abec9ac8e74572cf", null ],
+    [ "kPoly", "a01612.html#accf28f99071e83499162a503b39508af", null ],
+    [ "kRefIn", "a01612.html#acb26729818f02eea41b1ebcfbb630f86", null ],
+    [ "kRefOut", "a01612.html#a219608f2e47e75abcaa28df90fcb0e22", null ],
+    [ "kWidth", "a01612.html#af136e757dd069e1595838ac1c15405d0", null ],
+    [ "kXorOut", "a01612.html#ab13ad64e36a1093116076bff3024c547", null ]
 ];

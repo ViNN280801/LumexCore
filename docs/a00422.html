@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: example_format_chrono.cpp File Reference</title>
+<title>LumexLib: LumexPortProcessResolver.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,57 +94,72 @@ $(document).ready(function(){initNavTree('a00422.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">example_format_chrono.cpp File Reference</div>  </div>
+<div class="title">LumexPortProcessResolver.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;chrono&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;locale&gt;</code><br />
-<code>#include &lt;ratio&gt;</code><br />
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iterator&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;lumex/core/fmt/LumexFormat&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;dirent.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00425_source.html">lumex/applied/serial/resolver/LumexPortProcessResolver.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00713_source.html">lumex/core/utility/os/LumexCheckOS.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for example_format_chrono.cpp:</div>
+Include dependency graph for LumexPortProcessResolver.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00423.png" border="0" usemap="#aexample__format__chrono_8cpp" alt=""/></div>
+<div class="center"><img src="a00423.png" border="0" usemap="#aLumexPortProcessResolver_8cpp" alt=""/></div>
+<map name="LumexPortProcessResolver_8cpp" id="aLumexPortProcessResolver_8cpp">
+<area shape="rect" title=" " alt="" coords="543,5,767,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,61,114"/>
+<area shape="rect" title=" " alt="" coords="85,87,152,114"/>
+<area shape="rect" title=" " alt="" coords="177,87,242,114"/>
+<area shape="rect" title=" " alt="" coords="267,87,333,114"/>
+<area shape="rect" title=" " alt="" coords="358,87,431,114"/>
+<area shape="rect" title=" " alt="" coords="455,87,526,114"/>
+<area shape="rect" title=" " alt="" coords="356,177,415,203"/>
+<area shape="rect" title=" " alt="" coords="1163,87,1226,114"/>
+<area shape="rect" title=" " alt="" coords="1251,87,1323,114"/>
+<area shape="rect" title=" " alt="" coords="1347,87,1410,114"/>
+<area shape="rect" title=" " alt="" coords="1435,87,1509,114"/>
+<area shape="rect" href="a00425.html" title="Identifies the process that holds a serial port open." alt="" coords="602,80,889,121"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="820,169,1033,211"/>
+<area shape="rect" href="a00713.html" title="Cross&#45;platform OS macros." alt="" coords="965,80,1139,121"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="439,177,620,203"/>
+<area shape="rect" title=" " alt="" coords="644,169,796,211"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="1057,169,1247,211"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="1025,259,1279,300"/>
+<area shape="rect" href="a00677.html" title="Compiler identification and version macros." alt="" coords="1271,169,1529,211"/>
+</map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00422.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01186"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01186.html">lumex::applied</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01218"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01218.html">lumex::applied::serial</a></td></tr>
+<tr class="memdesc:a01218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross-platform helpers for naming/resolving serial (and serial-adjacent) communication ports. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01224"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01224.html">lumex::applied::serial::resolver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00422_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#aa00422_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_5a400666d5453ed7996e0d2c1554a533.html">examples</a></li><li class="navelem"><a class="el" href="dir_7c79964990242e1a82812cf385c36687.html">fmt</a></li><li class="navelem"><a class="el" href="a00422.html">example_format_chrono.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_de45db85bd98abf883bc2bd6c3907fd8.html">applied</a></li><li class="navelem"><a class="el" href="dir_9f3553d7e4d4ebb0490c2c83481c4624.html">serial</a></li><li class="navelem"><a class="el" href="dir_280ba8667320f31218bd5995288a7b7b.html">resolver</a></li><li class="navelem"><a class="el" href="a00422.html">LumexPortProcessResolver.cpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

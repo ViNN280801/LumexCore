@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::crc::catalog Namespace Reference</title>
+<title>LumexLib: example_reflection_workflow.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,80 +94,55 @@ $(document).ready(function(){initNavTree('a00848.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::crc::catalog Namespace Reference</div>  </div>
+<div class="title">example_reflection_workflow.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01124.html">crc_params_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC parameters in CRC RevEng notation (see <a class="el" href="a00158.html">LumexCrcParametric.hpp</a> / Greg Cook catalogue).  <a href="a01124.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;lumex/core/reflection/LumexReflection&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for example_reflection_workflow.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00849.png" border="0" usemap="#aexample__reflection__workflow_8cpp" alt=""/></div>
+<map name="example__reflection__workflow_8cpp" id="aexample__reflection__workflow_8cpp">
+<area shape="rect" title=" " alt="" coords="63,5,209,47"/>
+<area shape="rect" title=" " alt="" coords="5,102,72,129"/>
+<area shape="rect" title=" " alt="" coords="96,102,176,129"/>
+<area shape="rect" title=" " alt="" coords="200,95,360,136"/>
+</map>
+</div>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a550c04492ccdbe76b3c82f02ac7c3dc0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a550c04492ccdbe76b3c82f02ac7c3dc0">TransportCrcMode</a> : std::uint8_t { <a class="el" href="a00848.html#a550c04492ccdbe76b3c82f02ac7c3dc0a7a1920d61156abc05a60135aefe8bc67">TransportCrcMode::Default</a> = 0, 
-<a class="el" href="a00848.html#a550c04492ccdbe76b3c82f02ac7c3dc0ac32516babc5b6c47eb8ce1bfc223253c">TransportCrcMode::Catalog</a> = 1, 
-<a class="el" href="a00848.html#a550c04492ccdbe76b3c82f02ac7c3dc0a90589c47f06eb971d548591f23c285af">TransportCrcMode::Custom</a> = 2
+<tr class="memitem:a7014ea31388ba91f40697a3b984ae081"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> : std::uint8_t { <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081a865c0c0b4ab0e063e5caa3387c1a8741">ExampleValve::i</a> =( LUMEX_PP_ENUM_BODY , (Load), (Inject), (Waste) )
  }</td></tr>
-<tr class="memdesc:a550c04492ccdbe76b3c82f02ac7c3dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process-global 8-bit transport checksum mode (one byte per frame).  <a href="a00848.html#a550c04492ccdbe76b3c82f02ac7c3dc0">More...</a><br /></td></tr>
-<tr class="separator:a550c04492ccdbe76b3c82f02ac7c3dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a7014ea31388ba91f40697a3b984ae081"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a536a7a107a3a0c2ea882cb388d2890bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a536a7a107a3a0c2ea882cb388d2890bf">ValidateCrcRevEngParams</a> (<a class="el" href="a01124.html">crc_params_t</a> const &amp;params) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a536a7a107a3a0c2ea882cb388d2890bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates parameters before computation (width 1..64).  <a href="a00848.html#a536a7a107a3a0c2ea882cb388d2890bf">More...</a><br /></td></tr>
-<tr class="separator:a536a7a107a3a0c2ea882cb388d2890bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac47c5bdb9dfe144b1a67d448cfe49cd5"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#ac47c5bdb9dfe144b1a67d448cfe49cd5">ComputeCrcWithRevEngParams</a> (<a class="el" href="a01124.html">crc_params_t</a> const &amp;params, std::uint8_t const *data, std::size_t byteCount) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:ac47c5bdb9dfe144b1a67d448cfe49cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a CRC from explicit RevEng parameters (bit engine, width 1..64).  <a href="a00848.html#ac47c5bdb9dfe144b1a67d448cfe49cd5">More...</a><br /></td></tr>
-<tr class="separator:ac47c5bdb9dfe144b1a67d448cfe49cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a587fd5795ab660d7755e2378e3df7270"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a587fd5795ab660d7755e2378e3df7270">GetCrcCatalogEntryCount</a> () <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a587fd5795ab660d7755e2378e3df7270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of catalogue algorithms (order matches <code>all_crc_specs_t</code>).  <a href="a00848.html#a587fd5795ab660d7755e2378e3df7270">More...</a><br /></td></tr>
-<tr class="separator:a587fd5795ab660d7755e2378e3df7270"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabeacbf71d4bd9d8da91ba25668f11f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#aabeacbf71d4bd9d8da91ba25668f11f9">GetCrcCatalogBitWidth</a> (std::uint32_t <a class="el" href="a00152.html#a268386a25ef2ab9fc723bbea43bf6666">catalogIndex</a>) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:aabeacbf71d4bd9d8da91ba25668f11f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Catalogue entry width in bits; -1 on error.  <a href="a00848.html#aabeacbf71d4bd9d8da91ba25668f11f9">More...</a><br /></td></tr>
-<tr class="separator:aabeacbf71d4bd9d8da91ba25668f11f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5a4a809e309723e68d1d13e0f8ebb6"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a4c5a4a809e309723e68d1d13e0f8ebb6">ComputeCrcCatalog</a> (std::uint32_t <a class="el" href="a00152.html#a268386a25ef2ab9fc723bbea43bf6666">catalogIndex</a>, std::uint8_t const *data, std::size_t byteCount) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a4c5a4a809e309723e68d1d13e0f8ebb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC for catalogue index <code>all_crc_specs_t</code> (0 ... <a class="el" href="a00848.html#a587fd5795ab660d7755e2378e3df7270">GetCrcCatalogEntryCount</a> - 1).  <a href="a00848.html#a4c5a4a809e309723e68d1d13e0f8ebb6">More...</a><br /></td></tr>
-<tr class="separator:a4c5a4a809e309723e68d1d13e0f8ebb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a267be9f38c0450188a1abb661528ed30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a267be9f38c0450188a1abb661528ed30">SetTransportCrcDefault</a> () <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a267be9f38c0450188a1abb661528ed30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore the default CRC-8/MAXIM-DOW transport mode.  <a href="a00848.html#a267be9f38c0450188a1abb661528ed30">More...</a><br /></td></tr>
-<tr class="separator:a267be9f38c0450188a1abb661528ed30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19fb73820d64096cfbfa4e3f04f24bb5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a19fb73820d64096cfbfa4e3f04f24bb5">SetTransportCrcCatalogIndex</a> (std::uint32_t <a class="el" href="a00152.html#a268386a25ef2ab9fc723bbea43bf6666">catalogIndex</a>) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a19fb73820d64096cfbfa4e3f04f24bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transport: 8-bit catalogue entry by index.  <a href="a00848.html#a19fb73820d64096cfbfa4e3f04f24bb5">More...</a><br /></td></tr>
-<tr class="separator:a19fb73820d64096cfbfa4e3f04f24bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abade803b2de1508ef0074f0347c32d85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#abade803b2de1508ef0074f0347c32d85">SetTransportCrcRevEngParams</a> (<a class="el" href="a01124.html">crc_params_t</a> const &amp;params) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:abade803b2de1508ef0074f0347c32d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transport: caller-defined 8-bit CRC (must match the peer).  <a href="a00848.html#abade803b2de1508ef0074f0347c32d85">More...</a><br /></td></tr>
-<tr class="separator:abade803b2de1508ef0074f0347c32d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac80c292782f59577a2c9c2d9b596c15d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00848.html#a550c04492ccdbe76b3c82f02ac7c3dc0">TransportCrcMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#ac80c292782f59577a2c9c2d9b596c15d">GetTransportCrcMode</a> () <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:ac80c292782f59577a2c9c2d9b596c15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96b04b4ec3f9a7e87d9abb1eee6f4a95"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a96b04b4ec3f9a7e87d9abb1eee6f4a95">GetTransportCrcCatalogIndex</a> () <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a96b04b4ec3f9a7e87d9abb1eee6f4a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Catalogue index in <code>Catalog</code> mode; otherwise <a class="el" href="a00848.html#a6a6fbf44fafd1232c7b412e9997238e7">CrcCatalogLegacyIndex</a> or <a class="el" href="a00848.html#a4a24668726e509d5db41a0ea21d135fb">CrcTransportUsesCustomSpecSentinel</a>.  <a href="a00848.html#a96b04b4ec3f9a7e87d9abb1eee6f4a95">More...</a><br /></td></tr>
-<tr class="separator:a96b04b4ec3f9a7e87d9abb1eee6f4a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e5d79d41b6f44e17d6f6b11e13fe2e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a6e5d79d41b6f44e17d6f6b11e13fe2e9">TryGetTransportCrcRevEngParams</a> (<a class="el" href="a01124.html">crc_params_t</a> &amp;out) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a6e5d79d41b6f44e17d6f6b11e13fe2e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes <code>out</code> in <code>Custom</code> mode; otherwise leaves <code>out</code> unchanged.  <a href="a00848.html#a6e5d79d41b6f44e17d6f6b11e13fe2e9">More...</a><br /></td></tr>
-<tr class="separator:a6e5d79d41b6f44e17d6f6b11e13fe2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aa910610fd76c17e044fe0cbeac2094"><td class="memItemLeft" align="right" valign="top">std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a7aa910610fd76c17e044fe0cbeac2094">ComputeTransportChecksum</a> (std::uint8_t const *data, std::size_t byteCount) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a7aa910610fd76c17e044fe0cbeac2094"><td class="mdescLeft">&#160;</td><td class="mdescRight">8-bit transport checksum for the current process-global mode.  <a href="a00848.html#a7aa910610fd76c17e044fe0cbeac2094">More...</a><br /></td></tr>
-<tr class="separator:a7aa910610fd76c17e044fe0cbeac2094"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a6fbf44fafd1232c7b412e9997238e7"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a6a6fbf44fafd1232c7b412e9997238e7">CrcCatalogLegacyIndex</a> () <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a6a6fbf44fafd1232c7b412e9997238e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a24668726e509d5db41a0ea21d135fb"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a4a24668726e509d5db41a0ea21d135fb">CrcTransportUsesCustomSpecSentinel</a> () <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a4a24668726e509d5db41a0ea21d135fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of <a class="el" href="a00848.html#a96b04b4ec3f9a7e87d9abb1eee6f4a95">GetTransportCrcCatalogIndex</a> when the mode is <code>Custom</code>.  <a href="a00848.html#a4a24668726e509d5db41a0ea21d135fb">More...</a><br /></td></tr>
-<tr class="separator:a4a24668726e509d5db41a0ea21d135fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95649628e523b6cb885d5f409e9515cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a95649628e523b6cb885d5f409e9515cf">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;Caller may need transport CRC <a class="el" href="a00152.html#a35f2b704bd773b896f46437fc54c81e4">mode</a> for logging or tests.&quot;) LUMEX_PUBLIC_API <a class="el" href="a00848.html#a550c04492ccdbe76b3c82f02ac7c3dc0">TransportCrcMode</a> <a class="el" href="a00848.html#ac80c292782f59577a2c9c2d9b596c15d">GetTransportCrcMode</a>() <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a95649628e523b6cb885d5f409e9515cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b05e5337533d3b2eea1395b4c2f23ab"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a6b05e5337533d3b2eea1395b4c2f23ab">ComputeCrcCatalog</a> (std::uint32_t <a class="el" href="a00152.html#a268386a25ef2ab9fc723bbea43bf6666">catalogIndex</a>, std::vector&lt; std::uint8_t &gt; const &amp;bytes) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="memdesc:a6b05e5337533d3b2eea1395b4c2f23ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Catalogue CRC of a byte vector. Available from C++11 so C++14 examples and tests can pass <code>std::vector</code> without a pointer+size pair. Empty vector is the same as a zero-length buffer.  <a href="a00848.html#a6b05e5337533d3b2eea1395b4c2f23ab">More...</a><br /></td></tr>
-<tr class="separator:a6b05e5337533d3b2eea1395b4c2f23ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace81767630eb51f9527201913b5f72e2"><td class="memItemLeft" align="right" valign="top">static constexpr char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#ace81767630eb51f9527201913b5f72e2">toString</a> (<a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> value) noexcept</td></tr>
+<tr class="separator:ace81767630eb51f9527201913b5f72e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a383c7ee6f058e2b5048b4c7b50c53069"><td class="memItemLeft" align="right" valign="top">iiiiiint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a383c7ee6f058e2b5048b4c7b50c53069">main</a> ()</td></tr>
+<tr class="separator:a383c7ee6f058e2b5048b4c7b50c53069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a0c4502410e1711321c7d2e4f760d79cc"><td class="memItemLeft" align="right" valign="top">static constexpr std::array&lt; <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a0c4502410e1711321c7d2e4f760d79cc">ExampleValveValues</a> { <a class="el" href="a00611.html#af16e15114ce955f583ea6d18669ee734">LUMEX_PP_FEA_3</a> i( <a class="el" href="a00611.html#ae721f73a3a7b0118eb1f2b8ff0e46744">LUMEX_PP_ENUM_VALUE</a> , <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> , (Load), (Inject), (Waste) ) }</td></tr>
+<tr class="separator:a0c4502410e1711321c7d2e4f760d79cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0635e4389cfe578f7f6a423d7d2469cb"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a0635e4389cfe578f7f6a423d7d2469cb">ExampleValveFirst</a> = ::<a class="el" href="a01293.html#a1402ab62e151b9fd9b6f014b91610bda">lumex::core::reflection::reflected_enum::detail::first_of</a>( <a class="el" href="a00611.html#af16e15114ce955f583ea6d18669ee734">LUMEX_PP_FEA_3</a> i( <a class="el" href="a00611.html#ae721f73a3a7b0118eb1f2b8ff0e46744">LUMEX_PP_ENUM_VALUE</a> , <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> , (Load), (Inject), (Waste) ) )</td></tr>
+<tr class="separator:a0635e4389cfe578f7f6a423d7d2469cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7923c7dd9db434ccfecec3a023a38499"><td class="memItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a7923c7dd9db434ccfecec3a023a38499">ExampleValveSize</a> = <a class="el" href="a00848.html#a0c4502410e1711321c7d2e4f760d79cc">ExampleValveValues</a> .size()</td></tr>
+<tr class="separator:a7923c7dd9db434ccfecec3a023a38499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59c19075c6d0e0244725697ad708b11e"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00848.html#a59c19075c6d0e0244725697ad708b11e">ExampleValveLast</a> = ::<a class="el" href="a01293.html#a479c8294a6863b2cbd9f422b77a46472">lumex::core::reflection::reflected_enum::detail::last_of</a>( <a class="el" href="a00611.html#af16e15114ce955f583ea6d18669ee734">LUMEX_PP_FEA_3</a> i( <a class="el" href="a00611.html#ae721f73a3a7b0118eb1f2b8ff0e46744">LUMEX_PP_ENUM_VALUE</a> , <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> , (Load), (Inject), (Waste) ) )</td></tr>
+<tr class="separator:a59c19075c6d0e0244725697ad708b11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a550c04492ccdbe76b3c82f02ac7c3dc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a550c04492ccdbe76b3c82f02ac7c3dc0">&#9670;&nbsp;</a></span>TransportCrcMode</h2>
+<a id="a7014ea31388ba91f40697a3b984ae081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7014ea31388ba91f40697a3b984ae081">&#9670;&nbsp;</a></span>ExampleValve</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,7 +151,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="a00848.html#a550c04492ccdbe76b3c82f02ac7c3dc0">lumex::core::crc::catalog::TransportCrcMode</a> : std::uint8_t</td>
+          <td class="memname">enum <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> : std::uint8_t</td>
         </tr>
       </table>
   </td>
@@ -185,63 +160,41 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Process-global 8-bit transport checksum mode (one byte per frame). </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a550c04492ccdbe76b3c82f02ac7c3dc0a7a1920d61156abc05a60135aefe8bc67"></a>Default&#160;</td><td class="fielddoc"><p>CRC-8/MAXIM-DOW (<code>Crc8MaximDow</code>). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a550c04492ccdbe76b3c82f02ac7c3dc0ac32516babc5b6c47eb8ce1bfc223253c"></a>Catalog&#160;</td><td class="fielddoc"><p>Catalogue entry from <code>all_crc_specs_t</code> with <code>widthBits</code> == 8. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a550c04492ccdbe76b3c82f02ac7c3dc0a90589c47f06eb971d548591f23c285af"></a>Custom&#160;</td><td class="fielddoc"><p>Caller-supplied <a class="el" href="a01124.html">crc_params_t</a>; <code>widthBits</code> must be 8. </p>
-</td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7014ea31388ba91f40697a3b984ae081a865c0c0b4ab0e063e5caa3387c1a8741"></a>i&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a4c5a4a809e309723e68d1d13e0f8ebb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c5a4a809e309723e68d1d13e0f8ebb6">&#9670;&nbsp;</a></span>ComputeCrcCatalog() <span class="overload">[1/2]</span></h2>
+<a id="a383c7ee6f058e2b5048b4c7b50c53069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a383c7ee6f058e2b5048b4c7b50c53069">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::uint64_t lumex::core::crc::catalog::ComputeCrcCatalog </td>
+          <td class="memname">iiiiiint main </td>
           <td>(</td>
-          <td class="paramtype">std::uint32_t&#160;</td>
-          <td class="paramname"><em>catalogIndex</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::uint8_t const *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>byteCount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>CRC for catalogue index <code>all_crc_specs_t</code> (0 ... <a class="el" href="a00848.html#a587fd5795ab660d7755e2378e3df7270">GetCrcCatalogEntryCount</a> - 1). </p>
 <div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00848_a4c5a4a809e309723e68d1d13e0f8ebb6_icgraph.png" border="0" usemap="#aa00848_a4c5a4a809e309723e68d1d13e0f8ebb6_icgraph" alt=""/></div>
+<div class="center"><img src="a00848_a383c7ee6f058e2b5048b4c7b50c53069_cgraph.png" border="0" usemap="#aa00848_a383c7ee6f058e2b5048b4c7b50c53069_cgraph" alt=""/></div>
+<map name="a00848_a383c7ee6f058e2b5048b4c7b50c53069_cgraph" id="aa00848_a383c7ee6f058e2b5048b4c7b50c53069_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" href="a00848.html#ace81767630eb51f9527201913b5f72e2" title=" " alt="" coords="108,5,181,32"/>
+</map>
 </div>
 
 </div>
 </div>
-<a id="a6b05e5337533d3b2eea1395b4c2f23ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b05e5337533d3b2eea1395b4c2f23ab">&#9670;&nbsp;</a></span>ComputeCrcCatalog() <span class="overload">[2/2]</span></h2>
+<a id="ace81767630eb51f9527201913b5f72e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace81767630eb51f9527201913b5f72e2">&#9670;&nbsp;</a></span>toString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,123 +203,34 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::uint64_t lumex::core::crc::catalog::ComputeCrcCatalog </td>
+          <td class="memname">static constexpr char const* toString </td>
           <td>(</td>
-          <td class="paramtype">std::uint32_t&#160;</td>
-          <td class="paramname"><em>catalogIndex</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a>&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::uint8_t &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>bytes</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Catalogue CRC of a byte vector. Available from C++11 so C++14 examples and tests can pass <code>std::vector</code> without a pointer+size pair. Empty vector is the same as a zero-length buffer. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_a6b05e5337533d3b2eea1395b4c2f23ab_cgraph.png" border="0" usemap="#aa00848_a6b05e5337533d3b2eea1395b4c2f23ab_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ac47c5bdb9dfe144b1a67d448cfe49cd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac47c5bdb9dfe144b1a67d448cfe49cd5">&#9670;&nbsp;</a></span>ComputeCrcWithRevEngParams()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::uint64_t lumex::core::crc::catalog::ComputeCrcWithRevEngParams </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01124.html">crc_params_t</a> const &amp;&#160;</td>
-          <td class="paramname"><em>params</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::uint8_t const *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>byteCount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes a CRC from explicit RevEng parameters (bit engine, width 1..64). </p>
-<dl class="section return"><dt>Returns</dt><dd>0 for nullptr, zero length, or invalid <code>params</code>. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_ac47c5bdb9dfe144b1a67d448cfe49cd5_cgraph.png" border="0" usemap="#aa00848_ac47c5bdb9dfe144b1a67d448cfe49cd5_cgraph" alt=""/></div>
-</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00848_ac47c5bdb9dfe144b1a67d448cfe49cd5_icgraph.png" border="0" usemap="#aa00848_ac47c5bdb9dfe144b1a67d448cfe49cd5_icgraph" alt=""/></div>
+<div class="center"><img src="a00848_ace81767630eb51f9527201913b5f72e2_icgraph.png" border="0" usemap="#aa00848_ace81767630eb51f9527201913b5f72e2_icgraph" alt=""/></div>
+<map name="a00848_ace81767630eb51f9527201913b5f72e2_icgraph" id="aa00848_ace81767630eb51f9527201913b5f72e2_icgraph">
+<area shape="rect" title=" " alt="" coords="108,5,181,32"/>
+<area shape="rect" href="a00848.html#a383c7ee6f058e2b5048b4c7b50c53069" title=" " alt="" coords="5,5,60,32"/>
+</map>
 </div>
 
 </div>
 </div>
-<a id="a7aa910610fd76c17e044fe0cbeac2094"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7aa910610fd76c17e044fe0cbeac2094">&#9670;&nbsp;</a></span>ComputeTransportChecksum()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::uint8_t lumex::core::crc::catalog::ComputeTransportChecksum </td>
-          <td>(</td>
-          <td class="paramtype">std::uint8_t const *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>byteCount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>8-bit transport checksum for the current process-global mode. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_a7aa910610fd76c17e044fe0cbeac2094_cgraph.png" border="0" usemap="#aa00848_a7aa910610fd76c17e044fe0cbeac2094_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a6a6fbf44fafd1232c7b412e9997238e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a6fbf44fafd1232c7b412e9997238e7">&#9670;&nbsp;</a></span>CrcCatalogLegacyIndex()</h2>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a0635e4389cfe578f7f6a423d7d2469cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0635e4389cfe578f7f6a423d7d2469cb">&#9670;&nbsp;</a></span>ExampleValveFirst</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -375,28 +239,20 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::uint32_t lumex::core::crc::catalog::CrcCatalogLegacyIndex </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">constexpr <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> ExampleValveFirst = ::<a class="el" href="a01293.html#a1402ab62e151b9fd9b6f014b91610bda">lumex::core::reflection::reflected_enum::detail::first_of</a>( <a class="el" href="a00611.html#af16e15114ce955f583ea6d18669ee734">LUMEX_PP_FEA_3</a> i( <a class="el" href="a00611.html#ae721f73a3a7b0118eb1f2b8ff0e46744">LUMEX_PP_ENUM_VALUE</a> , <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> , (Load), (Inject), (Waste) ) )</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_a6a6fbf44fafd1232c7b412e9997238e7_icgraph.png" border="0" usemap="#aa00848_a6a6fbf44fafd1232c7b412e9997238e7_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
-<a id="a4a24668726e509d5db41a0ea21d135fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a24668726e509d5db41a0ea21d135fb">&#9670;&nbsp;</a></span>CrcTransportUsesCustomSpecSentinel()</h2>
+<a id="a59c19075c6d0e0244725697ad708b11e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59c19075c6d0e0244725697ad708b11e">&#9670;&nbsp;</a></span>ExampleValveLast</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,266 +261,59 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::uint32_t lumex::core::crc::catalog::CrcTransportUsesCustomSpecSentinel </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">constexpr <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> ExampleValveLast = ::<a class="el" href="a01293.html#a479c8294a6863b2cbd9f422b77a46472">lumex::core::reflection::reflected_enum::detail::last_of</a>( <a class="el" href="a00611.html#af16e15114ce955f583ea6d18669ee734">LUMEX_PP_FEA_3</a> i( <a class="el" href="a00611.html#ae721f73a3a7b0118eb1f2b8ff0e46744">LUMEX_PP_ENUM_VALUE</a> , <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> , (Load), (Inject), (Waste) ) )</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Value of <a class="el" href="a00848.html#a96b04b4ec3f9a7e87d9abb1eee6f4a95">GetTransportCrcCatalogIndex</a> when the mode is <code>Custom</code>. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_a4a24668726e509d5db41a0ea21d135fb_icgraph.png" border="0" usemap="#aa00848_a4a24668726e509d5db41a0ea21d135fb_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="aabeacbf71d4bd9d8da91ba25668f11f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabeacbf71d4bd9d8da91ba25668f11f9">&#9670;&nbsp;</a></span>GetCrcCatalogBitWidth()</h2>
+<a id="a7923c7dd9db434ccfecec3a023a38499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7923c7dd9db434ccfecec3a023a38499">&#9670;&nbsp;</a></span>ExampleValveSize</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> int lumex::core::crc::catalog::GetCrcCatalogBitWidth </td>
-          <td>(</td>
-          <td class="paramtype">std::uint32_t&#160;</td>
-          <td class="paramname"><em>catalogIndex</em></td><td>)</td>
-          <td></td>
+          <td class="memname">constexpr std::size_t ExampleValveSize = <a class="el" href="a00848.html#a0c4502410e1711321c7d2e4f760d79cc">ExampleValveValues</a> .size()</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Catalogue entry width in bits; -1 on error. </p>
-<dl class="section note"><dt>Note</dt><dd><a class="el" href="a00848.html#a6a6fbf44fafd1232c7b412e9997238e7">CrcCatalogLegacyIndex</a> returns 8 (built-in transport CRC-8). </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_aabeacbf71d4bd9d8da91ba25668f11f9_cgraph.png" border="0" usemap="#aa00848_aabeacbf71d4bd9d8da91ba25668f11f9_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_aabeacbf71d4bd9d8da91ba25668f11f9_icgraph.png" border="0" usemap="#aa00848_aabeacbf71d4bd9d8da91ba25668f11f9_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a587fd5795ab660d7755e2378e3df7270"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a587fd5795ab660d7755e2378e3df7270">&#9670;&nbsp;</a></span>GetCrcCatalogEntryCount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::uint32_t lumex::core::crc::catalog::GetCrcCatalogEntryCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Number of catalogue algorithms (order matches <code>all_crc_specs_t</code>). </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_a587fd5795ab660d7755e2378e3df7270_icgraph.png" border="0" usemap="#aa00848_a587fd5795ab660d7755e2378e3df7270_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a96b04b4ec3f9a7e87d9abb1eee6f4a95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96b04b4ec3f9a7e87d9abb1eee6f4a95">&#9670;&nbsp;</a></span>GetTransportCrcCatalogIndex()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> std::uint32_t lumex::core::crc::catalog::GetTransportCrcCatalogIndex </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Catalogue index in <code>Catalog</code> mode; otherwise <a class="el" href="a00848.html#a6a6fbf44fafd1232c7b412e9997238e7">CrcCatalogLegacyIndex</a> or <a class="el" href="a00848.html#a4a24668726e509d5db41a0ea21d135fb">CrcTransportUsesCustomSpecSentinel</a>. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_a96b04b4ec3f9a7e87d9abb1eee6f4a95_cgraph.png" border="0" usemap="#aa00848_a96b04b4ec3f9a7e87d9abb1eee6f4a95_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ac80c292782f59577a2c9c2d9b596c15d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac80c292782f59577a2c9c2d9b596c15d">&#9670;&nbsp;</a></span>GetTransportCrcMode()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00848.html#a550c04492ccdbe76b3c82f02ac7c3dc0">TransportCrcMode</a> lumex::core::crc::catalog::GetTransportCrcMode </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a95649628e523b6cb885d5f409e9515cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95649628e523b6cb885d5f409e9515cf">&#9670;&nbsp;</a></span>LUMEX_ATTRIBUTE_NODISCARD()</h2>
+<a id="a0c4502410e1711321c7d2e4f760d79cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4502410e1711321c7d2e4f760d79cc">&#9670;&nbsp;</a></span>ExampleValveValues</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lumex::core::crc::catalog::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Caller may need transport CRC <a class="el" href="a00152.html#a35f2b704bd773b896f46437fc54c81e4">mode</a> for logging or tests.&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">constexpr std::array&lt; <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> , 3 &gt; ExampleValveValues { <a class="el" href="a00611.html#af16e15114ce955f583ea6d18669ee734">LUMEX_PP_FEA_3</a> i( <a class="el" href="a00611.html#ae721f73a3a7b0118eb1f2b8ff0e46744">LUMEX_PP_ENUM_VALUE</a> , <a class="el" href="a00848.html#a7014ea31388ba91f40697a3b984ae081">ExampleValve</a> , (Load), (Inject), (Waste) ) }</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a19fb73820d64096cfbfa4e3f04f24bb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19fb73820d64096cfbfa4e3f04f24bb5">&#9670;&nbsp;</a></span>SetTransportCrcCatalogIndex()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::crc::catalog::SetTransportCrcCatalogIndex </td>
-          <td>(</td>
-          <td class="paramtype">std::uint32_t&#160;</td>
-          <td class="paramname"><em>catalogIndex</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Transport: 8-bit catalogue entry by index. </p>
-<dl class="section return"><dt>Returns</dt><dd>false if the index is out of range or the width is not 8 bits. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_a19fb73820d64096cfbfa4e3f04f24bb5_cgraph.png" border="0" usemap="#aa00848_a19fb73820d64096cfbfa4e3f04f24bb5_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a267be9f38c0450188a1abb661528ed30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a267be9f38c0450188a1abb661528ed30">&#9670;&nbsp;</a></span>SetTransportCrcDefault()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void lumex::core::crc::catalog::SetTransportCrcDefault </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Restore the default CRC-8/MAXIM-DOW transport mode. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_a267be9f38c0450188a1abb661528ed30_cgraph.png" border="0" usemap="#aa00848_a267be9f38c0450188a1abb661528ed30_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_a267be9f38c0450188a1abb661528ed30_icgraph.png" border="0" usemap="#aa00848_a267be9f38c0450188a1abb661528ed30_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="abade803b2de1508ef0074f0347c32d85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abade803b2de1508ef0074f0347c32d85">&#9670;&nbsp;</a></span>SetTransportCrcRevEngParams()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::crc::catalog::SetTransportCrcRevEngParams </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01124.html">crc_params_t</a> const &amp;&#160;</td>
-          <td class="paramname"><em>params</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Transport: caller-defined 8-bit CRC (must match the peer). </p>
-<dl class="section return"><dt>Returns</dt><dd>false if <code>widthBits</code> != 8 or the parameters are invalid. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_abade803b2de1508ef0074f0347c32d85_cgraph.png" border="0" usemap="#aa00848_abade803b2de1508ef0074f0347c32d85_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a6e5d79d41b6f44e17d6f6b11e13fe2e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e5d79d41b6f44e17d6f6b11e13fe2e9">&#9670;&nbsp;</a></span>TryGetTransportCrcRevEngParams()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::crc::catalog::TryGetTransportCrcRevEngParams </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01124.html">crc_params_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>out</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Writes <code>out</code> in <code>Custom</code> mode; otherwise leaves <code>out</code> unchanged. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if Custom. </dd></dl>
-
-</div>
-</div>
-<a id="a536a7a107a3a0c2ea882cb388d2890bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a536a7a107a3a0c2ea882cb388d2890bf">&#9670;&nbsp;</a></span>ValidateCrcRevEngParams()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::crc::catalog::ValidateCrcRevEngParams </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01124.html">crc_params_t</a> const &amp;&#160;</td>
-          <td class="paramname"><em>params</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Validates parameters before computation (width 1..64). </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00848_a536a7a107a3a0c2ea882cb388d2890bf_icgraph.png" border="0" usemap="#aa00848_a536a7a107a3a0c2ea882cb388d2890bf_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -673,7 +322,7 @@ Here is the caller graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00847.html">crc</a></li><li class="navelem"><a class="el" href="a00848.html">catalog</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_e8ae4df8b8335e2a73ecf531ee4a4a97.html">examples</a></li><li class="navelem"><a class="el" href="dir_960426362f7813f6a0fb068c7ad54318.html">reflection</a></li><li class="navelem"><a class="el" href="a00848.html">example_reflection_workflow.cpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

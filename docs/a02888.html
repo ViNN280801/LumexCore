@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexJsonSchemaException Class Reference</title>
+<title>LumexLib: lumex::core::utility::traits::string::is_string_like&lt; T, Char, Enable &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,27 +94,47 @@ $(document).ready(function(){initNavTree('a02888.html',''); initResizable(); });
 
 <div class="header">
   <div class="headertitle">
-<div class="title">LumexJsonSchemaException Class Reference</div>  </div>
+<div class="title">lumex::core::utility::traits::string::is_string_like&lt; T, Char, Enable &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Why a document failed schema validation.  
+<p><code>T</code> is a contiguous string of <code>Char</code>: it has <code>data()</code> convertible to <code>Char const *</code>, <code>size()</code>, <code>T::npos</code> and <code>T::value_type == Char</code>.  
  <a href="a02888.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00038_source.html">LumexJsonSchemaException.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::core::utility::traits::string::is_string_like&lt; T, Char, Enable &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02887.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01Enable_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01Enable_01_4_inherit__map" id="alumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01Enable_01_4_inherit__map">
+<area shape="rect" title="T is a contiguous string of Char: it has data() convertible to Char const *, size(),..." alt="" coords="5,80,168,151"/>
+<area shape="rect" title=" " alt="" coords="41,5,132,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for lumex::core::utility::traits::string::is_string_like&lt; T, Char, Enable &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02886.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01Enable_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01Enable_01_4_coll__map" id="alumex_1_1core_1_1utility_1_1traits_1_1string_1_1is__string__like_3_01T_00_01Char_00_01Enable_01_4_coll__map">
+<area shape="rect" title="T is a contiguous string of Char: it has data() convertible to Char const *, size(),..." alt="" coords="5,80,168,151"/>
+<area shape="rect" title=" " alt="" coords="41,5,132,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Why a document failed schema validation. </p>
-<p><code>parse_error</code>: the text is not JSON. <code>missing_required</code>: a required object or array is absent, or the value is not an object or an array where the schema requires one. <code>type_mismatch</code>: a leaf value does not match <code>type</code>. <code>const_mismatch</code>: a value differs from <code>const</code>. <code>enum_mismatch</code>: a leaf value is not listed in <code>enum</code>.</p>
-<p>Carries the failure reason, the JSON path of the offending value (<code>$.items[2].name</code>) and a human-readable detail.  <code>what()</code> is &lsquo;[<a class="el" href="a02888.html" title="Why a document failed schema validation.">LumexJsonSchemaException</a>] &lt;reason&gt; at &rsquo;&lt;path&gt;': &lt;detail&gt;`. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00038_source.html">LumexJsonSchemaException.hpp</a></li>
+<div class="textblock"><h3>template&lt;typename T, typename Char, typename Enable = void&gt;<br />
+struct lumex::core::utility::traits::string::is_string_like&lt; T, Char, Enable &gt;</h3>
+
+<p><code>T</code> is a contiguous string of <code>Char</code>: it has <code>data()</code> convertible to <code>Char const *</code>, <code>size()</code>, <code>T::npos</code> and <code>T::value_type == Char</code>. </p>
+<p>True for <code>std::basic_string</code>, <code>std::basic_string_view</code>, <code>LumexStringView</code> / <code>LumexWStringView</code>; false for containers such as <code>std::vector&lt;char&gt;</code> (no <code>npos</code>). </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a02888.html">LumexJsonSchemaException</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01328.html">string</a></li><li class="navelem"><a class="el" href="a02888.html">is_string_like</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

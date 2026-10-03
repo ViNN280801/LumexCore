@@ -1,11 +1,8 @@
 var a01420 =
 [
-    [ "ValueType", "a01420.html#aa51cb01c9cc3b8cf89dbff0eceec4b60", null ],
-    [ "kCatalogCheck", "a01420.html#ad04ce35fc14de2e849e11043e64a958f", null ],
-    [ "kInit", "a01420.html#a088b2cb7a3328133428f0da89f7c7bb2", null ],
-    [ "kPoly", "a01420.html#a651203b3ee681f8503034ddfe2105247", null ],
-    [ "kRefIn", "a01420.html#a7fa867bc6241b3006cc246b9285e49e2", null ],
-    [ "kRefOut", "a01420.html#ac3b95a78acbc7fcf78017a885ff0028f", null ],
-    [ "kWidth", "a01420.html#a795f8d973bded7ee32c8660cab5d4ecf", null ],
-    [ "kXorOut", "a01420.html#a58d1d1e5d5f050a5ed45d41f41e3a4d4", null ]
+    [ "LumexJsonSchemaValidator", "a01420.html#acb9bf5094e6332acfa63cc5fa9f97dec", null ],
+    [ "is_strict", "a01420.html#aac3279f3e50b64964e5c447bec865173", null ],
+    [ "schema", "a01420.html#a7ae4ac42041f3712d8853cfd8f32ab19", null ],
+    [ "validate", "a01420.html#a2df9663a65e867dfe959e6b332547544", null ],
+    [ "validate", "a01420.html#a1c3ebedbad1ea229289a237dfe58f313", null ]
 ];

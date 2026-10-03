@@ -25,15 +25,44 @@
 var NAVTREE =
 [
   [ "LumexLib", "index.html", [
-    [ "LumexFormat: std::format-style formatting from C++11", "a03119.html", [
-      [ "Headers", "a03119.html#autotoc_md0", null ],
-      [ "Output API", "a03119.html#autotoc_md1", null ],
-      [ "Behaviour", "a03119.html#autotoc_md2", null ],
-      [ "Examples", "a03119.html#autotoc_md3", null ],
-      [ "How it is verified", "a03119.html#autotoc_md4", null ],
-      [ "Benchmarks", "a03119.html#autotoc_md5", null ]
+    [ "Versioning", "a03569.html", [
+      [ "What raises which component", "a03569.html#autotoc_md1", null ],
+      [ "Binary compatibility", "a03569.html#autotoc_md2", null ],
+      [ "Published releases do not change", "a03569.html#autotoc_md3", null ],
+      [ "Releases made before these rules", "a03569.html#autotoc_md4", null ]
     ] ],
-    [ "Deprecated List", "a00782.html", null ],
+    [ "LumexFormat: std::format-style formatting from C++11", "a03570.html", [
+      [ "Headers", "a03570.html#autotoc_md5", null ],
+      [ "Output API", "a03570.html#autotoc_md6", null ],
+      [ "Behaviour", "a03570.html#autotoc_md7", null ],
+      [ "Examples", "a03570.html#autotoc_md8", null ],
+      [ "How it is verified", "a03570.html#autotoc_md9", null ],
+      [ "Benchmarks", "a03570.html#autotoc_md10", null ]
+    ] ],
+    [ "LumexAtomic: atomic_shared_ptr and atomic_weak_ptr from C++11", "a03571.html", [
+      [ "Origin", "a03571.html#autotoc_md11", null ],
+      [ "Headers", "a03571.html#autotoc_md12", null ],
+      [ "Interface", "a03571.html#autotoc_md13", null ],
+      [ "Which implementation a build gets", "a03571.html#autotoc_md14", null ],
+      [ "The lock-based implementation", "a03571.html#autotoc_md15", [
+        [ "The lock word", "a03571.html#autotoc_md16", null ],
+        [ "The lost wake-up", "a03571.html#autotoc_md17", null ],
+        [ "Operations under the lock", "a03571.html#autotoc_md18", null ],
+        [ "Memory orders", "a03571.html#autotoc_md19", null ],
+        [ "wait and notify", "a03571.html#autotoc_md20", null ]
+      ] ],
+      [ "The lock-free method of the libc++ implementation", "a03571.html#autotoc_md21", [
+        [ "Design", "a03571.html#autotoc_md22", null ],
+        [ "The CAS livelock", "a03571.html#autotoc_md23", null ],
+        [ "The load () reference leak", "a03571.html#autotoc_md24", null ],
+        [ "Why LumexAtomic does not port it", "a03571.html#autotoc_md25", null ]
+      ] ],
+      [ "Examples", "a03571.html#autotoc_md26", null ],
+      [ "How it is verified", "a03571.html#autotoc_md27", null ],
+      [ "Benchmarks", "a03571.html#autotoc_md28", null ]
+    ] ],
+    [ "Универсальная Система Логирования", "a03572.html", null ],
+    [ "Deprecated List", "a01184.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -66,43 +95,45 @@ var NAVTREE =
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
         [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
-    ] ],
-    [ "Examples", "examples.html", "examples" ]
+    ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"a00014.html",
-"a00056.html#aec3651aeeffa8686fbb442417c615d96",
-"a00158.html#a7b40504fa6a7bed5e257814a6c5b7c59",
-"a00227.html#adf3761a38972cade40cae2dd7dfc9205",
-"a00245.html#a6022caed499a388aaec328907a3b0baa",
-"a00305.html#a07486181f1990291c2a348de8eb4c480",
-"a00326.html#a450b9c392733217d090fe2ad9409136a",
-"a00326.html#a94f562e0796ab25b0bbc9b6db20b492a",
-"a00326.html#aec75940bc5612e814431601e35085fea",
-"a00368.html#aa006a9fdfe8ba94f29f6769683ac8013",
-"a00605.html#a9cf6a87493cf624f41e7e716ca14c5b5",
-"a00650.html",
-"a00813.html",
-"a00976.html#ac7360dc1e8a4d022df0f6b48bb334de8",
-"a01104.html#a32747a7ed36dc3b2bf81bb5ec820fec7",
-"a01208.html#aaaee0a9679cd9f1b29fe7fe807d3b483",
-"a01320.html#a4e3d0a1d209bc8f7cc680bbb8700fcdb",
-"a01432.html#a543650fe62f5f6368d8260db5b39c2a9",
-"a01544.html#a1096aa09c02aa0e8183491c4ababde7b",
-"a01652.html#a0454eec20a77ed57c183614ed2cf6832",
-"a01716.html#ab8a636cf14f4aa14723fdbb4aef5cf69",
-"a01872.html#a11233bb8904684bc2497addaa68232b4",
-"a02124.html#a928e138001fe063e2801362b0e905fcc",
-"a02172.html#ac4c9793b6d91eef07331331f694a2c9c",
-"a02568.html#ac00bbf20e56588fda51a78ebcc27f511",
-"a02616.html#aff6193a15ba3c63480b66db59acc9581",
-"a02796.html#a1d72af3650a145331db939d0dd4ce97e",
-"functions_a.html"
+"a00350.html",
+"a00392.html#aabaa587ebbb0534f5d67ae12be3aaefe",
+"a00512.html",
+"a00578.html#a9dffbf5ab10ffce11aee291ccf03c717",
+"a00587.html#ae8c7658b63539d3879a215371302723c",
+"a00611.html#adf943fc58686cf152f685cbb3a6e7859",
+"a00680.html#a1f5afc3b82953b93dba6e131e2108030",
+"a00680.html#a72dd92dfe35e6591c0d78a29a763eeab",
+"a00680.html#ac2881caf9205bec6058d16db138e76b7",
+"a00695_source.html",
+"a00869.html#ae66f6b31b5ad750f1fe042a706a4e3d4",
+"a01004.html#a0457ccbf02882197363e66845f2348f5aca320b00895ccd2f64b8b09bb5ad8ff5",
+"a01019.html",
+"a01281.html",
+"a01432.html#a4e5e115c27378cb2e4e3d5b39ba870be",
+"a01528.html#a01bcc2a853c7aaee86736ec3d64c5a1e",
+"a01612.html#acf61bc0f4e7e73d2abec9ac8e74572cf",
+"a01724.html#a1fd8f244e823e59072c877b26e4aad76",
+"a01836.html#a3ca30d5f75a35597c7e2ea329e6fa28a",
+"a01944.html#ae8ae71cc7f8e2a465e2c0c8a6f211db9",
+"a02052.html#a72ea0c6591993f196d4e36fa19134c42",
+"a02148.html#aa8098c9ced0a02fb602aa533ec1ace36",
+"a02220.html#a25c2ce607d75028eb0a3b7de1d07cac9",
+"a02516.html",
+"a02604.html#a8d2101df3adf0115a292376e25b19b33",
+"a02828.html#a0a9d116076ada5b3400e3bbf321b9749",
+"a03096.html#a62df8cc6d084b34512830bb14d04a8f2",
+"a03156.html#afa1b4dc90d28cc56fa80f4a0ab5ee9c9",
+"a03344.html#a100366d286ac63343d51c082d34251ed",
+"functions_type_p.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

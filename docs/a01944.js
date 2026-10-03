@@ -1,5 +1,11 @@
 var a01944 =
 [
-    [ "format", "a01944.html#a85ca3917341a6b125e66e2229635cc4e", null ],
-    [ "parse", "a01944.html#aba6c11d96031dacccb0ec1eaef1646b6", null ]
+    [ "ValueType", "a01944.html#ac33dfff260a016f2e45cddaa1af8a4c7", null ],
+    [ "kCatalogCheck", "a01944.html#a7b1295cb33dfa0d24514d9456a617027", null ],
+    [ "kInit", "a01944.html#a6c0a8740d213dd90c20b9d4c1b88ab7a", null ],
+    [ "kPoly", "a01944.html#ab292b14fa269a55622c08009d12dd7d5", null ],
+    [ "kRefIn", "a01944.html#a6a6d9bd05c81e8a6984191ce86acba86", null ],
+    [ "kRefOut", "a01944.html#a9d4e9e7204a0529c9ae7d7bca0ea5504", null ],
+    [ "kWidth", "a01944.html#a1e9d9ad71ece2d47f3c3ec6cb8e96f72", null ],
+    [ "kXorOut", "a01944.html#ae8ae71cc7f8e2a465e2c0c8a6f211db9", null ]
 ];

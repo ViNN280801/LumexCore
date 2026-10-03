@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::expected::result::success_t&lt; void &gt; Struct Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc5_g704_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,116 +94,223 @@ $(document).ready(function(){initNavTree('a01684.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a01681.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::expected::result::success_t&lt; void &gt; Struct Reference</div>  </div>
+<div class="title">lumex::core::crc::parametric::crc5_g704_spec_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Marker returned by success(): a successful call with no value.  
+<p>CRC-5/G-704: width=5 poly=0x15 init=0x00 refin=true refout=true xorout=0x00.  
  <a href="a01684.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00221_source.html">SuccessFailure.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:aa983fea4af1c23893276cd9de323ab0a"><td class="memTemplParams" colspan="2">template&lt;typename Target , typename ErrorType , typename  = typename std::enable_if&lt;                std::is_default_constructible&lt;Target&gt;::value&gt;::type&gt; </td></tr>
-<tr class="memitem:aa983fea4af1c23893276cd9de323ab0a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01684.html#aa983fea4af1c23893276cd9de323ab0a">operator Expected&lt; Target, ErrorType &gt;</a> () const</td></tr>
-<tr class="memdesc:aa983fea4af1c23893276cd9de323ab0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion into a successful <code><a class="el" href="a01652.html">Expected</a>&lt;Target, ErrorType&gt;</code>.  <a href="a01684.html#aa983fea4af1c23893276cd9de323ab0a">More...</a><br /></td></tr>
-<tr class="separator:aa983fea4af1c23893276cd9de323ab0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4deed81fff2b82c4e57205fd3babe99d"><td class="memTemplParams" colspan="2">template&lt;typename ErrorType &gt; </td></tr>
-<tr class="memitem:a4deed81fff2b82c4e57205fd3babe99d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01684.html#a4deed81fff2b82c4e57205fd3babe99d">operator Expected&lt; void, ErrorType &gt;</a> () const</td></tr>
-<tr class="memdesc:a4deed81fff2b82c4e57205fd3babe99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion into a successful <code><a class="el" href="a01652.html">Expected</a>&lt;void, ErrorType&gt;</code>.  <a href="a01684.html#a4deed81fff2b82c4e57205fd3babe99d">More...</a><br /></td></tr>
-<tr class="separator:a4deed81fff2b82c4e57205fd3babe99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a7070c67c05946291d59674b1cb2cfaa6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01684.html#a7070c67c05946291d59674b1cb2cfaa6">ValueType</a> = std::uint8_t</td></tr>
+<tr class="separator:a7070c67c05946291d59674b1cb2cfaa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:af012b4e50517803b039b9a629116bab0"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01684.html#af012b4e50517803b039b9a629116bab0">kWidth</a> = 5</td></tr>
+<tr class="separator:af012b4e50517803b039b9a629116bab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea28434e125400e9a24f7cfb86538e2"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01684.html#a1ea28434e125400e9a24f7cfb86538e2">kPoly</a> = 0x15U</td></tr>
+<tr class="separator:a1ea28434e125400e9a24f7cfb86538e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ceafa3a12d0f8a2178a037498666431"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01684.html#a5ceafa3a12d0f8a2178a037498666431">kInit</a> = 0x00U</td></tr>
+<tr class="separator:a5ceafa3a12d0f8a2178a037498666431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24061116e2e937467364dbf90e104122"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01684.html#a24061116e2e937467364dbf90e104122">kRefIn</a> = true</td></tr>
+<tr class="separator:a24061116e2e937467364dbf90e104122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fd72af55e91a9b8a737e38d1f44cf92"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01684.html#a2fd72af55e91a9b8a737e38d1f44cf92">kRefOut</a> = true</td></tr>
+<tr class="separator:a2fd72af55e91a9b8a737e38d1f44cf92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee41d72670535c81f425906fc854c70"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01684.html#adee41d72670535c81f425906fc854c70">kXorOut</a> = 0x00U</td></tr>
+<tr class="separator:adee41d72670535c81f425906fc854c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f17d16e3b6a7a005ef8f284516fc31"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01684.html#a84f17d16e3b6a7a005ef8f284516fc31">kCatalogCheck</a> = 0x07U</td></tr>
+<tr class="separator:a84f17d16e3b6a7a005ef8f284516fc31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Marker returned by success(): a successful call with no value. </p>
-<p>Converts into <code><a class="el" href="a01652.html">Expected</a>&lt;void, ErrorType&gt;</code> (success without a value) or into <code><a class="el" href="a01652.html">Expected</a>&lt;Target, ErrorType&gt;</code> when <code>Target</code> is default-constructible; the <code>void</code> success type is what keeps the two conversions from competing. </p><dl class="section note"><dt>Note</dt><dd>Stateless: it carries no data. </dd></dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa983fea4af1c23893276cd9de323ab0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa983fea4af1c23893276cd9de323ab0a">&#9670;&nbsp;</a></span>operator Expected&lt; Target, ErrorType &gt;()</h2>
+<div class="textblock"><p>CRC-5/G-704: width=5 poly=0x15 init=0x00 refin=true refout=true xorout=0x00. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-5/G-704 </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a7070c67c05946291d59674b1cb2cfaa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7070c67c05946291d59674b1cb2cfaa6">&#9670;&nbsp;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Target , typename ErrorType , typename  = typename std::enable_if&lt;                std::is_default_constructible&lt;Target&gt;::value&gt;::type&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="a01684.html#a7070c67c05946291d59674b1cb2cfaa6">lumex::core::crc::parametric::crc5_g704_spec_t::ValueType</a> =  std::uint8_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a84f17d16e3b6a7a005ef8f284516fc31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84f17d16e3b6a7a005ef8f284516fc31">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01680.html">lumex::core::expected::result::success_t</a>&lt; void &gt;::operator <a class="el" href="a01652.html">Expected</a>&lt; Target, ErrorType &gt; </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit std::uint8_t lumex::core::crc::parametric::crc5_g704_spec_t::kCatalogCheck = 0x07U</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implicit conversion into a successful <code><a class="el" href="a01652.html">Expected</a>&lt;Target, ErrorType&gt;</code>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Target</td><td>Success type; must be default-constructible. </td></tr>
-    <tr><td class="paramname">ErrorType</td><td>Error type of the produced <code><a class="el" href="a01652.html">Expected</a></code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="a01652.html">Expected</a>&lt;Target, ErrorType&gt;</code> in the success state, holding a default-constructed value. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Removed by SFINAE when <code>Target</code> is not default-constructible (<code>void</code> included), which sends <code><a class="el" href="a01652.html">Expected</a>&lt;void, E&gt;</code> to the overload below. </dd></dl>
-
 </div>
 </div>
-<a id="a4deed81fff2b82c4e57205fd3babe99d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4deed81fff2b82c4e57205fd3babe99d">&#9670;&nbsp;</a></span>operator Expected&lt; void, ErrorType &gt;()</h2>
+<a id="a5ceafa3a12d0f8a2178a037498666431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ceafa3a12d0f8a2178a037498666431">&#9670;&nbsp;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename ErrorType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01680.html">lumex::core::expected::result::success_t</a>&lt; void &gt;::operator <a class="el" href="a01652.html">Expected</a>&lt; void, ErrorType &gt; </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc5_g704_spec_t::kInit = 0x00U</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implicit conversion into a successful <code><a class="el" href="a01652.html">Expected</a>&lt;void, ErrorType&gt;</code>. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">ErrorType</td><td>Error type of the produced <code><a class="el" href="a01652.html">Expected</a></code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="a01652.html">Expected</a>&lt;void, ErrorType&gt;</code> in the success state. </dd></dl>
+</div>
+</div>
+<a id="a1ea28434e125400e9a24f7cfb86538e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea28434e125400e9a24f7cfb86538e2">&#9670;&nbsp;</a></span>kPoly</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc5_g704_spec_t::kPoly = 0x15U</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24061116e2e937467364dbf90e104122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24061116e2e937467364dbf90e104122">&#9670;&nbsp;</a></span>kRefIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc5_g704_spec_t::kRefIn = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fd72af55e91a9b8a737e38d1f44cf92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fd72af55e91a9b8a737e38d1f44cf92">&#9670;&nbsp;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc5_g704_spec_t::kRefOut = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af012b4e50517803b039b9a629116bab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af012b4e50517803b039b9a629116bab0">&#9670;&nbsp;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit int lumex::core::crc::parametric::crc5_g704_spec_t::kWidth = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adee41d72670535c81f425906fc854c70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adee41d72670535c81f425906fc854c70">&#9670;&nbsp;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc5_g704_spec_t::kXorOut = 0x00U</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00221_source.html">SuccessFailure.hpp</a></li>
+<li><a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00862.html">expected</a></li><li class="navelem"><a class="el" href="a00864.html">result</a></li><li class="navelem"><a class="el" href="a01684.html">success_t&lt; void &gt;</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01256.html">crc</a></li><li class="navelem"><a class="el" href="a01259.html">parametric</a></li><li class="navelem"><a class="el" href="a01684.html">crc5_g704_spec_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

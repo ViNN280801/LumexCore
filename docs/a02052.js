@@ -1,5 +1,26 @@
 var a02052 =
 [
-    [ "init_tag", "a02056.html", null ],
-    [ "nullopt_t", "a02052.html#a4a07212187f0d9f724cc80727d31e298", null ]
+    [ "EnvResult", "a02056.html", "a02056" ],
+    [ "size_type", "a02052.html#aa39eac0cb690d203d033c337d59bbb6a", null ],
+    [ "string_type", "a02052.html#a5ec8246f5384f098b278e1c75d009add", null ],
+    [ "LumexEnvironment", "a02052.html#a90795a2ce2ebbe945abf37df34a31d6f", null ],
+    [ "~LumexEnvironment", "a02052.html#a4fe356960706c1921e01a663dbed4103", null ],
+    [ "LumexEnvironment", "a02052.html#a72ea0c6591993f196d4e36fa19134c42", null ],
+    [ "get", "a02052.html#aca36e468c283e0e20203fb78502e846c", null ],
+    [ "get_environment_variable", "a02052.html#a421e9605d3a586425cb22f304d17ac6d", null ],
+    [ "get_environment_variable", "a02052.html#abece6f48e84d4bc091c6e5872ae41451", null ],
+    [ "get_environment_variable_or", "a02052.html#ab2ebd2b139bc0d06104a86d3c57b02d8", null ],
+    [ "get_or", "a02052.html#a0e6f9bade0ef8d0fa52a7b719a9d870b", null ],
+    [ "has", "a02052.html#a4e45fc68b9a8d8c8d9ce1c9270507d03", null ],
+    [ "has_environment_variable", "a02052.html#a13c3465fd0c1bc42521149025dbe2960", null ],
+    [ "instance", "a02052.html#a2a9def03d86d90318cd7445fd2ea6006", null ],
+    [ "is_environment_variable_truthy", "a02052.html#a67c01803fddb8f3be2714b45ad63b822", null ],
+    [ "is_truthy", "a02052.html#a29ecb556f67d158b33b7b69a294b09de", null ],
+    [ "operator=", "a02052.html#ac30f04343f8cb8559dbedb76117c8cf7", null ],
+    [ "operator=", "a02052.html#aa991e6f8abbccebf750bb2cc7937e74a", null ],
+    [ "set", "a02052.html#a3fef9ec29ce28aa945de4587ce57226e", null ],
+    [ "set_environment_variable", "a02052.html#a2278b9ac0fd9ff1c0f9fc296dcb3f1fc", null ],
+    [ "set_environment_variable", "a02052.html#a71be9b5585eb13851664b017b71533b3", null ],
+    [ "unset_environment_variable", "a02052.html#a532ff0a7964a66a61aa59c638ffa1867", null ],
+    [ "MAX_ENV_BUFFER_SIZE", "a02052.html#abd9cc0fac923889d2c93b89341af54b7", null ]
 ];

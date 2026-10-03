@@ -1,13 +1,7 @@
 var a02200 =
 [
-    [ "clean_T", "a02200.html#a1d1763e5b20b225dd691a11aedc4c550", null ],
-    [ "clean_U", "a02200.html#adfb5b5eba9f0fa6333fe6e68bf2c488c", null ],
-    [ "CommonType", "a02200.html#a5d00a0fde6e18825064442ec48b1f395", null ],
-    [ "compare", "a02200.html#a94e4e6fdbaf708660948090c5064b6e6", null ],
-    [ "equal", "a02200.html#a4f9185d0634fb20c5d6bfc82bab8e4a7", null ],
-    [ "greater", "a02200.html#a58c90c524a73062f5a54712e383d51a0", null ],
-    [ "greater_equal", "a02200.html#af52d10f7333f520ca77009e9f3b2895d", null ],
-    [ "less", "a02200.html#a7c701ed397551c9307fc167342908ed4", null ],
-    [ "less_equal", "a02200.html#a5de10174d9ced566d81a25c4ef152e6e", null ],
-    [ "not_equal", "a02200.html#a3a4931a201084fd2ea63e4b244e3b0ec", null ]
+    [ "~Buffer", "a02200.html#a67414e8ad6a9cef6b026f353480ffb56", null ],
+    [ "append", "a02200.html#aed0b262d3e5cdb89373861cbb45d7e1d", null ],
+    [ "append", "a02200.html#a6233c7bc4bcf0b27044ad10836154129", null ],
+    [ "push_back", "a02200.html#a19f2250481f69ee0a7139bdd0ff2b383", null ]
 ];

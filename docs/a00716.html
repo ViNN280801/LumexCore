@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XPathNode.hpp File Reference</title>
+<title>LumexLib: LumexProcess.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,63 +94,56 @@ $(document).ready(function(){initNavTree('a00716.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">XPathNode.hpp File Reference</div>  </div>
+<div class="title">LumexProcess.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00557_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00311_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00563_source.html">lumex/xml/attribute/XmlAttribute.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00608_source.html">lumex/xml/node/XmlNode.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00713_source.html">lumex/core/utility/os/LumexCheckOS.hpp</a>&quot;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for XPathNode.hpp:</div>
+Include dependency graph for LumexProcess.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00717.png" border="0" usemap="#aXPathNode_8hpp" alt=""/></div>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00718.png" border="0" usemap="#aXPathNode_8hppdep" alt=""/></div>
+<div class="center"><img src="a00717.png" border="0" usemap="#aLumexProcess_8hpp" alt=""/></div>
+<map name="LumexProcess_8hpp" id="aLumexProcess_8hpp">
+<area shape="rect" title=" " alt="" coords="259,5,403,32"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="5,80,219,121"/>
+<area shape="rect" href="a00713.html" title="Cross&#45;platform OS macros." alt="" coords="243,80,418,121"/>
+<area shape="rect" title=" " alt="" coords="443,87,517,114"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="112,169,301,211"/>
+<area shape="rect" href="a00677.html" title="Compiler identification and version macros." alt="" coords="326,169,583,211"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="79,259,334,300"/>
+</map>
 </div>
 </div>
 <p><a href="a00716_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02820.html">lumex::xml::xpath::node::XPathNode</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a node in an XPath node-set, which can be either an XML element/document node or an XML attribute.  <a href="a02820.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a00783"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00783.html">lumex</a></td></tr>
-<tr class="memdesc:a00783"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00941"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00941.html">lumex::xml</a></td></tr>
+<tr class="memitem:a01236"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01236.html">lumex::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00950"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00950.html">lumex::xml::xpath</a></td></tr>
+<tr class="memitem:a01308"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01308.html">lumex::core::utility</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00951"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00951.html">lumex::xml::xpath::node</a></td></tr>
+<tr class="memitem:a01320"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01320.html">lumex::core::utility::process</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aee50d603f6c6be5e80e6a3380167bfc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00951.html#aee50d603f6c6be5e80e6a3380167bfc5">lumex::xml::xpath::node::operator&amp;&amp;</a> (<a class="el" href="a02820.html">XPathNode</a> const &amp;lhs, bool rhs)</td></tr>
-<tr class="memdesc:aee50d603f6c6be5e80e6a3380167bfc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical AND operator for <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> and boolean.  <a href="a00951.html#aee50d603f6c6be5e80e6a3380167bfc5">More...</a><br /></td></tr>
-<tr class="separator:aee50d603f6c6be5e80e6a3380167bfc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a756f4d21694879153a9934ff582e7295"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00557.html#aa948a1b1a43f6a954fd4c15b01ae4207">LUMEX_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00951.html#a756f4d21694879153a9934ff582e7295">lumex::xml::xpath::node::operator||</a> (<a class="el" href="a02820.html">XPathNode</a> const &amp;lhs, bool rhs)</td></tr>
-<tr class="memdesc:a756f4d21694879153a9934ff582e7295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical OR operator for <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> and boolean.  <a href="a00951.html#a756f4d21694879153a9934ff582e7295">More...</a><br /></td></tr>
-<tr class="separator:a756f4d21694879153a9934ff582e7295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c7aae8bb35572f410d8de09cfee689"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01320.html#a70c7aae8bb35572f410d8de09cfee689">lumex::core::utility::process::get_current_pid</a> () noexcept</td></tr>
+<tr class="memdesc:a70c7aae8bb35572f410d8de09cfee689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the OS process id of the calling process.  <a href="a01320.html#a70c7aae8bb35572f410d8de09cfee689">More...</a><br /></td></tr>
+<tr class="separator:a70c7aae8bb35572f410d8de09cfee689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_82e0585083a36608bf6220a9fbe911e9.html">xml</a></li><li class="navelem"><a class="el" href="dir_abbe27e9c6b4359d81be14afe0d9fa59.html">xpath</a></li><li class="navelem"><a class="el" href="dir_463a0340663c8dfc6792af3a3b10b031.html">node</a></li><li class="navelem"><a class="el" href="a00716.html">XPathNode.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2eed78fa94d1e9faad02cb0657b7390b.html">core</a></li><li class="navelem"><a class="el" href="dir_aaa57aed14d71e316a67f95634c796d3.html">utility</a></li><li class="navelem"><a class="el" href="dir_2c50bc0ab72dc774365b5ee374c92b42.html">process</a></li><li class="navelem"><a class="el" href="a00716.html">LumexProcess.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -1,13 +1,10 @@
 var a02132 =
 [
-    [ "TemporaryDirectory", "a02132.html#ada4e2d480c551bc5ed9bf36214525545", null ],
-    [ "TemporaryDirectory", "a02132.html#ac1f0651d2f1b51072dfedec37a2b0ab3", null ],
-    [ "~TemporaryDirectory", "a02132.html#aba5bbfafe66c521900110f94eac7b979", null ],
-    [ "TemporaryDirectory", "a02132.html#a7a63db1fffd7b28e04b0e7f5f82950b6", null ],
-    [ "TemporaryDirectory", "a02132.html#ad5ec3e530b9dafcc7e61df7a861a3701", null ],
-    [ "is_valid", "a02132.html#ad5b5c004315baa1b84d92c692331f976", null ],
-    [ "operator=", "a02132.html#a9a3421cadcd6b6a3eaab8989c6d5b3f5", null ],
-    [ "operator=", "a02132.html#acc8576b9cc6ee30c6571faa26b553713", null ],
-    [ "path", "a02132.html#ab2c03c9e3fa3da3d6c216ba8b4a36c81", null ],
-    [ "release", "a02132.html#aaabfb8cbd67b7662d103f66a66f9a740", null ]
+    [ "success_t", "a02132.html#add7c90048f67864901346d8d3b556789", null ],
+    [ "success_t", "a02132.html#a75c4f2ec6cfb79468983bb7f8e944636", null ],
+    [ "operator Expected< Target, ErrorType >", "a02132.html#a4531338a79bc37b23c8a181997d8734f", null ],
+    [ "operator Expected< Target, ErrorType >", "a02132.html#abf6e80da0ae8bf93c90d618224ce517e", null ],
+    [ "value", "a02132.html#a699fbf99d814afc78589aacc7f80682b", null ],
+    [ "value", "a02132.html#af765ed4bfd426b3828f3eaf8efc4ded7", null ],
+    [ "value", "a02132.html#a6f4984688653edf88f85ffff149f5083", null ]
 ];

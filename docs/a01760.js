@@ -1,14 +1,11 @@
 var a01760 =
 [
-    [ "difference_type", "a01760.html#a74398992f2277d8318d62534e4f483d4", null ],
-    [ "iterator_category", "a01760.html#ad0ca74fda7140540e0ddf924e1de3e26", null ],
-    [ "pointer", "a01760.html#a4caef3d3653fe980b531a9aac52c6400", null ],
-    [ "reference", "a01760.html#a25c2ce607d75028eb0a3b7de1d07cac9", null ],
-    [ "value_type", "a01760.html#ab949ebbddfc4266bd306c875471fc758", null ],
-    [ "BasicAppender", "a01760.html#a6976ada1af7875f8885b47c45f014d43", null ],
-    [ "buffer", "a01760.html#af123a79fb5f545669038d4794a26e135", null ],
-    [ "operator*", "a01760.html#a624e8a046a8be5956c0c4d6abc79dee7", null ],
-    [ "operator++", "a01760.html#aa37b0f1c99d68228fa1a39e7770e8899", null ],
-    [ "operator++", "a01760.html#a15e99434ffe9704ded16913a79303bac", null ],
-    [ "operator=", "a01760.html#a2dba5aeed382e932e9a2a992073dc1ef", null ]
+    [ "ValueType", "a01760.html#a20b4847b8684cb2192b4320769283f75", null ],
+    [ "kCatalogCheck", "a01760.html#a2dcde4263929efbb7268430a0eb1dfd3", null ],
+    [ "kInit", "a01760.html#a439b550dd9481d84f8e80a6dd17812c8", null ],
+    [ "kPoly", "a01760.html#a251b07633140c5e15c91cf4041d24249", null ],
+    [ "kRefIn", "a01760.html#a2427a8975a7c112a8b0f9e02beea2b65", null ],
+    [ "kRefOut", "a01760.html#a35ddbc3cbd7133dff30a057f9ee46391", null ],
+    [ "kWidth", "a01760.html#ac7368ff3044880180a1eb0b3f7584f30", null ],
+    [ "kXorOut", "a01760.html#af6c119bbb090f8d1f4eccef12fac6de4", null ]
 ];

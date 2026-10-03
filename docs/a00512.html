@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: example_settings_xml.cpp File Reference</title>
+<title>LumexLib: LumexCrcParametric.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,48 +94,862 @@ $(document).ready(function(){initNavTree('a00512.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">example_settings_xml.cpp File Reference</div>  </div>
+<div class="title">LumexCrcParametric.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cstdio&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &quot;lumex/applied/settings/LumexSettings&quot;</code><br />
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00662_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00680_source.html">lumex/core/utility/compiler/LumexCheckFeatures.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00695_source.html">lumex/core/utility/macros/LumexConstantMacros.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for example_settings_xml.cpp:</div>
+Include dependency graph for LumexCrcParametric.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00513.png" border="0" usemap="#aexample__settings__xml_8cpp" alt=""/></div>
+<div class="center"><img src="a00513.png" border="0" usemap="#aLumexCrcParametric_8hpp" alt=""/></div>
+<map name="LumexCrcParametric_8hpp" id="aLumexCrcParametric_8hpp">
+<area shape="rect" title=" " alt="" coords="487,5,673,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,61,114"/>
+<area shape="rect" title=" " alt="" coords="86,87,157,114"/>
+<area shape="rect" title=" " alt="" coords="181,87,248,114"/>
+<area shape="rect" title=" " alt="" coords="272,87,331,114"/>
+<area shape="rect" title=" " alt="" coords="355,87,410,114"/>
+<area shape="rect" title=" " alt="" coords="434,87,526,114"/>
+<area shape="rect" title=" " alt="" coords="550,87,610,114"/>
+<area shape="rect" title=" " alt="" coords="634,87,697,114"/>
+<area shape="rect" href="a00662.html" title=" " alt="" coords="721,80,903,121"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="881,169,1095,211"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="1259,80,1448,121"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="1291,169,1546,211"/>
+<area shape="rect" href="a00695.html" title=" " alt="" coords="979,80,1234,121"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="676,177,857,203"/>
+</map>
 </div>
-</div><table class="memberdecls">
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00514.png" border="0" usemap="#aLumexCrcParametric_8hppdep" alt=""/></div>
+<map name="LumexCrcParametric_8hppdep" id="aLumexCrcParametric_8hppdep">
+<area shape="rect" title=" " alt="" coords="5,5,191,32"/>
+<area shape="rect" href="a00506.html" title=" " alt="" coords="16,80,180,107"/>
+</map>
+</div>
+</div>
+<p><a href="a00512_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01588.html">lumex::core::crc::parametric::Detail::mask_impl_t&lt; Width, Enable &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01592.html">lumex::core::crc::parametric::Detail::mask_impl_t&lt; Width, typename std::enable_if&lt; Width==std::numeric_limits&lt; std::uint64_t &gt;::digits, void &gt;::type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html">lumex::core::crc::parametric::crc3_gsm_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-3/GSM: width=3 poly=0x3 init=0 refin=false refout=false xorout=0x7.  <a href="a01600.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html">lumex::core::crc::parametric::crc5_usb_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-5/USB: width=5 poly=0x05 init=0x1f refin=true refout=true xorout=0x1f.  <a href="a01604.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01608.html">lumex::core::crc::parametric::crc8_maxim_dow_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/MAXIM-DOW (Dallas): width=8 poly=0x31 init=0 refin=true refout=true xorout=0.  <a href="a01608.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01612.html">lumex::core::crc::parametric::crc6_cdma2000_a_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-6/CDMA2000-A (3GPP2 C.S0002).  <a href="a01612.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01616.html">lumex::core::crc::parametric::crc6_cdma2000_b_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-6/CDMA2000-B (3GPP2 C.S0002).  <a href="a01616.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01620.html">lumex::core::crc::parametric::crc8_cdma2000_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/CDMA2000 (3GPP2 / WCDMA family).  <a href="a01620.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01624.html">lumex::core::crc::parametric::crc10_cdma2000_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-10/CDMA2000.  <a href="a01624.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01628.html">lumex::core::crc::parametric::crc12_cdma2000_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-12/CDMA2000.  <a href="a01628.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01632.html">lumex::core::crc::parametric::crc16_cdma2000_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/CDMA2000.  <a href="a01632.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01636.html">lumex::core::crc::parametric::crc30_cdma_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-30/CDMA (3GPP2).  <a href="a01636.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01640.html">lumex::core::crc::parametric::crc16_ibm3740_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/IBM-3740: width=16 poly=0x1021 init=0xffff refin=false refout=false xorout=0.  <a href="a01640.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01644.html">lumex::core::crc::parametric::crc16_kermit_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/KERMIT: width=16 poly=0x1021 init=0 refin=true refout=true xorout=0.  <a href="a01644.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01648.html">lumex::core::crc::parametric::crc16_modbus_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/MODBUS: width=16 poly=0x8005 init=0xffff refin=true refout=true xorout=0.  <a href="a01648.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01652.html">lumex::core::crc::parametric::crc24_open_pgp_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/OPENPGP: width=24 poly=0x864cfb init=0xb704ce refin=false refout=false xorout=0.  <a href="a01652.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01656.html">lumex::core::crc::parametric::crc32_iso_hdlc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/ISO-HDLC (IEEE 802.3 FCS, PKZIP, zlib crc32).  <a href="a01656.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01660.html">lumex::core::crc::parametric::crc32_iscsi_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/ISCSI (Castagnoli, CRC-32C).  <a href="a01660.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01664.html">lumex::core::crc::parametric::crc64_ecma182_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/ECMA-182 (XZ, WE).  <a href="a01664.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01668.html">lumex::core::crc::parametric::crc3_rohc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-3/ROHC: width=3 poly=0x3 init=0x7 refin=true refout=true xorout=0x0.  <a href="a01668.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01672.html">lumex::core::crc::parametric::crc4_g704_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-4/G-704: width=4 poly=0x3 init=0x0 refin=true refout=true xorout=0x0.  <a href="a01672.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01676.html">lumex::core::crc::parametric::crc4_interlaken_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-4/INTERLAKEN: width=4 poly=0x3 init=0xf refin=false refout=false xorout=0xf.  <a href="a01676.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01680.html">lumex::core::crc::parametric::crc5_epc_c1_g2_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-5/EPC-C1G2: width=5 poly=0x09 init=0x09 refin=false refout=false xorout=0x00.  <a href="a01680.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01684.html">lumex::core::crc::parametric::crc5_g704_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-5/G-704: width=5 poly=0x15 init=0x00 refin=true refout=true xorout=0x00.  <a href="a01684.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01688.html">lumex::core::crc::parametric::crc6_darc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-6/DARC: width=6 poly=0x19 init=0x00 refin=true refout=true xorout=0x00.  <a href="a01688.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01692.html">lumex::core::crc::parametric::crc6_g704_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-6/G-704: width=6 poly=0x03 init=0x00 refin=true refout=true xorout=0x00.  <a href="a01692.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html">lumex::core::crc::parametric::crc6_gsm_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-6/GSM: width=6 poly=0x2f init=0x00 refin=false refout=false xorout=0x3f.  <a href="a01696.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01700.html">lumex::core::crc::parametric::crc7_mmc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-7/MMC: width=7 poly=0x09 init=0x00 refin=false refout=false xorout=0x00.  <a href="a01700.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01704.html">lumex::core::crc::parametric::crc7_rohc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-7/ROHC: width=7 poly=0x4f init=0x7f refin=true refout=true xorout=0x00.  <a href="a01704.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01708.html">lumex::core::crc::parametric::crc7_umts_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-7/UMTS: width=7 poly=0x45 init=0x00 refin=false refout=false xorout=0x00.  <a href="a01708.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html">lumex::core::crc::parametric::crc8_autosar_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/AUTOSAR: width=8 poly=0x2f init=0xff refin=false refout=false xorout=0xff.  <a href="a01712.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01716.html">lumex::core::crc::parametric::crc8_bluetooth_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/BLUETOOTH: width=8 poly=0xa7 init=0x00 refin=true refout=true xorout=0x00.  <a href="a01716.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01720.html">lumex::core::crc::parametric::crc8_darc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/DARC: width=8 poly=0x39 init=0x00 refin=true refout=true xorout=0x00.  <a href="a01720.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01724.html">lumex::core::crc::parametric::crc8_dvb_s2_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/DVB-S2: width=8 poly=0xd5 init=0x00 refin=false refout=false xorout=0x00.  <a href="a01724.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html">lumex::core::crc::parametric::crc8_gsm_a_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/GSM-A: width=8 poly=0x1d init=0x00 refin=false refout=false xorout=0x00.  <a href="a01728.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01732.html">lumex::core::crc::parametric::crc8_gsm_b_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/GSM-B: width=8 poly=0x49 init=0x00 refin=false refout=false xorout=0xff.  <a href="a01732.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01736.html">lumex::core::crc::parametric::crc8_hitag_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/HITAG: width=8 poly=0x1d init=0xff refin=false refout=false xorout=0x00.  <a href="a01736.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01740.html">lumex::core::crc::parametric::crc8_i4321_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/I-432-1: width=8 poly=0x07 init=0x00 refin=false refout=false xorout=0x55.  <a href="a01740.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01744.html">lumex::core::crc::parametric::crc8_i_code_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/I-CODE: width=8 poly=0x1d init=0xfd refin=false refout=false xorout=0x00.  <a href="a01744.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01748.html">lumex::core::crc::parametric::crc8_lte_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/LTE: width=8 poly=0x9b init=0x00 refin=false refout=false xorout=0x00.  <a href="a01748.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01752.html">lumex::core::crc::parametric::crc8_mifare_mad_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/MIFARE-MAD: width=8 poly=0x1d init=0xc7 refin=false refout=false xorout=0x00.  <a href="a01752.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01756.html">lumex::core::crc::parametric::crc8_nrsc5_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/NRSC-5: width=8 poly=0x31 init=0xff refin=false refout=false xorout=0x00.  <a href="a01756.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01760.html">lumex::core::crc::parametric::crc8_opensafety_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/OPENSAFETY: width=8 poly=0x2f init=0x00 refin=false refout=false xorout=0x00.  <a href="a01760.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01764.html">lumex::core::crc::parametric::crc8_rohc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/ROHC: width=8 poly=0x07 init=0xff refin=true refout=true xorout=0x00.  <a href="a01764.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01768.html">lumex::core::crc::parametric::crc8_sae_j1850_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/SAE-J1850: width=8 poly=0x1d init=0xff refin=false refout=false xorout=0xff.  <a href="a01768.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01772.html">lumex::core::crc::parametric::crc8_smbus_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/SMBUS: width=8 poly=0x07 init=0x00 refin=false refout=false xorout=0x00.  <a href="a01772.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01776.html">lumex::core::crc::parametric::crc8_tech3250_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/TECH-3250: width=8 poly=0x1d init=0xff refin=true refout=true xorout=0x00.  <a href="a01776.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01780.html">lumex::core::crc::parametric::crc8_wcdma_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/WCDMA: width=8 poly=0x9b init=0x00 refin=true refout=true xorout=0x00.  <a href="a01780.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01784.html">lumex::core::crc::parametric::crc10_atm_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-10/ATM: width=10 poly=0x233 init=0x000 refin=false refout=false xorout=0x000.  <a href="a01784.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01788.html">lumex::core::crc::parametric::crc10_gsm_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-10/GSM: width=10 poly=0x175 init=0x000 refin=false refout=false xorout=0x3ff.  <a href="a01788.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01792.html">lumex::core::crc::parametric::crc11_flexray_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-11/FLEXRAY: width=11 poly=0x385 init=0x01a refin=false refout=false xorout=0x000.  <a href="a01792.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01796.html">lumex::core::crc::parametric::crc11_umts_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-11/UMTS: width=11 poly=0x307 init=0x000 refin=false refout=false xorout=0x000.  <a href="a01796.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01800.html">lumex::core::crc::parametric::crc12_dect_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-12/DECT: width=12 poly=0x80f init=0x000 refin=false refout=false xorout=0x000.  <a href="a01800.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01804.html">lumex::core::crc::parametric::crc12_gsm_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-12/GSM: width=12 poly=0xd31 init=0x000 refin=false refout=false xorout=0xfff.  <a href="a01804.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01808.html">lumex::core::crc::parametric::crc12_umts_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-12/UMTS: width=12 poly=0x80f init=0x000 refin=false refout=true xorout=0x000.  <a href="a01808.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01812.html">lumex::core::crc::parametric::crc13_bbc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-13/BBC: width=13 poly=0x1cf5 init=0x0000 refin=false refout=false xorout=0x0000.  <a href="a01812.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01816.html">lumex::core::crc::parametric::crc14_darc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-14/DARC: width=14 poly=0x0805 init=0x0000 refin=true refout=true xorout=0x0000.  <a href="a01816.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01820.html">lumex::core::crc::parametric::crc14_gsm_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-14/GSM: width=14 poly=0x202d init=0x0000 refin=false refout=false xorout=0x3fff.  <a href="a01820.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01824.html">lumex::core::crc::parametric::crc15_can_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-15/CAN: width=15 poly=0x4599 init=0x0000 refin=false refout=false xorout=0x0000.  <a href="a01824.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01828.html">lumex::core::crc::parametric::crc15_mpt1327_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-15/MPT1327: width=15 poly=0x6815 init=0x0000 refin=false refout=false xorout=0x0001.  <a href="a01828.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01832.html">lumex::core::crc::parametric::crc16_arc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/ARC: width=16 poly=0x8005 init=0x0000 refin=true refout=true xorout=0x0000.  <a href="a01832.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01836.html">lumex::core::crc::parametric::crc16_cms_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/CMS: width=16 poly=0x8005 init=0xffff refin=false refout=false xorout=0x0000.  <a href="a01836.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01840.html">lumex::core::crc::parametric::crc16_dds110_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/DDS-110: width=16 poly=0x8005 init=0x800d refin=false refout=false xorout=0x0000.  <a href="a01840.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01844.html">lumex::core::crc::parametric::crc16_dect_r_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/DECT-R: width=16 poly=0x0589 init=0x0000 refin=false refout=false xorout=0x0001.  <a href="a01844.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01848.html">lumex::core::crc::parametric::crc16_dect_x_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/DECT-X: width=16 poly=0x0589 init=0x0000 refin=false refout=false xorout=0x0000.  <a href="a01848.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01852.html">lumex::core::crc::parametric::crc16_dnp_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/DNP: width=16 poly=0x3d65 init=0x0000 refin=true refout=true xorout=0xffff.  <a href="a01852.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01856.html">lumex::core::crc::parametric::crc16_en13757_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/EN-13757: width=16 poly=0x3d65 init=0x0000 refin=false refout=false xorout=0xffff.  <a href="a01856.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01860.html">lumex::core::crc::parametric::crc16_genibus_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/GENIBUS: width=16 poly=0x1021 init=0xffff refin=false refout=false xorout=0xffff.  <a href="a01860.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01864.html">lumex::core::crc::parametric::crc16_gsm_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/GSM: width=16 poly=0x1021 init=0x0000 refin=false refout=false xorout=0xffff.  <a href="a01864.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01868.html">lumex::core::crc::parametric::crc16_ibm_sdlc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/IBM-SDLC: width=16 poly=0x1021 init=0xffff refin=true refout=true xorout=0xffff.  <a href="a01868.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01872.html">lumex::core::crc::parametric::crc16_iso_iec14443_3_a_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/ISO-IEC-14443-3-A: width=16 poly=0x1021 init=0xc6c6 refin=true refout=true xorout=0x0000.  <a href="a01872.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01876.html">lumex::core::crc::parametric::crc16_lj1200_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/LJ1200: width=16 poly=0x6f63 init=0x0000 refin=false refout=false xorout=0x0000.  <a href="a01876.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01880.html">lumex::core::crc::parametric::crc16_m17_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/M17: width=16 poly=0x5935 init=0xffff refin=false refout=false xorout=0x0000.  <a href="a01880.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01884.html">lumex::core::crc::parametric::crc16_maxim_dow_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/MAXIM-DOW: width=16 poly=0x8005 init=0x0000 refin=true refout=true xorout=0xffff.  <a href="a01884.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01888.html">lumex::core::crc::parametric::crc16_mcrf4xx_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/MCRF4XX: width=16 poly=0x1021 init=0xffff refin=true refout=true xorout=0x0000.  <a href="a01888.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01892.html">lumex::core::crc::parametric::crc16_nrsc5_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/NRSC-5: width=16 poly=0x080b init=0xffff refin=true refout=true xorout=0x0000.  <a href="a01892.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01896.html">lumex::core::crc::parametric::crc16_opensafety_a_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/OPENSAFETY-A: width=16 poly=0x5935 init=0x0000 refin=false refout=false xorout=0x0000.  <a href="a01896.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01900.html">lumex::core::crc::parametric::crc16_opensafety_b_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/OPENSAFETY-B: width=16 poly=0x755b init=0x0000 refin=false refout=false xorout=0x0000.  <a href="a01900.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01904.html">lumex::core::crc::parametric::crc16_profibus_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/PROFIBUS: width=16 poly=0x1dcf init=0xffff refin=false refout=false xorout=0xffff.  <a href="a01904.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01908.html">lumex::core::crc::parametric::crc16_riello_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/RIELLO: width=16 poly=0x1021 init=0xb2aa refin=true refout=true xorout=0x0000.  <a href="a01908.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01912.html">lumex::core::crc::parametric::crc16_spi_fujitsu_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/SPI-FUJITSU: width=16 poly=0x1021 init=0x1d0f refin=false refout=false xorout=0x0000.  <a href="a01912.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01916.html">lumex::core::crc::parametric::crc16_t10_dif_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/T10-DIF: width=16 poly=0x8bb7 init=0x0000 refin=false refout=false xorout=0x0000.  <a href="a01916.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01920.html">lumex::core::crc::parametric::crc16_teledisk_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/TELEDISK: width=16 poly=0xa097 init=0x0000 refin=false refout=false xorout=0x0000.  <a href="a01920.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01924.html">lumex::core::crc::parametric::crc16_tms37157_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/TMS37157: width=16 poly=0x1021 init=0x89ec refin=true refout=true xorout=0x0000.  <a href="a01924.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01928.html">lumex::core::crc::parametric::crc16_umts_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/UMTS: width=16 poly=0x8005 init=0x0000 refin=false refout=false xorout=0x0000.  <a href="a01928.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01932.html">lumex::core::crc::parametric::crc16_usb_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/USB: width=16 poly=0x8005 init=0xffff refin=true refout=true xorout=0xffff.  <a href="a01932.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01936.html">lumex::core::crc::parametric::crc16_xmodem_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/XMODEM: width=16 poly=0x1021 init=0x0000 refin=false refout=false xorout=0x0000.  <a href="a01936.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01940.html">lumex::core::crc::parametric::crc17_can_fd_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-17/CAN-FD: width=17 poly=0x1685b init=0x00000 refin=false refout=false xorout=0x00000.  <a href="a01940.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01944.html">lumex::core::crc::parametric::crc21_can_fd_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-21/CAN-FD: width=21 poly=0x102899 init=0x000000 refin=false refout=false xorout=0x000000.  <a href="a01944.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01948.html">lumex::core::crc::parametric::crc24_ble_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/BLE: width=24 poly=0x00065b init=0x555555 refin=true refout=true xorout=0x000000.  <a href="a01948.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01952.html">lumex::core::crc::parametric::crc24_flexray_a_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/FLEXRAY-A: width=24 poly=0x5d6dcb init=0xfedcba refin=false refout=false xorout=0x000000.  <a href="a01952.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01956.html">lumex::core::crc::parametric::crc24_flexray_b_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/FLEXRAY-B: width=24 poly=0x5d6dcb init=0xabcdef refin=false refout=false xorout=0x000000.  <a href="a01956.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01960.html">lumex::core::crc::parametric::crc24_interlaken_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/INTERLAKEN: width=24 poly=0x328b63 init=0xffffff refin=false refout=false xorout=0xffffff.  <a href="a01960.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01964.html">lumex::core::crc::parametric::crc24_lte_a_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/LTE-A: width=24 poly=0x864cfb init=0x000000 refin=false refout=false xorout=0x000000.  <a href="a01964.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01968.html">lumex::core::crc::parametric::crc24_lte_b_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/LTE-B: width=24 poly=0x800063 init=0x000000 refin=false refout=false xorout=0x000000.  <a href="a01968.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01972.html">lumex::core::crc::parametric::crc24_os9_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/OS-9: width=24 poly=0x800063 init=0xffffff refin=false refout=false xorout=0xffffff.  <a href="a01972.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01976.html">lumex::core::crc::parametric::crc31_philips_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-31/PHILIPS: width=31 poly=0x04c11db7 init=0x7fffffff refin=false refout=false xorout=0x7fffffff.  <a href="a01976.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01980.html">lumex::core::crc::parametric::crc32_aixm_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/AIXM: width=32 poly=0x814141ab init=0x00000000 refin=false refout=false xorout=0x00000000.  <a href="a01980.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01984.html">lumex::core::crc::parametric::crc32_autosar_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/AUTOSAR: width=32 poly=0xf4acfb13 init=0xffffffff refin=true refout=true xorout=0xffffffff.  <a href="a01984.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01988.html">lumex::core::crc::parametric::crc32_base91_d_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/BASE91-D: width=32 poly=0xa833982b init=0xffffffff refin=true refout=true xorout=0xffffffff.  <a href="a01988.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01992.html">lumex::core::crc::parametric::crc32_bzip2_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/BZIP2: width=32 poly=0x04c11db7 init=0xffffffff refin=false refout=false xorout=0xffffffff.  <a href="a01992.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01996.html">lumex::core::crc::parametric::crc32_cd_rom_edc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/CD-ROM-EDC: width=32 poly=0x8001801b init=0x00000000 refin=true refout=true xorout=0x00000000.  <a href="a01996.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02000.html">lumex::core::crc::parametric::crc32_cksum_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/CKSUM: width=32 poly=0x04c11db7 init=0x00000000 refin=false refout=false xorout=0xffffffff.  <a href="a02000.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02004.html">lumex::core::crc::parametric::crc32_jamcrc_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/JAMCRC: width=32 poly=0x04c11db7 init=0xffffffff refin=true refout=true xorout=0x00000000.  <a href="a02004.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02008.html">lumex::core::crc::parametric::crc32_mef_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/MEF: width=32 poly=0x741b8cd7 init=0xffffffff refin=true refout=true xorout=0x00000000.  <a href="a02008.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02012.html">lumex::core::crc::parametric::crc32_mpeg2_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/MPEG-2: width=32 poly=0x04c11db7 init=0xffffffff refin=false refout=false xorout=0x00000000.  <a href="a02012.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02016.html">lumex::core::crc::parametric::crc32_xfer_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/XFER: width=32 poly=0x000000af init=0x00000000 refin=false refout=false xorout=0x00000000.  <a href="a02016.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02020.html">lumex::core::crc::parametric::crc40_gsm_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-40/GSM: width=40 poly=0x0004820009 init=0x0000000000 refin=false refout=false xorout=0xffffffffff.  <a href="a02020.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02024.html">lumex::core::crc::parametric::crc64_go_iso_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/GO-ISO: width=64 poly=0x000000000000001b init=0xffffffffffffffff refin=true refout=true xorout=0xffffffffffffffff.  <a href="a02024.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02028.html">lumex::core::crc::parametric::crc64_ms_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/MS: width=64 poly=0x259c84cba6426349 init=0xffffffffffffffff refin=true refout=true xorout=0x0000000000000000.  <a href="a02028.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02032.html">lumex::core::crc::parametric::crc64_nvme_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/NVME: width=64 poly=0xad93d23594c93659 init=0xffffffffffffffff refin=true refout=true xorout=0xffffffffffffffff.  <a href="a02032.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02036.html">lumex::core::crc::parametric::crc64_redis_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/REDIS: width=64 poly=0xad93d23594c935a9 init=0x0000000000000000 refin=true refout=true xorout=0x0000000000000000.  <a href="a02036.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02040.html">lumex::core::crc::parametric::crc64_we_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/WE: width=64 poly=0x42f0e1eba9ea3693 init=0xffffffffffffffff refin=false refout=false xorout=0xffffffffffffffff.  <a href="a02040.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02044.html">lumex::core::crc::parametric::crc64_xz_spec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/XZ: width=64 poly=0x42f0e1eba9ea3693 init=0xffffffffffffffff refin=true refout=true xorout=0xffffffffffffffff.  <a href="a02044.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02048.html">lumex::core::crc::parametric::CrcParametric&lt; Spec &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC computation parameterized by user specification <code>Spec</code>.  <a href="a02048.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01236"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01236.html">lumex::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01256"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01256.html">lumex::core::crc</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01259"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html">lumex::core::crc::parametric</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01260"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01260.html">lumex::core::crc::parametric::Detail</a></td></tr>
+<tr class="memdesc:a01260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parametric CRC engines following the CRC RevEng catalogue (Greg Cook). <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aceac46ffd8e5813a8f1a247313ef70a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00512.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a>&#160;&#160;&#160;<a class="el" href="a00701.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a></td></tr>
+<tr class="separator:aceac46ffd8e5813a8f1a247313ef70a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c16426ac597c3d51508846b8a10c33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00512.html#aa7c16426ac597c3d51508846b8a10c33">LUMEX_CRC_ARRAY_REF</a>(table,  index)&#160;&#160;&#160;  (table).at (static_cast&lt;std::size_t&gt; (index))</td></tr>
+<tr class="separator:aa7c16426ac597c3d51508846b8a10c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a6f1426417a5a47ef7c9b1cd46bb656c4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a6f1426417a5a47ef7c9b1cd46bb656c4">lumex::core::crc::parametric::all_crc_specs_t</a> = std::tuple&lt; crc3_gsm_spec_t, crc3_rohc_spec_t, crc4_g704_spec_t, crc4_interlaken_spec_t, crc5_usb_spec_t, crc5_epc_c1_g2_spec_t, crc5_g704_spec_t, crc6_cdma2000_a_spec_t, crc6_cdma2000_b_spec_t, crc6_darc_spec_t, crc6_g704_spec_t, crc6_gsm_spec_t, crc7_mmc_spec_t, crc7_rohc_spec_t, crc7_umts_spec_t, crc8_maxim_dow_spec_t, crc8_cdma2000_spec_t, crc8_autosar_spec_t, crc8_bluetooth_spec_t, crc8_darc_spec_t, crc8_dvb_s2_spec_t, crc8_gsm_a_spec_t, crc8_gsm_b_spec_t, crc8_hitag_spec_t, crc8_i4321_spec_t, crc8_i_code_spec_t, crc8_lte_spec_t, crc8_mifare_mad_spec_t, crc8_nrsc5_spec_t, crc8_opensafety_spec_t, crc8_rohc_spec_t, crc8_sae_j1850_spec_t, crc8_smbus_spec_t, crc8_tech3250_spec_t, crc8_wcdma_spec_t, crc10_cdma2000_spec_t, crc10_atm_spec_t, crc10_gsm_spec_t, crc11_flexray_spec_t, crc11_umts_spec_t, crc12_cdma2000_spec_t, crc12_dect_spec_t, crc12_gsm_spec_t, crc12_umts_spec_t, crc13_bbc_spec_t, crc14_darc_spec_t, crc14_gsm_spec_t, crc15_can_spec_t, crc15_mpt1327_spec_t, crc16_cdma2000_spec_t, crc16_ibm3740_spec_t, crc16_kermit_spec_t, crc16_modbus_spec_t, crc16_arc_spec_t, crc16_cms_spec_t, crc16_dds110_spec_t, crc16_dect_r_spec_t, crc16_dect_x_spec_t, crc16_dnp_spec_t, crc16_en13757_spec_t, crc16_genibus_spec_t, crc16_gsm_spec_t, crc16_ibm_sdlc_spec_t, crc16_iso_iec14443_3_a_spec_t, crc16_lj1200_spec_t, crc16_m17_spec_t, crc16_maxim_dow_spec_t, crc16_mcrf4xx_spec_t, crc16_nrsc5_spec_t, crc16_opensafety_a_spec_t, crc16_opensafety_b_spec_t, crc16_profibus_spec_t, crc16_riello_spec_t, crc16_spi_fujitsu_spec_t, crc16_t10_dif_spec_t, crc16_teledisk_spec_t, crc16_tms37157_spec_t, crc16_umts_spec_t, crc16_usb_spec_t, crc16_xmodem_spec_t, crc17_can_fd_spec_t, crc21_can_fd_spec_t, crc24_open_pgp_spec_t, crc24_ble_spec_t, crc24_flexray_a_spec_t, crc24_flexray_b_spec_t, crc24_interlaken_spec_t, crc24_lte_a_spec_t, crc24_lte_b_spec_t, crc24_os9_spec_t, crc30_cdma_spec_t, crc31_philips_spec_t, crc32_iso_hdlc_spec_t, crc32_iscsi_spec_t, crc32_aixm_spec_t, crc32_autosar_spec_t, crc32_base91_d_spec_t, crc32_bzip2_spec_t, crc32_cd_rom_edc_spec_t, crc32_cksum_spec_t, crc32_jamcrc_spec_t, crc32_mef_spec_t, crc32_mpeg2_spec_t, crc32_xfer_spec_t, crc40_gsm_spec_t, crc64_ecma182_spec_t, crc64_go_iso_spec_t, crc64_ms_spec_t, crc64_nvme_spec_t, crc64_redis_spec_t, crc64_we_spec_t, crc64_xz_spec_t &gt;</td></tr>
+<tr class="memdesc:a6f1426417a5a47ef7c9b1cd46bb656c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every RevEng catalogue specification of width 3..64 (112 entries). Order is the runtime catalogue index. CRC-82/DARC is the only catalogue algorithm omitted.  <a href="a01259.html#a6f1426417a5a47ef7c9b1cd46bb656c4">More...</a><br /></td></tr>
+<tr class="separator:a6f1426417a5a47ef7c9b1cd46bb656c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfd17ae0b2394d5eb1ee06251029ef3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a9bfd17ae0b2394d5eb1ee06251029ef3">lumex::core::crc::parametric::Crc3Gsm</a> = CrcParametric&lt; crc3_gsm_spec_t &gt;</td></tr>
+<tr class="memdesc:a9bfd17ae0b2394d5eb1ee06251029ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-3/GSM.  <a href="a01259.html#a9bfd17ae0b2394d5eb1ee06251029ef3">More...</a><br /></td></tr>
+<tr class="separator:a9bfd17ae0b2394d5eb1ee06251029ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db332e0c5c74c73e4db117aec514439"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a5db332e0c5c74c73e4db117aec514439">lumex::core::crc::parametric::Crc3Rohc</a> = CrcParametric&lt; crc3_rohc_spec_t &gt;</td></tr>
+<tr class="memdesc:a5db332e0c5c74c73e4db117aec514439"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-3/ROHC.  <a href="a01259.html#a5db332e0c5c74c73e4db117aec514439">More...</a><br /></td></tr>
+<tr class="separator:a5db332e0c5c74c73e4db117aec514439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7468cf2702c8b4829726f5c1f691f6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#aec7468cf2702c8b4829726f5c1f691f6">lumex::core::crc::parametric::Crc4G704</a> = CrcParametric&lt; crc4_g704_spec_t &gt;</td></tr>
+<tr class="memdesc:aec7468cf2702c8b4829726f5c1f691f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-4/G-704.  <a href="a01259.html#aec7468cf2702c8b4829726f5c1f691f6">More...</a><br /></td></tr>
+<tr class="separator:aec7468cf2702c8b4829726f5c1f691f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd0c1d9b56ffd46f35531ce6e21ed35"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#aebd0c1d9b56ffd46f35531ce6e21ed35">lumex::core::crc::parametric::Crc4Interlaken</a> = CrcParametric&lt; crc4_interlaken_spec_t &gt;</td></tr>
+<tr class="memdesc:aebd0c1d9b56ffd46f35531ce6e21ed35"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-4/INTERLAKEN.  <a href="a01259.html#aebd0c1d9b56ffd46f35531ce6e21ed35">More...</a><br /></td></tr>
+<tr class="separator:aebd0c1d9b56ffd46f35531ce6e21ed35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1fd4c8bd9e6b87e7c041955f04cf353"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ab1fd4c8bd9e6b87e7c041955f04cf353">lumex::core::crc::parametric::Crc5Usb</a> = CrcParametric&lt; crc5_usb_spec_t &gt;</td></tr>
+<tr class="memdesc:ab1fd4c8bd9e6b87e7c041955f04cf353"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-5/USB.  <a href="a01259.html#ab1fd4c8bd9e6b87e7c041955f04cf353">More...</a><br /></td></tr>
+<tr class="separator:ab1fd4c8bd9e6b87e7c041955f04cf353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528b58677598c54d93dd285e6ae27f51"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a528b58677598c54d93dd285e6ae27f51">lumex::core::crc::parametric::Crc5EpcC1G2</a> = CrcParametric&lt; crc5_epc_c1_g2_spec_t &gt;</td></tr>
+<tr class="memdesc:a528b58677598c54d93dd285e6ae27f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-5/EPC-C1G2.  <a href="a01259.html#a528b58677598c54d93dd285e6ae27f51">More...</a><br /></td></tr>
+<tr class="separator:a528b58677598c54d93dd285e6ae27f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327554498dc4881698e7001c78262a68"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a327554498dc4881698e7001c78262a68">lumex::core::crc::parametric::Crc5G704</a> = CrcParametric&lt; crc5_g704_spec_t &gt;</td></tr>
+<tr class="memdesc:a327554498dc4881698e7001c78262a68"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-5/G-704.  <a href="a01259.html#a327554498dc4881698e7001c78262a68">More...</a><br /></td></tr>
+<tr class="separator:a327554498dc4881698e7001c78262a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aea5346fcfe064114959ab4ea37093b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a1aea5346fcfe064114959ab4ea37093b">lumex::core::crc::parametric::Crc6Cdma2000A</a> = CrcParametric&lt; crc6_cdma2000_a_spec_t &gt;</td></tr>
+<tr class="memdesc:a1aea5346fcfe064114959ab4ea37093b"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-6/CDMA2000-A.  <a href="a01259.html#a1aea5346fcfe064114959ab4ea37093b">More...</a><br /></td></tr>
+<tr class="separator:a1aea5346fcfe064114959ab4ea37093b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b50d77ba6d8869cfbc248c10116bbe8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a3b50d77ba6d8869cfbc248c10116bbe8">lumex::core::crc::parametric::Crc6Cdma2000B</a> = CrcParametric&lt; crc6_cdma2000_b_spec_t &gt;</td></tr>
+<tr class="memdesc:a3b50d77ba6d8869cfbc248c10116bbe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-6/CDMA2000-B.  <a href="a01259.html#a3b50d77ba6d8869cfbc248c10116bbe8">More...</a><br /></td></tr>
+<tr class="separator:a3b50d77ba6d8869cfbc248c10116bbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0792c0abde6cc1165247fc4b8e33651"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ae0792c0abde6cc1165247fc4b8e33651">lumex::core::crc::parametric::Crc6Darc</a> = CrcParametric&lt; crc6_darc_spec_t &gt;</td></tr>
+<tr class="memdesc:ae0792c0abde6cc1165247fc4b8e33651"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-6/DARC.  <a href="a01259.html#ae0792c0abde6cc1165247fc4b8e33651">More...</a><br /></td></tr>
+<tr class="separator:ae0792c0abde6cc1165247fc4b8e33651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c5fabfdbd836cf3a61dc6411da20efa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a8c5fabfdbd836cf3a61dc6411da20efa">lumex::core::crc::parametric::Crc6G704</a> = CrcParametric&lt; crc6_g704_spec_t &gt;</td></tr>
+<tr class="memdesc:a8c5fabfdbd836cf3a61dc6411da20efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-6/G-704.  <a href="a01259.html#a8c5fabfdbd836cf3a61dc6411da20efa">More...</a><br /></td></tr>
+<tr class="separator:a8c5fabfdbd836cf3a61dc6411da20efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a749317eea872df2641f9bdeb6ba41a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a6a749317eea872df2641f9bdeb6ba41a">lumex::core::crc::parametric::Crc6Gsm</a> = CrcParametric&lt; crc6_gsm_spec_t &gt;</td></tr>
+<tr class="memdesc:a6a749317eea872df2641f9bdeb6ba41a"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-6/GSM.  <a href="a01259.html#a6a749317eea872df2641f9bdeb6ba41a">More...</a><br /></td></tr>
+<tr class="separator:a6a749317eea872df2641f9bdeb6ba41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1970cce93b004c6d14c356e40313950"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ae1970cce93b004c6d14c356e40313950">lumex::core::crc::parametric::Crc7Mmc</a> = CrcParametric&lt; crc7_mmc_spec_t &gt;</td></tr>
+<tr class="memdesc:ae1970cce93b004c6d14c356e40313950"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-7/MMC.  <a href="a01259.html#ae1970cce93b004c6d14c356e40313950">More...</a><br /></td></tr>
+<tr class="separator:ae1970cce93b004c6d14c356e40313950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab007062912aa4f5510c215a8f4b291f5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ab007062912aa4f5510c215a8f4b291f5">lumex::core::crc::parametric::Crc7Rohc</a> = CrcParametric&lt; crc7_rohc_spec_t &gt;</td></tr>
+<tr class="memdesc:ab007062912aa4f5510c215a8f4b291f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-7/ROHC.  <a href="a01259.html#ab007062912aa4f5510c215a8f4b291f5">More...</a><br /></td></tr>
+<tr class="separator:ab007062912aa4f5510c215a8f4b291f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9481e05040dcc7f67c7736c02a3cf4b0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a9481e05040dcc7f67c7736c02a3cf4b0">lumex::core::crc::parametric::Crc7Umts</a> = CrcParametric&lt; crc7_umts_spec_t &gt;</td></tr>
+<tr class="memdesc:a9481e05040dcc7f67c7736c02a3cf4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-7/UMTS.  <a href="a01259.html#a9481e05040dcc7f67c7736c02a3cf4b0">More...</a><br /></td></tr>
+<tr class="separator:a9481e05040dcc7f67c7736c02a3cf4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a9c3855766e5fcb0d35d46fdcbf9c7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a53a9c3855766e5fcb0d35d46fdcbf9c7">lumex::core::crc::parametric::Crc8MaximDow</a> = CrcParametric&lt; crc8_maxim_dow_spec_t &gt;</td></tr>
+<tr class="memdesc:a53a9c3855766e5fcb0d35d46fdcbf9c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/MAXIM-DOW.  <a href="a01259.html#a53a9c3855766e5fcb0d35d46fdcbf9c7">More...</a><br /></td></tr>
+<tr class="separator:a53a9c3855766e5fcb0d35d46fdcbf9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c34beed286890f0e8e99631049ed5d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a07c34beed286890f0e8e99631049ed5d">lumex::core::crc::parametric::Crc8Cdma2000</a> = CrcParametric&lt; crc8_cdma2000_spec_t &gt;</td></tr>
+<tr class="memdesc:a07c34beed286890f0e8e99631049ed5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/CDMA2000.  <a href="a01259.html#a07c34beed286890f0e8e99631049ed5d">More...</a><br /></td></tr>
+<tr class="separator:a07c34beed286890f0e8e99631049ed5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04e09f08411e7572e1682b516a928a2f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a04e09f08411e7572e1682b516a928a2f">lumex::core::crc::parametric::Crc8Autosar</a> = CrcParametric&lt; crc8_autosar_spec_t &gt;</td></tr>
+<tr class="memdesc:a04e09f08411e7572e1682b516a928a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/AUTOSAR.  <a href="a01259.html#a04e09f08411e7572e1682b516a928a2f">More...</a><br /></td></tr>
+<tr class="separator:a04e09f08411e7572e1682b516a928a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b311d47cbee431e9acf45384ac7bf26"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a9b311d47cbee431e9acf45384ac7bf26">lumex::core::crc::parametric::Crc8Bluetooth</a> = CrcParametric&lt; crc8_bluetooth_spec_t &gt;</td></tr>
+<tr class="memdesc:a9b311d47cbee431e9acf45384ac7bf26"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/BLUETOOTH.  <a href="a01259.html#a9b311d47cbee431e9acf45384ac7bf26">More...</a><br /></td></tr>
+<tr class="separator:a9b311d47cbee431e9acf45384ac7bf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a251123e964b24a3ee95db3850472d045"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a251123e964b24a3ee95db3850472d045">lumex::core::crc::parametric::Crc8Darc</a> = CrcParametric&lt; crc8_darc_spec_t &gt;</td></tr>
+<tr class="memdesc:a251123e964b24a3ee95db3850472d045"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/DARC.  <a href="a01259.html#a251123e964b24a3ee95db3850472d045">More...</a><br /></td></tr>
+<tr class="separator:a251123e964b24a3ee95db3850472d045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987c8f3bef6523512d5b94fca2107da0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a987c8f3bef6523512d5b94fca2107da0">lumex::core::crc::parametric::Crc8DvbS2</a> = CrcParametric&lt; crc8_dvb_s2_spec_t &gt;</td></tr>
+<tr class="memdesc:a987c8f3bef6523512d5b94fca2107da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/DVB-S2.  <a href="a01259.html#a987c8f3bef6523512d5b94fca2107da0">More...</a><br /></td></tr>
+<tr class="separator:a987c8f3bef6523512d5b94fca2107da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3ce71ba37564788d5022fbdc599371c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ae3ce71ba37564788d5022fbdc599371c">lumex::core::crc::parametric::Crc8GsmA</a> = CrcParametric&lt; crc8_gsm_a_spec_t &gt;</td></tr>
+<tr class="memdesc:ae3ce71ba37564788d5022fbdc599371c"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/GSM-A.  <a href="a01259.html#ae3ce71ba37564788d5022fbdc599371c">More...</a><br /></td></tr>
+<tr class="separator:ae3ce71ba37564788d5022fbdc599371c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a055c907bc441ca50594da7fe50c05e37"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a055c907bc441ca50594da7fe50c05e37">lumex::core::crc::parametric::Crc8GsmB</a> = CrcParametric&lt; crc8_gsm_b_spec_t &gt;</td></tr>
+<tr class="memdesc:a055c907bc441ca50594da7fe50c05e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/GSM-B.  <a href="a01259.html#a055c907bc441ca50594da7fe50c05e37">More...</a><br /></td></tr>
+<tr class="separator:a055c907bc441ca50594da7fe50c05e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6751f0367f211d1e6798ff07ae0f4941"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a6751f0367f211d1e6798ff07ae0f4941">lumex::core::crc::parametric::Crc8Hitag</a> = CrcParametric&lt; crc8_hitag_spec_t &gt;</td></tr>
+<tr class="memdesc:a6751f0367f211d1e6798ff07ae0f4941"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/HITAG.  <a href="a01259.html#a6751f0367f211d1e6798ff07ae0f4941">More...</a><br /></td></tr>
+<tr class="separator:a6751f0367f211d1e6798ff07ae0f4941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d47e2ed6369b3b35ddd99dd44edcdd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ad6d47e2ed6369b3b35ddd99dd44edcdd">lumex::core::crc::parametric::Crc8I4321</a> = CrcParametric&lt; crc8_i4321_spec_t &gt;</td></tr>
+<tr class="memdesc:ad6d47e2ed6369b3b35ddd99dd44edcdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/I-432-1.  <a href="a01259.html#ad6d47e2ed6369b3b35ddd99dd44edcdd">More...</a><br /></td></tr>
+<tr class="separator:ad6d47e2ed6369b3b35ddd99dd44edcdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa2596d9390b36f91587861030977014"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#afa2596d9390b36f91587861030977014">lumex::core::crc::parametric::Crc8ICode</a> = CrcParametric&lt; crc8_i_code_spec_t &gt;</td></tr>
+<tr class="memdesc:afa2596d9390b36f91587861030977014"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/I-CODE.  <a href="a01259.html#afa2596d9390b36f91587861030977014">More...</a><br /></td></tr>
+<tr class="separator:afa2596d9390b36f91587861030977014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46940200dae48524f1c1372d993b0cc0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a46940200dae48524f1c1372d993b0cc0">lumex::core::crc::parametric::Crc8Lte</a> = CrcParametric&lt; crc8_lte_spec_t &gt;</td></tr>
+<tr class="memdesc:a46940200dae48524f1c1372d993b0cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/LTE.  <a href="a01259.html#a46940200dae48524f1c1372d993b0cc0">More...</a><br /></td></tr>
+<tr class="separator:a46940200dae48524f1c1372d993b0cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f0b7ed881ac295bc615d0f7fcef96b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a92f0b7ed881ac295bc615d0f7fcef96b">lumex::core::crc::parametric::Crc8MifareMad</a> = CrcParametric&lt; crc8_mifare_mad_spec_t &gt;</td></tr>
+<tr class="memdesc:a92f0b7ed881ac295bc615d0f7fcef96b"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/MIFARE-MAD.  <a href="a01259.html#a92f0b7ed881ac295bc615d0f7fcef96b">More...</a><br /></td></tr>
+<tr class="separator:a92f0b7ed881ac295bc615d0f7fcef96b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87db22c4fc6c8991a2afeb4eb439455f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a87db22c4fc6c8991a2afeb4eb439455f">lumex::core::crc::parametric::Crc8Nrsc5</a> = CrcParametric&lt; crc8_nrsc5_spec_t &gt;</td></tr>
+<tr class="memdesc:a87db22c4fc6c8991a2afeb4eb439455f"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/NRSC-5.  <a href="a01259.html#a87db22c4fc6c8991a2afeb4eb439455f">More...</a><br /></td></tr>
+<tr class="separator:a87db22c4fc6c8991a2afeb4eb439455f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f776b6e17b2e3dcba3c260c0743498"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ac6f776b6e17b2e3dcba3c260c0743498">lumex::core::crc::parametric::Crc8Opensafety</a> = CrcParametric&lt; crc8_opensafety_spec_t &gt;</td></tr>
+<tr class="memdesc:ac6f776b6e17b2e3dcba3c260c0743498"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/OPENSAFETY.  <a href="a01259.html#ac6f776b6e17b2e3dcba3c260c0743498">More...</a><br /></td></tr>
+<tr class="separator:ac6f776b6e17b2e3dcba3c260c0743498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace25c0f1ffb8a940b2054b2b5fce3216"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ace25c0f1ffb8a940b2054b2b5fce3216">lumex::core::crc::parametric::Crc8Rohc</a> = CrcParametric&lt; crc8_rohc_spec_t &gt;</td></tr>
+<tr class="memdesc:ace25c0f1ffb8a940b2054b2b5fce3216"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/ROHC.  <a href="a01259.html#ace25c0f1ffb8a940b2054b2b5fce3216">More...</a><br /></td></tr>
+<tr class="separator:ace25c0f1ffb8a940b2054b2b5fce3216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50fbfd05b27ef7552ecea033003ac619"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a50fbfd05b27ef7552ecea033003ac619">lumex::core::crc::parametric::Crc8SaeJ1850</a> = CrcParametric&lt; crc8_sae_j1850_spec_t &gt;</td></tr>
+<tr class="memdesc:a50fbfd05b27ef7552ecea033003ac619"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/SAE-J1850.  <a href="a01259.html#a50fbfd05b27ef7552ecea033003ac619">More...</a><br /></td></tr>
+<tr class="separator:a50fbfd05b27ef7552ecea033003ac619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188ff5c276aad1564d9bafba10d28fe6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a188ff5c276aad1564d9bafba10d28fe6">lumex::core::crc::parametric::Crc8Smbus</a> = CrcParametric&lt; crc8_smbus_spec_t &gt;</td></tr>
+<tr class="memdesc:a188ff5c276aad1564d9bafba10d28fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/SMBUS.  <a href="a01259.html#a188ff5c276aad1564d9bafba10d28fe6">More...</a><br /></td></tr>
+<tr class="separator:a188ff5c276aad1564d9bafba10d28fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a322feef76a4d9910991bace5b5dc20b8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a322feef76a4d9910991bace5b5dc20b8">lumex::core::crc::parametric::Crc8Tech3250</a> = CrcParametric&lt; crc8_tech3250_spec_t &gt;</td></tr>
+<tr class="memdesc:a322feef76a4d9910991bace5b5dc20b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/TECH-3250.  <a href="a01259.html#a322feef76a4d9910991bace5b5dc20b8">More...</a><br /></td></tr>
+<tr class="separator:a322feef76a4d9910991bace5b5dc20b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f74855b456fc7a93d0cb59f35f290ed"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a3f74855b456fc7a93d0cb59f35f290ed">lumex::core::crc::parametric::Crc8Wcdma</a> = CrcParametric&lt; crc8_wcdma_spec_t &gt;</td></tr>
+<tr class="memdesc:a3f74855b456fc7a93d0cb59f35f290ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-8/WCDMA.  <a href="a01259.html#a3f74855b456fc7a93d0cb59f35f290ed">More...</a><br /></td></tr>
+<tr class="separator:a3f74855b456fc7a93d0cb59f35f290ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d27d7e31274f97f31f5fd3a1a23a2a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#af8d27d7e31274f97f31f5fd3a1a23a2a">lumex::core::crc::parametric::Crc10Cdma2000</a> = CrcParametric&lt; crc10_cdma2000_spec_t &gt;</td></tr>
+<tr class="memdesc:af8d27d7e31274f97f31f5fd3a1a23a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-10/CDMA2000.  <a href="a01259.html#af8d27d7e31274f97f31f5fd3a1a23a2a">More...</a><br /></td></tr>
+<tr class="separator:af8d27d7e31274f97f31f5fd3a1a23a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b40504fa6a7bed5e257814a6c5b7c59"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a7b40504fa6a7bed5e257814a6c5b7c59">lumex::core::crc::parametric::Crc10Atm</a> = CrcParametric&lt; crc10_atm_spec_t &gt;</td></tr>
+<tr class="memdesc:a7b40504fa6a7bed5e257814a6c5b7c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-10/ATM.  <a href="a01259.html#a7b40504fa6a7bed5e257814a6c5b7c59">More...</a><br /></td></tr>
+<tr class="separator:a7b40504fa6a7bed5e257814a6c5b7c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1174b38317c3400ab3c009dfda003ea5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a1174b38317c3400ab3c009dfda003ea5">lumex::core::crc::parametric::Crc10Gsm</a> = CrcParametric&lt; crc10_gsm_spec_t &gt;</td></tr>
+<tr class="memdesc:a1174b38317c3400ab3c009dfda003ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-10/GSM.  <a href="a01259.html#a1174b38317c3400ab3c009dfda003ea5">More...</a><br /></td></tr>
+<tr class="separator:a1174b38317c3400ab3c009dfda003ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a289277060a93f3e9747d0f7c1deb5b6a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a289277060a93f3e9747d0f7c1deb5b6a">lumex::core::crc::parametric::Crc11Flexray</a> = CrcParametric&lt; crc11_flexray_spec_t &gt;</td></tr>
+<tr class="memdesc:a289277060a93f3e9747d0f7c1deb5b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-11/FLEXRAY.  <a href="a01259.html#a289277060a93f3e9747d0f7c1deb5b6a">More...</a><br /></td></tr>
+<tr class="separator:a289277060a93f3e9747d0f7c1deb5b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb06beb9fd87de569b5687653f698bc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#aabb06beb9fd87de569b5687653f698bc">lumex::core::crc::parametric::Crc11Umts</a> = CrcParametric&lt; crc11_umts_spec_t &gt;</td></tr>
+<tr class="memdesc:aabb06beb9fd87de569b5687653f698bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-11/UMTS.  <a href="a01259.html#aabb06beb9fd87de569b5687653f698bc">More...</a><br /></td></tr>
+<tr class="separator:aabb06beb9fd87de569b5687653f698bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052b4a674c63428cf24ea3ad27328e12"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a052b4a674c63428cf24ea3ad27328e12">lumex::core::crc::parametric::Crc12Cdma2000</a> = CrcParametric&lt; crc12_cdma2000_spec_t &gt;</td></tr>
+<tr class="memdesc:a052b4a674c63428cf24ea3ad27328e12"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-12/CDMA2000.  <a href="a01259.html#a052b4a674c63428cf24ea3ad27328e12">More...</a><br /></td></tr>
+<tr class="separator:a052b4a674c63428cf24ea3ad27328e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61169792c877a51108fcda458d5ab8d6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a61169792c877a51108fcda458d5ab8d6">lumex::core::crc::parametric::Crc12Dect</a> = CrcParametric&lt; crc12_dect_spec_t &gt;</td></tr>
+<tr class="memdesc:a61169792c877a51108fcda458d5ab8d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-12/DECT.  <a href="a01259.html#a61169792c877a51108fcda458d5ab8d6">More...</a><br /></td></tr>
+<tr class="separator:a61169792c877a51108fcda458d5ab8d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb7fbf4cc586602ecb605665564ea8a7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#adb7fbf4cc586602ecb605665564ea8a7">lumex::core::crc::parametric::Crc12Gsm</a> = CrcParametric&lt; crc12_gsm_spec_t &gt;</td></tr>
+<tr class="memdesc:adb7fbf4cc586602ecb605665564ea8a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-12/GSM.  <a href="a01259.html#adb7fbf4cc586602ecb605665564ea8a7">More...</a><br /></td></tr>
+<tr class="separator:adb7fbf4cc586602ecb605665564ea8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3bf6b1097024ee209c6b591b727b5bd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ae3bf6b1097024ee209c6b591b727b5bd">lumex::core::crc::parametric::Crc12Umts</a> = CrcParametric&lt; crc12_umts_spec_t &gt;</td></tr>
+<tr class="memdesc:ae3bf6b1097024ee209c6b591b727b5bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-12/UMTS.  <a href="a01259.html#ae3bf6b1097024ee209c6b591b727b5bd">More...</a><br /></td></tr>
+<tr class="separator:ae3bf6b1097024ee209c6b591b727b5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6699e71d4881b77514181b7fe205c834"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a6699e71d4881b77514181b7fe205c834">lumex::core::crc::parametric::Crc13Bbc</a> = CrcParametric&lt; crc13_bbc_spec_t &gt;</td></tr>
+<tr class="memdesc:a6699e71d4881b77514181b7fe205c834"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-13/BBC.  <a href="a01259.html#a6699e71d4881b77514181b7fe205c834">More...</a><br /></td></tr>
+<tr class="separator:a6699e71d4881b77514181b7fe205c834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ed83ff98de6c960b1c21e8d222af19"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a63ed83ff98de6c960b1c21e8d222af19">lumex::core::crc::parametric::Crc14Darc</a> = CrcParametric&lt; crc14_darc_spec_t &gt;</td></tr>
+<tr class="memdesc:a63ed83ff98de6c960b1c21e8d222af19"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-14/DARC.  <a href="a01259.html#a63ed83ff98de6c960b1c21e8d222af19">More...</a><br /></td></tr>
+<tr class="separator:a63ed83ff98de6c960b1c21e8d222af19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b1720aef58788143b60268ac92ab7c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a65b1720aef58788143b60268ac92ab7c">lumex::core::crc::parametric::Crc14Gsm</a> = CrcParametric&lt; crc14_gsm_spec_t &gt;</td></tr>
+<tr class="memdesc:a65b1720aef58788143b60268ac92ab7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-14/GSM.  <a href="a01259.html#a65b1720aef58788143b60268ac92ab7c">More...</a><br /></td></tr>
+<tr class="separator:a65b1720aef58788143b60268ac92ab7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb15dfbf52eea4d93d286349c8feade"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a1fb15dfbf52eea4d93d286349c8feade">lumex::core::crc::parametric::Crc15Can</a> = CrcParametric&lt; crc15_can_spec_t &gt;</td></tr>
+<tr class="memdesc:a1fb15dfbf52eea4d93d286349c8feade"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-15/CAN.  <a href="a01259.html#a1fb15dfbf52eea4d93d286349c8feade">More...</a><br /></td></tr>
+<tr class="separator:a1fb15dfbf52eea4d93d286349c8feade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91217729a10ade8c1652b5fa5aa13b3d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a91217729a10ade8c1652b5fa5aa13b3d">lumex::core::crc::parametric::Crc15Mpt1327</a> = CrcParametric&lt; crc15_mpt1327_spec_t &gt;</td></tr>
+<tr class="memdesc:a91217729a10ade8c1652b5fa5aa13b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-15/MPT1327.  <a href="a01259.html#a91217729a10ade8c1652b5fa5aa13b3d">More...</a><br /></td></tr>
+<tr class="separator:a91217729a10ade8c1652b5fa5aa13b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e4daffa1cb6da4ab501222782827817"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a3e4daffa1cb6da4ab501222782827817">lumex::core::crc::parametric::Crc16Cdma2000</a> = CrcParametric&lt; crc16_cdma2000_spec_t &gt;</td></tr>
+<tr class="memdesc:a3e4daffa1cb6da4ab501222782827817"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/CDMA2000.  <a href="a01259.html#a3e4daffa1cb6da4ab501222782827817">More...</a><br /></td></tr>
+<tr class="separator:a3e4daffa1cb6da4ab501222782827817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ababeba3120055890502acd38b645a586"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ababeba3120055890502acd38b645a586">lumex::core::crc::parametric::Crc16Ibm3740</a> = CrcParametric&lt; crc16_ibm3740_spec_t &gt;</td></tr>
+<tr class="memdesc:ababeba3120055890502acd38b645a586"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/IBM-3740.  <a href="a01259.html#ababeba3120055890502acd38b645a586">More...</a><br /></td></tr>
+<tr class="separator:ababeba3120055890502acd38b645a586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee55e68604f20223e1c913142570dcfd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#aee55e68604f20223e1c913142570dcfd">lumex::core::crc::parametric::Crc16Kermit</a> = CrcParametric&lt; crc16_kermit_spec_t &gt;</td></tr>
+<tr class="memdesc:aee55e68604f20223e1c913142570dcfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/KERMIT.  <a href="a01259.html#aee55e68604f20223e1c913142570dcfd">More...</a><br /></td></tr>
+<tr class="separator:aee55e68604f20223e1c913142570dcfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342d02dbd2c8ed6884f9658b5fc8a201"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a342d02dbd2c8ed6884f9658b5fc8a201">lumex::core::crc::parametric::Crc16Modbus</a> = CrcParametric&lt; crc16_modbus_spec_t &gt;</td></tr>
+<tr class="memdesc:a342d02dbd2c8ed6884f9658b5fc8a201"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/MODBUS.  <a href="a01259.html#a342d02dbd2c8ed6884f9658b5fc8a201">More...</a><br /></td></tr>
+<tr class="separator:a342d02dbd2c8ed6884f9658b5fc8a201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9831a06e2a9c213f38ada4044a99ec07"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a9831a06e2a9c213f38ada4044a99ec07">lumex::core::crc::parametric::Crc16Arc</a> = CrcParametric&lt; crc16_arc_spec_t &gt;</td></tr>
+<tr class="memdesc:a9831a06e2a9c213f38ada4044a99ec07"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/ARC.  <a href="a01259.html#a9831a06e2a9c213f38ada4044a99ec07">More...</a><br /></td></tr>
+<tr class="separator:a9831a06e2a9c213f38ada4044a99ec07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a010086a1cfd85b131fc6f3d3a8952d4e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a010086a1cfd85b131fc6f3d3a8952d4e">lumex::core::crc::parametric::Crc16Cms</a> = CrcParametric&lt; crc16_cms_spec_t &gt;</td></tr>
+<tr class="memdesc:a010086a1cfd85b131fc6f3d3a8952d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/CMS.  <a href="a01259.html#a010086a1cfd85b131fc6f3d3a8952d4e">More...</a><br /></td></tr>
+<tr class="separator:a010086a1cfd85b131fc6f3d3a8952d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b18a981e737abe00fb98c4e52bf642"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ad6b18a981e737abe00fb98c4e52bf642">lumex::core::crc::parametric::Crc16Dds110</a> = CrcParametric&lt; crc16_dds110_spec_t &gt;</td></tr>
+<tr class="memdesc:ad6b18a981e737abe00fb98c4e52bf642"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/DDS-110.  <a href="a01259.html#ad6b18a981e737abe00fb98c4e52bf642">More...</a><br /></td></tr>
+<tr class="separator:ad6b18a981e737abe00fb98c4e52bf642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0557777591209728352d0f1264bf9f5e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a0557777591209728352d0f1264bf9f5e">lumex::core::crc::parametric::Crc16DectR</a> = CrcParametric&lt; crc16_dect_r_spec_t &gt;</td></tr>
+<tr class="memdesc:a0557777591209728352d0f1264bf9f5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/DECT-R.  <a href="a01259.html#a0557777591209728352d0f1264bf9f5e">More...</a><br /></td></tr>
+<tr class="separator:a0557777591209728352d0f1264bf9f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ab4c62c5f2ceee9640bf9a6ac1bada"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a06ab4c62c5f2ceee9640bf9a6ac1bada">lumex::core::crc::parametric::Crc16DectX</a> = CrcParametric&lt; crc16_dect_x_spec_t &gt;</td></tr>
+<tr class="memdesc:a06ab4c62c5f2ceee9640bf9a6ac1bada"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/DECT-X.  <a href="a01259.html#a06ab4c62c5f2ceee9640bf9a6ac1bada">More...</a><br /></td></tr>
+<tr class="separator:a06ab4c62c5f2ceee9640bf9a6ac1bada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839cdd48a866dc732f9da947c9457e83"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a839cdd48a866dc732f9da947c9457e83">lumex::core::crc::parametric::Crc16Dnp</a> = CrcParametric&lt; crc16_dnp_spec_t &gt;</td></tr>
+<tr class="memdesc:a839cdd48a866dc732f9da947c9457e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/DNP.  <a href="a01259.html#a839cdd48a866dc732f9da947c9457e83">More...</a><br /></td></tr>
+<tr class="separator:a839cdd48a866dc732f9da947c9457e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9bfacaafbfee9df9150b74d2ed337d3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ae9bfacaafbfee9df9150b74d2ed337d3">lumex::core::crc::parametric::Crc16En13757</a> = CrcParametric&lt; crc16_en13757_spec_t &gt;</td></tr>
+<tr class="memdesc:ae9bfacaafbfee9df9150b74d2ed337d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/EN-13757.  <a href="a01259.html#ae9bfacaafbfee9df9150b74d2ed337d3">More...</a><br /></td></tr>
+<tr class="separator:ae9bfacaafbfee9df9150b74d2ed337d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e69b0cd674df30864ac4ec46f21efd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a26e69b0cd674df30864ac4ec46f21efd">lumex::core::crc::parametric::Crc16Genibus</a> = CrcParametric&lt; crc16_genibus_spec_t &gt;</td></tr>
+<tr class="memdesc:a26e69b0cd674df30864ac4ec46f21efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/GENIBUS.  <a href="a01259.html#a26e69b0cd674df30864ac4ec46f21efd">More...</a><br /></td></tr>
+<tr class="separator:a26e69b0cd674df30864ac4ec46f21efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f576d92ce04b1f74ff3c872d3bcc880"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a0f576d92ce04b1f74ff3c872d3bcc880">lumex::core::crc::parametric::Crc16Gsm</a> = CrcParametric&lt; crc16_gsm_spec_t &gt;</td></tr>
+<tr class="memdesc:a0f576d92ce04b1f74ff3c872d3bcc880"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/GSM.  <a href="a01259.html#a0f576d92ce04b1f74ff3c872d3bcc880">More...</a><br /></td></tr>
+<tr class="separator:a0f576d92ce04b1f74ff3c872d3bcc880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fbb31c9ff56809835714972e9791386"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a3fbb31c9ff56809835714972e9791386">lumex::core::crc::parametric::Crc16IbmSdlc</a> = CrcParametric&lt; crc16_ibm_sdlc_spec_t &gt;</td></tr>
+<tr class="memdesc:a3fbb31c9ff56809835714972e9791386"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/IBM-SDLC.  <a href="a01259.html#a3fbb31c9ff56809835714972e9791386">More...</a><br /></td></tr>
+<tr class="separator:a3fbb31c9ff56809835714972e9791386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac85777231176a06cf0deefc0c1b3e07a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ac85777231176a06cf0deefc0c1b3e07a">lumex::core::crc::parametric::Crc16IsoIec144433A</a> = CrcParametric&lt; crc16_iso_iec14443_3_a_spec_t &gt;</td></tr>
+<tr class="memdesc:ac85777231176a06cf0deefc0c1b3e07a"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/ISO-IEC-14443-3-A.  <a href="a01259.html#ac85777231176a06cf0deefc0c1b3e07a">More...</a><br /></td></tr>
+<tr class="separator:ac85777231176a06cf0deefc0c1b3e07a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2c1f6c6bcebd6770dd32dd4aa49cd84"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ac2c1f6c6bcebd6770dd32dd4aa49cd84">lumex::core::crc::parametric::Crc16Lj1200</a> = CrcParametric&lt; crc16_lj1200_spec_t &gt;</td></tr>
+<tr class="memdesc:ac2c1f6c6bcebd6770dd32dd4aa49cd84"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/LJ1200.  <a href="a01259.html#ac2c1f6c6bcebd6770dd32dd4aa49cd84">More...</a><br /></td></tr>
+<tr class="separator:ac2c1f6c6bcebd6770dd32dd4aa49cd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2a660f19a40aaeec2e18122f9b68f5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#adc2a660f19a40aaeec2e18122f9b68f5">lumex::core::crc::parametric::Crc16M17</a> = CrcParametric&lt; crc16_m17_spec_t &gt;</td></tr>
+<tr class="memdesc:adc2a660f19a40aaeec2e18122f9b68f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/M17.  <a href="a01259.html#adc2a660f19a40aaeec2e18122f9b68f5">More...</a><br /></td></tr>
+<tr class="separator:adc2a660f19a40aaeec2e18122f9b68f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba57d36ed7dee5cb23c25a207c6a39bd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#aba57d36ed7dee5cb23c25a207c6a39bd">lumex::core::crc::parametric::Crc16MaximDow</a> = CrcParametric&lt; crc16_maxim_dow_spec_t &gt;</td></tr>
+<tr class="memdesc:aba57d36ed7dee5cb23c25a207c6a39bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/MAXIM-DOW.  <a href="a01259.html#aba57d36ed7dee5cb23c25a207c6a39bd">More...</a><br /></td></tr>
+<tr class="separator:aba57d36ed7dee5cb23c25a207c6a39bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa414c9268a1ffe7d14dc50e7ad5ac5aa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#aa414c9268a1ffe7d14dc50e7ad5ac5aa">lumex::core::crc::parametric::Crc16Mcrf4xx</a> = CrcParametric&lt; crc16_mcrf4xx_spec_t &gt;</td></tr>
+<tr class="memdesc:aa414c9268a1ffe7d14dc50e7ad5ac5aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/MCRF4XX.  <a href="a01259.html#aa414c9268a1ffe7d14dc50e7ad5ac5aa">More...</a><br /></td></tr>
+<tr class="separator:aa414c9268a1ffe7d14dc50e7ad5ac5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe92c362ee9a411adf7b5c1067fd29b0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#afe92c362ee9a411adf7b5c1067fd29b0">lumex::core::crc::parametric::Crc16Nrsc5</a> = CrcParametric&lt; crc16_nrsc5_spec_t &gt;</td></tr>
+<tr class="memdesc:afe92c362ee9a411adf7b5c1067fd29b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/NRSC-5.  <a href="a01259.html#afe92c362ee9a411adf7b5c1067fd29b0">More...</a><br /></td></tr>
+<tr class="separator:afe92c362ee9a411adf7b5c1067fd29b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b46e0657759326a4446e055a42103b1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a8b46e0657759326a4446e055a42103b1">lumex::core::crc::parametric::Crc16OpensafetyA</a> = CrcParametric&lt; crc16_opensafety_a_spec_t &gt;</td></tr>
+<tr class="memdesc:a8b46e0657759326a4446e055a42103b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/OPENSAFETY-A.  <a href="a01259.html#a8b46e0657759326a4446e055a42103b1">More...</a><br /></td></tr>
+<tr class="separator:a8b46e0657759326a4446e055a42103b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72276e3c14f42d72e81455e30586af83"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a72276e3c14f42d72e81455e30586af83">lumex::core::crc::parametric::Crc16OpensafetyB</a> = CrcParametric&lt; crc16_opensafety_b_spec_t &gt;</td></tr>
+<tr class="memdesc:a72276e3c14f42d72e81455e30586af83"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/OPENSAFETY-B.  <a href="a01259.html#a72276e3c14f42d72e81455e30586af83">More...</a><br /></td></tr>
+<tr class="separator:a72276e3c14f42d72e81455e30586af83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af540ef4839f253bcefa37aa5b76a3813"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#af540ef4839f253bcefa37aa5b76a3813">lumex::core::crc::parametric::Crc16Profibus</a> = CrcParametric&lt; crc16_profibus_spec_t &gt;</td></tr>
+<tr class="memdesc:af540ef4839f253bcefa37aa5b76a3813"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/PROFIBUS.  <a href="a01259.html#af540ef4839f253bcefa37aa5b76a3813">More...</a><br /></td></tr>
+<tr class="separator:af540ef4839f253bcefa37aa5b76a3813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8177234f84a2ad5006f842f500a6f2b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ab8177234f84a2ad5006f842f500a6f2b">lumex::core::crc::parametric::Crc16Riello</a> = CrcParametric&lt; crc16_riello_spec_t &gt;</td></tr>
+<tr class="memdesc:ab8177234f84a2ad5006f842f500a6f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/RIELLO.  <a href="a01259.html#ab8177234f84a2ad5006f842f500a6f2b">More...</a><br /></td></tr>
+<tr class="separator:ab8177234f84a2ad5006f842f500a6f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac840f07086f38caa4c93dde6f2f3cad8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ac840f07086f38caa4c93dde6f2f3cad8">lumex::core::crc::parametric::Crc16SpiFujitsu</a> = CrcParametric&lt; crc16_spi_fujitsu_spec_t &gt;</td></tr>
+<tr class="memdesc:ac840f07086f38caa4c93dde6f2f3cad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/SPI-FUJITSU.  <a href="a01259.html#ac840f07086f38caa4c93dde6f2f3cad8">More...</a><br /></td></tr>
+<tr class="separator:ac840f07086f38caa4c93dde6f2f3cad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1a151cf7652a558ff936ac962340f6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a4e1a151cf7652a558ff936ac962340f6">lumex::core::crc::parametric::Crc16T10Dif</a> = CrcParametric&lt; crc16_t10_dif_spec_t &gt;</td></tr>
+<tr class="memdesc:a4e1a151cf7652a558ff936ac962340f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/T10-DIF.  <a href="a01259.html#a4e1a151cf7652a558ff936ac962340f6">More...</a><br /></td></tr>
+<tr class="separator:a4e1a151cf7652a558ff936ac962340f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57540e72d2519078939f83a4ae09541"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ac57540e72d2519078939f83a4ae09541">lumex::core::crc::parametric::Crc16Teledisk</a> = CrcParametric&lt; crc16_teledisk_spec_t &gt;</td></tr>
+<tr class="memdesc:ac57540e72d2519078939f83a4ae09541"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/TELEDISK.  <a href="a01259.html#ac57540e72d2519078939f83a4ae09541">More...</a><br /></td></tr>
+<tr class="separator:ac57540e72d2519078939f83a4ae09541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0542d62a3a6e86c84e5e48e2708452bb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a0542d62a3a6e86c84e5e48e2708452bb">lumex::core::crc::parametric::Crc16Tms37157</a> = CrcParametric&lt; crc16_tms37157_spec_t &gt;</td></tr>
+<tr class="memdesc:a0542d62a3a6e86c84e5e48e2708452bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/TMS37157.  <a href="a01259.html#a0542d62a3a6e86c84e5e48e2708452bb">More...</a><br /></td></tr>
+<tr class="separator:a0542d62a3a6e86c84e5e48e2708452bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733dc00b6497c60a1fc9aa10101f65dc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a733dc00b6497c60a1fc9aa10101f65dc">lumex::core::crc::parametric::Crc16Umts</a> = CrcParametric&lt; crc16_umts_spec_t &gt;</td></tr>
+<tr class="memdesc:a733dc00b6497c60a1fc9aa10101f65dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/UMTS.  <a href="a01259.html#a733dc00b6497c60a1fc9aa10101f65dc">More...</a><br /></td></tr>
+<tr class="separator:a733dc00b6497c60a1fc9aa10101f65dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f189e7d134d2d4f4843de125e1556b6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a6f189e7d134d2d4f4843de125e1556b6">lumex::core::crc::parametric::Crc16Usb</a> = CrcParametric&lt; crc16_usb_spec_t &gt;</td></tr>
+<tr class="memdesc:a6f189e7d134d2d4f4843de125e1556b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/USB.  <a href="a01259.html#a6f189e7d134d2d4f4843de125e1556b6">More...</a><br /></td></tr>
+<tr class="separator:a6f189e7d134d2d4f4843de125e1556b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf31ec4e25bd057d3308765ad7c8e05f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#abf31ec4e25bd057d3308765ad7c8e05f">lumex::core::crc::parametric::Crc16Xmodem</a> = CrcParametric&lt; crc16_xmodem_spec_t &gt;</td></tr>
+<tr class="memdesc:abf31ec4e25bd057d3308765ad7c8e05f"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-16/XMODEM.  <a href="a01259.html#abf31ec4e25bd057d3308765ad7c8e05f">More...</a><br /></td></tr>
+<tr class="separator:abf31ec4e25bd057d3308765ad7c8e05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a14953201ccfd40a78a31d9261c00d6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a7a14953201ccfd40a78a31d9261c00d6">lumex::core::crc::parametric::Crc17CanFd</a> = CrcParametric&lt; crc17_can_fd_spec_t &gt;</td></tr>
+<tr class="memdesc:a7a14953201ccfd40a78a31d9261c00d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-17/CAN-FD.  <a href="a01259.html#a7a14953201ccfd40a78a31d9261c00d6">More...</a><br /></td></tr>
+<tr class="separator:a7a14953201ccfd40a78a31d9261c00d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bfe777312d51fffe2f8db88ec7f6bf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ab2bfe777312d51fffe2f8db88ec7f6bf">lumex::core::crc::parametric::Crc21CanFd</a> = CrcParametric&lt; crc21_can_fd_spec_t &gt;</td></tr>
+<tr class="memdesc:ab2bfe777312d51fffe2f8db88ec7f6bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-21/CAN-FD.  <a href="a01259.html#ab2bfe777312d51fffe2f8db88ec7f6bf">More...</a><br /></td></tr>
+<tr class="separator:ab2bfe777312d51fffe2f8db88ec7f6bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12de6a3c25ce2d23a7425e354e74575"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ac12de6a3c25ce2d23a7425e354e74575">lumex::core::crc::parametric::Crc24OpenPgp</a> = CrcParametric&lt; crc24_open_pgp_spec_t &gt;</td></tr>
+<tr class="memdesc:ac12de6a3c25ce2d23a7425e354e74575"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/OPENPGP.  <a href="a01259.html#ac12de6a3c25ce2d23a7425e354e74575">More...</a><br /></td></tr>
+<tr class="separator:ac12de6a3c25ce2d23a7425e354e74575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f898f60408eb9978d2b6cbe3b005ab0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a6f898f60408eb9978d2b6cbe3b005ab0">lumex::core::crc::parametric::Crc24Ble</a> = CrcParametric&lt; crc24_ble_spec_t &gt;</td></tr>
+<tr class="memdesc:a6f898f60408eb9978d2b6cbe3b005ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/BLE.  <a href="a01259.html#a6f898f60408eb9978d2b6cbe3b005ab0">More...</a><br /></td></tr>
+<tr class="separator:a6f898f60408eb9978d2b6cbe3b005ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97d46e03d004ec085dd8feee42b17aa9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a97d46e03d004ec085dd8feee42b17aa9">lumex::core::crc::parametric::Crc24FlexrayA</a> = CrcParametric&lt; crc24_flexray_a_spec_t &gt;</td></tr>
+<tr class="memdesc:a97d46e03d004ec085dd8feee42b17aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/FLEXRAY-A.  <a href="a01259.html#a97d46e03d004ec085dd8feee42b17aa9">More...</a><br /></td></tr>
+<tr class="separator:a97d46e03d004ec085dd8feee42b17aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e066d4d4eb0cd866f49f469baf58180"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a1e066d4d4eb0cd866f49f469baf58180">lumex::core::crc::parametric::Crc24FlexrayB</a> = CrcParametric&lt; crc24_flexray_b_spec_t &gt;</td></tr>
+<tr class="memdesc:a1e066d4d4eb0cd866f49f469baf58180"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/FLEXRAY-B.  <a href="a01259.html#a1e066d4d4eb0cd866f49f469baf58180">More...</a><br /></td></tr>
+<tr class="separator:a1e066d4d4eb0cd866f49f469baf58180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfd2dc8c5752b45682090030ba85b2bc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#acfd2dc8c5752b45682090030ba85b2bc">lumex::core::crc::parametric::Crc24Interlaken</a> = CrcParametric&lt; crc24_interlaken_spec_t &gt;</td></tr>
+<tr class="memdesc:acfd2dc8c5752b45682090030ba85b2bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/INTERLAKEN.  <a href="a01259.html#acfd2dc8c5752b45682090030ba85b2bc">More...</a><br /></td></tr>
+<tr class="separator:acfd2dc8c5752b45682090030ba85b2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01911a7afdee9ee5220ac3d7df62e7ec"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a01911a7afdee9ee5220ac3d7df62e7ec">lumex::core::crc::parametric::Crc24LteA</a> = CrcParametric&lt; crc24_lte_a_spec_t &gt;</td></tr>
+<tr class="memdesc:a01911a7afdee9ee5220ac3d7df62e7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/LTE-A.  <a href="a01259.html#a01911a7afdee9ee5220ac3d7df62e7ec">More...</a><br /></td></tr>
+<tr class="separator:a01911a7afdee9ee5220ac3d7df62e7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8741ec7876173424ae9a7b836468279"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#aa8741ec7876173424ae9a7b836468279">lumex::core::crc::parametric::Crc24LteB</a> = CrcParametric&lt; crc24_lte_b_spec_t &gt;</td></tr>
+<tr class="memdesc:aa8741ec7876173424ae9a7b836468279"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/LTE-B.  <a href="a01259.html#aa8741ec7876173424ae9a7b836468279">More...</a><br /></td></tr>
+<tr class="separator:aa8741ec7876173424ae9a7b836468279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4846e4522d39ad788f18a32c6538f318"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a4846e4522d39ad788f18a32c6538f318">lumex::core::crc::parametric::Crc24Os9</a> = CrcParametric&lt; crc24_os9_spec_t &gt;</td></tr>
+<tr class="memdesc:a4846e4522d39ad788f18a32c6538f318"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-24/OS-9.  <a href="a01259.html#a4846e4522d39ad788f18a32c6538f318">More...</a><br /></td></tr>
+<tr class="separator:a4846e4522d39ad788f18a32c6538f318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0549e9fcbe2097f43eeea4caf76658e5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a0549e9fcbe2097f43eeea4caf76658e5">lumex::core::crc::parametric::Crc30Cdma</a> = CrcParametric&lt; crc30_cdma_spec_t &gt;</td></tr>
+<tr class="memdesc:a0549e9fcbe2097f43eeea4caf76658e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-30/CDMA.  <a href="a01259.html#a0549e9fcbe2097f43eeea4caf76658e5">More...</a><br /></td></tr>
+<tr class="separator:a0549e9fcbe2097f43eeea4caf76658e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283b06abb434cb2bca27b77fc727edf3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a283b06abb434cb2bca27b77fc727edf3">lumex::core::crc::parametric::Crc31Philips</a> = CrcParametric&lt; crc31_philips_spec_t &gt;</td></tr>
+<tr class="memdesc:a283b06abb434cb2bca27b77fc727edf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-31/PHILIPS.  <a href="a01259.html#a283b06abb434cb2bca27b77fc727edf3">More...</a><br /></td></tr>
+<tr class="separator:a283b06abb434cb2bca27b77fc727edf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf9c96bf3b6d0bdea06f3ac23d6deb6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a6bf9c96bf3b6d0bdea06f3ac23d6deb6">lumex::core::crc::parametric::Crc32IsoHdlc</a> = CrcParametric&lt; crc32_iso_hdlc_spec_t &gt;</td></tr>
+<tr class="memdesc:a6bf9c96bf3b6d0bdea06f3ac23d6deb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/ISO-HDLC.  <a href="a01259.html#a6bf9c96bf3b6d0bdea06f3ac23d6deb6">More...</a><br /></td></tr>
+<tr class="separator:a6bf9c96bf3b6d0bdea06f3ac23d6deb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7b9fbe297df28dc2c37c54993173433"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ac7b9fbe297df28dc2c37c54993173433">lumex::core::crc::parametric::Crc32Iscsi</a> = CrcParametric&lt; crc32_iscsi_spec_t &gt;</td></tr>
+<tr class="memdesc:ac7b9fbe297df28dc2c37c54993173433"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/ISCSI.  <a href="a01259.html#ac7b9fbe297df28dc2c37c54993173433">More...</a><br /></td></tr>
+<tr class="separator:ac7b9fbe297df28dc2c37c54993173433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2124d04f2983bfc77ab893a969e236f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ad2124d04f2983bfc77ab893a969e236f">lumex::core::crc::parametric::Crc32Aixm</a> = CrcParametric&lt; crc32_aixm_spec_t &gt;</td></tr>
+<tr class="memdesc:ad2124d04f2983bfc77ab893a969e236f"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/AIXM.  <a href="a01259.html#ad2124d04f2983bfc77ab893a969e236f">More...</a><br /></td></tr>
+<tr class="separator:ad2124d04f2983bfc77ab893a969e236f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26092f842a983c319ebb24ae1b7f3570"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a26092f842a983c319ebb24ae1b7f3570">lumex::core::crc::parametric::Crc32Autosar</a> = CrcParametric&lt; crc32_autosar_spec_t &gt;</td></tr>
+<tr class="memdesc:a26092f842a983c319ebb24ae1b7f3570"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/AUTOSAR.  <a href="a01259.html#a26092f842a983c319ebb24ae1b7f3570">More...</a><br /></td></tr>
+<tr class="separator:a26092f842a983c319ebb24ae1b7f3570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4807a4caf68521d97cd4398e2531ab"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a2a4807a4caf68521d97cd4398e2531ab">lumex::core::crc::parametric::Crc32Base91D</a> = CrcParametric&lt; crc32_base91_d_spec_t &gt;</td></tr>
+<tr class="memdesc:a2a4807a4caf68521d97cd4398e2531ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/BASE91-D.  <a href="a01259.html#a2a4807a4caf68521d97cd4398e2531ab">More...</a><br /></td></tr>
+<tr class="separator:a2a4807a4caf68521d97cd4398e2531ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65016ecdc0332ecc2b8faed692c86589"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a65016ecdc0332ecc2b8faed692c86589">lumex::core::crc::parametric::Crc32Bzip2</a> = CrcParametric&lt; crc32_bzip2_spec_t &gt;</td></tr>
+<tr class="memdesc:a65016ecdc0332ecc2b8faed692c86589"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/BZIP2.  <a href="a01259.html#a65016ecdc0332ecc2b8faed692c86589">More...</a><br /></td></tr>
+<tr class="separator:a65016ecdc0332ecc2b8faed692c86589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30e838d53cd153e714a431af780af7de"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a30e838d53cd153e714a431af780af7de">lumex::core::crc::parametric::Crc32CdRomEdc</a> = CrcParametric&lt; crc32_cd_rom_edc_spec_t &gt;</td></tr>
+<tr class="memdesc:a30e838d53cd153e714a431af780af7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/CD-ROM-EDC.  <a href="a01259.html#a30e838d53cd153e714a431af780af7de">More...</a><br /></td></tr>
+<tr class="separator:a30e838d53cd153e714a431af780af7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9bee2073d2977837df72b41aaab204"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a8e9bee2073d2977837df72b41aaab204">lumex::core::crc::parametric::Crc32Cksum</a> = CrcParametric&lt; crc32_cksum_spec_t &gt;</td></tr>
+<tr class="memdesc:a8e9bee2073d2977837df72b41aaab204"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/CKSUM.  <a href="a01259.html#a8e9bee2073d2977837df72b41aaab204">More...</a><br /></td></tr>
+<tr class="separator:a8e9bee2073d2977837df72b41aaab204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e1da3e4966143ca5ae6eead181c044"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a39e1da3e4966143ca5ae6eead181c044">lumex::core::crc::parametric::Crc32Jamcrc</a> = CrcParametric&lt; crc32_jamcrc_spec_t &gt;</td></tr>
+<tr class="memdesc:a39e1da3e4966143ca5ae6eead181c044"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/JAMCRC.  <a href="a01259.html#a39e1da3e4966143ca5ae6eead181c044">More...</a><br /></td></tr>
+<tr class="separator:a39e1da3e4966143ca5ae6eead181c044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11f5456e56e7d6ecd6859a3b947e8e9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#af11f5456e56e7d6ecd6859a3b947e8e9">lumex::core::crc::parametric::Crc32Mef</a> = CrcParametric&lt; crc32_mef_spec_t &gt;</td></tr>
+<tr class="memdesc:af11f5456e56e7d6ecd6859a3b947e8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/MEF.  <a href="a01259.html#af11f5456e56e7d6ecd6859a3b947e8e9">More...</a><br /></td></tr>
+<tr class="separator:af11f5456e56e7d6ecd6859a3b947e8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f7ec7b97dbf89379e09348401e43c0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a59f7ec7b97dbf89379e09348401e43c0">lumex::core::crc::parametric::Crc32Mpeg2</a> = CrcParametric&lt; crc32_mpeg2_spec_t &gt;</td></tr>
+<tr class="memdesc:a59f7ec7b97dbf89379e09348401e43c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/MPEG-2.  <a href="a01259.html#a59f7ec7b97dbf89379e09348401e43c0">More...</a><br /></td></tr>
+<tr class="separator:a59f7ec7b97dbf89379e09348401e43c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae36fda2af1b797e098903731fe600b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a1ae36fda2af1b797e098903731fe600b">lumex::core::crc::parametric::Crc32Xfer</a> = CrcParametric&lt; crc32_xfer_spec_t &gt;</td></tr>
+<tr class="memdesc:a1ae36fda2af1b797e098903731fe600b"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-32/XFER.  <a href="a01259.html#a1ae36fda2af1b797e098903731fe600b">More...</a><br /></td></tr>
+<tr class="separator:a1ae36fda2af1b797e098903731fe600b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17bcfb01be66045e13d521534add8f0c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a17bcfb01be66045e13d521534add8f0c">lumex::core::crc::parametric::Crc40Gsm</a> = CrcParametric&lt; crc40_gsm_spec_t &gt;</td></tr>
+<tr class="memdesc:a17bcfb01be66045e13d521534add8f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-40/GSM.  <a href="a01259.html#a17bcfb01be66045e13d521534add8f0c">More...</a><br /></td></tr>
+<tr class="separator:a17bcfb01be66045e13d521534add8f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b8fdb497fed2dbb509d71140ed780e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a21b8fdb497fed2dbb509d71140ed780e">lumex::core::crc::parametric::Crc64Ecma182</a> = CrcParametric&lt; crc64_ecma182_spec_t &gt;</td></tr>
+<tr class="memdesc:a21b8fdb497fed2dbb509d71140ed780e"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/ECMA-182.  <a href="a01259.html#a21b8fdb497fed2dbb509d71140ed780e">More...</a><br /></td></tr>
+<tr class="separator:a21b8fdb497fed2dbb509d71140ed780e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be581941c96b537338f807513df5ea9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a9be581941c96b537338f807513df5ea9">lumex::core::crc::parametric::Crc64GoIso</a> = CrcParametric&lt; crc64_go_iso_spec_t &gt;</td></tr>
+<tr class="memdesc:a9be581941c96b537338f807513df5ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/GO-ISO.  <a href="a01259.html#a9be581941c96b537338f807513df5ea9">More...</a><br /></td></tr>
+<tr class="separator:a9be581941c96b537338f807513df5ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4ea1f51ae1f02d4459b5af9ce4d50c4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#ab4ea1f51ae1f02d4459b5af9ce4d50c4">lumex::core::crc::parametric::Crc64Ms</a> = CrcParametric&lt; crc64_ms_spec_t &gt;</td></tr>
+<tr class="memdesc:ab4ea1f51ae1f02d4459b5af9ce4d50c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/MS.  <a href="a01259.html#ab4ea1f51ae1f02d4459b5af9ce4d50c4">More...</a><br /></td></tr>
+<tr class="separator:ab4ea1f51ae1f02d4459b5af9ce4d50c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5735f4719609ec80a74721485ea06a90"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a5735f4719609ec80a74721485ea06a90">lumex::core::crc::parametric::Crc64Nvme</a> = CrcParametric&lt; crc64_nvme_spec_t &gt;</td></tr>
+<tr class="memdesc:a5735f4719609ec80a74721485ea06a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/NVME.  <a href="a01259.html#a5735f4719609ec80a74721485ea06a90">More...</a><br /></td></tr>
+<tr class="separator:a5735f4719609ec80a74721485ea06a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2674edf0a34a95c9312852dc5820d176"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a2674edf0a34a95c9312852dc5820d176">lumex::core::crc::parametric::Crc64Redis</a> = CrcParametric&lt; crc64_redis_spec_t &gt;</td></tr>
+<tr class="memdesc:a2674edf0a34a95c9312852dc5820d176"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/REDIS.  <a href="a01259.html#a2674edf0a34a95c9312852dc5820d176">More...</a><br /></td></tr>
+<tr class="separator:a2674edf0a34a95c9312852dc5820d176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941349053bd3646d5ed08052ba0d4052"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a941349053bd3646d5ed08052ba0d4052">lumex::core::crc::parametric::Crc64We</a> = CrcParametric&lt; crc64_we_spec_t &gt;</td></tr>
+<tr class="memdesc:a941349053bd3646d5ed08052ba0d4052"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/WE.  <a href="a01259.html#a941349053bd3646d5ed08052ba0d4052">More...</a><br /></td></tr>
+<tr class="separator:a941349053bd3646d5ed08052ba0d4052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3099440d3e24512c50efbcd447ca069"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#af3099440d3e24512c50efbcd447ca069">lumex::core::crc::parametric::Crc64Xz</a> = CrcParametric&lt; crc64_xz_spec_t &gt;</td></tr>
+<tr class="memdesc:af3099440d3e24512c50efbcd447ca069"><td class="mdescLeft">&#160;</td><td class="mdescRight">CRC-64/XZ.  <a href="a01259.html#af3099440d3e24512c50efbcd447ca069">More...</a><br /></td></tr>
+<tr class="separator:af3099440d3e24512c50efbcd447ca069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa8048b088d18dda5e29fe5c5f8ee4c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01259.html#a1aa8048b088d18dda5e29fe5c5f8ee4c">lumex::core::crc::parametric::all_crc_algorithms_t</a> = std::tuple&lt; Crc3Gsm, Crc3Rohc, Crc4G704, Crc4Interlaken, Crc5Usb, Crc5EpcC1G2, Crc5G704, Crc6Cdma2000A, Crc6Cdma2000B, Crc6Darc, Crc6G704, Crc6Gsm, Crc7Mmc, Crc7Rohc, Crc7Umts, Crc8MaximDow, Crc8Cdma2000, Crc8Autosar, Crc8Bluetooth, Crc8Darc, Crc8DvbS2, Crc8GsmA, Crc8GsmB, Crc8Hitag, Crc8I4321, Crc8ICode, Crc8Lte, Crc8MifareMad, Crc8Nrsc5, Crc8Opensafety, Crc8Rohc, Crc8SaeJ1850, Crc8Smbus, Crc8Tech3250, Crc8Wcdma, Crc10Cdma2000, Crc10Atm, Crc10Gsm, Crc11Flexray, Crc11Umts, Crc12Cdma2000, Crc12Dect, Crc12Gsm, Crc12Umts, Crc13Bbc, Crc14Darc, Crc14Gsm, Crc15Can, Crc15Mpt1327, Crc16Cdma2000, Crc16Ibm3740, Crc16Kermit, Crc16Modbus, Crc16Arc, Crc16Cms, Crc16Dds110, Crc16DectR, Crc16DectX, Crc16Dnp, Crc16En13757, Crc16Genibus, Crc16Gsm, Crc16IbmSdlc, Crc16IsoIec144433A, Crc16Lj1200, Crc16M17, Crc16MaximDow, Crc16Mcrf4xx, Crc16Nrsc5, Crc16OpensafetyA, Crc16OpensafetyB, Crc16Profibus, Crc16Riello, Crc16SpiFujitsu, Crc16T10Dif, Crc16Teledisk, Crc16Tms37157, Crc16Umts, Crc16Usb, Crc16Xmodem, Crc17CanFd, Crc21CanFd, Crc24OpenPgp, Crc24Ble, Crc24FlexrayA, Crc24FlexrayB, Crc24Interlaken, Crc24LteA, Crc24LteB, Crc24Os9, Crc30Cdma, Crc31Philips, Crc32IsoHdlc, Crc32Iscsi, Crc32Aixm, Crc32Autosar, Crc32Base91D, Crc32Bzip2, Crc32CdRomEdc, Crc32Cksum, Crc32Jamcrc, Crc32Mef, Crc32Mpeg2, Crc32Xfer, Crc40Gsm, Crc64Ecma182, Crc64GoIso, Crc64Ms, Crc64Nvme, Crc64Redis, Crc64We, Crc64Xz &gt;</td></tr>
+<tr class="memdesc:a1aa8048b088d18dda5e29fe5c5f8ee4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Named CRC engines in the same order as <a class="el" href="a01259.html#a6f1426417a5a47ef7c9b1cd46bb656c4">all_crc_specs_t</a>. Each name is <code><a class="el" href="a02048.html" title="CRC computation parameterized by user specification Spec.">CrcParametric</a></code> of the matching specification.  <a href="a01259.html#a1aa8048b088d18dda5e29fe5c5f8ee4c">More...</a><br /></td></tr>
+<tr class="separator:a1aa8048b088d18dda5e29fe5c5f8ee4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00512.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5445ab3c4194b3d1a1066003047f83d5"><td class="memTemplParams" colspan="2">template&lt;typename Spec &gt; </td></tr>
+<tr class="memitem:a5445ab3c4194b3d1a1066003047f83d5"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01260.html#a5445ab3c4194b3d1a1066003047f83d5">lumex::core::crc::parametric::Detail::ValidateSpec</a> () noexcept</td></tr>
+<tr class="separator:a5445ab3c4194b3d1a1066003047f83d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7ba64f9e1598aaa8eed4575b3460b0e"><td class="memTemplParams" colspan="2">template&lt;int Width&gt; </td></tr>
+<tr class="memitem:ab7ba64f9e1598aaa8eed4575b3460b0e"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01260.html#ab7ba64f9e1598aaa8eed4575b3460b0e">lumex::core::crc::parametric::Detail::Mask</a> () noexcept</td></tr>
+<tr class="separator:ab7ba64f9e1598aaa8eed4575b3460b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba99f39d4a7667b3a2ce6dd58f6f791"><td class="memItemLeft" align="right" valign="top">constexpr std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01260.html#aaba99f39d4a7667b3a2ce6dd58f6f791">lumex::core::crc::parametric::Detail::Reflect</a> (std::uint64_t data, int width) noexcept</td></tr>
+<tr class="separator:aaba99f39d4a7667b3a2ce6dd58f6f791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf727c35c106263a18dc948017f2031a"><td class="memTemplParams" colspan="2">template&lt;int Width&gt; </td></tr>
+<tr class="memitem:aaf727c35c106263a18dc948017f2031a"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01260.html#aaf727c35c106263a18dc948017f2031a">lumex::core::crc::parametric::Detail::MsbTableByte</a> (std::uint64_t tableIndex, std::uint64_t poly) noexcept</td></tr>
+<tr class="separator:aaf727c35c106263a18dc948017f2031a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8058b103bca91864f8802662480d430f"><td class="memTemplParams" colspan="2">template&lt;int Width&gt; </td></tr>
+<tr class="memitem:a8058b103bca91864f8802662480d430f"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01260.html#a8058b103bca91864f8802662480d430f">lumex::core::crc::parametric::Detail::LsbTableByte</a> (std::uint64_t tableIndex, std::uint64_t poly) noexcept</td></tr>
+<tr class="separator:a8058b103bca91864f8802662480d430f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a5738b0f4f83a2a79c86c390c53db9"><td class="memTemplParams" colspan="2">template&lt;typename Spec , std::size_t Index&gt; </td></tr>
+<tr class="memitem:a69a5738b0f4f83a2a79c86c390c53db9"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01260.html#a69a5738b0f4f83a2a79c86c390c53db9">lumex::core::crc::parametric::Detail::LookupTableEntry</a> () noexcept</td></tr>
+<tr class="separator:a69a5738b0f4f83a2a79c86c390c53db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71834e3ab484c473b4f7a7c7bba32e0c"><td class="memTemplParams" colspan="2">template&lt;typename Spec , std::size_t... I&gt; </td></tr>
+<tr class="memitem:a71834e3ab484c473b4f7a7c7bba32e0c"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::array&lt; std::uint64_t, kTableByteCount &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01260.html#a71834e3ab484c473b4f7a7c7bba32e0c">lumex::core::crc::parametric::Detail::MakeLookupTableImpl</a> (std::index_sequence&lt; I... &gt;) noexcept</td></tr>
+<tr class="separator:a71834e3ab484c473b4f7a7c7bba32e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a103869e234586e44765cc6554b36bc07"><td class="memTemplParams" colspan="2">template&lt;typename Spec &gt; </td></tr>
+<tr class="memitem:a103869e234586e44765cc6554b36bc07"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::array&lt; std::uint64_t, kTableByteCount &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01260.html#a103869e234586e44765cc6554b36bc07">lumex::core::crc::parametric::Detail::MakeLookupTable</a> () noexcept</td></tr>
+<tr class="separator:a103869e234586e44765cc6554b36bc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae63403d09d2dba08441952871fa3610b"><td class="memTemplParams" colspan="2">template&lt;typename Spec &gt; </td></tr>
+<tr class="memitem:ae63403d09d2dba08441952871fa3610b"><td class="memTemplItemLeft" align="right" valign="top">constexpr Spec::ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01260.html#ae63403d09d2dba08441952871fa3610b">lumex::core::crc::parametric::Detail::ComputeBitwise</a> (std::uint8_t const *data, std::size_t size) noexcept</td></tr>
+<tr class="separator:ae63403d09d2dba08441952871fa3610b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9785f60c39ae30e760943199d3b8f306"><td class="memTemplParams" colspan="2">template&lt;typename Spec &gt; </td></tr>
+<tr class="memitem:a9785f60c39ae30e760943199d3b8f306"><td class="memTemplItemLeft" align="right" valign="top">constexpr Spec::ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01260.html#a9785f60c39ae30e760943199d3b8f306">lumex::core::crc::parametric::Detail::ComputeTableDriven</a> (std::uint8_t const *data, std::size_t size) noexcept</td></tr>
+<tr class="separator:a9785f60c39ae30e760943199d3b8f306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a8c53c3b4a3f6996a6baa029afe767"><td class="memTemplParams" colspan="2">template&lt;typename Spec &gt; </td></tr>
+<tr class="memitem:a19a8c53c3b4a3f6996a6baa029afe767"><td class="memTemplItemLeft" align="right" valign="top">constexpr Spec::ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01260.html#a19a8c53c3b4a3f6996a6baa029afe767">lumex::core::crc::parametric::Detail::Compute</a> (std::uint8_t const *data, std::size_t size) noexcept</td></tr>
+<tr class="separator:a19a8c53c3b4a3f6996a6baa029afe767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7d28f5ec4eb50510aa51d585d82d369c"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01260.html#a7d28f5ec4eb50510aa51d585d82d369c">lumex::core::crc::parametric::Detail::kMaxCrcBitWidth</a> = 64</td></tr>
+<tr class="separator:a7d28f5ec4eb50510aa51d585d82d369c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f2b0ed79388cc0105f778c5f718095f"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01260.html#a8f2b0ed79388cc0105f778c5f718095f">lumex::core::crc::parametric::Detail::kBitsPerByte</a> = 8</td></tr>
+<tr class="separator:a8f2b0ed79388cc0105f778c5f718095f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad914fe77c0ae739137b6848d5460e9ff"><td class="memItemLeft" align="right" valign="top">static const constinit std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01260.html#ad914fe77c0ae739137b6848d5460e9ff">lumex::core::crc::parametric::Detail::kTableByteCount</a> = 256U</td></tr>
+<tr class="separator:ad914fe77c0ae739137b6848d5460e9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cac45f56c8903b821f036cc0ce2b556"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01260.html#a8cac45f56c8903b821f036cc0ce2b556">lumex::core::crc::parametric::Detail::kByteMaskU8</a> = 0xFFU</td></tr>
+<tr class="separator:a8cac45f56c8903b821f036cc0ce2b556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aa7c16426ac597c3d51508846b8a10c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7c16426ac597c3d51508846b8a10c33">&#9670;&nbsp;</a></span>LUMEX_CRC_ARRAY_REF</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int main </td>
+          <td class="memname">#define LUMEX_CRC_ARRAY_REF</td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">table, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;  (table).at (static_cast&lt;std::size_t&gt; (index))</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00512_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#aa00512_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+
 </div>
+</div>
+<a id="aceac46ffd8e5813a8f1a247313ef70a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceac46ffd8e5813a8f1a247313ef70a1">&#9670;&nbsp;</a></span>LUMEX_CRC_DETAIL_CONSTEXPR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUMEX_CRC_DETAIL_CONSTEXPR&#160;&#160;&#160;<a class="el" href="a00701.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -144,7 +958,7 @@ Here is the call graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_5a400666d5453ed7996e0d2c1554a533.html">examples</a></li><li class="navelem"><a class="el" href="dir_394c381374cddad4f233988676985459.html">settings</a></li><li class="navelem"><a class="el" href="a00512.html">example_settings_xml.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2eed78fa94d1e9faad02cb0657b7390b.html">core</a></li><li class="navelem"><a class="el" href="dir_151da19bde5d804ceec895a888706424.html">crc</a></li><li class="navelem"><a class="el" href="dir_8f62f48b986fdb9bd543917859ec3090.html">parametric</a></li><li class="navelem"><a class="el" href="a00512.html">LumexCrcParametric.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

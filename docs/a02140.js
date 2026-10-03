@@ -1,9 +1,9 @@
 var a02140 =
 [
-    [ "create_temp_directory", "a02140.html#abf430b4d0f9007f6656403e55db719e3", null ],
-    [ "create_temp_file", "a02140.html#a8bd2908c92b8bb39a0de068df64054c4", null ],
-    [ "generate_temp_name", "a02140.html#a4ef24cb81629646cd77417cc03ba4c0c", null ],
-    [ "get_temp_directory_path", "a02140.html#a73e260b98cfd6efcb8519b38be1b3d1d", null ],
-    [ "remove_temp_directory", "a02140.html#a4d09cf8155cacee41cc20ca7f6859da4", null ],
-    [ "remove_temp_file", "a02140.html#ad0c6e6102d3834f1f6faf7ee991aa594", null ]
+    [ "failure_t", "a02140.html#ae16573dc8b699a1940dc29c1c149af38", null ],
+    [ "failure_t", "a02140.html#a0f1d679ad8c570f4b442991b75be3538", null ],
+    [ "error", "a02140.html#aa4dfbccdf62ce0947e48e077ea10ab02", null ],
+    [ "error", "a02140.html#aa2ceda34d60b35f5b8a54bca07aaa475", null ],
+    [ "operator Expected< Target, TargetError >", "a02140.html#a410eaa6122a37a5244ec2a086c78a5d2", null ],
+    [ "operator Expected< Target, TargetError >", "a02140.html#aa579007ef62998f55e5ee86798932a52", null ]
 ];

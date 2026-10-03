@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XmlParser.cpp File Reference</title>
+<title>LumexLib: LumexTextCase.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,310 +94,68 @@ $(document).ready(function(){initNavTree('a00623.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">XmlParser.cpp File Reference</div>  </div>
+<div class="title">LumexTextCase.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00308_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00575_source.html">lumex/xml/constants/XmlConstants.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00650_source.html">lumex/xml/utility/XmlMacros.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00653_source.html">lumex/xml/utility/XmlUtils.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00626_source.html">XmlParser.hpp</a>&quot;</code><br />
+
+<p>Normalizes text for case-insensitive comparison.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;cctype&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00680_source.html">lumex/core/utility/compiler/LumexCheckFeatures.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for XmlParser.cpp:</div>
+Include dependency graph for LumexTextCase.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00624.png" border="0" usemap="#aXmlParser_8cpp" alt=""/></div>
+<div class="center"><img src="a00624.png" border="0" usemap="#aLumexTextCase_8hpp" alt=""/></div>
+<map name="LumexTextCase_8hpp" id="aLumexTextCase_8hpp">
+<area shape="rect" title="Normalizes text for case&#45;insensitive comparison." alt="" coords="89,5,243,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,71,114"/>
+<area shape="rect" title=" " alt="" coords="95,87,154,114"/>
+<area shape="rect" title=" " alt="" coords="179,87,239,114"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="263,80,517,121"/>
+</map>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02624.html">gap</a></td></tr>
+</div>
+<p><a href="a00623_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02628.html">strconv_attribute_impl&lt; opt_escape &gt;</a></td></tr>
+<tr class="memitem:a01236"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01236.html">lumex::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02632.html">strconv_pcdata_impl&lt; opt_trim, opt_eol, opt_escape &gt;</a></td></tr>
+<tr class="memitem:a01296"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01296.html">lumex::core::string</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00623.html#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
-<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a918eab3cf1ece3dbcc7ab8192f122178"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00623.html#a918eab3cf1ece3dbcc7ab8192f122178">strconv_attribute_t</a>) (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>)</td></tr>
-<tr class="separator:a918eab3cf1ece3dbcc7ab8192f122178"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45e4452d83197af95daf503c5fdee289"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00623.html#a45e4452d83197af95daf503c5fdee289">strconv_pcdata_t</a>) (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *)</td></tr>
-<tr class="separator:a45e4452d83197af95daf503c5fdee289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01297"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01297.html">lumex::core::string::text</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab087609ffaf93456af188630f6719ef8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00623.html#ab087609ffaf93456af188630f6719ef8">strconv_escape</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *s, <a class="el" href="a02624.html">gap</a> &amp;g)</td></tr>
-<tr class="separator:ab087609ffaf93456af188630f6719ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51e9b0004ac41f142aeed82a9801e288"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00623.html#a918eab3cf1ece3dbcc7ab8192f122178">strconv_attribute_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00623.html#a51e9b0004ac41f142aeed82a9801e288">get_strconv_attribute</a> (unsigned int optmask)</td></tr>
-<tr class="separator:a51e9b0004ac41f142aeed82a9801e288"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab16e95a5dafbcc7014720a0a59aa9685"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00623.html#ab16e95a5dafbcc7014720a0a59aa9685">strconv_comment</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *str, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> endch)</td></tr>
-<tr class="separator:ab16e95a5dafbcc7014720a0a59aa9685"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e9bb3dcc63746e931e8ebdf07048740"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00623.html#a5e9bb3dcc63746e931e8ebdf07048740">strconv_cdata</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *str, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> endch)</td></tr>
-<tr class="separator:a5e9bb3dcc63746e931e8ebdf07048740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a107a81d20f6de13719a1c04b6eab36c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00623.html#a45e4452d83197af95daf503c5fdee289">strconv_pcdata_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00623.html#a107a81d20f6de13719a1c04b6eab36c8">get_strconv_pcdata</a> (unsigned int optmask)</td></tr>
-<tr class="separator:a107a81d20f6de13719a1c04b6eab36c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f7eb93f5a0d72fd633cee8e25bd05a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01297.html#ad8f7eb93f5a0d72fd633cee8e25bd05a">lumex::core::string::text::to_case_insensitive</a> (std::string &amp;str, bool need_to_remove_spaces=true)</td></tr>
+<tr class="memdesc:ad8f7eb93f5a0d72fd633cee8e25bd05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lowercases <code>str</code> in place (ASCII <code>std::tolower</code>), so later comparisons are case-insensitive.  <a href="a01297.html#ad8f7eb93f5a0d72fd633cee8e25bd05a">More...</a><br /></td></tr>
+<tr class="separator:ad8f7eb93f5a0d72fd633cee8e25bd05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d09555090576cec202f328fb11ddbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01297.html#af2d09555090576cec202f328fb11ddbf">lumex::core::string::text::to_case_insensitive</a> (std::string const &amp;orig, std::string &amp;out, bool need_to_remove_spaces=true)</td></tr>
+<tr class="memdesc:af2d09555090576cec202f328fb11ddbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-out overload of <code><a class="el" href="a01297.html#ad8f7eb93f5a0d72fd633cee8e25bd05a" title="Lowercases str in place (ASCII std::tolower), so later comparisons are case-insensitive.">to_case_insensitive(std::string &amp;, bool)</a></code>.  <a href="a01297.html#af2d09555090576cec202f328fb11ddbf">More...</a><br /></td></tr>
+<tr class="separator:af2d09555090576cec202f328fb11ddbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a07486181f1990291c2a348de8eb4c480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&nbsp;</a></span>LUMEX_IMPLEMENTATION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a918eab3cf1ece3dbcc7ab8192f122178"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a918eab3cf1ece3dbcc7ab8192f122178">&#9670;&nbsp;</a></span>strconv_attribute_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>*(* strconv_attribute_t) (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a45e4452d83197af95daf503c5fdee289"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45e4452d83197af95daf503c5fdee289">&#9670;&nbsp;</a></span>strconv_pcdata_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>*(* strconv_pcdata_t) (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a51e9b0004ac41f142aeed82a9801e288"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51e9b0004ac41f142aeed82a9801e288">&#9670;&nbsp;</a></span>get_strconv_attribute()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00623.html#a918eab3cf1ece3dbcc7ab8192f122178">strconv_attribute_t</a> get_strconv_attribute </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>optmask</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00623_a51e9b0004ac41f142aeed82a9801e288_icgraph.png" border="0" usemap="#aa00623_a51e9b0004ac41f142aeed82a9801e288_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a107a81d20f6de13719a1c04b6eab36c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a107a81d20f6de13719a1c04b6eab36c8">&#9670;&nbsp;</a></span>get_strconv_pcdata()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00623.html#a45e4452d83197af95daf503c5fdee289">strconv_pcdata_t</a> get_strconv_pcdata </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>optmask</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00623_a107a81d20f6de13719a1c04b6eab36c8_icgraph.png" border="0" usemap="#aa00623_a107a81d20f6de13719a1c04b6eab36c8_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a5e9bb3dcc63746e931e8ebdf07048740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e9bb3dcc63746e931e8ebdf07048740">&#9670;&nbsp;</a></span>strconv_cdata()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>* strconv_cdata </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>&#160;</td>
-          <td class="paramname"><em>endch</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00623_a5e9bb3dcc63746e931e8ebdf07048740_cgraph.png" border="0" usemap="#aa00623_a5e9bb3dcc63746e931e8ebdf07048740_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00623_a5e9bb3dcc63746e931e8ebdf07048740_icgraph.png" border="0" usemap="#aa00623_a5e9bb3dcc63746e931e8ebdf07048740_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ab16e95a5dafbcc7014720a0a59aa9685"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab16e95a5dafbcc7014720a0a59aa9685">&#9670;&nbsp;</a></span>strconv_comment()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>* strconv_comment </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>&#160;</td>
-          <td class="paramname"><em>endch</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00623_ab16e95a5dafbcc7014720a0a59aa9685_cgraph.png" border="0" usemap="#aa00623_ab16e95a5dafbcc7014720a0a59aa9685_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00623_ab16e95a5dafbcc7014720a0a59aa9685_icgraph.png" border="0" usemap="#aa00623_ab16e95a5dafbcc7014720a0a59aa9685_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ab087609ffaf93456af188630f6719ef8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab087609ffaf93456af188630f6719ef8">&#9670;&nbsp;</a></span>strconv_escape()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>* strconv_escape </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td>
-          <td class="paramname"><em>s</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02624.html">gap</a> &amp;&#160;</td>
-          <td class="paramname"><em>g</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00623_ab087609ffaf93456af188630f6719ef8_cgraph.png" border="0" usemap="#aa00623_ab087609ffaf93456af188630f6719ef8_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00623_ab087609ffaf93456af188630f6719ef8_icgraph.png" border="0" usemap="#aa00623_ab087609ffaf93456af188630f6719ef8_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Normalizes text for case-insensitive comparison. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_82e0585083a36608bf6220a9fbe911e9.html">xml</a></li><li class="navelem"><a class="el" href="dir_c8e77e9d4ae1b65c99617a40b01938d3.html">text</a></li><li class="navelem"><a class="el" href="a00623.html">XmlParser.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2eed78fa94d1e9faad02cb0657b7390b.html">core</a></li><li class="navelem"><a class="el" href="dir_459f7d6cb411def697850a9e92b67c08.html">string</a></li><li class="navelem"><a class="el" href="dir_7f2a87a12e57e05b49f1824eaaf6f6a8.html">text</a></li><li class="navelem"><a class="el" href="a00623.html">LumexTextCase.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

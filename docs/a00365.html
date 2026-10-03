@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexRanges.hpp File Reference</title>
+<title>LumexLib: LumexJsonHelper.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -93,30 +93,112 @@ $(document).ready(function(){initNavTree('a00365.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">LumexRanges.hpp File Reference</div>  </div>
+<div class="title">LumexJsonHelper.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;functional&gt;</code><br />
+
+<p>Non-throwing helpers for JSON configuration files and documents.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
 <code>#include &lt;iterator&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00311_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00326_source.html">lumex/core/utility/compiler/LumexCheckFeatures.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00347_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00362_source.html">lumex/applied/json/diagnostics/LumexJsonDiagnostics.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00704_source.html">lumex/core/utility/macros/LumexMacros.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexRanges.hpp:</div>
+Include dependency graph for LumexJsonHelper.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00366.png" border="0" usemap="#aLumexRanges_8hpp" alt=""/></div>
+<div class="center"><img src="a00366.png" border="0" usemap="#aLumexJsonHelper_8hpp" alt=""/></div>
+<map name="LumexJsonHelper_8hpp" id="aLumexJsonHelper_8hpp">
+<area shape="rect" title="Non&#45;throwing helpers for JSON configuration files and documents." alt="" coords="1394,5,1557,32"/>
+<area shape="rect" title=" " alt="" coords="5,281,76,307"/>
+<area shape="rect" title=" " alt="" coords="725,281,812,307"/>
+<area shape="rect" title=" " alt="" coords="1340,87,1413,114"/>
+<area shape="rect" title=" " alt="" coords="1438,87,1513,114"/>
+<area shape="rect" title=" " alt="" coords="1537,87,1608,114"/>
+<area shape="rect" title=" " alt="" coords="1633,87,1697,114"/>
+<area shape="rect" title=" " alt="" coords="1210,184,1269,211"/>
+<area shape="rect" title=" " alt="" coords="1721,87,1813,114"/>
+<area shape="rect" title=" " alt="" coords="1837,87,1935,114"/>
+<area shape="rect" title=" " alt="" coords="1959,87,2106,114"/>
+<area shape="rect" href="a00362.html" title="Process&#45;wide report sink for the non&#45;throwing JSON helpers." alt="" coords="907,80,1185,121"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="743,363,957,404"/>
+<area shape="rect" href="a00704.html" title=" " alt="" coords="2131,80,2327,121"/>
+<area shape="rect" title=" " alt="" coords="1119,184,1186,211"/>
+<area shape="rect" title=" " alt="" coords="978,281,1058,307"/>
+<area shape="rect" title=" " alt="" coords="658,184,733,211"/>
+<area shape="rect" href="a00611.html" title="X&#45;macro system that generates a scoped enum together with its own compile&#45;time reflection data and a ..." alt="" coords="246,169,481,225"/>
+<area shape="rect" href="a00671.html" title="Process&#45;wide slot for one consumer&#45;installed function pointer." alt="" coords="757,177,994,218"/>
+<area shape="rect" title=" " alt="" coords="101,281,157,307"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="181,273,370,315"/>
+<area shape="rect" href="a00695.html" title=" " alt="" coords="395,273,649,315"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="148,363,403,404"/>
+<area shape="rect" title=" " alt="" coords="887,281,954,307"/>
+</map>
 </div>
 </div>
 <p><a href="a00365_source.html">Go to the source code of this file.</a></p>
-</div><!-- contents -->
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01404.html">lumex::applied::json::helper::LumexJsonHelper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One API for flat and sectioned JSON configurations.  <a href="a01404.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01186"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01186.html">lumex::applied</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01200"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01200.html">lumex::applied::json</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01203"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01203.html">lumex::applied::json::helper</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01204"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01204.html">lumex::applied::json::helper::Detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a93440710aefc3cd89d32f3916f915f66"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01204.html#a93440710aefc3cd89d32f3916f915f66">lumex::applied::json::helper::Detail::is_empty_value</a> (std::string const &amp;value) noexcept</td></tr>
+<tr class="memdesc:a93440710aefc3cd89d32f3916f915f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a value is an empty string. <code>set_value</code> refuses to store one. Non-string types are never empty.  <a href="a01204.html#a93440710aefc3cd89d32f3916f915f66">More...</a><br /></td></tr>
+<tr class="separator:a93440710aefc3cd89d32f3916f915f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab316248d96a20a7553e2816b5db5f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01204.html#a3ab316248d96a20a7553e2816b5db5f4">lumex::applied::json::helper::Detail::is_empty_value</a> (char const *value) noexcept</td></tr>
+<tr class="separator:a3ab316248d96a20a7553e2816b5db5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac03ca3e92b76a2447489e71063e2d9f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01204.html#ac03ca3e92b76a2447489e71063e2d9f4">lumex::applied::json::helper::Detail::is_empty_value</a> (char *value) noexcept</td></tr>
+<tr class="separator:ac03ca3e92b76a2447489e71063e2d9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381fe9ef168d3f139d22480b05e94b8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01204.html#a381fe9ef168d3f139d22480b05e94b8f">lumex::applied::json::helper::Detail::is_empty_value</a> (std::string_view value) noexcept</td></tr>
+<tr class="separator:a381fe9ef168d3f139d22480b05e94b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80e7617c79019916105d35ada3be0dd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa80e7617c79019916105d35ada3be0dd"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01204.html#aa80e7617c79019916105d35ada3be0dd">lumex::applied::json::helper::Detail::is_empty_value</a> (T const &amp;) noexcept</td></tr>
+<tr class="separator:aa80e7617c79019916105d35ada3be0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Non-throwing helpers for JSON configuration files and documents. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_1be6b143c34d1233efa44119afd007e9.html">core</a></li><li class="navelem"><a class="el" href="dir_97f9291aa38cf72533b0e25925a64744.html">utility</a></li><li class="navelem"><a class="el" href="dir_3935949d2427c8d321173d18782077a9.html">ranges</a></li><li class="navelem"><a class="el" href="a00365.html">LumexRanges.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_de45db85bd98abf883bc2bd6c3907fd8.html">applied</a></li><li class="navelem"><a class="el" href="dir_3e92e8848bcd01e21718dfea84e9b21e.html">json</a></li><li class="navelem"><a class="el" href="dir_601a474ec840ac9a631059b9bff4213c.html">helper</a></li><li class="navelem"><a class="el" href="a00365.html">LumexJsonHelper.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

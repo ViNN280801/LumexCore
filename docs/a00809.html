@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: std Namespace Reference</title>
+<title>LumexLib: example_json.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,102 +94,74 @@ $(document).ready(function(){initNavTree('a00809.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">std Namespace Reference</div>  </div>
+<div class="title">example_json.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01640.html">hash&lt; lumex::core::exceptions::stacktrace::LumexStacktraceEntry &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partial specialization of <code>std::hash</code> for <code><a class="el" href="a01636.html">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a></code>.  <a href="a01640.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02076.html">hash&lt;::lumex::core::optional::opt::optional&lt; T &gt; &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of <code>std::hash</code> for Lumex <code>optional</code>.  <a href="a02076.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &quot;lumex/applied/json/LumexJson&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00632_source.html">lumex/core/string_view/view/LumexStringView.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for example_json.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00810.png" border="0" usemap="#aexample__json_8cpp" alt=""/></div>
+<map name="example__json_8cpp" id="aexample__json_8cpp">
+<area shape="rect" title=" " alt="" coords="250,5,390,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,67,114"/>
+<area shape="rect" title=" " alt="" coords="91,87,178,114"/>
+<area shape="rect" title=" " alt="" coords="203,87,283,114"/>
+<area shape="rect" title=" " alt="" coords="291,177,349,203"/>
+<area shape="rect" title=" " alt="" coords="357,87,504,114"/>
+<area shape="rect" title=" " alt="" coords="528,80,675,121"/>
+<area shape="rect" href="a00632.html" title="C++11 lightweight, non&#45;owning view over character sequences." alt="" coords="700,80,903,121"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="373,177,555,203"/>
+<area shape="rect" title=" " alt="" coords="579,177,650,203"/>
+<area shape="rect" title=" " alt="" coords="675,177,741,203"/>
+<area shape="rect" title=" " alt="" coords="766,177,837,203"/>
+<area shape="rect" title=" " alt="" coords="861,177,937,203"/>
+<area shape="rect" title=" " alt="" coords="961,169,1098,211"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="1123,169,1312,211"/>
+<area shape="rect" href="a00695.html" title=" " alt="" coords="1337,169,1591,211"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="1445,259,1659,300"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="1090,259,1345,300"/>
+</map>
+</div>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a84098c06fe8164ffaa90b2f13650ad2b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:a84098c06fe8164ffaa90b2f13650ad2b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_array&lt; T &gt;::value, std::unique_ptr&lt; T &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00809.html#a84098c06fe8164ffaa90b2f13650ad2b">make_unique</a> (Args &amp;&amp;...args)</td></tr>
-<tr class="separator:a84098c06fe8164ffaa90b2f13650ad2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c5c92b716f091c6950f13c726212277"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a9c5c92b716f091c6950f13c726212277"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_array&lt; T &gt;::value, std::unique_ptr&lt; T &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00809.html#a9c5c92b716f091c6950f13c726212277">make_unique</a> (std::size_t n)</td></tr>
-<tr class="separator:a9c5c92b716f091c6950f13c726212277"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5d66d51654fedf1fd6d164c6c8b3517"><td class="memTemplParams" colspan="2">template&lt;class T , class U  = T&gt; </td></tr>
-<tr class="memitem:aa5d66d51654fedf1fd6d164c6c8b3517"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00347.html#a81fe93b4daec85db53b06073263b888f">LUMEX_CONSTEXPR_FUNCTION</a> T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00809.html#aa5d66d51654fedf1fd6d164c6c8b3517">exchange</a> (T &amp;obj, U &amp;&amp;new_value) <a class="el" href="a00347.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a>(std</td></tr>
-<tr class="separator:aa5d66d51654fedf1fd6d164c6c8b3517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00809.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aa5d66d51654fedf1fd6d164c6c8b3517"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5d66d51654fedf1fd6d164c6c8b3517">&#9670;&nbsp;</a></span>exchange()</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class T , class U  = T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00347.html#a81fe93b4daec85db53b06073263b888f">LUMEX_CONSTEXPR_FUNCTION</a> T std::exchange </td>
+          <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>obj</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">U &amp;&amp;&#160;</td>
-          <td class="paramname"><em>new_value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a84098c06fe8164ffaa90b2f13650ad2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84098c06fe8164ffaa90b2f13650ad2b">&#9670;&nbsp;</a></span>make_unique() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt;!std::is_array&lt;T&gt;::value, std::unique_ptr&lt;T&gt; &gt;::type std::make_unique </td>
-          <td>(</td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00809_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#aa00809_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="a00809_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="aa00809_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,60,60,87"/>
+<area shape="rect" href="a01201.html#a7c1c9ae8fd4d21054801c40a3c89dbb5" title="Installs the report sink. nullptr restores the default (warning and error to std::cerr,..." alt="" coords="118,5,325,61"/>
+<area shape="rect" href="a01420.html#a2df9663a65e867dfe959e6b332547544" title="Strict: throws on the first violation. Non&#45;strict: never throws for a violation and discards it; use ..." alt="" coords="108,85,335,141"/>
+</map>
 </div>
-</div>
-<a id="a9c5c92b716f091c6950f13c726212277"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c5c92b716f091c6950f13c726212277">&#9670;&nbsp;</a></span>make_unique() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt;std::is_array&lt;T&gt;::value, std::unique_ptr&lt;T&gt; &gt;::type std::make_unique </td>
-          <td>(</td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -198,7 +170,7 @@ template&lt;typename T &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00809.html">std</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_e8ae4df8b8335e2a73ecf531ee4a4a97.html">examples</a></li><li class="navelem"><a class="el" href="dir_4071ad1724fa0e77f3bdca2354e6ad35.html">json</a></li><li class="navelem"><a class="el" href="a00809.html">example_json.cpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

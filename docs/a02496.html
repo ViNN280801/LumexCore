@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::utility::traits::numeric::is_safe_comparable&lt; T, U &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::core::math::ops::Detail::range_pair_result&lt; Range1, Range2, bool &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -93,84 +93,29 @@ $(document).ready(function(){initNavTree('a02496.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="a02493.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::utility::traits::numeric::is_safe_comparable&lt; T, U &gt; Struct Template Reference</div>  </div>
+<div class="title">lumex::core::math::ops::Detail::range_pair_result&lt; Range1, Range2, bool &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Both types (without cv / reference) are arithmetic with a specialized <code>std::numeric_limits</code>, so <code>SafeComparator</code> can compare them.  
+<p><code>sqrt</code> result type of the common element type of two numeric ranges; no <code>type</code> otherwise.  
  <a href="a02496.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00368_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for lumex::core::utility::traits::numeric::is_safe_comparable&lt; T, U &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02495.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1numeric_1_1is__safe__comparable_3_01T_00_01U_01_4_inherit__map" alt="Inheritance graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for lumex::core::utility::traits::numeric::is_safe_comparable&lt; T, U &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02494.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1numeric_1_1is__safe__comparable_3_01T_00_01U_01_4_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a7021bd6365424c2b4d79fc00b441b442"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02496.html#a7021bd6365424c2b4d79fc00b441b442">clean_T</a> = <a class="el" href="a00912.html#a9c412384941b81b9d13b9077e997c8fa">meta::CleanType</a>&lt; T &gt;</td></tr>
-<tr class="separator:a7021bd6365424c2b4d79fc00b441b442"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af674b990c97840a2f61376bd871fdb54"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02496.html#af674b990c97840a2f61376bd871fdb54">clean_U</a> = <a class="el" href="a00912.html#a9c412384941b81b9d13b9077e997c8fa">meta::CleanType</a>&lt; U &gt;</td></tr>
-<tr class="separator:af674b990c97840a2f61376bd871fdb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p><code>#include &lt;<a class="el" href="a00599_source.html">LumexMath.hpp</a>&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, typename U&gt;<br />
-struct lumex::core::utility::traits::numeric::is_safe_comparable&lt; T, U &gt;</h3>
+<div class="textblock"><h3>template&lt;typename Range1, typename Range2, bool = is_numeric_range&lt;Range1&gt;::value &amp;&amp; is_numeric_range&lt;Range2&gt;::value&gt;<br />
+struct lumex::core::math::ops::Detail::range_pair_result&lt; Range1, Range2, bool &gt;</h3>
 
-<p>Both types (without cv / reference) are arithmetic with a specialized <code>std::numeric_limits</code>, so <code>SafeComparator</code> can compare them. </p>
-<p>Derived from <code>std::integral_constant</code> like the standard traits: the standard library defines <code>value</code> in every standard, while a plain in-class <code>static const</code> member fails to link once it is odr-used (<code>EXPECT_TRUE</code> binds it to a reference) in a build without optimization. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a7021bd6365424c2b4d79fc00b441b442"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7021bd6365424c2b4d79fc00b441b442">&#9670;&nbsp;</a></span>clean_T</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02496.html">lumex::core::utility::traits::numeric::is_safe_comparable</a>&lt; T, U &gt;::<a class="el" href="a02496.html#a7021bd6365424c2b4d79fc00b441b442">clean_T</a> =  <a class="el" href="a00912.html#a9c412384941b81b9d13b9077e997c8fa">meta::CleanType</a>&lt;T&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af674b990c97840a2f61376bd871fdb54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af674b990c97840a2f61376bd871fdb54">&#9670;&nbsp;</a></span>clean_U</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a02496.html">lumex::core::utility::traits::numeric::is_safe_comparable</a>&lt; T, U &gt;::<a class="el" href="a02496.html#af674b990c97840a2f61376bd871fdb54">clean_U</a> =  <a class="el" href="a00912.html#a9c412384941b81b9d13b9077e997c8fa">meta::CleanType</a>&lt;U&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00368_source.html">LumexTypeTraits.hpp</a></li>
+<p><code>sqrt</code> result type of the common element type of two numeric ranges; no <code>type</code> otherwise. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00599_source.html">LumexMath.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00898.html">utility</a></li><li class="navelem"><a class="el" href="a00911.html">traits</a></li><li class="navelem"><a class="el" href="a00922.html">numeric</a></li><li class="navelem"><a class="el" href="a02496.html">is_safe_comparable</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01283.html">math</a></li><li class="navelem"><a class="el" href="a01284.html">ops</a></li><li class="navelem"><a class="el" href="a01286.html">Detail</a></li><li class="navelem"><a class="el" href="a02496.html">range_pair_result</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

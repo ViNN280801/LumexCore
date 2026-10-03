@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::reflection::field_reflection::detail::make_index_sequence&lt; N &gt; Struct Template Reference</title>
+<title>LumexLib: std::hash&lt; lumex::core::exceptions::stacktrace::LumexStacktraceEntry &gt; Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -93,31 +93,74 @@ $(document).ready(function(){initNavTree('a02092.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a02089.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::reflection::field_reflection::detail::make_index_sequence&lt; N &gt; Struct Template Reference</div>  </div>
+<div class="title">std::hash&lt; lumex::core::exceptions::stacktrace::LumexStacktraceEntry &gt; Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00251_source.html">LumexAggregateFields.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for lumex::core::reflection::field_reflection::detail::make_index_sequence&lt; N &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02091.png" border="0" usemap="#alumex_1_1core_1_1reflection_1_1field__reflection_1_1detail_1_1make__index__sequence_3_01N_01_4_inherit__map" alt="Inheritance graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for lumex::core::reflection::field_reflection::detail::make_index_sequence&lt; N &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02090.png" border="0" usemap="#alumex_1_1core_1_1reflection_1_1field__reflection_1_1detail_1_1make__index__sequence_3_01N_01_4_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p>Partial specialization of <code>std::hash</code> for <code><a class="el" href="a02088.html" title="Represents a single entry (frame) in a stacktrace.">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a></code>.  
+ <a href="a02092.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00557_source.html">LumexStacktraceEntry.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:abc4b7396b937b2087d4394a63ea1e192"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02092.html#abc4b7396b937b2087d4394a63ea1e192">operator()</a> (<a class="el" href="a02088.html">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a> const &amp;entry) const noexcept</td></tr>
+<tr class="memdesc:abc4b7396b937b2087d4394a63ea1e192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the hash value for a <code>LumexStacktraceEntry</code> object.  <a href="a02092.html#abc4b7396b937b2087d4394a63ea1e192">More...</a><br /></td></tr>
+<tr class="separator:abc4b7396b937b2087d4394a63ea1e192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Partial specialization of <code>std::hash</code> for <code><a class="el" href="a02088.html" title="Represents a single entry (frame) in a stacktrace.">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a></code>. </p>
+<p>This specialization provides a hash function for <code>LumexStacktraceEntry</code> objects, enabling their use in hash-based containers like <code>std::unordered_set</code> and <code>std::unordered_map</code>. The hash value is computed based on the native handle (address) of the stack entry. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abc4b7396b937b2087d4394a63ea1e192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc4b7396b937b2087d4394a63ea1e192">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t std::hash&lt; <a class="el" href="a02088.html">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a> &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02088.html">lumex::core::exceptions::stacktrace::LumexStacktraceEntry</a> const &amp;&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the hash value for a <code>LumexStacktraceEntry</code> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>The <code>LumexStacktraceEntry</code> object to hash. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code>std::size_t</code> representing the hash value of the entry's native handle. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This operator is <code>noexcept</code>. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00251_source.html">LumexAggregateFields.hpp</a></li>
+<li><a class="el" href="a00557_source.html">LumexStacktraceEntry.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00879.html">reflection</a></li><li class="navelem"><a class="el" href="a00880.html">field_reflection</a></li><li class="navelem"><a class="el" href="a00881.html">detail</a></li><li class="navelem"><a class="el" href="a02092.html">make_index_sequence</a></li>
+    <li class="navelem"><a class="el" href="a01271.html">std</a></li><li class="navelem"><a class="el" href="a02092.html">hash&lt; lumex::core::exceptions::stacktrace::LumexStacktraceEntry &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexTypeTraits.hpp File Reference</title>
+<title>LumexLib: ILumexJsonNormalizer.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -95,368 +95,83 @@ $(document).ready(function(){initNavTree('a00368.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">LumexTypeTraits.hpp File Reference</div>  </div>
+<div class="title">ILumexJsonNormalizer.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Every general-purpose type trait of LumexLib, one sub-namespace of <code><a class="el" href="a00911.html">lumex::core::utility::traits</a></code> per topic: <code>meta</code>, <code>invoke</code>, <code>stream</code>, <code>range</code>, <code>string</code>, <code>tuple</code>, <code>value</code>, <code>enums</code>, <code>numeric</code>.  
+<p>Contract for turning raw JSON text into a canonical document.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;array&gt;</code><br />
-<code>#include &lt;cstddef&gt;</code><br />
-<code>#include &lt;functional&gt;</code><br />
-<code>#include &lt;iterator&gt;</code><br />
-<code>#include &lt;limits&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;ostream&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;tuple&gt;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
-<code>#include &lt;utility&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00308_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00326_source.html">lumex/core/utility/compiler/LumexCheckFeatures.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00341_source.html">lumex/core/utility/macros/LumexConstantMacros.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00347_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00632_source.html">lumex/core/string_view/view/LumexStringView.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexTypeTraits.hpp:</div>
+Include dependency graph for ILumexJsonNormalizer.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00369.png" border="0" usemap="#aLumexTypeTraits_8hpp" alt=""/></div>
+<div class="center"><img src="a00369.png" border="0" usemap="#aILumexJsonNormalizer_8hpp" alt=""/></div>
+<map name="ILumexJsonNormalizer_8hpp" id="aILumexJsonNormalizer_8hpp">
+<area shape="rect" title="Contract for turning raw JSON text into a canonical document." alt="" coords="341,5,537,32"/>
+<area shape="rect" title=" " alt="" coords="156,87,243,114"/>
+<area shape="rect" title=" " alt="" coords="267,87,414,114"/>
+<area shape="rect" href="a00632.html" title="C++11 lightweight, non&#45;owning view over character sequences." alt="" coords="438,80,641,121"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="1169,169,1358,211"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="633,177,814,203"/>
+<area shape="rect" title=" " alt="" coords="5,177,76,203"/>
+<area shape="rect" title=" " alt="" coords="101,177,167,203"/>
+<area shape="rect" title=" " alt="" coords="192,177,263,203"/>
+<area shape="rect" title=" " alt="" coords="287,177,363,203"/>
+<area shape="rect" title=" " alt="" coords="387,177,446,203"/>
+<area shape="rect" title=" " alt="" coords="471,169,608,211"/>
+<area shape="rect" href="a00695.html" title=" " alt="" coords="839,169,1093,211"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="879,259,1093,300"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="1136,259,1391,300"/>
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00370.png" border="0" usemap="#aLumexTypeTraits_8hppdep" alt=""/></div>
+<div class="center"><img src="a00370.png" border="0" usemap="#aILumexJsonNormalizer_8hppdep" alt=""/></div>
+<map name="ILumexJsonNormalizer_8hppdep" id="aILumexJsonNormalizer_8hppdep">
+<area shape="rect" title="Contract for turning raw JSON text into a canonical document." alt="" coords="29,5,225,32"/>
+<area shape="rect" href="a00371.html" title="Abstract base for per&#45;operation normalizers built on the schema walker." alt="" coords="5,80,249,107"/>
+</map>
 </div>
 </div>
 <p><a href="a00368_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02216.html">lumex::core::utility::traits::meta::make_void&lt;... &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02220.html">lumex::core::utility::traits::meta::has_type&lt; T, typename &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02224.html">lumex::core::utility::traits::meta::has_type&lt; T, void_t&lt; typename T::type &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02228.html">lumex::core::utility::traits::meta::type_identity&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>type</code> is <code>T</code>. Used to keep a parameter out of template argument deduction (C++20 <code>std::type_identity</code>).  <a href="a02228.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02232.html">lumex::core::utility::traits::meta::default_return&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper providing a default value for a type, primarily meant for exception-safe fallbacks.  <a href="a02232.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02236.html">lumex::core::utility::traits::meta::default_return&lt; void &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02240.html">lumex::core::utility::traits::meta::default_return&lt; T * &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02244.html">lumex::core::utility::traits::meta::indirection_of&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>type</code> is what a pointer or reference points to: <code>T</code> for <code>T *</code>, <code>T &amp;</code> and <code>T</code> itself.  <a href="a02244.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02248.html">lumex::core::utility::traits::meta::indirection_of&lt; T * &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02252.html">lumex::core::utility::traits::meta::indirection_of&lt; T &amp; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02256.html">lumex::core::utility::traits::invoke::detail::is_reference_wrapper&lt; T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02260.html">lumex::core::utility::traits::invoke::detail::is_reference_wrapper&lt; std::reference_wrapper&lt; U &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02264.html">lumex::core::utility::traits::invoke::detail::invoke_impl&lt; T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02268.html">lumex::core::utility::traits::invoke::detail::invoke_impl&lt; MT B::* &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02272.html">lumex::core::utility::traits::invoke::detail::invoke_result_impl&lt; AlwaysVoid, typename,... &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02276.html">lumex::core::utility::traits::invoke::detail::invoke_result_impl&lt; meta::void_t&lt; decltype(INVOKE(std::declval&lt; F &gt;(), std::declval&lt; Args &gt;()...))&gt;, F, Args... &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02280.html">lumex::core::utility::traits::invoke::invoke_result&lt; Func, Args &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02288.html">lumex::core::utility::traits::invoke::result_of&lt; Func(Args...)&gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02292.html">lumex::core::utility::traits::invoke::is_invocable&lt; Func, Args &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02300.html">lumex::core::utility::traits::invoke::is_callable_signature&lt; Func(Args...)&gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02304.html">lumex::core::utility::traits::invoke::is_callable&lt; Func, Args &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type trait checking whether Func is Callable with Args... (Callable Named Requirement).  <a href="a02304.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02308.html">lumex::core::utility::traits::stream::detail::is_streamable_expression&lt; T, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>std::declval&lt;std::ostream &amp;&gt;() &lt;&lt; std::declval&lt;T&gt;()</code> compiles.  <a href="a02308.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02312.html">lumex::core::utility::traits::stream::detail::is_streamable_expression&lt; T, meta::void_t&lt; decltype(std::declval&lt; std::ostream &amp; &gt;()&lt;&lt; std::declval&lt; T &gt;())&gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02316.html">lumex::core::utility::traits::stream::detail::is_address_streamed&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smart pointers that <a class="el" href="a00889.html#a644d51beb3d991564cc81242883fd17a">lumex::core::string::utility::stringify</a> streams as their raw address through its own operator&lt;&lt; overloads, which the expression check above cannot see. The standard library has the same overloads only since C++20 and only in newer releases (libstdc++ 12), so stringify keeps its own in every standard.  <a href="a02316.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02320.html">lumex::core::utility::traits::stream::detail::is_address_streamed&lt; std::unique_ptr&lt; T, D &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02324.html">lumex::core::utility::traits::stream::detail::is_address_streamed&lt; std::shared_ptr&lt; T &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02328.html">lumex::core::utility::traits::stream::is_ostreamable&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>std::declval&lt;std::ostream &amp;&gt;() &lt;&lt; std::declval&lt;T&gt;()</code> is well-formed: exactly what the standard library streams, without the smart-pointer extras of <code><a class="el" href="a02344.html" title="std::true_type when std::declval&lt;std::ostream &amp;&gt;() &lt;&lt; std::declval&lt;T&gt;() is well-formed (or,...">is_streamable</a></code>.  <a href="a02328.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02336.html">lumex::core::utility::traits::stream::all_ostreamable&lt;&gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02340.html">lumex::core::utility::traits::stream::all_ostreamable&lt; First, Rest... &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02344.html">lumex::core::utility::traits::stream::is_streamable&lt; T, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>std::true_type</code> when <code>std::declval&lt;std::ostream &amp;&gt;() &lt;&lt; std::declval&lt;T&gt;()</code> is well-formed (or, below C++20, <code>T</code> is a <code>std::unique_ptr</code> / <code>std::shared_ptr</code>), otherwise <code>std::false_type</code>.  <a href="a02344.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02352.html">lumex::core::utility::traits::stream::all_streamable&lt;&gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02356.html">lumex::core::utility::traits::stream::all_streamable&lt; First, Rest... &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02360.html">lumex::core::utility::traits::range::range_reference&lt; Range, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>type</code> is what <code>*std::begin(range)</code> yields for a <code>Range const &amp;</code> that has <code>std::begin</code>, <code>std::end</code>, <code>!=</code> and <code>++</code>; absent otherwise, so it can drive SFINAE.  <a href="a02360.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02364.html">lumex::core::utility::traits::range::range_reference&lt; Range, meta::void_t&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;()) !=std::end(std::declval&lt; Range const &amp; &gt;())), decltype(++std::declval&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;())) &amp; &gt;()), decltype(*std::begin(std::declval&lt; Range const &amp; &gt;()))&gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02368.html">lumex::core::utility::traits::range::is_iterable&lt; Range, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>Range const &amp;</code> can be walked (see <code><a class="el" href="a02360.html" title="type is what *std::begin(range) yields for a Range const &amp; that has std::begin, std::end,...">range_reference</a></code>).  <a href="a02368.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02372.html">lumex::core::utility::traits::range::is_iterable&lt; Range, meta::void_t&lt; typename range_reference&lt; Range &gt;::type &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02376.html">lumex::core::utility::traits::range::has_streamable_elements&lt; Range, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>Range</code> is iterable and its elements (after <code>std::decay</code>) are streamable.  <a href="a02376.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02380.html">lumex::core::utility::traits::range::has_streamable_elements&lt; Range, meta::void_t&lt; typename range_reference&lt; Range &gt;::type &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02384.html">lumex::core::utility::traits::range::has_elements_convertible_to&lt; Range, To, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>Range</code> is iterable and its element reference converts to <code>To</code> (for example <code>std::string const &amp;</code>).  <a href="a02384.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02388.html">lumex::core::utility::traits::range::has_elements_convertible_to&lt; Range, To, meta::void_t&lt; typename range_reference&lt; Range &gt;::type &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02392.html">lumex::core::utility::traits::range::has_key_type&lt; T, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> has a nested type <code>key_type</code> (associative containers).  <a href="a02392.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02396.html">lumex::core::utility::traits::range::has_key_type&lt; T, meta::void_t&lt; typename T::key_type &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02400.html">lumex::core::utility::traits::range::has_mapped_type&lt; T, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> has a nested type <code>mapped_type</code> (maps).  <a href="a02400.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02404.html">lumex::core::utility::traits::range::has_mapped_type&lt; T, meta::void_t&lt; typename T::mapped_type &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02408.html">lumex::core::utility::traits::range::has_convertible_size&lt; T, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>std::declval&lt;T&gt;().size()</code> exists and converts to <code>std::size_t</code>.  <a href="a02408.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02412.html">lumex::core::utility::traits::range::has_convertible_size&lt; T, meta::void_t&lt; decltype(std::declval&lt; T &gt;().size())&gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02416.html">lumex::core::utility::traits::range::has_convertible_indexed_access&lt; T, To, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>std::declval&lt;T&gt;()[std::size_t]</code> exists and its result converts to <code>To</code> (for example a byte type for a byte buffer).  <a href="a02416.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02420.html">lumex::core::utility::traits::range::has_convertible_indexed_access&lt; T, To, meta::void_t&lt; decltype(std::declval&lt; T &gt;()[std::declval&lt; std::size_t &gt;()])&gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02424.html">lumex::core::utility::traits::string::is_string_like&lt; T, Char, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> is a contiguous string of <code>Char</code>: it has <code>data()</code> convertible to <code>Char const *</code>, <code>size()</code>, <code>T::npos</code> and <code>T::value_type == Char</code>.  <a href="a02424.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02428.html">lumex::core::utility::traits::string::is_string_like&lt; T, Char, meta::void_t&lt; typename T::value_type, decltype(T::npos), decltype(std::declval&lt; T const &amp; &gt;().size()), decltype(std::declval&lt; T const &amp; &gt;().data())&gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02432.html">lumex::core::utility::traits::string::is_any_string&lt; T, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> is a string of its own <code>value_type</code> (see <code><a class="el" href="a02424.html" title="T is a contiguous string of Char: it has data() convertible to Char const *, size(),...">is_string_like</a></code>), for any character type: <code>std::string</code>, <code>std::wstring</code>, string views.  <a href="a02432.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02436.html">lumex::core::utility::traits::string::is_any_string&lt; T, meta::void_t&lt; typename T::value_type &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02440.html">lumex::core::utility::traits::tuple::is_pair_like&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> is a <code>std::pair</code> or a two-element <code>std::tuple</code>.  <a href="a02440.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02444.html">lumex::core::utility::traits::tuple::is_pair_like&lt; std::pair&lt; First, Second &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02448.html">lumex::core::utility::traits::tuple::is_pair_like&lt; std::tuple&lt; First, Second &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02452.html">lumex::core::utility::traits::value::is_optional&lt; T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02456.html">lumex::core::utility::traits::value::is_optional&lt; T const &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02460.html">lumex::core::utility::traits::value::is_optional&lt; T volatile &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02464.html">lumex::core::utility::traits::value::is_optional&lt; T const volatile &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02468.html">lumex::core::utility::traits::value::is_optional&lt; lumex::core::optional::opt::optional&lt; T &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02472.html">lumex::core::utility::traits::value::is_expected&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> is a <code><a class="el" href="a01652.html">lumex::core::expected::result::Expected</a>&lt;S, E&gt;</code>.  <a href="a02472.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02476.html">lumex::core::utility::traits::value::is_expected&lt; lumex::core::expected::result::Expected&lt; S, E &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02480.html">lumex::core::utility::traits::value::is_optional_like&lt; T, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> looks like an optional: <code>has_value ()</code> and unary <code>*</code> work on a <code>T const &amp;</code> (std::optional, LumexLib optional, similar wrappers).  <a href="a02480.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02484.html">lumex::core::utility::traits::value::is_optional_like&lt; T, meta::void_t&lt; decltype(std::declval&lt; T const &amp; &gt;().has_value()), decltype(*std::declval&lt; T const &amp; &gt;())&gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02488.html">lumex::core::utility::traits::enums::is_reflected_enum&lt; T, Enable &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>T</code> is an enum with a <code>toString (T)</code> found by argument-dependent lookup that returns something convertible to <code>char const *</code>, as generated by <code>LUMEX_DEFINE_REFLECTED_ENUM</code> at namespace scope.  <a href="a02488.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02492.html">lumex::core::utility::traits::enums::is_reflected_enum&lt; T, meta::void_t&lt; decltype(toString(std::declval&lt; T &gt;()))&gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02496.html">lumex::core::utility::traits::numeric::is_safe_comparable&lt; T, U &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Both types (without cv / reference) are arithmetic with a specialized <code>std::numeric_limits</code>, so <code>SafeComparator</code> can compare them.  <a href="a02496.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01408.html">lumex::applied::json::normalization::ILumexJsonNormalizer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses raw JSON text, checks it and returns the canonical document.  <a href="a01408.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a00783"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00783.html">lumex</a></td></tr>
-<tr class="memdesc:a00783"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00834"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00834.html">lumex::core</a></td></tr>
+<tr class="memitem:a01186"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01186.html">lumex::applied</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00877"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00877.html">lumex::core::optional</a></td></tr>
+<tr class="memitem:a01200"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01200.html">lumex::applied::json</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00878"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00878.html">lumex::core::optional::opt</a></td></tr>
+<tr class="memitem:a01205"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01205.html">lumex::applied::json::normalization</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00862"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00862.html">lumex::core::expected</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00864"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00864.html">lumex::core::expected::result</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00898"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00898.html">lumex::core::utility</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00911"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00911.html">lumex::core::utility::traits</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00912"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00912.html">lumex::core::utility::traits::meta</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00913"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00913.html">lumex::core::utility::traits::invoke</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00914"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00914.html">lumex::core::utility::traits::invoke::detail</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00915"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00915.html">lumex::core::utility::traits::stream</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00916"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00916.html">lumex::core::utility::traits::stream::detail</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00917"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00917.html">lumex::core::utility::traits::range</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00918"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00918.html">lumex::core::utility::traits::string</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00919"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00919.html">lumex::core::utility::traits::tuple</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00920"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00920.html">lumex::core::utility::traits::value</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00921"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00921.html">lumex::core::utility::traits::enums</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00922"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00922.html">lumex::core::utility::traits::numeric</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:afd9c1e5581e12d50bed338c9ee86f91c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00368.html#afd9c1e5581e12d50bed338c9ee86f91c">LUMEX_DEFINE_ENUM_TRAITS</a>(EnumName,  UnderlyingType, ...)</td></tr>
-<tr class="separator:afd9c1e5581e12d50bed338c9ee86f91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ac40799d512f0ddb93d91a5132c6e30b4"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
-<tr class="memitem:ac40799d512f0ddb93d91a5132c6e30b4"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00912.html#ac40799d512f0ddb93d91a5132c6e30b4">lumex::core::utility::traits::meta::void_t</a> = typename make_void&lt; Ts... &gt;::type</td></tr>
-<tr class="separator:ac40799d512f0ddb93d91a5132c6e30b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c412384941b81b9d13b9077e997c8fa"><td class="memTemplParams" colspan="2">template&lt;typename TypeToClean &gt; </td></tr>
-<tr class="memitem:a9c412384941b81b9d13b9077e997c8fa"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00912.html#a9c412384941b81b9d13b9077e997c8fa">lumex::core::utility::traits::meta::CleanType</a> = typename std::remove_cv&lt; typename std::remove_reference&lt; TypeToClean &gt;::type &gt;::type</td></tr>
-<tr class="separator:a9c412384941b81b9d13b9077e997c8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68b17e5621507f56cd12fe112f3728a0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a68b17e5621507f56cd12fe112f3728a0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00912.html#a68b17e5621507f56cd12fe112f3728a0">lumex::core::utility::traits::meta::CleanTypeOf</a> = CleanType&lt; T &gt;</td></tr>
-<tr class="separator:a68b17e5621507f56cd12fe112f3728a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51c505bcf68fc822dff25653e10326dc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a51c505bcf68fc822dff25653e10326dc"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00912.html#a51c505bcf68fc822dff25653e10326dc">lumex::core::utility::traits::meta::RemovePtr</a> = typename std::remove_pointer&lt; T &gt;::type</td></tr>
-<tr class="separator:a51c505bcf68fc822dff25653e10326dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa929291f17d2b88491dbbc4aef91a6da"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aa929291f17d2b88491dbbc4aef91a6da"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00912.html#aa929291f17d2b88491dbbc4aef91a6da">lumex::core::utility::traits::meta::indirection_of_t</a> = typename indirection_of&lt; T &gt;::type</td></tr>
-<tr class="separator:aa929291f17d2b88491dbbc4aef91a6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70065957d93e7a3955cd082d80203d00"><td class="memTemplParams" colspan="2">template&lt;typename Func , typename... Args&gt; </td></tr>
-<tr class="memitem:a70065957d93e7a3955cd082d80203d00"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00913.html#a70065957d93e7a3955cd082d80203d00">lumex::core::utility::traits::invoke::invoke_result_t</a> = typename invoke_result&lt; Func, Args... &gt;::type</td></tr>
-<tr class="separator:a70065957d93e7a3955cd082d80203d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa006a9fdfe8ba94f29f6769683ac8013"><td class="memTemplParams" colspan="2">template&lt;typename Sig &gt; </td></tr>
-<tr class="memitem:aa006a9fdfe8ba94f29f6769683ac8013"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00913.html#aa006a9fdfe8ba94f29f6769683ac8013">lumex::core::utility::traits::invoke::result_of_t</a> = typename result_of&lt; Sig &gt;::type</td></tr>
-<tr class="separator:aa006a9fdfe8ba94f29f6769683ac8013"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a2354573d96d336da478d25cf0a67799a"><td class="memTemplParams" colspan="2">template&lt;typename TargetType , typename SourceType &gt; </td></tr>
-<tr class="memitem:a2354573d96d336da478d25cf0a67799a"><td class="memTemplItemLeft" align="right" valign="top">CleanType&lt; TargetType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00912.html#a2354573d96d336da478d25cf0a67799a">lumex::core::utility::traits::meta::safe_cast</a> (SourceType &amp;&amp;value) <a class="el" href="a00347.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a>(noexcept(static_cast&lt; CleanType&lt; TargetType &gt;&gt;(std::forward&lt; SourceType &gt;(value))))</td></tr>
-<tr class="separator:a2354573d96d336da478d25cf0a67799a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ba7e4193163e68cb15bccd03b229d9c"><td class="memTemplParams" colspan="2">template&lt;typename Func , typename... Args, typename FuncDecayed  = typename std::decay&lt;Func&gt;::type&gt; </td></tr>
-<tr class="memitem:a8ba7e4193163e68cb15bccd03b229d9c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00914.html#a8ba7e4193163e68cb15bccd03b229d9c">lumex::core::utility::traits::invoke::detail::INVOKE</a> (Func &amp;&amp;func, Args &amp;&amp;...args) -&gt; decltype(invoke_impl&lt; FuncDecayed &gt;::call(std::forward&lt; Func &gt;(func), std::forward&lt; Args &gt;(args)...))</td></tr>
-<tr class="separator:a8ba7e4193163e68cb15bccd03b229d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:abe5395ec3c65c81c7a5bd11469e81ac1"><td class="memTemplParams" colspan="2">template&lt;typename Func , typename... Args&gt; </td></tr>
-<tr class="memitem:abe5395ec3c65c81c7a5bd11469e81ac1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00913.html#abe5395ec3c65c81c7a5bd11469e81ac1">lumex::core::utility::traits::invoke::is_invocable_v</a> = is_invocable&lt;Func, Args...&gt;::value</td></tr>
-<tr class="separator:abe5395ec3c65c81c7a5bd11469e81ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a691fdcf6cc932436aa3a384b3b82e173"><td class="memTemplParams" colspan="2">template&lt;typename Func , typename... Args&gt; </td></tr>
-<tr class="memitem:a691fdcf6cc932436aa3a384b3b82e173"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00913.html#a691fdcf6cc932436aa3a384b3b82e173">lumex::core::utility::traits::invoke::is_callable_v</a> = is_callable&lt;Func, Args...&gt;::value</td></tr>
-<tr class="separator:a691fdcf6cc932436aa3a384b3b82e173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac82151cc67bdfd63bf6b255248b9f2c3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac82151cc67bdfd63bf6b255248b9f2c3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00920.html#ac82151cc67bdfd63bf6b255248b9f2c3">lumex::core::utility::traits::value::is_optional_v</a> = is_optional&lt;T&gt;::value</td></tr>
-<tr class="separator:ac82151cc67bdfd63bf6b255248b9f2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a5dcbca474b90c60caa93d6bd3898b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac5a5dcbca474b90c60caa93d6bd3898b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00920.html#ac5a5dcbca474b90c60caa93d6bd3898b">lumex::core::utility::traits::value::is_expected_v</a> = is_expected&lt;T&gt;::value</td></tr>
-<tr class="separator:ac5a5dcbca474b90c60caa93d6bd3898b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Every general-purpose type trait of LumexLib, one sub-namespace of <code><a class="el" href="a00911.html">lumex::core::utility::traits</a></code> per topic: <code>meta</code>, <code>invoke</code>, <code>stream</code>, <code>range</code>, <code>string</code>, <code>tuple</code>, <code>value</code>, <code>enums</code>, <code>numeric</code>. </p>
+<div class="textblock"><p>Contract for turning raw JSON text into a canonical document. </p>
 <p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
 <p>SPDX-License-Identifier: MIT</p>
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-<p>Traits that depend on a module's own types (for example the formatter traits of <code>core/fmt</code>) stay in that module. </p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="afd9c1e5581e12d50bed338c9ee86f91c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd9c1e5581e12d50bed338c9ee86f91c">&#9670;&nbsp;</a></span>LUMEX_DEFINE_ENUM_TRAITS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LUMEX_DEFINE_ENUM_TRAITS</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">EnumName, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">UnderlyingType, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">enum class</span> EnumName : UnderlyingType                                        \</div>
-<div class="line">  {                                                                           \</div>
-<div class="line">    __VA_ARGS__                                                               \</div>
-<div class="line">  };                                                                          \</div>
-<div class="line">                                                                              \</div>
-<div class="line">  template &lt;&gt; <span class="keyword">struct </span><a class="code" href="a02500.html">lumex_enum_traits_t</a>&lt;EnumName&gt;                            \</div>
-<div class="line">  {                                                                           \</div>
-<div class="line">    static <a class="code" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <span class="keyword">auto</span> values = []                                   \</div>
-<div class="line">      {                                                                       \</div>
-<div class="line">        using <span class="keyword">enum</span> EnumName;                                                  \</div>
-<div class="line">        return std::array{ __VA_ARGS__ };                                     \</div>
-<div class="line">      }();                                                                    \</div>
-<div class="line">    static <a class="code" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> EnumName first = values.front ();                  \</div>
-<div class="line">    static <a class="code" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> std::size_t size = values.size ();                 \</div>
-<div class="line">    static <a class="code" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> EnumName last = values.back ();                    \</div>
-<div class="line">  }</div>
-</div><!-- fragment -->
-</div>
-</div>
-</div><!-- contents -->
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00347_html_a1513006a1992e7dc9cc43b2e081cc33f"><div class="ttname"><a href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a></div><div class="ttdeci">#define LUMEX_CONSTEXPR</div><div class="ttdef"><b>Definition:</b> LumexKeywords.hpp:146</div></div>
-<div class="ttc" id="aa02500_html"><div class="ttname"><a href="a02500.html">lumex_enum_traits_t</a></div><div class="ttdoc">Primary template for reflected enum metadata generated by LUMEX_DEFINE_ENUM_TRAITS.</div><div class="ttdef"><b>Definition:</b> LumexTypeTraits.hpp:991</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_1be6b143c34d1233efa44119afd007e9.html">core</a></li><li class="navelem"><a class="el" href="dir_97f9291aa38cf72533b0e25925a64744.html">utility</a></li><li class="navelem"><a class="el" href="dir_0a6e050397be5c47f07e604c33bd3e1a.html">traits</a></li><li class="navelem"><a class="el" href="a00368.html">LumexTypeTraits.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_de45db85bd98abf883bc2bd6c3907fd8.html">applied</a></li><li class="navelem"><a class="el" href="dir_3e92e8848bcd01e21718dfea84e9b21e.html">json</a></li><li class="navelem"><a class="el" href="dir_e7e942524903e417f0871ffcf8723277.html">normalization</a></li><li class="navelem"><a class="el" href="a00368.html">ILumexJsonNormalizer.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

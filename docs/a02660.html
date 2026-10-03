@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::utility::XmlCleaner&lt; T &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::core::utility::numeric::safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &gt;::type &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -95,60 +95,62 @@ $(document).ready(function(){initNavTree('a02660.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a02657.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::utility::XmlCleaner&lt; T &gt; Struct Template Reference</div>  </div>
+<div class="title">lumex::core::utility::numeric::safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &gt;::type &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>A simple RAII (Resource Acquisition Is Initialization) wrapper for managing dynamically allocated memory.  
+<p>Specialization for identical floating-point types.  
  <a href="a02660.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00647_source.html">XmlCleaner.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00710_source.html">LumexSafeNumericComparator.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8caa7b69f3316216d4d663b218c578c7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#a8caa7b69f3316216d4d663b218c578c7">D</a> = void(*)(T *)</td></tr>
-<tr class="memdesc:a8caa7b69f3316216d4d663b218c578c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type alias for the deleter function pointer.  <a href="a02660.html#a8caa7b69f3316216d4d663b218c578c7">More...</a><br /></td></tr>
-<tr class="separator:a8caa7b69f3316216d4d663b218c578c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97acea45513885472c1407fa46582989"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#a97acea45513885472c1407fa46582989">clean_T</a> = <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt;</td></tr>
+<tr class="separator:a97acea45513885472c1407fa46582989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c10030b274c9889f1f70274fda87fdf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#a1c10030b274c9889f1f70274fda87fdf">XmlCleaner</a> (T *data_, <a class="el" href="a02660.html#a8caa7b69f3316216d4d663b218c578c7">D</a> deleter_)</td></tr>
-<tr class="memdesc:a1c10030b274c9889f1f70274fda87fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <code><a class="el" href="a02660.html" title="A simple RAII (Resource Acquisition Is Initialization) wrapper for managing dynamically allocated mem...">XmlCleaner</a></code> object, taking ownership of the provided data.  <a href="a02660.html#a1c10030b274c9889f1f70274fda87fdf">More...</a><br /></td></tr>
-<tr class="separator:a1c10030b274c9889f1f70274fda87fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bd950cc700caa327dff5d9bf07bc744"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#a5bd950cc700caa327dff5d9bf07bc744">~XmlCleaner</a> ()</td></tr>
-<tr class="memdesc:a5bd950cc700caa327dff5d9bf07bc744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Deallocates the managed data using the provided deleter if <code><a class="el" href="a02660.html#abc12ffaeb5899ae36c7a082b4c870d1d" title="Releases ownership of the managed data.">release()</a></code> was not called.  <a href="a02660.html#a5bd950cc700caa327dff5d9bf07bc744">More...</a><br /></td></tr>
-<tr class="separator:a5bd950cc700caa327dff5d9bf07bc744"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc12ffaeb5899ae36c7a082b4c870d1d"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#abc12ffaeb5899ae36c7a082b4c870d1d">release</a> ()</td></tr>
-<tr class="memdesc:abc12ffaeb5899ae36c7a082b4c870d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases ownership of the managed data.  <a href="a02660.html#abc12ffaeb5899ae36c7a082b4c870d1d">More...</a><br /></td></tr>
-<tr class="separator:abc12ffaeb5899ae36c7a082b4c870d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a1d7b92a76885fd307aa47c268d794ed3"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#a1d7b92a76885fd307aa47c268d794ed3">data</a> {}</td></tr>
-<tr class="memdesc:a1d7b92a76885fd307aa47c268d794ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the managed data.  <a href="a02660.html#a1d7b92a76885fd307aa47c268d794ed3">More...</a><br /></td></tr>
-<tr class="separator:a1d7b92a76885fd307aa47c268d794ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e5e1d091887e2da0ba8e0e8444bde4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02660.html#a8caa7b69f3316216d4d663b218c578c7">D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#a2e5e1d091887e2da0ba8e0e8444bde4a">deleter</a> {}</td></tr>
-<tr class="memdesc:a2e5e1d091887e2da0ba8e0e8444bde4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function pointer to the deleter (e.g., <code>free</code>, <code>delete[]</code>).  <a href="a02660.html#a2e5e1d091887e2da0ba8e0e8444bde4a">More...</a><br /></td></tr>
-<tr class="separator:a2e5e1d091887e2da0ba8e0e8444bde4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7b43e1a52335fdea20ef134dd4da7170"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#a7b43e1a52335fdea20ef134dd4da7170">compare</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:a7b43e1a52335fdea20ef134dd4da7170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison &gt;= for identical floating-point types.  <a href="a02660.html#a7b43e1a52335fdea20ef134dd4da7170">More...</a><br /></td></tr>
+<tr class="separator:a7b43e1a52335fdea20ef134dd4da7170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8e4b6b463e5f2dbd4cb1097a2c946e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#ade8e4b6b463e5f2dbd4cb1097a2c946e">equal</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:ade8e4b6b463e5f2dbd4cb1097a2c946e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison == for identical floating-point types.  <a href="a02660.html#ade8e4b6b463e5f2dbd4cb1097a2c946e">More...</a><br /></td></tr>
+<tr class="separator:ade8e4b6b463e5f2dbd4cb1097a2c946e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a577ae19bdbe77f5d28588f003c682770"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#a577ae19bdbe77f5d28588f003c682770">not_equal</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:a577ae19bdbe77f5d28588f003c682770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison != for identical floating-point types.  <a href="a02660.html#a577ae19bdbe77f5d28588f003c682770">More...</a><br /></td></tr>
+<tr class="separator:a577ae19bdbe77f5d28588f003c682770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ebae7db511d8283cb5fa79f1015c8f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#a41ebae7db511d8283cb5fa79f1015c8f">less</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:a41ebae7db511d8283cb5fa79f1015c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison &lt; for identical floating-point types.  <a href="a02660.html#a41ebae7db511d8283cb5fa79f1015c8f">More...</a><br /></td></tr>
+<tr class="separator:a41ebae7db511d8283cb5fa79f1015c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7d6bc2f2f42b8a5e103234aa4ce09ec"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#aa7d6bc2f2f42b8a5e103234aa4ce09ec">greater</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:aa7d6bc2f2f42b8a5e103234aa4ce09ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison &gt; for identical floating-point types.  <a href="a02660.html#aa7d6bc2f2f42b8a5e103234aa4ce09ec">More...</a><br /></td></tr>
+<tr class="separator:aa7d6bc2f2f42b8a5e103234aa4ce09ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9c0be6a00d3944f0574ebeacc90b5c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#aa9c0be6a00d3944f0574ebeacc90b5c2">less_equal</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:aa9c0be6a00d3944f0574ebeacc90b5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison &lt;= for identical floating-point types.  <a href="a02660.html#aa9c0be6a00d3944f0574ebeacc90b5c2">More...</a><br /></td></tr>
+<tr class="separator:aa9c0be6a00d3944f0574ebeacc90b5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae039cdec50fe655c13df1f694f84cb32"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html#ae039cdec50fe655c13df1f694f84cb32">greater_equal</a> (T current, T other) noexcept</td></tr>
+<tr class="memdesc:ae039cdec50fe655c13df1f694f84cb32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison &gt;= for identical floating-point types.  <a href="a02660.html#ae039cdec50fe655c13df1f694f84cb32">More...</a><br /></td></tr>
+<tr class="separator:ae039cdec50fe655c13df1f694f84cb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
-struct lumex::xml::utility::XmlCleaner&lt; T &gt;</h3>
+struct lumex::core::utility::numeric::safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &gt;::type &gt;</h3>
 
-<p>A simple RAII (Resource Acquisition Is Initialization) wrapper for managing dynamically allocated memory. </p>
-<p><code><a class="el" href="a02660.html" title="A simple RAII (Resource Acquisition Is Initialization) wrapper for managing dynamically allocated mem...">XmlCleaner</a></code> ensures that a provided memory block is deallocated using a specified deleter when the <code><a class="el" href="a02660.html" title="A simple RAII (Resource Acquisition Is Initialization) wrapper for managing dynamically allocated mem...">XmlCleaner</a></code> object goes out of scope, unless <code><a class="el" href="a02660.html#abc12ffaeb5899ae36c7a082b4c870d1d" title="Releases ownership of the managed data.">release()</a></code> is called. This is particularly useful for managing memory that might be conditionally owned or passed between functions. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>Specialization for identical floating-point types. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the pointer to be managed. </td></tr>
+    <tr><td class="paramname">T</td><td>Floating-point type to compare  Direct comparison without conversions for maximum performance. Used when both types are identical and are floating-point types. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>No-throw, maximum performance for floating-point types </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a8caa7b69f3316216d4d663b218c578c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8caa7b69f3316216d4d663b218c578c7">&#9670;&nbsp;</a></span>D</h2>
+<a id="a97acea45513885472c1407fa46582989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97acea45513885472c1407fa46582989">&#9670;&nbsp;</a></span>clean_T</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,18 +158,16 @@ struct lumex::xml::utility::XmlCleaner&lt; T &gt;</h3>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a02660.html">lumex::xml::utility::XmlCleaner</a>&lt; T &gt;::<a class="el" href="a02660.html#a8caa7b69f3316216d4d663b218c578c7">D</a> =  void (*) (T *)</td>
+          <td class="memname">using <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::<a class="el" href="a02660.html#a97acea45513885472c1407fa46582989">clean_T</a> =  <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt;T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Type alias for the deleter function pointer. </p>
-
 </div>
 </div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a1c10030b274c9889f1f70274fda87fdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c10030b274c9889f1f70274fda87fdf">&#9670;&nbsp;</a></span>XmlCleaner()</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7b43e1a52335fdea20ef134dd4da7170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b43e1a52335fdea20ef134dd4da7170">&#9670;&nbsp;</a></span>compare()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,16 +178,16 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a02660.html">lumex::xml::utility::XmlCleaner</a>&lt; T &gt;::<a class="el" href="a02660.html">XmlCleaner</a> </td>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::compare </td>
           <td>(</td>
-          <td class="paramtype">T *&#160;</td>
-          <td class="paramname"><em>data_</em>, </td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a02660.html#a8caa7b69f3316216d4d663b218c578c7">D</a>&#160;</td>
-          <td class="paramname"><em>deleter_</em>&#160;</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -197,24 +197,26 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs an <code><a class="el" href="a02660.html" title="A simple RAII (Resource Acquisition Is Initialization) wrapper for managing dynamically allocated mem...">XmlCleaner</a></code> object, taking ownership of the provided data. </p>
+<p>Safe comparison &gt;= for identical floating-point types. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">data_</td><td>A pointer to the data to be managed. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">deleter_</td><td>A function pointer to the deleter responsible for freeing <code>data_</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current &gt;= other </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Direct comparison without conversions; maximum performance </dd></dl>
 
 </div>
 </div>
-<a id="a5bd950cc700caa327dff5d9bf07bc744"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bd950cc700caa327dff5d9bf07bc744">&#9670;&nbsp;</a></span>~XmlCleaner()</h2>
+<a id="ade8e4b6b463e5f2dbd4cb1097a2c946e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8e4b6b463e5f2dbd4cb1097a2c946e">&#9670;&nbsp;</a></span>equal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -225,26 +227,45 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a02660.html">lumex::xml::utility::XmlCleaner</a>&lt; T &gt;::~<a class="el" href="a02660.html">XmlCleaner</a> </td>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::equal </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destructor. Deallocates the managed data using the provided deleter if <code><a class="el" href="a02660.html#abc12ffaeb5899ae36c7a082b4c870d1d" title="Releases ownership of the managed data.">release()</a></code> was not called. </p>
+<p>Safe comparison == for identical floating-point types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current == other </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Direct comparison without conversions; maximum performance </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="abc12ffaeb5899ae36c7a082b4c870d1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc12ffaeb5899ae36c7a082b4c870d1d">&#9670;&nbsp;</a></span>release()</h2>
+<a id="aa7d6bc2f2f42b8a5e103234aa4ce09ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7d6bc2f2f42b8a5e103234aa4ce09ec">&#9670;&nbsp;</a></span>greater()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,75 +276,248 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T* <a class="el" href="a02660.html">lumex::xml::utility::XmlCleaner</a>&lt; T &gt;::release </td>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::greater </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Releases ownership of the managed data. </p>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the previously managed data. The caller is now responsible for its deallocation.  After calling <code><a class="el" href="a02660.html#abc12ffaeb5899ae36c7a082b4c870d1d" title="Releases ownership of the managed data.">release()</a></code>, the <code><a class="el" href="a02660.html" title="A simple RAII (Resource Acquisition Is Initialization) wrapper for managing dynamically allocated mem...">XmlCleaner</a></code> object will no longer deallocate the memory. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02660_abc12ffaeb5899ae36c7a082b4c870d1d_icgraph.png" border="0" usemap="#aa02660_abc12ffaeb5899ae36c7a082b4c870d1d_icgraph" alt=""/></div>
-</div>
+<p>Safe comparison &gt; for identical floating-point types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current &gt; other </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Direct comparison without conversions; maximum performance </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1d7b92a76885fd307aa47c268d794ed3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d7b92a76885fd307aa47c268d794ed3">&#9670;&nbsp;</a></span>data</h2>
+<a id="ae039cdec50fe655c13df1f694f84cb32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae039cdec50fe655c13df1f694f84cb32">&#9670;&nbsp;</a></span>greater_equal()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T* <a class="el" href="a02660.html">lumex::xml::utility::XmlCleaner</a>&lt; T &gt;::data {}</td>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::greater_equal </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Pointer to the managed data. </p>
+<p>Safe comparison &gt;= for identical floating-point types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current &gt;= other </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Direct comparison without conversions; maximum performance </dd></dl>
 
 </div>
 </div>
-<a id="a2e5e1d091887e2da0ba8e0e8444bde4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e5e1d091887e2da0ba8e0e8444bde4a">&#9670;&nbsp;</a></span>deleter</h2>
+<a id="a41ebae7db511d8283cb5fa79f1015c8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ebae7db511d8283cb5fa79f1015c8f">&#9670;&nbsp;</a></span>less()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a02660.html#a8caa7b69f3316216d4d663b218c578c7">D</a> <a class="el" href="a02660.html">lumex::xml::utility::XmlCleaner</a>&lt; T &gt;::deleter {}</td>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::less </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Function pointer to the deleter (e.g., <code>free</code>, <code>delete[]</code>). </p>
+<p>Safe comparison &lt; for identical floating-point types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current &lt; other </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Direct comparison without conversions; maximum performance </dd></dl>
+
+</div>
+</div>
+<a id="aa9c0be6a00d3944f0574ebeacc90b5c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9c0be6a00d3944f0574ebeacc90b5c2">&#9670;&nbsp;</a></span>less_equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::less_equal </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Safe comparison &lt;= for identical floating-point types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current &lt;= other </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Direct comparison without conversions; maximum performance </dd></dl>
+
+</div>
+</div>
+<a id="a577ae19bdbe77f5d28588f003c682770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a577ae19bdbe77f5d28588f003c682770">&#9670;&nbsp;</a></span>not_equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="a02652.html">lumex::core::utility::numeric::safe_compare_impl_helper</a>&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; <a class="el" href="a01322.html#a9c412384941b81b9d13b9077e997c8fa">traits::meta::CleanType</a>&lt; T &gt; &gt;::value &gt;::type &gt;::not_equal </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Safe comparison != for identical floating-point types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>Current value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Value to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if current != other </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Direct comparison without conversions; maximum performance </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00647_source.html">XmlCleaner.hpp</a></li>
+<li><a class="el" href="a00710_source.html">LumexSafeNumericComparator.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00943.html">utility</a></li><li class="navelem"><a class="el" href="a02660.html">XmlCleaner</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01319.html">numeric</a></li><li class="navelem"><a class="el" href="a02660.html">safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &gt;::type &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

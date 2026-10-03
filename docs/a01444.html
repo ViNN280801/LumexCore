@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::crc::parametric::crc16_opensafety_a_spec_t Struct Reference</title>
+<title>LumexLib: lumex::applied::resource_monitor::monitor::LumexResourceMonitor Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,167 +94,157 @@ $(document).ready(function(){initNavTree('a01444.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a01441.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::crc::parametric::crc16_opensafety_a_spec_t Struct Reference</div>  </div>
+<div class="title">lumex::applied::resource_monitor::monitor::LumexResourceMonitor Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>CRC-16/OPENSAFETY-A: width=16 poly=0x5935 init=0x0000 refin=false refout=false xorout=0x0000.  
+<p>Starts/stops a background thread that periodically samples total CPU and RAM usage and appends one formatted line per sample to a dedicated log file.  
  <a href="a01444.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00407_source.html">LumexResourceMonitor.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:afd2ef2c3e26b24ea51d8c0421b4935cc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#afd2ef2c3e26b24ea51d8c0421b4935cc">ValueType</a> = std::uint16_t</td></tr>
-<tr class="separator:afd2ef2c3e26b24ea51d8c0421b4935cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ace05fd8e7e47c7cc1c707a5e5ea497c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#ace05fd8e7e47c7cc1c707a5e5ea497c0">kWidth</a> = 16</td></tr>
-<tr class="separator:ace05fd8e7e47c7cc1c707a5e5ea497c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e0b854b5dd3a1cb31179dac388b8ca3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#a8e0b854b5dd3a1cb31179dac388b8ca3">kPoly</a> = 0x5935U</td></tr>
-<tr class="separator:a8e0b854b5dd3a1cb31179dac388b8ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2979b2d9b8b9a0b2b9acb72816e71c92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#a2979b2d9b8b9a0b2b9acb72816e71c92">kInit</a> = 0x0000U</td></tr>
-<tr class="separator:a2979b2d9b8b9a0b2b9acb72816e71c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab20d52c203341ded7742dd6b0a887800"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#ab20d52c203341ded7742dd6b0a887800">kRefIn</a> = false</td></tr>
-<tr class="separator:ab20d52c203341ded7742dd6b0a887800"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a662c69f7c523c031cb03309e650c57f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#a662c69f7c523c031cb03309e650c57f3">kRefOut</a> = false</td></tr>
-<tr class="separator:a662c69f7c523c031cb03309e650c57f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab18241ef214bcf1fd023e5ffdbef19bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#ab18241ef214bcf1fd023e5ffdbef19bd">kXorOut</a> = 0x0000U</td></tr>
-<tr class="separator:ab18241ef214bcf1fd023e5ffdbef19bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89e170f1aef208538fe81fda886ff2bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#a89e170f1aef208538fe81fda886ff2bc">kCatalogCheck</a> = 0x5D38U</td></tr>
-<tr class="separator:a89e170f1aef208538fe81fda886ff2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ac3ff6ba95f363349295d24096e2ff96f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#ac3ff6ba95f363349295d24096e2ff96f">startIfEnabled</a> (std::string const &amp;logDirectory, std::chrono::milliseconds pollInterval=std::chrono::milliseconds(<a class="el" href="a01217.html#a35d1443402db082328b58c2707d4d321">Constants::KDEFAULT_POLL_INTERVAL_MS</a>))</td></tr>
+<tr class="memdesc:ac3ff6ba95f363349295d24096e2ff96f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the background CPU/RAM sampler, unless it is already running.  <a href="a01444.html#ac3ff6ba95f363349295d24096e2ff96f">More...</a><br /></td></tr>
+<tr class="separator:ac3ff6ba95f363349295d24096e2ff96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa64dfaead93c3d4c6ceec66922405170"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01444.html#aa64dfaead93c3d4c6ceec66922405170">stop</a> ()</td></tr>
+<tr class="memdesc:aa64dfaead93c3d4c6ceec66922405170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the background sampler and joins its thread.  <a href="a01444.html#aa64dfaead93c3d4c6ceec66922405170">More...</a><br /></td></tr>
+<tr class="separator:aa64dfaead93c3d4c6ceec66922405170"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>CRC-16/OPENSAFETY-A: width=16 poly=0x5935 init=0x0000 refin=false refout=false xorout=0x0000. </p>
-<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-16/OPENSAFETY-A </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="afd2ef2c3e26b24ea51d8c0421b4935cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd2ef2c3e26b24ea51d8c0421b4935cc">&#9670;&nbsp;</a></span>ValueType</h2>
+<div class="textblock"><p>Starts/stops a background thread that periodically samples total CPU and RAM usage and appends one formatted line per sample to a dedicated log file. </p>
+<p>On Windows, CPU usage is sampled via <code>GetSystemTimes</code> and RAM via <code>GlobalMemoryStatusEx</code>; on Linux, CPU usage comes from <code>/proc/stat</code> and RAM from <code>sysinfo</code>. Both platforms use the same delta-based CPU percentage calculation (idle-time delta vs. total-time delta between two consecutive samples). The sampler is a process-wide singleton: only one background thread can run at a time, started and stopped through the static methods below.</p>
+<dl class="section note"><dt>Note</dt><dd>All methods are static and thread-safe.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="comment">// Host application decides whether to enable it and at what interval - the</span></div>
+<div class="line">library does not. <span class="keywordflow">if</span> (hostConfig.resourceLoggingEnabled)</div>
+<div class="line">{</div>
+<div class="line">  <a class="code" href="a01444.html#ac3ff6ba95f363349295d24096e2ff96f">lumex::applied::resource_monitor::monitor::LumexResourceMonitor::startIfEnabled</a>(</div>
+<div class="line">    hostConfig.logDirectory, hostConfig.resourceLogPollInterval);</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// ... later, at shutdown:</span></div>
+<div class="line"><a class="code" href="a01444.html#aa64dfaead93c3d4c6ceec66922405170">lumex::applied::resource_monitor::monitor::LumexResourceMonitor::stop</a>();</div>
+</div><!-- fragment --> </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac3ff6ba95f363349295d24096e2ff96f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ff6ba95f363349295d24096e2ff96f">&#9670;&nbsp;</a></span>startIfEnabled()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a01444.html#afd2ef2c3e26b24ea51d8c0421b4935cc">lumex::core::crc::parametric::crc16_opensafety_a_spec_t::ValueType</a> =  std::uint16_t</td>
+          <td class="memname">void lumex::applied::resource_monitor::monitor::LumexResourceMonitor::startIfEnabled </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>logDirectory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::chrono::milliseconds&#160;</td>
+          <td class="paramname"><em>pollInterval</em> = <code>std::chrono::milliseconds&#160;(<a class="el" href="a01217.html#a35d1443402db082328b58c2707d4d321">Constants::KDEFAULT_POLL_INTERVAL_MS</a>)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Starts the background CPU/RAM sampler, unless it is already running. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logDirectory</td><td>Directory the sampler creates (if missing) and writes its dated <code>system_resource_usage_&lt;timestamp&gt;.log</code> file into. </td></tr>
+    <tr><td class="paramname">pollInterval</td><td>How often to sample CPU/RAM usage. Defaults to <code><a class="el" href="a01217.html#a35d1443402db082328b58c2707d4d321" title="Poll interval used when the caller does not request a specific one.">Constants::KDEFAULT_POLL_INTERVAL_MS</a></code>. A non-positive value is treated as invalid and replaced by that same default. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This call is a no-op if the sampler is already running - call <a class="el" href="a01444.html#aa64dfaead93c3d4c6ceec66922405170">stop</a> first if a different interval or log directory is needed. </dd>
+<dd>
+Whether to call this at all, and with what interval, is entirely the caller's decision; this class does not read any environment variable to decide it. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01444_ac3ff6ba95f363349295d24096e2ff96f_cgraph.png" border="0" usemap="#aa01444_ac3ff6ba95f363349295d24096e2ff96f_cgraph" alt=""/></div>
+<map name="a01444_ac3ff6ba95f363349295d24096e2ff96f_cgraph" id="aa01444_ac3ff6ba95f363349295d24096e2ff96f_cgraph">
+<area shape="rect" title="Starts the background CPU/RAM sampler, unless it is already running." alt="" coords="5,5,256,61"/>
+<area shape="rect" href="a01269.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="304,13,483,54"/>
+<area shape="rect" href="a02076.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="531,13,819,54"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01444_ac3ff6ba95f363349295d24096e2ff96f_icgraph.png" border="0" usemap="#aa01444_ac3ff6ba95f363349295d24096e2ff96f_icgraph" alt=""/></div>
+<map name="a01444_ac3ff6ba95f363349295d24096e2ff96f_icgraph" id="aa01444_ac3ff6ba95f363349295d24096e2ff96f_icgraph">
+<area shape="rect" title="Starts the background CPU/RAM sampler, unless it is already running." alt="" coords="108,5,359,61"/>
+<area shape="rect" href="a00851.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
+</map>
+</div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a89e170f1aef208538fe81fda886ff2bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89e170f1aef208538fe81fda886ff2bc">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
+<a id="aa64dfaead93c3d4c6ceec66922405170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa64dfaead93c3d4c6ceec66922405170">&#9670;&nbsp;</a></span>stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint16_t lumex::core::crc::parametric::crc16_opensafety_a_spec_t::kCatalogCheck = 0x5D38U</td>
+          <td class="memname">void lumex::applied::resource_monitor::monitor::LumexResourceMonitor::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
+<p>Stops the background sampler and joins its thread. </p>
+<dl class="section note"><dt>Note</dt><dd>No-op if the sampler is not currently running. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01444_aa64dfaead93c3d4c6ceec66922405170_icgraph.png" border="0" usemap="#aa01444_aa64dfaead93c3d4c6ceec66922405170_icgraph" alt=""/></div>
+<map name="a01444_aa64dfaead93c3d4c6ceec66922405170_icgraph" id="aa01444_aa64dfaead93c3d4c6ceec66922405170_icgraph">
+<area shape="rect" title="Stops the background sampler and joins its thread." alt="" coords="108,5,359,61"/>
+<area shape="rect" href="a00851.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,20,60,47"/>
+</map>
 </div>
-</div>
-<a id="a2979b2d9b8b9a0b2b9acb72816e71c92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2979b2d9b8b9a0b2b9acb72816e71c92">&#9670;&nbsp;</a></span>kInit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_opensafety_a_spec_t::kInit = 0x0000U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
-<a id="a8e0b854b5dd3a1cb31179dac388b8ca3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e0b854b5dd3a1cb31179dac388b8ca3">&#9670;&nbsp;</a></span>kPoly</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_opensafety_a_spec_t::kPoly = 0x5935U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab20d52c203341ded7742dd6b0a887800"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab20d52c203341ded7742dd6b0a887800">&#9670;&nbsp;</a></span>kRefIn</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc16_opensafety_a_spec_t::kRefIn = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a662c69f7c523c031cb03309e650c57f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a662c69f7c523c031cb03309e650c57f3">&#9670;&nbsp;</a></span>kRefOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc16_opensafety_a_spec_t::kRefOut = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ace05fd8e7e47c7cc1c707a5e5ea497c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace05fd8e7e47c7cc1c707a5e5ea497c0">&#9670;&nbsp;</a></span>kWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc16_opensafety_a_spec_t::kWidth = 16</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab18241ef214bcf1fd023e5ffdbef19bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab18241ef214bcf1fd023e5ffdbef19bd">&#9670;&nbsp;</a></span>kXorOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_opensafety_a_spec_t::kXorOut = 0x0000U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00407_source.html">LumexResourceMonitor.hpp</a></li>
+<li><a class="el" href="a00404.html">LumexResourceMonitor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa01444_html_ac3ff6ba95f363349295d24096e2ff96f"><div class="ttname"><a href="a01444.html#ac3ff6ba95f363349295d24096e2ff96f">lumex::applied::resource_monitor::monitor::LumexResourceMonitor::startIfEnabled</a></div><div class="ttdeci">static void startIfEnabled(std::string const &amp;logDirectory, std::chrono::milliseconds pollInterval=std::chrono::milliseconds(Constants::KDEFAULT_POLL_INTERVAL_MS))</div><div class="ttdoc">Starts the background CPU/RAM sampler, unless it is already running.</div><div class="ttdef"><b>Definition:</b> LumexResourceMonitor.cpp:279</div></div>
+<div class="ttc" id="aa01444_html_aa64dfaead93c3d4c6ceec66922405170"><div class="ttname"><a href="a01444.html#aa64dfaead93c3d4c6ceec66922405170">lumex::applied::resource_monitor::monitor::LumexResourceMonitor::stop</a></div><div class="ttdeci">static void stop()</div><div class="ttdoc">Stops the background sampler and joins its thread.</div><div class="ttdef"><b>Definition:</b> LumexResourceMonitor.cpp:314</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00847.html">crc</a></li><li class="navelem"><a class="el" href="a00850.html">parametric</a></li><li class="navelem"><a class="el" href="a01444.html">crc16_opensafety_a_spec_t</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01186.html">applied</a></li><li class="navelem"><a class="el" href="a01214.html">resource_monitor</a></li><li class="navelem"><a class="el" href="a01215.html">monitor</a></li><li class="navelem"><a class="el" href="a01444.html">LumexResourceMonitor</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

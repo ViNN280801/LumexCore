@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::xpath::node::XPathNodeSetRaw Class Reference</title>
+<title>LumexLib: lumex::core::utility::traits::range::range_reference&lt; Range, meta::void_t&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;()) !=std::end(std::declval&lt; Range const &amp; &gt;())), decltype(++std::declval&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;())) &amp; &gt;()), decltype(*std::begin(std::declval&lt; Range const &amp; &gt;()))&gt; &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,434 +94,46 @@ $(document).ready(function(){initNavTree('a02828.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="a02825.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::xpath::node::XPathNodeSetRaw Class Reference</div>  </div>
+<div class="title">lumex::core::utility::traits::range::range_reference&lt; Range, meta::void_t&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;()) !=std::end(std::declval&lt; Range const &amp; &gt;())), decltype(++std::declval&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;())) &amp; &gt;()), decltype(*std::begin(std::declval&lt; Range const &amp; &gt;()))&gt; &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a raw, mutable node set used primarily during XPath evaluation.  
- <a href="a02828.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00722_source.html">XPathNodeSet.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a08db6b95af1bb02f7420c3b74c78e81e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#a08db6b95af1bb02f7420c3b74c78e81e">XPathNodeSetRaw</a> ()=default</td></tr>
-<tr class="memdesc:a08db6b95af1bb02f7420c3b74c78e81e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Constructs an empty raw node set.  <a href="a02828.html#a08db6b95af1bb02f7420c3b74c78e81e">More...</a><br /></td></tr>
-<tr class="separator:a08db6b95af1bb02f7420c3b74c78e81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a461eb782436b6b15d9192de1155648ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#a461eb782436b6b15d9192de1155648ed">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;The returned iterator should be used for &quot; &quot;delimiting node set iteration; discarding &quot; &quot;it negates the purpose of iteration.&quot;) XPathNode *begin() const</td></tr>
-<tr class="memdesc:a461eb782436b6b15d9192de1155648ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable pointer to the beginning of the node data.  <a href="a02828.html#a461eb782436b6b15d9192de1155648ed">More...</a><br /></td></tr>
-<tr class="separator:a461eb782436b6b15d9192de1155648ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae25081a6675eec8e99651d625f0aa0f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#ae25081a6675eec8e99651d625f0aa0f9">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;The returned iterator should be used for &quot; &quot;delimiting node set iteration; discarding &quot; &quot;it negates the purpose of iteration.&quot;) XPathNode *end() const</td></tr>
-<tr class="memdesc:ae25081a6675eec8e99651d625f0aa0f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable pointer to one past the last node in the data.  <a href="a02828.html#ae25081a6675eec8e99651d625f0aa0f9">More...</a><br /></td></tr>
-<tr class="separator:ae25081a6675eec8e99651d625f0aa0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3d8633db8b81708a797c53c7d32a928"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#af3d8633db8b81708a797c53c7d32a928">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;The returned boolean indicates whether the node &quot; &quot;set is empty; discarding it negates &quot; &quot;the purpose of the getter.&quot;) bool empty() const</td></tr>
-<tr class="memdesc:af3d8633db8b81708a797c53c7d32a928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the raw node set is empty.  <a href="a02828.html#af3d8633db8b81708a797c53c7d32a928">More...</a><br /></td></tr>
-<tr class="separator:af3d8633db8b81708a797c53c7d32a928"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af31eeaa850c596ecee38318e6ecc8d62"><td class="memItemLeft" align="right" valign="top">LUMEX_ATTRIBUTE_NODISCARD(&quot;The returned size should be used; discarding it &quot; &quot;negates the purpose of the getter.&quot;) std&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#af31eeaa850c596ecee38318e6ecc8d62">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;The returned first node should be used; discarding it negates the &quot; &quot;purpose of the getter.&quot;) XPathNode first() const</td></tr>
-<tr class="memdesc:af31eeaa850c596ecee38318e6ecc8d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of nodes currently in the raw node set.  <a href="a02828.html#af31eeaa850c596ecee38318e6ecc8d62">More...</a><br /></td></tr>
-<tr class="separator:af31eeaa850c596ecee38318e6ecc8d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64973a7e961830375ed4dde98f4bdb25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#a64973a7e961830375ed4dde98f4bdb25">push_back_grow</a> (<a class="el" href="a02820.html">XPathNode</a> const &amp;node, <a class="el" href="a02796.html">XPathAllocator</a> *alloc)</td></tr>
-<tr class="memdesc:a64973a7e961830375ed4dde98f4bdb25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a node to the end of the set, growing the underlying buffer if necessary.  <a href="a02828.html#a64973a7e961830375ed4dde98f4bdb25">More...</a><br /></td></tr>
-<tr class="separator:a64973a7e961830375ed4dde98f4bdb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16981a6ea3ae03d4e103f6cd45b70504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#a16981a6ea3ae03d4e103f6cd45b70504">push_back</a> (<a class="el" href="a02820.html">XPathNode</a> const &amp;node, <a class="el" href="a02796.html">XPathAllocator</a> *alloc)</td></tr>
-<tr class="memdesc:a16981a6ea3ae03d4e103f6cd45b70504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a node to the end of the set.  <a href="a02828.html#a16981a6ea3ae03d4e103f6cd45b70504">More...</a><br /></td></tr>
-<tr class="separator:a16981a6ea3ae03d4e103f6cd45b70504"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72291120e50ea24d3e51278ddb8aa916"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#a72291120e50ea24d3e51278ddb8aa916">append</a> (<a class="el" href="a02820.html">XPathNode</a> const *begin_, <a class="el" href="a02820.html">XPathNode</a> const *end_, <a class="el" href="a02796.html">XPathAllocator</a> *alloc)</td></tr>
-<tr class="memdesc:a72291120e50ea24d3e51278ddb8aa916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a range of nodes to the end of the set.  <a href="a02828.html#a72291120e50ea24d3e51278ddb8aa916">More...</a><br /></td></tr>
-<tr class="separator:a72291120e50ea24d3e51278ddb8aa916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05db737282cd4606ffc5c7c99095ee38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#a05db737282cd4606ffc5c7c99095ee38">sort_do</a> ()</td></tr>
-<tr class="memdesc:a05db737282cd4606ffc5c7c99095ee38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorts the raw node set in ascending document order.  <a href="a02828.html#a05db737282cd4606ffc5c7c99095ee38">More...</a><br /></td></tr>
-<tr class="separator:a05db737282cd4606ffc5c7c99095ee38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bf093e561799c2f04fdeda4e7614c1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#a2bf093e561799c2f04fdeda4e7614c1d">truncate</a> (<a class="el" href="a02820.html">XPathNode</a> *pos)</td></tr>
-<tr class="memdesc:a2bf093e561799c2f04fdeda4e7614c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truncates the raw node set to a new end position.  <a href="a02828.html#a2bf093e561799c2f04fdeda4e7614c1d">More...</a><br /></td></tr>
-<tr class="separator:a2bf093e561799c2f04fdeda4e7614c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe5f5d997074f2927096847b55ce0a75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#abe5f5d997074f2927096847b55ce0a75">remove_duplicates</a> (<a class="el" href="a02796.html">XPathAllocator</a> *alloc)</td></tr>
-<tr class="memdesc:abe5f5d997074f2927096847b55ce0a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes duplicate nodes from the raw node set.  <a href="a02828.html#abe5f5d997074f2927096847b55ce0a75">More...</a><br /></td></tr>
-<tr class="separator:abe5f5d997074f2927096847b55ce0a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a0a9d116076ada5b3400e3bbf321b9749"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02828.html#a0a9d116076ada5b3400e3bbf321b9749">type</a> = decltype(*std::begin(std::declval&lt; Range const &amp; &gt;()))</td></tr>
+<tr class="separator:a0a9d116076ada5b3400e3bbf321b9749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a raw, mutable node set used primarily during XPath evaluation. </p>
-<p>This class provides a low-level, mutable view of a collection of <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code>s. It's designed for efficient modification during XPath evaluation, allowing nodes to be added, sorted, truncated, and duplicates removed. It directly interacts with an <code>XPathAllocator</code> for its memory management.</p>
-<dl class="section note"><dt>Note</dt><dd>This class does not own the <code>XPathAllocator</code> it uses, nor does it typically own the memory blocks unless they are specifically reallocated by its <code>push_back_grow</code> or <code>append</code> methods. Its lifetime is often tied to a temporary <code>XPathStack</code> or <code>XPathAllocator</code>. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Due to its low-level nature and direct pointer manipulation, careful usage and interaction with <code>XPathAllocator</code> are required to avoid memory errors. </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a08db6b95af1bb02f7420c3b74c78e81e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08db6b95af1bb02f7420c3b74c78e81e">&#9670;&nbsp;</a></span>XPathNodeSetRaw()</h2>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a0a9d116076ada5b3400e3bbf321b9749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a9d116076ada5b3400e3bbf321b9749">&#9670;&nbsp;</a></span>type</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+<div class="memtemplate">
+template&lt;typename Range &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">lumex::xml::xpath::node::XPathNodeSetRaw::XPathNodeSetRaw </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default constructor. Constructs an empty raw node set. </p>
-<p>Initializes the raw node set with null pointers, indicating no nodes. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a72291120e50ea24d3e51278ddb8aa916"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72291120e50ea24d3e51278ddb8aa916">&#9670;&nbsp;</a></span>append()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void XPathNodeSetRaw::append </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02820.html">XPathNode</a> const *&#160;</td>
-          <td class="paramname"><em>begin_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02820.html">XPathNode</a> const *&#160;</td>
-          <td class="paramname"><em>end_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02796.html">XPathAllocator</a> *&#160;</td>
-          <td class="paramname"><em>alloc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">using <a class="el" href="a02824.html">lumex::core::utility::traits::range::range_reference</a>&lt; Range, <a class="el" href="a01322.html#ac40799d512f0ddb93d91a5132c6e30b4">meta::void_t</a>&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;()) !=std::end(std::declval&lt; Range const &amp; &gt;())), decltype(++std::declval&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;())) &amp; &gt;()), decltype(*std::begin(std::declval&lt; Range const &amp; &gt;()))&gt; &gt;::<a class="el" href="a02828.html#a0a9d116076ada5b3400e3bbf321b9749">type</a> =  decltype (*std::begin (std::declval&lt;Range const &amp;&gt; ()))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Appends a range of nodes to the end of the set. </p>
-<p>Copies nodes from the specified range (<code>begin_</code> to <code>end_</code>) to the end of the current raw node set. Reallocates the internal buffer if the combined size exceeds current capacity. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">begin_</td><td>A pointer to the beginning of the range of <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code>s to append. </td></tr>
-    <tr><td class="paramname">end_</td><td>A pointer to the end of the range of <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code>s to append. </td></tr>
-    <tr><td class="paramname">alloc</td><td>The <code>XPathAllocator</code> to use for potential memory allocation. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02828_a72291120e50ea24d3e51278ddb8aa916_cgraph.png" border="0" usemap="#aa02828_a72291120e50ea24d3e51278ddb8aa916_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02828_a72291120e50ea24d3e51278ddb8aa916_icgraph.png" border="0" usemap="#aa02828_a72291120e50ea24d3e51278ddb8aa916_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="af3d8633db8b81708a797c53c7d32a928"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3d8633db8b81708a797c53c7d32a928">&#9670;&nbsp;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::xml::xpath::node::XPathNodeSetRaw::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;The returned boolean indicates whether the node &quot; &quot;set is empty; discarding it negates &quot; &quot;the purpose of the getter.&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Checks if the raw node set is empty. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the set contains no nodes, <code>false</code> otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="af31eeaa850c596ecee38318e6ecc8d62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af31eeaa850c596ecee38318e6ecc8d62">&#9670;&nbsp;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">LUMEX_ATTRIBUTE_NODISCARD (&quot;The returned size should be used; discarding it &quot; &quot;negates the purpose of the getter.&quot;) std lumex::xml::xpath::node::XPathNodeSetRaw::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;The returned first node should be used; discarding it negates the &quot; &quot;purpose of the getter.&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the number of nodes currently in the raw node set. </p>
-<dl class="section return"><dt>Returns</dt><dd>The <code>std::size_t</code> count of nodes.</dd></dl>
-<p>Gets the first node in the collection by document order.  Finds the first <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> in document order within the raw set. This may involve a linear scan if the set is unsorted. </p><dl class="section return"><dt>Returns</dt><dd>The first <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> in document order. Returns an empty <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> if the set is empty. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00972.html#a03ac0fad14391f11d995db35b20e13bb" title="Retrieves the first node in document order from a range of XPath nodes.">lumex::xml::xpath::utility::xpath_first</a> for the underlying logic. </dd></dl>
-
-</div>
-</div>
-<a id="a461eb782436b6b15d9192de1155648ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a461eb782436b6b15d9192de1155648ed">&#9670;&nbsp;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::xml::xpath::node::XPathNodeSetRaw::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;The returned iterator should be used for &quot; &quot;delimiting node set iteration; discarding &quot; &quot;it negates the purpose of iteration.&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a mutable pointer to the beginning of the node data. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>XPathNode*</code> pointer to the first node in the set. </dd></dl>
-
-</div>
-</div>
-<a id="ae25081a6675eec8e99651d625f0aa0f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae25081a6675eec8e99651d625f0aa0f9">&#9670;&nbsp;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::xml::xpath::node::XPathNodeSetRaw::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;The returned iterator should be used for &quot; &quot;delimiting node set iteration; discarding &quot; &quot;it negates the purpose of iteration.&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a mutable pointer to one past the last node in the data. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>XPathNode*</code> pointer to the end of the node set. </dd></dl>
-
-</div>
-</div>
-<a id="a16981a6ea3ae03d4e103f6cd45b70504"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16981a6ea3ae03d4e103f6cd45b70504">&#9670;&nbsp;</a></span>push_back()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void XPathNodeSetRaw::push_back </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02820.html">XPathNode</a> const &amp;&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02796.html">XPathAllocator</a> *&#160;</td>
-          <td class="paramname"><em>alloc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds a node to the end of the set. </p>
-<p>Appends a new <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> to the end of the raw node set. If the current capacity is not sufficient, it calls <code>push_back_grow</code> to reallocate the internal buffer. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">node</td><td>The <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> to add. </td></tr>
-    <tr><td class="paramname">alloc</td><td>The <code>XPathAllocator</code> to use for potential memory allocation. </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02828_a16981a6ea3ae03d4e103f6cd45b70504_cgraph.png" border="0" usemap="#aa02828_a16981a6ea3ae03d4e103f6cd45b70504_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02828_a16981a6ea3ae03d4e103f6cd45b70504_icgraph.png" border="0" usemap="#aa02828_a16981a6ea3ae03d4e103f6cd45b70504_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a64973a7e961830375ed4dde98f4bdb25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64973a7e961830375ed4dde98f4bdb25">&#9670;&nbsp;</a></span>push_back_grow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00311.html#acb652623305f8803081a68cf664aeeeb">LUMEX_ATTRIBUTE_NOINLINE</a> void XPathNodeSetRaw::push_back_grow </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02820.html">XPathNode</a> const &amp;&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02796.html">XPathAllocator</a> *&#160;</td>
-          <td class="paramname"><em>alloc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds a node to the end of the set, growing the underlying buffer if necessary. </p>
-<p>This function is called internally by <code>push_back</code> when the current capacity of the <code><a class="el" href="a02828.html" title="Represents a raw, mutable node set used primarily during XPath evaluation.">XPathNodeSetRaw</a></code> is exhausted. It reallocates the underlying buffer to accommodate more nodes. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">node</td><td>The <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code> to add. </td></tr>
-    <tr><td class="paramname">alloc</td><td>The <code>XPathAllocator</code> to use for memory reallocation. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This function has <code>NOINLINE</code> attribute to prevent inlining for size optimization. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02828_a64973a7e961830375ed4dde98f4bdb25_cgraph.png" border="0" usemap="#aa02828_a64973a7e961830375ed4dde98f4bdb25_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02828_a64973a7e961830375ed4dde98f4bdb25_icgraph.png" border="0" usemap="#aa02828_a64973a7e961830375ed4dde98f4bdb25_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="abe5f5d997074f2927096847b55ce0a75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe5f5d997074f2927096847b55ce0a75">&#9670;&nbsp;</a></span>remove_duplicates()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void XPathNodeSetRaw::remove_duplicates </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02796.html">XPathAllocator</a> *&#160;</td>
-          <td class="paramname"><em>alloc</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes duplicate nodes from the raw node set. </p>
-<p>Iterates through the raw node set and removes any <code><a class="el" href="a02820.html" title="Represents a node in an XPath node-set, which can be either an XML element/document node or an XML at...">XPathNode</a></code>s that are duplicates. If the set is unsorted and large, it uses a hash-based approach for efficiency; otherwise, it falls back to <code>std::unique</code>. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">alloc</td><td>The <code>XPathAllocator</code> to use for temporary memory (e.g., for hash table). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This operation may change the order of nodes if the set was unsorted and the hash-based method is used. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02828_abe5f5d997074f2927096847b55ce0a75_cgraph.png" border="0" usemap="#aa02828_abe5f5d997074f2927096847b55ce0a75_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02828_abe5f5d997074f2927096847b55ce0a75_icgraph.png" border="0" usemap="#aa02828_abe5f5d997074f2927096847b55ce0a75_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a05db737282cd4606ffc5c7c99095ee38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05db737282cd4606ffc5c7c99095ee38">&#9670;&nbsp;</a></span>sort_do()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void XPathNodeSetRaw::sort_do </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sorts the raw node set in ascending document order. </p>
-<p>Applies an in-place sort to the nodes within the raw node set based on XML document order. </p><dl class="section note"><dt>Note</dt><dd>This operation updates the internal <code>m_type</code> to <code><a class="el" href="a02824.html#adb8cd64c821b92dc30490b083e5e686ca1767b6d7e8a7b928ece841db1221b698" title="The node set is sorted in ascending document order.">XPathNodeSet::type_sorted</a></code>. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="a00972.html#a73824624dc9b04fe2788764ce3953df2" title="Sorts a range of XPath nodes by document order.">lumex::xml::xpath::utility::xpath_sort</a> for the underlying sorting algorithm. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02828_a05db737282cd4606ffc5c7c99095ee38_cgraph.png" border="0" usemap="#aa02828_a05db737282cd4606ffc5c7c99095ee38_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02828_a05db737282cd4606ffc5c7c99095ee38_icgraph.png" border="0" usemap="#aa02828_a05db737282cd4606ffc5c7c99095ee38_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a2bf093e561799c2f04fdeda4e7614c1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bf093e561799c2f04fdeda4e7614c1d">&#9670;&nbsp;</a></span>truncate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void XPathNodeSetRaw::truncate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a02820.html">XPathNode</a> *&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Truncates the raw node set to a new end position. </p>
-<p>Resizes the raw node set, effectively removing all nodes from <code>pos</code> to the original end. The memory is not deallocated but marked as unused. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos</td><td>A <code>XPathNode*</code> pointer specifying the new logical end of the set. Must be within the valid range of <code>[begin(), end()]</code>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">&lt;tt&gt;LUMEX_ASSERT&lt;/tt&gt;</td><td>if <code>pos</code> is out of bounds. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00722_source.html">XPathNodeSet.hpp</a></li>
-<li><a class="el" href="a00719.html">XPathNodeSet.cpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00950.html">xpath</a></li><li class="navelem"><a class="el" href="a00951.html">node</a></li><li class="navelem"><a class="el" href="a02828.html">XPathNodeSetRaw</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01327.html">range</a></li><li class="navelem"><a class="el" href="a02828.html">range_reference&lt; Range, meta::void_t&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;()) !=std::end(std::declval&lt; Range const &amp; &gt;())), decltype(++std::declval&lt; decltype(std::begin(std::declval&lt; Range const &amp; &gt;())) &amp; &gt;()), decltype(*std::begin(std::declval&lt; Range const &amp; &gt;()))&gt; &gt;</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

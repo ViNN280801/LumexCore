@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::applied::logging::log::LumexLogging Class Reference</title>
+<title>LumexLib: XmlWriterFile.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,516 +94,59 @@ $(document).ready(function(){initNavTree('a01028.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="a01025.html">List of all members</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::applied::logging::log::LumexLogging Class Reference</div>  </div>
+<div class="title">XmlWriterFile.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="a00062_source.html">LumexLogging.hpp</a>&gt;</code></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00917_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a01016_source.html">IXmlWriter.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for XmlWriterFile.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01029.png" border="0" usemap="#aXmlWriterFile_8hpp" alt=""/></div>
+<map name="XmlWriterFile_8hpp" id="aXmlWriterFile_8hpp">
+<area shape="rect" title=" " alt="" coords="27,5,165,32"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="5,155,187,181"/>
+<area shape="rect" href="a01016.html" title=" " alt="" coords="86,80,205,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01030.png" border="0" usemap="#aXmlWriterFile_8hppdep" alt=""/></div>
+<map name="XmlWriterFile_8hppdep" id="aXmlWriterFile_8hppdep">
+<area shape="rect" title=" " alt="" coords="89,5,227,32"/>
+<area shape="rect" href="a00938.html" title=" " alt="" coords="5,80,148,107"/>
+<area shape="rect" href="a01025.html" title=" " alt="" coords="173,80,309,107"/>
+</map>
+</div>
+</div>
+<p><a href="a01028_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a44ad22b8a67f4f15a9a574b3d4d5cd74"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a44ad22b8a67f4f15a9a574b3d4d5cd74"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01028.html#a44ad22b8a67f4f15a9a574b3d4d5cd74">debug</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:a44ad22b8a67f4f15a9a574b3d4d5cd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a DEBUG-level message.  <a href="a01028.html#a44ad22b8a67f4f15a9a574b3d4d5cd74">More...</a><br /></td></tr>
-<tr class="separator:a44ad22b8a67f4f15a9a574b3d4d5cd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafb110cd6feeb2ab91305f27352b9118"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:aafb110cd6feeb2ab91305f27352b9118"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01028.html#aafb110cd6feeb2ab91305f27352b9118">info</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:aafb110cd6feeb2ab91305f27352b9118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log an INFO-level message.  <a href="a01028.html#aafb110cd6feeb2ab91305f27352b9118">More...</a><br /></td></tr>
-<tr class="separator:aafb110cd6feeb2ab91305f27352b9118"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e7bac7289460386a2e59d59c388d4b6"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a8e7bac7289460386a2e59d59c388d4b6"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01028.html#a8e7bac7289460386a2e59d59c388d4b6">success</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:a8e7bac7289460386a2e59d59c388d4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a SUCCESS-level message (custom level).  <a href="a01028.html#a8e7bac7289460386a2e59d59c388d4b6">More...</a><br /></td></tr>
-<tr class="separator:a8e7bac7289460386a2e59d59c388d4b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4fec23e76323ffee4eaf2aaf716eb15"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:af4fec23e76323ffee4eaf2aaf716eb15"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01028.html#af4fec23e76323ffee4eaf2aaf716eb15">warning</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:af4fec23e76323ffee4eaf2aaf716eb15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a WARNING-level message.  <a href="a01028.html#af4fec23e76323ffee4eaf2aaf716eb15">More...</a><br /></td></tr>
-<tr class="separator:af4fec23e76323ffee4eaf2aaf716eb15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaeebb797a274ef51607814be5801bcc4"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:aaeebb797a274ef51607814be5801bcc4"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01028.html#aaeebb797a274ef51607814be5801bcc4">error</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:aaeebb797a274ef51607814be5801bcc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log an ERROR-level message.  <a href="a01028.html#aaeebb797a274ef51607814be5801bcc4">More...</a><br /></td></tr>
-<tr class="separator:aaeebb797a274ef51607814be5801bcc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab45388c23b278021a8bb9e4a7b435e0c"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ab45388c23b278021a8bb9e4a7b435e0c"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01028.html#ab45388c23b278021a8bb9e4a7b435e0c">critical</a> (char const *moduleName, Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:ab45388c23b278021a8bb9e4a7b435e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a CRITICAL-level message.  <a href="a01028.html#ab45388c23b278021a8bb9e4a7b435e0c">More...</a><br /></td></tr>
-<tr class="separator:ab45388c23b278021a8bb9e4a7b435e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab31dea6342d9372271a5247ae1db1e9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01028.html#aab31dea6342d9372271a5247ae1db1e9">toFile</a> (char const *filename, <a class="el" href="a00812.html#ab89470b4db8a7dc224df84237c78270c">LumexLogLevel</a> level, char const *moduleName, char const *msg, bool appendTimestamp=true)</td></tr>
-<tr class="memdesc:aab31dea6342d9372271a5247ae1db1e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a log to a file in the logs/ directory.  <a href="a01028.html#aab31dea6342d9372271a5247ae1db1e9">More...</a><br /></td></tr>
-<tr class="separator:aab31dea6342d9372271a5247ae1db1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec99d8722042f4425c34a4d004fea354"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01028.html#aec99d8722042f4425c34a4d004fea354">getLogsDirectory</a> ()</td></tr>
-<tr class="memdesc:aec99d8722042f4425c34a4d004fea354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path to the logs directory.  <a href="a01028.html#aec99d8722042f4425c34a4d004fea354">More...</a><br /></td></tr>
-<tr class="separator:aec99d8722042f4425c34a4d004fea354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9273496ead1261dbdbc3c5209c3a7e8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01028.html#ae9273496ead1261dbdbc3c5209c3a7e8">setAppName</a> (std::string const &amp;appName)</td></tr>
-<tr class="memdesc:ae9273496ead1261dbdbc3c5209c3a7e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the name of the application.  <a href="a01028.html#ae9273496ead1261dbdbc3c5209c3a7e8">More...</a><br /></td></tr>
-<tr class="separator:ae9273496ead1261dbdbc3c5209c3a7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03244.html">lumex::xml::writer::XmlWriterFile</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <code><a class="el" href="a03232.html" title="Abstract base interface for writing XML data to various destinations.">IXmlWriter</a></code> implementation that writes XML data to a file.  <a href="a03244.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01353"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01353.html">lumex::xml</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01371"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01371.html">lumex::xml::writer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab45388c23b278021a8bb9e4a7b435e0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab45388c23b278021a8bb9e4a7b435e0c">&#9670;&nbsp;</a></span>critical()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void lumex::applied::logging::log::LumexLogging::critical </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>moduleName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Log a CRITICAL-level message. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_ab45388c23b278021a8bb9e4a7b435e0c_cgraph.png" border="0" usemap="#aa01028_ab45388c23b278021a8bb9e4a7b435e0c_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_ab45388c23b278021a8bb9e4a7b435e0c_icgraph.png" border="0" usemap="#aa01028_ab45388c23b278021a8bb9e4a7b435e0c_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a44ad22b8a67f4f15a9a574b3d4d5cd74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44ad22b8a67f4f15a9a574b3d4d5cd74">&#9670;&nbsp;</a></span>debug()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void lumex::applied::logging::log::LumexLogging::debug </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>moduleName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Log a DEBUG-level message. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_a44ad22b8a67f4f15a9a574b3d4d5cd74_cgraph.png" border="0" usemap="#aa01028_a44ad22b8a67f4f15a9a574b3d4d5cd74_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_a44ad22b8a67f4f15a9a574b3d4d5cd74_icgraph.png" border="0" usemap="#aa01028_a44ad22b8a67f4f15a9a574b3d4d5cd74_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="aaeebb797a274ef51607814be5801bcc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaeebb797a274ef51607814be5801bcc4">&#9670;&nbsp;</a></span>error()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void lumex::applied::logging::log::LumexLogging::error </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>moduleName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Log an ERROR-level message. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_aaeebb797a274ef51607814be5801bcc4_cgraph.png" border="0" usemap="#aa01028_aaeebb797a274ef51607814be5801bcc4_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_aaeebb797a274ef51607814be5801bcc4_icgraph.png" border="0" usemap="#aa01028_aaeebb797a274ef51607814be5801bcc4_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="aec99d8722042f4425c34a4d004fea354"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec99d8722042f4425c34a4d004fea354">&#9670;&nbsp;</a></span>getLogsDirectory()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00783.html#ab9f08fe2d8e3f1fea0b6d156eaa1822f">lumex::path</a> lumex::applied::logging::log::LumexLogging::getLogsDirectory </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the path to the logs directory. </p>
-<dl class="section return"><dt>Returns</dt><dd>The path to the logs directory </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_aec99d8722042f4425c34a4d004fea354_cgraph.png" border="0" usemap="#aa01028_aec99d8722042f4425c34a4d004fea354_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_aec99d8722042f4425c34a4d004fea354_icgraph.png" border="0" usemap="#aa01028_aec99d8722042f4425c34a4d004fea354_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="aafb110cd6feeb2ab91305f27352b9118"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafb110cd6feeb2ab91305f27352b9118">&#9670;&nbsp;</a></span>info()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void lumex::applied::logging::log::LumexLogging::info </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>moduleName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Log an INFO-level message. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_aafb110cd6feeb2ab91305f27352b9118_cgraph.png" border="0" usemap="#aa01028_aafb110cd6feeb2ab91305f27352b9118_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_aafb110cd6feeb2ab91305f27352b9118_icgraph.png" border="0" usemap="#aa01028_aafb110cd6feeb2ab91305f27352b9118_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ae9273496ead1261dbdbc3c5209c3a7e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9273496ead1261dbdbc3c5209c3a7e8">&#9670;&nbsp;</a></span>setAppName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void lumex::applied::logging::log::LumexLogging::setAppName </td>
-          <td>(</td>
-          <td class="paramtype">std::string const &amp;&#160;</td>
-          <td class="paramname"><em>appName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the name of the application. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">appName</td><td>The name of the application </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_ae9273496ead1261dbdbc3c5209c3a7e8_icgraph.png" border="0" usemap="#aa01028_ae9273496ead1261dbdbc3c5209c3a7e8_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a8e7bac7289460386a2e59d59c388d4b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e7bac7289460386a2e59d59c388d4b6">&#9670;&nbsp;</a></span>success()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void lumex::applied::logging::log::LumexLogging::success </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>moduleName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Log a SUCCESS-level message (custom level). </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_a8e7bac7289460386a2e59d59c388d4b6_cgraph.png" border="0" usemap="#aa01028_a8e7bac7289460386a2e59d59c388d4b6_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_a8e7bac7289460386a2e59d59c388d4b6_icgraph.png" border="0" usemap="#aa01028_a8e7bac7289460386a2e59d59c388d4b6_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="aab31dea6342d9372271a5247ae1db1e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab31dea6342d9372271a5247ae1db1e9">&#9670;&nbsp;</a></span>toFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::applied::logging::log::LumexLogging::toFile </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>filename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00812.html#ab89470b4db8a7dc224df84237c78270c">LumexLogLevel</a>&#160;</td>
-          <td class="paramname"><em>level</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>moduleName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>msg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>appendTimestamp</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Write a log to a file in the logs/ directory. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filename</td><td>The name of the log file </td></tr>
-    <tr><td class="paramname">level</td><td>The log level </td></tr>
-    <tr><td class="paramname">moduleName</td><td>The name of the module </td></tr>
-    <tr><td class="paramname">msg</td><td>The message </td></tr>
-    <tr><td class="paramname">appendTimestamp</td><td>Whether to add a timestamp to the file name </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true in case of success, false otherwise </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_aab31dea6342d9372271a5247ae1db1e9_cgraph.png" border="0" usemap="#aa01028_aab31dea6342d9372271a5247ae1db1e9_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_aab31dea6342d9372271a5247ae1db1e9_icgraph.png" border="0" usemap="#aa01028_aab31dea6342d9372271a5247ae1db1e9_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="af4fec23e76323ffee4eaf2aaf716eb15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4fec23e76323ffee4eaf2aaf716eb15">&#9670;&nbsp;</a></span>warning()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void lumex::applied::logging::log::LumexLogging::warning </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>moduleName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args &amp;&amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Log a WARNING-level message. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_af4fec23e76323ffee4eaf2aaf716eb15_cgraph.png" border="0" usemap="#aa01028_af4fec23e76323ffee4eaf2aaf716eb15_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01028_af4fec23e76323ffee4eaf2aaf716eb15_icgraph.png" border="0" usemap="#aa01028_af4fec23e76323ffee4eaf2aaf716eb15_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00062_source.html">LumexLogging.hpp</a></li>
-<li><a class="el" href="a00059.html">LumexLogging.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00784.html">applied</a></li><li class="navelem"><a class="el" href="a00811.html">logging</a></li><li class="navelem"><a class="el" href="a00812.html">log</a></li><li class="navelem"><a class="el" href="a01028.html">LumexLogging</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_50c9cab4d5411a97d8807a2f6b945ebe.html">xml</a></li><li class="navelem"><a class="el" href="dir_7b089e18b7c2a92c23a9cf3b22a6463e.html">writer</a></li><li class="navelem"><a class="el" href="a01028.html">XmlWriterFile.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

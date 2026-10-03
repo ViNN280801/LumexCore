@@ -1,12 +1,11 @@
 var a01696 =
 [
-    [ "filesystem_result", "a01696.html#ae4093d69a6810df1fdd9ccbea6dc03d8", null ],
-    [ "err", "a01696.html#a384e25734c6d611b763c77caa77aeafc", null ],
-    [ "error_code", "a01696.html#af6c94c3f8a9c0f511aeaa1ea5674a08d", null ],
-    [ "ok", "a01696.html#a16fa37f602e827cf169d0dfb3b952940", null ],
-    [ "operator bool", "a01696.html#a5bee45657ca553ccbe26b668ffdb6bff", null ],
-    [ "success", "a01696.html#aaae1487eda085cf06bd332015e4969d7", null ],
-    [ "value", "a01696.html#aa8098c9ced0a02fb602aa533ec1ace36", null ],
-    [ "value", "a01696.html#ae11d814b4f227302b2e33601f426d421", null ],
-    [ "value_or", "a01696.html#af5d33c3c44ac4779caadbaad8cef56c3", null ]
+    [ "ValueType", "a01696.html#aca4e3dc99fc9416a53c943094b988597", null ],
+    [ "kCatalogCheck", "a01696.html#a8fe49cb8985adf652461accfc912c288", null ],
+    [ "kInit", "a01696.html#a4af3a7518b2e12125f3d72e9ed1af008", null ],
+    [ "kPoly", "a01696.html#abc8c12e99382e308567f4219b8758ee4", null ],
+    [ "kRefIn", "a01696.html#ad7f12e2a70e69f99dd21fa3924289eb0", null ],
+    [ "kRefOut", "a01696.html#a40255de8af2aba73cc51a71b6132d77d", null ],
+    [ "kWidth", "a01696.html#a60f6c797dc0dc61885fa6d88bf99e2aa", null ],
+    [ "kXorOut", "a01696.html#af6da2a76913243a8e32540aea6d23658", null ]
 ];

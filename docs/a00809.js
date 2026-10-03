@@ -1,5 +1,4 @@
 var a00809 =
 [
-    [ "hash< lumex::core::exceptions::stacktrace::LumexStacktraceEntry >", "a01640.html", "a01640" ],
-    [ "hash<::lumex::core::optional::opt::optional< T > >", "a02076.html", "a02076" ]
+    [ "main", "a00809.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ]
 ];

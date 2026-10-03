@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::math::ops::Detail::integral_distance&lt; T, U, bool &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc40_gsm_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -93,29 +93,224 @@ $(document).ready(function(){initNavTree('a02020.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="a02017.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::math::ops::Detail::integral_distance&lt; T, U, bool &gt; Struct Template Reference</div>  </div>
+<div class="title">lumex::core::crc::parametric::crc40_gsm_spec_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Result type of <code>distance</code> for two integers; no <code>type</code> otherwise. Every trait here stays SFINAE-friendly for any argument type, so an unqualified <code>distance (it1, it2)</code> next to <code>using namespace ops</code> still finds <code>std::distance</code>.  
+<p>CRC-40/GSM: width=40 poly=0x0004820009 init=0x0000000000 refin=false refout=false xorout=0xffffffffff.  
  <a href="a02020.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00245_source.html">LumexMath.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af7b9dbe8feac8ea7fa82d2c9074daa0f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02020.html#af7b9dbe8feac8ea7fa82d2c9074daa0f">ValueType</a> = std::uint64_t</td></tr>
+<tr class="separator:af7b9dbe8feac8ea7fa82d2c9074daa0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aaefcb73179b8ed999fc522fdb0175988"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02020.html#aaefcb73179b8ed999fc522fdb0175988">kWidth</a> = 40</td></tr>
+<tr class="separator:aaefcb73179b8ed999fc522fdb0175988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f5ffc90346768cfa70a3120675d1025"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02020.html#a0f5ffc90346768cfa70a3120675d1025">kPoly</a> = 0x0004820009ULL</td></tr>
+<tr class="separator:a0f5ffc90346768cfa70a3120675d1025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d805310cba99fcef763e688347ae9b"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02020.html#ac0d805310cba99fcef763e688347ae9b">kInit</a> = 0x0000000000ULL</td></tr>
+<tr class="separator:ac0d805310cba99fcef763e688347ae9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa9a8b7382f0697baa1f132d2bd8f03"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02020.html#adfa9a8b7382f0697baa1f132d2bd8f03">kRefIn</a> = false</td></tr>
+<tr class="separator:adfa9a8b7382f0697baa1f132d2bd8f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a042669e1f275d95d9ab924846165c834"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02020.html#a042669e1f275d95d9ab924846165c834">kRefOut</a> = false</td></tr>
+<tr class="separator:a042669e1f275d95d9ab924846165c834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8dd4bf2b355ea2f9f51da0927dee547"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02020.html#ad8dd4bf2b355ea2f9f51da0927dee547">kXorOut</a> = 0xFFFFFFFFFFULL</td></tr>
+<tr class="separator:ad8dd4bf2b355ea2f9f51da0927dee547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71344968bf097242322a429f346e1b3c"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02020.html#a71344968bf097242322a429f346e1b3c">kCatalogCheck</a> = 0xD4164FC646ULL</td></tr>
+<tr class="separator:a71344968bf097242322a429f346e1b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, typename U, bool = traits::is_numeric&lt;T&gt;::value &amp;&amp; traits::is_numeric&lt;U&gt;::value &amp;&amp; !std::is_floating_point&lt;T&gt;::value &amp;&amp; !std::is_floating_point&lt;U&gt;::value&gt;<br />
-struct lumex::core::math::ops::Detail::integral_distance&lt; T, U, bool &gt;</h3>
+<div class="textblock"><p>CRC-40/GSM: width=40 poly=0x0004820009 init=0x0000000000 refin=false refout=false xorout=0xffffffffff. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-40/GSM </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="af7b9dbe8feac8ea7fa82d2c9074daa0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b9dbe8feac8ea7fa82d2c9074daa0f">&#9670;&nbsp;</a></span>ValueType</h2>
 
-<p>Result type of <code>distance</code> for two integers; no <code>type</code> otherwise. Every trait here stays SFINAE-friendly for any argument type, so an unqualified <code>distance (it1, it2)</code> next to <code>using namespace ops</code> still finds <code>std::distance</code>. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00245_source.html">LumexMath.hpp</a></li>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="a02020.html#af7b9dbe8feac8ea7fa82d2c9074daa0f">lumex::core::crc::parametric::crc40_gsm_spec_t::ValueType</a> =  std::uint64_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a71344968bf097242322a429f346e1b3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71344968bf097242322a429f346e1b3c">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc40_gsm_spec_t::kCatalogCheck = 0xD4164FC646ULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0d805310cba99fcef763e688347ae9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d805310cba99fcef763e688347ae9b">&#9670;&nbsp;</a></span>kInit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc40_gsm_spec_t::kInit = 0x0000000000ULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f5ffc90346768cfa70a3120675d1025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f5ffc90346768cfa70a3120675d1025">&#9670;&nbsp;</a></span>kPoly</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc40_gsm_spec_t::kPoly = 0x0004820009ULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adfa9a8b7382f0697baa1f132d2bd8f03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa9a8b7382f0697baa1f132d2bd8f03">&#9670;&nbsp;</a></span>kRefIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc40_gsm_spec_t::kRefIn = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a042669e1f275d95d9ab924846165c834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a042669e1f275d95d9ab924846165c834">&#9670;&nbsp;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc40_gsm_spec_t::kRefOut = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaefcb73179b8ed999fc522fdb0175988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaefcb73179b8ed999fc522fdb0175988">&#9670;&nbsp;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit int lumex::core::crc::parametric::crc40_gsm_spec_t::kWidth = 40</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8dd4bf2b355ea2f9f51da0927dee547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8dd4bf2b355ea2f9f51da0927dee547">&#9670;&nbsp;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc40_gsm_spec_t::kXorOut = 0xFFFFFFFFFFULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00873.html">math</a></li><li class="navelem"><a class="el" href="a00874.html">ops</a></li><li class="navelem"><a class="el" href="a00876.html">Detail</a></li><li class="navelem"><a class="el" href="a02020.html">integral_distance</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01256.html">crc</a></li><li class="navelem"><a class="el" href="a01259.html">parametric</a></li><li class="navelem"><a class="el" href="a02020.html">crc40_gsm_spec_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

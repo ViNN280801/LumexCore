@@ -1,5 +1,11 @@
 var a01684 =
 [
-    [ "operator Expected< Target, ErrorType >", "a01684.html#aa983fea4af1c23893276cd9de323ab0a", null ],
-    [ "operator Expected< void, ErrorType >", "a01684.html#a4deed81fff2b82c4e57205fd3babe99d", null ]
+    [ "ValueType", "a01684.html#a7070c67c05946291d59674b1cb2cfaa6", null ],
+    [ "kCatalogCheck", "a01684.html#a84f17d16e3b6a7a005ef8f284516fc31", null ],
+    [ "kInit", "a01684.html#a5ceafa3a12d0f8a2178a037498666431", null ],
+    [ "kPoly", "a01684.html#a1ea28434e125400e9a24f7cfb86538e2", null ],
+    [ "kRefIn", "a01684.html#a24061116e2e937467364dbf90e104122", null ],
+    [ "kRefOut", "a01684.html#a2fd72af55e91a9b8a737e38d1f44cf92", null ],
+    [ "kWidth", "a01684.html#af012b4e50517803b039b9a629116bab0", null ],
+    [ "kXorOut", "a01684.html#adee41d72670535c81f425906fc854c70", null ]
 ];

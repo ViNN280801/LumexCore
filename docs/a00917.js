@@ -1,19 +1,9 @@
 var a00917 =
 [
-    [ "has_convertible_indexed_access", "a02416.html", null ],
-    [ "has_convertible_indexed_access< T, To, meta::void_t< decltype(std::declval< T >()[std::declval< std::size_t >()])> >", "a02420.html", null ],
-    [ "has_convertible_size", "a02408.html", null ],
-    [ "has_convertible_size< T, meta::void_t< decltype(std::declval< T >().size())> >", "a02412.html", null ],
-    [ "has_elements_convertible_to", "a02384.html", null ],
-    [ "has_elements_convertible_to< Range, To, meta::void_t< typename range_reference< Range >::type > >", "a02388.html", null ],
-    [ "has_key_type", "a02392.html", null ],
-    [ "has_key_type< T, meta::void_t< typename T::key_type > >", "a02396.html", null ],
-    [ "has_mapped_type", "a02400.html", null ],
-    [ "has_mapped_type< T, meta::void_t< typename T::mapped_type > >", "a02404.html", null ],
-    [ "has_streamable_elements", "a02376.html", null ],
-    [ "has_streamable_elements< Range, meta::void_t< typename range_reference< Range >::type > >", "a02380.html", null ],
-    [ "is_iterable", "a02368.html", null ],
-    [ "is_iterable< Range, meta::void_t< typename range_reference< Range >::type > >", "a02372.html", null ],
-    [ "range_reference", "a02360.html", null ],
-    [ "range_reference< Range, meta::void_t< decltype(std::begin(std::declval< Range const & >()) !=std::end(std::declval< Range const & >())), decltype(++std::declval< decltype(std::begin(std::declval< Range const & >())) & >()), decltype(*std::begin(std::declval< Range const & >()))> >", "a02364.html", "a02364" ]
+    [ "LUMEX_API", "a00917.html#aa948a1b1a43f6a954fd4c15b01ae4207", null ],
+    [ "LUMEX_EXTERN_C_BEGIN", "a00917.html#acaff4c6bbcf06a700c96ca83292c16ac", null ],
+    [ "LUMEX_EXTERN_C_END", "a00917.html#aa5051b73e2d3303e7e2718073a3dd2f4", null ],
+    [ "LUMEX_PUBLIC_API", "a00917.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917", null ],
+    [ "LUMEX_PUBLIC_C_API", "a00917.html#a8605dc551b9046fdc3f9627b65fa40b0", null ],
+    [ "LUMEX_UTILITY_API", "a00917.html#a2fcdc1371159ad0c9788ea500312a415", null ]
 ];

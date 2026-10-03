@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XPathLexer.cpp File Reference</title>
+<title>LumexLib: LumexUtilities.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,46 +94,192 @@ $(document).ready(function(){initNavTree('a00725.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">XPathLexer.cpp File Reference</div>  </div>
+<div class="title">LumexUtilities.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00308_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00575_source.html">lumex/xml/constants/XmlConstants.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00728_source.html">XPathLexer.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for XPathLexer.cpp:</div>
+Include dependency graph for LumexUtilities.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00726.png" border="0" usemap="#aXPathLexer_8cpp" alt=""/></div>
+<div class="center"><img src="a00726.png" border="0" usemap="#aLumexUtilities_8hpp" alt=""/></div>
+<map name="LumexUtilities_8hpp" id="aLumexUtilities_8hpp">
+<area shape="rect" title=" " alt="" coords="47,5,193,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,72,114"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="96,80,309,121"/>
+</map>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a07486181f1990291c2a348de8eb4c480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00725.html#a07486181f1990291c2a348de8eb4c480">LUMEX_IMPLEMENTATION</a></td></tr>
-<tr class="separator:a07486181f1990291c2a348de8eb4c480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div>
+<p><a href="a00725_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a478bcfddad48b82cc097c304497e8f38"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00725.html#a478bcfddad48b82cc097c304497e8f38">fd_to_ptr</a> (int fileDescriptor) noexcept</td></tr>
+<tr class="memdesc:a478bcfddad48b82cc097c304497e8f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe cast from POSIX file descriptor (int) to void* for cross-platform storage.  <a href="a00725.html#a478bcfddad48b82cc097c304497e8f38">More...</a><br /></td></tr>
+<tr class="separator:a478bcfddad48b82cc097c304497e8f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db0bf2ede705527a24f7207479c79b6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00725.html#a7db0bf2ede705527a24f7207479c79b6">ptr_to_fd</a> (void *pointer) noexcept</td></tr>
+<tr class="memdesc:a7db0bf2ede705527a24f7207479c79b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe reverse conversion of void* to POSIX file descriptor (int).  <a href="a00725.html#a7db0bf2ede705527a24f7207479c79b6">More...</a><br /></td></tr>
+<tr class="separator:a7db0bf2ede705527a24f7207479c79b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a07486181f1990291c2a348de8eb4c480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07486181f1990291c2a348de8eb4c480">&#9670;&nbsp;</a></span>LUMEX_IMPLEMENTATION</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a478bcfddad48b82cc097c304497e8f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a478bcfddad48b82cc097c304497e8f38">&#9670;&nbsp;</a></span>fd_to_ptr()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">#define LUMEX_IMPLEMENTATION</td>
+          <td class="memname">static void* fd_to_ptr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fileDescriptor</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Safe cast from POSIX file descriptor (int) to void* for cross-platform storage. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  Problem:</p><ul>
+<li>Windows: native handles are <code>HANDLE</code> (void*)</li>
+<li>POSIX/Linux: native handles are <code>int</code> (file descriptor)</li>
+<li>For uniform storage in the base class, a common type is needed -&gt; <code>void*</code> is chosen</li>
+</ul>
+<p>Why direct reinterpret_cast&lt;void*&gt;(int) is dangerous: On 64-bit systems:</p><ul>
+<li><code>int</code> takes 32 bits (signed: -2,147,483,648 .. 2,147,483,647)</li>
+<li><code>void*</code> takes 64 bits</li>
+<li>Direct <code>reinterpret_cast&lt;void*&gt;(int)</code> is undefined behavior according to C++ standard:<ul>
+<li>Standard allows <code>reinterpret_cast</code> only for types of the same size</li>
+<li>Behavior with different sizes is implementation-defined (not guaranteed)</li>
+</ul>
+</li>
+</ul>
+<p>Why safe through intptr_t:</p><ol type="1">
+<li><code>intptr_t</code> (from <code>&lt;cstdint&gt;</code>) guaranteed to have pointer size (32/64 bits)</li>
+<li><code>static_cast&lt;intptr_t&gt;(fd)</code>:<ul>
+<li>POSIX file descriptors are always &gt;= 0 (non-negative)</li>
+<li>int (32 bits) extends to intptr_t (64 bits) with sign preservation:<ul>
+<li>fd &gt;= 0: highest 32 bits = 0x00000000 (extension by zeros)</li>
+<li>fd &lt; 0: highest 32 bits = 0xFFFFFFFF (extension by sign) - but POSIX fd is always &gt;= 0!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>reinterpret_cast&lt;void*&gt;(intptr_t)</code>:<ul>
+<li>Both types of the same size (64 bits) -&gt; safe bitwise copy</li>
+<li>Guaranteed by C++ standard for intptr_t ↔ void*</li>
+</ul>
+</li>
+</ol>
+<p>Reverse conversion (lumex::core::utility::ptr_to_fd):</p><ul>
+<li><code>reinterpret_cast&lt;intptr_t&gt;(ptr)</code> -&gt; get 64-bit value</li>
+<li><code>static_cast&lt;int&gt;(intptr_t)</code> -&gt; truncate to 32 bits (safe, since highest bits = 0)</li>
+<li>Get original file descriptor</li>
+</ul>
+<p>Architectural portability:</p><ul>
+<li>32-bit systems: int (32) -&gt; intptr_t (32) -&gt; void* (32)</li>
+<li>64-bit systems: int (32) -&gt; intptr_t (64) -&gt; void* (64)</li>
+<li>ARM32/ARM64/x86/x64/RISC-V: all support intptr_t</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileDescriptor</td><td>POSIX file descriptor (int &gt;= 0) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void* representation of the descriptor for cross-platform storage</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Use ONLY for POSIX file descriptors (non-negative integers)! For Windows HANDLE directly assign to void* (already a pointer).</dd></dl>
+<dl class="section user"><dt>Typical usage in a serial port:</dt><dd><div class="fragment"><div class="line"><span class="preprocessor">#if LUMEX_OS_WINDOWS</span></div>
+<div class="line">  m_hInputFile = m_serialPort.native_handle(); <span class="comment">// Windows: HANDLE -&gt; void*</span></div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line">  m_hInputFile =</div>
+<div class="line"><a class="code" href="a00725.html#a478bcfddad48b82cc097c304497e8f38">lumex::core::utility::fd_to_ptr</a>(m_serialPort.native_handle()); <span class="comment">// POSIX: int</span></div>
+<div class="line">-&gt; <span class="keywordtype">void</span>* #endif</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Reverse conversion:</span></div>
+<div class="line"><span class="preprocessor">#if !LUMEX_OS_WINDOWS</span></div>
+<div class="line">  <span class="keywordtype">int</span> fd = <a class="code" href="a00725.html#a7db0bf2ede705527a24f7207479c79b6">lumex::core::utility::ptr_to_fd</a>(m_hInputFile);</div>
+<div class="line">  ::close(fd);</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>DO NOT use for arbitrary int values! Only for file descriptors! </dd></dl>
+
+</div>
+</div>
+<a id="a7db0bf2ede705527a24f7207479c79b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db0bf2ede705527a24f7207479c79b6">&#9670;&nbsp;</a></span>ptr_to_fd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ptr_to_fd </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Safe reverse conversion of void* to POSIX file descriptor (int). </p>
+<p>Reverse operation for lumex::core::utility::fd_to_ptr. Restores the original file descriptor from void* representation.</p>
+<p>Mechanism of work:</p><ol type="1">
+<li><code>reinterpret_cast&lt;intptr_t&gt;(ptr)</code>:<ul>
+<li>void* (64 bits) -&gt; intptr_t (64 bits) bitwise</li>
+<li>Highest 32 bits = 0x00000000 (from the original FD_TO_PTR conversion)</li>
+<li>Lowest 32 bits = original file descriptor</li>
+</ul>
+</li>
+<li><code>static_cast&lt;int&gt;(intptr_t)</code>:<ul>
+<li>Truncates to 32 bits (takes lowest bits)</li>
+<li>Get original fd</li>
+</ul>
+</li>
+</ol>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pointer</td><td>void* representation of the descriptor (from lumex::core::utility::fd_to_ptr) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int POSIX file descriptor</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="keywordtype">void</span>* stored_ptr = <a class="code" href="a00725.html#a478bcfddad48b82cc097c304497e8f38">lumex::core::utility::fd_to_ptr</a>(5); <span class="comment">// fd=5 -&gt; void*</span></div>
+<div class="line"><span class="keywordtype">int</span> fd = <a class="code" href="a00725.html#a7db0bf2ede705527a24f7207479c79b6">lumex::core::utility::ptr_to_fd</a>(stored_ptr);  <span class="comment">// void* -&gt; fd=5</span></div>
+<div class="line">assert(fd == 5); <span class="comment">// Restored original descriptor</span></div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa00725_html_a478bcfddad48b82cc097c304497e8f38"><div class="ttname"><a href="a00725.html#a478bcfddad48b82cc097c304497e8f38">fd_to_ptr</a></div><div class="ttdeci">static void * fd_to_ptr(int fileDescriptor) noexcept</div><div class="ttdoc">Safe cast from POSIX file descriptor (int) to void* for cross-platform storage.</div><div class="ttdef"><b>Definition:</b> LumexUtilities.hpp:115</div></div>
+<div class="ttc" id="aa00725_html_a7db0bf2ede705527a24f7207479c79b6"><div class="ttname"><a href="a00725.html#a7db0bf2ede705527a24f7207479c79b6">ptr_to_fd</a></div><div class="ttdeci">static int ptr_to_fd(void *pointer) noexcept</div><div class="ttdoc">Safe reverse conversion of void* to POSIX file descriptor (int).</div><div class="ttdef"><b>Definition:</b> LumexUtilities.hpp:147</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_82e0585083a36608bf6220a9fbe911e9.html">xml</a></li><li class="navelem"><a class="el" href="dir_abbe27e9c6b4359d81be14afe0d9fa59.html">xpath</a></li><li class="navelem"><a class="el" href="dir_e8a6180995b6345c25e43a2c37a9bb53.html">parser</a></li><li class="navelem"><a class="el" href="dir_336fc84b6ca4c7d2c993bbb271564020.html">lexer</a></li><li class="navelem"><a class="el" href="a00725.html">XPathLexer.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2eed78fa94d1e9faad02cb0657b7390b.html">core</a></li><li class="navelem"><a class="el" href="dir_aaa57aed14d71e316a67f95634c796d3.html">utility</a></li><li class="navelem"><a class="el" href="dir_0deadd0aca7ea116766ab685e8e1d5bb.html">util</a></li><li class="navelem"><a class="el" href="a00725.html">LumexUtilities.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -1,11 +1,12 @@
 var a02196 =
 [
-    [ "clean_T", "a02196.html#a97acea45513885472c1407fa46582989", null ],
-    [ "compare", "a02196.html#a7a2035b80a5addae6afdfc9068f6014f", null ],
-    [ "equal", "a02196.html#aec54468958166377eda77ab9ec875769", null ],
-    [ "greater", "a02196.html#a0071fcd973e2a8ba329608c36149252e", null ],
-    [ "greater_equal", "a02196.html#a797c1ff8396b97d7b4023ed3b24387a6", null ],
-    [ "less", "a02196.html#a70fef9b96afa696ded9d55c526b107ef", null ],
-    [ "less_equal", "a02196.html#a259cb7dee3a5a9ee4b3bfa68ed753d61", null ],
-    [ "not_equal", "a02196.html#a1f84ee5aeae9535bcb2c9c30c0c20783", null ]
+    [ "BasicStringRef", "a02196.html#a18cfdc0f3392b01bad9b4a58b3c715c5", null ],
+    [ "BasicStringRef", "a02196.html#a3887381dfcb03fc673464b4ef154a976", null ],
+    [ "BasicStringRef", "a02196.html#ad1541eb782871d4f9e00999bf624209f", null ],
+    [ "BasicStringRef", "a02196.html#abbf86fa75340f00fddcbfab8e4e3668d", null ],
+    [ "BasicStringRef", "a02196.html#acef5b93cf6aad171f7e568d1548a7d40", null ],
+    [ "begin", "a02196.html#a329e05370b86e2b2b4753d913141789e", null ],
+    [ "data", "a02196.html#a736ba280fef60e973b0080b6ebf077dd", null ],
+    [ "end", "a02196.html#aad67606228b0c8edfd4fd99da10015a5", null ],
+    [ "size", "a02196.html#afbc6af836345dce4e9de78cbab04f850", null ]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::environment::env::LumexEnvironment Class Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc3_gsm_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,772 +94,53 @@ $(document).ready(function(){initNavTree('a01600.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a01597.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::environment::env::LumexEnvironment Class Reference</div>  </div>
+<div class="title">lumex::core::crc::parametric::crc3_gsm_spec_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="a00164_source.html">LumexEnvironment.hpp</a>&gt;</code></p>
+<p>CRC-3/GSM: width=3 poly=0x3 init=0 refin=false refout=false xorout=0x7.  
+ <a href="a01600.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01604.html">EnvResult</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aa39eac0cb690d203d033c337d59bbb6a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#aa39eac0cb690d203d033c337d59bbb6a">size_type</a> = std::size_t</td></tr>
-<tr class="memdesc:aa39eac0cb690d203d033c337d59bbb6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type alias for std::size_t, used for buffer sizes and lengths.  <a href="a01600.html#aa39eac0cb690d203d033c337d59bbb6a">More...</a><br /></td></tr>
-<tr class="separator:aa39eac0cb690d203d033c337d59bbb6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec8246f5384f098b278e1c75d009add"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> = std::string</td></tr>
-<tr class="memdesc:a5ec8246f5384f098b278e1c75d009add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type alias for std::string, used for environment variable names and values.  <a href="a01600.html#a5ec8246f5384f098b278e1c75d009add">More...</a><br /></td></tr>
-<tr class="separator:a5ec8246f5384f098b278e1c75d009add"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a90795a2ce2ebbe945abf37df34a31d6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a90795a2ce2ebbe945abf37df34a31d6f">LumexEnvironment</a> (<a class="el" href="a01600.html">LumexEnvironment</a> const &amp;)=delete</td></tr>
-<tr class="memdesc:a90795a2ce2ebbe945abf37df34a31d6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy constructor.  <a href="a01600.html#a90795a2ce2ebbe945abf37df34a31d6f">More...</a><br /></td></tr>
-<tr class="separator:a90795a2ce2ebbe945abf37df34a31d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa991e6f8abbccebf750bb2cc7937e74a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01600.html">LumexEnvironment</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#aa991e6f8abbccebf750bb2cc7937e74a">operator=</a> (<a class="el" href="a01600.html">LumexEnvironment</a> const &amp;)=delete</td></tr>
-<tr class="memdesc:aa991e6f8abbccebf750bb2cc7937e74a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy assignment operator.  <a href="a01600.html#aa991e6f8abbccebf750bb2cc7937e74a">More...</a><br /></td></tr>
-<tr class="separator:aa991e6f8abbccebf750bb2cc7937e74a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fe356960706c1921e01a663dbed4103"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a4fe356960706c1921e01a663dbed4103">~LumexEnvironment</a> ()=default</td></tr>
-<tr class="memdesc:a4fe356960706c1921e01a663dbed4103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="a01600.html#a4fe356960706c1921e01a663dbed4103">More...</a><br /></td></tr>
-<tr class="separator:a4fe356960706c1921e01a663dbed4103"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72ea0c6591993f196d4e36fa19134c42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a72ea0c6591993f196d4e36fa19134c42">LumexEnvironment</a> (<a class="el" href="a01600.html">LumexEnvironment</a> &amp;&amp;)=delete</td></tr>
-<tr class="memdesc:a72ea0c6591993f196d4e36fa19134c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted move constructor.  <a href="a01600.html#a72ea0c6591993f196d4e36fa19134c42">More...</a><br /></td></tr>
-<tr class="separator:a72ea0c6591993f196d4e36fa19134c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac30f04343f8cb8559dbedb76117c8cf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01600.html">LumexEnvironment</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#ac30f04343f8cb8559dbedb76117c8cf7">operator=</a> (<a class="el" href="a01600.html">LumexEnvironment</a> &amp;&amp;)=delete</td></tr>
-<tr class="memdesc:ac30f04343f8cb8559dbedb76117c8cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted move assignment operator.  <a href="a01600.html#ac30f04343f8cb8559dbedb76117c8cf7">More...</a><br /></td></tr>
-<tr class="separator:ac30f04343f8cb8559dbedb76117c8cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12668e2ffc789b254a3a7a427ce4e5db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01604.html">EnvResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a12668e2ffc789b254a3a7a427ce4e5db">get_environment_variable</a> (char const *name) const</td></tr>
-<tr class="separator:a12668e2ffc789b254a3a7a427ce4e5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb59f2755bcc38304a563ec43a686072"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01604.html">EnvResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#acb59f2755bcc38304a563ec43a686072">get_environment_variable</a> (<a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;name) const</td></tr>
-<tr class="memdesc:acb59f2755bcc38304a563ec43a686072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload for <code>get_environment_variable</code> using <code>std::string</code>.  <a href="a01600.html#acb59f2755bcc38304a563ec43a686072">More...</a><br /></td></tr>
-<tr class="separator:acb59f2755bcc38304a563ec43a686072"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15d693b8b29a86de965a2008e1c7d06a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a15d693b8b29a86de965a2008e1c7d06a">set_environment_variable</a> (char const *name, char const *value, bool overwrite=true) const</td></tr>
-<tr class="separator:a15d693b8b29a86de965a2008e1c7d06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5d51b60d090236e456f7aa705550e8e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#ab5d51b60d090236e456f7aa705550e8e">set_environment_variable</a> (<a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;name, <a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;value, bool overwrite=true) const</td></tr>
-<tr class="memdesc:ab5d51b60d090236e456f7aa705550e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload for <code>set_environment_variable</code> using <code>std::string</code>.  <a href="a01600.html#ab5d51b60d090236e456f7aa705550e8e">More...</a><br /></td></tr>
-<tr class="separator:ab5d51b60d090236e456f7aa705550e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e215eec93bbddd86a8f973dfb2178da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a8e215eec93bbddd86a8f973dfb2178da">unset_environment_variable</a> (char const *name) const</td></tr>
-<tr class="separator:a8e215eec93bbddd86a8f973dfb2178da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a930de34b1343ab5abb289aa567632ffb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a930de34b1343ab5abb289aa567632ffb">get_environment_variable_or</a> (char const *name, <a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;default_value) const</td></tr>
-<tr class="separator:a930de34b1343ab5abb289aa567632ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a324b7df35fa26f2767db2024104a71c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a324b7df35fa26f2767db2024104a71c1">has_environment_variable</a> (char const *name) const</td></tr>
-<tr class="separator:a324b7df35fa26f2767db2024104a71c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad691ccf162cef0c42fd7c65cb9fe89d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#ad691ccf162cef0c42fd7c65cb9fe89d2">is_environment_variable_truthy</a> (char const *name) const</td></tr>
-<tr class="separator:ad691ccf162cef0c42fd7c65cb9fe89d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aaca0f8fbe2705f7d70c33997a78eda13"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01600.html">LumexEnvironment</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#aaca0f8fbe2705f7d70c33997a78eda13">instance</a> ()</td></tr>
-<tr class="separator:aaca0f8fbe2705f7d70c33997a78eda13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b15d0d9afe0b5e48e521a6e5a4b1a7d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01604.html">EnvResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a0b15d0d9afe0b5e48e521a6e5a4b1a7d">get</a> (char const *name)</td></tr>
-<tr class="separator:a0b15d0d9afe0b5e48e521a6e5a4b1a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba57036b137f38e77126dafba5acb08e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#aba57036b137f38e77126dafba5acb08e">get_or</a> (char const *name, <a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;default_value)</td></tr>
-<tr class="separator:aba57036b137f38e77126dafba5acb08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8415f82974f34bd65d70a25322311844"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a8415f82974f34bd65d70a25322311844">set</a> (char const *name, char const *value, bool overwrite=true)</td></tr>
-<tr class="separator:a8415f82974f34bd65d70a25322311844"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa71c31dd7773bc661866f98d7331400e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#aa71c31dd7773bc661866f98d7331400e">has</a> (char const *name)</td></tr>
-<tr class="separator:aa71c31dd7773bc661866f98d7331400e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aaaab7021d4e0ad919619f06a26bf3a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a6aaaab7021d4e0ad919619f06a26bf3a">is_truthy</a> (char const *name)</td></tr>
-<tr class="separator:a6aaaab7021d4e0ad919619f06a26bf3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e3061f2d494c58df5cab65e66f26579"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a3e3061f2d494c58df5cab65e66f26579">ValueType</a> = std::uint8_t</td></tr>
+<tr class="separator:a3e3061f2d494c58df5cab65e66f26579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:abd9cc0fac923889d2c93b89341af54b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01600.html#aa39eac0cb690d203d033c337d59bbb6a">size_type</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#abd9cc0fac923889d2c93b89341af54b7">MAX_ENV_BUFFER_SIZE</a> = 32767</td></tr>
-<tr class="memdesc:abd9cc0fac923889d2c93b89341af54b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum recommended buffer size for environment variables.  <a href="a01600.html#abd9cc0fac923889d2c93b89341af54b7">More...</a><br /></td></tr>
-<tr class="separator:abd9cc0fac923889d2c93b89341af54b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4267c89de3d5d668f0f3d01c4f7ce362"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a4267c89de3d5d668f0f3d01c4f7ce362">kWidth</a> = 3</td></tr>
+<tr class="separator:a4267c89de3d5d668f0f3d01c4f7ce362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6379b7b809cdbc6c11ab5d8779b910"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#aff6379b7b809cdbc6c11ab5d8779b910">kPoly</a> = 0x3U</td></tr>
+<tr class="separator:aff6379b7b809cdbc6c11ab5d8779b910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2925a7b2cbf6491d1c23c900e1644aaa"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a2925a7b2cbf6491d1c23c900e1644aaa">kInit</a> = 0x0U</td></tr>
+<tr class="separator:a2925a7b2cbf6491d1c23c900e1644aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842d9fee3076f0d5d89d2a03a26b2579"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a842d9fee3076f0d5d89d2a03a26b2579">kRefIn</a> = false</td></tr>
+<tr class="separator:a842d9fee3076f0d5d89d2a03a26b2579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c5550d51d801e1482bffc32f7b66e9"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a23c5550d51d801e1482bffc32f7b66e9">kRefOut</a> = false</td></tr>
+<tr class="separator:a23c5550d51d801e1482bffc32f7b66e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90794a49e856253ca51de6bd4b6ef6fb"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#a90794a49e856253ca51de6bd4b6ef6fb">kXorOut</a> = 0x7U</td></tr>
+<tr class="separator:a90794a49e856253ca51de6bd4b6ef6fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ee36deee565c50a79415c23d81ac2b"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01600.html#ae0ee36deee565c50a79415c23d81ac2b">kCatalogCheck</a> = 0x4U</td></tr>
+<tr class="separator:ae0ee36deee565c50a79415c23d81ac2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02924.html#_a1">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/environment/env/LumexEnvironment.hpp</a>.</dd>
-</dl>
+<div class="textblock"><p>CRC-3/GSM: width=3 poly=0x3 init=0 refin=false refout=false xorout=0x7. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-3/GSM </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="aa39eac0cb690d203d033c337d59bbb6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa39eac0cb690d203d033c337d59bbb6a">&#9670;&nbsp;</a></span>size_type</h2>
+<a id="a3e3061f2d494c58df5cab65e66f26579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e3061f2d494c58df5cab65e66f26579">&#9670;&nbsp;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a01600.html#aa39eac0cb690d203d033c337d59bbb6a">lumex::core::environment::env::LumexEnvironment::size_type</a> =  std::size_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Type alias for std::size_t, used for buffer sizes and lengths. </p>
-
-</div>
-</div>
-<a id="a5ec8246f5384f098b278e1c75d009add"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ec8246f5384f098b278e1c75d009add">&#9670;&nbsp;</a></span>string_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">lumex::core::environment::env::LumexEnvironment::string_type</a> =  std::string</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Type alias for std::string, used for environment variable names and values. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a90795a2ce2ebbe945abf37df34a31d6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90795a2ce2ebbe945abf37df34a31d6f">&#9670;&nbsp;</a></span>LumexEnvironment() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::core::environment::env::LumexEnvironment::LumexEnvironment </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01600.html">LumexEnvironment</a> const &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Deleted copy constructor. </p>
-<p>Ensures that <a class="el" href="a01600.html">LumexEnvironment</a> objects cannot be copied, maintaining the integrity of the singleton pattern. </p>
-
-</div>
-</div>
-<a id="a4fe356960706c1921e01a663dbed4103"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fe356960706c1921e01a663dbed4103">&#9670;&nbsp;</a></span>~LumexEnvironment()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::core::environment::env::LumexEnvironment::~LumexEnvironment </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default destructor. </p>
-<p>Explicitly defined to ensure proper resource management and adherence to the Rule of Five. It will automatically deallocate the <code>m_strategy</code> unique pointer. </p>
-
-</div>
-</div>
-<a id="a72ea0c6591993f196d4e36fa19134c42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72ea0c6591993f196d4e36fa19134c42">&#9670;&nbsp;</a></span>LumexEnvironment() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::core::environment::env::LumexEnvironment::LumexEnvironment </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01600.html">LumexEnvironment</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Deleted move constructor. </p>
-<p>Ensures that <a class="el" href="a01600.html">LumexEnvironment</a> objects cannot be moved, maintaining the integrity of the singleton pattern. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0b15d0d9afe0b5e48e521a6e5a4b1a7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b15d0d9afe0b5e48e521a6e5a4b1a7d">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a01604.html">LumexEnvironment::EnvResult</a> lumex::core::environment::env::LumexEnvironment::get </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a0b15d0d9afe0b5e48e521a6e5a4b1a7d_cgraph.png" border="0" usemap="#aa01600_a0b15d0d9afe0b5e48e521a6e5a4b1a7d_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a0b15d0d9afe0b5e48e521a6e5a4b1a7d_icgraph.png" border="0" usemap="#aa01600_a0b15d0d9afe0b5e48e521a6e5a4b1a7d_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a12668e2ffc789b254a3a7a427ce4e5db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12668e2ffc789b254a3a7a427ce4e5db">&#9670;&nbsp;</a></span>get_environment_variable() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a01604.html">LumexEnvironment::EnvResult</a> lumex::core::environment::env::LumexEnvironment::get_environment_variable </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a12668e2ffc789b254a3a7a427ce4e5db_icgraph.png" border="0" usemap="#aa01600_a12668e2ffc789b254a3a7a427ce4e5db_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="acb59f2755bcc38304a563ec43a686072"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb59f2755bcc38304a563ec43a686072">&#9670;&nbsp;</a></span>get_environment_variable() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a01604.html">LumexEnvironment::EnvResult</a> lumex::core::environment::env::LumexEnvironment::get_environment_variable </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Convenience overload for <code>get_environment_variable</code> using <code>std::string</code>. </p>
-<p>This method converts the <code>std::string</code> name to a C-string and delegates to the <code>char const *</code> overload. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>The <code>std::string</code> name of the environment variable to retrieve. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="a01604.html">EnvResult</a> object containing the variable's value and operation status. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is thread-safe due to the underlying <code>char const *</code> overload. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">Nothing</td><td>(delegates exception safety to the underlying C-string overload). </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_acb59f2755bcc38304a563ec43a686072_cgraph.png" border="0" usemap="#aa01600_acb59f2755bcc38304a563ec43a686072_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a930de34b1343ab5abb289aa567632ffb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a930de34b1343ab5abb289aa567632ffb">&#9670;&nbsp;</a></span>get_environment_variable_or()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">LumexEnvironment::string_type</a> lumex::core::environment::env::LumexEnvironment::get_environment_variable_or </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;&#160;</td>
-          <td class="paramname"><em>default_value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a930de34b1343ab5abb289aa567632ffb_cgraph.png" border="0" usemap="#aa01600_a930de34b1343ab5abb289aa567632ffb_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a930de34b1343ab5abb289aa567632ffb_icgraph.png" border="0" usemap="#aa01600_a930de34b1343ab5abb289aa567632ffb_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="aba57036b137f38e77126dafba5acb08e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba57036b137f38e77126dafba5acb08e">&#9670;&nbsp;</a></span>get_or()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">LumexEnvironment::string_type</a> lumex::core::environment::env::LumexEnvironment::get_or </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;&#160;</td>
-          <td class="paramname"><em>default_value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_aba57036b137f38e77126dafba5acb08e_cgraph.png" border="0" usemap="#aa01600_aba57036b137f38e77126dafba5acb08e_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_aba57036b137f38e77126dafba5acb08e_icgraph.png" border="0" usemap="#aa01600_aba57036b137f38e77126dafba5acb08e_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="aa71c31dd7773bc661866f98d7331400e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa71c31dd7773bc661866f98d7331400e">&#9670;&nbsp;</a></span>has()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::environment::env::LumexEnvironment::has </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_aa71c31dd7773bc661866f98d7331400e_cgraph.png" border="0" usemap="#aa01600_aa71c31dd7773bc661866f98d7331400e_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_aa71c31dd7773bc661866f98d7331400e_icgraph.png" border="0" usemap="#aa01600_aa71c31dd7773bc661866f98d7331400e_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a324b7df35fa26f2767db2024104a71c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a324b7df35fa26f2767db2024104a71c1">&#9670;&nbsp;</a></span>has_environment_variable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::environment::env::LumexEnvironment::has_environment_variable </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a324b7df35fa26f2767db2024104a71c1_cgraph.png" border="0" usemap="#aa01600_a324b7df35fa26f2767db2024104a71c1_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a324b7df35fa26f2767db2024104a71c1_icgraph.png" border="0" usemap="#aa01600_a324b7df35fa26f2767db2024104a71c1_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="aaca0f8fbe2705f7d70c33997a78eda13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaca0f8fbe2705f7d70c33997a78eda13">&#9670;&nbsp;</a></span>instance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a01600.html">LumexEnvironment</a> &amp; lumex::core::environment::env::LumexEnvironment::instance </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_aaca0f8fbe2705f7d70c33997a78eda13_icgraph.png" border="0" usemap="#aa01600_aaca0f8fbe2705f7d70c33997a78eda13_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ad691ccf162cef0c42fd7c65cb9fe89d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad691ccf162cef0c42fd7c65cb9fe89d2">&#9670;&nbsp;</a></span>is_environment_variable_truthy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::environment::env::LumexEnvironment::is_environment_variable_truthy </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_ad691ccf162cef0c42fd7c65cb9fe89d2_cgraph.png" border="0" usemap="#aa01600_ad691ccf162cef0c42fd7c65cb9fe89d2_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_ad691ccf162cef0c42fd7c65cb9fe89d2_icgraph.png" border="0" usemap="#aa01600_ad691ccf162cef0c42fd7c65cb9fe89d2_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a6aaaab7021d4e0ad919619f06a26bf3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6aaaab7021d4e0ad919619f06a26bf3a">&#9670;&nbsp;</a></span>is_truthy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::environment::env::LumexEnvironment::is_truthy </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a6aaaab7021d4e0ad919619f06a26bf3a_cgraph.png" border="0" usemap="#aa01600_a6aaaab7021d4e0ad919619f06a26bf3a_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a6aaaab7021d4e0ad919619f06a26bf3a_icgraph.png" border="0" usemap="#aa01600_a6aaaab7021d4e0ad919619f06a26bf3a_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ac30f04343f8cb8559dbedb76117c8cf7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac30f04343f8cb8559dbedb76117c8cf7">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01600.html">LumexEnvironment</a>&amp; lumex::core::environment::env::LumexEnvironment::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01600.html">LumexEnvironment</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Deleted move assignment operator. </p>
-<p>Ensures that <a class="el" href="a01600.html">LumexEnvironment</a> objects cannot be move-assigned, maintaining the integrity of the singleton pattern. </p>
-
-</div>
-</div>
-<a id="aa991e6f8abbccebf750bb2cc7937e74a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa991e6f8abbccebf750bb2cc7937e74a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a01600.html">LumexEnvironment</a>&amp; lumex::core::environment::env::LumexEnvironment::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01600.html">LumexEnvironment</a> const &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Deleted copy assignment operator. </p>
-<p>Ensures that <a class="el" href="a01600.html">LumexEnvironment</a> objects cannot be assigned, maintaining the integrity of the singleton pattern. </p>
-
-</div>
-</div>
-<a id="a8415f82974f34bd65d70a25322311844"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8415f82974f34bd65d70a25322311844">&#9670;&nbsp;</a></span>set()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::environment::env::LumexEnvironment::set </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>overwrite</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a8415f82974f34bd65d70a25322311844_cgraph.png" border="0" usemap="#aa01600_a8415f82974f34bd65d70a25322311844_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a8415f82974f34bd65d70a25322311844_icgraph.png" border="0" usemap="#aa01600_a8415f82974f34bd65d70a25322311844_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a15d693b8b29a86de965a2008e1c7d06a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15d693b8b29a86de965a2008e1c7d06a">&#9670;&nbsp;</a></span>set_environment_variable() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::environment::env::LumexEnvironment::set_environment_variable </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>overwrite</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_a15d693b8b29a86de965a2008e1c7d06a_icgraph.png" border="0" usemap="#aa01600_a15d693b8b29a86de965a2008e1c7d06a_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ab5d51b60d090236e456f7aa705550e8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5d51b60d090236e456f7aa705550e8e">&#9670;&nbsp;</a></span>set_environment_variable() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::environment::env::LumexEnvironment::set_environment_variable </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a01600.html#a5ec8246f5384f098b278e1c75d009add">string_type</a> const &amp;&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>overwrite</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Convenience overload for <code>set_environment_variable</code> using <code>std::string</code>. </p>
-<p>This method converts the <code>std::string</code> name and value to C-strings and delegates to the <code>char const *</code> overloads. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>The <code>std::string</code> name of the environment variable to set. </td></tr>
-    <tr><td class="paramname">value</td><td>The <code>std::string</code> value to assign to the variable. </td></tr>
-    <tr><td class="paramname">overwrite</td><td>If <code>false</code>, an already-existing variable is left untouched. Defaults to <code>true</code>, preserving prior always-overwrite behavior. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the variable was successfully set, false otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This method is thread-safe due to the underlying <code>char const *</code> overload. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">Nothing</td><td>(delegates exception safety to the underlying C-string overload). </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01600_ab5d51b60d090236e456f7aa705550e8e_cgraph.png" border="0" usemap="#aa01600_ab5d51b60d090236e456f7aa705550e8e_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a8e215eec93bbddd86a8f973dfb2178da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e215eec93bbddd86a8f973dfb2178da">&#9670;&nbsp;</a></span>unset_environment_variable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool lumex::core::environment::env::LumexEnvironment::unset_environment_variable </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td> const</td>
+          <td class="memname">using <a class="el" href="a01600.html#a3e3061f2d494c58df5cab65e66f26579">lumex::core::crc::parametric::crc3_gsm_spec_t::ValueType</a> =  std::uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -867,8 +148,8 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="abd9cc0fac923889d2c93b89341af54b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd9cc0fac923889d2c93b89341af54b7">&#9670;&nbsp;</a></span>MAX_ENV_BUFFER_SIZE</h2>
+<a id="ae0ee36deee565c50a79415c23d81ac2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ee36deee565c50a79415c23d81ac2b">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -877,31 +158,159 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01600.html#aa39eac0cb690d203d033c337d59bbb6a">size_type</a> const lumex::core::environment::env::LumexEnvironment::MAX_ENV_BUFFER_SIZE = 32767</td>
+          <td class="memname">const constinit std::uint8_t lumex::core::crc::parametric::crc3_gsm_spec_t::kCatalogCheck = 0x4U</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Maximum recommended buffer size for environment variables. </p>
-<dl class="section note"><dt>Note</dt><dd>This value is chosen to be compatible with Windows' maximum path length multiplied by 16. </dd></dl>
+</div>
+</div>
+<a id="a2925a7b2cbf6491d1c23c900e1644aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2925a7b2cbf6491d1c23c900e1644aaa">&#9670;&nbsp;</a></span>kInit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc3_gsm_spec_t::kInit = 0x0U</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00164_source.html">LumexEnvironment.hpp</a></li>
-<li><a class="el" href="a00161.html">LumexEnvironment.cpp</a></li>
+<a id="aff6379b7b809cdbc6c11ab5d8779b910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff6379b7b809cdbc6c11ab5d8779b910">&#9670;&nbsp;</a></span>kPoly</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc3_gsm_spec_t::kPoly = 0x3U</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a842d9fee3076f0d5d89d2a03a26b2579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842d9fee3076f0d5d89d2a03a26b2579">&#9670;&nbsp;</a></span>kRefIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc3_gsm_spec_t::kRefIn = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23c5550d51d801e1482bffc32f7b66e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23c5550d51d801e1482bffc32f7b66e9">&#9670;&nbsp;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc3_gsm_spec_t::kRefOut = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4267c89de3d5d668f0f3d01c4f7ce362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4267c89de3d5d668f0f3d01c4f7ce362">&#9670;&nbsp;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit int lumex::core::crc::parametric::crc3_gsm_spec_t::kWidth = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90794a49e856253ca51de6bd4b6ef6fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90794a49e856253ca51de6bd4b6ef6fb">&#9670;&nbsp;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc3_gsm_spec_t::kXorOut = 0x7U</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00852.html">environment</a></li><li class="navelem"><a class="el" href="a00853.html">env</a></li><li class="navelem"><a class="el" href="a01600.html">LumexEnvironment</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01256.html">crc</a></li><li class="navelem"><a class="el" href="a01259.html">parametric</a></li><li class="navelem"><a class="el" href="a01600.html">crc3_gsm_spec_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::xpath::parser::lexer::XPathLexer Class Reference</title>
+<title>LumexLib: lumex::core::utility::traits::range::is_iterable&lt; Range, Enable &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -93,283 +93,47 @@ $(document).ready(function(){initNavTree('a02832.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="a02829.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::xpath::parser::lexer::XPathLexer Class Reference</div>  </div>
+<div class="title">lumex::core::utility::traits::range::is_iterable&lt; Range, Enable &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Lexer (tokenizer) for XPath expressions.  
+<p><code>Range const &amp;</code> can be walked (see <code><a class="el" href="a02824.html" title="type is what *std::begin(range) yields for a Range const &amp; that has std::begin, std::end,...">range_reference</a></code>).  
  <a href="a02832.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00728_source.html">XPathLexer.hpp</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a748fbcdd04a85985dca01166d4f54f90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02832.html#a748fbcdd04a85985dca01166d4f54f90">XPathLexer</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *query)</td></tr>
-<tr class="memdesc:a748fbcdd04a85985dca01166d4f54f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="a02832.html" title="Lexer (tokenizer) for XPath expressions.">XPathLexer</a> and initializes it with a query string.  <a href="a02832.html#a748fbcdd04a85985dca01166d4f54f90">More...</a><br /></td></tr>
-<tr class="separator:a748fbcdd04a85985dca01166d4f54f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32fc81bfa1e2d89f1cdf00dbdd9cf10d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02832.html#a32fc81bfa1e2d89f1cdf00dbdd9cf10d">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;Discarding the lexer's state means losing the current parsing &quot; &quot;position, which is essential for error &quot; &quot;reporting, debugging, or resuming parsing from a specific point.&quot;) char_t const *state() const</td></tr>
-<tr class="memdesc:a32fc81bfa1e2d89f1cdf00dbdd9cf10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current parsing position in the query string.  <a href="a02832.html#a32fc81bfa1e2d89f1cdf00dbdd9cf10d">More...</a><br /></td></tr>
-<tr class="separator:a32fc81bfa1e2d89f1cdf00dbdd9cf10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acacfc5680677b1edc3e5d6e431f934ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02832.html#acacfc5680677b1edc3e5d6e431f934ba">next</a> ()</td></tr>
-<tr class="memdesc:acacfc5680677b1edc3e5d6e431f934ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advances the lexer to the next token in the XPath query.  <a href="a02832.html#acacfc5680677b1edc3e5d6e431f934ba">More...</a><br /></td></tr>
-<tr class="separator:acacfc5680677b1edc3e5d6e431f934ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3995746276a9621b791f6a323a8c8286"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02832.html#a3995746276a9621b791f6a323a8c8286">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;Discarding the current lexeme means ignoring the token type recognized &quot; &quot;by the lexer, which is crucial &quot; &quot;for guiding the parser's logic and determining the <a class="el" href="a02832.html#acacfc5680677b1edc3e5d6e431f934ba">next</a> parsing &quot; &quot;action.&quot;) lexeme_t current() const</td></tr>
-<tr class="memdesc:a3995746276a9621b791f6a323a8c8286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of the current lexeme.  <a href="a02832.html#a3995746276a9621b791f6a323a8c8286">More...</a><br /></td></tr>
-<tr class="separator:a3995746276a9621b791f6a323a8c8286"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28cace8bae5ba200755a0db35efc1814"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02832.html#a28cace8bae5ba200755a0db35efc1814">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;Discarding the current lexer position means losing the exact character &quot; &quot;pointer where the current lexeme &quot; &quot;begins. This position is vital for error reporting, context tracking, &quot; &quot;and precise string manipulation.&quot;) char_t const *current_pos() const</td></tr>
-<tr class="memdesc:a28cace8bae5ba200755a0db35efc1814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the starting position of the current lexeme in the query string.  <a href="a02832.html#a28cace8bae5ba200755a0db35efc1814">More...</a><br /></td></tr>
-<tr class="separator:a28cace8bae5ba200755a0db35efc1814"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35fb5faf1dfc1b422479375c7c39effa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02832.html#a35fb5faf1dfc1b422479375c7c39effa">LUMEX_ATTRIBUTE_NODISCARD</a> (&quot;Discarding the lexeme's content means ignoring the actual string value &quot; &quot;of the token, which is often &quot; &quot;needed for semantic analysis, variable extraction, or direct &quot; &quot;processing of string literals.&quot;) XPathLexerString const &amp;contents() const</td></tr>
-<tr class="memdesc:a35fb5faf1dfc1b422479375c7c39effa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contents of the current lexeme as an <code><a class="el" href="a02836.html" title="Represents a string view used by the XPath lexer.">XPathLexerString</a></code>.  <a href="a02832.html#a35fb5faf1dfc1b422479375c7c39effa">More...</a><br /></td></tr>
-<tr class="separator:a35fb5faf1dfc1b422479375c7c39effa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p><code>#include &lt;<a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::core::utility::traits::range::is_iterable&lt; Range, Enable &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02831.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1range_1_1is__iterable_3_01Range_00_01Enable_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1range_1_1is__iterable_3_01Range_00_01Enable_01_4_inherit__map" id="alumex_1_1core_1_1utility_1_1traits_1_1range_1_1is__iterable_3_01Range_00_01Enable_01_4_inherit__map">
+<area shape="rect" title="Range const &amp; can be walked (see range_reference)." alt="" coords="5,80,191,136"/>
+<area shape="rect" title=" " alt="" coords="53,5,143,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for lumex::core::utility::traits::range::is_iterable&lt; Range, Enable &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02830.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1range_1_1is__iterable_3_01Range_00_01Enable_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1range_1_1is__iterable_3_01Range_00_01Enable_01_4_coll__map" id="alumex_1_1core_1_1utility_1_1traits_1_1range_1_1is__iterable_3_01Range_00_01Enable_01_4_coll__map">
+<area shape="rect" title="Range const &amp; can be walked (see range_reference)." alt="" coords="5,80,191,136"/>
+<area shape="rect" title=" " alt="" coords="53,5,143,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Lexer (tokenizer) for XPath expressions. </p>
-<p>This class is responsible for breaking down an XPath query string into a sequence of tokens (lexemes). It handles various XPath lexical constructs including operators, axis specifiers, node tests, numbers, strings, and variable references. It skips whitespace and identifies multi-character tokens (e.g., <code>&gt;=</code>, <code>//</code>).</p>
-<dl class="section note"><dt>Note</dt><dd>The lexer operates on a raw <code>char_t</code> string and does not perform any syntax validation beyond token recognition. It maintains its internal state, allowing for sequential token retrieval. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This class does not own the <code>query</code> string passed to its constructor; the <code>query</code> must remain valid throughout the lexer's lifetime. </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a748fbcdd04a85985dca01166d4f54f90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a748fbcdd04a85985dca01166d4f54f90">&#9670;&nbsp;</a></span>XPathLexer()</h2>
+<div class="textblock"><h3>template&lt;typename Range, typename Enable = void&gt;<br />
+struct lumex::core::utility::traits::range::is_iterable&lt; Range, Enable &gt;</h3>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> XPathLexer::XPathLexer </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> const *&#160;</td>
-          <td class="paramname"><em>query</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs an <a class="el" href="a02832.html" title="Lexer (tokenizer) for XPath expressions.">XPathLexer</a> and initializes it with a query string. </p>
-<p>The lexer immediately processes the first token upon construction. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">query</td><td>A null-terminated C-style string containing the XPath expression to lex. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>The <code>query</code> string must remain valid and unchanged for the lifetime of this lexer. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02832_a748fbcdd04a85985dca01166d4f54f90_cgraph.png" border="0" usemap="#aa02832_a748fbcdd04a85985dca01166d4f54f90_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3995746276a9621b791f6a323a8c8286"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3995746276a9621b791f6a323a8c8286">&#9670;&nbsp;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::xml::xpath::parser::lexer::XPathLexer::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Discarding the current lexeme means ignoring the token type recognized &quot; &quot;by the&#160;</td>
-          <td class="paramname"><em>lexer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">which is crucial &quot; &quot;for guiding the parser 's logic and determining the <a class="el" href="a02832.html#acacfc5680677b1edc3e5d6e431f934ba">next</a> parsing &quot; &quot;action.&quot;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the type of the current lexeme. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>lexeme_t</code> enumeration value representing the type of the token at the current lexer position. </dd></dl>
-
-</div>
-</div>
-<a id="a28cace8bae5ba200755a0db35efc1814"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28cace8bae5ba200755a0db35efc1814">&#9670;&nbsp;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::xml::xpath::parser::lexer::XPathLexer::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Discarding the current lexer position means losing the exact character &quot; &quot;pointer where the current lexeme &quot; &quot;begins. This position is vital for error&#160;</td>
-          <td class="paramname"><em>reporting</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">context&#160;</td>
-          <td class="paramname"><em>tracking</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&quot; &quot;and precise string manipulation.&quot;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the starting position of the current lexeme in the query string. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>char_t const*</code> pointing to the first character of the current lexeme. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This position is useful for error reporting or extracting the raw token string. </dd></dl>
-
-</div>
-</div>
-<a id="a35fb5faf1dfc1b422479375c7c39effa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35fb5faf1dfc1b422479375c7c39effa">&#9670;&nbsp;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::xml::xpath::parser::lexer::XPathLexer::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Discarding the lexeme's content means ignoring the actual string value &quot; &quot;of the&#160;</td>
-          <td class="paramname"><em>token</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">which is often &quot; &quot;needed for semantic&#160;</td>
-          <td class="paramname"><em>analysis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">variable&#160;</td>
-          <td class="paramname"><em>extraction</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">or direct &quot; &quot;processing of string literals.&quot;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const &amp;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the contents of the current lexeme as an <code><a class="el" href="a02836.html" title="Represents a string view used by the XPath lexer.">XPathLexerString</a></code>. </p>
-<p>This provides a view of the actual characters that constitute the current token (e.g., the name of a variable, the value of a string literal). </p><dl class="section return"><dt>Returns</dt><dd>A constant reference to an <code><a class="el" href="a02836.html" title="Represents a string view used by the XPath lexer.">XPathLexerString</a></code> object. The underlying character data is valid as long as the original <code>query</code> string is valid. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">&lt;tt&gt;LUMEX_ASSERT&lt;/tt&gt;</td><td>if the current lexeme type does not have associated contents (e.g., simple operators like <code>+</code> or <code>-</code>). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a32fc81bfa1e2d89f1cdf00dbdd9cf10d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32fc81bfa1e2d89f1cdf00dbdd9cf10d">&#9670;&nbsp;</a></span>LUMEX_ATTRIBUTE_NODISCARD() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">lumex::xml::xpath::parser::lexer::XPathLexer::LUMEX_ATTRIBUTE_NODISCARD </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Discarding the lexer's state means losing the current parsing &quot; &quot;&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">which is essential for error &quot; &quot;&#160;</td>
-          <td class="paramname"><em>reporting</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">debugging&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">or resuming parsing from a specific point.&quot;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the current parsing position in the query string. </p>
-<dl class="section return"><dt>Returns</dt><dd>A <code>char_t const*</code> pointing to the character just after the current lexeme. </dd></dl>
-
-</div>
-</div>
-<a id="acacfc5680677b1edc3e5d6e431f934ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acacfc5680677b1edc3e5d6e431f934ba">&#9670;&nbsp;</a></span>next()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> void XPathLexer::next </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Advances the lexer to the next token in the XPath query. </p>
-<p>This function parses the input string from the current position, skips any whitespace, identifies the next lexeme, and updates the internal state (<code>_cur</code>, <code>_cur_lexeme_pos</code>, <code>_cur_lexeme_contents</code>, <code>_cur_lexeme</code>). </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02832_acacfc5680677b1edc3e5d6e431f934ba_icgraph.png" border="0" usemap="#aa02832_acacfc5680677b1edc3e5d6e431f934ba_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00728_source.html">XPathLexer.hpp</a></li>
-<li><a class="el" href="a00725.html">XPathLexer.cpp</a></li>
+<p><code>Range const &amp;</code> can be walked (see <code><a class="el" href="a02824.html" title="type is what *std::begin(range) yields for a Range const &amp; that has std::begin, std::end,...">range_reference</a></code>). </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00950.html">xpath</a></li><li class="navelem"><a class="el" href="a00968.html">parser</a></li><li class="navelem"><a class="el" href="a00969.html">lexer</a></li><li class="navelem"><a class="el" href="a02832.html">XPathLexer</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01327.html">range</a></li><li class="navelem"><a class="el" href="a02832.html">is_iterable</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

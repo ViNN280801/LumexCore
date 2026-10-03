@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::fmt::BasicFormatParseContext&lt; Char &gt; Class Template Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc8_gsm_a_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -95,405 +95,222 @@ $(document).ready(function(){initNavTree('a01728.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a01725.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::fmt::BasicFormatParseContext&lt; Char &gt; Class Template Reference</div>  </div>
+<div class="title">lumex::core::crc::parametric::crc8_gsm_a_spec_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>The format specification being parsed and the automatic / manual argument numbering state (as <code>std::basic_format_parse_context</code>).  
+<p>CRC-8/GSM-A: width=8 poly=0x1d init=0x00 refin=false refout=false xorout=0x00.  
  <a href="a01728.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00230_source.html">LumexFormat.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae814a8a0bc07ca8e8ec7707a20474435"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#ae814a8a0bc07ca8e8ec7707a20474435">char_type</a> = Char</td></tr>
-<tr class="separator:ae814a8a0bc07ca8e8ec7707a20474435"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7123a484583e7fbc4fa80993f9189c3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a> = Char const *</td></tr>
-<tr class="separator:ae7123a484583e7fbc4fa80993f9189c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2218a010355175673443e05b21c87f7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#af2218a010355175673443e05b21c87f7">const_iterator</a> = Char const *</td></tr>
-<tr class="separator:af2218a010355175673443e05b21c87f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64007686371ad46f9ede53f424e621e1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a64007686371ad46f9ede53f424e621e1">ValueType</a> = std::uint8_t</td></tr>
+<tr class="separator:a64007686371ad46f9ede53f424e621e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a063a3b81f550dc4a59f6d4a3e6030bae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a063a3b81f550dc4a59f6d4a3e6030bae">BasicFormatParseContext</a> (<a class="el" href="a01736.html">Detail::BasicStringRef</a>&lt; Char &gt; text, int arg_count=0, <a class="el" href="a00870.html#a152e45e16adb548233bdeade6af687b3">Detail::ArgKind</a> const *kinds=nullptr, bool has_named=false) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a063a3b81f550dc4a59f6d4a3e6030bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1856a9237101c43b496b92984f30650f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <a class="el" href="a01728.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a1856a9237101c43b496b92984f30650f">begin</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a1856a9237101c43b496b92984f30650f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99f52cee7dca3f1227460b8c0342f63a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <a class="el" href="a01728.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a99f52cee7dca3f1227460b8c0342f63a">end</a> () const <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a99f52cee7dca3f1227460b8c0342f63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade129e9f735eaabc6d9b46df87d2dbd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#ade129e9f735eaabc6d9b46df87d2dbd9">advance_to</a> (<a class="el" href="a01728.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a> it) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:ade129e9f735eaabc6d9b46df87d2dbd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a210b8a0a99e12f3fa54d7b82b22ed39e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a210b8a0a99e12f3fa54d7b82b22ed39e">next_arg_id</a> ()</td></tr>
-<tr class="memdesc:a210b8a0a99e12f3fa54d7b82b22ed39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next automatic argument index; throws after manual indexing.  <a href="a01728.html#a210b8a0a99e12f3fa54d7b82b22ed39e">More...</a><br /></td></tr>
-<tr class="separator:a210b8a0a99e12f3fa54d7b82b22ed39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9883dd66c36e8387d2d9e3505f2662d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a9883dd66c36e8387d2d9e3505f2662d0">check_arg_id</a> (int id)</td></tr>
-<tr class="memdesc:a9883dd66c36e8387d2d9e3505f2662d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records manual indexing; throws after automatic indexing.  <a href="a01728.html#a9883dd66c36e8387d2d9e3505f2662d0">More...</a><br /></td></tr>
-<tr class="separator:a9883dd66c36e8387d2d9e3505f2662d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53f7cf28658c15e0b17a38468e0a1bb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a53f7cf28658c15e0b17a38468e0a1bb4">check_named_arg</a> ()</td></tr>
-<tr class="memdesc:a53f7cf28658c15e0b17a38468e0a1bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Records a reference by name: it counts as manual indexing when no automatic index was used yet (so <code>{a} {}</code> is an error, <code>{} {a}</code> is not). At compile time, fails when no argument is named.  <a href="a01728.html#a53f7cf28658c15e0b17a38468e0a1bb4">More...</a><br /></td></tr>
-<tr class="separator:a53f7cf28658c15e0b17a38468e0a1bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d22284ac60526ea27e65e1de8cb621b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a3d22284ac60526ea27e65e1de8cb621b">check_dynamic_spec</a> (int id) const</td></tr>
-<tr class="memdesc:a3d22284ac60526ea27e65e1de8cb621b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile-time check only: argument <code>id</code> is an integer.  <a href="a01728.html#a3d22284ac60526ea27e65e1de8cb621b">More...</a><br /></td></tr>
-<tr class="separator:a3d22284ac60526ea27e65e1de8cb621b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a027367d5e09dc97fd48a7440ef1b307c"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a027367d5e09dc97fd48a7440ef1b307c">kWidth</a> = 8</td></tr>
+<tr class="separator:a027367d5e09dc97fd48a7440ef1b307c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1524fd3356f07cbeea0971192a00dfba"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a1524fd3356f07cbeea0971192a00dfba">kPoly</a> = 0x1DU</td></tr>
+<tr class="separator:a1524fd3356f07cbeea0971192a00dfba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a226de4954cc5918ceae8d75f6fa157"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a1a226de4954cc5918ceae8d75f6fa157">kInit</a> = 0x00U</td></tr>
+<tr class="separator:a1a226de4954cc5918ceae8d75f6fa157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4efe22929db75646d9c1fd76fa6286c"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#ad4efe22929db75646d9c1fd76fa6286c">kRefIn</a> = false</td></tr>
+<tr class="separator:ad4efe22929db75646d9c1fd76fa6286c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeab2b6a9428761a6df20b93c0dfce9e"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#aeeab2b6a9428761a6df20b93c0dfce9e">kRefOut</a> = false</td></tr>
+<tr class="separator:aeeab2b6a9428761a6df20b93c0dfce9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40f34c98a82912392c8fbef627667904"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#a40f34c98a82912392c8fbef627667904">kXorOut</a> = 0x00U</td></tr>
+<tr class="separator:a40f34c98a82912392c8fbef627667904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad220db05c0fe8d321d7c63d637c804b7"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01728.html#ad220db05c0fe8d321d7c63d637c804b7">kCatalogCheck</a> = 0x37U</td></tr>
+<tr class="separator:ad220db05c0fe8d321d7c63d637c804b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Char&gt;<br />
-class lumex::core::fmt::BasicFormatParseContext&lt; Char &gt;</h3>
-
-<p>The format specification being parsed and the automatic / manual argument numbering state (as <code>std::basic_format_parse_context</code>). </p>
+<div class="textblock"><p>CRC-8/GSM-A: width=8 poly=0x1d init=0x00 refin=false refout=false xorout=0x00. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-8/GSM-A </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ae814a8a0bc07ca8e8ec7707a20474435"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae814a8a0bc07ca8e8ec7707a20474435">&#9670;&nbsp;</a></span>char_type</h2>
+<a id="a64007686371ad46f9ede53f424e621e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64007686371ad46f9ede53f424e621e1">&#9670;&nbsp;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a01728.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::<a class="el" href="a01728.html#ae814a8a0bc07ca8e8ec7707a20474435">char_type</a> =  Char</td>
+          <td class="memname">using <a class="el" href="a01728.html#a64007686371ad46f9ede53f424e621e1">lumex::core::crc::parametric::crc8_gsm_a_spec_t::ValueType</a> =  std::uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af2218a010355175673443e05b21c87f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2218a010355175673443e05b21c87f7">&#9670;&nbsp;</a></span>const_iterator</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad220db05c0fe8d321d7c63d637c804b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad220db05c0fe8d321d7c63d637c804b7">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01728.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::<a class="el" href="a01728.html#af2218a010355175673443e05b21c87f7">const_iterator</a> =  Char const *</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae7123a484583e7fbc4fa80993f9189c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7123a484583e7fbc4fa80993f9189c3">&#9670;&nbsp;</a></span>iterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="a01728.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::<a class="el" href="a01728.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a> =  Char const *</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a063a3b81f550dc4a59f6d4a3e6030bae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a063a3b81f550dc4a59f6d4a3e6030bae">&#9670;&nbsp;</a></span>BasicFormatParseContext()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a> <a class="el" href="a01728.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::<a class="el" href="a01728.html">BasicFormatParseContext</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01736.html">Detail::BasicStringRef</a>&lt; Char &gt;&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>arg_count</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00870.html#a152e45e16adb548233bdeade6af687b3">Detail::ArgKind</a> const *&#160;</td>
-          <td class="paramname"><em>kinds</em> = <code>nullptr</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>has_named</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">const constinit std::uint8_t lumex::core::crc::parametric::crc8_gsm_a_spec_t::kCatalogCheck = 0x37U</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ade129e9f735eaabc6d9b46df87d2dbd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade129e9f735eaabc6d9b46df87d2dbd9">&#9670;&nbsp;</a></span>advance_to()</h2>
+<a id="a1a226de4954cc5918ceae8d75f6fa157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a226de4954cc5918ceae8d75f6fa157">&#9670;&nbsp;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a> void <a class="el" href="a01728.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::advance_to </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a01728.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a>&#160;</td>
-          <td class="paramname"><em>it</em></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc8_gsm_a_spec_t::kInit = 0x00U</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01728_ade129e9f735eaabc6d9b46df87d2dbd9_icgraph.png" border="0" usemap="#aa01728_ade129e9f735eaabc6d9b46df87d2dbd9_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
-<a id="a1856a9237101c43b496b92984f30650f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1856a9237101c43b496b92984f30650f">&#9670;&nbsp;</a></span>begin()</h2>
+<a id="a1524fd3356f07cbeea0971192a00dfba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1524fd3356f07cbeea0971192a00dfba">&#9670;&nbsp;</a></span>kPoly</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <a class="el" href="a01728.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a> <a class="el" href="a01728.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::begin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc8_gsm_a_spec_t::kPoly = 0x1DU</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01728_a1856a9237101c43b496b92984f30650f_icgraph.png" border="0" usemap="#aa01728_a1856a9237101c43b496b92984f30650f_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
-<a id="a9883dd66c36e8387d2d9e3505f2662d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9883dd66c36e8387d2d9e3505f2662d0">&#9670;&nbsp;</a></span>check_arg_id()</h2>
+<a id="ad4efe22929db75646d9c1fd76fa6286c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4efe22929db75646d9c1fd76fa6286c">&#9670;&nbsp;</a></span>kRefIn</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a> void <a class="el" href="a01728.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::check_arg_id </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc8_gsm_a_spec_t::kRefIn = false</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Records manual indexing; throws after automatic indexing. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01728_a9883dd66c36e8387d2d9e3505f2662d0_icgraph.png" border="0" usemap="#aa01728_a9883dd66c36e8387d2d9e3505f2662d0_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="a3d22284ac60526ea27e65e1de8cb621b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d22284ac60526ea27e65e1de8cb621b">&#9670;&nbsp;</a></span>check_dynamic_spec()</h2>
+<a id="aeeab2b6a9428761a6df20b93c0dfce9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeab2b6a9428761a6df20b93c0dfce9e">&#9670;&nbsp;</a></span>kRefOut</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a> void <a class="el" href="a01728.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::check_dynamic_spec </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc8_gsm_a_spec_t::kRefOut = false</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compile-time check only: argument <code>id</code> is an integer. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01728_a3d22284ac60526ea27e65e1de8cb621b_cgraph.png" border="0" usemap="#aa01728_a3d22284ac60526ea27e65e1de8cb621b_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01728_a3d22284ac60526ea27e65e1de8cb621b_icgraph.png" border="0" usemap="#aa01728_a3d22284ac60526ea27e65e1de8cb621b_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="a53f7cf28658c15e0b17a38468e0a1bb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53f7cf28658c15e0b17a38468e0a1bb4">&#9670;&nbsp;</a></span>check_named_arg()</h2>
+<a id="a027367d5e09dc97fd48a7440ef1b307c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027367d5e09dc97fd48a7440ef1b307c">&#9670;&nbsp;</a></span>kWidth</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a> void <a class="el" href="a01728.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::check_named_arg </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit int lumex::core::crc::parametric::crc8_gsm_a_spec_t::kWidth = 8</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Records a reference by name: it counts as manual indexing when no automatic index was used yet (so <code>{a} {}</code> is an error, <code>{} {a}</code> is not). At compile time, fails when no argument is named. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01728_a53f7cf28658c15e0b17a38468e0a1bb4_icgraph.png" border="0" usemap="#aa01728_a53f7cf28658c15e0b17a38468e0a1bb4_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="a99f52cee7dca3f1227460b8c0342f63a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99f52cee7dca3f1227460b8c0342f63a">&#9670;&nbsp;</a></span>end()</h2>
+<a id="a40f34c98a82912392c8fbef627667904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40f34c98a82912392c8fbef627667904">&#9670;&nbsp;</a></span>kXorOut</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> <a class="el" href="a01728.html#ae7123a484583e7fbc4fa80993f9189c3">iterator</a> <a class="el" href="a01728.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::end </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc8_gsm_a_spec_t::kXorOut = 0x00U</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01728_a99f52cee7dca3f1227460b8c0342f63a_icgraph.png" border="0" usemap="#aa01728_a99f52cee7dca3f1227460b8c0342f63a_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a210b8a0a99e12f3fa54d7b82b22ed39e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a210b8a0a99e12f3fa54d7b82b22ed39e">&#9670;&nbsp;</a></span>next_arg_id()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00230.html#a42d6609fe448336c99847de68dc317dd">LUMEX_FORMAT_CONSTEXPR</a> int <a class="el" href="a01728.html">lumex::core::fmt::BasicFormatParseContext</a>&lt; Char &gt;::next_arg_id </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Next automatic argument index; throws after manual indexing. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01728_a210b8a0a99e12f3fa54d7b82b22ed39e_icgraph.png" border="0" usemap="#aa01728_a210b8a0a99e12f3fa54d7b82b22ed39e_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00230_source.html">LumexFormat.hpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00869.html">fmt</a></li><li class="navelem"><a class="el" href="a01728.html">BasicFormatParseContext</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01256.html">crc</a></li><li class="navelem"><a class="el" href="a01259.html">parametric</a></li><li class="navelem"><a class="el" href="a01728.html">crc8_gsm_a_spec_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

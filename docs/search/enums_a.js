@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['xml_5fencoding_6351',['xml_encoding',['../a00958.html#af1767ae022d3845084f92ab0bc3776a0',1,'lumex::xml::types::Types']]],
-  ['xml_5fnode_5ftype_6352',['xml_node_type',['../a00958.html#a2ea2ab672e10bb614a49da9b5a7f0801',1,'lumex::xml::types::Types']]],
-  ['xml_5fparse_5fstatus_6353',['xml_parse_status',['../a00958.html#a8264dfa29bbe6720c402fec104db5408',1,'lumex::xml::types::Types']]],
-  ['xpath_5fvalue_5ftype_6354',['xpath_value_type',['../a00958.html#ab45611a4d899512e32aa65eb48a191a5',1,'lumex::xml::types::Types']]]
+  ['transportcrcmode_6727',['TransportCrcMode',['../a01257.html#a550c04492ccdbe76b3c82f02ac7c3dc0',1,'lumex::core::crc::catalog']]],
+  ['type_5ft_6728',['type_t',['../a03324.html#adb8cd64c821b92dc30490b083e5e686c',1,'lumex::xml::xpath::node::XPathNodeSet']]]
 ];

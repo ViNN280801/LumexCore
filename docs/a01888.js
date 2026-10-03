@@ -1,5 +1,11 @@
 var a01888 =
 [
-    [ "out", "a01888.html#aedf732781558e4f7ecaee89f17b77b0f", null ],
-    [ "size", "a01888.html#abb2aa6ed7d6cff43fc1c16af7ff6c633", null ]
+    [ "ValueType", "a01888.html#a2771a6e370e10eeb2369264e089b1595", null ],
+    [ "kCatalogCheck", "a01888.html#a9418a64aea2c4e0f9d7b9a75d26d9409", null ],
+    [ "kInit", "a01888.html#a10445992bd3c51990cafb18873da4646", null ],
+    [ "kPoly", "a01888.html#ab1c42d875ecbea97379e43bd49f2b495", null ],
+    [ "kRefIn", "a01888.html#a4efe6d2cb05378dd24d714df490f371d", null ],
+    [ "kRefOut", "a01888.html#a20806c1dde3875826055a7492da3782d", null ],
+    [ "kWidth", "a01888.html#a644e51a76c1d663c468839edebf31b4d", null ],
+    [ "kXorOut", "a01888.html#ada3ecd57ca888fba517d7b0db5d36984", null ]
 ];

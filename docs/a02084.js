@@ -1,5 +1,4 @@
 var a02084 =
 [
-    [ "type", "a02084.html#a23fb9ce0f80cc20558e40f967a4c4e1c", null ],
-    [ "value", "a02084.html#aba8e57e3416a8d68e1b6e4d774b55bdc", null ]
+    [ "operator()", "a02084.html#abfe8f168dca9cec5ea5627a666952e2c", null ]
 ];

@@ -1,9 +1,11 @@
 var a01700 =
 [
-    [ "filesystem_result", "a01700.html#a45281a99e569d045b6a1bec12b14ba27", null ],
-    [ "err", "a01700.html#a5ed2ed4204ad3c28c04e05e91d1d9c85", null ],
-    [ "error_code", "a01700.html#ab1ba938c0c31210c9fee0d8f43d8764e", null ],
-    [ "ok", "a01700.html#a62c2d0f20aeadd01d89bb1198e2d1204", null ],
-    [ "operator bool", "a01700.html#a2f5b5fbf5293dc11ec7727707c787062", null ],
-    [ "success", "a01700.html#aaf4090173110cae55dcdf128fd808df6", null ]
+    [ "ValueType", "a01700.html#a946ce2890a0223c221c0142c3a272326", null ],
+    [ "kCatalogCheck", "a01700.html#aef43d69f709c3843c20822c0f2c210ed", null ],
+    [ "kInit", "a01700.html#a475f1f6afe55ab9ac985111e3d4dce58", null ],
+    [ "kPoly", "a01700.html#a7e946171d031faccf6c7f4c36c27857b", null ],
+    [ "kRefIn", "a01700.html#a4c12b3ed28f3a241eba5474650d48110", null ],
+    [ "kRefOut", "a01700.html#af22c3d1e428dea3947b0e02d1860848d", null ],
+    [ "kWidth", "a01700.html#a85e153dc0a4b72d8549b1cd7e24b7c0d", null ],
+    [ "kXorOut", "a01700.html#aac089724ee954b4372b506129fcd603a", null ]
 ];

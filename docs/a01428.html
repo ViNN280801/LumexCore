@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::crc::parametric::crc16_m17_spec_t Struct Reference</title>
+<title>LumexLib: lumex::applied::logger::logger::log_entry_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,167 +94,153 @@ $(document).ready(function(){initNavTree('a01428.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="a01425.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::crc::parametric::crc16_m17_spec_t Struct Reference</div>  </div>
+<div class="title">lumex::applied::logger::logger::log_entry_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>CRC-16/M17: width=16 poly=0x5935 init=0xffff refin=false refout=false xorout=0x0000.  
+<p>Buffered log-record structure.  
  <a href="a01428.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00392_source.html">LumexLogger.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:aee775d47652273d2a0761978fb321254"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#aee775d47652273d2a0761978fb321254">ValueType</a> = std::uint16_t</td></tr>
-<tr class="separator:aee775d47652273d2a0761978fb321254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a388ec8405355a1c47d6ddbf65f3132d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#a388ec8405355a1c47d6ddbf65f3132d9">log_entry_t</a> (<a class="el" href="a01209.html#a8abbc573ad9bfc4d4c761d4c300a1e07">LogLevel</a> level_, std::string message_, std::chrono::system_clock::time_point timestamp_=std::chrono::system_clock::now()) noexcept</td></tr>
+<tr class="memdesc:a388ec8405355a1c47d6ddbf65f3132d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Padding: 7 bytes to align to 8 bytes.  <a href="a01428.html#a388ec8405355a1c47d6ddbf65f3132d9">More...</a><br /></td></tr>
+<tr class="separator:a388ec8405355a1c47d6ddbf65f3132d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:af31ba0e5a7371f63625bef84ee172faa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#af31ba0e5a7371f63625bef84ee172faa">kWidth</a> = 16</td></tr>
-<tr class="separator:af31ba0e5a7371f63625bef84ee172faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84eb3a9eb8c921085974ac540377e42f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#a84eb3a9eb8c921085974ac540377e42f">kPoly</a> = 0x5935U</td></tr>
-<tr class="separator:a84eb3a9eb8c921085974ac540377e42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1e3efed0de34898f55612a2279624cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#aa1e3efed0de34898f55612a2279624cc">kInit</a> = 0xFFFFU</td></tr>
-<tr class="separator:aa1e3efed0de34898f55612a2279624cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a846f967db00d815bef5a4fa718581f1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#a846f967db00d815bef5a4fa718581f1b">kRefIn</a> = false</td></tr>
-<tr class="separator:a846f967db00d815bef5a4fa718581f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf25f3b322f2ee99b5a1d9bf28b62f1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#acf25f3b322f2ee99b5a1d9bf28b62f1c">kRefOut</a> = false</td></tr>
-<tr class="separator:acf25f3b322f2ee99b5a1d9bf28b62f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fa17ec5f99f892c0a08bd57e2391ca8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#a9fa17ec5f99f892c0a08bd57e2391ca8">kXorOut</a> = 0x0000U</td></tr>
-<tr class="separator:a9fa17ec5f99f892c0a08bd57e2391ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba6b85760efea652890569b36e9db63c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#aba6b85760efea652890569b36e9db63c">kCatalogCheck</a> = 0x772BU</td></tr>
-<tr class="separator:aba6b85760efea652890569b36e9db63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728f5d7b7d8997eb17a025a7279ed91a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#a728f5d7b7d8997eb17a025a7279ed91a">message</a></td></tr>
+<tr class="memdesc:a728f5d7b7d8997eb17a025a7279ed91a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Large types (8+ bytes)  <a href="a01428.html#a728f5d7b7d8997eb17a025a7279ed91a">More...</a><br /></td></tr>
+<tr class="separator:a728f5d7b7d8997eb17a025a7279ed91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a060e999accc52a8ed7857ac703469085"><td class="memItemLeft" align="right" valign="top">std::chrono::system_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#a060e999accc52a8ed7857ac703469085">timestamp</a></td></tr>
+<tr class="memdesc:a060e999accc52a8ed7857ac703469085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record timestamp.  <a href="a01428.html#a060e999accc52a8ed7857ac703469085">More...</a><br /></td></tr>
+<tr class="separator:a060e999accc52a8ed7857ac703469085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedce3417fed0732d6a765c39dab2b4d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01209.html#a8abbc573ad9bfc4d4c761d4c300a1e07">LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01428.html#aedce3417fed0732d6a765c39dab2b4d7">level</a></td></tr>
+<tr class="memdesc:aedce3417fed0732d6a765c39dab2b4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Small types (1 byte)  <a href="a01428.html#aedce3417fed0732d6a765c39dab2b4d7">More...</a><br /></td></tr>
+<tr class="separator:aedce3417fed0732d6a765c39dab2b4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>CRC-16/M17: width=16 poly=0x5935 init=0xffff refin=false refout=false xorout=0x0000. </p>
-<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-16/M17 </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="aee775d47652273d2a0761978fb321254"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee775d47652273d2a0761978fb321254">&#9670;&nbsp;</a></span>ValueType</h2>
+<div class="textblock"><p>Buffered log-record structure. </p>
+<p>Holds log records in a buffer before they are written to the file. Holds everything needed for a later write. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a388ec8405355a1c47d6ddbf65f3132d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388ec8405355a1c47d6ddbf65f3132d9">&#9670;&nbsp;</a></span>log_entry_t()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a01428.html#aee775d47652273d2a0761978fb321254">lumex::core::crc::parametric::crc16_m17_spec_t::ValueType</a> =  std::uint16_t</td>
+          <td class="memname">lumex::applied::logger::logger::log_entry_t::log_entry_t </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01209.html#a8abbc573ad9bfc4d4c761d4c300a1e07">LogLevel</a>&#160;</td>
+          <td class="paramname"><em>level_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::chrono::system_clock::time_point&#160;</td>
+          <td class="paramname"><em>timestamp_</em> = <code>std::chrono::system_clock::now&#160;()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Padding: 7 bytes to align to 8 bytes. </p>
+<p>Constructor with parameters. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level_</td><td>Log level. </td></tr>
+    <tr><td class="paramname">message_</td><td>Log message. </td></tr>
+    <tr><td class="paramname">timestamp_</td><td>Timestamp (defaults to now). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aba6b85760efea652890569b36e9db63c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba6b85760efea652890569b36e9db63c">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
+<a id="aedce3417fed0732d6a765c39dab2b4d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedce3417fed0732d6a765c39dab2b4d7">&#9670;&nbsp;</a></span>level</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint16_t lumex::core::crc::parametric::crc16_m17_spec_t::kCatalogCheck = 0x772BU</td>
+          <td class="memname"><a class="el" href="a01209.html#a8abbc573ad9bfc4d4c761d4c300a1e07">LogLevel</a> lumex::applied::logger::logger::log_entry_t::level</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Small types (1 byte) </p>
+<p>Log level </p>
+
 </div>
 </div>
-<a id="aa1e3efed0de34898f55612a2279624cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1e3efed0de34898f55612a2279624cc">&#9670;&nbsp;</a></span>kInit</h2>
+<a id="a728f5d7b7d8997eb17a025a7279ed91a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728f5d7b7d8997eb17a025a7279ed91a">&#9670;&nbsp;</a></span>message</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_m17_spec_t::kInit = 0xFFFFU</td>
+          <td class="memname">std::string lumex::applied::logger::logger::log_entry_t::message</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Large types (8+ bytes) </p>
+<p>Log message </p>
+
 </div>
 </div>
-<a id="a84eb3a9eb8c921085974ac540377e42f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84eb3a9eb8c921085974ac540377e42f">&#9670;&nbsp;</a></span>kPoly</h2>
+<a id="a060e999accc52a8ed7857ac703469085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a060e999accc52a8ed7857ac703469085">&#9670;&nbsp;</a></span>timestamp</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_m17_spec_t::kPoly = 0x5935U</td>
+          <td class="memname">std::chrono::system_clock::time_point lumex::applied::logger::logger::log_entry_t::timestamp</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a846f967db00d815bef5a4fa718581f1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a846f967db00d815bef5a4fa718581f1b">&#9670;&nbsp;</a></span>kRefIn</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc16_m17_spec_t::kRefIn = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acf25f3b322f2ee99b5a1d9bf28b62f1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf25f3b322f2ee99b5a1d9bf28b62f1c">&#9670;&nbsp;</a></span>kRefOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc16_m17_spec_t::kRefOut = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af31ba0e5a7371f63625bef84ee172faa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af31ba0e5a7371f63625bef84ee172faa">&#9670;&nbsp;</a></span>kWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc16_m17_spec_t::kWidth = 16</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9fa17ec5f99f892c0a08bd57e2391ca8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fa17ec5f99f892c0a08bd57e2391ca8">&#9670;&nbsp;</a></span>kXorOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc16_m17_spec_t::kXorOut = 0x0000U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Record timestamp. </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
+<li><a class="el" href="a00392_source.html">LumexLogger.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00847.html">crc</a></li><li class="navelem"><a class="el" href="a00850.html">parametric</a></li><li class="navelem"><a class="el" href="a01428.html">crc16_m17_spec_t</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01186.html">applied</a></li><li class="navelem"><a class="el" href="a01208.html">logger</a></li><li class="navelem"><a class="el" href="a01209.html">logger</a></li><li class="navelem"><a class="el" href="a01428.html">log_entry_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

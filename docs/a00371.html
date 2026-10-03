@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: LumexUtilities.hpp File Reference</title>
+<title>LumexLib: LumexJsonSchemaNormalizer.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,91 +94,90 @@ $(document).ready(function(){initNavTree('a00371.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">LumexUtilities.hpp File Reference</div>  </div>
+<div class="title">LumexJsonSchemaNormalizer.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
-<code>#include &quot;<a class="el" href="a00347_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+
+<p>Abstract base for per-operation normalizers built on the schema walker.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00368_source.html">lumex/applied/json/normalization/ILumexJsonNormalizer.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00377_source.html">lumex/applied/json/schema/LumexJsonSchemaTraverser.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00632_source.html">lumex/core/string_view/view/LumexStringView.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for LumexUtilities.hpp:</div>
+Include dependency graph for LumexJsonSchemaNormalizer.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00372.png" border="0" usemap="#aLumexUtilities_8hpp" alt=""/></div>
+<div class="center"><img src="a00372.png" border="0" usemap="#aLumexJsonSchemaNormalizer_8hpp" alt=""/></div>
+<map name="LumexJsonSchemaNormalizer_8hpp" id="aLumexJsonSchemaNormalizer_8hpp">
+<area shape="rect" title="Abstract base for per&#45;operation normalizers built on the schema walker." alt="" coords="703,5,947,32"/>
+<area shape="rect" title=" " alt="" coords="382,177,469,203"/>
+<area shape="rect" title=" " alt="" coords="1259,273,1317,300"/>
+<area shape="rect" title=" " alt="" coords="771,177,917,203"/>
+<area shape="rect" href="a00368.html" title="Contract for turning raw JSON text into a canonical document." alt="" coords="586,80,881,121"/>
+<area shape="rect" href="a00632.html" title="C++11 lightweight, non&#45;owning view over character sequences." alt="" coords="493,169,696,211"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="1245,363,1435,404"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="616,452,829,493"/>
+<area shape="rect" href="a00377.html" title="Recursive walker for a JSON Schema draft&#45;7 subset." alt="" coords="1117,80,1408,121"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="93,273,275,300"/>
+<area shape="rect" title=" " alt="" coords="874,370,945,397"/>
+<area shape="rect" title=" " alt="" coords="299,273,365,300"/>
+<area shape="rect" title=" " alt="" coords="390,273,461,300"/>
+<area shape="rect" title=" " alt="" coords="485,273,561,300"/>
+<area shape="rect" title=" " alt="" coords="585,266,722,307"/>
+<area shape="rect" href="a00695.html" title=" " alt="" coords="595,363,850,404"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="1525,452,1779,493"/>
+<area shape="rect" title=" " alt="" coords="1144,177,1229,203"/>
+<area shape="rect" title=" " alt="" coords="1254,177,1317,203"/>
+<area shape="rect" title=" " alt="" coords="1796,273,1863,300"/>
+<area shape="rect" title=" " alt="" coords="1658,273,1718,300"/>
+<area shape="rect" title=" " alt="" coords="1763,177,1826,203"/>
+<area shape="rect" href="a00374.html" title="Exception thrown by the JSON schema engine on the first violation." alt="" coords="1392,169,1688,211"/>
+<area shape="rect" href="a00611.html" title="X&#45;macro system that generates a scoped enum together with its own compile&#45;time reflection data and a ..." alt="" coords="899,259,1133,315"/>
+<area shape="rect" title=" " alt="" coords="1510,273,1597,300"/>
+<area shape="rect" title=" " alt="" coords="1020,370,1076,397"/>
+</map>
 </div>
 </div>
 <p><a href="a00371_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a0d4172421ecab863abbc52dd3c53690b"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00371.html#a0d4172421ecab863abbc52dd3c53690b">fd_to_ptr</a> (int fileDescriptor) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a0d4172421ecab863abbc52dd3c53690b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a087ac0d38e593221087d6022b43a12cc"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00371.html#a087ac0d38e593221087d6022b43a12cc">ptr_to_fd</a> (void *pointer) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a087ac0d38e593221087d6022b43a12cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01412.html">lumex::applied::json::normalization::LumexJsonSchemaNormalizer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shares the schema walker and the strict/non-strict error policy between concrete normalizers.  <a href="a01412.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01186"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01186.html">lumex::applied</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01200"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01200.html">lumex::applied::json</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01205"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01205.html">lumex::applied::json::normalization</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a0d4172421ecab863abbc52dd3c53690b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d4172421ecab863abbc52dd3c53690b">&#9670;&nbsp;</a></span>fd_to_ptr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void* fd_to_ptr </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fileDescriptor</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02950.html#a0">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/utility/util/LumexUtilities.hpp</a>, and <a class="el" href="a02948.html#a0">Typical</a>.</dd>
-</dl>
-
-</div>
-</div>
-<a id="a087ac0d38e593221087d6022b43a12cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a087ac0d38e593221087d6022b43a12cc">&#9670;&nbsp;</a></span>ptr_to_fd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int ptr_to_fd </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pointer</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02950.html#a1">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/utility/util/LumexUtilities.hpp</a>, and <a class="el" href="a02948.html#a1">Typical</a>.</dd>
-</dl>
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract base for per-operation normalizers built on the schema walker. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_1be6b143c34d1233efa44119afd007e9.html">core</a></li><li class="navelem"><a class="el" href="dir_97f9291aa38cf72533b0e25925a64744.html">utility</a></li><li class="navelem"><a class="el" href="dir_778c0255c39b12cf174b7cfb6fcc851e.html">util</a></li><li class="navelem"><a class="el" href="a00371.html">LumexUtilities.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_de45db85bd98abf883bc2bd6c3907fd8.html">applied</a></li><li class="navelem"><a class="el" href="dir_3e92e8848bcd01e21718dfea84e9b21e.html">json</a></li><li class="navelem"><a class="el" href="dir_e7e942524903e417f0871ffcf8723277.html">normalization</a></li><li class="navelem"><a class="el" href="a00371.html">LumexJsonSchemaNormalizer.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

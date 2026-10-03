@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::xpath::memory::XPathStack Struct Reference</title>
+<title>LumexLib: lumex::core::utility::traits::stream::all_streamable&lt; Args &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -93,79 +93,27 @@ $(document).ready(function(){initNavTree('a02812.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a02809.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::xpath::memory::XPathStack Struct Reference</div>  </div>
+<div class="title">lumex::core::utility::traits::stream::all_streamable&lt; Args &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a pair of XPath allocators for managing expression evaluation memory.  
+<p><code>value</code> is true when every type in <code>Args</code> (after <code>std::decay</code>) is streamable; true for an empty pack.  
  <a href="a02812.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00710_source.html">XPathStack.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for lumex::xml::xpath::memory::XPathStack:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02810.png" border="0" usemap="#alumex_1_1xml_1_1xpath_1_1memory_1_1XPathStack_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ad5093c7978d7ea040ad32c514826ad8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02796.html">XPathAllocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02812.html#ad5093c7978d7ea040ad32c514826ad8e">result</a></td></tr>
-<tr class="memdesc:ad5093c7978d7ea040ad32c514826ad8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the allocator used for storing final XPath expression results.  <a href="a02812.html#ad5093c7978d7ea040ad32c514826ad8e">More...</a><br /></td></tr>
-<tr class="separator:ad5093c7978d7ea040ad32c514826ad8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3385766dbed849bf5326b9caa6e6a082"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02796.html">XPathAllocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02812.html#a3385766dbed849bf5326b9caa6e6a082">temp</a></td></tr>
-<tr class="memdesc:a3385766dbed849bf5326b9caa6e6a082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the allocator used for temporary memory during XPath evaluation.  <a href="a02812.html#a3385766dbed849bf5326b9caa6e6a082">More...</a><br /></td></tr>
-<tr class="separator:a3385766dbed849bf5326b9caa6e6a082"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a pair of XPath allocators for managing expression evaluation memory. </p>
-<p>This structure groups two <code><a class="el" href="a02796.html" title="Allocator for XPath-related data structures.">XPathAllocator</a></code> instances: <code>result</code> for storing final evaluation results and <code>temp</code> for temporary allocations that can be freed frequently during intermediate steps. This separation helps optimize memory usage during complex XPath evaluations.</p>
-<dl class="section note"><dt>Note</dt><dd>This struct itself does not manage the lifetime of the <code><a class="el" href="a02796.html" title="Allocator for XPath-related data structures.">XPathAllocator</a></code> objects it points to; it merely holds references. The actual allocators are typically owned by <code><a class="el" href="a02816.html" title="Manages the memory for XPath evaluation, providing dedicated allocators.">XPathStackData</a></code>. </dd></dl>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad5093c7978d7ea040ad32c514826ad8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5093c7978d7ea040ad32c514826ad8e">&#9670;&nbsp;</a></span>result</h2>
+<div class="textblock"><h3>template&lt;typename... Args&gt;<br />
+struct lumex::core::utility::traits::stream::all_streamable&lt; Args &gt;</h3>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a02796.html">XPathAllocator</a>* lumex::xml::xpath::memory::XPathStack::result</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pointer to the allocator used for storing final XPath expression results. </p>
-
-</div>
-</div>
-<a id="a3385766dbed849bf5326b9caa6e6a082"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3385766dbed849bf5326b9caa6e6a082">&#9670;&nbsp;</a></span>temp</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a02796.html">XPathAllocator</a>* lumex::xml::xpath::memory::XPathStack::temp</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pointer to the allocator used for temporary memory during XPath evaluation. </p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00710_source.html">XPathStack.hpp</a></li>
+<p><code>value</code> is true when every type in <code>Args</code> (after <code>std::decay</code>) is streamable; true for an empty pack. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00950.html">xpath</a></li><li class="navelem"><a class="el" href="a00967.html">memory</a></li><li class="navelem"><a class="el" href="a02812.html">XPathStack</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01325.html">stream</a></li><li class="navelem"><a class="el" href="a02812.html">all_streamable</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

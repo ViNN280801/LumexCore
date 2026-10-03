@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: XPathStack.hpp File Reference</title>
+<title>LumexLib: LumexSafeNumericComparator.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -95,53 +95,651 @@ $(document).ready(function(){initNavTree('a00710.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">XPathStack.hpp File Reference</div>  </div>
+<div class="title">LumexSafeNumericComparator.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00557_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="a00701_source.html">XPathAllocator.hpp</a>&quot;</code><br />
+
+<p>Universal thread-safe comparator for safe comparison of arithmetic types.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00662_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00680_source.html">lumex/core/utility/compiler/LumexCheckFeatures.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00695_source.html">lumex/core/utility/macros/LumexConstantMacros.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00722_source.html">lumex/core/utility/traits/LumexTypeTraits.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for XPathStack.hpp:</div>
+Include dependency graph for LumexSafeNumericComparator.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00711.png" border="0" usemap="#aXPathStack_8hpp" alt=""/></div>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00712.png" border="0" usemap="#aXPathStack_8hppdep" alt=""/></div>
+<div class="center"><img src="a00711.png" border="0" usemap="#aLumexSafeNumericComparator_8hpp" alt=""/></div>
+<map name="LumexSafeNumericComparator_8hpp" id="aLumexSafeNumericComparator_8hpp">
+<area shape="rect" title="Universal thread&#45;safe comparator for safe comparison of arithmetic types." alt="" coords="254,5,509,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,72,114"/>
+<area shape="rect" title=" " alt="" coords="97,87,159,114"/>
+<area shape="rect" title=" " alt="" coords="285,177,344,203"/>
+<area shape="rect" title=" " alt="" coords="369,177,461,203"/>
+<area shape="rect" title=" " alt="" coords="485,177,545,203"/>
+<area shape="rect" href="a00662.html" title=" " alt="" coords="27,169,210,211"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="551,259,764,300"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="469,80,659,121"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="569,169,823,211"/>
+<area shape="rect" href="a00695.html" title=" " alt="" coords="847,169,1102,211"/>
+<area shape="rect" href="a00722.html" title="Every general&#45;purpose type trait of LumexLib, one sub&#45;namespace of lumex::core::utility::traits per t..." alt="" coords="1193,80,1394,121"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="28,266,209,293"/>
+<area shape="rect" title=" " alt="" coords="1299,177,1355,203"/>
+<area shape="rect" title=" " alt="" coords="1379,177,1450,203"/>
+<area shape="rect" title=" " alt="" coords="1474,177,1561,203"/>
+<area shape="rect" title=" " alt="" coords="1585,177,1655,203"/>
+<area shape="rect" title=" " alt="" coords="1680,177,1757,203"/>
+<area shape="rect" title=" " alt="" coords="1782,177,1858,203"/>
+<area shape="rect" title=" " alt="" coords="1883,177,1941,203"/>
+<area shape="rect" title=" " alt="" coords="1966,177,2021,203"/>
+<area shape="rect" title=" " alt="" coords="2045,177,2120,203"/>
+<area shape="rect" title=" " alt="" coords="1126,177,1223,203"/>
+</map>
 </div>
 </div>
 <p><a href="a00710_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02812.html">lumex::xml::xpath::memory::XPathStack</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a pair of XPath allocators for managing expression evaluation memory.  <a href="a02812.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02648.html">lumex::core::utility::numeric::comparison_traits&lt; T, U &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metafunction describing comparison traits of two types.  <a href="a02648.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02816.html">lumex::xml::xpath::memory::XPathStackData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages the memory for XPath evaluation, providing dedicated allocators.  <a href="a02816.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02656.html">lumex::core::utility::numeric::safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_integral&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &gt;::type &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for identical types (maximum optimization)  <a href="a02656.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02660.html">lumex::core::utility::numeric::safe_compare_impl_helper&lt; T, T, typename std::enable_if&lt; std::is_floating_point&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &gt;::type &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for identical floating-point types.  <a href="a02660.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02664.html">lumex::core::utility::numeric::safe_compare_impl_helper&lt; T, U, typename std::enable_if&lt; std::is_integral&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &amp;&amp;std::is_integral&lt; traits::meta::CleanType&lt; U &gt; &gt;::value &amp;&amp;!std::is_same&lt; traits::meta::CleanType&lt; T &gt;, traits::meta::CleanType&lt; U &gt; &gt;::value &gt;::type &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for integer types.  <a href="a02664.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02668.html">lumex::core::utility::numeric::safe_compare_impl_helper&lt; T, U, typename std::enable_if&lt; std::is_floating_point&lt; traits::meta::CleanType&lt; T &gt; &gt;::value &amp;&amp;std::is_floating_point&lt; traits::meta::CleanType&lt; U &gt; &gt;::value &amp;&amp;!std::is_same&lt; traits::meta::CleanType&lt; T &gt;, traits::meta::CleanType&lt; U &gt; &gt;::value &gt;::type &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for floating-point types.  <a href="a02668.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02672.html">lumex::core::utility::numeric::safe_compare_impl_helper&lt; T, U, typename std::enable_if&lt;(std::is_integral&lt; traits::meta::CleanType&lt; T &gt;&gt;::value &amp;&amp;std::is_floating_point&lt; traits::meta::CleanType&lt; U &gt;&gt;::value)||(std::is_floating_point&lt; traits::meta::CleanType&lt; T &gt;&gt;::value &amp;&amp;std::is_integral&lt; traits::meta::CleanType&lt; U &gt;&gt;::value)&gt;::type &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for mixed types (integer + floating-point)  <a href="a02672.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02676.html">lumex::core::utility::numeric::SafeComparator&lt; T, Atomic &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Universal thread-safe comparator for safe comparison of arithmetic types.  <a href="a02676.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:a00783"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00783.html">lumex</a></td></tr>
-<tr class="memdesc:a00783"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00941"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00941.html">lumex::xml</a></td></tr>
+<tr class="memitem:a01236"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01236.html">lumex::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00950"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00950.html">lumex::xml::xpath</a></td></tr>
+<tr class="memitem:a01308"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01308.html">lumex::core::utility</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00967"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00967.html">lumex::xml::xpath::memory</a></td></tr>
+<tr class="memitem:a01319"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html">lumex::core::utility::numeric</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:afa6ebf494a0a61a21c6b7d351c9e40dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00710.html#afa6ebf494a0a61a21c6b7d351c9e40dd">LUMEXLUMEX_SFNC_ARCH_X86</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:afa6ebf494a0a61a21c6b7d351c9e40dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a21bb7e667bdceb0e5581cdca92c6f64a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a21bb7e667bdceb0e5581cdca92c6f64a">lumex::core::utility::numeric::AtomicCharComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; char, true &gt;</td></tr>
+<tr class="memdesc:a21bb7e667bdceb0e5581cdca92c6f64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for char.  <a href="a01319.html#a21bb7e667bdceb0e5581cdca92c6f64a">More...</a><br /></td></tr>
+<tr class="separator:a21bb7e667bdceb0e5581cdca92c6f64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c12a99d6c203566b8dd04db8cd891c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a65c12a99d6c203566b8dd04db8cd891c">lumex::core::utility::numeric::AtomicUCharComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned char, true &gt;</td></tr>
+<tr class="memdesc:a65c12a99d6c203566b8dd04db8cd891c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for unsigned char.  <a href="a01319.html#a65c12a99d6c203566b8dd04db8cd891c">More...</a><br /></td></tr>
+<tr class="separator:a65c12a99d6c203566b8dd04db8cd891c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab6057e88ce9cb06629326fad5766c31"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#aab6057e88ce9cb06629326fad5766c31">lumex::core::utility::numeric::AtomicShortComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; short, true &gt;</td></tr>
+<tr class="memdesc:aab6057e88ce9cb06629326fad5766c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for short.  <a href="a01319.html#aab6057e88ce9cb06629326fad5766c31">More...</a><br /></td></tr>
+<tr class="separator:aab6057e88ce9cb06629326fad5766c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca2914411833ec4a15860a88a00f904"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a3ca2914411833ec4a15860a88a00f904">lumex::core::utility::numeric::AtomicUShortComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned short, true &gt;</td></tr>
+<tr class="memdesc:a3ca2914411833ec4a15860a88a00f904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for unsigned short.  <a href="a01319.html#a3ca2914411833ec4a15860a88a00f904">More...</a><br /></td></tr>
+<tr class="separator:a3ca2914411833ec4a15860a88a00f904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65867334229b83301afa57d22e3ee38"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#af65867334229b83301afa57d22e3ee38">lumex::core::utility::numeric::AtomicIntComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; int, true &gt;</td></tr>
+<tr class="memdesc:af65867334229b83301afa57d22e3ee38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for int.  <a href="a01319.html#af65867334229b83301afa57d22e3ee38">More...</a><br /></td></tr>
+<tr class="separator:af65867334229b83301afa57d22e3ee38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7025449672689d4a304cbcd34c39691"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#ac7025449672689d4a304cbcd34c39691">lumex::core::utility::numeric::AtomicUIntComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned int, true &gt;</td></tr>
+<tr class="memdesc:ac7025449672689d4a304cbcd34c39691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for unsigned int.  <a href="a01319.html#ac7025449672689d4a304cbcd34c39691">More...</a><br /></td></tr>
+<tr class="separator:ac7025449672689d4a304cbcd34c39691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb480e1312fe6a54a02db8c7b7f19a4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#adfb480e1312fe6a54a02db8c7b7f19a4">lumex::core::utility::numeric::AtomicLongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; long, true &gt;</td></tr>
+<tr class="memdesc:adfb480e1312fe6a54a02db8c7b7f19a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for long.  <a href="a01319.html#adfb480e1312fe6a54a02db8c7b7f19a4">More...</a><br /></td></tr>
+<tr class="separator:adfb480e1312fe6a54a02db8c7b7f19a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e19011da3570da3cb6cef31c7420f7d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a8e19011da3570da3cb6cef31c7420f7d">lumex::core::utility::numeric::AtomicULongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned long, true &gt;</td></tr>
+<tr class="memdesc:a8e19011da3570da3cb6cef31c7420f7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for unsigned long.  <a href="a01319.html#a8e19011da3570da3cb6cef31c7420f7d">More...</a><br /></td></tr>
+<tr class="separator:a8e19011da3570da3cb6cef31c7420f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9efea5440024d3e33bb8428e87c9109"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#ac9efea5440024d3e33bb8428e87c9109">lumex::core::utility::numeric::AtomicLongLongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; long long, true &gt;</td></tr>
+<tr class="memdesc:ac9efea5440024d3e33bb8428e87c9109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for long long.  <a href="a01319.html#ac9efea5440024d3e33bb8428e87c9109">More...</a><br /></td></tr>
+<tr class="separator:ac9efea5440024d3e33bb8428e87c9109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a881d980651413253f4e68273a4258e3c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a881d980651413253f4e68273a4258e3c">lumex::core::utility::numeric::AtomicULongLongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned long long, true &gt;</td></tr>
+<tr class="memdesc:a881d980651413253f4e68273a4258e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for unsigned long long.  <a href="a01319.html#a881d980651413253f4e68273a4258e3c">More...</a><br /></td></tr>
+<tr class="separator:a881d980651413253f4e68273a4258e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4286fb7c7dc7245da25f4a461f68a6a6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a4286fb7c7dc7245da25f4a461f68a6a6">lumex::core::utility::numeric::AtomicFloatComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; float, true &gt;</td></tr>
+<tr class="memdesc:a4286fb7c7dc7245da25f4a461f68a6a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for float.  <a href="a01319.html#a4286fb7c7dc7245da25f4a461f68a6a6">More...</a><br /></td></tr>
+<tr class="separator:a4286fb7c7dc7245da25f4a461f68a6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8494f314d120cbf2dfb216f4497c6c66"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a8494f314d120cbf2dfb216f4497c6c66">lumex::core::utility::numeric::AtomicDoubleComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; double, true &gt;</td></tr>
+<tr class="memdesc:a8494f314d120cbf2dfb216f4497c6c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for double.  <a href="a01319.html#a8494f314d120cbf2dfb216f4497c6c66">More...</a><br /></td></tr>
+<tr class="separator:a8494f314d120cbf2dfb216f4497c6c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4db2066bfbed12bbae8eaacd9e2fefd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#ab4db2066bfbed12bbae8eaacd9e2fefd">lumex::core::utility::numeric::AtomicLongDoubleComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; long double, true &gt;</td></tr>
+<tr class="memdesc:ab4db2066bfbed12bbae8eaacd9e2fefd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic comparator for long double.  <a href="a01319.html#ab4db2066bfbed12bbae8eaacd9e2fefd">More...</a><br /></td></tr>
+<tr class="separator:ab4db2066bfbed12bbae8eaacd9e2fefd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1edc6bfd611dfdc33cdde532d61b0b91"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a1edc6bfd611dfdc33cdde532d61b0b91">lumex::core::utility::numeric::FastCharComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; char, false &gt;</td></tr>
+<tr class="memdesc:a1edc6bfd611dfdc33cdde532d61b0b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for char.  <a href="a01319.html#a1edc6bfd611dfdc33cdde532d61b0b91">More...</a><br /></td></tr>
+<tr class="separator:a1edc6bfd611dfdc33cdde532d61b0b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b4f37648b31d8ee247e5d0d8ea02cba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a9b4f37648b31d8ee247e5d0d8ea02cba">lumex::core::utility::numeric::FastUCharComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned char, false &gt;</td></tr>
+<tr class="memdesc:a9b4f37648b31d8ee247e5d0d8ea02cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for unsigned char.  <a href="a01319.html#a9b4f37648b31d8ee247e5d0d8ea02cba">More...</a><br /></td></tr>
+<tr class="separator:a9b4f37648b31d8ee247e5d0d8ea02cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a475553cb5db74d8b8e891b2054984"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a74a475553cb5db74d8b8e891b2054984">lumex::core::utility::numeric::FastShortComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; short, false &gt;</td></tr>
+<tr class="memdesc:a74a475553cb5db74d8b8e891b2054984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for short.  <a href="a01319.html#a74a475553cb5db74d8b8e891b2054984">More...</a><br /></td></tr>
+<tr class="separator:a74a475553cb5db74d8b8e891b2054984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42856faef0b725dbf50e4a3893a2344b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a42856faef0b725dbf50e4a3893a2344b">lumex::core::utility::numeric::FastUShortComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned short, false &gt;</td></tr>
+<tr class="memdesc:a42856faef0b725dbf50e4a3893a2344b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for unsigned short.  <a href="a01319.html#a42856faef0b725dbf50e4a3893a2344b">More...</a><br /></td></tr>
+<tr class="separator:a42856faef0b725dbf50e4a3893a2344b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1be4e6b6b837f88e83b61a5b5fe37211"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a1be4e6b6b837f88e83b61a5b5fe37211">lumex::core::utility::numeric::FastIntComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; int, false &gt;</td></tr>
+<tr class="memdesc:a1be4e6b6b837f88e83b61a5b5fe37211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for int.  <a href="a01319.html#a1be4e6b6b837f88e83b61a5b5fe37211">More...</a><br /></td></tr>
+<tr class="separator:a1be4e6b6b837f88e83b61a5b5fe37211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d6a41736f39b5f7504091f2cbd4dd8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a37d6a41736f39b5f7504091f2cbd4dd8">lumex::core::utility::numeric::FastUIntComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned int, false &gt;</td></tr>
+<tr class="memdesc:a37d6a41736f39b5f7504091f2cbd4dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for unsigned int.  <a href="a01319.html#a37d6a41736f39b5f7504091f2cbd4dd8">More...</a><br /></td></tr>
+<tr class="separator:a37d6a41736f39b5f7504091f2cbd4dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a256e29897ebebcc60cfecedd815274ca"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a256e29897ebebcc60cfecedd815274ca">lumex::core::utility::numeric::FastLongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; long, false &gt;</td></tr>
+<tr class="memdesc:a256e29897ebebcc60cfecedd815274ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for long.  <a href="a01319.html#a256e29897ebebcc60cfecedd815274ca">More...</a><br /></td></tr>
+<tr class="separator:a256e29897ebebcc60cfecedd815274ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a453fb0156f11e6631d7a000a471f3ee1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a453fb0156f11e6631d7a000a471f3ee1">lumex::core::utility::numeric::FastULongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned long, false &gt;</td></tr>
+<tr class="memdesc:a453fb0156f11e6631d7a000a471f3ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for unsigned long.  <a href="a01319.html#a453fb0156f11e6631d7a000a471f3ee1">More...</a><br /></td></tr>
+<tr class="separator:a453fb0156f11e6631d7a000a471f3ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd2f019239d202f2565a364a38e0d0ab"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#afd2f019239d202f2565a364a38e0d0ab">lumex::core::utility::numeric::FastLongLongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; long long, false &gt;</td></tr>
+<tr class="memdesc:afd2f019239d202f2565a364a38e0d0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for long long.  <a href="a01319.html#afd2f019239d202f2565a364a38e0d0ab">More...</a><br /></td></tr>
+<tr class="separator:afd2f019239d202f2565a364a38e0d0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32fdc982ccdbd30ed55b1c5e98ce2039"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a32fdc982ccdbd30ed55b1c5e98ce2039">lumex::core::utility::numeric::FastULongLongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned long long, false &gt;</td></tr>
+<tr class="memdesc:a32fdc982ccdbd30ed55b1c5e98ce2039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for unsigned long long.  <a href="a01319.html#a32fdc982ccdbd30ed55b1c5e98ce2039">More...</a><br /></td></tr>
+<tr class="separator:a32fdc982ccdbd30ed55b1c5e98ce2039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ef960b1c4ae8aa7434ea9d9b1a09bfb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a5ef960b1c4ae8aa7434ea9d9b1a09bfb">lumex::core::utility::numeric::FastFloatComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; float, false &gt;</td></tr>
+<tr class="memdesc:a5ef960b1c4ae8aa7434ea9d9b1a09bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for float.  <a href="a01319.html#a5ef960b1c4ae8aa7434ea9d9b1a09bfb">More...</a><br /></td></tr>
+<tr class="separator:a5ef960b1c4ae8aa7434ea9d9b1a09bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04088ddc7961f0b0f37cecdb539d8fe1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a04088ddc7961f0b0f37cecdb539d8fe1">lumex::core::utility::numeric::FastDoubleComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; double, false &gt;</td></tr>
+<tr class="memdesc:a04088ddc7961f0b0f37cecdb539d8fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for double.  <a href="a01319.html#a04088ddc7961f0b0f37cecdb539d8fe1">More...</a><br /></td></tr>
+<tr class="separator:a04088ddc7961f0b0f37cecdb539d8fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa173338fe3117295e2ca0599f255b8bb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#aa173338fe3117295e2ca0599f255b8bb">lumex::core::utility::numeric::FastLongDoubleComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; long double, false &gt;</td></tr>
+<tr class="memdesc:aa173338fe3117295e2ca0599f255b8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast comparator for long double.  <a href="a01319.html#aa173338fe3117295e2ca0599f255b8bb">More...</a><br /></td></tr>
+<tr class="separator:aa173338fe3117295e2ca0599f255b8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cbda2fc9d8f92b62f7eb215ca82375e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a3cbda2fc9d8f92b62f7eb215ca82375e">lumex::core::utility::numeric::SafeCharComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; char &gt;</td></tr>
+<tr class="memdesc:a3cbda2fc9d8f92b62f7eb215ca82375e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for char.  <a href="a01319.html#a3cbda2fc9d8f92b62f7eb215ca82375e">More...</a><br /></td></tr>
+<tr class="separator:a3cbda2fc9d8f92b62f7eb215ca82375e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27c34c04ddc6691ff51413e673df56c2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a27c34c04ddc6691ff51413e673df56c2">lumex::core::utility::numeric::SafeUCharComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned char &gt;</td></tr>
+<tr class="memdesc:a27c34c04ddc6691ff51413e673df56c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for unsigned char.  <a href="a01319.html#a27c34c04ddc6691ff51413e673df56c2">More...</a><br /></td></tr>
+<tr class="separator:a27c34c04ddc6691ff51413e673df56c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10b991c51bb83501a3c2e9ffacf373f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#aa10b991c51bb83501a3c2e9ffacf373f">lumex::core::utility::numeric::SafeShortComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; short &gt;</td></tr>
+<tr class="memdesc:aa10b991c51bb83501a3c2e9ffacf373f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for short.  <a href="a01319.html#aa10b991c51bb83501a3c2e9ffacf373f">More...</a><br /></td></tr>
+<tr class="separator:aa10b991c51bb83501a3c2e9ffacf373f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1abfa42dc8b9e0f4d78cb8ff644c2a0c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a1abfa42dc8b9e0f4d78cb8ff644c2a0c">lumex::core::utility::numeric::SafeUShortComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned short &gt;</td></tr>
+<tr class="memdesc:a1abfa42dc8b9e0f4d78cb8ff644c2a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for unsigned short.  <a href="a01319.html#a1abfa42dc8b9e0f4d78cb8ff644c2a0c">More...</a><br /></td></tr>
+<tr class="separator:a1abfa42dc8b9e0f4d78cb8ff644c2a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9f61c39790ab8731a6c742f43dce01"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#abe9f61c39790ab8731a6c742f43dce01">lumex::core::utility::numeric::SafeIntComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; int &gt;</td></tr>
+<tr class="memdesc:abe9f61c39790ab8731a6c742f43dce01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for int.  <a href="a01319.html#abe9f61c39790ab8731a6c742f43dce01">More...</a><br /></td></tr>
+<tr class="separator:abe9f61c39790ab8731a6c742f43dce01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae48e9ea1c9cb011b98b5b63b3805bee"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#aae48e9ea1c9cb011b98b5b63b3805bee">lumex::core::utility::numeric::SafeUIntComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned int &gt;</td></tr>
+<tr class="memdesc:aae48e9ea1c9cb011b98b5b63b3805bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for unsigned int.  <a href="a01319.html#aae48e9ea1c9cb011b98b5b63b3805bee">More...</a><br /></td></tr>
+<tr class="separator:aae48e9ea1c9cb011b98b5b63b3805bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90260d8f9f00e308d37b39b9c6a14d55"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a90260d8f9f00e308d37b39b9c6a14d55">lumex::core::utility::numeric::SafeLongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; long &gt;</td></tr>
+<tr class="memdesc:a90260d8f9f00e308d37b39b9c6a14d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for long.  <a href="a01319.html#a90260d8f9f00e308d37b39b9c6a14d55">More...</a><br /></td></tr>
+<tr class="separator:a90260d8f9f00e308d37b39b9c6a14d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b31c1afd308059bc7157f59eb363306"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a6b31c1afd308059bc7157f59eb363306">lumex::core::utility::numeric::SafeULongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned long &gt;</td></tr>
+<tr class="memdesc:a6b31c1afd308059bc7157f59eb363306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for unsigned long.  <a href="a01319.html#a6b31c1afd308059bc7157f59eb363306">More...</a><br /></td></tr>
+<tr class="separator:a6b31c1afd308059bc7157f59eb363306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d44a3020dd9075457676a3b084375ff"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a1d44a3020dd9075457676a3b084375ff">lumex::core::utility::numeric::SafeLongLongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; long long &gt;</td></tr>
+<tr class="memdesc:a1d44a3020dd9075457676a3b084375ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for long long.  <a href="a01319.html#a1d44a3020dd9075457676a3b084375ff">More...</a><br /></td></tr>
+<tr class="separator:a1d44a3020dd9075457676a3b084375ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd3f1f5ed4ba8d63aa1122e4cd76c33b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#abd3f1f5ed4ba8d63aa1122e4cd76c33b">lumex::core::utility::numeric::SafeULongLongComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; unsigned long long &gt;</td></tr>
+<tr class="separator:abd3f1f5ed4ba8d63aa1122e4cd76c33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49511c79bf2802ba7c25074896ea6a9a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a49511c79bf2802ba7c25074896ea6a9a">lumex::core::utility::numeric::SafeFloatComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; float &gt;</td></tr>
+<tr class="memdesc:a49511c79bf2802ba7c25074896ea6a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for float.  <a href="a01319.html#a49511c79bf2802ba7c25074896ea6a9a">More...</a><br /></td></tr>
+<tr class="separator:a49511c79bf2802ba7c25074896ea6a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cddd3f9ad1dde701d98446286001c69"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#a8cddd3f9ad1dde701d98446286001c69">lumex::core::utility::numeric::SafeDoubleComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; double &gt;</td></tr>
+<tr class="memdesc:a8cddd3f9ad1dde701d98446286001c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for double.  <a href="a01319.html#a8cddd3f9ad1dde701d98446286001c69">More...</a><br /></td></tr>
+<tr class="separator:a8cddd3f9ad1dde701d98446286001c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5853c13a5176db5b06ff52acb608f94"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01319.html#af5853c13a5176db5b06ff52acb608f94">lumex::core::utility::numeric::SafeLongDoubleComparator</a> = <a class="el" href="a02676.html">SafeComparator</a>&lt; long double &gt;</td></tr>
+<tr class="memdesc:af5853c13a5176db5b06ff52acb608f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparator for long double.  <a href="a01319.html#af5853c13a5176db5b06ff52acb608f94">More...</a><br /></td></tr>
+<tr class="separator:af5853c13a5176db5b06ff52acb608f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac7fc2bde3b1ce75f73964781b0bb52fa"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:ac7fc2bde3b1ce75f73964781b0bb52fa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01319.html#ac7fc2bde3b1ce75f73964781b0bb52fa">lumex::core::utility::numeric::safe_compare</a> (T value1, U value2) noexcept</td></tr>
+<tr class="memdesc:ac7fc2bde3b1ce75f73964781b0bb52fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe comparison of two values of different types.  <a href="a01319.html#ac7fc2bde3b1ce75f73964781b0bb52fa">More...</a><br /></td></tr>
+<tr class="separator:ac7fc2bde3b1ce75f73964781b0bb52fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af598a2b315606e4ef5967f9c7a13883c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:af598a2b315606e4ef5967f9c7a13883c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01319.html#af598a2b315606e4ef5967f9c7a13883c">lumex::core::utility::numeric::safe_greater_equal</a> (T value1, U value2) noexcept</td></tr>
+<tr class="memdesc:af598a2b315606e4ef5967f9c7a13883c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe greater-or-equal comparison.  <a href="a01319.html#af598a2b315606e4ef5967f9c7a13883c">More...</a><br /></td></tr>
+<tr class="separator:af598a2b315606e4ef5967f9c7a13883c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3813d240cd57462f39de7cc00d8f2a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:afa3813d240cd57462f39de7cc00d8f2a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01319.html#afa3813d240cd57462f39de7cc00d8f2a">lumex::core::utility::numeric::safe_less_equal</a> (T value1, U value2) noexcept</td></tr>
+<tr class="memdesc:afa3813d240cd57462f39de7cc00d8f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe less-or-equal comparison.  <a href="a01319.html#afa3813d240cd57462f39de7cc00d8f2a">More...</a><br /></td></tr>
+<tr class="separator:afa3813d240cd57462f39de7cc00d8f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a26269bd181418134b6c80d606da910"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a0a26269bd181418134b6c80d606da910"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01319.html#a0a26269bd181418134b6c80d606da910">lumex::core::utility::numeric::safe_less</a> (T value1, U value2) noexcept</td></tr>
+<tr class="memdesc:a0a26269bd181418134b6c80d606da910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe less-than comparison.  <a href="a01319.html#a0a26269bd181418134b6c80d606da910">More...</a><br /></td></tr>
+<tr class="separator:a0a26269bd181418134b6c80d606da910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d8872e2515a252125737a4f9f985e3"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a58d8872e2515a252125737a4f9f985e3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01319.html#a58d8872e2515a252125737a4f9f985e3">lumex::core::utility::numeric::safe_greater</a> (T value1, U value2) noexcept</td></tr>
+<tr class="memdesc:a58d8872e2515a252125737a4f9f985e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe greater-than comparison.  <a href="a01319.html#a58d8872e2515a252125737a4f9f985e3">More...</a><br /></td></tr>
+<tr class="separator:a58d8872e2515a252125737a4f9f985e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f844a5399232b059c8777310c85a92"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a71f844a5399232b059c8777310c85a92"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01319.html#a71f844a5399232b059c8777310c85a92">lumex::core::utility::numeric::safe_equal</a> (T value1, U value2) noexcept</td></tr>
+<tr class="memdesc:a71f844a5399232b059c8777310c85a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe equality comparison.  <a href="a01319.html#a71f844a5399232b059c8777310c85a92">More...</a><br /></td></tr>
+<tr class="separator:a71f844a5399232b059c8777310c85a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7f9a54dda4ee2f82977b782a1a23a9e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:af7f9a54dda4ee2f82977b782a1a23a9e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01319.html#af7f9a54dda4ee2f82977b782a1a23a9e">lumex::core::utility::numeric::safe_not_equal</a> (T value1, U value2) noexcept</td></tr>
+<tr class="memdesc:af7f9a54dda4ee2f82977b782a1a23a9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe inequality comparison.  <a href="a01319.html#af7f9a54dda4ee2f82977b782a1a23a9e">More...</a><br /></td></tr>
+<tr class="separator:af7f9a54dda4ee2f82977b782a1a23a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a189aab4fc551091597fb6fc06770882e"><td class="memTemplParams" colspan="2">template&lt;typename TargetType , typename SourceType &gt; </td></tr>
+<tr class="memitem:a189aab4fc551091597fb6fc06770882e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01319.html#a189aab4fc551091597fb6fc06770882e">lumex::core::utility::numeric::fits_in_type</a> (SourceType value) noexcept</td></tr>
+<tr class="memdesc:a189aab4fc551091597fb6fc06770882e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether a value fits the target type.  <a href="a01319.html#a189aab4fc551091597fb6fc06770882e">More...</a><br /></td></tr>
+<tr class="separator:a189aab4fc551091597fb6fc06770882e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Universal thread-safe comparator for safe comparison of arithmetic types. </p>
+<p>Prevents overflow and incorrect comparisons between types with different ranges. Supports all arithmetic types (integral and floating-point) with compile-time optimizations. </p><dl class="section since"><dt>Since</dt><dd>C++11 </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Thread-safe, exception-safe, no-throw where possible</dd></dl>
+<h1><a class="anchor" id="problem"></a>
+Problem: Unsafe comparison of different types</h1>
+<p>In C++, comparing variables of different types can cause serious problems:</p>
+<h2><a class="anchor" id="overflow"></a>
+Overflow problem</h2>
+<p>Comparing types with different value ranges triggers implicit type conversion, which can overflow and cause undefined behavior (UB):</p>
+<div class="fragment"><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> block_size = 200;  <span class="comment">// Range: 0-255</span></div>
+<div class="line"><span class="keywordtype">int</span> packet_size = 300;           <span class="comment">// Range: -2,147,483,648 to 2,147,483,647</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// UNSAFE! May produce an incorrect result</span></div>
+<div class="line"><span class="keywordflow">if</span> (block_size &gt;= packet_size) {</div>
+<div class="line">  <span class="comment">// Intended: 200 &gt;= 300 should be false</span></div>
+<div class="line">  <span class="comment">// Actual: unsigned char(300) = 44 (300 % 256)</span></div>
+<div class="line">  <span class="comment">// Result: 200 &gt;= 44 = true (WRONG!)</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="floating_point"></a>
+Floating-point problem</h2>
+<p>Comparing integers to floating-point values is also problematic:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> counter = 3;</div>
+<div class="line"><span class="keywordtype">float</span> threshold = 3.14f;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// UNSAFE! NaN and infinities are not handled</span></div>
+<div class="line"><span class="keywordflow">if</span> (counter &gt;= threshold) {</div>
+<div class="line">  <span class="comment">// If threshold is NaN the result is indeterminate</span></div>
+<div class="line">  <span class="comment">// If threshold is +infinity the result is always false</span></div>
+<div class="line">  <span class="comment">// If threshold is -infinity the result is always true</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="consequences"></a>
+Consequences</h2>
+<ul>
+<li>Incorrect program logic</li>
+<li>Undefined behavior (UB)</li>
+<li>Potential security vulnerabilities</li>
+<li>Difficult debugging</li>
+</ul>
+<h1><a class="anchor" id="solution"></a>
+Solution: SafeComparator</h1>
+<p>SafeComparator addresses these problems by:</p>
+<h2><a class="anchor" id="range_checking"></a>
+Range checking</h2>
+<p>Before comparing, checks whether the value fits the target type range:</p>
+<div class="fragment"><div class="line"><span class="comment">// SAFE with SafeComparator</span></div>
+<div class="line"><a class="code" href="a01319.html#a27c34c04ddc6691ff51413e673df56c2">SafeUCharComparator</a> safe_size(200);</div>
+<div class="line"><span class="keywordflow">if</span> (safe_size.safe_compare(300)) {</div>
+<div class="line">  <span class="comment">// Algorithm:</span></div>
+<div class="line">  <span class="comment">// 1. Check: 300 &gt; 255 (max unsigned char) = true</span></div>
+<div class="line">  <span class="comment">// 2. Return: false (correct!)</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="floating_handling"></a>
+Floating-point handling</h2>
+<p>Handles special values correctly:</p>
+<div class="fragment"><div class="line"><a class="code" href="a01319.html#abe9f61c39790ab8731a6c742f43dce01">SafeIntComparator</a> safe_counter(3);</div>
+<div class="line"><span class="keywordtype">float</span> threshold = std::numeric_limits&lt;float&gt;::quiet_NaN();</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (safe_counter.safe_compare(threshold)) {</div>
+<div class="line">  <span class="comment">// Algorithm:</span></div>
+<div class="line">  <span class="comment">// 1. Check: threshold is NaN = true</span></div>
+<div class="line">  <span class="comment">// 2. Return: false (correct!)</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="compile_time"></a>
+Compile-time optimizations</h2>
+<p>Uses SFINAE to select the optimal comparison algorithm:</p><ul>
+<li>Same types: direct comparison (fastest)</li>
+<li>Integer types: range check plus conversion</li>
+<li>Floating-point types: NaN/infinity handling plus conversion</li>
+<li>Mixed types: combined handling</li>
+</ul>
+<h1><a class="anchor" id="examples"></a>
+Practical examples</h1>
+<h2><a class="anchor" id="bad_example"></a>
+Example WITHOUT SafeComparator (unsafe)</h2>
+<div class="fragment"><div class="line"><span class="comment">// Problematic code</span></div>
+<div class="line"><span class="keyword">struct </span>DataBlock {</div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_Size;  <span class="comment">// 0-255</span></div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> processData(<span class="keyword">const</span> DataBlock&amp; block) {</div>
+<div class="line">    <span class="keywordtype">int</span> maxPacketSize = 1000;  <span class="comment">// May be any value</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// CRITICAL ERROR!</span></div>
+<div class="line">    <span class="keywordflow">if</span> (block.m_Size &gt;= maxPacketSize) {</div>
+<div class="line">        <span class="comment">// Issue: unsigned char(1000) = 232 (1000 % 256)</span></div>
+<div class="line">        <span class="comment">// Result: any m_Size &gt;= 232 yields true</span></div>
+<div class="line">        <span class="comment">// For example: m_Size = 200, but 200 &gt;= 232 = false (correct)</span></div>
+<div class="line">        <span class="comment">// But: m_Size = 250, and 250 &gt;= 232 = true (incorrect!)</span></div>
+<div class="line">        processLargePacket();</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        processSmallPacket();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="good_example"></a>
+Example WITH SafeComparator (safe)</h2>
+<div class="fragment"><div class="line"><span class="comment">// Safe code</span></div>
+<div class="line"><span class="keyword">struct </span>DataBlock {</div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> m_Size;  <span class="comment">// 0-255</span></div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> processData(<span class="keyword">const</span> DataBlock&amp; block) {</div>
+<div class="line">    <span class="keywordtype">int</span> maxPacketSize = 1000;  <span class="comment">// May be any value</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// SAFE!</span></div>
+<div class="line">    <a class="code" href="a01319.html#a27c34c04ddc6691ff51413e673df56c2">SafeUCharComparator</a> safeSize(block.m_Size);</div>
+<div class="line">    <span class="keywordflow">if</span> (safeSize.safe_compare(maxPacketSize)) {</div>
+<div class="line">        <span class="comment">// SafeComparator algorithm:</span></div>
+<div class="line">        <span class="comment">// 1. Check: maxPacketSize(1000) &gt; 255 (max unsigned char) = true</span></div>
+<div class="line">        <span class="comment">// 2. Return: false (correct!)</span></div>
+<div class="line">        <span class="comment">// Result: processSmallPacket() is called correctly</span></div>
+<div class="line">        processLargePacket();</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        processSmallPacket();  <span class="comment">// Correct choice!</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="comprehensive_example"></a>
+Complete example of all comparison</h2>
+<p>operations</p>
+<div class="fragment"><div class="line"><span class="comment">// Demonstration of all comparison operations</span></div>
+<div class="line"><span class="keywordtype">void</span> demonstrateAllComparisons() {</div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> size = 200;</div>
+<div class="line">    <span class="keywordtype">int</span> threshold = 300;</div>
+<div class="line">    <span class="keywordtype">float</span> precision = 3.14f;</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="a01319.html#a27c34c04ddc6691ff51413e673df56c2">SafeUCharComparator</a> safeSize(size);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// All comparison kinds</span></div>
+<div class="line">    <span class="keywordflow">if</span> (safeSize.safe_equal(threshold)) {</div>
+<div class="line">        <span class="comment">// Safe comparison ==</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (safeSize.safe_not_equal(threshold)) {</div>
+<div class="line">        <span class="comment">// Safe comparison !=</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (safeSize.safe_less(threshold)) {</div>
+<div class="line">        <span class="comment">// Safe comparison &lt;</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (safeSize.safe_greater(threshold)) {</div>
+<div class="line">        <span class="comment">// Safe comparison &gt;</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (safeSize.safe_less_equal(threshold)) {</div>
+<div class="line">        <span class="comment">// Safe comparison &lt;=</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (safeSize.safe_greater_equal(threshold)) {</div>
+<div class="line">        <span class="comment">// Safe comparison &gt;=</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#if LUMEX_HAS_THREE_WAY_COMPARISON</span></div>
+<div class="line">    <span class="comment">// C++20 three-way comparison</span></div>
+<div class="line">    <span class="keyword">auto</span> result = safeSize.safe_three_way_compare(threshold);</div>
+<div class="line">    <span class="keywordflow">if</span> (is_equal(result)) {</div>
+<div class="line">        <span class="comment">// Values are equal</span></div>
+<div class="line">    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (is_less(result)) {</div>
+<div class="line">        <span class="comment">// First value is less</span></div>
+<div class="line">    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (is_greater(result)) {</div>
+<div class="line">        <span class="comment">// First value is greater</span></div>
+<div class="line">    }</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Utility functions</span></div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code" href="a01319.html#a71f844a5399232b059c8777310c85a92">safe_equal</a>(size, threshold)) {</div>
+<div class="line">        <span class="comment">// Direct comparison without constructing an object</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code" href="a01319.html#a0a26269bd181418134b6c80d606da910">safe_less</a>(size, precision)) {</div>
+<div class="line">        <span class="comment">// Comparison with floating-point</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="why_it_works"></a>
+Why this works</h2>
+<p>SafeComparator uses the following algorithm for unsigned char &gt;= int:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> <a class="code" href="a01319.html#ac7fc2bde3b1ce75f73964781b0bb52fa">safe_compare</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> current, <span class="keywordtype">int</span> other) {</div>
+<div class="line">    <span class="comment">// 1. Check the range: other &gt; max(unsigned char) = 255</span></div>
+<div class="line">    <span class="keywordflow">if</span> (other &gt; 255) <span class="keywordflow">return</span> <span class="keyword">false</span>;  <span class="comment">// other is too large</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 2. Check the range: other &lt; min(unsigned char) = 0</span></div>
+<div class="line">    <span class="keywordflow">if</span> (other &lt; 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;      <span class="comment">// other is negative</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 3. Safe comparison: convert to a common type</span></div>
+<div class="line">    <span class="keywordflow">return</span> current &gt;= <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(other);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This approach guarantees:</p><ul>
+<li>Correct comparison results</li>
+<li>No overflow</li>
+<li>Edge-case handling</li>
+<li>Compile-time type checks</li>
+<li>Thread-safety when required</li>
+</ul>
+<h1><a class="anchor" id="usage"></a>
+When to use</h1>
+<p>Use SafeComparator when:</p><ul>
+<li>comparing variables of different types</li>
+<li>handling user input</li>
+<li>building critical systems</li>
+<li>you need guaranteed-correct comparisons</li>
+<li>thread-safety is required</li>
+</ul>
+<h1><a class="anchor" id="performance"></a>
+Performance</h1>
+<p>SafeComparator is optimized for performance:</p><ul>
+<li>Compile-time dispatch (zero-cost abstractions)</li>
+<li>Same-type specializations (direct comparison)</li>
+<li>Minimal overhead for the checks</li>
+<li>Lock-free operations for atomic versions</li>
+</ul>
+<h1><a class="anchor" id="algorithm"></a>
+Full SafeComparator algorithm</h1>
+<h2><a class="anchor" id="algorithm_overview"></a>
+Algorithm overview</h2>
+<p>SafeComparator uses a deterministic algorithm for safe comparison of any arithmetic types. The algorithm runs in a fixed order :</p>
+<p><b>INPUT</b>: current (type T), other (type U) <b>OUTPUT</b>: bool (comparison result current &gt;= other)</p>
+<h2><a class="anchor" id="step_by_step_algorithm"></a>
+Step-by-step algorithm</h2>
+<p><b>STEP 1: Type classification</b> </p><div class="fragment"><div class="line">ACTION 1.1: Determine type T</div>
+<div class="line">ACTION 1.2: Determine type U</div>
+<div class="line">ACTION 1.3: <a class="code" href="a01260.html#a19a8c53c3b4a3f6996a6baa029afe767">Compute</a> same_type = (T == U)</div>
+<div class="line">ACTION 1.4: <a class="code" href="a01260.html#a19a8c53c3b4a3f6996a6baa029afe767">Compute</a> both_integral = (T ∈ integral) AND (U ∈ integral)</div>
+<div class="line">ACTION 1.5: <a class="code" href="a01260.html#a19a8c53c3b4a3f6996a6baa029afe767">Compute</a> both_floating = (T ∈ floating) AND (U ∈ floating)</div>
+<div class="line">ACTION 1.6: <a class="code" href="a01260.html#a19a8c53c3b4a3f6996a6baa029afe767">Compute</a> mixed_types = NOT(same_type) AND NOT(both_integral) AND</div>
+<div class="line">NOT(both_floating)</div>
+</div><!-- fragment --><p><b>STEP 2: Choose comparison algorithm</b> </p><div class="fragment"><div class="line">IF same_type == <span class="keyword">true</span>:</div>
+<div class="line">    GO TO ALGORITHM A (same types)</div>
+<div class="line">ELSE IF both_integral == <span class="keyword">true</span>:</div>
+<div class="line">    GO TO ALGORITHM B (integer types)</div>
+<div class="line">ELSE IF both_floating == <span class="keyword">true</span>:</div>
+<div class="line">    GO TO ALGORITHM C (floating-point types)</div>
+<div class="line">ELSE IF mixed_types == <span class="keyword">true</span>:</div>
+<div class="line">    GO TO ALGORITHM D (mixed types)</div>
+<div class="line">ELSE:</div>
+<div class="line">    RAISE A COMPILE ERROR</div>
+</div><!-- fragment --><p><b>ALGORITHM A: Same-type comparison (T == U)</b> </p><div class="fragment"><div class="line">ACTION A.1: Perform a direct comparison: result = (current &gt;= other)</div>
+<div class="line">ACTION A.2: Return result</div>
+</div><!-- fragment --><p><b>ALGORITHM B: Integer comparison (T != U, both integral)</b> </p><div class="fragment"><div class="line">ACTION B.1: Get max_T = std::numeric_limits&lt;T&gt;::max()</div>
+<div class="line">ACTION B.2: Get min_T = <a class="code" href="a01271.html">std</a>::numeric_limits&lt;T&gt;::min()</div>
+<div class="line">ACTION B.3: IF other &gt; max_T:</div>
+<div class="line">    ACTION B.3.1: Return false</div>
+<div class="line">ACTION B.4: IF other &lt; min_T:</div>
+<div class="line">    ACTION B.4.1: Return true</div>
+<div class="line">ACTION B.5: Get CommonType = <a class="code" href="a01271.html">std</a>::common_type&lt;T, U&gt;::type</div>
+<div class="line">ACTION B.6: Convert: current_common = static_cast&lt;CommonType&gt;(current)</div>
+<div class="line">ACTION B.7: Convert: other_common = static_cast&lt;CommonType&gt;(other)</div>
+<div class="line">ACTION B.8: Compare: result = (current_common &gt;= other_common)</div>
+<div class="line">ACTION B.9: Return result</div>
+</div><!-- fragment --><p><b>ALGORITHM C: Floating-point comparison</b> </p><div class="fragment"><div class="line">ACTION C.1: IF std::isnan(current) == <span class="keyword">true</span> OR std::isnan(other) == <span class="keyword">true</span>:</div>
+<div class="line">    ACTION C.1.1: Return <span class="keyword">false</span></div>
+<div class="line">ACTION C.2: IF std::isinf(current) == <span class="keyword">true</span> OR std::isinf(other) == <span class="keyword">true</span>:</div>
+<div class="line">    ACTION C.2.1: Compare: result = (current == other)</div>
+<div class="line">    ACTION C.2.2: Return result</div>
+<div class="line">ACTION C.3: Get CommonType = std::common_type&lt;T, U&gt;::type</div>
+<div class="line">ACTION C.4: Convert: current_common = <span class="keyword">static_cast&lt;</span>CommonType<span class="keyword">&gt;</span>(current)</div>
+<div class="line">ACTION C.5: Convert: other_common = <span class="keyword">static_cast&lt;</span>CommonType<span class="keyword">&gt;</span>(other)</div>
+<div class="line">ACTION C.6: Compare: result = (current_common &gt;= other_common)</div>
+<div class="line">ACTION C.7: Return result</div>
+</div><!-- fragment --><p><b>ALGORITHM D: Mixed-type comparison (integral + floating)</b> </p><div class="fragment"><div class="line">ACTION D.1: IF T ∈ integral AND U ∈ floating:</div>
+<div class="line">    GO TO SUB-ALGORITHM D1 (integral T, floating U)</div>
+<div class="line">ACTION D.2: IF T ∈ floating AND U ∈ integral:</div>
+<div class="line">    GO TO SUB-ALGORITHM D2 (floating T, integral U)</div>
+<div class="line">ACTION D.3: ELSE:</div>
+<div class="line">    RAISE A COMPILE ERROR</div>
+</div><!-- fragment --><p><b>SUB-ALGORITHM D1: integral T, floating U</b> </p><div class="fragment"><div class="line">ACTION D1.1: IF std::isnan(other) == <span class="keyword">true</span>:</div>
+<div class="line">    ACTION D1.1.1: Return <span class="keyword">false</span></div>
+<div class="line">ACTION D1.2: IF std::isinf(other) == <span class="keyword">true</span>:</div>
+<div class="line">    ACTION D1.2.1: IF other &lt; 0:</div>
+<div class="line">        ACTION D1.2.1.1: Return <span class="keyword">true</span></div>
+<div class="line">    ACTION D1.2.2: ELSE:</div>
+<div class="line">        ACTION D1.2.2.1: Return <span class="keyword">false</span></div>
+<div class="line">ACTION D1.3: Get max_T = std::numeric_limits&lt;T&gt;::max()</div>
+<div class="line">ACTION D1.4: Get min_T = <a class="code" href="a01271.html">std</a>::numeric_limits&lt;T&gt;::min()</div>
+<div class="line">ACTION D1.5: IF other &gt; max_T:</div>
+<div class="line">    ACTION D1.5.1: Return false</div>
+<div class="line">ACTION D1.6: IF other &lt; min_T:</div>
+<div class="line">    ACTION D1.6.1: Return true</div>
+<div class="line">ACTION D1.7: Get CommonType = <a class="code" href="a01271.html">std</a>::common_type&lt;T, U&gt;::type</div>
+<div class="line">ACTION D1.8: Convert: current_common = static_cast&lt;CommonType&gt;(current)</div>
+<div class="line">ACTION D1.9: Convert: other_common = static_cast&lt;CommonType&gt;(other)</div>
+<div class="line">ACTION D1.10: Compare: result = (current_common &gt;= other_common)</div>
+<div class="line">ACTION D1.11: Return result</div>
+</div><!-- fragment --><p><b>SUB-ALGORITHM D2: floating T, integral U</b> </p><div class="fragment"><div class="line">ACTION D2.1: IF std::isnan(current) == <span class="keyword">true</span>:</div>
+<div class="line">    ACTION D2.1.1: Return <span class="keyword">false</span></div>
+<div class="line">ACTION D2.2: IF std::isinf(current) == <span class="keyword">true</span>:</div>
+<div class="line">    ACTION D2.2.1: IF current &gt; 0:</div>
+<div class="line">        ACTION D2.2.1.1: Return <span class="keyword">true</span></div>
+<div class="line">    ACTION D2.2.2: ELSE:</div>
+<div class="line">        ACTION D2.2.2.1: Return <span class="keyword">false</span></div>
+<div class="line">ACTION D2.3: Get CommonType = std::common_type&lt;T, U&gt;::type</div>
+<div class="line">ACTION D2.4: Convert: current_common = <span class="keyword">static_cast&lt;</span>CommonType<span class="keyword">&gt;</span>(current)</div>
+<div class="line">ACTION D2.5: Convert: other_common = <span class="keyword">static_cast&lt;</span>CommonType<span class="keyword">&gt;</span>(other)</div>
+<div class="line">ACTION D2.6: Compare: result = (current_common &gt;= other_common)</div>
+<div class="line">ACTION D2.7: Return result</div>
+</div><!-- fragment --><h2><a class="anchor" id="algorithm_example"></a>
+Worked example of the algorithm</h2>
+<p><b>INPUT</b>: current = 252 (unsigned char), other = 1652 (int)</p>
+<p><b>STEP 1: Type classification</b></p><ul>
+<li>T = unsigned char, U = int</li>
+<li>same_type = false (unsigned char != int)</li>
+<li>both_integral = true (both integer)</li>
+<li>both_floating = false</li>
+<li>mixed_types = false</li>
+</ul>
+<p><b>STEP 2: Algorithm selection</b></p><ul>
+<li>both_integral == true -&gt; ALGORITHM B</li>
+</ul>
+<p><b>ALGORITHM B: Integer comparison</b></p><ul>
+<li>ACTION B.1: max_T = 255 (maximum unsigned char)</li>
+<li>ACTION B.2: min_T = 0 (minimum unsigned char)</li>
+<li>ACTION B.3: other(1652) &gt; max_T(255) -&gt; true -&gt; Return false</li>
+</ul>
+<p><b>RESULT</b>: false (252 &gt;= 1652 correctly evaluated as false)</p>
+<h2><a class="anchor" id="practical_examples"></a>
+Practical examples with code</h2>
+<p><b>EXAMPLE 1: WITHOUT SafeComparator (unsafe)</b> </p><div class="fragment"><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> block_size = 252;  <span class="comment">// Range: 0-255</span></div>
+<div class="line"><span class="keywordtype">int</span> packet_size = 1652;          <span class="comment">// Range: -2,147,483,648 to 2,147,483,647</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// UNSAFE! Implicit type conversion</span></div>
+<div class="line"><span class="keywordflow">if</span> (block_size &gt;= packet_size) {</div>
+<div class="line">    <span class="comment">// Issue: unsigned char(1652) = 116 (1652 % 256)</span></div>
+<div class="line">    <span class="comment">// Result: 252 &gt;= 116 = true (WRONG!)</span></div>
+<div class="line">    <span class="comment">// Logically: 252 &gt;= 1652 should be false</span></div>
+<div class="line">    processLargePacket();  <span class="comment">// Called incorrectly!</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    processSmallPacket();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><b>Problem</b>: unsigned char(1652) = 116 due to overflow (1652 % 256 = 116) <b>Result</b>: 252 &gt;= 116 = true (incorrect!) <b>Consequence</b>: Incorrect program logic</p>
+<p><b>EXAMPLE 2: WITH SafeComparator (safe)</b> </p><div class="fragment"><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> block_size = 252;  <span class="comment">// Range: 0-255</span></div>
+<div class="line"><span class="keywordtype">int</span> packet_size = 1652;          <span class="comment">// Range: -2,147,483,648 to 2,147,483,647</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// SAFE! Use SafeComparator</span></div>
+<div class="line"><a class="code" href="a01319.html#a27c34c04ddc6691ff51413e673df56c2">SafeUCharComparator</a> safe_size(block_size);</div>
+<div class="line"><span class="keywordflow">if</span> (safe_size.safe_compare(packet_size)) {</div>
+<div class="line">    <span class="comment">// SafeComparator algorithm:</span></div>
+<div class="line">    <span class="comment">// 1. Classification: unsigned char vs int -&gt; both_integral = true</span></div>
+<div class="line">    <span class="comment">// 2. Choice: ALGORITHM B (integer types)</span></div>
+<div class="line">    <span class="comment">// 3. ACTION B.1: max_T = 255</span></div>
+<div class="line">    <span class="comment">// 4. ACTION B.3: packet_size(1652) &gt; max_T(255) -&gt; true</span></div>
+<div class="line">    <span class="comment">// 5. RESULT: false (correct!)</span></div>
+<div class="line">    processLargePacket();</div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    processSmallPacket();  <span class="comment">// Correct choice!</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p><b>SafeComparator algorithm</b>:</p><ol type="1">
+<li><b>Type classification</b>: unsigned char vs int -&gt; both_integral = true</li>
+<li><b>Algorithm choice</b>: ALGORITHM B (integer types)</li>
+<li><b>ACTION B.1</b>: max_T = 255 (maximum unsigned char)</li>
+<li><b>ACTION B.3</b>: packet_size(1652) &gt; max_T(255) -&gt; true</li>
+<li><b>RESULT</b>: false (252 &gt;= 1652 correctly evaluated as false)</li>
+</ol>
+<p><b>Result</b>: processSmallPacket() is called correctly!</p>
+<p><b>Result comparison</b>:</p><ul>
+<li><b>Without SafeComparator</b>: 252 &gt;= 116 = true (incorrect)</li>
+<li><b>With SafeComparator</b>: 252 &gt;= 1652 = false (correct)</li>
+<li><b>Difference</b>: SafeComparator prevents overflow and yields the correct result</li>
+</ul>
+<h2><a class="anchor" id="algorithm_properties"></a>
+Algorithm properties</h2>
+<p><b>Determinism</b>: The algorithm always yields the same result for the same inputs <b>Correctness</b>: The comparison result is mathematically correct <b>Safety</b>: No undefined behavior (UB) <b>Efficiency</b>: O(1) time and space <b>Completeness</b>: Handles all arithmetic type combinations </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="afa6ebf494a0a61a21c6b7d351c9e40dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa6ebf494a0a61a21c6b7d351c9e40dd">&#9670;&nbsp;</a></span>LUMEXLUMEX_SFNC_ARCH_X86</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUMEXLUMEX_SFNC_ARCH_X86&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa01271_html"><div class="ttname"><a href="a01271.html">std</a></div><div class="ttdef"><b>Definition:</b> LumexStacktraceEntry.hpp:452</div></div>
+<div class="ttc" id="aa01260_html_a19a8c53c3b4a3f6996a6baa029afe767"><div class="ttname"><a href="a01260.html#a19a8c53c3b4a3f6996a6baa029afe767">lumex::core::crc::parametric::Detail::Compute</a></div><div class="ttdeci">constexpr Spec::ValueType Compute(std::uint8_t const *data, std::size_t size) noexcept</div><div class="ttdef"><b>Definition:</b> LumexCrcParametric.hpp:437</div></div>
+<div class="ttc" id="aa01319_html_a0a26269bd181418134b6c80d606da910"><div class="ttname"><a href="a01319.html#a0a26269bd181418134b6c80d606da910">lumex::core::utility::numeric::safe_less</a></div><div class="ttdeci">bool safe_less(T value1, U value2) noexcept</div><div class="ttdoc">Safe less-than comparison.</div><div class="ttdef"><b>Definition:</b> LumexSafeNumericComparator.hpp:2776</div></div>
+<div class="ttc" id="aa01319_html_a27c34c04ddc6691ff51413e673df56c2"><div class="ttname"><a href="a01319.html#a27c34c04ddc6691ff51413e673df56c2">lumex::core::utility::numeric::SafeUCharComparator</a></div><div class="ttdeci">SafeComparator&lt; unsigned char &gt; SafeUCharComparator</div><div class="ttdoc">Safe comparator for unsigned char.</div><div class="ttdef"><b>Definition:</b> LumexSafeNumericComparator.hpp:2438</div></div>
+<div class="ttc" id="aa01319_html_ac7fc2bde3b1ce75f73964781b0bb52fa"><div class="ttname"><a href="a01319.html#ac7fc2bde3b1ce75f73964781b0bb52fa">lumex::core::utility::numeric::safe_compare</a></div><div class="ttdeci">bool safe_compare(T value1, U value2) noexcept</div><div class="ttdoc">Safe comparison of two values of different types.</div><div class="ttdef"><b>Definition:</b> LumexSafeNumericComparator.hpp:2692</div></div>
+<div class="ttc" id="aa01319_html_a71f844a5399232b059c8777310c85a92"><div class="ttname"><a href="a01319.html#a71f844a5399232b059c8777310c85a92">lumex::core::utility::numeric::safe_equal</a></div><div class="ttdeci">bool safe_equal(T value1, U value2) noexcept</div><div class="ttdoc">Safe equality comparison.</div><div class="ttdef"><b>Definition:</b> LumexSafeNumericComparator.hpp:2832</div></div>
+<div class="ttc" id="aa01319_html_abe9f61c39790ab8731a6c742f43dce01"><div class="ttname"><a href="a01319.html#abe9f61c39790ab8731a6c742f43dce01">lumex::core::utility::numeric::SafeIntComparator</a></div><div class="ttdeci">SafeComparator&lt; int &gt; SafeIntComparator</div><div class="ttdoc">Safe comparator for int.</div><div class="ttdef"><b>Definition:</b> LumexSafeNumericComparator.hpp:2443</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_82e0585083a36608bf6220a9fbe911e9.html">xml</a></li><li class="navelem"><a class="el" href="dir_abbe27e9c6b4359d81be14afe0d9fa59.html">xpath</a></li><li class="navelem"><a class="el" href="dir_600db73010db59cb41021ded70f69292.html">memory</a></li><li class="navelem"><a class="el" href="a00710.html">XPathStack.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2eed78fa94d1e9faad02cb0657b7390b.html">core</a></li><li class="navelem"><a class="el" href="dir_aaa57aed14d71e316a67f95634c796d3.html">utility</a></li><li class="navelem"><a class="el" href="dir_07d2c4fbf88040bc262cc011040dec00.html">numeric</a></li><li class="navelem"><a class="el" href="a00710.html">LumexSafeNumericComparator.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

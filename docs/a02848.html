@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::xpath::parser::xpath_parse_result_t Struct Reference</title>
+<title>LumexLib: lumex::core::utility::traits::range::has_elements_convertible_to&lt; Range, To, Enable &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -93,149 +93,47 @@ $(document).ready(function(){initNavTree('a02848.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a02845.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::xpath::parser::xpath_parse_result_t Struct Reference</div>  </div>
+<div class="title">lumex::core::utility::traits::range::has_elements_convertible_to&lt; Range, To, Enable &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents the result of an XPath parsing operation.  
+<p><code>Range</code> is iterable and its element reference converts to <code>To</code> (for example <code>std::string const &amp;</code>).  
  <a href="a02848.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00746_source.html">XPathParseResult.hpp</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a208a83684af8a93be73ed760cbedfda1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02848.html#a208a83684af8a93be73ed760cbedfda1">xpath_parse_result_t</a> ()</td></tr>
-<tr class="memdesc:a208a83684af8a93be73ed760cbedfda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Initializes the object to a failed state.  <a href="a02848.html#a208a83684af8a93be73ed760cbedfda1">More...</a><br /></td></tr>
-<tr class="separator:a208a83684af8a93be73ed760cbedfda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12788842692587ee71a7be54a0f86af1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02848.html#a12788842692587ee71a7be54a0f86af1">operator bool</a> () const</td></tr>
-<tr class="memdesc:a12788842692587ee71a7be54a0f86af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion operator to <code>bool</code>.  <a href="a02848.html#a12788842692587ee71a7be54a0f86af1">More...</a><br /></td></tr>
-<tr class="separator:a12788842692587ee71a7be54a0f86af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82f183dcb96797368c33bad5f1b950da"><td class="memItemLeft" align="right" valign="top">char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02848.html#a82f183dcb96797368c33bad5f1b950da">description</a> () const</td></tr>
-<tr class="memdesc:a82f183dcb96797368c33bad5f1b950da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the error description.  <a href="a02848.html#a82f183dcb96797368c33bad5f1b950da">More...</a><br /></td></tr>
-<tr class="separator:a82f183dcb96797368c33bad5f1b950da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a46e9cd8f258f296a037e48060aa51dbe"><td class="memItemLeft" align="right" valign="top">char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02848.html#a46e9cd8f258f296a037e48060aa51dbe">error</a></td></tr>
-<tr class="memdesc:a46e9cd8f258f296a037e48060aa51dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A null-terminated C-string containing the error message if parsing failed, or <code>nullptr</code> if successful.  <a href="a02848.html#a46e9cd8f258f296a037e48060aa51dbe">More...</a><br /></td></tr>
-<tr class="separator:a46e9cd8f258f296a037e48060aa51dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0e682e73b11250fc7e52667bce1b995"><td class="memItemLeft" align="right" valign="top">ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02848.html#ae0e682e73b11250fc7e52667bce1b995">offset</a></td></tr>
-<tr class="memdesc:ae0e682e73b11250fc7e52667bce1b995"><td class="mdescLeft">&#160;</td><td class="mdescRight">The offset (in <code>char_t</code> units) from the beginning of the XPath query string where the error occurred.  <a href="a02848.html#ae0e682e73b11250fc7e52667bce1b995">More...</a><br /></td></tr>
-<tr class="separator:ae0e682e73b11250fc7e52667bce1b995"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p><code>#include &lt;<a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::core::utility::traits::range::has_elements_convertible_to&lt; Range, To, Enable &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02847.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1range_1_1has__elements__convertible__to_3_01Range_00_01To_00_01Enable_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1range_1_1has__elements__convertible__to_3_01Range_00_01To_00_01Enable_01_4_inherit__map" id="alumex_1_1core_1_1utility_1_1traits_1_1range_1_1has__elements__convertible__to_3_01Range_00_01To_00_01Enable_01_4_inherit__map">
+<area shape="rect" title="Range is iterable and its element reference converts to To (for example std::string const &amp;)." alt="" coords="5,80,192,151"/>
+<area shape="rect" title=" " alt="" coords="53,5,144,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for lumex::core::utility::traits::range::has_elements_convertible_to&lt; Range, To, Enable &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02846.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1range_1_1has__elements__convertible__to_3_01Range_00_01To_00_01Enable_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1range_1_1has__elements__convertible__to_3_01Range_00_01To_00_01Enable_01_4_coll__map" id="alumex_1_1core_1_1utility_1_1traits_1_1range_1_1has__elements__convertible__to_3_01Range_00_01To_00_01Enable_01_4_coll__map">
+<area shape="rect" title="Range is iterable and its element reference converts to To (for example std::string const &amp;)." alt="" coords="5,80,192,151"/>
+<area shape="rect" title=" " alt="" coords="53,5,144,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents the result of an XPath parsing operation. </p>
-<p>This structure encapsulates whether an XPath expression was parsed successfully, and if not, provides details about the error, including an error message and the offset in the query string where the error occurred. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a208a83684af8a93be73ed760cbedfda1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a208a83684af8a93be73ed760cbedfda1">&#9670;&nbsp;</a></span>xpath_parse_result_t()</h2>
+<div class="textblock"><h3>template&lt;typename Range, typename To, typename Enable = void&gt;<br />
+struct lumex::core::utility::traits::range::has_elements_convertible_to&lt; Range, To, Enable &gt;</h3>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> xpath_parse_result_t::xpath_parse_result_t </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Default constructor. Initializes the object to a failed state. </p>
-<p>By default, a newly constructed <code><a class="el" href="a02848.html" title="Represents the result of an XPath parsing operation.">xpath_parse_result_t</a></code> indicates an "Internal error" at offset 0, implying an unsuccessful parsing attempt unless explicitly updated. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a82f183dcb96797368c33bad5f1b950da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82f183dcb96797368c33bad5f1b950da">&#9670;&nbsp;</a></span>description()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> char const  * xpath_parse_result_t::description </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the error description. </p>
-<p>Returns the error message if parsing failed, or "No error" if successful. </p><dl class="section return"><dt>Returns</dt><dd>A null-terminated C-string describing the parsing result. </dd></dl>
-
-</div>
-</div>
-<a id="a12788842692587ee71a7be54a0f86af1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12788842692587ee71a7be54a0f86af1">&#9670;&nbsp;</a></span>operator bool()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> xpath_parse_result_t::operator bool </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Conversion operator to <code>bool</code>. </p>
-<p>Allows <code><a class="el" href="a02848.html" title="Represents the result of an XPath parsing operation.">xpath_parse_result_t</a></code> objects to be used in boolean contexts. It evaluates to <code>true</code> if <code>error</code> is <code>nullptr</code> (no error), and <code>false</code> otherwise. </p><dl class="section return"><dt>Returns</dt><dd><code>true</code> if parsing was successful, <code>false</code> if an error occurred. </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a46e9cd8f258f296a037e48060aa51dbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46e9cd8f258f296a037e48060aa51dbe">&#9670;&nbsp;</a></span>error</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char const* lumex::xml::xpath::parser::xpath_parse_result_t::error</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A null-terminated C-string containing the error message if parsing failed, or <code>nullptr</code> if successful. </p>
-
-</div>
-</div>
-<a id="ae0e682e73b11250fc7e52667bce1b995"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0e682e73b11250fc7e52667bce1b995">&#9670;&nbsp;</a></span>offset</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ptrdiff_t lumex::xml::xpath::parser::xpath_parse_result_t::offset</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The offset (in <code>char_t</code> units) from the beginning of the XPath query string where the error occurred. </p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="a00746_source.html">XPathParseResult.hpp</a></li>
-<li><a class="el" href="a00743.html">XPathParseResult.cpp</a></li>
+<p><code>Range</code> is iterable and its element reference converts to <code>To</code> (for example <code>std::string const &amp;</code>). </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00950.html">xpath</a></li><li class="navelem"><a class="el" href="a00968.html">parser</a></li><li class="navelem"><a class="el" href="a02848.html">xpath_parse_result_t</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01327.html">range</a></li><li class="navelem"><a class="el" href="a02848.html">has_elements_convertible_to</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

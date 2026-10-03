@@ -1,11 +1,6 @@
 var a01260 =
 [
-    [ "ValueType", "a01260.html#ac4c3fd8e0f327b58de2cc50cf977552a", null ],
-    [ "kCatalogCheck", "a01260.html#aebf9af0b09dbc85d3698976e389ac282", null ],
-    [ "kInit", "a01260.html#a3df928a794843589fcd5a55fbcc8bc7f", null ],
-    [ "kPoly", "a01260.html#a16a5ccff96858c184d2584e976b812e8", null ],
-    [ "kRefIn", "a01260.html#ad5dce1d40d4826affa34484b4345b2cf", null ],
-    [ "kRefOut", "a01260.html#a357d0e685317ed91ef3697462afdb674", null ],
-    [ "kWidth", "a01260.html#af60ea142751240f06a002900c15bbfd8", null ],
-    [ "kXorOut", "a01260.html#a5545dffb41e8b7875f75721e870cfeec", null ]
+    [ "crc_dispatch_t", "a01596.html", null ],
+    [ "mask_impl_t", "a01588.html", "a01588" ],
+    [ "mask_impl_t< Width, typename std::enable_if< Width==std::numeric_limits< std::uint64_t >::digits, void >::type >", "a01592.html", "a01592" ]
 ];

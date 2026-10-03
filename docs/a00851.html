@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::crc::parametric::Detail Namespace Reference</title>
+<title>LumexLib: example_resource_monitor.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,242 +94,42 @@ $(document).ready(function(){initNavTree('a00851.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::crc::parametric::Detail Namespace Reference</div>  </div>
+<div class="title">example_resource_monitor.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Parametric CRC engines following the CRC RevEng catalogue (Greg Cook).  
-<a href="a00851.html#details">More...</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01136.html">crc_dispatch_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01144.html">crc_dispatch_t&lt; Spec, typename std::enable_if&lt;(Spec::kWidth &gt;=kBitsPerByte), void &gt;::type &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01140.html">crc_dispatch_t&lt; Spec, typename std::enable_if&lt;(Spec::kWidth&lt; kBitsPerByte), void &gt;::type &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01128.html">mask_impl_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01132.html">mask_impl_t&lt; Width, typename std::enable_if&lt; Width==std::numeric_limits&lt; std::uint64_t &gt;::digits, void &gt;::type &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;lumex/applied/resource_monitor/LumexResourceMonitor&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for example_resource_monitor.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00852.png" border="0" usemap="#aexample__resource__monitor_8cpp" alt=""/></div>
+<map name="example__resource__monitor_8cpp" id="aexample__resource__monitor_8cpp">
+<area shape="rect" title=" " alt="" coords="69,5,296,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,72,114"/>
+<area shape="rect" title=" " alt="" coords="96,87,176,114"/>
+<area shape="rect" title=" " alt="" coords="200,87,259,114"/>
+<area shape="rect" title=" " alt="" coords="283,80,519,121"/>
+</map>
+</div>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1af2aee34eef57cdb9803d4d107e69b5"><td class="memTemplParams" colspan="2">template&lt;typename Spec &gt; </td></tr>
-<tr class="memitem:a1af2aee34eef57cdb9803d4d107e69b5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00851.html#a1af2aee34eef57cdb9803d4d107e69b5">ValidateSpec</a> () <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a1af2aee34eef57cdb9803d4d107e69b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa66ed99d14f46827629cf8ac6cf1aa24"><td class="memTemplParams" colspan="2">template&lt;int Width&gt; </td></tr>
-<tr class="memitem:aa66ed99d14f46827629cf8ac6cf1aa24"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> std::uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00851.html#aa66ed99d14f46827629cf8ac6cf1aa24">Mask</a> () <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:aa66ed99d14f46827629cf8ac6cf1aa24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c09fba6a099ff512c4716a0c86cf083"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#a9c09fba6a099ff512c4716a0c86cf083">Reflect</a> (std::uint64_t data, int width) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a9c09fba6a099ff512c4716a0c86cf083"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a665cecb4a55fac29164954e00b96a3cd"><td class="memTemplParams" colspan="2">template&lt;int Width&gt; </td></tr>
-<tr class="memitem:a665cecb4a55fac29164954e00b96a3cd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> std::uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00851.html#a665cecb4a55fac29164954e00b96a3cd">MsbTableByte</a> (std::uint64_t tableIndex, std::uint64_t poly) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a665cecb4a55fac29164954e00b96a3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a07c9a6c63d0e9f216ce7358e06ad38"><td class="memTemplParams" colspan="2">template&lt;int Width&gt; </td></tr>
-<tr class="memitem:a9a07c9a6c63d0e9f216ce7358e06ad38"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> std::uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00851.html#a9a07c9a6c63d0e9f216ce7358e06ad38">LsbTableByte</a> (std::uint64_t tableIndex, std::uint64_t poly) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a9a07c9a6c63d0e9f216ce7358e06ad38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad559e2545ce0ba967ded9d4da071ca1e"><td class="memTemplParams" colspan="2">template&lt;typename Spec &gt; </td></tr>
-<tr class="memitem:ad559e2545ce0ba967ded9d4da071ca1e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> std::array&lt; std::uint64_t, <a class="el" href="a00851.html#ae76108ec0fb8c3c546462030f760b40b">kTableByteCount</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00851.html#ad559e2545ce0ba967ded9d4da071ca1e">MakeLookupTable</a> () <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:ad559e2545ce0ba967ded9d4da071ca1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a840115bab1d19e49338a298258a42363"><td class="memTemplParams" colspan="2">template&lt;typename Spec &gt; </td></tr>
-<tr class="memitem:a840115bab1d19e49338a298258a42363"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> Spec::ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00851.html#a840115bab1d19e49338a298258a42363">ComputeBitwise</a> (std::uint8_t const *data, std::size_t size) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a840115bab1d19e49338a298258a42363"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0ce4eb236f29367d0e7ee6184ee5235"><td class="memTemplParams" colspan="2">template&lt;typename Spec &gt; </td></tr>
-<tr class="memitem:ae0ce4eb236f29367d0e7ee6184ee5235"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> Spec::ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00851.html#ae0ce4eb236f29367d0e7ee6184ee5235">ComputeTableDriven</a> (std::uint8_t const *data, std::size_t size) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:ae0ce4eb236f29367d0e7ee6184ee5235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5087b55f56ffbe794959f5f116aa812e"><td class="memTemplParams" colspan="2">template&lt;typename Spec &gt; </td></tr>
-<tr class="memitem:a5087b55f56ffbe794959f5f116aa812e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> Spec::ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00851.html#a5087b55f56ffbe794959f5f116aa812e">Compute</a> (std::uint8_t const *data, std::size_t size) <a class="el" href="a00347.html#a8932f306494e2abfe9045da20a41e47c">LUMEX_NOEXCEPT</a></td></tr>
-<tr class="separator:a5087b55f56ffbe794959f5f116aa812e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a67ebb19ad428fe7c15f697aad36a04bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#a67ebb19ad428fe7c15f697aad36a04bd">kMaxCrcBitWidth</a> = 64</td></tr>
-<tr class="separator:a67ebb19ad428fe7c15f697aad36a04bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6093768cc3532461496a966fe14b447"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#ae6093768cc3532461496a966fe14b447">kBitsPerByte</a> = 8</td></tr>
-<tr class="separator:ae6093768cc3532461496a966fe14b447"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae76108ec0fb8c3c546462030f760b40b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#ae76108ec0fb8c3c546462030f760b40b">kTableByteCount</a> = 256U</td></tr>
-<tr class="separator:ae76108ec0fb8c3c546462030f760b40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd433d92aea5f3f8663ed5eaf5315f4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#acd433d92aea5f3f8663ed5eaf5315f4b">kByteMaskU8</a> = 0xFFU</td></tr>
-<tr class="separator:acd433d92aea5f3f8663ed5eaf5315f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00851.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Parametric CRC engines following the CRC RevEng catalogue (Greg Cook). </p>
-<p>Algorithm parameters: <code>width</code>, <code>poly</code>, <code>init</code>, <code>refin</code>, <code>refout</code>, <code>xorout</code> as defined at <a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> . Catalogue <code>check</code> is the CRC of the ASCII bytes <code>123456789</code>.</p>
-<dl class="section note"><dt>Note</dt><dd>Widths 1..64 and all four RefIn/RefOut combinations are supported. Widths <code>kWidth &gt;= 8</code> use a 256-entry table; narrower widths use the bit engine (a per-byte table is incorrect for a register narrower than 8).</dd>
-<dd>
-Also see Ross Williams, "A Painless Guide to CRC Error Detection
-Algorithms", and Philip Koopman, CRC Polynomial Zoo (CMU). </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a5087b55f56ffbe794959f5f116aa812e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5087b55f56ffbe794959f5f116aa812e">&#9670;&nbsp;</a></span>Compute()</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Spec &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> Spec::ValueType lumex::core::crc::parametric::Detail::Compute </td>
-          <td>(</td>
-          <td class="paramtype">std::uint8_t const *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a840115bab1d19e49338a298258a42363"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a840115bab1d19e49338a298258a42363">&#9670;&nbsp;</a></span>ComputeBitwise()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Spec &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> Spec::ValueType lumex::core::crc::parametric::Detail::ComputeBitwise </td>
-          <td>(</td>
-          <td class="paramtype">std::uint8_t const *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00851_a840115bab1d19e49338a298258a42363_cgraph.png" border="0" usemap="#aa00851_a840115bab1d19e49338a298258a42363_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ae0ce4eb236f29367d0e7ee6184ee5235"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0ce4eb236f29367d0e7ee6184ee5235">&#9670;&nbsp;</a></span>ComputeTableDriven()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Spec &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> Spec::ValueType lumex::core::crc::parametric::Detail::ComputeTableDriven </td>
-          <td>(</td>
-          <td class="paramtype">std::uint8_t const *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00851_ae0ce4eb236f29367d0e7ee6184ee5235_cgraph.png" border="0" usemap="#aa00851_ae0ce4eb236f29367d0e7ee6184ee5235_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a9a07c9a6c63d0e9f216ce7358e06ad38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a07c9a6c63d0e9f216ce7358e06ad38">&#9670;&nbsp;</a></span>LsbTableByte()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int Width&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> std::uint64_t lumex::core::crc::parametric::Detail::LsbTableByte </td>
-          <td>(</td>
-          <td class="paramtype">std::uint64_t&#160;</td>
-          <td class="paramname"><em>tableIndex</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::uint64_t&#160;</td>
-          <td class="paramname"><em>poly</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00851_a9a07c9a6c63d0e9f216ce7358e06ad38_cgraph.png" border="0" usemap="#aa00851_a9a07c9a6c63d0e9f216ce7358e06ad38_cgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ad559e2545ce0ba967ded9d4da071ca1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad559e2545ce0ba967ded9d4da071ca1e">&#9670;&nbsp;</a></span>MakeLookupTable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Spec &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> std::array&lt;std::uint64_t, <a class="el" href="a00851.html#ae76108ec0fb8c3c546462030f760b40b">kTableByteCount</a>&gt; lumex::core::crc::parametric::Detail::MakeLookupTable </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa66ed99d14f46827629cf8ac6cf1aa24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa66ed99d14f46827629cf8ac6cf1aa24">&#9670;&nbsp;</a></span>Mask()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int Width&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> std::uint64_t lumex::core::crc::parametric::Detail::Mask </td>
+          <td class="memname">int main </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -339,155 +139,15 @@ template&lt;int Width&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00851_aa66ed99d14f46827629cf8ac6cf1aa24_cgraph.png" border="0" usemap="#aa00851_aa66ed99d14f46827629cf8ac6cf1aa24_cgraph" alt=""/></div>
+<div class="center"><img src="a00851_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#aa00851_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="a00851_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="aa00851_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,60,60,87"/>
+<area shape="rect" href="a01444.html#ac3ff6ba95f363349295d24096e2ff96f" title="Starts the background CPU/RAM sampler, unless it is already running." alt="" coords="108,5,359,61"/>
+<area shape="rect" href="a01444.html#aa64dfaead93c3d4c6ceec66922405170" title="Stops the background sampler and joins its thread." alt="" coords="108,85,359,141"/>
+<area shape="rect" href="a01269.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="407,13,585,54"/>
+<area shape="rect" href="a02076.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="633,13,921,54"/>
+</map>
 </div>
-
-</div>
-</div>
-<a id="a665cecb4a55fac29164954e00b96a3cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a665cecb4a55fac29164954e00b96a3cd">&#9670;&nbsp;</a></span>MsbTableByte()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int Width&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> std::uint64_t lumex::core::crc::parametric::Detail::MsbTableByte </td>
-          <td>(</td>
-          <td class="paramtype">std::uint64_t&#160;</td>
-          <td class="paramname"><em>tableIndex</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::uint64_t&#160;</td>
-          <td class="paramname"><em>poly</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9c09fba6a099ff512c4716a0c86cf083"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c09fba6a099ff512c4716a0c86cf083">&#9670;&nbsp;</a></span>Reflect()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00158.html#aceac46ffd8e5813a8f1a247313ef70a1">LUMEX_CRC_DETAIL_CONSTEXPR</a> std::uint64_t lumex::core::crc::parametric::Detail::Reflect </td>
-          <td>(</td>
-          <td class="paramtype">std::uint64_t&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>width</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00851_a9c09fba6a099ff512c4716a0c86cf083_icgraph.png" border="0" usemap="#aa00851_a9c09fba6a099ff512c4716a0c86cf083_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a1af2aee34eef57cdb9803d4d107e69b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1af2aee34eef57cdb9803d4d107e69b5">&#9670;&nbsp;</a></span>ValidateSpec()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Spec &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lumex::core::crc::parametric::Detail::ValidateSpec </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ae6093768cc3532461496a966fe14b447"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6093768cc3532461496a966fe14b447">&#9670;&nbsp;</a></span>kBitsPerByte</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::Detail::kBitsPerByte = 8</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acd433d92aea5f3f8663ed5eaf5315f4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd433d92aea5f3f8663ed5eaf5315f4b">&#9670;&nbsp;</a></span>kByteMaskU8</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint8_t lumex::core::crc::parametric::Detail::kByteMaskU8 = 0xFFU</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a67ebb19ad428fe7c15f697aad36a04bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67ebb19ad428fe7c15f697aad36a04bd">&#9670;&nbsp;</a></span>kMaxCrcBitWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::Detail::kMaxCrcBitWidth = 64</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae76108ec0fb8c3c546462030f760b40b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae76108ec0fb8c3c546462030f760b40b">&#9670;&nbsp;</a></span>kTableByteCount</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::size_t lumex::core::crc::parametric::Detail::kTableByteCount = 256U</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -496,7 +156,7 @@ template&lt;typename Spec &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00847.html">crc</a></li><li class="navelem"><a class="el" href="a00850.html">parametric</a></li><li class="navelem"><a class="el" href="a00851.html">Detail</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_e8ae4df8b8335e2a73ecf531ee4a4a97.html">examples</a></li><li class="navelem"><a class="el" href="dir_ffa82bf6eb4c6bc4262a6337757c7be6.html">resource_monitor</a></li><li class="navelem"><a class="el" href="a00851.html">example_resource_monitor.cpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

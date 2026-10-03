@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::xml::text::XmlParser Struct Reference</title>
+<title>LumexLib: lumex::core::utility::dump::CoreDumpGenerator Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,107 +94,239 @@ $(document).ready(function(){initNavTree('a02636.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a02633.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::xml::text::XmlParser Struct Reference</div>  </div>
+<div class="title">lumex::core::utility::dump::CoreDumpGenerator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Internal XML parser structure responsible for tokenizing and building the XML document tree.  
+<p>Cross-platform crash dump handler with comprehensive debugging support.  
  <a href="a02636.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00626_source.html">XmlParser.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for lumex::xml::text::XmlParser:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02634.png" border="0" usemap="#alumex_1_1xml_1_1text_1_1XmlParser_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;<a class="el" href="a00692_source.html">LumexCoreDumpGenerator.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaaf6c59d2d8ca4785f16fc897b8ef68b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#aaaf6c59d2d8ca4785f16fc897b8ef68b">XmlParser</a> (<a class="el" href="a02588.html">XmlAllocator</a> *alloc_)</td></tr>
-<tr class="memdesc:aaaf6c59d2d8ca4785f16fc897b8ef68b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <code><a class="el" href="a02636.html" title="Internal XML parser structure responsible for tokenizing and building the XML document tree.">XmlParser</a></code> object with a given allocator.  <a href="a02636.html#aaaf6c59d2d8ca4785f16fc897b8ef68b">More...</a><br /></td></tr>
-<tr class="separator:aaaf6c59d2d8ca4785f16fc897b8ef68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea2c9916c59c5c908e5cacdf6b51fbc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#aea2c9916c59c5c908e5cacdf6b51fbc9">parse_doctype_primitive</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *str)</td></tr>
-<tr class="memdesc:aea2c9916c59c5c908e5cacdf6b51fbc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a primitive DOCTYPE section, which can be a quoted string or a PI/comment-like section.  <a href="a02636.html#aea2c9916c59c5c908e5cacdf6b51fbc9">More...</a><br /></td></tr>
-<tr class="separator:aea2c9916c59c5c908e5cacdf6b51fbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75bdb95c3388639834b0009c27d8c46c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a75bdb95c3388639834b0009c27d8c46c">parse_doctype_group</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *str, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> endch)</td></tr>
-<tr class="memdesc:a75bdb95c3388639834b0009c27d8c46c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a DOCTYPE group, which can contain nested sections of different types.  <a href="a02636.html#a75bdb95c3388639834b0009c27d8c46c">More...</a><br /></td></tr>
-<tr class="separator:a75bdb95c3388639834b0009c27d8c46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6563c0d57e47dfb01792e228239d037"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#ad6563c0d57e47dfb01792e228239d037">parse_doctype_ignore</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *str)</td></tr>
-<tr class="memdesc:ad6563c0d57e47dfb01792e228239d037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses an <code>&lt;![IGNORE[...]]&gt;</code> section within a DOCTYPE.  <a href="a02636.html#ad6563c0d57e47dfb01792e228239d037">More...</a><br /></td></tr>
-<tr class="separator:ad6563c0d57e47dfb01792e228239d037"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc04fe24605c151713d36faa3f29ab6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#abc04fe24605c151713d36faa3f29ab6f">parse_exclamation</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *str, <a class="el" href="a02612.html">XmlNodeBase</a> *cursor, unsigned int optmsk, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> endch)</td></tr>
-<tr class="memdesc:abc04fe24605c151713d36faa3f29ab6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses XML constructs starting with an exclamation mark (<code>&lt;!...</code>).  <a href="a02636.html#abc04fe24605c151713d36faa3f29ab6f">More...</a><br /></td></tr>
-<tr class="separator:abc04fe24605c151713d36faa3f29ab6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a240af3dd54df35ba0304a326d3210a47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a240af3dd54df35ba0304a326d3210a47">parse_question</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *str, <a class="el" href="a02612.html">XmlNodeBase</a> *&amp;ref_cursor, unsigned int optmsk, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> endch)</td></tr>
-<tr class="memdesc:a240af3dd54df35ba0304a326d3210a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses XML processing instructions (<code>&lt;?...?&gt;</code>) or XML declarations (<code>&lt;?xml...?&gt;</code>).  <a href="a02636.html#a240af3dd54df35ba0304a326d3210a47">More...</a><br /></td></tr>
-<tr class="separator:a240af3dd54df35ba0304a326d3210a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaea40c6d848e6acca45b732a473d2ca4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#aaea40c6d848e6acca45b732a473d2ca4">parse_tree</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *str, <a class="el" href="a02612.html">XmlNodeBase</a> *root, unsigned int optmsk, <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> endch)</td></tr>
-<tr class="memdesc:aaea40c6d848e6acca45b732a473d2ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main parsing function that constructs the XML document tree from a buffer.  <a href="a02636.html#aaea40c6d848e6acca45b732a473d2ca4">More...</a><br /></td></tr>
-<tr class="separator:aaea40c6d848e6acca45b732a473d2ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c53bcad4528f86530aee3c485dac74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a97c53bcad4528f86530aee3c485dac74">CoreDumpGenerator</a> (<a class="el" href="a02636.html">CoreDumpGenerator</a> const &amp;)=delete</td></tr>
+<tr class="separator:a97c53bcad4528f86530aee3c485dac74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34a9712a714e7d710fd828f75ac7d63f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02636.html">CoreDumpGenerator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a34a9712a714e7d710fd828f75ac7d63f">operator=</a> (<a class="el" href="a02636.html">CoreDumpGenerator</a> const &amp;)=delete</td></tr>
+<tr class="separator:a34a9712a714e7d710fd828f75ac7d63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863c16530195001205ac292f7d1d568e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a863c16530195001205ac292f7d1d568e">CoreDumpGenerator</a> (<a class="el" href="a02636.html">CoreDumpGenerator</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a863c16530195001205ac292f7d1d568e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04917e9453a80a3c3a24a45f12f79195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02636.html">CoreDumpGenerator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a04917e9453a80a3c3a24a45f12f79195">operator=</a> (<a class="el" href="a02636.html">CoreDumpGenerator</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a04917e9453a80a3c3a24a45f12f79195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae017307ab8710853b7c7b2a3a1946e51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#ae017307ab8710853b7c7b2a3a1946e51">~CoreDumpGenerator</a> () noexcept</td></tr>
+<tr class="separator:ae017307ab8710853b7c7b2a3a1946e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ad0a82710e80d0e98b1ca08dc74dca"><td class="memItemLeft" align="right" valign="top">std::string const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a61ad0a82710e80d0e98b1ca08dc74dca">getInstanceDumpDirectory</a> () const noexcept</td></tr>
+<tr class="memdesc:a61ad0a82710e80d0e98b1ca08dc74dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dump directory for this instance.  <a href="a02636.html#a61ad0a82710e80d0e98b1ca08dc74dca">More...</a><br /></td></tr>
+<tr class="separator:a61ad0a82710e80d0e98b1ca08dc74dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052500867066b671265fbedd991dd034"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02628.html">DumpConfiguration</a> const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a052500867066b671265fbedd991dd034">getInstanceConfiguration</a> () const noexcept</td></tr>
+<tr class="memdesc:a052500867066b671265fbedd991dd034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current configuration for this instance.  <a href="a02636.html#a052500867066b671265fbedd991dd034">More...</a><br /></td></tr>
+<tr class="separator:a052500867066b671265fbedd991dd034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6fa7425a1fb5f9d3aa01db0df223aad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#af6fa7425a1fb5f9d3aa01db0df223aad">isInstanceInitialized</a> () const noexcept</td></tr>
+<tr class="memdesc:af6fa7425a1fb5f9d3aa01db0df223aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this instance is initialized.  <a href="a02636.html#af6fa7425a1fb5f9d3aa01db0df223aad">More...</a><br /></td></tr>
+<tr class="separator:af6fa7425a1fb5f9d3aa01db0df223aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ca7205ff66b47cbbb39b308280d78a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a38ca7205ff66b47cbbb39b308280d78a">generateInstanceDump</a> (std::string const &amp;reason=&quot;Manual dump&quot;)</td></tr>
+<tr class="memdesc:a38ca7205ff66b47cbbb39b308280d78a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a dump using this instance's configuration.  <a href="a02636.html#a38ca7205ff66b47cbbb39b308280d78a">More...</a><br /></td></tr>
+<tr class="separator:a38ca7205ff66b47cbbb39b308280d78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a191e3ecd967392385761aa12bd14e42f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a191e3ecd967392385761aa12bd14e42f">generateInstanceDump</a> (std::string const &amp;reason, std::error_code &amp;errorCode) noexcept</td></tr>
+<tr class="memdesc:a191e3ecd967392385761aa12bd14e42f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a dump with error handling.  <a href="a02636.html#a191e3ecd967392385761aa12bd14e42f">More...</a><br /></td></tr>
+<tr class="separator:a191e3ecd967392385761aa12bd14e42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53eca6557d7a2d4378804ac0d8eed6e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">std::optional</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a53eca6557d7a2d4378804ac0d8eed6e4">getOptionalDumpDirectory</a> () const noexcept</td></tr>
+<tr class="memdesc:a53eca6557d7a2d4378804ac0d8eed6e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optional dump directory.  <a href="a02636.html#a53eca6557d7a2d4378804ac0d8eed6e4">More...</a><br /></td></tr>
+<tr class="separator:a53eca6557d7a2d4378804ac0d8eed6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a7b6fe97ddccf1978354b9535c5d30d37"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a7b6fe97ddccf1978354b9535c5d30d37">parse_skip_bom</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *str)</td></tr>
-<tr class="memdesc:a7b6fe97ddccf1978354b9535c5d30d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips the Byte Order Mark (BOM) from the beginning of the input string.  <a href="a02636.html#a7b6fe97ddccf1978354b9535c5d30d37">More...</a><br /></td></tr>
-<tr class="separator:a7b6fe97ddccf1978354b9535c5d30d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41609622cdb4f218fd1da05da4877cb6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a41609622cdb4f218fd1da05da4877cb6">has_element_node_siblings</a> (<a class="el" href="a02612.html">XmlNodeBase</a> *node)</td></tr>
-<tr class="memdesc:a41609622cdb4f218fd1da05da4877cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any of the given node's siblings (including itself) are element nodes.  <a href="a02636.html#a41609622cdb4f218fd1da05da4877cb6">More...</a><br /></td></tr>
-<tr class="separator:a41609622cdb4f218fd1da05da4877cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae835a4b1d36fc40be0902ddb0d961913"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a02640.html">xml_parse_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#ae835a4b1d36fc40be0902ddb0d961913">parse</a> (<a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *buffer, std::size_t length, <a class="el" href="a02584.html">document::XmlDocumentBase</a> *xmldoc, <a class="el" href="a02612.html">XmlNodeBase</a> *root, unsigned int optmsk)</td></tr>
-<tr class="memdesc:ae835a4b1d36fc40be0902ddb0d961913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses an XML buffer and builds the document tree.  <a href="a02636.html#ae835a4b1d36fc40be0902ddb0d961913">More...</a><br /></td></tr>
-<tr class="separator:ae835a4b1d36fc40be0902ddb0d961913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6bd697e628df615bf2b67611c7fef8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a2f6bd697e628df615bf2b67611c7fef8">initialize</a> (std::string const &amp;dumpDirectory=&quot;&quot;, <a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a> dumpType=<a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19af86553cc5ee5d4c46e196a1d160cea44">DumpType::DEFAULT_AUTO</a>, bool handleExceptions=true)</td></tr>
+<tr class="memdesc:a2f6bd697e628df615bf2b67611c7fef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the crash dump handler.  <a href="a02636.html#a2f6bd697e628df615bf2b67611c7fef8">More...</a><br /></td></tr>
+<tr class="separator:a2f6bd697e628df615bf2b67611c7fef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c74e415799ae0433175c1675c8a479d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a9c74e415799ae0433175c1675c8a479d">initialize</a> (<a class="el" href="a02628.html">DumpConfiguration</a> const &amp;config, bool handleExceptions=true)</td></tr>
+<tr class="memdesc:a9c74e415799ae0433175c1675c8a479d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the crash dump handler with full configuration.  <a href="a02636.html#a9c74e415799ae0433175c1675c8a479d">More...</a><br /></td></tr>
+<tr class="separator:a9c74e415799ae0433175c1675c8a479d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a757b46dce48e632bb946abc706494381"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a757b46dce48e632bb946abc706494381">isInitialized</a> () noexcept</td></tr>
+<tr class="memdesc:a757b46dce48e632bb946abc706494381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the dump creator is initialized.  <a href="a02636.html#a757b46dce48e632bb946abc706494381">More...</a><br /></td></tr>
+<tr class="separator:a757b46dce48e632bb946abc706494381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d21898df8bf2acc176872ff3e32931b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a7d21898df8bf2acc176872ff3e32931b">generateDump</a> (std::string const &amp;reason=&quot;Manual dump&quot;, DumpType dumpType=<a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19af86553cc5ee5d4c46e196a1d160cea44">DumpType::DEFAULT_AUTO</a>)</td></tr>
+<tr class="memdesc:a7d21898df8bf2acc176872ff3e32931b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger a dump generation.  <a href="a02636.html#a7d21898df8bf2acc176872ff3e32931b">More...</a><br /></td></tr>
+<tr class="separator:a7d21898df8bf2acc176872ff3e32931b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84b160baa9ba19a63babf3ed547278bb"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a84b160baa9ba19a63babf3ed547278bb">generateDump</a> (std::string const &amp;reason, <a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a> dumpType, std::error_code &amp;errorCode) noexcept</td></tr>
+<tr class="memdesc:a84b160baa9ba19a63babf3ed547278bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually trigger a dump generation with error code.  <a href="a02636.html#a84b160baa9ba19a63babf3ed547278bb">More...</a><br /></td></tr>
+<tr class="separator:a84b160baa9ba19a63babf3ed547278bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f14fec851a570c8632fab14b22e902c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a0f14fec851a570c8632fab14b22e902c">generateDump</a> (<a class="el" href="a02628.html">DumpConfiguration</a> const &amp;config, std::string const &amp;reason=&quot;Manual dump&quot;)</td></tr>
+<tr class="memdesc:a0f14fec851a570c8632fab14b22e902c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a dump file with custom configuration.  <a href="a02636.html#a0f14fec851a570c8632fab14b22e902c">More...</a><br /></td></tr>
+<tr class="separator:a0f14fec851a570c8632fab14b22e902c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ed03175b4d8a0a4758b2d58229b4586"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a02636.html">CoreDumpGenerator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a4ed03175b4d8a0a4758b2d58229b4586">instance</a> ()</td></tr>
+<tr class="memdesc:a4ed03175b4d8a0a4758b2d58229b4586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the singleton instance.  <a href="a02636.html#a4ed03175b4d8a0a4758b2d58229b4586">More...</a><br /></td></tr>
+<tr class="separator:a4ed03175b4d8a0a4758b2d58229b4586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad518a6042421e346ed449e97574878b7"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#ad518a6042421e346ed449e97574878b7">getDumpDirectory</a> () noexcept</td></tr>
+<tr class="memdesc:ad518a6042421e346ed449e97574878b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current dump directory.  <a href="a02636.html#ad518a6042421e346ed449e97574878b7">More...</a><br /></td></tr>
+<tr class="separator:ad518a6042421e346ed449e97574878b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f5c230db0cb1796fbe25a166cf92f9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a02628.html">DumpConfiguration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#ac7f5c230db0cb1796fbe25a166cf92f9">getCurrentConfiguration</a> () noexcept</td></tr>
+<tr class="memdesc:ac7f5c230db0cb1796fbe25a166cf92f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current dump configuration.  <a href="a02636.html#ac7f5c230db0cb1796fbe25a166cf92f9">More...</a><br /></td></tr>
+<tr class="separator:ac7f5c230db0cb1796fbe25a166cf92f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf87931adc85ff4a1bf3a12968ef030"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#aacf87931adc85ff4a1bf3a12968ef030">setDumpType</a> (<a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a> dumpType)</td></tr>
+<tr class="memdesc:aacf87931adc85ff4a1bf3a12968ef030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the dump type for future dumps.  <a href="a02636.html#aacf87931adc85ff4a1bf3a12968ef030">More...</a><br /></td></tr>
+<tr class="separator:aacf87931adc85ff4a1bf3a12968ef030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3137164efbcc6d0ea82af4a91d86f6d2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a3137164efbcc6d0ea82af4a91d86f6d2">getCurrentDumpType</a> () noexcept</td></tr>
+<tr class="memdesc:a3137164efbcc6d0ea82af4a91d86f6d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current dump type.  <a href="a02636.html#a3137164efbcc6d0ea82af4a91d86f6d2">More...</a><br /></td></tr>
+<tr class="separator:a3137164efbcc6d0ea82af4a91d86f6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ad3f785991fdb37ea2da067c372dc70"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a6ad3f785991fdb37ea2da067c372dc70">setCorePatternForCrash</a> ()</td></tr>
+<tr class="memdesc:a6ad3f785991fdb37ea2da067c372dc70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set core pattern for crash (like in the working example)  <a href="a02636.html#a6ad3f785991fdb37ea2da067c372dc70">More...</a><br /></td></tr>
+<tr class="separator:a6ad3f785991fdb37ea2da067c372dc70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae916a98a1536785c7a7193d2575c16"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#aeae916a98a1536785c7a7193d2575c16">renameCoreFiles</a> ()</td></tr>
+<tr class="memdesc:aeae916a98a1536785c7a7193d2575c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename any core files that were created.  <a href="a02636.html#aeae916a98a1536785c7a7193d2575c16">More...</a><br /></td></tr>
+<tr class="separator:aeae916a98a1536785c7a7193d2575c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c0bc56c867663805c85290a06a33cd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#ae9c0bc56c867663805c85290a06a33cd">isAdminPrivileges</a> () noexcept</td></tr>
+<tr class="memdesc:ae9c0bc56c867663805c85290a06a33cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the current process is running with administrator privileges.  <a href="a02636.html#ae9c0bc56c867663805c85290a06a33cd">More...</a><br /></td></tr>
+<tr class="separator:ae9c0bc56c867663805c85290a06a33cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a808acb35d185220b2965a498ee1b1415"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a808acb35d185220b2965a498ee1b1415">setAdminGroupName</a> (std::string const &amp;name) noexcept</td></tr>
+<tr class="memdesc:a808acb35d185220b2965a498ee1b1415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the admin group name used by <a class="el" href="a02636.html#ae9c0bc56c867663805c85290a06a33cd" title="Check if the current process is running with administrator privileges.">isAdminPrivileges()</a> on UNIX.  <a href="a02636.html#a808acb35d185220b2965a498ee1b1415">More...</a><br /></td></tr>
+<tr class="separator:a808acb35d185220b2965a498ee1b1415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff376d91a11a64594f7bc286d016abd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#aaff376d91a11a64594f7bc286d016abd">registerCustomSignalHandler</a> (int signum, void(*handler)(int)) noexcept</td></tr>
+<tr class="memdesc:aaff376d91a11a64594f7bc286d016abd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom signal handler for graceful shutdown signals.  <a href="a02636.html#aaff376d91a11a64594f7bc286d016abd">More...</a><br /></td></tr>
+<tr class="separator:aaff376d91a11a64594f7bc286d016abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5efc78d1811615fe792423a766ecb8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a5e5efc78d1811615fe792423a766ecb8">registerCustomConsoleHandler</a> (void(*handler)()) noexcept</td></tr>
+<tr class="memdesc:a5e5efc78d1811615fe792423a766ecb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">POSIX-safe console-style graceful shutdown registration. Blocks SIGINT/SIGTERM/SIGHUP in the caller and starts an internal sigwait thread that invokes the provided handler() in a normal thread context.  <a href="a02636.html#a5e5efc78d1811615fe792423a766ecb8">More...</a><br /></td></tr>
+<tr class="separator:a5e5efc78d1811615fe792423a766ecb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a9cdc248c3f9503e4127e13d6a3eee28b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a02588.html">XmlAllocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a9cdc248c3f9503e4127e13d6a3eee28b">alloc</a></td></tr>
-<tr class="memdesc:a9cdc248c3f9503e4127e13d6a3eee28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the XML allocator used for memory management during parsing.  <a href="a02636.html#a9cdc248c3f9503e4127e13d6a3eee28b">More...</a><br /></td></tr>
-<tr class="separator:a9cdc248c3f9503e4127e13d6a3eee28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a873370e5e60f9f27e3d54ab963ca32a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a873370e5e60f9f27e3d54ab963ca32a7">error_offset</a> {}</td></tr>
-<tr class="memdesc:a873370e5e60f9f27e3d54ab963ca32a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the offset in the input buffer where a parsing error occurred.  <a href="a02636.html#a873370e5e60f9f27e3d54ab963ca32a7">More...</a><br /></td></tr>
-<tr class="separator:a873370e5e60f9f27e3d54ab963ca32a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab62f9c2211741728ef2742ab2ed5d08c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00958.html#a8264dfa29bbe6720c402fec104db5408">xml_parse_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#ab62f9c2211741728ef2742ab2ed5d08c">error_status</a> {}</td></tr>
-<tr class="memdesc:ab62f9c2211741728ef2742ab2ed5d08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the status of the last parsing operation.  <a href="a02636.html#ab62f9c2211741728ef2742ab2ed5d08c">More...</a><br /></td></tr>
-<tr class="separator:ab62f9c2211741728ef2742ab2ed5d08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a94483f2ffd1b322d166ae38adeede8a6"><td class="memItemLeft" align="right" valign="top">static constexpr size_t const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a94483f2ffd1b322d166ae38adeede8a6">KB_32</a> = 32ULL * 1024ULL</td></tr>
+<tr class="separator:a94483f2ffd1b322d166ae38adeede8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22834fd33025d775e5c947335e081de"><td class="memItemLeft" align="right" valign="top">static constexpr size_t const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#af22834fd33025d775e5c947335e081de">KB_64</a> = 64ULL * 1024ULL</td></tr>
+<tr class="separator:af22834fd33025d775e5c947335e081de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d732f873166322b30ce9d1d0ce33d60"><td class="memItemLeft" align="right" valign="top">static constexpr size_t const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a5d732f873166322b30ce9d1d0ce33d60">KB_128</a> = 128ULL * 1024ULL</td></tr>
+<tr class="separator:a5d732f873166322b30ce9d1d0ce33d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771e3a2f16d829c99f83caddff8759cb"><td class="memItemLeft" align="right" valign="top">static constexpr size_t const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a771e3a2f16d829c99f83caddff8759cb">KB_256</a> = 256ULL * 1024ULL</td></tr>
+<tr class="separator:a771e3a2f16d829c99f83caddff8759cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9a2eb38f32474c2ca274e56d404bab"><td class="memItemLeft" align="right" valign="top">static constexpr size_t const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#a8c9a2eb38f32474c2ca274e56d404bab">KB_512</a> = 512ULL * 1024ULL</td></tr>
+<tr class="separator:a8c9a2eb38f32474c2ca274e56d404bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c9793b6d91eef07331331f694a2c9c"><td class="memItemLeft" align="right" valign="top">static constexpr size_t const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02636.html#ac4c9793b6d91eef07331331f694a2c9c">MB_1</a> = 1024ULL * 1024ULL</td></tr>
+<tr class="separator:ac4c9793b6d91eef07331331f694a2c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Internal XML parser structure responsible for tokenizing and building the XML document tree. </p>
-<p>This structure contains the state for the XML parsing process, including the allocator, error status, and error offset. It provides core methods for parsing different XML constructs such as DOCTYPE, comments, CDATA, processing instructions, and the main element tree. </p><dl class="section note"><dt>Note</dt><dd>This is a low-level parsing component; most users will interact with <code>XmlDocument</code> for parsing. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd>XmlDocument </dd></dl>
+<div class="textblock"><p>Cross-platform crash dump handler with comprehensive debugging support. </p>
+<p>This class provides a robust, thread-safe crash dump handler that automatically captures memory dumps when crashes occur on both Windows and UNIX platforms. It supports multiple dump types through the <a class="el" href="a02632.html" title="Factory class for creating and configuring crash dump generators.">DumpFactory</a> pattern and provides comprehensive debugging information for post-mortem analysis.</p>
+<p>The <a class="el" href="a02636.html" title="Cross-platform crash dump handler with comprehensive debugging support.">CoreDumpGenerator</a> offers:</p><ul>
+<li>Automatic crash detection and dump generation</li>
+<li>Cross-platform compatibility (Windows/UNIX)</li>
+<li>Multiple dump types and configurations</li>
+<li>Thread-safe singleton pattern implementation</li>
+<li>Comprehensive error handling and logging</li>
+<li>Security-focused path validation</li>
+<li>Atomic file operations to prevent race conditions</li>
+</ul>
+<dl class="section invariant"><dt>Invariant</dt><dd>The singleton instance is created only once and is thread-safe </dd>
+<dd>
+All file operations are atomic to prevent TOCTOU race conditions </dd>
+<dd>
+All input paths are validated for security vulnerabilities </dd>
+<dd>
+Platform-specific handlers are properly initialized</dd></dl>
+<dl class="section user"><dt>Thread safety:</dt><dd>This class is thread-safe. Multiple threads can call public methods concurrently without external synchronization.</dd></dl>
+<dl class="section user"><dt>Exception safety:</dt><dd>All public methods provide strong exception safety guarantee unless otherwise specified. Methods marked noexcept provide no-throw guarantee.</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>Version 1.0 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19" title="Comprehensive enumeration of all supported crash dump types across platforms.">DumpType</a> </dd>
+<dd>
+<a class="el" href="a02628.html" title="Comprehensive configuration class for crash dump generation.">DumpConfiguration</a> </dd>
+<dd>
+<a class="el" href="a02632.html" title="Factory class for creating and configuring crash dump generators.">DumpFactory</a></dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="comment">// Initialize the crash dump handler</span></div>
+<div class="line"><a class="code" href="a02636.html#a2f6bd697e628df615bf2b67611c7fef8">CoreDumpGenerator::initialize</a>(<span class="stringliteral">&quot;/path/to/dumps&quot;</span>,</div>
+<div class="line">DumpType::MINI_DUMP_WITH_FULL_MEMORY);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Generate a manual dump</span></div>
+<div class="line"><a class="code" href="a02636.html#a7d21898df8bf2acc176872ff3e32931b">CoreDumpGenerator::generateDump</a>(<span class="stringliteral">&quot;Manual dump for testing&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Get the singleton instance</span></div>
+<div class="line"><span class="keyword">auto</span>&amp; generator = <a class="code" href="a02636.html#a4ed03175b4d8a0a4758b2d58229b4586">CoreDumpGenerator::instance</a>();</div>
+</div><!-- fragment --> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aaaf6c59d2d8ca4785f16fc897b8ef68b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaf6c59d2d8ca4785f16fc897b8ef68b">&#9670;&nbsp;</a></span>XmlParser()</h2>
+<a id="a97c53bcad4528f86530aee3c485dac74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c53bcad4528f86530aee3c485dac74">&#9670;&nbsp;</a></span>CoreDumpGenerator() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> XmlParser::XmlParser </td>
+          <td class="memname">lumex::core::utility::dump::CoreDumpGenerator::CoreDumpGenerator </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a02588.html">XmlAllocator</a> *&#160;</td>
-          <td class="paramname"><em>alloc_</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="a02636.html">CoreDumpGenerator</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Constructs an <code><a class="el" href="a02636.html" title="Internal XML parser structure responsible for tokenizing and building the XML document tree.">XmlParser</a></code> object with a given allocator. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">alloc_</td><td>The <code>XmlAllocator</code> instance to use for memory operations during parsing. </td></tr>
-  </table>
-  </dd>
-</dl>
+</div>
+</div>
+<a id="a863c16530195001205ac292f7d1d568e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a863c16530195001205ac292f7d1d568e">&#9670;&nbsp;</a></span>CoreDumpGenerator() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::core::utility::dump::CoreDumpGenerator::CoreDumpGenerator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02636.html">CoreDumpGenerator</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae017307ab8710853b7c7b2a3a1946e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae017307ab8710853b7c7b2a3a1946e51">&#9670;&nbsp;</a></span>~CoreDumpGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lumex::core::utility::dump::CoreDumpGenerator::~CoreDumpGenerator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a41609622cdb4f218fd1da05da4877cb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41609622cdb4f218fd1da05da4877cb6">&#9670;&nbsp;</a></span>has_element_node_siblings()</h2>
+<a id="a0f14fec851a570c8632fab14b22e902c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f14fec851a570c8632fab14b22e902c">&#9670;&nbsp;</a></span>generateDump() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,10 +335,889 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool XmlParser::has_element_node_siblings </td>
+          <td class="memname">bool lumex::core::utility::dump::CoreDumpGenerator::generateDump </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a02612.html">XmlNodeBase</a> *&#160;</td>
-          <td class="paramname"><em>node</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="a02628.html">DumpConfiguration</a> const &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>reason</em> = <code>&quot;Manual&#160;dump&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a dump file with custom configuration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>Complete dump configuration </td></tr>
+    <tr><td class="paramname">reason</td><td>Reason for generating the dump </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if not initialized </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02636_a0f14fec851a570c8632fab14b22e902c_cgraph.png" border="0" usemap="#aa02636_a0f14fec851a570c8632fab14b22e902c_cgraph" alt=""/></div>
+<map name="a02636_a0f14fec851a570c8632fab14b22e902c_cgraph" id="aa02636_a0f14fec851a570c8632fab14b22e902c_cgraph">
+<area shape="rect" title="Generate a dump file with custom configuration." alt="" coords="5,45,215,101"/>
+<area shape="rect" href="a02632.html#aabbd331683cfb5bae298a6c406ba8d79" title="Get a human&#45;readable description of the dump type." alt="" coords="279,5,447,61"/>
+<area shape="rect" href="a02628.html#a4dfa03e53bfe6915a233403c89bd5db5" title=" " alt="" coords="263,85,464,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a84b160baa9ba19a63babf3ed547278bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84b160baa9ba19a63babf3ed547278bb">&#9670;&nbsp;</a></span>generateDump() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::utility::dump::CoreDumpGenerator::generateDump </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>reason</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a>&#160;</td>
+          <td class="paramname"><em>dumpType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::error_code &amp;&#160;</td>
+          <td class="paramname"><em>errorCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manually trigger a dump generation with error code. </p>
+<p>Non-throwing alternative to <a class="el" href="a02636.html#a7d21898df8bf2acc176872ff3e32931b" title="Manually trigger a dump generation.">generateDump()</a> that returns error information via std::error_code instead of throwing exceptions.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td>Optional reason for the dump generation </td></tr>
+    <tr><td class="paramname">dumpType</td><td>Type of dump to generate (uses current config if DEFAULT_AUTO) </td></tr>
+    <tr><td class="paramname">errorCode</td><td>Error code to be set on failure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if dump was generated successfully, false otherwise</dd></dl>
+<dl class="section user"><dt>Complexity:</dt><dd>O(1) for basic operations, O(n) where n is memory size for full dumps </dd></dl>
+<dl class="section user"><dt>Thread safety:</dt><dd>This function is thread-safe and may be called concurrently </dd></dl>
+<dl class="section user"><dt>Exception safety:</dt><dd>No-throw guarantee </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02636_a84b160baa9ba19a63babf3ed547278bb_cgraph.png" border="0" usemap="#aa02636_a84b160baa9ba19a63babf3ed547278bb_cgraph" alt=""/></div>
+<map name="a02636_a84b160baa9ba19a63babf3ed547278bb_cgraph" id="aa02636_a84b160baa9ba19a63babf3ed547278bb_cgraph">
+<area shape="rect" title="Manually trigger a dump generation with error code." alt="" coords="5,165,215,221"/>
+<area shape="rect" href="a02632.html#a072b58b2c33d2828b9e774642600a5e2" title="Create a dump configuration for the specified type." alt="" coords="279,5,447,61"/>
+<area shape="rect" href="a02632.html#aabbd331683cfb5bae298a6c406ba8d79" title="Get a human&#45;readable description of the dump type." alt="" coords="279,85,447,141"/>
+<area shape="rect" href="a02628.html#a4dfa03e53bfe6915a233403c89bd5db5" title=" " alt="" coords="263,165,464,221"/>
+<area shape="rect" href="a02632.html#ae1b259c00a2ae9cfa891b7c4ae660d0a" title="Check if a dump type is supported on the current platform." alt="" coords="279,245,447,301"/>
+<area shape="rect" href="a02628.html#ac8958dd9a2a26a8db706d6607d451eb1" title=" " alt="" coords="263,325,464,381"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7d21898df8bf2acc176872ff3e32931b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d21898df8bf2acc176872ff3e32931b">&#9670;&nbsp;</a></span>generateDump() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::utility::dump::CoreDumpGenerator::generateDump </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>reason</em> = <code>&quot;Manual&#160;dump&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a>&#160;</td>
+          <td class="paramname"><em>dumpType</em> = <code><a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19af86553cc5ee5d4c46e196a1d160cea44">DumpType::DEFAULT_AUTO</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manually trigger a dump generation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td>Optional reason for the dump generation </td></tr>
+    <tr><td class="paramname">dumpType</td><td>Type of dump to generate (uses current config if DEFAULT_AUTO) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if dump was generated successfully, false otherwise </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if not initialized </td></tr>
+    <tr><td class="paramname">std::system_error</td><td>if filesystem operations fail </td></tr>
+    <tr><td class="paramname">std::invalid_argument</td><td>if dump type is not supported</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Complexity:</dt><dd>O(1) for basic operations, O(n) where n is memory size for full dumps </dd></dl>
+<dl class="section user"><dt>Thread safety:</dt><dd>This function is thread-safe and may be called concurrently </dd></dl>
+<dl class="section user"><dt>Exception safety:</dt><dd>Basic guarantee: if an exception is thrown, the system remains in a valid state </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02636_a7d21898df8bf2acc176872ff3e32931b_cgraph.png" border="0" usemap="#aa02636_a7d21898df8bf2acc176872ff3e32931b_cgraph" alt=""/></div>
+<map name="a02636_a7d21898df8bf2acc176872ff3e32931b_cgraph" id="aa02636_a7d21898df8bf2acc176872ff3e32931b_cgraph">
+<area shape="rect" title="Manually trigger a dump generation." alt="" coords="5,125,215,181"/>
+<area shape="rect" href="a02632.html#a072b58b2c33d2828b9e774642600a5e2" title="Create a dump configuration for the specified type." alt="" coords="279,5,447,61"/>
+<area shape="rect" href="a02632.html#aabbd331683cfb5bae298a6c406ba8d79" title="Get a human&#45;readable description of the dump type." alt="" coords="279,85,447,141"/>
+<area shape="rect" href="a02628.html#a4dfa03e53bfe6915a233403c89bd5db5" title=" " alt="" coords="263,165,464,221"/>
+<area shape="rect" href="a02628.html#ac8958dd9a2a26a8db706d6607d451eb1" title=" " alt="" coords="263,245,464,301"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a191e3ecd967392385761aa12bd14e42f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a191e3ecd967392385761aa12bd14e42f">&#9670;&nbsp;</a></span>generateInstanceDump() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::utility::dump::CoreDumpGenerator::generateInstanceDump </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>reason</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::error_code &amp;&#160;</td>
+          <td class="paramname"><em>errorCode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a dump with error handling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td>Reason for generating the dump </td></tr>
+    <tr><td class="paramname">errorCode</td><td>Error code to be set on failure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe and noexcept </dd></dl>
+
+</div>
+</div>
+<a id="a38ca7205ff66b47cbbb39b308280d78a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ca7205ff66b47cbbb39b308280d78a">&#9670;&nbsp;</a></span>generateInstanceDump() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::utility::dump::CoreDumpGenerator::generateInstanceDump </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>reason</em> = <code>&quot;Manual&#160;dump&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a dump using this instance's configuration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td>Reason for generating the dump </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe </dd></dl>
+
+</div>
+</div>
+<a id="ac7f5c230db0cb1796fbe25a166cf92f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f5c230db0cb1796fbe25a166cf92f9">&#9670;&nbsp;</a></span>getCurrentConfiguration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a02628.html">DumpConfiguration</a> lumex::core::utility::dump::CoreDumpGenerator::getCurrentConfiguration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current dump configuration. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current dump configuration </dd></dl>
+
+</div>
+</div>
+<a id="a3137164efbcc6d0ea82af4a91d86f6d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3137164efbcc6d0ea82af4a91d86f6d2">&#9670;&nbsp;</a></span>getCurrentDumpType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a> lumex::core::utility::dump::CoreDumpGenerator::getCurrentDumpType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current dump type. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current dump type </dd></dl>
+
+</div>
+</div>
+<a id="ad518a6042421e346ed449e97574878b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad518a6042421e346ed449e97574878b7">&#9670;&nbsp;</a></span>getDumpDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lumex::core::utility::dump::CoreDumpGenerator::getDumpDirectory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current dump directory. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current dump directory path </dd></dl>
+
+</div>
+</div>
+<a id="a052500867066b671265fbedd991dd034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a052500867066b671265fbedd991dd034">&#9670;&nbsp;</a></span>getInstanceConfiguration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a02628.html">DumpConfiguration</a> const  &amp; lumex::core::utility::dump::CoreDumpGenerator::getInstanceConfiguration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current configuration for this instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current dump configuration </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe </dd></dl>
+
+</div>
+</div>
+<a id="a61ad0a82710e80d0e98b1ca08dc74dca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ad0a82710e80d0e98b1ca08dc74dca">&#9670;&nbsp;</a></span>getInstanceDumpDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string const  &amp; lumex::core::utility::dump::CoreDumpGenerator::getInstanceDumpDirectory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the dump directory for this instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current dump directory path </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe </dd></dl>
+
+</div>
+</div>
+<a id="a53eca6557d7a2d4378804ac0d8eed6e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53eca6557d7a2d4378804ac0d8eed6e4">&#9670;&nbsp;</a></span>getOptionalDumpDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00602.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">std::optional</a>&lt;std::string&gt; lumex::core::utility::dump::CoreDumpGenerator::getOptionalDumpDirectory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get optional dump directory. </p>
+<dl class="section return"><dt>Returns</dt><dd>Optional containing directory if set, empty if not </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02636_a53eca6557d7a2d4378804ac0d8eed6e4_cgraph.png" border="0" usemap="#aa02636_a53eca6557d7a2d4378804ac0d8eed6e4_cgraph" alt=""/></div>
+<map name="a02636_a53eca6557d7a2d4378804ac0d8eed6e4_cgraph" id="aa02636_a53eca6557d7a2d4378804ac0d8eed6e4_cgraph">
+<area shape="rect" title="Get optional dump directory." alt="" coords="5,5,215,61"/>
+<area shape="rect" href="a01288.html#a4f98c7ef3724d664497289fe54e1c254" title="Creates a optional object containing a copy or move of a value." alt="" coords="263,13,423,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9c74e415799ae0433175c1675c8a479d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c74e415799ae0433175c1675c8a479d">&#9670;&nbsp;</a></span>initialize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lumex::core::utility::dump::CoreDumpGenerator::initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02628.html">DumpConfiguration</a> const &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>handleExceptions</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the crash dump handler with full configuration. </p>
+<p>Sets up platform-specific crash handlers with custom configuration. Also sets up C++ exception handling.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>Complete dump configuration </td></tr>
+    <tr><td class="paramname">handleExceptions</td><td>Whether to handle unhandled C++ exceptions (default: true) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if initialization fails </td></tr>
+    <tr><td class="paramname">std::system_error</td><td>if filesystem operations fail </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02636_a9c74e415799ae0433175c1675c8a479d_cgraph.png" border="0" usemap="#aa02636_a9c74e415799ae0433175c1675c8a479d_cgraph" alt=""/></div>
+<map name="a02636_a9c74e415799ae0433175c1675c8a479d_cgraph" id="aa02636_a9c74e415799ae0433175c1675c8a479d_cgraph">
+<area shape="rect" title="Initialize the crash dump handler with full configuration." alt="" coords="5,165,215,221"/>
+<area shape="rect" href="a02632.html#aabbd331683cfb5bae298a6c406ba8d79" title="Get a human&#45;readable description of the dump type." alt="" coords="279,5,447,61"/>
+<area shape="rect" href="a02628.html#ac17e13c585f348a7d5561ed37046f9d6" title=" " alt="" coords="263,85,464,141"/>
+<area shape="rect" href="a02628.html#a7453a7e371d1f2a7e1a9e839dc9e523e" title=" " alt="" coords="263,165,464,221"/>
+<area shape="rect" href="a02628.html#a4dfa03e53bfe6915a233403c89bd5db5" title=" " alt="" coords="263,245,464,301"/>
+<area shape="rect" href="a01269.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="274,326,453,367"/>
+<area shape="rect" href="a02076.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="512,326,800,367"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2f6bd697e628df615bf2b67611c7fef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f6bd697e628df615bf2b67611c7fef8">&#9670;&nbsp;</a></span>initialize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lumex::core::utility::dump::CoreDumpGenerator::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>dumpDirectory</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a>&#160;</td>
+          <td class="paramname"><em>dumpType</em> = <code><a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19af86553cc5ee5d4c46e196a1d160cea44">DumpType::DEFAULT_AUTO</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>handleExceptions</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the crash dump handler. </p>
+<p>Sets up platform-specific crash handlers with default configuration. Also sets up C++ exception handling.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dumpDirectory</td><td>Optional directory path for dump files. If empty, uses executable directory. </td></tr>
+    <tr><td class="paramname">dumpType</td><td>Type of dump to generate (defaults to platform-specific) </td></tr>
+    <tr><td class="paramname">handleExceptions</td><td>Whether to handle unhandled C++ exceptions (default: true) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if initialization fails </td></tr>
+    <tr><td class="paramname">std::system_error</td><td>if filesystem operations fail </td></tr>
+    <tr><td class="paramname">std::invalid_argument</td><td>if configuration is invalid</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Complexity:</dt><dd>O(1) for basic initialization, O(n) where n is directory depth for recursive creation </dd></dl>
+<dl class="section user"><dt>Thread safety:</dt><dd>This function is thread-safe and may be called concurrently </dd></dl>
+<dl class="section user"><dt>Exception safety:</dt><dd>Strong guarantee: if an exception is thrown, the object remains in a valid state </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02636_a2f6bd697e628df615bf2b67611c7fef8_cgraph.png" border="0" usemap="#aa02636_a2f6bd697e628df615bf2b67611c7fef8_cgraph" alt=""/></div>
+<map name="a02636_a2f6bd697e628df615bf2b67611c7fef8_cgraph" id="aa02636_a2f6bd697e628df615bf2b67611c7fef8_cgraph">
+<area shape="rect" title="Initialize the crash dump handler." alt="" coords="5,45,215,101"/>
+<area shape="rect" href="a02632.html#a072b58b2c33d2828b9e774642600a5e2" title="Create a dump configuration for the specified type." alt="" coords="279,5,447,61"/>
+<area shape="rect" href="a02628.html#ac8958dd9a2a26a8db706d6607d451eb1" title=" " alt="" coords="263,85,464,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4ed03175b4d8a0a4758b2d58229b4586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ed03175b4d8a0a4758b2d58229b4586">&#9670;&nbsp;</a></span>instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a02636.html">CoreDumpGenerator</a> &amp; lumex::core::utility::dump::CoreDumpGenerator::instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the singleton instance. </p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the singleton instance </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if not initialized </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae9c0bc56c867663805c85290a06a33cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c0bc56c867663805c85290a06a33cd">&#9670;&nbsp;</a></span>isAdminPrivileges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::utility::dump::CoreDumpGenerator::isAdminPrivileges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the current process is running with administrator privileges. </p>
+<p>This method provides a cross-platform way to check if the current process has administrator/root privileges. On Windows, it checks both token elevation and membership in the Administrators group. On UNIX systems, it checks if the effective user ID is 0 (root).</p>
+<dl class="section return"><dt>Returns</dt><dd>true if running with admin privileges, false otherwise </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe and can be called concurrently </dd>
+<dd>
+Returns false if privilege checking fails for security reasons</dd></dl>
+<dl class="section user"><dt>Complexity:</dt><dd>O(1) - constant time operation </dd></dl>
+<dl class="section user"><dt>Thread safety:</dt><dd>This function is thread-safe and may be called concurrently </dd></dl>
+<dl class="section user"><dt>Exception safety:</dt><dd>No-throw guarantee</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>Version 1.0 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>_isElevatedProcess() for a simpler elevation check </dd></dl>
+
+</div>
+</div>
+<a id="a757b46dce48e632bb946abc706494381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a757b46dce48e632bb946abc706494381">&#9670;&nbsp;</a></span>isInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::utility::dump::CoreDumpGenerator::isInitialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the dump creator is initialized. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if initialized, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="af6fa7425a1fb5f9d3aa01db0df223aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6fa7425a1fb5f9d3aa01db0df223aad">&#9670;&nbsp;</a></span>isInstanceInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::utility::dump::CoreDumpGenerator::isInstanceInitialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if this instance is initialized. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if initialized, false otherwise </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe </dd></dl>
+
+</div>
+</div>
+<a id="a04917e9453a80a3c3a24a45f12f79195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04917e9453a80a3c3a24a45f12f79195">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a02636.html">CoreDumpGenerator</a>&amp; lumex::core::utility::dump::CoreDumpGenerator::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02636.html">CoreDumpGenerator</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34a9712a714e7d710fd828f75ac7d63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34a9712a714e7d710fd828f75ac7d63f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a02636.html">CoreDumpGenerator</a>&amp; lumex::core::utility::dump::CoreDumpGenerator::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a02636.html">CoreDumpGenerator</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e5efc78d1811615fe792423a766ecb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e5efc78d1811615fe792423a766ecb8">&#9670;&nbsp;</a></span>registerCustomConsoleHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::utility::dump::CoreDumpGenerator::registerCustomConsoleHandler </td>
+          <td>(</td>
+          <td class="paramtype">void(*)()&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>POSIX-safe console-style graceful shutdown registration. Blocks SIGINT/SIGTERM/SIGHUP in the caller and starts an internal sigwait thread that invokes the provided handler() in a normal thread context. </p>
+
+</div>
+</div>
+<a id="aaff376d91a11a64594f7bc286d016abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaff376d91a11a64594f7bc286d016abd">&#9670;&nbsp;</a></span>registerCustomSignalHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lumex::core::utility::dump::CoreDumpGenerator::registerCustomSignalHandler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(int)&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register a custom signal handler for graceful shutdown signals. </p>
+<p>This method allows registering custom handlers for signals like SIGINT, SIGTERM, SIGHUP that should trigger graceful shutdown rather than crash dumps. The handler will be called before the default crash handling behavior.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signum</td><td>Signal number to register handler for </td></tr>
+    <tr><td class="paramname">handler</td><td>Function pointer to the custom handler </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if registration was successful, false otherwise </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe </dd>
+<dd>
+Only works on UNIX systems (Windows uses console handlers instead) </dd>
+<dd>
+Handler should be async-signal-safe</dd></dl>
+<dl class="section user"><dt>Complexity:</dt><dd>O(1) - constant time operation </dd></dl>
+<dl class="section user"><dt>Thread safety:</dt><dd>This function is thread-safe and may be called concurrently </dd></dl>
+<dl class="section user"><dt>Exception safety:</dt><dd>No-throw guarantee</dd></dl>
+<dl class="section since"><dt>Since</dt><dd>Version 1.1 </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02636_aaff376d91a11a64594f7bc286d016abd_cgraph.png" border="0" usemap="#aa02636_aaff376d91a11a64594f7bc286d016abd_cgraph" alt=""/></div>
+<map name="a02636_aaff376d91a11a64594f7bc286d016abd_cgraph" id="aa02636_aaff376d91a11a64594f7bc286d016abd_cgraph">
+<area shape="rect" title="Register a custom signal handler for graceful shutdown signals." alt="" coords="5,5,227,61"/>
+<area shape="rect" href="a01269.html#a9b962af55f800e2cbb3a49009e6676f1" title="Converts a LumexBasicStacktrace object to its string representation." alt="" coords="275,13,453,54"/>
+<area shape="rect" href="a02076.html#a79f1b53a81f6bde33331116c9926e81a" title="Returns the number of entries in the stacktrace." alt="" coords="501,13,789,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeae916a98a1536785c7a7193d2575c16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae916a98a1536785c7a7193d2575c16">&#9670;&nbsp;</a></span>renameCoreFiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void lumex::core::utility::dump::CoreDumpGenerator::renameCoreFiles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -217,24 +1228,13 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks if any of the given node's siblings (including itself) are element nodes. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>The starting <code>XmlNodeBase</code> to check. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if an element node is found among siblings, <code>false</code> otherwise. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02636_a41609622cdb4f218fd1da05da4877cb6_icgraph.png" border="0" usemap="#aa02636_a41609622cdb4f218fd1da05da4877cb6_icgraph" alt=""/></div>
-</div>
+<p>Rename any core files that were created. </p>
+<p>Renames core files to the correct name and moves them to dumps directory </p>
 
 </div>
 </div>
-<a id="ae835a4b1d36fc40be0902ddb0d961913"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae835a4b1d36fc40be0902ddb0d961913">&#9670;&nbsp;</a></span>parse()</h2>
+<a id="a808acb35d185220b2965a498ee1b1415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a808acb35d185220b2965a498ee1b1415">&#9670;&nbsp;</a></span>setAdminGroupName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,307 +1243,34 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a02640.html">xml_parse_result_t</a> XmlParser::parse </td>
+          <td class="memname">void lumex::core::utility::dump::CoreDumpGenerator::setAdminGroupName </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td>
-          <td class="paramname"><em>buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>length</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02584.html">document::XmlDocumentBase</a> *&#160;</td>
-          <td class="paramname"><em>xmldoc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02612.html">XmlNodeBase</a> *&#160;</td>
-          <td class="paramname"><em>root</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>optmsk</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Parses an XML buffer and builds the document tree. </p>
+<p>Sets the admin group name used by <a class="el" href="a02636.html#ae9c0bc56c867663805c85290a06a33cd" title="Check if the current process is running with administrator privileges.">isAdminPrivileges()</a> on UNIX. </p>
+<p>LumexLib does not hardcode an admin group: the name defaults to empty, which leaves the root-only check in place. Passing a non-empty name makes members of that group count as admin too. A name that cannot be resolved with getgrnam() also falls back to the root-only check. On Windows this is a no-op.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">buffer</td><td>A pointer to the mutable XML data buffer. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>The size of the buffer in <code>char_t</code> units. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">xmldoc</td><td>A pointer to the <code>XmlDocumentBase</code> associated with the parsing operation. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">root</td><td>The root <code>XmlNodeBase</code> where the parsed document structure will be attached. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">optmsk</td><td>A bitmask of <code>xml_parse_option</code> flags. </td></tr>
+    <tr><td class="paramname">name</td><td>Group name to treat as admin; empty disables the group check. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An <code><a class="el" href="a02640.html" title="Represents the result of an XML parsing operation, including status, error offset,...">xml_parse_result_t</a></code> object indicating the parsing status and error details.  This is the primary entry point for parsing operations within the <code><a class="el" href="a02636.html" title="Internal XML parser structure responsible for tokenizing and building the XML document tree.">XmlParser</a></code> component. It handles BOM skipping, buffer termination, actual tree parsing, and final result verification. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02636_ae835a4b1d36fc40be0902ddb0d961913_cgraph.png" border="0" usemap="#aa02636_ae835a4b1d36fc40be0902ddb0d961913_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02636_ae835a4b1d36fc40be0902ddb0d961913_icgraph.png" border="0" usemap="#aa02636_ae835a4b1d36fc40be0902ddb0d961913_icgraph" alt=""/></div>
-</div>
+<dl class="section note"><dt>Note</dt><dd>This method is thread-safe. </dd></dl>
 
 </div>
 </div>
-<a id="a75bdb95c3388639834b0009c27d8c46c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75bdb95c3388639834b0009c27d8c46c">&#9670;&nbsp;</a></span>parse_doctype_group()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> * XmlParser::parse_doctype_group </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>&#160;</td>
-          <td class="paramname"><em>endch</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parses a DOCTYPE group, which can contain nested sections of different types. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>A pointer to the current position in the XML buffer. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">endch</td><td>The expected character that marks the end of the DOCTYPE group (typically <code>&gt;</code>). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the position in the buffer after the DOCTYPE group, or <code>nullptr</code> on error.  Handles recursive parsing of nested DOCTYPE structures like <code>&lt;!ELEMENT ...&gt;</code> or <code>&lt;!ATTLIST ...&gt;</code>. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02636_a75bdb95c3388639834b0009c27d8c46c_cgraph.png" border="0" usemap="#aa02636_a75bdb95c3388639834b0009c27d8c46c_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02636_a75bdb95c3388639834b0009c27d8c46c_icgraph.png" border="0" usemap="#aa02636_a75bdb95c3388639834b0009c27d8c46c_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ad6563c0d57e47dfb01792e228239d037"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6563c0d57e47dfb01792e228239d037">&#9670;&nbsp;</a></span>parse_doctype_ignore()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> * XmlParser::parse_doctype_ignore </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parses an <code>&lt;![IGNORE[...]]&gt;</code> section within a DOCTYPE. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>A pointer to the current position in the XML buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the position in the buffer after the ignore section, or <code>nullptr</code> on error.  This function handles nested ignore sections. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02636_ad6563c0d57e47dfb01792e228239d037_icgraph.png" border="0" usemap="#aa02636_ad6563c0d57e47dfb01792e228239d037_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="aea2c9916c59c5c908e5cacdf6b51fbc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea2c9916c59c5c908e5cacdf6b51fbc9">&#9670;&nbsp;</a></span>parse_doctype_primitive()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> * XmlParser::parse_doctype_primitive </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parses a primitive DOCTYPE section, which can be a quoted string or a PI/comment-like section. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>A pointer to the current position in the XML buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the position in the buffer after the primitive DOCTYPE section, or <code>nullptr</code> on error. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Used internally by <code>parse_doctype_group</code>. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02636_aea2c9916c59c5c908e5cacdf6b51fbc9_icgraph.png" border="0" usemap="#aa02636_aea2c9916c59c5c908e5cacdf6b51fbc9_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="abc04fe24605c151713d36faa3f29ab6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc04fe24605c151713d36faa3f29ab6f">&#9670;&nbsp;</a></span>parse_exclamation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> * XmlParser::parse_exclamation </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02612.html">XmlNodeBase</a> *&#160;</td>
-          <td class="paramname"><em>cursor</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>optmsk</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>&#160;</td>
-          <td class="paramname"><em>endch</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parses XML constructs starting with an exclamation mark (<code>&lt;!...</code>). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>A pointer to the current position in the XML buffer. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">cursor</td><td>A reference to the current <code>XmlNodeBase</code> being built; updated if a new node is pushed. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">optmsk</td><td>A bitmask of parsing options. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">endch</td><td>The character expected at the end of the current section (e.g., <code>&gt;</code>). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the position in the buffer after the parsed exclamation construct, or <code>nullptr</code> on error.  This function dispatches parsing for comments (<code>&lt;!--</code>), CDATA sections (<code>&lt;![CDATA[</code>), and DOCTYPE declarations (<code>&lt;!DOCTYPE</code>). </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02636_abc04fe24605c151713d36faa3f29ab6f_cgraph.png" border="0" usemap="#aa02636_abc04fe24605c151713d36faa3f29ab6f_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02636_abc04fe24605c151713d36faa3f29ab6f_icgraph.png" border="0" usemap="#aa02636_abc04fe24605c151713d36faa3f29ab6f_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a240af3dd54df35ba0304a326d3210a47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a240af3dd54df35ba0304a326d3210a47">&#9670;&nbsp;</a></span>parse_question()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> * XmlParser::parse_question </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a02612.html">XmlNodeBase</a> *&amp;&#160;</td>
-          <td class="paramname"><em>ref_cursor</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>optmsk</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>&#160;</td>
-          <td class="paramname"><em>endch</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parses XML processing instructions (<code>&lt;?...?&gt;</code>) or XML declarations (<code>&lt;?xml...?&gt;</code>). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>A pointer to the current position in the XML buffer. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">ref_cursor</td><td>A reference to the current <code>XmlNodeBase</code> being built; updated if a new node is pushed. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">optmsk</td><td>A bitmask of parsing options. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">endch</td><td>The character expected at the end of the current section (typically <code>&gt;</code>). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the position in the buffer after the parsed PI or declaration, or <code>nullptr</code> on error.  Differentiates between general processing instructions and the XML declaration, handling attributes for the latter. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02636_a240af3dd54df35ba0304a326d3210a47_icgraph.png" border="0" usemap="#aa02636_a240af3dd54df35ba0304a326d3210a47_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a7b6fe97ddccf1978354b9535c5d30d37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b6fe97ddccf1978354b9535c5d30d37">&#9670;&nbsp;</a></span>parse_skip_bom()</h2>
+<a id="a6ad3f785991fdb37ea2da067c372dc70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ad3f785991fdb37ea2da067c372dc70">&#9670;&nbsp;</a></span>setCorePatternForCrash()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -552,154 +1279,221 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> * XmlParser::parse_skip_bom </td>
+          <td class="memname">void lumex::core::utility::dump::CoreDumpGenerator::setCorePatternForCrash </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Skips the Byte Order Mark (BOM) from the beginning of the input string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>A pointer to the beginning of the XML buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the position immediately after the BOM if present, otherwise the original pointer. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function is overloaded for <code>char_t</code> (UTF-8) and <code>wchar_t</code> (UTF-16) modes. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02636_a7b6fe97ddccf1978354b9535c5d30d37_icgraph.png" border="0" usemap="#aa02636_a7b6fe97ddccf1978354b9535c5d30d37_icgraph" alt=""/></div>
-</div>
+<p>Set core pattern for crash (like in the working example) </p>
+<p>Sets the core pattern to create core dump with correct filename </p>
 
 </div>
 </div>
-<a id="aaea40c6d848e6acca45b732a473d2ca4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaea40c6d848e6acca45b732a473d2ca4">&#9670;&nbsp;</a></span>parse_tree()</h2>
+<a id="aacf87931adc85ff4a1bf3a12968ef030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf87931adc85ff4a1bf3a12968ef030">&#9670;&nbsp;</a></span>setDumpType()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> <a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> * XmlParser::parse_tree </td>
+          <td class="memname">bool lumex::core::utility::dump::CoreDumpGenerator::setDumpType </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a> *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="a01313.html#a8ccf1bd2864104aaf2e850d72d393c19">DumpType</a>&#160;</td>
+          <td class="paramname"><em>dumpType</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a02612.html">XmlNodeBase</a> *&#160;</td>
-          <td class="paramname"><em>root</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>optmsk</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>&#160;</td>
-          <td class="paramname"><em>endch</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>The main parsing function that constructs the XML document tree from a buffer. </p>
+<p>Set the dump type for future dumps. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>A pointer to the beginning of the XML data buffer. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">root</td><td>The root <code>XmlNodeBase</code> where the parsed tree will be attached. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">optmsk</td><td>A bitmask of <code>xml_parse_option</code> flags controlling parsing behavior. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">endch</td><td>The last character of the original buffer, used for boundary checks. </td></tr>
+    <tr><td class="paramname">dumpType</td><td>New dump type to use </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the position in the buffer after the parsed tree, or <code>nullptr</code> on error.  This function iteratively parses elements, attributes, PCDATA, comments, and processing instructions, building the <code>XmlNodeBase</code> hierarchy linked to the <code>root</code>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This is the core recursive parsing logic. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successfully set, false if not supported </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if not initialized </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="a02636_aaea40c6d848e6acca45b732a473d2ca4_cgraph.png" border="0" usemap="#aa02636_aaea40c6d848e6acca45b732a473d2ca4_cgraph" alt=""/></div>
+<div class="center"><img src="a02636_aacf87931adc85ff4a1bf3a12968ef030_cgraph.png" border="0" usemap="#aa02636_aacf87931adc85ff4a1bf3a12968ef030_cgraph" alt=""/></div>
+<map name="a02636_aacf87931adc85ff4a1bf3a12968ef030_cgraph" id="aa02636_aacf87931adc85ff4a1bf3a12968ef030_cgraph">
+<area shape="rect" title="Set the dump type for future dumps." alt="" coords="5,45,215,101"/>
+<area shape="rect" href="a02632.html#a072b58b2c33d2828b9e774642600a5e2" title="Create a dump configuration for the specified type." alt="" coords="263,5,431,61"/>
+<area shape="rect" href="a02632.html#ae1b259c00a2ae9cfa891b7c4ae660d0a" title="Check if a dump type is supported on the current platform." alt="" coords="263,85,431,141"/>
+</map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a9cdc248c3f9503e4127e13d6a3eee28b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cdc248c3f9503e4127e13d6a3eee28b">&#9670;&nbsp;</a></span>alloc</h2>
+<a id="a5d732f873166322b30ce9d1d0ce33d60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d732f873166322b30ce9d1d0ce33d60">&#9670;&nbsp;</a></span>KB_128</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a02588.html">XmlAllocator</a>* lumex::xml::text::XmlParser::alloc</td>
+          <td class="memname">constexpr size_t const lumex::core::utility::dump::CoreDumpGenerator::KB_128 = 128ULL * 1024ULL</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Pointer to the XML allocator used for memory management during parsing. </p>
-
 </div>
 </div>
-<a id="a873370e5e60f9f27e3d54ab963ca32a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a873370e5e60f9f27e3d54ab963ca32a7">&#9670;&nbsp;</a></span>error_offset</h2>
+<a id="a771e3a2f16d829c99f83caddff8759cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a771e3a2f16d829c99f83caddff8759cb">&#9670;&nbsp;</a></span>KB_256</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00958.html#a37a3a10cb4141c30148529368e73b9a5">char_t</a>* lumex::xml::text::XmlParser::error_offset {}</td>
+          <td class="memname">constexpr size_t const lumex::core::utility::dump::CoreDumpGenerator::KB_256 = 256ULL * 1024ULL</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Stores the offset in the input buffer where a parsing error occurred. </p>
-
 </div>
 </div>
-<a id="ab62f9c2211741728ef2742ab2ed5d08c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab62f9c2211741728ef2742ab2ed5d08c">&#9670;&nbsp;</a></span>error_status</h2>
+<a id="a94483f2ffd1b322d166ae38adeede8a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94483f2ffd1b322d166ae38adeede8a6">&#9670;&nbsp;</a></span>KB_32</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00958.html#a8264dfa29bbe6720c402fec104db5408">xml_parse_status</a> lumex::xml::text::XmlParser::error_status {}</td>
+          <td class="memname">constexpr size_t const lumex::core::utility::dump::CoreDumpGenerator::KB_32 = 32ULL * 1024ULL</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Stores the status of the last parsing operation. </p>
+</div>
+</div>
+<a id="a8c9a2eb38f32474c2ca274e56d404bab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9a2eb38f32474c2ca274e56d404bab">&#9670;&nbsp;</a></span>KB_512</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t const lumex::core::utility::dump::CoreDumpGenerator::KB_512 = 512ULL * 1024ULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="a00626_source.html">XmlParser.hpp</a></li>
-<li><a class="el" href="a00623.html">XmlParser.cpp</a></li>
+<a id="af22834fd33025d775e5c947335e081de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22834fd33025d775e5c947335e081de">&#9670;&nbsp;</a></span>KB_64</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t const lumex::core::utility::dump::CoreDumpGenerator::KB_64 = 64ULL * 1024ULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4c9793b6d91eef07331331f694a2c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c9793b6d91eef07331331f694a2c9c">&#9670;&nbsp;</a></span>MB_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t const lumex::core::utility::dump::CoreDumpGenerator::MB_1 = 1024ULL * 1024ULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00692_source.html">LumexCoreDumpGenerator.hpp</a></li>
+<li><a class="el" href="a00689.html">LumexCoreDumpGenerator.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa02636_html_a7d21898df8bf2acc176872ff3e32931b"><div class="ttname"><a href="a02636.html#a7d21898df8bf2acc176872ff3e32931b">lumex::core::utility::dump::CoreDumpGenerator::generateDump</a></div><div class="ttdeci">static bool generateDump(std::string const &amp;reason=&quot;Manual dump&quot;, DumpType dumpType=DumpType::DEFAULT_AUTO)</div><div class="ttdoc">Manually trigger a dump generation.</div><div class="ttdef"><b>Definition:</b> LumexCoreDumpGenerator.hpp:1948</div></div>
+<div class="ttc" id="aa02636_html_a2f6bd697e628df615bf2b67611c7fef8"><div class="ttname"><a href="a02636.html#a2f6bd697e628df615bf2b67611c7fef8">lumex::core::utility::dump::CoreDumpGenerator::initialize</a></div><div class="ttdeci">static void initialize(std::string const &amp;dumpDirectory=&quot;&quot;, DumpType dumpType=DumpType::DEFAULT_AUTO, bool handleExceptions=true)</div><div class="ttdoc">Initialize the crash dump handler.</div><div class="ttdef"><b>Definition:</b> LumexCoreDumpGenerator.hpp:1810</div></div>
+<div class="ttc" id="aa02636_html_a4ed03175b4d8a0a4758b2d58229b4586"><div class="ttname"><a href="a02636.html#a4ed03175b4d8a0a4758b2d58229b4586">lumex::core::utility::dump::CoreDumpGenerator::instance</a></div><div class="ttdeci">static CoreDumpGenerator &amp; instance()</div><div class="ttdoc">Get the singleton instance.</div><div class="ttdef"><b>Definition:</b> LumexCoreDumpGenerator.hpp:1905</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00941.html">xml</a></li><li class="navelem"><a class="el" href="a00954.html">text</a></li><li class="navelem"><a class="el" href="a02636.html">XmlParser</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01313.html">dump</a></li><li class="navelem"><a class="el" href="a02636.html">CoreDumpGenerator</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

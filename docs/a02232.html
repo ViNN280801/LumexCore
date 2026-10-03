@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::utility::traits::meta::default_return&lt; T &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::core::fmt::Detail::named_arg_t&lt; Char, T &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,180 +94,72 @@ $(document).ready(function(){initNavTree('a02232.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="a02229.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::utility::traits::meta::default_return&lt; T &gt; Struct Template Reference</div>  </div>
+<div class="title">lumex::core::fmt::Detail::named_arg_t&lt; Char, T &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Helper providing a default value for a type, primarily meant for exception-safe fallbacks.  
+<p>A named argument, created by <code>arg ("name", value)</code>.  
  <a href="a02232.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00368_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00584_source.html">LumexFormat.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ae5174cf5d6fbbe633d9e9c3b7d43e799"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02232.html#ae5174cf5d6fbbe633d9e9c3b7d43e799">LUMEX_STATIC_ASSERT_MSG</a> (std::is_default_constructible&lt; T &gt;::<a class="el" href="a02232.html#a41d79c70c7c5c3ab8e7da7f8f5720b84">value</a>, &quot;Type must be default-constructible. For &quot; &quot;non-default-constructible types, consider using &quot; &quot;<a class="el" href="a00248.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">std::optional</a> or providing an explicit default value.&quot;)</td></tr>
-<tr class="separator:ae5174cf5d6fbbe633d9e9c3b7d43e799"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d452383c9966f6d8dfbc40cdcc6cdbd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02232.html#a6d452383c9966f6d8dfbc40cdcc6cdbd">LUMEX_STATIC_ASSERT_MSG</a> (!std::is_reference&lt; T &gt;::<a class="el" href="a02232.html#a41d79c70c7c5c3ab8e7da7f8f5720b84">value</a>, &quot;Reference types cannot have default values. Use a pointer &quot; &quot;or <a class="el" href="a02232.html#a41d79c70c7c5c3ab8e7da7f8f5720b84">value</a> type instead.&quot;)</td></tr>
-<tr class="separator:a6d452383c9966f6d8dfbc40cdcc6cdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad38f77a8f6fede7cd064704b8e34c5d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02232.html#ad38f77a8f6fede7cd064704b8e34c5d9">LUMEX_STATIC_ASSERT_MSG</a> (!std::is_abstract&lt; T &gt;::<a class="el" href="a02232.html#a41d79c70c7c5c3ab8e7da7f8f5720b84">value</a>, &quot;Abstract classes cannot be instantiated. Use a pointer or a &quot; &quot;concrete derived type instead.&quot;)</td></tr>
-<tr class="separator:ad38f77a8f6fede7cd064704b8e34c5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a41d79c70c7c5c3ab8e7da7f8f5720b84"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02232.html#a41d79c70c7c5c3ab8e7da7f8f5720b84">value</a> () <a class="el" href="a00347.html#a519cca5cda98cc22e4eaf9dea1bcca4b">LUMEX_NOEXCEPT_IF</a>(std</td></tr>
-<tr class="separator:a41d79c70c7c5c3ab8e7da7f8f5720b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aeff16f0f2ff5f3529cb5059a909617f6"><td class="memItemLeft" align="right" valign="top">Char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02232.html#aeff16f0f2ff5f3529cb5059a909617f6">name</a></td></tr>
+<tr class="separator:aeff16f0f2ff5f3529cb5059a909617f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad132c2f1ee3fb790a3c46d486bf37571"><td class="memItemLeft" align="right" valign="top">T const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02232.html#ad132c2f1ee3fb790a3c46d486bf37571">value</a></td></tr>
+<tr class="separator:ad132c2f1ee3fb790a3c46d486bf37571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-struct lumex::core::utility::traits::meta::default_return&lt; T &gt;</h3>
+<div class="textblock"><h3>template&lt;typename Char, typename T&gt;<br />
+struct lumex::core::fmt::Detail::named_arg_t&lt; Char, T &gt;</h3>
 
-<p>Helper providing a default value for a type, primarily meant for exception-safe fallbacks. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Type of the value to return. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>The compiler implicitly instantiates specializations for every type via the primary template; explicit specializations below are only needed for special cases (void, pointers). </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="a02928.html#_a13">/home/vladislavsemykin/Develop/PEAK_EXPERT_WEB/LumexLib/lumex/core/exceptions/LumexExceptionWrapper.hpp</a>.</dd>
-</dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad38f77a8f6fede7cd064704b8e34c5d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad38f77a8f6fede7cd064704b8e34c5d9">&#9670;&nbsp;</a></span>LUMEX_STATIC_ASSERT_MSG() <span class="overload">[1/3]</span></h2>
+<p>A named argument, created by <code>arg ("name", value)</code>. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="aeff16f0f2ff5f3529cb5059a909617f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeff16f0f2ff5f3529cb5059a909617f6">&#9670;&nbsp;</a></span>name</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename Char , typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a02232.html">lumex::core::utility::traits::meta::default_return</a>&lt; T &gt;::LUMEX_STATIC_ASSERT_MSG </td>
-          <td>(</td>
-          <td class="paramtype">!std::is_abstract&lt; T &gt;::<a class="el" href="a02232.html#a41d79c70c7c5c3ab8e7da7f8f5720b84">value</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&quot;Abstract classes cannot be instantiated. Use a pointer or a &quot; &quot;concrete derived type instead.&quot;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">Char const* <a class="el" href="a02232.html">lumex::core::fmt::Detail::named_arg_t</a>&lt; Char, T &gt;::name</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a6d452383c9966f6d8dfbc40cdcc6cdbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d452383c9966f6d8dfbc40cdcc6cdbd">&#9670;&nbsp;</a></span>LUMEX_STATIC_ASSERT_MSG() <span class="overload">[2/3]</span></h2>
+<a id="ad132c2f1ee3fb790a3c46d486bf37571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad132c2f1ee3fb790a3c46d486bf37571">&#9670;&nbsp;</a></span>value</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename Char , typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a02232.html">lumex::core::utility::traits::meta::default_return</a>&lt; T &gt;::LUMEX_STATIC_ASSERT_MSG </td>
-          <td>(</td>
-          <td class="paramtype">!std::is_reference&lt; T &gt;::<a class="el" href="a02232.html#a41d79c70c7c5c3ab8e7da7f8f5720b84">value</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&quot;Reference types cannot have default values. Use a pointer &quot; &quot;or <a class="el" href="a02232.html#a41d79c70c7c5c3ab8e7da7f8f5720b84">value</a> type instead.&quot;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">T const&amp; <a class="el" href="a02232.html">lumex::core::fmt::Detail::named_arg_t</a>&lt; Char, T &gt;::value</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae5174cf5d6fbbe633d9e9c3b7d43e799"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5174cf5d6fbbe633d9e9c3b7d43e799">&#9670;&nbsp;</a></span>LUMEX_STATIC_ASSERT_MSG() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a02232.html">lumex::core::utility::traits::meta::default_return</a>&lt; T &gt;::LUMEX_STATIC_ASSERT_MSG </td>
-          <td>(</td>
-          <td class="paramtype">std::is_default_constructible&lt; T &gt;::<a class="el" href="a02232.html#a41d79c70c7c5c3ab8e7da7f8f5720b84">value</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&quot;Type must be default-constructible. For &quot; &quot;non-default-constructible&#160;</td>
-          <td class="paramname"><em>types</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">consider using &quot; &quot;<a class="el" href="a00248.html#afbb00d6cc5e9b8ea87e69dfe4629f8ff">std::optional</a> or providing an explicit default value.&quot;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a41d79c70c7c5c3ab8e7da7f8f5720b84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41d79c70c7c5c3ab8e7da7f8f5720b84">&#9670;&nbsp;</a></span>value()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a00347.html#a1513006a1992e7dc9cc43b2e081cc33f">LUMEX_CONSTEXPR</a> T <a class="el" href="a02232.html">lumex::core::utility::traits::meta::default_return</a>&lt; T &gt;::value </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00368_source.html">LumexTypeTraits.hpp</a></li>
+<li><a class="el" href="a00584_source.html">LumexFormat.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00898.html">utility</a></li><li class="navelem"><a class="el" href="a00911.html">traits</a></li><li class="navelem"><a class="el" href="a00912.html">meta</a></li><li class="navelem"><a class="el" href="a02232.html">default_return</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01279.html">fmt</a></li><li class="navelem"><a class="el" href="a01280.html">Detail</a></li><li class="navelem"><a class="el" href="a02232.html">named_arg_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

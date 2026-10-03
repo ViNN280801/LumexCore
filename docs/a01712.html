@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::filesystem::fs::space_info Class Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc8_autosar_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,91 +94,223 @@ $(document).ready(function(){initNavTree('a01712.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a01709.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::filesystem::fs::space_info Class Reference</div>  </div>
+<div class="title">lumex::core::crc::parametric::crc8_autosar_spec_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Space information for a filesystem.  
+<p>CRC-8/AUTOSAR: width=8 poly=0x2f init=0xff refin=false refout=false xorout=0xff.  
  <a href="a01712.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00227_source.html">LumexFilesystem.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a60e3dc14403a798d44324ebfd0d0df1b"><td class="memItemLeft" align="right" valign="top">std::uintmax_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html#a60e3dc14403a798d44324ebfd0d0df1b">capacity</a> {}</td></tr>
-<tr class="memdesc:a60e3dc14403a798d44324ebfd0d0df1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total capacity of the filesystem in bytes.  <a href="a01712.html#a60e3dc14403a798d44324ebfd0d0df1b">More...</a><br /></td></tr>
-<tr class="separator:a60e3dc14403a798d44324ebfd0d0df1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfd8698c4e47987ba44d13b4a6d542cd"><td class="memItemLeft" align="right" valign="top">std::uintmax_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html#abfd8698c4e47987ba44d13b4a6d542cd">free</a> {}</td></tr>
-<tr class="memdesc:abfd8698c4e47987ba44d13b4a6d542cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total free space on the filesystem in bytes.  <a href="a01712.html#abfd8698c4e47987ba44d13b4a6d542cd">More...</a><br /></td></tr>
-<tr class="separator:abfd8698c4e47987ba44d13b4a6d542cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accc4d0915b2b3e5225ba1b4242828a30"><td class="memItemLeft" align="right" valign="top">std::uintmax_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html#accc4d0915b2b3e5225ba1b4242828a30">available</a> {}</td></tr>
-<tr class="memdesc:accc4d0915b2b3e5225ba1b4242828a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available free space for unprivileged users in bytes.  <a href="a01712.html#accc4d0915b2b3e5225ba1b4242828a30">More...</a><br /></td></tr>
-<tr class="separator:accc4d0915b2b3e5225ba1b4242828a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ac4c3fd8e0f327b58de2cc50cf977552a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html#ac4c3fd8e0f327b58de2cc50cf977552a">ValueType</a> = std::uint8_t</td></tr>
+<tr class="separator:ac4c3fd8e0f327b58de2cc50cf977552a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a3c286544e46f3b31be7ddd7703498f86"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html#a3c286544e46f3b31be7ddd7703498f86">kWidth</a> = 8</td></tr>
+<tr class="separator:a3c286544e46f3b31be7ddd7703498f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d445b2073c3ac63f412475223b904f"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html#a82d445b2073c3ac63f412475223b904f">kPoly</a> = 0x2FU</td></tr>
+<tr class="separator:a82d445b2073c3ac63f412475223b904f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826bef161099f98e6fa90eedad476074"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html#a826bef161099f98e6fa90eedad476074">kInit</a> = 0xFFU</td></tr>
+<tr class="separator:a826bef161099f98e6fa90eedad476074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa163c21e87a06c9bbdf1fbcb232ac3d9"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html#aa163c21e87a06c9bbdf1fbcb232ac3d9">kRefIn</a> = false</td></tr>
+<tr class="separator:aa163c21e87a06c9bbdf1fbcb232ac3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4321d9e062fa73c6a228e069e2fe685f"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html#a4321d9e062fa73c6a228e069e2fe685f">kRefOut</a> = false</td></tr>
+<tr class="separator:a4321d9e062fa73c6a228e069e2fe685f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc01ac036f5c33b7e0602f60b4660b37"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html#acc01ac036f5c33b7e0602f60b4660b37">kXorOut</a> = 0xFFU</td></tr>
+<tr class="separator:acc01ac036f5c33b7e0602f60b4660b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b0e975beedc5be627273b76c4462e88"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01712.html#a9b0e975beedc5be627273b76c4462e88">kCatalogCheck</a> = 0xDFU</td></tr>
+<tr class="separator:a9b0e975beedc5be627273b76c4462e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Space information for a filesystem. </p>
-<p>This class provides details about the disk space, including total capacity, free space, and available space. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="accc4d0915b2b3e5225ba1b4242828a30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accc4d0915b2b3e5225ba1b4242828a30">&#9670;&nbsp;</a></span>available</h2>
+<div class="textblock"><p>CRC-8/AUTOSAR: width=8 poly=0x2f init=0xff refin=false refout=false xorout=0xff. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-8/AUTOSAR </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ac4c3fd8e0f327b58de2cc50cf977552a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c3fd8e0f327b58de2cc50cf977552a">&#9670;&nbsp;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::uintmax_t lumex::core::filesystem::fs::space_info::available {}</td>
+          <td class="memname">using <a class="el" href="a01712.html#ac4c3fd8e0f327b58de2cc50cf977552a">lumex::core::crc::parametric::crc8_autosar_spec_t::ValueType</a> =  std::uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Available free space for unprivileged users in bytes. </p>
-
 </div>
 </div>
-<a id="a60e3dc14403a798d44324ebfd0d0df1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60e3dc14403a798d44324ebfd0d0df1b">&#9670;&nbsp;</a></span>capacity</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9b0e975beedc5be627273b76c4462e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0e975beedc5be627273b76c4462e88">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::uintmax_t lumex::core::filesystem::fs::space_info::capacity {}</td>
+          <td class="memname">const constinit std::uint8_t lumex::core::crc::parametric::crc8_autosar_spec_t::kCatalogCheck = 0xDFU</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Total capacity of the filesystem in bytes. </p>
-
 </div>
 </div>
-<a id="abfd8698c4e47987ba44d13b4a6d542cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfd8698c4e47987ba44d13b4a6d542cd">&#9670;&nbsp;</a></span>free</h2>
+<a id="a826bef161099f98e6fa90eedad476074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a826bef161099f98e6fa90eedad476074">&#9670;&nbsp;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::uintmax_t lumex::core::filesystem::fs::space_info::free {}</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc8_autosar_spec_t::kInit = 0xFFU</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Total free space on the filesystem in bytes. </p>
+</div>
+</div>
+<a id="a82d445b2073c3ac63f412475223b904f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82d445b2073c3ac63f412475223b904f">&#9670;&nbsp;</a></span>kPoly</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc8_autosar_spec_t::kPoly = 0x2FU</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00227_source.html">LumexFilesystem.hpp</a></li>
+<a id="aa163c21e87a06c9bbdf1fbcb232ac3d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa163c21e87a06c9bbdf1fbcb232ac3d9">&#9670;&nbsp;</a></span>kRefIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc8_autosar_spec_t::kRefIn = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4321d9e062fa73c6a228e069e2fe685f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4321d9e062fa73c6a228e069e2fe685f">&#9670;&nbsp;</a></span>kRefOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc8_autosar_spec_t::kRefOut = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c286544e46f3b31be7ddd7703498f86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c286544e46f3b31be7ddd7703498f86">&#9670;&nbsp;</a></span>kWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit int lumex::core::crc::parametric::crc8_autosar_spec_t::kWidth = 8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc01ac036f5c33b7e0602f60b4660b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc01ac036f5c33b7e0602f60b4660b37">&#9670;&nbsp;</a></span>kXorOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc8_autosar_spec_t::kXorOut = 0xFFU</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00865.html">filesystem</a></li><li class="navelem"><a class="el" href="a00866.html">fs</a></li><li class="navelem"><a class="el" href="a01712.html">space_info</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01256.html">crc</a></li><li class="navelem"><a class="el" href="a01259.html">parametric</a></li><li class="navelem"><a class="el" href="a01712.html">crc8_autosar_spec_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

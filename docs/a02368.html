@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::utility::traits::range::is_iterable&lt; Range, Enable &gt; Struct Template Reference</title>
+<title>LumexLib: lumex::core::fmt::Detail::range_element&lt; Range, Char, Enable &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -93,39 +93,55 @@ $(document).ready(function(){initNavTree('a02368.html',''); initResizable(); });
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="a02365.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::utility::traits::range::is_iterable&lt; Range, Enable &gt; Struct Template Reference</div>  </div>
+<div class="title">lumex::core::fmt::Detail::range_element&lt; Range, Char, Enable &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>Range const &amp;</code> can be walked (see <code><a class="el" href="a02360.html" title="type is what *std::begin(range) yields for a Range const &amp; that has std::begin, std::end,...">range_reference</a></code>).  
+<p>Element type a range of <code>Range</code> is formatted as: the decayed reference type, or <code>Range::value_type</code> when only that one has a formatter (proxy references such as <code>std::vector&lt;bool&gt;</code>).  
  <a href="a02368.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00368_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for lumex::core::utility::traits::range::is_iterable&lt; Range, Enable &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02367.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1range_1_1is__iterable_3_01Range_00_01Enable_01_4_inherit__map" alt="Inheritance graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for lumex::core::utility::traits::range::is_iterable&lt; Range, Enable &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="a02366.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1range_1_1is__iterable_3_01Range_00_01Enable_01_4_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;<a class="el" href="a00590_source.html">LumexFormatRanges.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a42090a9322377b0f570902b09d9ba61c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a02368.html#a42090a9322377b0f570902b09d9ba61c">type</a> = typename std::decay&lt; typename <a class="el" href="a02824.html">lumex::core::utility::traits::range::range_reference</a>&lt; Range &gt;::<a class="el" href="a02368.html#a42090a9322377b0f570902b09d9ba61c">type</a> &gt;::<a class="el" href="a02368.html#a42090a9322377b0f570902b09d9ba61c">type</a></td></tr>
+<tr class="separator:a42090a9322377b0f570902b09d9ba61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Range, typename Enable = void&gt;<br />
-struct lumex::core::utility::traits::range::is_iterable&lt; Range, Enable &gt;</h3>
+<div class="textblock"><h3>template&lt;typename Range, typename Char, typename Enable = void&gt;<br />
+struct lumex::core::fmt::Detail::range_element&lt; Range, Char, Enable &gt;</h3>
 
-<p><code>Range const &amp;</code> can be walked (see <code><a class="el" href="a02360.html" title="type is what *std::begin(range) yields for a Range const &amp; that has std::begin, std::end,...">range_reference</a></code>). </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00368_source.html">LumexTypeTraits.hpp</a></li>
+<p>Element type a range of <code>Range</code> is formatted as: the decayed reference type, or <code>Range::value_type</code> when only that one has a formatter (proxy references such as <code>std::vector&lt;bool&gt;</code>). </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a42090a9322377b0f570902b09d9ba61c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42090a9322377b0f570902b09d9ba61c">&#9670;&nbsp;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Range , typename Char , typename Enable  = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="a02368.html">lumex::core::fmt::Detail::range_element</a>&lt; Range, Char, Enable &gt;::<a class="el" href="a02368.html#a42090a9322377b0f570902b09d9ba61c">type</a> =  typename std::decay&lt;typename lumex::core::utility::traits::range:: range_reference&lt;Range&gt;::<a class="el" href="a02368.html#a42090a9322377b0f570902b09d9ba61c">type</a>&gt;::<a class="el" href="a02368.html#a42090a9322377b0f570902b09d9ba61c">type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00590_source.html">LumexFormatRanges.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00898.html">utility</a></li><li class="navelem"><a class="el" href="a00911.html">traits</a></li><li class="navelem"><a class="el" href="a00917.html">range</a></li><li class="navelem"><a class="el" href="a02368.html">is_iterable</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01279.html">fmt</a></li><li class="navelem"><a class="el" href="a01280.html">Detail</a></li><li class="navelem"><a class="el" href="a02368.html">range_element</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

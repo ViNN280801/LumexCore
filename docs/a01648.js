@@ -1,9 +1,11 @@
 var a01648 =
 [
-    [ "Unexpected", "a01648.html#a075c1367f8574a76ab9e4160d6ed521c", null ],
-    [ "Unexpected", "a01648.html#a79082b8816166114c5ee96b83ee85319", null ],
-    [ "error", "a01648.html#abe772de2a48579c10236f4fab3bd3ee1", null ],
-    [ "error", "a01648.html#a594b1c3a3bb5ca06c5f0dcd68c7ebe73", null ],
-    [ "error", "a01648.html#aeac9566125015a390c5c376112eb93fb", null ],
-    [ "error", "a01648.html#a1627df86069c06b02e54e0b478618b4d", null ]
+    [ "ValueType", "a01648.html#a5b489845087a617033b5d0a214567b40", null ],
+    [ "kCatalogCheck", "a01648.html#a1aaef87a73e159159f59f9ba91d08f9f", null ],
+    [ "kInit", "a01648.html#a2afe2b22b379f18c42d5b6f335b9f86d", null ],
+    [ "kPoly", "a01648.html#a99b1b1403a4e49ed704e0f25760e49f8", null ],
+    [ "kRefIn", "a01648.html#a0604246a6a9dda65133aa12b5679000b", null ],
+    [ "kRefOut", "a01648.html#a19a0e227b54502fffa5c40841f265328", null ],
+    [ "kWidth", "a01648.html#a47d4d220e5b7f25a1e4e2461cd4d8091", null ],
+    [ "kXorOut", "a01648.html#aa46ac554a72405067d453de57830a003", null ]
 ];

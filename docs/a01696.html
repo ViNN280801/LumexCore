@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::filesystem::fs::filesystem_result&lt; T &gt; Class Template Reference</title>
+<title>LumexLib: lumex::core::crc::parametric::crc6_gsm_spec_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,121 +94,71 @@ $(document).ready(function(){initNavTree('a01696.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a01693.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::filesystem::fs::filesystem_result&lt; T &gt; Class Template Reference</div>  </div>
+<div class="title">lumex::core::crc::parametric::crc6_gsm_spec_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>A generic result type for filesystem operations that encapsulates a value or an error.  
+<p>CRC-6/GSM: width=6 poly=0x2f init=0x00 refin=false refout=false xorout=0x3f.  
  <a href="a01696.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00227_source.html">LumexFilesystem.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ae4093d69a6810df1fdd9ccbea6dc03d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#ae4093d69a6810df1fdd9ccbea6dc03d8">filesystem_result</a> ()</td></tr>
-<tr class="memdesc:ae4093d69a6810df1fdd9ccbea6dc03d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Creates a successful result with a default-constructed value and no error.  <a href="a01696.html#ae4093d69a6810df1fdd9ccbea6dc03d8">More...</a><br /></td></tr>
-<tr class="separator:ae4093d69a6810df1fdd9ccbea6dc03d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae11d814b4f227302b2e33601f426d421"><td class="memItemLeft" align="right" valign="top">T const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#ae11d814b4f227302b2e33601f426d421">value</a> () const</td></tr>
-<tr class="memdesc:ae11d814b4f227302b2e33601f426d421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the encapsulated value (const version).  <a href="a01696.html#ae11d814b4f227302b2e33601f426d421">More...</a><br /></td></tr>
-<tr class="separator:ae11d814b4f227302b2e33601f426d421"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8098c9ced0a02fb602aa533ec1ace36"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#aa8098c9ced0a02fb602aa533ec1ace36">value</a> ()</td></tr>
-<tr class="memdesc:aa8098c9ced0a02fb602aa533ec1ace36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the encapsulated value (non-const version).  <a href="a01696.html#aa8098c9ced0a02fb602aa533ec1ace36">More...</a><br /></td></tr>
-<tr class="separator:aa8098c9ced0a02fb602aa533ec1ace36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaae1487eda085cf06bd332015e4969d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#aaae1487eda085cf06bd332015e4969d7">success</a> () const</td></tr>
-<tr class="memdesc:aaae1487eda085cf06bd332015e4969d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the operation was successful.  <a href="a01696.html#aaae1487eda085cf06bd332015e4969d7">More...</a><br /></td></tr>
-<tr class="separator:aaae1487eda085cf06bd332015e4969d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6c94c3f8a9c0f511aeaa1ea5674a08d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#af6c94c3f8a9c0f511aeaa1ea5674a08d">error_code</a> () const</td></tr>
-<tr class="memdesc:af6c94c3f8a9c0f511aeaa1ea5674a08d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the error code if the operation was unsuccessful.  <a href="a01696.html#af6c94c3f8a9c0f511aeaa1ea5674a08d">More...</a><br /></td></tr>
-<tr class="separator:af6c94c3f8a9c0f511aeaa1ea5674a08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bee45657ca553ccbe26b668ffdb6bff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#a5bee45657ca553ccbe26b668ffdb6bff">operator bool</a> () const</td></tr>
-<tr class="memdesc:a5bee45657ca553ccbe26b668ffdb6bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion to <code>bool</code> to easily check success status.  <a href="a01696.html#a5bee45657ca553ccbe26b668ffdb6bff">More...</a><br /></td></tr>
-<tr class="separator:a5bee45657ca553ccbe26b668ffdb6bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d33c3c44ac4779caadbaad8cef56c3"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#af5d33c3c44ac4779caadbaad8cef56c3">value_or</a> (T default_value) const</td></tr>
-<tr class="memdesc:af5d33c3c44ac4779caadbaad8cef56c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the encapsulated value if successful, or a provided default value if unsuccessful.  <a href="a01696.html#af5d33c3c44ac4779caadbaad8cef56c3">More...</a><br /></td></tr>
-<tr class="separator:af5d33c3c44ac4779caadbaad8cef56c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aca4e3dc99fc9416a53c943094b988597"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#aca4e3dc99fc9416a53c943094b988597">ValueType</a> = std::uint8_t</td></tr>
+<tr class="separator:aca4e3dc99fc9416a53c943094b988597"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a16fa37f602e827cf169d0dfb3b952940"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01696.html">filesystem_result</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#a16fa37f602e827cf169d0dfb3b952940">ok</a> (T <a class="el" href="a01696.html#ae11d814b4f227302b2e33601f426d421">value</a>)</td></tr>
-<tr class="memdesc:a16fa37f602e827cf169d0dfb3b952940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method for creating a successful <code><a class="el" href="a01696.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a></code>.  <a href="a01696.html#a16fa37f602e827cf169d0dfb3b952940">More...</a><br /></td></tr>
-<tr class="separator:a16fa37f602e827cf169d0dfb3b952940"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a384e25734c6d611b763c77caa77aeafc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a01696.html">filesystem_result</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#a384e25734c6d611b763c77caa77aeafc">err</a> (int <a class="el" href="a01696.html#af6c94c3f8a9c0f511aeaa1ea5674a08d">error_code</a>, T default_value=T{})</td></tr>
-<tr class="memdesc:a384e25734c6d611b763c77caa77aeafc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method for creating an unsuccessful <code><a class="el" href="a01696.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a></code>.  <a href="a01696.html#a384e25734c6d611b763c77caa77aeafc">More...</a><br /></td></tr>
-<tr class="separator:a384e25734c6d611b763c77caa77aeafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a60f6c797dc0dc61885fa6d88bf99e2aa"><td class="memItemLeft" align="right" valign="top">static const constinit int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#a60f6c797dc0dc61885fa6d88bf99e2aa">kWidth</a> = 6</td></tr>
+<tr class="separator:a60f6c797dc0dc61885fa6d88bf99e2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc8c12e99382e308567f4219b8758ee4"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#abc8c12e99382e308567f4219b8758ee4">kPoly</a> = 0x2FU</td></tr>
+<tr class="separator:abc8c12e99382e308567f4219b8758ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af3a7518b2e12125f3d72e9ed1af008"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#a4af3a7518b2e12125f3d72e9ed1af008">kInit</a> = 0x00U</td></tr>
+<tr class="separator:a4af3a7518b2e12125f3d72e9ed1af008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f12e2a70e69f99dd21fa3924289eb0"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#ad7f12e2a70e69f99dd21fa3924289eb0">kRefIn</a> = false</td></tr>
+<tr class="separator:ad7f12e2a70e69f99dd21fa3924289eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40255de8af2aba73cc51a71b6132d77d"><td class="memItemLeft" align="right" valign="top">static const constinit bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#a40255de8af2aba73cc51a71b6132d77d">kRefOut</a> = false</td></tr>
+<tr class="separator:a40255de8af2aba73cc51a71b6132d77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6da2a76913243a8e32540aea6d23658"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#af6da2a76913243a8e32540aea6d23658">kXorOut</a> = 0x3FU</td></tr>
+<tr class="separator:af6da2a76913243a8e32540aea6d23658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fe49cb8985adf652461accfc912c288"><td class="memItemLeft" align="right" valign="top">static const constinit std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01696.html#a8fe49cb8985adf652461accfc912c288">kCatalogCheck</a> = 0x13U</td></tr>
+<tr class="separator:a8fe49cb8985adf652461accfc912c288"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-class lumex::core::filesystem::fs::filesystem_result&lt; T &gt;</h3>
-
-<p>A generic result type for filesystem operations that encapsulates a value or an error. </p>
-<p>This class is designed to provide exception-safe error handling for filesystem operations. Instead of throwing exceptions on failure, functions return <code><a class="el" href="a01696.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a>&lt;T&gt;</code> which explicitly indicates success or failure and holds either the successful value or an error code. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the value returned on success. </td></tr>
-  </table>
-  </dd>
-</dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae4093d69a6810df1fdd9ccbea6dc03d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4093d69a6810df1fdd9ccbea6dc03d8">&#9670;&nbsp;</a></span>filesystem_result()</h2>
+<div class="textblock"><p>CRC-6/GSM: width=6 poly=0x2f init=0x00 refin=false refout=false xorout=0x3f. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-6/GSM </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="aca4e3dc99fc9416a53c943094b988597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca4e3dc99fc9416a53c943094b988597">&#9670;&nbsp;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01696.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::<a class="el" href="a01696.html">filesystem_result</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">using <a class="el" href="a01696.html#aca4e3dc99fc9416a53c943094b988597">lumex::core::crc::parametric::crc6_gsm_spec_t::ValueType</a> =  std::uint8_t</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Default constructor. Creates a successful result with a default-constructed value and no error. </p>
-
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a384e25734c6d611b763c77caa77aeafc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a384e25734c6d611b763c77caa77aeafc">&#9670;&nbsp;</a></span>err()</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8fe49cb8985adf652461accfc912c288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe49cb8985adf652461accfc912c288">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a01696.html">filesystem_result</a>&lt;T&gt; <a class="el" href="a01696.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::err </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>error_code</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>default_value</em> = <code>T{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">const constinit std::uint8_t lumex::core::crc::parametric::crc6_gsm_spec_t::kCatalogCheck = 0x13U</td>
         </tr>
       </table>
   </td>
@@ -218,76 +168,19 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Factory method for creating an unsuccessful <code><a class="el" href="a01696.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a></code>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">error_code</td><td>The system-specific error code indicating the reason for failure. </td></tr>
-    <tr><td class="paramname">default_value</td><td>An optional default-constructed value to hold in case of error. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <code><a class="el" href="a01696.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a>&lt;T&gt;</code> object indicating failure. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The default value is moved if provided. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01696_a384e25734c6d611b763c77caa77aeafc_icgraph.png" border="0" usemap="#aa01696_a384e25734c6d611b763c77caa77aeafc_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="af6c94c3f8a9c0f511aeaa1ea5674a08d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6c94c3f8a9c0f511aeaa1ea5674a08d">&#9670;&nbsp;</a></span>error_code()</h2>
+<a id="a4af3a7518b2e12125f3d72e9ed1af008"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af3a7518b2e12125f3d72e9ed1af008">&#9670;&nbsp;</a></span>kInit</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="a01696.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::error_code </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Retrieves the error code if the operation was unsuccessful. </p>
-<dl class="section return"><dt>Returns</dt><dd>The system-specific error code. Returns 0 if the operation was successful. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01696_af6c94c3f8a9c0f511aeaa1ea5674a08d_icgraph.png" border="0" usemap="#aa01696_af6c94c3f8a9c0f511aeaa1ea5674a08d_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a16fa37f602e827cf169d0dfb3b952940"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16fa37f602e827cf169d0dfb3b952940">&#9670;&nbsp;</a></span>ok()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a01696.html">filesystem_result</a>&lt;T&gt; <a class="el" href="a01696.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::ok </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc6_gsm_spec_t::kInit = 0x00U</td>
         </tr>
       </table>
   </td>
@@ -297,207 +190,127 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Factory method for creating a successful <code><a class="el" href="a01696.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a></code>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>The value to encapsulate in the successful result. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A <code><a class="el" href="a01696.html" title="A generic result type for filesystem operations that encapsulates a value or an error.">filesystem_result</a>&lt;T&gt;</code> object indicating success. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The value is moved to prevent unnecessary copies. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01696_a16fa37f602e827cf169d0dfb3b952940_cgraph.png" border="0" usemap="#aa01696_a16fa37f602e827cf169d0dfb3b952940_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01696_a16fa37f602e827cf169d0dfb3b952940_icgraph.png" border="0" usemap="#aa01696_a16fa37f602e827cf169d0dfb3b952940_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="a5bee45657ca553ccbe26b668ffdb6bff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bee45657ca553ccbe26b668ffdb6bff">&#9670;&nbsp;</a></span>operator bool()</h2>
+<a id="abc8c12e99382e308567f4219b8758ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc8c12e99382e308567f4219b8758ee4">&#9670;&nbsp;</a></span>kPoly</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a01696.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::operator bool </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc6_gsm_spec_t::kPoly = 0x2FU</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implicit conversion to <code>bool</code> to easily check success status. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if the operation was successful, false otherwise. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Enables usage like <code>if (result) { ... }</code>. </dd></dl>
-
 </div>
 </div>
-<a id="aaae1487eda085cf06bd332015e4969d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaae1487eda085cf06bd332015e4969d7">&#9670;&nbsp;</a></span>success()</h2>
+<a id="ad7f12e2a70e69f99dd21fa3924289eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f12e2a70e69f99dd21fa3924289eb0">&#9670;&nbsp;</a></span>kRefIn</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="a01696.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::success </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc6_gsm_spec_t::kRefIn = false</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks if the operation was successful. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if the result represents success, false otherwise. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01696_aaae1487eda085cf06bd332015e4969d7_icgraph.png" border="0" usemap="#aa01696_aaae1487eda085cf06bd332015e4969d7_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="aa8098c9ced0a02fb602aa533ec1ace36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8098c9ced0a02fb602aa533ec1ace36">&#9670;&nbsp;</a></span>value() <span class="overload">[1/2]</span></h2>
+<a id="a40255de8af2aba73cc51a71b6132d77d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40255de8af2aba73cc51a71b6132d77d">&#9670;&nbsp;</a></span>kRefOut</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T&amp; <a class="el" href="a01696.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::value </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">const constinit bool lumex::core::crc::parametric::crc6_gsm_spec_t::kRefOut = false</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Retrieves the encapsulated value (non-const version). </p>
-<dl class="section return"><dt>Returns</dt><dd>A non-constant reference to the encapsulated value. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Accessing the value of an unsuccessful result leads to undefined behavior. </dd></dl>
-
 </div>
 </div>
-<a id="ae11d814b4f227302b2e33601f426d421"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae11d814b4f227302b2e33601f426d421">&#9670;&nbsp;</a></span>value() <span class="overload">[2/2]</span></h2>
+<a id="a60f6c797dc0dc61885fa6d88bf99e2aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f6c797dc0dc61885fa6d88bf99e2aa">&#9670;&nbsp;</a></span>kWidth</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T const&amp; <a class="el" href="a01696.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::value </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit int lumex::core::crc::parametric::crc6_gsm_spec_t::kWidth = 6</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Retrieves the encapsulated value (const version). </p>
-<dl class="section return"><dt>Returns</dt><dd>A constant reference to the encapsulated value. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Accessing the value of an unsuccessful result leads to undefined behavior. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="a01696_ae11d814b4f227302b2e33601f426d421_icgraph.png" border="0" usemap="#aa01696_ae11d814b4f227302b2e33601f426d421_icgraph" alt=""/></div>
-</div>
-
 </div>
 </div>
-<a id="af5d33c3c44ac4779caadbaad8cef56c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5d33c3c44ac4779caadbaad8cef56c3">&#9670;&nbsp;</a></span>value_or()</h2>
+<a id="af6da2a76913243a8e32540aea6d23658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6da2a76913243a8e32540aea6d23658">&#9670;&nbsp;</a></span>kXorOut</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T <a class="el" href="a01696.html">lumex::core::filesystem::fs::filesystem_result</a>&lt; T &gt;::value_or </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>default_value</em></td><td>)</td>
-          <td> const</td>
+          <td class="memname">const constinit std::uint64_t lumex::core::crc::parametric::crc6_gsm_spec_t::kXorOut = 0x3FU</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Retrieves the encapsulated value if successful, or a provided default value if unsuccessful. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">default_value</td><td>The value to return if the operation failed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The actual value if <code><a class="el" href="a01696.html#aaae1487eda085cf06bd332015e4969d7" title="Checks if the operation was successful.">success()</a></code> is true, otherwise <code>default_value</code>. </dd></dl>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00227_source.html">LumexFilesystem.hpp</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00512_source.html">LumexCrcParametric.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00865.html">filesystem</a></li><li class="navelem"><a class="el" href="a00866.html">fs</a></li><li class="navelem"><a class="el" href="a01696.html">filesystem_result</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01256.html">crc</a></li><li class="navelem"><a class="el" href="a01259.html">parametric</a></li><li class="navelem"><a class="el" href="a01696.html">crc6_gsm_spec_t</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

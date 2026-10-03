@@ -1,7 +1,4 @@
 var a00878 =
 [
-    [ "in_place_t", "a02060.html", "a02060" ],
-    [ "LumexBadOptionalAccess", "a02068.html", "a02068" ],
-    [ "nullopt_t", "a02052.html", "a02052" ],
-    [ "optional", "a02072.html", "a02072" ]
+    [ "main", "a00878.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ]
 ];

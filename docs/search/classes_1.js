@@ -1,14 +1,16 @@
 var searchData=
 [
-  ['badexpectedaccess_3789',['BadExpectedAccess',['../a01644.html',1,'lumex::core::expected::error']]],
-  ['basicappender_3790',['BasicAppender',['../a01760.html',1,'lumex::core::fmt']]],
-  ['basicformatargs_3791',['BasicFormatArgs',['../a01828.html',1,'lumex::core::fmt']]],
-  ['basicformatcontext_3792',['BasicFormatContext',['../a01832.html',1,'lumex::core::fmt']]],
-  ['basicformatparsecontext_3793',['BasicFormatParseContext',['../a01728.html',1,'lumex::core::fmt']]],
-  ['basicformatstring_3794',['BasicFormatString',['../a01864.html',1,'lumex::core::fmt']]],
-  ['basicstringref_3795',['BasicStringRef',['../a01736.html',1,'lumex::core::fmt::Detail']]],
-  ['binary_5fop_5ft_3796',['binary_op_t',['../a02840.html',1,'']]],
-  ['buffer_3797',['Buffer',['../a01740.html',1,'lumex::core::fmt::Detail']]],
-  ['builtinformatter_3798',['BuiltinFormatter',['../a01852.html',1,'lumex::core::fmt::Detail']]],
-  ['builtinformatter_3c_20char_20_3e_3799',['BuiltinFormatter&lt; char &gt;',['../a01852.html',1,'lumex::core::fmt::Detail']]]
+  ['badexpectedaccess_3980',['BadExpectedAccess',['../a02096.html',1,'lumex::core::expected::error']]],
+  ['basicappender_3981',['BasicAppender',['../a02220.html',1,'lumex::core::fmt']]],
+  ['basicformatargs_3982',['BasicFormatArgs',['../a02288.html',1,'lumex::core::fmt']]],
+  ['basicformatcontext_3983',['BasicFormatContext',['../a02184.html',1,'lumex::core::fmt']]],
+  ['basicformatparsecontext_3984',['BasicFormatParseContext',['../a02188.html',1,'lumex::core::fmt']]],
+  ['basicformatstring_3985',['BasicFormatString',['../a02320.html',1,'lumex::core::fmt']]],
+  ['basicstringref_3986',['BasicStringRef',['../a02196.html',1,'lumex::core::fmt::Detail']]],
+  ['binary_5fop_5ft_3987',['binary_op_t',['../a03340.html',1,'']]],
+  ['bitlock_3988',['BitLock',['../a01540.html',1,'lumex::core::atomic::sync::table_wait::Detail']]],
+  ['bitlockguard_3989',['BitLockGuard',['../a01544.html',1,'lumex::core::atomic::sync::table_wait::Detail']]],
+  ['buffer_3990',['Buffer',['../a02200.html',1,'lumex::core::fmt::Detail']]],
+  ['builtinformatter_3991',['BuiltinFormatter',['../a02308.html',1,'lumex::core::fmt::Detail']]],
+  ['builtinformatter_3c_20char_20_3e_3992',['BuiltinFormatter&lt; char &gt;',['../a02308.html',1,'lumex::core::fmt::Detail']]]
 ];

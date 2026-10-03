@@ -1,7 +1,9 @@
 var a02160 =
 [
-    [ "Scoped", "a02160.html#a076370f003eb3ef56c3f0fa332ac2362", null ],
-    [ "~Scoped", "a02160.html#a7754d12a0105ad61f331c077bd48a62c", null ],
-    [ "Scoped", "a02160.html#abd6962041fa5e10a2b5fe4ca553675a4", null ],
-    [ "operator=", "a02160.html#a6d5ddcc2c5e6c525efd19821b7fc2f88", null ]
+    [ "file_status", "a02160.html#ad286506641ef529c178d811e530f7b82", null ],
+    [ "file_status", "a02160.html#af96980eec047db52291c5b214b63b32c", null ],
+    [ "permissions", "a02160.html#a4a0cf072b16eefcd18ff6a703e31b0d6", null ],
+    [ "permissions", "a02160.html#aaaa18777434167b511b9bc3f17af0d03", null ],
+    [ "type", "a02160.html#a6352838c45be85587fcbae6f579a21fd", null ],
+    [ "type", "a02160.html#a9d72317f3a8a85bbe11a0efe04d477d2", null ]
 ];

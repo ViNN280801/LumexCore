@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::crc::parametric::crc32_mpeg2_spec_t Struct Reference</title>
+<title>LumexLib: lumex::core::base64::validate::Validator Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,167 +94,123 @@ $(document).ready(function(){initNavTree('a01560.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a01557.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::crc::parametric::crc32_mpeg2_spec_t Struct Reference</div>  </div>
+<div class="title">lumex::core::base64::validate::Validator Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>CRC-32/MPEG-2: width=32 poly=0x04c11db7 init=0xffffffff refin=false refout=false xorout=0x00000000.  
+<p>Base64 syntax check.  
  <a href="a01560.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00500_source.html">Validator.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a06495ed372e86e7f481c16e9e0608774"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01560.html#a06495ed372e86e7f481c16e9e0608774">ValueType</a> = std::uint32_t</td></tr>
-<tr class="separator:a06495ed372e86e7f481c16e9e0608774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a4fee67088a91f00f51de41b4eea8ada0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01560.html#a4fee67088a91f00f51de41b4eea8ada0">kWidth</a> = 32</td></tr>
-<tr class="separator:a4fee67088a91f00f51de41b4eea8ada0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ad35e8a31d1e5a342400a898b319e7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01560.html#a4ad35e8a31d1e5a342400a898b319e7c">kPoly</a> = 0x04C11DB7UL</td></tr>
-<tr class="separator:a4ad35e8a31d1e5a342400a898b319e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af50424f9502ba6ce00327cb1cf00dabb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01560.html#af50424f9502ba6ce00327cb1cf00dabb">kInit</a> = 0xFFFFFFFFUL</td></tr>
-<tr class="separator:af50424f9502ba6ce00327cb1cf00dabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d7385f91ba8cbcb649cd4e9a32e8196"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01560.html#a0d7385f91ba8cbcb649cd4e9a32e8196">kRefIn</a> = false</td></tr>
-<tr class="separator:a0d7385f91ba8cbcb649cd4e9a32e8196"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab98cbc3fc30bc64f395caa6602fa5d8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01560.html#ab98cbc3fc30bc64f395caa6602fa5d8f">kRefOut</a> = false</td></tr>
-<tr class="separator:ab98cbc3fc30bc64f395caa6602fa5d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49829b35959603248305f0d9fedb582f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01560.html#a49829b35959603248305f0d9fedb582f">kXorOut</a> = 0x00000000UL</td></tr>
-<tr class="separator:a49829b35959603248305f0d9fedb582f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa21a750ba8d490d29b916350f1ed96bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01560.html#aa21a750ba8d490d29b916350f1ed96bb">kCatalogCheck</a> = 0x0376E6E7UL</td></tr>
-<tr class="separator:aa21a750ba8d490d29b916350f1ed96bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7a9e8f1098b9482f03266947dc320d3a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01560.html#a7a9e8f1098b9482f03266947dc320d3a">is_valid_base64</a> (char const *str, std::size_t size)</td></tr>
+<tr class="memdesc:a7a9e8f1098b9482f03266947dc320d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether <code>size</code> characters starting at <code>str</code> are valid Base64.  <a href="a01560.html#a7a9e8f1098b9482f03266947dc320d3a">More...</a><br /></td></tr>
+<tr class="separator:a7a9e8f1098b9482f03266947dc320d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfe6300b401116112266dc79f49a2554"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01560.html#adfe6300b401116112266dc79f49a2554">is_valid_base64</a> (<a class="el" href="a01246.html#a305a08cb65372db70a94bdd02282f2ba">string_type_t</a> str)</td></tr>
+<tr class="memdesc:adfe6300b401116112266dc79f49a2554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given string is a valid Base64 encoded string (see the pointer and size overload for the rules).  <a href="a01560.html#adfe6300b401116112266dc79f49a2554">More...</a><br /></td></tr>
+<tr class="separator:adfe6300b401116112266dc79f49a2554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>CRC-32/MPEG-2: width=32 poly=0x04c11db7 init=0xffffffff refin=false refout=false xorout=0x00000000. </p>
-<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-32/MPEG-2 </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a06495ed372e86e7f481c16e9e0608774"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06495ed372e86e7f481c16e9e0608774">&#9670;&nbsp;</a></span>ValueType</h2>
+<div class="textblock"><p>Base64 syntax check. </p>
+<p>The pointer and size overload is exported and has the same signature in every C++ standard; the string overload is an inline wrapper over it (<code>string_type_t</code> is <code>std::string_view</code> from C++17 and <code>std::string const &amp;</code> below). </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7a9e8f1098b9482f03266947dc320d3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a9e8f1098b9482f03266947dc320d3a">&#9670;&nbsp;</a></span>is_valid_base64() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a01560.html#a06495ed372e86e7f481c16e9e0608774">lumex::core::crc::parametric::crc32_mpeg2_spec_t::ValueType</a> =  std::uint32_t</td>
+          <td class="memname">bool Validator::is_valid_base64 </td>
+          <td>(</td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Checks whether <code>size</code> characters starting at <code>str</code> are valid Base64. </p>
+<p>Valid Base64 consists of alphabet characters followed by at most two &lsquo;&rsquo;='`; with padding the length is a multiple of 4, without it the last group has two or three characters. The range needs no terminating NUL and nothing after it is read; a NUL inside the range is invalid.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>First character; never valid as <code>nullptr</code>, even with a <code>size</code> of 0 (pass <code>""</code> for an empty input). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Number of characters to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the range is valid Base64 (an empty range is), <code>false</code> otherwise, and always for <code>nullptr</code>. </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa21a750ba8d490d29b916350f1ed96bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa21a750ba8d490d29b916350f1ed96bb">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
+<a id="adfe6300b401116112266dc79f49a2554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe6300b401116112266dc79f49a2554">&#9670;&nbsp;</a></span>is_valid_base64() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t lumex::core::crc::parametric::crc32_mpeg2_spec_t::kCatalogCheck = 0x0376E6E7UL</td>
+          <td class="memname">static bool lumex::core::base64::validate::Validator::is_valid_base64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01246.html#a305a08cb65372db70a94bdd02282f2ba">string_type_t</a>&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="af50424f9502ba6ce00327cb1cf00dabb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af50424f9502ba6ce00327cb1cf00dabb">&#9670;&nbsp;</a></span>kInit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_mpeg2_spec_t::kInit = 0xFFFFFFFFUL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Checks if a given string is a valid Base64 encoded string (see the pointer and size overload for the rules). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>The string to be checked for Base64 validity. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the string adheres to Base64 formatting rules, <code>false</code> otherwise. </dd></dl>
 
 </div>
 </div>
-<a id="a4ad35e8a31d1e5a342400a898b319e7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ad35e8a31d1e5a342400a898b319e7c">&#9670;&nbsp;</a></span>kPoly</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_mpeg2_spec_t::kPoly = 0x04C11DB7UL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0d7385f91ba8cbcb649cd4e9a32e8196"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d7385f91ba8cbcb649cd4e9a32e8196">&#9670;&nbsp;</a></span>kRefIn</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc32_mpeg2_spec_t::kRefIn = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab98cbc3fc30bc64f395caa6602fa5d8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab98cbc3fc30bc64f395caa6602fa5d8f">&#9670;&nbsp;</a></span>kRefOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc32_mpeg2_spec_t::kRefOut = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4fee67088a91f00f51de41b4eea8ada0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fee67088a91f00f51de41b4eea8ada0">&#9670;&nbsp;</a></span>kWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc32_mpeg2_spec_t::kWidth = 32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a49829b35959603248305f0d9fedb582f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49829b35959603248305f0d9fedb582f">&#9670;&nbsp;</a></span>kXorOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_mpeg2_spec_t::kXorOut = 0x00000000UL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00500_source.html">Validator.hpp</a></li>
+<li><a class="el" href="a00497.html">Validator.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00847.html">crc</a></li><li class="navelem"><a class="el" href="a00850.html">parametric</a></li><li class="navelem"><a class="el" href="a01560.html">crc32_mpeg2_spec_t</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01244.html">base64</a></li><li class="navelem"><a class="el" href="a01254.html">validate</a></li><li class="navelem"><a class="el" href="a01560.html">Validator</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

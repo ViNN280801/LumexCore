@@ -1,11 +1,15 @@
 var a01488 =
 [
-    [ "ValueType", "a01488.html#a360682f44b7a806e40a0042825e8bd13", null ],
-    [ "kCatalogCheck", "a01488.html#a775aeaa2cde4562d51991337f21c3dc7", null ],
-    [ "kInit", "a01488.html#aacd668fd316fade87af932f3497c3d96", null ],
-    [ "kPoly", "a01488.html#a83e169fa0e9f50f17581fe6d4af9cf13", null ],
-    [ "kRefIn", "a01488.html#a2b70dd33f170521974e7d943658454f3", null ],
-    [ "kRefOut", "a01488.html#aaa2bd342f28688a61e2ab5c39bc42930", null ],
-    [ "kWidth", "a01488.html#a99153e75b86829576da44c34cb61739e", null ],
-    [ "kXorOut", "a01488.html#ad20c231200803260838e61f97641d737", null ]
+    [ "add", "a01488.html#a32b675a771ffb6364664915812235cd6", null ],
+    [ "add", "a01488.html#a3e0eecb514d31b43a20ad9b7f5f2b7d4", null ],
+    [ "get", "a01488.html#a07d0a1dfb93ad84e3c34eebe2db114df", null ],
+    [ "get", "a01488.html#ae1de878c374400b81bb678ab38ba0eab", null ],
+    [ "is_ini_valid", "a01488.html#aa6aaa50b95d5d9c5a1f4ada8259ac040", null ],
+    [ "is_ini_valid", "a01488.html#ad7d89bb26cb39d1ce799779febe35edb", null ],
+    [ "load", "a01488.html#aa305f824caad57d086476758c8625d40", null ],
+    [ "load", "a01488.html#ad8582ddd78b5445e1a56534be5908038", null ],
+    [ "remove", "a01488.html#aca80c15987a8a829f30f4ee2c4805aa4", null ],
+    [ "remove", "a01488.html#a92fecea9703558950a3774e0c6790cee", null ],
+    [ "save", "a01488.html#accc9857f26cb29ec5727bfc77554f100", null ],
+    [ "save", "a01488.html#aedc2eeb2b12067b9ee5d9c48ad07686d", null ]
 ];

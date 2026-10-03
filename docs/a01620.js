@@ -1,10 +1,11 @@
 var a01620 =
 [
-    [ "LumexBaseException", "a01620.html#a54d06b4c398b8d51b16d07ce6e42e0a9", null ],
-    [ "LumexBaseException", "a01620.html#af6c956b427067ef3cb9b671ebc7e7508", null ],
-    [ "LumexBaseException", "a01620.html#a85c71424b39bcc0635b02e28fa04691d", null ],
-    [ "getStackTrace", "a01620.html#aaa6c89f64a566ac99594f3f62b1d139a", null ],
-    [ "to_crash_report", "a01620.html#a245a9afff857e90de514203f826b3abf", null ],
-    [ "to_stderr", "a01620.html#a4a7b23b7ca37b559a02c5036989682e3", null ],
-    [ "what", "a01620.html#a5eb9d461c37fd45e50f8035229d1d1e1", null ]
+    [ "ValueType", "a01620.html#a207b13ab5b4847c719778c627319e6d6", null ],
+    [ "kCatalogCheck", "a01620.html#aa2a969802ed81ebfb852686ca9d74096", null ],
+    [ "kInit", "a01620.html#aabdb91e8ecbb9db427973e9f6c5423c5", null ],
+    [ "kPoly", "a01620.html#a7a6d4ae1355d1525e39108db12ce5994", null ],
+    [ "kRefIn", "a01620.html#ac1440dbec5184ac2b3c669285aff1ae9", null ],
+    [ "kRefOut", "a01620.html#a5d7f764d920f93d2a86ec5b403993a53", null ],
+    [ "kWidth", "a01620.html#aac9117752604137b9c94bb1fef74647d", null ],
+    [ "kXorOut", "a01620.html#a588cf015a631c0977ca6240442f585dd", null ]
 ];

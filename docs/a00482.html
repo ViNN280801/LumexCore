@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: example_optional_workflow.cpp File Reference</title>
+<title>LumexLib: Base64.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,49 +94,141 @@ $(document).ready(function(){initNavTree('a00482.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">example_optional_workflow.cpp File Reference</div>  </div>
+<div class="title">Base64.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+
+<p>Cross-platform Base64 encoding and decoding utilities.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;lumex/core/optional/LumexOptional&quot;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00662_source.html">lumex/core/utility/assert/LumexAssert.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00701_source.html">lumex/core/utility/macros/LumexKeywords.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00722_source.html">lumex/core/utility/traits/LumexTypeTraits.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for example_optional_workflow.cpp:</div>
+Include dependency graph for Base64.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00483.png" border="0" usemap="#aexample__optional__workflow_8cpp" alt=""/></div>
+<div class="center"><img src="a00483.png" border="0" usemap="#aBase64_8hpp" alt=""/></div>
+<map name="Base64_8hpp" id="aBase64_8hpp">
+<area shape="rect" title="Cross&#45;platform Base64 encoding and decoding utilities." alt="" coords="284,5,383,32"/>
+<area shape="rect" title=" " alt="" coords="5,177,61,203"/>
+<area shape="rect" title=" " alt="" coords="85,177,144,203"/>
+<area shape="rect" title=" " alt="" coords="169,177,261,203"/>
+<area shape="rect" title=" " alt="" coords="285,177,382,203"/>
+<area shape="rect" href="a00662.html" title=" " alt="" coords="406,169,589,211"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="963,259,1176,300"/>
+<area shape="rect" href="a00722.html" title="Every general&#45;purpose type trait of LumexLib, one sub&#45;namespace of lumex::core::utility::traits per t..." alt="" coords="833,80,1034,121"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="407,266,588,293"/>
+<area shape="rect" title=" " alt="" coords="1738,177,1809,203"/>
+<area shape="rect" title=" " alt="" coords="1833,177,1919,203"/>
+<area shape="rect" title=" " alt="" coords="1943,177,2014,203"/>
+<area shape="rect" title=" " alt="" coords="2039,177,2097,203"/>
+<area shape="rect" title=" " alt="" coords="664,177,741,203"/>
+<area shape="rect" title=" " alt="" coords="766,177,842,203"/>
+<area shape="rect" title=" " alt="" coords="866,177,921,203"/>
+<area shape="rect" title=" " alt="" coords="945,177,1005,203"/>
+<area shape="rect" title=" " alt="" coords="1029,177,1104,203"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="1129,169,1383,211"/>
+<area shape="rect" href="a00695.html" title=" " alt="" coords="1459,169,1714,211"/>
+</map>
 </div>
-</div><table class="memberdecls">
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00484.png" border="0" usemap="#aBase64_8hppdep" alt=""/></div>
+<map name="Base64_8hppdep" id="aBase64_8hppdep">
+<area shape="rect" title="Cross&#45;platform Base64 encoding and decoding utilities." alt="" coords="133,5,232,32"/>
+<area shape="rect" href="a00488.html" title=" " alt="" coords="131,80,234,107"/>
+<area shape="rect" href="a00494.html" title=" " alt="" coords="5,80,107,107"/>
+<area shape="rect" href="a00500.html" title=" " alt="" coords="259,80,365,107"/>
+<area shape="rect" href="a00485.html" title=" " alt="" coords="131,155,234,181"/>
+<area shape="rect" href="a00491.html" title=" " alt="" coords="6,155,106,181"/>
+<area shape="rect" href="a00497.html" title=" " alt="" coords="259,155,365,181"/>
+</map>
+</div>
+</div>
+<p><a href="a00482_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01236"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01236.html">lumex::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01244"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01244.html">lumex::core::base64</a></td></tr>
+<tr class="memdesc:a01244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides Base64 decoding functionalities. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01245"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01245.html">lumex::core::base64::codec</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01246"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01246.html">lumex::core::base64::codec::Types</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01247"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01247.html">lumex::core::base64::codec::Constants</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01248"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01248.html">lumex::core::base64::codec::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a5ce1631da87ffd76dbc11fb072c31a57"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01246.html#a5ce1631da87ffd76dbc11fb072c31a57">lumex::core::base64::codec::Types::byte_type</a> = unsigned char</td></tr>
+<tr class="separator:a5ce1631da87ffd76dbc11fb072c31a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a305a08cb65372db70a94bdd02282f2ba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01246.html#a305a08cb65372db70a94bdd02282f2ba">lumex::core::base64::codec::Types::string_type_t</a> = std::string_view</td></tr>
+<tr class="separator:a305a08cb65372db70a94bdd02282f2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00482.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2c6635159a04fc20cc0c5a5398cf63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01248.html#aed2c6635159a04fc20cc0c5a5398cf63">lumex::core::base64::codec::detail::_is_base64_char_impl</a> (Types::byte_type chr) noexcept</td></tr>
+<tr class="memdesc:aed2c6635159a04fc20cc0c5a5398cf63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal helper to check if a character is a valid Base64 <em>alphabet</em> character. This excludes the padding '=' character.  <a href="a01248.html#aed2c6635159a04fc20cc0c5a5398cf63">More...</a><br /></td></tr>
+<tr class="separator:aed2c6635159a04fc20cc0c5a5398cf63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda97488987b0b151816d6cc1ee24873"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:abda97488987b0b151816d6cc1ee24873"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a01248.html#abda97488987b0b151816d6cc1ee24873">lumex::core::base64::codec::detail::_encode_impl</a> (T const &amp;data_view)</td></tr>
+<tr class="memdesc:abda97488987b0b151816d6cc1ee24873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal helper to encode binary data into a Base64 string from a view-like type.  <a href="a01248.html#abda97488987b0b151816d6cc1ee24873">More...</a><br /></td></tr>
+<tr class="separator:abda97488987b0b151816d6cc1ee24873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a310994bff0f37c34e998e64ccd0d9b4a"><td class="memItemLeft" align="right" valign="top">constexpr Types::byte_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01247.html#a310994bff0f37c34e998e64ccd0d9b4a">lumex::core::base64::codec::Constants::kBase64DecodeInvalidChar</a> = 0xFF</td></tr>
+<tr class="separator:a310994bff0f37c34e998e64ccd0d9b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecebd7ba4ffe04b988126e41c33ecfea"><td class="memItemLeft" align="right" valign="top">constexpr Types::byte_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01247.html#aecebd7ba4ffe04b988126e41c33ecfea">lumex::core::base64::codec::Constants::kBase64MaskSixBits</a> = 0x3F</td></tr>
+<tr class="separator:aecebd7ba4ffe04b988126e41c33ecfea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d133094b5ed0ee9e698035e63daae7f"><td class="memItemLeft" align="right" valign="top">constexpr Types::byte_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01247.html#a0d133094b5ed0ee9e698035e63daae7f">lumex::core::base64::codec::Constants::kBase64MaskFourBits</a> = 0x0F</td></tr>
+<tr class="separator:a0d133094b5ed0ee9e698035e63daae7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfd68edd3c78816eef9e59ff829ee8f4"><td class="memItemLeft" align="right" valign="top">constexpr Types::byte_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01247.html#abfd68edd3c78816eef9e59ff829ee8f4">lumex::core::base64::codec::Constants::kBase64MaskTwoBits</a> = 0x03</td></tr>
+<tr class="separator:abfd68edd3c78816eef9e59ff829ee8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b364fecb88ca9458896d44cb1be5d5"><td class="memItemLeft" align="right" valign="top">constexpr Types::byte_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01247.html#a71b364fecb88ca9458896d44cb1be5d5">lumex::core::base64::codec::Constants::kBase64RightShiftSixBits</a> = 0x06</td></tr>
+<tr class="separator:a71b364fecb88ca9458896d44cb1be5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7e600219f0ee2a9f913871d1ebb0b4"><td class="memItemLeft" align="right" valign="top">std::array&lt; char, 64 &gt; const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01248.html#a9d7e600219f0ee2a9f913871d1ebb0b4">lumex::core::base64::codec::detail::_base64_chars</a></td></tr>
+<tr class="memdesc:a9d7e600219f0ee2a9f913871d1ebb0b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base64 alphabet.  <a href="a01248.html#a9d7e600219f0ee2a9f913871d1ebb0b4">More...</a><br /></td></tr>
+<tr class="separator:a9d7e600219f0ee2a9f913871d1ebb0b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1532c566da2e92bae3b58e0ad551ef7e"><td class="memItemLeft" align="right" valign="top">std::array&lt; Types::byte_type, 256 &gt; const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01248.html#a1532c566da2e92bae3b58e0ad551ef7e">lumex::core::base64::codec::detail::_decode_table</a></td></tr>
+<tr class="memdesc:a1532c566da2e92bae3b58e0ad551ef7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode table - maps ASCII chars to <a class="el" href="a01244.html" title="Provides Base64 decoding functionalities.">base64</a> values.  <a href="a01248.html#a1532c566da2e92bae3b58e0ad551ef7e">More...</a><br /></td></tr>
+<tr class="separator:a1532c566da2e92bae3b58e0ad551ef7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Cross-platform Base64 encoding and decoding utilities. </p>
+<p>Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
+<p>SPDX-License-Identifier: MIT</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://en.wikipedia.org/wiki/Base64">https://en.wikipedia.org/wiki/Base64</a> </dd>
+<dd>
+<a href="https://renenyffenegger.ch/notes/development/Base64/Encoding-and-decoding-base-64-with-cpp/">https://renenyffenegger.ch/notes/development/Base64/Encoding-and-decoding-base-64-with-cpp/</a></dd></dl>
+<p>This header provides a set of functions for converting binary data to its Base64 string representation and vice versa. The implementation adheres to standard Base64 principles, suitable for various data serialization and transmission needs. It supports encoding from raw pointers or <code>std::vector&lt;byte&gt;</code> and decoding into <code>std::vector&lt;byte&gt;</code>.</p>
+<p>IMPORTANT: If the user wants to encode/decode text in a specific encoding, the task of converting this encoding (e.g., from UTF-8 to UTF-16 or vice versa, or from std::wstring to UTF-8 bytes) must be solved before calling the Base64 encoding functions and after calling the Base64 decoding functions. This is a separate layer of logic that should not be part of the Base64 library itself. Base64 is a low-level utility for bytes. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_4c2b7d5e7a0dfce4203a9b8df2380f29.html">vladislavsemykin</a></li><li class="navelem"><a class="el" href="dir_71b8b34abbf68fd94c21924bb8288c42.html">Develop</a></li><li class="navelem"><a class="el" href="dir_1321ff10d91e5f1e51c747e0dd960602.html">PEAK_EXPERT_WEB</a></li><li class="navelem"><a class="el" href="dir_d98879a0fead05f9eef61595a1771ac0.html">LumexLib</a></li><li class="navelem"><a class="el" href="dir_e514a311cc52c666e2e55668365992a9.html">lumex</a></li><li class="navelem"><a class="el" href="dir_5a400666d5453ed7996e0d2c1554a533.html">examples</a></li><li class="navelem"><a class="el" href="dir_ac6c4c9e5a211124e298fba23f9d6e81.html">optional</a></li><li class="navelem"><a class="el" href="a00482.html">example_optional_workflow.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_2eed78fa94d1e9faad02cb0657b7390b.html">core</a></li><li class="navelem"><a class="el" href="dir_8c8b73b6e18afab83ac8ebfe214770ca.html">base64</a></li><li class="navelem"><a class="el" href="dir_a1911271627da583236aa920db48064a.html">codec</a></li><li class="navelem"><a class="el" href="a00482.html">Base64.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

@@ -1,28 +1,4 @@
 var searchData=
 [
-  ['level_5ftype_6252',['level_type',['../a00992.html#a31829756962f859c46afec9511029278',1,'lumex::applied::json::helper::LumexJsonHelper']]],
-  ['longgenerator_6253',['LongGenerator',['../a00872.html#acd853947984ee5e2b6f07024702b9344',1,'lumex::core::generators::number_generator']]],
-  ['lumex_5ffilesystem_6254',['lumex_filesystem',['../a00893.html#aa8ebcbaa36bc86bda9eaadd6c942d847',1,'lumex::core::temporary::tmp']]],
-  ['lumex_5fsettings_5fkey_5fspec_5ft_6255',['lumex_settings_key_spec_t',['../a00101.html#aaba76e604dc91717d20367b64faa7745',1,'LumexSettingsGuard.hpp']]],
-  ['lumexbaseexception_6256',['LumexBaseException',['../a00185.html#a14cb3c521ade640b8e5a7bf4aac3c929',1,'LumexException.hpp']]],
-  ['lumexcrashhandler_6257',['LumexCrashHandler',['../a00173.html#a17b15d4c3f44f0d6df60fe3d3fbdbd4c',1,'LumexCrashHandler.hpp']]],
-  ['lumexenvironment_6258',['LumexEnvironment',['../a00164.html#a6421e7685cc78f63f88346b58e913910',1,'LumexEnvironment.hpp']]],
-  ['lumexjsondiagnosticslot_6259',['LumexJsonDiagnosticSlot',['../a00799.html#a48890fe2f5906febb11b9cae1805b794',1,'lumex::applied::json::diagnostics']]],
-  ['lumexlogger_6260',['LumexLogger',['../a00056.html#a538f3e482b0ee9b4e5a7bd7e7e404a0c',1,'LumexLogger.hpp']]],
-  ['lumexlogging_6261',['LumexLogging',['../a00062.html#a4a6909dcad3d67fe13dede37e3679899',1,'LumexLogging.hpp']]],
-  ['lumexresourcemonitor_6262',['LumexResourceMonitor',['../a00071.html#acf3c1433c592f79d38d458c4215ef5b5',1,'LumexResourceMonitor.hpp']]],
-  ['lumexsettingscreatefn_6263',['LumexSettingsCreateFn',['../a00827.html#a46e8d5d9d60fb12b2029e16af7898055',1,'lumex::applied::settings::guard::LumexSettingsCreateFn()'],['../a00101.html#abea24e19462376739279490b339d4de0',1,'LumexSettingsCreateFn():&#160;LumexSettingsGuard.hpp']]],
-  ['lumexsettingsextensions_6264',['LumexSettingsExtensions',['../a00110.html#ac438d1e8fa1811a2273f163d14e87c50',1,'SupportedConfigExtensions.hpp']]],
-  ['lumexsettingsfactory_6265',['LumexSettingsFactory',['../a00095.html#a90f219acff9eb90d97465a960d7a7d0f',1,'LumexSettingsFactory.hpp']]],
-  ['lumexsettingsguard_6266',['LumexSettingsGuard',['../a00101.html#a03c038d49d13658f514ec716f3b4db81',1,'LumexSettingsGuard.hpp']]],
-  ['lumexsettingsjson_6267',['LumexSettingsJSON',['../a00119.html#aa919e4a6d6da15cb570e487987991a1b',1,'LumexSettingsJSON.hpp']]],
-  ['lumexsettingsvalidatefn_6268',['LumexSettingsValidateFn',['../a00827.html#a00cc9a5c58467a6de74bf097e3bae3d6',1,'lumex::applied::settings::guard::LumexSettingsValidateFn()'],['../a00101.html#a76e902ce20d92ae885d6684f4f295001',1,'LumexSettingsValidateFn():&#160;LumexSettingsGuard.hpp']]],
-  ['lumexsettingsxml_6269',['LumexSettingsXML',['../a00125.html#ab23132a5fc6ee5da8ac4aa3c6f448f27',1,'LumexSettingsXML.hpp']]],
-  ['lumexstacktrace_6270',['LumexStacktrace',['../a00860.html#a7594d0b7e8cd07a63b7218286cec101f',1,'lumex::core::exceptions::stacktrace::LumexStacktrace()'],['../a00197.html#aa65ae33a9cb60c0f3fdb50f47f7a425e',1,'LumexStacktrace():&#160;LumexStacktrace.hpp']]],
-  ['lumexstacktraceentry_6271',['LumexStacktraceEntry',['../a00197.html#a3f60ceab597bebfcc580c78610fb5712',1,'LumexStacktrace.hpp']]],
-  ['lumexstringview_6272',['LumexStringView',['../a00278.html#a27778c0df3cb97e862cd47d3f966ec26',1,'LumexStringView.hpp']]],
-  ['lumextemporary_6273',['LumexTemporary',['../a00290.html#a16e39f808b1ac9dcad15c2abb6f4ff08',1,'LumexTemporary.hpp']]],
-  ['lumextime_6274',['LumexTime',['../a00296.html#a024e88e94b38af283e9a316260061ba1',1,'LumexTime.hpp']]],
-  ['lumextimer_6275',['LumexTimer',['../a00302.html#a57ef3281ae9b9c2d128025396f7c856f',1,'LumexTimer.hpp']]],
-  ['lumexwstringview_6276',['LumexWStringView',['../a00284.html#ac9ad2a2a897e312959d7da3970ff89c1',1,'LumexWStringView.hpp']]]
+  ['kind_5ftag_6620',['kind_tag',['../a01280.html#a6be2e1c32b37e0c933e89262c2505e8c',1,'lumex::core::fmt::Detail']]]
 ];

@@ -1,4 +1,5 @@
 var a00536 =
 [
-    [ "main", "a00536.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ]
+    [ "LUMEX_IMPLEMENTATION", "a00536.html#a07486181f1990291c2a348de8eb4c480", null ],
+    [ "LumexException_GetStackTraceTrampoline", "a00536.html#a31ed01634f7b6bd094769a42fe5f966b", null ]
 ];

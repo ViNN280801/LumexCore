@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::crc::parametric::crc31_philips_spec_t Struct Reference</title>
+<title>LumexLib: lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell&lt; Pointer &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,167 +94,632 @@ $(document).ready(function(){initNavTree('a01524.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="a01521.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::crc::parametric::crc31_philips_spec_t Struct Reference</div>  </div>
+<div class="title">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell&lt; Pointer &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>CRC-31/PHILIPS: width=31 poly=0x04c11db7 init=0x7fffffff refin=false refout=false xorout=0x7fffffff.  
+<p>Lock-based atomic cell over an ordinary smart pointer.  
  <a href="a01524.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00467_source.html">LumexAtomicSmartPtrCell.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:af6d680a206d993f9b422050acbfc9617"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#af6d680a206d993f9b422050acbfc9617">ValueType</a> = std::uint32_t</td></tr>
-<tr class="separator:af6d680a206d993f9b422050acbfc9617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:afffe57ec95a2da7bc1c166c221f92480"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#afffe57ec95a2da7bc1c166c221f92480">LockBasedCell</a> () noexcept</td></tr>
+<tr class="separator:afffe57ec95a2da7bc1c166c221f92480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a724e3063d2623c245ac91f18713616d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a724e3063d2623c245ac91f18713616d8">LockBasedCell</a> (Pointer desired) noexcept</td></tr>
+<tr class="separator:a724e3063d2623c245ac91f18713616d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8645626ccfcb31acb1494918106805c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a8645626ccfcb31acb1494918106805c2">LockBasedCell</a> (<a class="el" href="a01524.html">LockBasedCell</a> const &amp;)=delete</td></tr>
+<tr class="separator:a8645626ccfcb31acb1494918106805c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d86aff25e3aafed5d10efd556697f8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a01524.html">LockBasedCell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a2d86aff25e3aafed5d10efd556697f8c">operator=</a> (<a class="el" href="a01524.html">LockBasedCell</a> const &amp;)=delete</td></tr>
+<tr class="separator:a2d86aff25e3aafed5d10efd556697f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32894ed6a94fb3a3f8e3c7ef3f968358"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a32894ed6a94fb3a3f8e3c7ef3f968358">is_lock_free</a> () const noexcept</td></tr>
+<tr class="separator:a32894ed6a94fb3a3f8e3c7ef3f968358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa894bf236729021fa592e19be1000257"><td class="memItemLeft" align="right" valign="top">Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#aa894bf236729021fa592e19be1000257">load</a> (std::memory_order) const noexcept</td></tr>
+<tr class="separator:aa894bf236729021fa592e19be1000257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710136a5930154c16ecce60f5ca1a6f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a710136a5930154c16ecce60f5ca1a6f5">store</a> (Pointer desired, std::memory_order) noexcept</td></tr>
+<tr class="separator:a710136a5930154c16ecce60f5ca1a6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3296fa41a0bbf3f268307882b4a2dc9"><td class="memItemLeft" align="right" valign="top">Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#ad3296fa41a0bbf3f268307882b4a2dc9">exchange</a> (Pointer desired, std::memory_order) noexcept</td></tr>
+<tr class="separator:ad3296fa41a0bbf3f268307882b4a2dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d11c8b99a8cea56d7fc0f88a06ac591"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a4d11c8b99a8cea56d7fc0f88a06ac591">compare_exchange_strong</a> (Pointer &amp;expected, Pointer desired, std::memory_order, std::memory_order) noexcept</td></tr>
+<tr class="separator:a4d11c8b99a8cea56d7fc0f88a06ac591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2b9593bee1075863ba0070272785f82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#ab2b9593bee1075863ba0070272785f82">compare_exchange_strong</a> (Pointer &amp;expected, Pointer desired, std::memory_order) noexcept</td></tr>
+<tr class="separator:ab2b9593bee1075863ba0070272785f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8399fb627d542be121040701e9e714b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#ab8399fb627d542be121040701e9e714b">compare_exchange_weak</a> (Pointer &amp;expected, Pointer desired, std::memory_order, std::memory_order) noexcept</td></tr>
+<tr class="memdesc:ab8399fb627d542be121040701e9e714b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Never fails spuriously, so it is the strong form.  <a href="a01524.html#ab8399fb627d542be121040701e9e714b">More...</a><br /></td></tr>
+<tr class="separator:ab8399fb627d542be121040701e9e714b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab474b17442fa612c05371573da91ef23"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#ab474b17442fa612c05371573da91ef23">compare_exchange_weak</a> (Pointer &amp;expected, Pointer desired, std::memory_order) noexcept</td></tr>
+<tr class="memdesc:ab474b17442fa612c05371573da91ef23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Never fails spuriously, so it is the strong form.  <a href="a01524.html#ab474b17442fa612c05371573da91ef23">More...</a><br /></td></tr>
+<tr class="separator:ab474b17442fa612c05371573da91ef23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84aeb1ccf8b53d74c04ab7ad5f60a24a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a84aeb1ccf8b53d74c04ab7ad5f60a24a">wait</a> (Pointer const &amp;old, std::memory_order) const noexcept</td></tr>
+<tr class="separator:a84aeb1ccf8b53d74c04ab7ad5f60a24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3f0a96a23f8531354daeead156b223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#aef3f0a96a23f8531354daeead156b223">notify_one</a> () noexcept</td></tr>
+<tr class="separator:aef3f0a96a23f8531354daeead156b223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba323e7b7766d981566a7273f066e6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#afba323e7b7766d981566a7273f066e6a">notify_all</a> () noexcept</td></tr>
+<tr class="separator:afba323e7b7766d981566a7273f066e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ae28ef1226baada558c7c0cab0f8d49c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#ae28ef1226baada558c7c0cab0f8d49c9">kWidth</a> = 31</td></tr>
-<tr class="separator:ae28ef1226baada558c7c0cab0f8d49c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ce83152a7a43ba5782b62cc5dd78c40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a8ce83152a7a43ba5782b62cc5dd78c40">kPoly</a> = 0x04C11DB7UL</td></tr>
-<tr class="separator:a8ce83152a7a43ba5782b62cc5dd78c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96858f57946b9c0ce41cf87c552a7196"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a96858f57946b9c0ce41cf87c552a7196">kInit</a> = 0x7FFFFFFFUL</td></tr>
-<tr class="separator:a96858f57946b9c0ce41cf87c552a7196"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78a574360bd8b98196f9c763a581976d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a78a574360bd8b98196f9c763a581976d">kRefIn</a> = false</td></tr>
-<tr class="separator:a78a574360bd8b98196f9c763a581976d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a568d376f2e8b0ec7dd9d83e3ed39e1e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a568d376f2e8b0ec7dd9d83e3ed39e1e7">kRefOut</a> = false</td></tr>
-<tr class="separator:a568d376f2e8b0ec7dd9d83e3ed39e1e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b2624878379b595e450e6b66cb27d41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a7b2624878379b595e450e6b66cb27d41">kXorOut</a> = 0x7FFFFFFFUL</td></tr>
-<tr class="separator:a7b2624878379b595e450e6b66cb27d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e652a1cbe8a7954c89a9317b077bf4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#a4e652a1cbe8a7954c89a9317b077bf4f">kCatalogCheck</a> = 0x0CE9E46CUL</td></tr>
-<tr class="separator:a4e652a1cbe8a7954c89a9317b077bf4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ab78590febec49addfc4913dc474b53f9"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01524.html#ab78590febec49addfc4913dc474b53f9">is_always_lock_free</a> = false</td></tr>
+<tr class="separator:ab78590febec49addfc4913dc474b53f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>CRC-31/PHILIPS: width=31 poly=0x04c11db7 init=0x7fffffff refin=false refout=false xorout=0x7fffffff. </p>
-<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-31/PHILIPS </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="af6d680a206d993f9b422050acbfc9617"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6d680a206d993f9b422050acbfc9617">&#9670;&nbsp;</a></span>ValueType</h2>
+<div class="textblock"><h3>template&lt;typename Pointer&gt;<br />
+class lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell&lt; Pointer &gt;</h3>
+
+<p>Lock-based atomic cell over an ordinary smart pointer. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Pointer</td><td><code>std::shared_ptr&lt;T&gt;</code> or <code>std::weak_ptr&lt;T&gt;</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afffe57ec95a2da7bc1c166c221f92480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afffe57ec95a2da7bc1c166c221f92480">&#9670;&nbsp;</a></span>LockBasedCell() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a01524.html#af6d680a206d993f9b422050acbfc9617">lumex::core::crc::parametric::crc31_philips_spec_t::ValueType</a> =  std::uint32_t</td>
+          <td class="memname">constexpr <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::<a class="el" href="a01524.html">LockBasedCell</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a724e3063d2623c245ac91f18713616d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a724e3063d2623c245ac91f18713616d8">&#9670;&nbsp;</a></span>LockBasedCell() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::<a class="el" href="a01524.html">LockBasedCell</a> </td>
+          <td>(</td>
+          <td class="paramtype">Pointer&#160;</td>
+          <td class="paramname"><em>desired</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8645626ccfcb31acb1494918106805c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8645626ccfcb31acb1494918106805c2">&#9670;&nbsp;</a></span>LockBasedCell() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::<a class="el" href="a01524.html">LockBasedCell</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01524.html">LockBasedCell</a>&lt; Pointer &gt; const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab2b9593bee1075863ba0070272785f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b9593bee1075863ba0070272785f82">&#9670;&nbsp;</a></span>compare_exchange_strong() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::compare_exchange_strong </td>
+          <td>(</td>
+          <td class="paramtype">Pointer &amp;&#160;</td>
+          <td class="paramname"><em>expected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Pointer&#160;</td>
+          <td class="paramname"><em>desired</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::memory_order&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d11c8b99a8cea56d7fc0f88a06ac591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d11c8b99a8cea56d7fc0f88a06ac591">&#9670;&nbsp;</a></span>compare_exchange_strong() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::compare_exchange_strong </td>
+          <td>(</td>
+          <td class="paramtype">Pointer &amp;&#160;</td>
+          <td class="paramname"><em>expected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Pointer&#160;</td>
+          <td class="paramname"><em>desired</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::memory_order&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::memory_order&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab474b17442fa612c05371573da91ef23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab474b17442fa612c05371573da91ef23">&#9670;&nbsp;</a></span>compare_exchange_weak() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::compare_exchange_weak </td>
+          <td>(</td>
+          <td class="paramtype">Pointer &amp;&#160;</td>
+          <td class="paramname"><em>expected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Pointer&#160;</td>
+          <td class="paramname"><em>desired</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::memory_order&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Never fails spuriously, so it is the strong form. </p>
+
+</div>
+</div>
+<a id="ab8399fb627d542be121040701e9e714b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8399fb627d542be121040701e9e714b">&#9670;&nbsp;</a></span>compare_exchange_weak() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::compare_exchange_weak </td>
+          <td>(</td>
+          <td class="paramtype">Pointer &amp;&#160;</td>
+          <td class="paramname"><em>expected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Pointer&#160;</td>
+          <td class="paramname"><em>desired</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::memory_order&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::memory_order&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Never fails spuriously, so it is the strong form. </p>
+
+</div>
+</div>
+<a id="ad3296fa41a0bbf3f268307882b4a2dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3296fa41a0bbf3f268307882b4a2dc9">&#9670;&nbsp;</a></span>exchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pointer <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::exchange </td>
+          <td>(</td>
+          <td class="paramtype">Pointer&#160;</td>
+          <td class="paramname"><em>desired</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::memory_order&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32894ed6a94fb3a3f8e3c7ef3f968358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32894ed6a94fb3a3f8e3c7ef3f968358">&#9670;&nbsp;</a></span>is_lock_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::is_lock_free </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa894bf236729021fa592e19be1000257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa894bf236729021fa592e19be1000257">&#9670;&nbsp;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pointer <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::load </td>
+          <td>(</td>
+          <td class="paramtype">std::memory_order&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afba323e7b7766d981566a7273f066e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba323e7b7766d981566a7273f066e6a">&#9670;&nbsp;</a></span>notify_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::notify_all </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef3f0a96a23f8531354daeead156b223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef3f0a96a23f8531354daeead156b223">&#9670;&nbsp;</a></span>notify_one()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::notify_one </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d86aff25e3aafed5d10efd556697f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d86aff25e3aafed5d10efd556697f8c">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a01524.html">LockBasedCell</a>&amp; <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a01524.html">LockBasedCell</a>&lt; Pointer &gt; const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a710136a5930154c16ecce60f5ca1a6f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a710136a5930154c16ecce60f5ca1a6f5">&#9670;&nbsp;</a></span>store()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::store </td>
+          <td>(</td>
+          <td class="paramtype">Pointer&#160;</td>
+          <td class="paramname"><em>desired</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::memory_order&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84aeb1ccf8b53d74c04ab7ad5f60a24a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84aeb1ccf8b53d74c04ab7ad5f60a24a">&#9670;&nbsp;</a></span>wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::wait </td>
+          <td>(</td>
+          <td class="paramtype">Pointer const &amp;&#160;</td>
+          <td class="paramname"><em>old</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::memory_order&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a4e652a1cbe8a7954c89a9317b077bf4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e652a1cbe8a7954c89a9317b077bf4f">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
+<a id="ab78590febec49addfc4913dc474b53f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab78590febec49addfc4913dc474b53f9">&#9670;&nbsp;</a></span>is_always_lock_free</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename Pointer &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t lumex::core::crc::parametric::crc31_philips_spec_t::kCatalogCheck = 0x0CE9E46CUL</td>
+          <td class="memname">constexpr bool <a class="el" href="a01524.html">lumex::core::atomic::smart_ptr::lock_based_table_wait::Detail::LockBasedCell</a>&lt; Pointer &gt;::is_always_lock_free = false</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a96858f57946b9c0ce41cf87c552a7196"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96858f57946b9c0ce41cf87c552a7196">&#9670;&nbsp;</a></span>kInit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc31_philips_spec_t::kInit = 0x7FFFFFFFUL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8ce83152a7a43ba5782b62cc5dd78c40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ce83152a7a43ba5782b62cc5dd78c40">&#9670;&nbsp;</a></span>kPoly</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc31_philips_spec_t::kPoly = 0x04C11DB7UL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a78a574360bd8b98196f9c763a581976d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78a574360bd8b98196f9c763a581976d">&#9670;&nbsp;</a></span>kRefIn</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc31_philips_spec_t::kRefIn = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a568d376f2e8b0ec7dd9d83e3ed39e1e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a568d376f2e8b0ec7dd9d83e3ed39e1e7">&#9670;&nbsp;</a></span>kRefOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc31_philips_spec_t::kRefOut = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae28ef1226baada558c7c0cab0f8d49c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae28ef1226baada558c7c0cab0f8d49c9">&#9670;&nbsp;</a></span>kWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc31_philips_spec_t::kWidth = 31</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7b2624878379b595e450e6b66cb27d41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b2624878379b595e450e6b66cb27d41">&#9670;&nbsp;</a></span>kXorOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc31_philips_spec_t::kXorOut = 0x7FFFFFFFUL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00467_source.html">LumexAtomicSmartPtrCell.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00847.html">crc</a></li><li class="navelem"><a class="el" href="a00850.html">parametric</a></li><li class="navelem"><a class="el" href="a01524.html">crc31_philips_spec_t</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01237.html">atomic</a></li><li class="navelem"><a class="el" href="a01238.html">smart_ptr</a></li><li class="navelem"><a class="el" href="a01239.html">lock_based_table_wait</a></li><li class="navelem"><a class="el" href="a01240.html">Detail</a></li><li class="navelem"><a class="el" href="a01524.html">LockBasedCell</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

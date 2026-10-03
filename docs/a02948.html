@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: Typical</title>
+<title>LumexLib: lumex::core::utility::traits::value::is_optional_like&lt; T, Enable &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,82 +94,46 @@ $(document).ready(function(){initNavTree('a02948.html',''); initResizable(); });
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Typical</div>  </div>
+<div class="title">lumex::core::utility::traits::value::is_optional_like&lt; T, Enable &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Safe cast from POSIX file descriptor (int) to void* for cross-platform storage. Copyright (c) 2026 Vladislav Semykin <a href="#" onclick="location.href='mai'+'lto:'+'vla'+'di'+'sla'+'v.'+'sem'+'yk'+'in@'+'gm'+'ail'+'.c'+'om'; return false;">vladi<span style="display: none;">.nosp@m.</span>slav<span style="display: none;">.nosp@m.</span>.semy<span style="display: none;">.nosp@m.</span>kin@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a></p>
-<p>SPDX-License-Identifier: MIT</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  Problem:</p><ul>
-<li>Windows: native handles are <code>HANDLE</code> (void*)</li>
-<li>POSIX/Linux: native handles are <code>int</code> (file descriptor)</li>
-<li>For uniform storage in the base class, a common type is needed -&gt; <code>void*</code> is chosen</li>
+
+<p><code>T</code> looks like an optional: <code>has_value ()</code> and unary <code>*</code> work on a <code>T const &amp;</code> (std::optional, LumexLib optional, similar wrappers).  
+ <a href="a02948.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for lumex::core::utility::traits::value::is_optional_like&lt; T, Enable &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02947.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional__like_3_01T_00_01Enable_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional__like_3_01T_00_01Enable_01_4_inherit__map" id="alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional__like_3_01T_00_01Enable_01_4_inherit__map">
+<area shape="rect" title="T looks like an optional: has_value () and unary * work on a T const &amp; (std::optional,..." alt="" coords="5,80,192,136"/>
+<area shape="rect" title=" " alt="" coords="53,5,144,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for lumex::core::utility::traits::value::is_optional_like&lt; T, Enable &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a02946.png" border="0" usemap="#alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional__like_3_01T_00_01Enable_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="lumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional__like_3_01T_00_01Enable_01_4_coll__map" id="alumex_1_1core_1_1utility_1_1traits_1_1value_1_1is__optional__like_3_01T_00_01Enable_01_4_coll__map">
+<area shape="rect" title="T looks like an optional: has_value () and unary * work on a T const &amp; (std::optional,..." alt="" coords="5,80,192,136"/>
+<area shape="rect" title=" " alt="" coords="53,5,144,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T, typename Enable = void&gt;<br />
+struct lumex::core::utility::traits::value::is_optional_like&lt; T, Enable &gt;</h3>
+
+<p><code>T</code> looks like an optional: <code>has_value ()</code> and unary <code>*</code> work on a <code>T const &amp;</code> (std::optional, LumexLib optional, similar wrappers). </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="a00722_source.html">LumexTypeTraits.hpp</a></li>
 </ul>
-<p>Why direct reinterpret_cast&lt;void*&gt;(int) is dangerous: On 64-bit systems:</p><ul>
-<li><code>int</code> takes 32 bits (signed: -2,147,483,648 .. 2,147,483,647)</li>
-<li><code>void*</code> takes 64 bits</li>
-<li>Direct <code>reinterpret_cast&lt;void*&gt;(int)</code> is undefined behavior according to C++ standard:<ul>
-<li>Standard allows <code>reinterpret_cast</code> only for types of the same size</li>
-<li>Behavior with different sizes is implementation-defined (not guaranteed)</li>
-</ul>
-</li>
-</ul>
-<p>Why safe through intptr_t:</p><ol type="1">
-<li><code>intptr_t</code> (from &lt;cstdint&gt;) guaranteed to have pointer size (32/64 bits)</li>
-<li><code>static_cast&lt;intptr_t&gt;(fd)</code>:<ul>
-<li>POSIX file descriptors are always &gt;= 0 (non-negative)</li>
-<li>int (32 bits) extends to intptr_t (64 bits) with sign preservation:<ul>
-<li>fd &gt;= 0: highest 32 bits = 0x00000000 (extension by zeros)</li>
-<li>fd &lt; 0: highest 32 bits = 0xFFFFFFFF (extension by sign) - but POSIX fd is always &gt;= 0!</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>reinterpret_cast&lt;void*&gt;(intptr_t)</code>:<ul>
-<li>Both types of the same size (64 bits) -&gt; safe bitwise copy</li>
-<li>Guaranteed by C++ standard for intptr_t ↔ void*</li>
-</ul>
-</li>
-</ol>
-<p>Reverse conversion (lumex::core::utility::ptr_to_fd):</p><ul>
-<li><code>reinterpret_cast&lt;intptr_t&gt;(ptr)</code> -&gt; get 64-bit value</li>
-<li><code>static_cast&lt;int&gt;(intptr_t)</code> -&gt; truncate to 32 bits (safe, since highest bits = 0)</li>
-<li>Get original file descriptor</li>
-</ul>
-<p>Architectural portability:</p><ul>
-<li>32-bit systems: int (32) -&gt; intptr_t (32) -&gt; void* (32)</li>
-<li>64-bit systems: int (32) -&gt; intptr_t (64) -&gt; void* (64)</li>
-<li>ARM32/ARM64/x86/x64/RISC-V: all support intptr_t</li>
-</ul>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fd</td><td>POSIX file descriptor (int &gt;= 0) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void* representation of the descriptor for cross-platform storage</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Use ONLY for POSIX file descriptors (non-negative integers)! For Windows HANDLE directly assign to void* (already a pointer).</dd></dl>
-<p>usage in a serial port: </p><div class="fragment"><div class="line"><span class="preprocessor">#if LUMEX_OS_WINDOWS</span></div>
-<div class="line">  m_hInputFile = m_serialPort.native_handle(); <span class="comment">// Windows: HANDLE -&gt; void*</span></div>
-<div class="line"><span class="preprocessor">#else</span></div>
-<div class="line">  m_hInputFile =</div>
-<div class="line"><a name="a0"></a><a class="code" href="a00371.html#a0d4172421ecab863abbc52dd3c53690b">lumex::core::utility::fd_to_ptr</a>(m_serialPort.native_handle()); <span class="comment">// POSIX: int</span></div>
-<div class="line">-&gt; <span class="keywordtype">void</span>* #endif</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Reverse conversion:</span></div>
-<div class="line"><span class="preprocessor">#if !LUMEX_OS_WINDOWS</span></div>
-<div class="line">  <span class="keywordtype">int</span> fd = <a name="a1"></a><a class="code" href="a00371.html#a087ac0d38e593221087d6022b43a12cc">lumex::core::utility::ptr_to_fd</a>(m_hInputFile);</div>
-<div class="line">  ::close(fd);</div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>DO NOT use for arbitrary int values! Only for file descriptors!</dd></dl>
-<div class="fragment"></div><!-- fragment --> </div><!-- contents -->
+</div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aa00371_html_a087ac0d38e593221087d6022b43a12cc"><div class="ttname"><a href="a00371.html#a087ac0d38e593221087d6022b43a12cc">ptr_to_fd</a></div><div class="ttdeci">static int ptr_to_fd(void *pointer) LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexUtilities.hpp:146</div></div>
-<div class="ttc" id="aa00371_html_a0d4172421ecab863abbc52dd3c53690b"><div class="ttname"><a href="a00371.html#a0d4172421ecab863abbc52dd3c53690b">fd_to_ptr</a></div><div class="ttdeci">static void * fd_to_ptr(int fileDescriptor) LUMEX_NOEXCEPT</div><div class="ttdef"><b>Definition:</b> LumexUtilities.hpp:114</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01308.html">utility</a></li><li class="navelem"><a class="el" href="a01321.html">traits</a></li><li class="navelem"><a class="el" href="a01330.html">value</a></li><li class="navelem"><a class="el" href="a02948.html">is_optional_like</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

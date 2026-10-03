@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::crc::parametric::crc32_mef_spec_t Struct Reference</title>
+<title>LumexLib: lumex::core::base64::encode::Encoder Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,167 +94,181 @@ $(document).ready(function(){initNavTree('a01556.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="a01553.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::crc::parametric::crc32_mef_spec_t Struct Reference</div>  </div>
+<div class="title">lumex::core::base64::encode::Encoder Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>CRC-32/MEF: width=32 poly=0x741b8cd7 init=0xffffffff refin=true refout=true xorout=0x00000000.  
+<p>Base64 encoder.  
  <a href="a01556.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="a00494_source.html">Encoder.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a1b69d290472c731129ab697d06f2f383"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01556.html#a1b69d290472c731129ab697d06f2f383">ValueType</a> = std::uint32_t</td></tr>
-<tr class="separator:a1b69d290472c731129ab697d06f2f383"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a0def3f36cc2b3621b74f19fa6b393e38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01556.html#a0def3f36cc2b3621b74f19fa6b393e38">kWidth</a> = 32</td></tr>
-<tr class="separator:a0def3f36cc2b3621b74f19fa6b393e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6906f807aaadc450a8874aff67029924"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01556.html#a6906f807aaadc450a8874aff67029924">kPoly</a> = 0x741B8CD7UL</td></tr>
-<tr class="separator:a6906f807aaadc450a8874aff67029924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5921da6930a91b5b6ce6ffadbe0ae48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01556.html#ac5921da6930a91b5b6ce6ffadbe0ae48">kInit</a> = 0xFFFFFFFFUL</td></tr>
-<tr class="separator:ac5921da6930a91b5b6ce6ffadbe0ae48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d95dd7d152f9cbbf2df59218f54bcdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01556.html#a7d95dd7d152f9cbbf2df59218f54bcdc">kRefIn</a> = true</td></tr>
-<tr class="separator:a7d95dd7d152f9cbbf2df59218f54bcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bb803e483afdce5cf5a6a823ba8d976"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01556.html#a1bb803e483afdce5cf5a6a823ba8d976">kRefOut</a> = true</td></tr>
-<tr class="separator:a1bb803e483afdce5cf5a6a823ba8d976"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afebbca7f528f3fec205f3cb2494556e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01556.html#afebbca7f528f3fec205f3cb2494556e0">kXorOut</a> = 0x00000000UL</td></tr>
-<tr class="separator:afebbca7f528f3fec205f3cb2494556e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62f62dec766c2383f25bda9ca0eadbd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01556.html#a62f62dec766c2383f25bda9ca0eadbd1">kCatalogCheck</a> = 0xD2C22F51UL</td></tr>
-<tr class="separator:a62f62dec766c2383f25bda9ca0eadbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ab4a27450b24de1f2b93f9147af8d8688"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01556.html#ab4a27450b24de1f2b93f9147af8d8688">encode</a> (void const *data, std::size_t size)</td></tr>
+<tr class="memdesc:ab4a27450b24de1f2b93f9147af8d8688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encodes raw binary data into a Base64 string.  <a href="a01556.html#ab4a27450b24de1f2b93f9147af8d8688">More...</a><br /></td></tr>
+<tr class="separator:ab4a27450b24de1f2b93f9147af8d8688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9d2bda3548d1d1fa006d182b009443"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01556.html#a5a9d2bda3548d1d1fa006d182b009443">encode</a> (std::vector&lt; <a class="el" href="a01246.html#a5ce1631da87ffd76dbc11fb072c31a57">byte_type</a> &gt; const &amp;data)</td></tr>
+<tr class="memdesc:a5a9d2bda3548d1d1fa006d182b009443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encodes binary data from a <code>std::vector&lt;byte_type&gt;</code> into a Base64 string.  <a href="a01556.html#a5a9d2bda3548d1d1fa006d182b009443">More...</a><br /></td></tr>
+<tr class="separator:a5a9d2bda3548d1d1fa006d182b009443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac40e65af555a00fb916a0ed0ef33e59"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01556.html#aac40e65af555a00fb916a0ed0ef33e59">encode</a> (std::string_view data)</td></tr>
+<tr class="memdesc:aac40e65af555a00fb916a0ed0ef33e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encodes binary data from a <code>std::string_view</code> into a Base64 string.  <a href="a01556.html#aac40e65af555a00fb916a0ed0ef33e59">More...</a><br /></td></tr>
+<tr class="separator:aac40e65af555a00fb916a0ed0ef33e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>CRC-32/MEF: width=32 poly=0x741b8cd7 init=0xffffffff refin=true refout=true xorout=0x00000000. </p>
-<dl class="section see"><dt>See also</dt><dd><a href="https://reveng.sourceforge.io/crc-catalogue/all.htm">https://reveng.sourceforge.io/crc-catalogue/all.htm</a> - CRC-32/MEF </dd></dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a1b69d290472c731129ab697d06f2f383"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b69d290472c731129ab697d06f2f383">&#9670;&nbsp;</a></span>ValueType</h2>
+<div class="textblock"><p>Base64 encoder. </p>
+<p><code>encode (void const *, std::size_t)</code> and <code>encode (std::vector&lt;byte_type&gt; const &amp;)</code> are exported and have the same signature in every C++ standard, so a consumer built at another standard than the library links. The <code>std::string_view</code> (C++17) and <code>std::span</code> (C++20) overloads are inline wrappers over the pointer and size one. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aac40e65af555a00fb916a0ed0ef33e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac40e65af555a00fb916a0ed0ef33e59">&#9670;&nbsp;</a></span>encode() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="a01556.html#a1b69d290472c731129ab697d06f2f383">lumex::core::crc::parametric::crc32_mef_spec_t::ValueType</a> =  std::uint32_t</td>
+          <td class="memname">static std::string lumex::core::base64::encode::Encoder::encode </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Encodes binary data from a <code>std::string_view</code> into a Base64 string. </p>
+<p>This overload provides an efficient way to encode string data without copying, leveraging <code>std::string_view</code> for read-only access to character sequences.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>A <code>std::string_view</code> containing the binary data to be encoded. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code>std::string</code> containing the Base64-encoded representation of the input data. Returns an empty string if the input <code><a class="el" href="a01300.html" title="Core library components.">string_view</a></code> is empty. </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a62f62dec766c2383f25bda9ca0eadbd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62f62dec766c2383f25bda9ca0eadbd1">&#9670;&nbsp;</a></span>kCatalogCheck</h2>
+<a id="a5a9d2bda3548d1d1fa006d182b009443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9d2bda3548d1d1fa006d182b009443">&#9670;&nbsp;</a></span>encode() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint32_t lumex::core::crc::parametric::crc32_mef_spec_t::kCatalogCheck = 0xD2C22F51UL</td>
+          <td class="memname">std::string Encoder::encode </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="a01246.html#a5ce1631da87ffd76dbc11fb072c31a57">byte_type</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Encodes binary data from a <code>std::vector&lt;byte_type&gt;</code> into a Base64 string. </p>
+<p>This is an overloaded function that provides a convenient way to encode binary data stored in a <code>std::vector&lt;byte_type&gt;</code>. It internally calls the <code>encode</code> function that takes a pointer and size.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>A <code>std::vector&lt;byte_type&gt;</code> containing the binary data to be encoded. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code>std::string</code> containing the Base64-encoded representation of the input vector's data. Returns an empty string if the input vector is empty. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01556_a5a9d2bda3548d1d1fa006d182b009443_cgraph.png" border="0" usemap="#aa01556_a5a9d2bda3548d1d1fa006d182b009443_cgraph" alt=""/></div>
+<map name="a01556_a5a9d2bda3548d1d1fa006d182b009443_cgraph" id="aa01556_a5a9d2bda3548d1d1fa006d182b009443_cgraph">
+<area shape="rect" title="Encodes binary data from a std::vector&lt;byte_type&gt; into a Base64 string." alt="" coords="5,5,197,47"/>
+<area shape="rect" href="a01248.html#abda97488987b0b151816d6cc1ee24873" title="Internal helper to encode binary data into a Base64 string from a view&#45;like type." alt="" coords="245,5,456,47"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="ac5921da6930a91b5b6ce6ffadbe0ae48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5921da6930a91b5b6ce6ffadbe0ae48">&#9670;&nbsp;</a></span>kInit</h2>
+<a id="ab4a27450b24de1f2b93f9147af8d8688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a27450b24de1f2b93f9147af8d8688">&#9670;&nbsp;</a></span>encode() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_mef_spec_t::kInit = 0xFFFFFFFFUL</td>
+          <td class="memname">std::string Encoder::encode </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6906f807aaadc450a8874aff67029924"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6906f807aaadc450a8874aff67029924">&#9670;&nbsp;</a></span>kPoly</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_mef_spec_t::kPoly = 0x741B8CD7UL</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7d95dd7d152f9cbbf2df59218f54bcdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d95dd7d152f9cbbf2df59218f54bcdc">&#9670;&nbsp;</a></span>kRefIn</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc32_mef_spec_t::kRefIn = true</td>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
+<p>Encodes raw binary data into a Base64 string. </p>
+<p>This function takes a pointer to raw binary data and its size, then converts it into a Base64-encoded string. The resulting string can be safely used for transmission or storage in text-based formats.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to the binary data to be encoded. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>The size of the binary data in bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code>std::string</code> containing the Base64-encoded representation of the input data. Returns an empty string if <code>data</code> is <code>nullptr</code> or <code>size</code> is <code>0</code>. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01556_ab4a27450b24de1f2b93f9147af8d8688_cgraph.png" border="0" usemap="#aa01556_ab4a27450b24de1f2b93f9147af8d8688_cgraph" alt=""/></div>
+<map name="a01556_ab4a27450b24de1f2b93f9147af8d8688_cgraph" id="aa01556_ab4a27450b24de1f2b93f9147af8d8688_cgraph">
+<area shape="rect" title="Encodes raw binary data into a Base64 string." alt="" coords="5,5,197,47"/>
+<area shape="rect" href="a01248.html#abda97488987b0b151816d6cc1ee24873" title="Internal helper to encode binary data into a Base64 string from a view&#45;like type." alt="" coords="245,5,456,47"/>
+</map>
 </div>
-</div>
-<a id="a1bb803e483afdce5cf5a6a823ba8d976"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bb803e483afdce5cf5a6a823ba8d976">&#9670;&nbsp;</a></span>kRefOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> bool lumex::core::crc::parametric::crc32_mef_spec_t::kRefOut = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0def3f36cc2b3621b74f19fa6b393e38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0def3f36cc2b3621b74f19fa6b393e38">&#9670;&nbsp;</a></span>kWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> int lumex::core::crc::parametric::crc32_mef_spec_t::kWidth = 32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
-<a id="afebbca7f528f3fec205f3cb2494556e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afebbca7f528f3fec205f3cb2494556e0">&#9670;&nbsp;</a></span>kXorOut</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00341.html#a294baa8c8ad4246130f881cd1da7cbe1">LUMEX_CONST_NUM</a> std::uint64_t lumex::core::crc::parametric::crc32_mef_spec_t::kXorOut = 0x00000000UL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00158_source.html">LumexCrcParametric.hpp</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00494_source.html">Encoder.hpp</a></li>
+<li><a class="el" href="a00491.html">Encoder.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00847.html">crc</a></li><li class="navelem"><a class="el" href="a00850.html">parametric</a></li><li class="navelem"><a class="el" href="a01556.html">crc32_mef_spec_t</a></li>
+    <li class="navelem"><a class="el" href="a01185.html">lumex</a></li><li class="navelem"><a class="el" href="a01236.html">core</a></li><li class="navelem"><a class="el" href="a01244.html">base64</a></li><li class="navelem"><a class="el" href="a01252.html">encode</a></li><li class="navelem"><a class="el" href="a01556.html">Encoder</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

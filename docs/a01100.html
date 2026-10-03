@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LumexLib: lumex::core::base64::validate::Validator Class Reference</title>
+<title>LumexLib: XPathParser.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">LumexLib
-   &#160;<span id="projectnumber">1.0.1.1</span>
+   &#160;<span id="projectnumber">1.0.2.0</span>
    </div>
    <div id="projectbrief">A C++11-26 core library for Lumex projects.</div>
   </td>
@@ -94,123 +94,113 @@ $(document).ready(function(){initNavTree('a01100.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="a01097.html">List of all members</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">lumex::core::base64::validate::Validator Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+<div class="title">XPathParser.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Base64 syntax check.  
- <a href="a01100.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="a00146_source.html">Validator.hpp</a>&gt;</code></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="a00917_source.html">lumex/LumexExport.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00665_source.html">lumex/core/utility/attr/LumexAttributes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a01004_source.html">lumex/xml/types/XmlTypes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a01040_source.html">lumex/xml/xpath/ast/XPathAstNode.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a01061_source.html">lumex/xml/xpath/memory/XPathAllocator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a01106_source.html">lumex/xml/xpath/parser/XPathParseResult.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a01088_source.html">lumex/xml/xpath/parser/lexer/XPathLexer.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a01136_source.html">lumex/xml/xpath/variable/XPathVariableSet.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for XPathParser.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01101.png" border="0" usemap="#aXPathParser_8hpp" alt=""/></div>
+<map name="XPathParser_8hpp" id="aXPathParser_8hpp">
+<area shape="rect" title=" " alt="" coords="2842,5,2969,32"/>
+<area shape="rect" href="a00917.html" title=" " alt="" coords="2987,869,3168,896"/>
+<area shape="rect" href="a00665.html" title=" " alt="" coords="3515,944,3704,985"/>
+<area shape="rect" href="a01004.html" title=" " alt="" coords="1197,787,1424,814"/>
+<area shape="rect" href="a01040.html" title=" " alt="" coords="1989,80,2147,121"/>
+<area shape="rect" href="a01061.html" title=" " alt="" coords="1192,609,1336,635"/>
+<area shape="rect" href="a01106.html" title=" " alt="" coords="3520,780,3699,821"/>
+<area shape="rect" href="a01088.html" title=" " alt="" coords="3797,601,3976,643"/>
+<area shape="rect" href="a01136.html" title=" " alt="" coords="1519,80,1710,121"/>
+<area shape="rect" href="a00680.html" title="C++ language, library and attribute feature availability." alt="" coords="3482,1033,3737,1075"/>
+<area shape="rect" title=" " alt="" coords="665,869,732,896"/>
+<area shape="rect" title=" " alt="" coords="1281,869,1340,896"/>
+<area shape="rect" href="a01010.html" title=" " alt="" coords="802,869,1041,896"/>
+<area shape="rect" href="a00695.html" title=" " alt="" coords="145,944,399,985"/>
+<area shape="rect" href="a00701.html" title=" " alt="" coords="165,1033,379,1075"/>
+<area shape="rect" href="a01046.html" title=" " alt="" coords="3320,259,3507,300"/>
+<area shape="rect" href="a01070.html" title=" " alt="" coords="1917,512,2109,553"/>
+<area shape="rect" href="a01082.html" title=" " alt="" coords="1510,259,1679,300"/>
+<area shape="rect" href="a01118.html" title=" " alt="" coords="2606,512,2781,553"/>
+<area shape="rect" href="a01130.html" title=" " alt="" coords="1586,169,1777,211"/>
+<area shape="rect" href="a01076.html" title=" " alt="" coords="3329,348,3498,389"/>
+<area shape="rect" href="a00923.html" title=" " alt="" coords="3337,512,3489,553"/>
+<area shape="rect" href="a00968.html" title=" " alt="" coords="2818,437,3038,464"/>
+<area shape="rect" title=" " alt="" coords="3369,609,3466,635"/>
+<area shape="rect" href="a00929.html" title=" " alt="" coords="2459,609,2624,635"/>
+<area shape="rect" href="a00953.html" title=" " alt="" coords="2237,698,2504,725"/>
+<area shape="rect" href="a00959.html" title=" " alt="" coords="2317,787,2477,814"/>
+<area shape="rect" href="a00662.html" title=" " alt="" coords="2009,780,2191,821"/>
+<area shape="rect" title=" " alt="" coords="1581,869,1651,896"/>
+<area shape="rect" title=" " alt="" coords="2857,519,2927,546"/>
+<area shape="rect" href="a00974.html" title=" " alt="" coords="2286,519,2429,546"/>
+<area shape="rect" title=" " alt="" coords="3054,601,3191,643"/>
+<area shape="rect" href="a00935.html" title=" " alt="" coords="622,691,781,732"/>
+<area shape="rect" href="a00980.html" title=" " alt="" coords="3053,512,3259,553"/>
+<area shape="rect" href="a00992.html" title=" " alt="" coords="1907,698,2162,725"/>
+<area shape="rect" href="a01016.html" title=" " alt="" coords="2603,787,2837,814"/>
+<area shape="rect" href="a01022.html" title=" " alt="" coords="1461,691,1680,732"/>
+<area shape="rect" title=" " alt="" coords="741,787,797,814"/>
+<area shape="rect" title=" " alt="" coords="390,698,455,725"/>
+<area shape="rect" title=" " alt="" coords="480,698,547,725"/>
+<area shape="rect" href="a01064.html" title=" " alt="" coords="907,698,1083,725"/>
+<area shape="rect" href="a01043.html" title=" " alt="" coords="821,780,1021,821"/>
+<area shape="rect" href="a01013.html" title=" " alt="" coords="677,519,899,546"/>
+<area shape="rect" title=" " alt="" coords="805,609,864,635"/>
+<area shape="rect" title=" " alt="" coords="397,609,464,635"/>
+<area shape="rect" title=" " alt="" coords="539,609,602,635"/>
+<area shape="rect" title=" " alt="" coords="627,609,688,635"/>
+<area shape="rect" title=" " alt="" coords="713,609,781,635"/>
+<area shape="rect" href="a01094.html" title=" " alt="" coords="3621,691,3824,732"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a01102.png" border="0" usemap="#aXPathParser_8hppdep" alt=""/></div>
+<map name="XPathParser_8hppdep" id="aXPathParser_8hppdep">
+<area shape="rect" title=" " alt="" coords="78,5,205,32"/>
+<area shape="rect" href="a01097.html" title=" " alt="" coords="5,80,131,107"/>
+<area shape="rect" href="a01109.html" title=" " alt="" coords="155,80,277,107"/>
+</map>
+</div>
+</div>
+<p><a href="a01100_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3963a89b10ceee2fcbf8dd7358fc0151"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01100.html#a3963a89b10ceee2fcbf8dd7358fc0151">is_valid_base64</a> (char const *str, std::size_t size)</td></tr>
-<tr class="memdesc:a3963a89b10ceee2fcbf8dd7358fc0151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether <code>size</code> characters starting at <code>str</code> are valid Base64.  <a href="a01100.html#a3963a89b10ceee2fcbf8dd7358fc0151">More...</a><br /></td></tr>
-<tr class="separator:a3963a89b10ceee2fcbf8dd7358fc0151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfe6300b401116112266dc79f49a2554"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01100.html#adfe6300b401116112266dc79f49a2554">is_valid_base64</a> (<a class="el" href="a00837.html#a5eb75eefcc1a80408d48a70506ff6f66">string_type_t</a> str)</td></tr>
-<tr class="memdesc:adfe6300b401116112266dc79f49a2554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a given string is a valid Base64 encoded string (see the pointer and size overload for the rules).  <a href="a01100.html#adfe6300b401116112266dc79f49a2554">More...</a><br /></td></tr>
-<tr class="separator:adfe6300b401116112266dc79f49a2554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a03344.html">lumex::xml::xpath::parser::XPathParser</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses XPath expressions into an Abstract Syntax Tree (AST).  <a href="a03344.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:a01185"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01185.html">lumex</a></td></tr>
+<tr class="memdesc:a01185"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; For RAII-managed pointers on base interface. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01353"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01353.html">lumex::xml</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01362"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01362.html">lumex::xml::xpath</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01380"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a01380.html">lumex::xml::xpath::parser</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base64 syntax check. </p>
-<p>The pointer and size overload is exported and has the same signature in every C++ standard; the string overload is an inline wrapper over it (<code>string_type_t</code> is <code>std::string_view</code> from C++17 and <code>std::string const &amp;</code> below). </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3963a89b10ceee2fcbf8dd7358fc0151"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3963a89b10ceee2fcbf8dd7358fc0151">&#9670;&nbsp;</a></span>is_valid_base64() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00557.html#ad1cae46ea7dbf5398bbb2a0bdd2cf917">LUMEX_PUBLIC_API</a> bool Validator::is_valid_base64 </td>
-          <td>(</td>
-          <td class="paramtype">char const *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Checks whether <code>size</code> characters starting at <code>str</code> are valid Base64. </p>
-<p>Valid Base64 consists of alphabet characters followed by at most two &lsquo;&rsquo;='`; with padding the length is a multiple of 4, without it the last group has two or three characters. The range needs no terminating NUL and nothing after it is read; a NUL inside the range is invalid.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>First character; never valid as <code>nullptr</code>, even with a <code>size</code> of 0 (pass <code>""</code> for an empty input). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Number of characters to check. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the range is valid Base64 (an empty range is), <code>false</code> otherwise, and always for <code>nullptr</code>. </dd></dl>
-
-</div>
-</div>
-<a id="adfe6300b401116112266dc79f49a2554"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfe6300b401116112266dc79f49a2554">&#9670;&nbsp;</a></span>is_valid_base64() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool lumex::core::base64::validate::Validator::is_valid_base64 </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00837.html#a5eb75eefcc1a80408d48a70506ff6f66">string_type_t</a>&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Checks if a given string is a valid Base64 encoded string (see the pointer and size overload for the rules). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>The string to be checked for Base64 validity. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the string adheres to Base64 formatting rules, <code>false</code> otherwise. </dd></dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00146_source.html">Validator.hpp</a></li>
-<li><a class="el" href="a00143.html">Validator.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00783.html">lumex</a></li><li class="navelem"><a class="el" href="a00834.html">core</a></li><li class="navelem"><a class="el" href="a00835.html">base64</a></li><li class="navelem"><a class="el" href="a00845.html">validate</a></li><li class="navelem"><a class="el" href="a01100.html">Validator</a></li>
+    <li class="navelem"><a class="el" href="dir_f81308c61c81f97e0b9d0bb0d46de873.html">lumex</a></li><li class="navelem"><a class="el" href="dir_50c9cab4d5411a97d8807a2f6b945ebe.html">xml</a></li><li class="navelem"><a class="el" href="dir_d38a0fae6a8e48d91b3b62673cf0c708.html">xpath</a></li><li class="navelem"><a class="el" href="dir_4c93ace1da67964a3ff55b959013373d.html">parser</a></li><li class="navelem"><a class="el" href="a01100.html">XPathParser.hpp</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
